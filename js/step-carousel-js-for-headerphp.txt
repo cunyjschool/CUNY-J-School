@@ -1,0 +1,25 @@
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/stepcarousel.js">
+
+/***********************************************
+* Step Carousel Viewer script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+
+
+<script type="text/javascript">
+
+stepcarousel.setup({
+	galleryid: 'mygallery', //id of carousel DIV
+	beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+	panelclass: 'panel', //class of panel DIVs each holding content
+	autostep: {enable:true, moveby:1, pause:10000},
+	panelbehavior: {speed:500, wraparound:false, persist:true},
+	defaultbuttons: {enable: true, moveby: 1, leftnav: ['<?php bloginfo('template_directory'); ?>/img/arrow_left_blue_round.png', -10, 50], rightnav: ['<?php bloginfo('template_directory'); ?>/img/arrow_right_blue_round.png', -7, 50]},
+	statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+	contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
+})
+
+</script>
