@@ -1,16 +1,16 @@
 /*
 Theme Name: CUNY J-School
 Theme URI: http://journalism.cuny.edu/
-Description: Theme for the CUNY Graduate School of Journalism
+Description: WordPress for the CUNY Graduate School of Journalism
 Version: 1.0
-Author: Drew Geraets
+Author: Daniel Bachhuber
 Author URI: http://www.journalism.cuny.edu
 */
 
 
 body {
 	background: #eee; 
-	font-family: Trebuchet MS, Arial, Verdana, sans-serif;
+	font-family: "Trebuchet MS", Arial, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
 	color: #333;
@@ -64,7 +64,7 @@ h3 {
 	
 #tile-orange {
 	height: 7px;
-	background: url(img/tile-orange.jpg) repeat-x; }
+	background: url(images/tile-orange.jpg) repeat-x; }
 	
 #global img {
 	float: left; }
@@ -113,7 +113,21 @@ h3 {
 #aud-search ul li a {
 	display: block; 
 	padding: 0 10px; }
-	
+
+#home-alert {
+	padding: 10px 20px; 
+	background: #ff9900 url(images/backgrounds/orange-back.jpg) repeat; 
+	margin-bottom: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  text-align:center;
+}
+
+#home-alert a, #livestream a:visited {
+	color: #fff; 
+  text-align:center;         
+}
 	
 /* Quicklinks Dropdown */
 #cssdropdown, #cssdropdown ul { list-style: none; }
@@ -186,12 +200,15 @@ h3 {
   	height: 15px;
 	margin-top: 13px;
   	padding: 7px 15px 15px 15px;
-	background: #333 url(img/nav_back.jpg) repeat-x bottom; 
+	background: #333 url(images/nav_back.jpg) repeat-x bottom; 
 	color: #ccc;
+	border-radius-topleft: 2px;
+	border-radius-topright: 2px;
 	-webkit-border-top-left-radius: 2px;
 	-webkit-border-top-right-radius: 2px;
 	-moz-border-radius-topleft: 2px;
-	-moz-border-radius-topright: 2px; }
+	-moz-border-radius-topright: 2px;
+}
 
 #nav li a:hover {
 	text-decoration: none;
@@ -220,7 +237,7 @@ h3 {
 	
 #col1 h3#alert a, #col1 h3#alert a:visited {
 	padding: 20px 0 20px 25px;
-	background: url(img/icons/error.png) no-repeat 0 20px;
+	background: url(images/icons/error.png) no-repeat 0 20px;
 	margin-bottom: 20px;
 	color: #990000; }
 	
@@ -236,7 +253,7 @@ h3 {
 #prospects, .feature {
 	clear: both;
 	padding: 20px;
-	background: url(img/grad-back2.jpg) bottom repeat-x; }
+	background: url(images/grad-back2.jpg) bottom repeat-x; }
 	
 #prospects h4 {
 	margin-bottom: 5px; }
@@ -244,7 +261,7 @@ h3 {
 #prospects ul li, .feature ul li {
 	padding: 2px 0 2px 20px; 
 	margin-right: 20px;
-	background: url(img/icons/arrow_000_small.png) no-repeat 0 5px; }
+	background: url(images/icons/arrow_000_small.png) no-repeat 0 5px; }
 	
 .feature {
 	margin-top: 0;
@@ -301,7 +318,7 @@ table.cal td.month {
 	margin-top: 20px; }
 	
 #events ul li {
-	background: url(img/icons/arrow_000_small.png) 0 5px no-repeat;
+	background: url(images/icons/arrow_000_small.png) 0 5px no-repeat;
 	padding: 2px 0 2px 20px; }
 	
 #event-excerpt {
@@ -311,7 +328,7 @@ table.cal td.month {
 .homebox {
 	margin: 10px;
 	padding: 20px;
-	background: url(img/grad-back2.jpg) bottom repeat-x; }
+	background: url(images/grad-back2.jpg) bottom repeat-x; }
 	
 .homebox img {
 	border: 5px solid #fff;
@@ -342,7 +359,7 @@ table.cal td.month {
 	padding-left: 10px; }
 	
 #nsfeed ul li {
-	background: url(img/icons/arrow_000_small.png) 0 5px no-repeat;
+	background: url(images/icons/arrow_000_small.png) 0 5px no-repeat;
 	padding: 2px 0 2px 20px; }
 	
 #sidebar {
@@ -372,12 +389,12 @@ table.cal td.month {
 #sidebar-nav li li a, #sidebar-nav li li a:visited {
 	font-size: 90%;
 	padding: 5px 10px 5px 25px;
-	background: #f9f9f9 url(img/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
 	
 #sidebar-nav li li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
-	background: #f9f9f9 url(img/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
 	
 #sidebar-nav li li li a, #sidebar-nav li li li a:visited {
 	font-size: 90%;
@@ -426,23 +443,23 @@ img.news-photo {
 .entry ul li {
 	padding: 5px 10px 5px 25px;
 	border-bottom: 1px solid #eee;
-	background: url(img/icons/arrow_000_small.png) no-repeat 10px 8px; }
+	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px; }
 	
 .entry ul li#research-toolbox {
 	padding-left: 30px;
-	background: url(img/icons/hammer.png) no-repeat 10px 7px; }
+	background: url(images/icons/hammer.png) no-repeat 10px 7px; }
 	
 .entry ul li#research-blog {
 	padding-left: 30px;
-	background: url(img/icons/blog.png) no-repeat 10px 7px; }
+	background: url(images/icons/blog.png) no-repeat 10px 7px; }
 	
 .entry ul li#research-about {
 	padding-left: 30px;
-	background: url(img/icons/information_frame.png) no-repeat 10px 7px; }
+	background: url(images/icons/information_frame.png) no-repeat 10px 7px; }
 	
 .entry ul li#research-search {
 	padding-left: 30px;
-	background: url(img/icons/magnifier.png) no-repeat 10px 7px; }
+	background: url(images/icons/magnifier.png) no-repeat 10px 7px; }
 	
 #page-image {
 	float: right;
@@ -459,14 +476,16 @@ img.news-photo {
 
 #page-image-wide { 
 	width: 650px;
-        border: 5px solid #efefef;
+	border: 5px solid #efefef;
 	margin: 0 0 20px 0;
 	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px; }   /* added by Rosaleen*/
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
 	
 #page-image-wide img {
-	width: 650px; }   /* added by Rosaleen*/
-
+	width: 650px;
+}
 	
 #sidebar-news {
 	float: left;
@@ -486,7 +505,7 @@ img.news-photo {
 	line-height: 175%;
 	padding: 4px 3px 4px 20px;
 	border-bottom: 1px dashed #efefef;
-	background: url(img/icons/arrow_000_small.png) no-repeat 0 8px; }
+	background: url(images/icons/arrow_000_small.png) no-repeat 0 8px; }
 	
 #sidebar-news li a, #sidebar-news li a:visited, #sidebar-internships li a, #sidebar-internships li a:visited {
 	text-decoration: none; }
@@ -556,11 +575,11 @@ li.edit {
 li.edit a, li.edit a:visited {
 	text-transform: uppercase;
 	font-size: 90%;
-	background: #efefef url(img/icons/card_pencil.png) no-repeat 10px;
+	background: #efefef url(images/icons/card_pencil.png) no-repeat 10px;
 	padding: 10px 20px 10px 35px; }
 	
 li.edit a:hover {
-	background: #ff9900 url(img/icons/card_pencil.png) no-repeat 10px; }
+	background: #ff9900 url(images/icons/card_pencil.png) no-repeat 10px; }
 	
 table.simple-table td {
 	border-right: 1px solid #eee;
@@ -584,12 +603,12 @@ li#requestinfo, li#howtoapply {
 	
 li#requestinfo {
 	padding-left: 30px;
-	background: #f9f9f9 url(img/icons/information_frame.png) no-repeat 10px 11px; }
+	background: #f9f9f9 url(images/icons/information_frame.png) no-repeat 10px 11px; }
 	
 li#howtoapply {
 	margin-left: 20px;
 	padding-left: 30px;
-	background: #f9f9f9 url(img/icons/page_white_edit.png) no-repeat 10px 11px; }
+	background: #f9f9f9 url(images/icons/page_white_edit.png) no-repeat 10px 11px; }
 	
 #social {
 	padding: 0 20px 20px 20px; }
@@ -604,7 +623,7 @@ li#howtoapply {
 		
 #ced li {
 	padding-left: 20px;
-	background: url(img/icons/arrow_000_small.png) no-repeat 3px; }
+	background: url(images/icons/arrow_000_small.png) no-repeat 3px; }
 	
 #wire ul li {
 	padding: 10px 0;
@@ -630,37 +649,37 @@ ul#wire-sites li {
 	border-bottom: 1px dotted #eee; }
 	
 li#wire-bsb {
-	background: url(img/wire/ico-bsb.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-bsb.jpg) no-repeat 0 13px; }
 	
 li#wire-isnap {
-	background: url(img/wire/ico-isnap.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-isnap.jpg) no-repeat 0 13px; }
 	
 li#wire-ni {
-	background: url(img/wire/ico-ni.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-ni.jpg) no-repeat 0 13px; }
 	
 li#wire-ns {
-	background: url(img/wire/ico-ns.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-ns.jpg) no-repeat 0 13px; }
 	
 li#wire-rt {
-	background: url(img/wire/ico-rt.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-rt.jpg) no-repeat 0 13px; }
 	
 li#wire-twitter {
-	background: url(img/wire/ico-twitter.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-twitter.jpg) no-repeat 0 13px; }
 
 li#wire-219mag {
-	background: url(img/wire/ico-219mag.jpg) no-repeat 0 13px; }	
+	background: url(images/wire/ico-219mag.jpg) no-repeat 0 13px; }	
 
 li#wire-mhh {
-	background: url(img/wire/ico-mhh.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-mhh.jpg) no-repeat 0 13px; }
 
 li#wire-local {
-	background: url(img/wire/ico-local.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-local.jpg) no-repeat 0 13px; }
 
 li#wire-dnj {
-	background: url(img/wire/ico-dnj.jpg) no-repeat 0 13px; }
+	background: url(images/wire/ico-dnj.jpg) no-repeat 0 13px; }
 
 #footerboard {
-	background: url(img/grad-back-home.jpg) no-repeat top; 
+	background: url(images/grad-back-home.jpg) no-repeat top; 
 	border-top: 1px dotted #eee;
 	margin-top: 10px;
 	clear: both; 
@@ -690,7 +709,7 @@ li#wire-dnj {
 .featured-site ul li {
 	padding: 5px 10px 5px 25px;
 	border-bottom: 1px dotted #eee;
-	background: url(img/icons/arrow_000_small.png) no-repeat 10px 8px; }
+	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px; }
 	
 #home-twitter {
 	padding: 20px; }
@@ -725,7 +744,7 @@ li#wire-dnj {
 	
 #blogs h2 {
 	padding-left: 25px;
-	background: url(img/icons/blog.png) 2px 2px no-repeat; }
+	background: url(images/icons/blog.png) 2px 2px no-repeat; }
 	
 #networked {
 	float: left; 
@@ -736,11 +755,11 @@ li#wire-dnj {
 	
 #networked h2 {
 	padding-left: 25px;
-	background: url(img/icons/address_book_blue.png) 2px 2px no-repeat; }
+	background: url(images/icons/address_book_blue.png) 2px 2px no-repeat; }
 	
 #networked ul li {
 	padding-left: 20px;
-	background: url(img/icons/arrow_000_small.png) 2px 3px no-repeat; }
+	background: url(images/icons/arrow_000_small.png) 2px 3px no-repeat; }
 	
 #deanscorner {
 	padding: 10px 0 0 10px; 
@@ -765,7 +784,7 @@ li#wire-dnj {
 	
 .boxon {
 	padding: 20px;
-	background: url(img/grad-back2.jpg) bottom repeat-x; }
+	background: url(images/grad-back2.jpg) bottom repeat-x; }
 	
 #footer {
 	clear: both; 
@@ -790,7 +809,7 @@ li#wire-dnj {
 
 #footer ul#comments li {
 	padding: 1px 0 1px 19px;
-	background: url(img/comment.png) no-repeat 0 8px; }
+	background: url(images/comment.png) no-repeat 0 8px; }
 	
 #footerwrap {
 	background: #333;
@@ -1070,11 +1089,11 @@ ul#give-now li a:hover {
 ul#give-now li li a, #give-now li li a:visited {
 	font-size: 90%;
 	padding: 5px 10px 5px 25px;
-	background: #f9f9f9 url(img/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
 	
 ul#give-now li li a:hover {
 	color: #0066cc;
-	background: #f9f9f9 url(img/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
 	
 ul#give-now li li li a, #give-now li li li a:visited {
 	font-size: 90%;

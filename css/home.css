@@ -1,32 +1,23 @@
-@charset "UTF-8";
 /* CSS Document */
 
-#home-alert {
-	padding: 10px 20px; 
-	background: #ff9900 url(img/orange-back.jpg) repeat; 
-	margin-bottom: 5px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px; 
-        text-align:center;}
-	
-#home-alert a, #livestream a:visited {
-	color: #fff; 
-        text-align:center;         
-}
 
 #nav-items {
 	float: left; 
-	width: 180px; }
+	width: 180px;
+}
 	
 #nav-items a, #nav-items a:visited {
 	text-decoration: none;
-	color: #0066cc; }
+	color: #0066cc;
+}
 	
 #nav-items a:hover {
-	color: #333; }
+	color: #333;
+}
 		
 #nav-items ul#admiss {
-	margin-top: 20px; }		
+	margin-top: 20px;
+}
 		
 #nav-items li {
 	color: #999; }
@@ -61,24 +52,28 @@
 	
 #ad-app {
 	padding: 10px 20px; 
-	background: #6699ff url(img/back-black2.jpg) repeat; 
+	background: #6699ff url(../images/backgrounds/back-black2.jpg) repeat; 
 	border-left: 5px solid #000; 
 	color: #fff; 
-	margin-right: 10px; }
+	margin-right: 10px;
+}
 
 #ad-info {
 	padding: 10px 20px; 
-	background: #ff9900 url(img/orange-back.jpg) repeat; 
+	background: #ff9900 url(../images/backgrounds/orange-back.jpg) repeat; 
 	border-left: 5px solid #d78b08; 
 	color: #fff; 
-	margin-right: 20px; }
+	margin-right: 20px;
+}
 	
 #ad-app h3 a, #ad-app h3 a:visited, #ad-info h3 a, #ad-info h3 a:visited {
-	color: #fff; }
+	color: #fff;
+}
 	
 #ad-app h3 a:hover, #ad-info h3 a:hover {
 	color: #fff;
-	text-decoration: underline; }
+	text-decoration: underline;
+}
 	
 #ad-ac, #ad-app, #ad-info {
 	-webkit-border-top-right-radius: 2px;
@@ -112,42 +107,44 @@
 	
 #socialnet li#hfacebook {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/facebook_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/facebook_16.png) no-repeat 0 3px; }
 	
 #socialnet li#htwitter {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/twitter_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/twitter_16.png) no-repeat 0 3px; }
 	
 #socialnet li#hvimeo {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/vimeo_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/vimeo_16.png) no-repeat 0 3px; }
 	
 #socialnet li#hyoutube {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/youtube_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/youtube_16.png) no-repeat 0 3px; }
 
 #socialnet li#hlinkedin {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/linkedin_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/linkedin_16.png) no-repeat 0 3px; }
 	
 #socialnet li#hflickr {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/flickr_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/flickr_16.png) no-repeat 0 3px; }
 	
 #socialnet li#hfoursquare {
 	padding-left: 20px;
-	background: url(img/icons/socialnetworking/foursquare_16.png) no-repeat 0 3px; }
+	background: url(../images/icons/socialnetworking/foursquare_16.png) no-repeat 0 3px; }
 	
 #news-home {
 	clear: both;
 	margin-bottom: 20px;
-	padding: 0 0 0 20px; }
+	padding: 0 0 0 20px; 
+}
 	
 #news {
 	clear: both; 
 	float: left; 
 	margin-right: 20px;
-	width: 280px; }
+	width: 280px;
+}
 	
 #news a, #news a:visited {
 	text-decoration: none; }
@@ -247,38 +244,38 @@
 	
 #jnet div li {
 	padding: 3px 0 3px 10px;
-	background: url(img/list-gray-square.jpg) no-repeat 3px 12px; 
+	background: url(../images/list-gray-square.jpg) no-repeat 3px 12px; 
 	border-bottom: 1px dotted #eee; }
 
 #jnet h3#ns {
-	background: url(img/wire/ico-ns.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-ns.jpg) no-repeat 0 3px; }
 	
 #jnet h3#bsb {
-	background: url(img/wire/ico-bsb.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-bsb.jpg) no-repeat 0 3px; }
 	
 #jnet h3#rt {
-	background: url(img/wire/ico-rt.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-rt.jpg) no-repeat 0 3px; }
 	
 #jnet h3#ni {
-	background: url(img/wire/ico-ni.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-ni.jpg) no-repeat 0 3px; }
 	
 #jnet h3#mh {
-	background: url(img/wire/ico-mh.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-mh.jpg) no-repeat 0 3px; }
 	
 #jnet h3#ws {
-	background: url(img/wire/ico-ws.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-ws.jpg) no-repeat 0 3px; }
 	
 #jnet h3#dnj {
-	background: url(img/wire/ico-dnj.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-dnj.jpg) no-repeat 0 3px; }
 	
 #jnet h3#mag {
-	background: url(img/wire/ico-219.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-219.jpg) no-repeat 0 3px; }
 	
 #jnet h3#clips {
-	background: url(img/wire/ico-clips.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-clips.jpg) no-repeat 0 3px; }
 	
 #row3 {
-	background: #ff9900 url(img/orange-back.jpg) repeat;
+	background: #ff9900 url(../images/orange-back.jpg) repeat;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	color: #eee;
@@ -309,7 +306,7 @@
 	margin: 0 0 15px 20px; }
 
 #soc {
-	background: #ff9900 url(img/orange-back.jpg) repeat;
+	background: #ff9900 url(../images/orange-back.jpg) repeat;
 	padding: 20px;
 	-webkit-box-shadow: 5px 5px 0 #eee;  
     -moz-box-shadow: 5px 5px 0 #eee;  

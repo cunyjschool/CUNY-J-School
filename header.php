@@ -11,61 +11,33 @@
 <?php endif; ?>
 
 
-<meta name="copyright" content="Copyright (c) 2009 City University of New York Graduate School of Journalism" />
-<meta http-equiv="content-language" content="en" />
-<meta name="robots" content="all" />
+  <meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
+  <meta http-equiv="content-language" content="en" />
 
-<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+  <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
-<link rel="stylesheet" href="/wp-content/themes/cunyjschool/style.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="/wp-content/themes/cunyjschool/homepage.css" type="text/css" media="screen" />
-<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+  <?php if (is_home()) : ?>
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css" type="text/css" media="screen" />
+  <?php endif; ?>
+  <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+  <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
 
-<script language="javascript">AC_FL_RunContent = 0;</script>
-<script src="/js/AC_RunActiveContent.js" language="javascript"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.2.6.pack.js"></script>
-
-
-<script language="JavaScript">
-	window.onload = function()
-	{
-		var lis = document.getElementById('cssdropdown').getElementsByTagName('li');
-		for(i = 0; i < lis.length; i++)
-		{
-			var li = lis[i];
-			if (li.className == 'headlink')
-			{
-				li.onmouseover = function() { this.getElementsByTagName('ul').item(0).style.display = 'block'; }
-				li.onmouseout = function() { this.getElementsByTagName('ul').item(0).style.display = 'none'; }
-			}
-		}
-	}
-	/* or with jQuery:
-	$(document).ready(function(){
-		$('#cssdropdown li.headlink').hover(
-			function() { $('ul', this).css('display', 'block'); },
-			function() { $('ul', this).css('display', 'none'); });
-	});
-	*/
-</script>
-
-
-<?php wp_head(); ?>
+  <?php wp_head(); ?>
+  
 </head>
-
 
 <body>
 
-<!-- <div id="tile-orange"></div> -->
-<div id="home-alert"><a href="http://wiki.journalism.cuny.edu/Getting%20a%20Fast%20Start">Getting a Fast Start: CLASS OF 2011</a></div>
+  <!-- <div id="tile-orange"></div> -->
+  <div id="home-alert"><a href="http://wiki.journalism.cuny.edu/Getting%20a%20Fast%20Start">Getting a Fast Start: CLASS OF 2011</a></div>
 
 
 <div id="global">
   <div class="wrap clearfix">
     <div id="logo">
-<a title="CUNY Graduate School of Journalism" href="/"><img alt="CUNY Graduate School of Journalism" src="/img/logo.png" /></a>
+      <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="75px" width="360px" /></a>
     </div>
     
     <div id="aud-search">

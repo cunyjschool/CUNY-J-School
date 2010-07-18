@@ -14,13 +14,12 @@
 <!-- Start Slideshow and Nav -->
   <div style="width: 700px; height: 400px; background: #eee; padding: 10px; float: left;">
   
-
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="700" height="400" id="homepage" align="middle">
-	<param name="movie" value="/home-slideshow.swf" />
-	<param name="base" value="." />
-	<embed base="." src="/home-slideshow.swf" quality="best" bgcolor="#666666" width="700" height="400" name="MediaPlayer" align="middle" allowScriptAccess="sameDomain"
+    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="700" height="400" id="homepage" align="middle">
+	    <param name="movie" value="/home-slideshow.swf" />
+	    <param name="base" value="." />
+	    <embed base="." src="/home-slideshow.swf" quality="best" bgcolor="#666666" width="700" height="400" name="MediaPlayer" align="middle" allowScriptAccess="sameDomain"
       type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-</object>
+    </object>
 
   </div>
   
@@ -60,16 +59,16 @@
   
   <div class="clearfix" id="news-home">
     <div id="news">
-  <h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/img/icons/feed.png" alt="News Feed" class="feed" /></a></h3>
+  <h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 <?php query_posts('cat=9&showposts=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 
+    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
 
 <?php query_posts('cat=9&showposts=3&offset=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
+    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
 
@@ -79,19 +78,7 @@
   
   
     <div id="events-home">
-  <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/img/icons/feed.png" alt="Events Feed" class="feed" /></a></h3>
-
-	<?php /* Hackish special insert for July 2010 ^DB */ ?>
-	<div class="event clearfix">
-	<table class="cal">
-      <tr>
-        <td class="month">July</td>
-        <td class="daynumber">27</td>
-      </tr>
-	</table>
-	
-	<h4><a href="http://cunyjcamp.com/">CUNY J-Camp: 11 New Ways to Use Google</a></h4> 
-	</div>
+      <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
 
   <?php query_posts('cat=15&showposts=4&meta_key=event_date&order=ASC&orderby=meta_value'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -115,7 +102,7 @@
     </div>
     
     <div id="featured-home">
-      <div id="fh-inner"><a href="http://www.nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/img/news-service.jpg" alt="NYCity News Service" /></a>
+      <div id="fh-inner"><a href="http://www.nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/nycitynewsservice_h200.png" height="50px" width="200px" alt="NY City News Service" /></a>
         <div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 5px 0;">Student-powered wire service</div>
       
     <?php
@@ -129,7 +116,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
     
     </div> 
 
-<div id="fh-inner"><a href="http://fort-greene.thelocal.nytimes.com/"><img src="<?php bloginfo('url'); ?>/wp-content/uploads/2010/07/fort-greene_main-200x50px.jpg" alt="The Local" /></a>
+<div id="fh-inner"><a href="http://fort-greene.thelocal.nytimes.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/fort-greene_h200.jpg" height="50px" width="200px" alt="The Local" /></a>
 <div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 0 0;">Brooklyn-based citizen journalism</div>
 </div>
 
@@ -138,8 +125,6 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 
   </div>
   
-  
-  
   <div class="clearfix" id="soc">
     <div style="float: left; width: 400px;">
   <object type="application/x-shockwave-flash" width="400" height="300" data="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=uploaded_videos&amp;id=&amp;server=vimeo.com">	<param name="quality" value="best" />		<param name="allowfullscreen" value="true" />		<param name="allowscriptaccess" value="always" />	<param name="scale" value="showAll" />	<param name="movie" value="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=uploaded_videos&amp;id=&amp;server=vimeo.com" /></object>
@@ -147,7 +132,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
     
     <div id="flick-twit">
       <div id="flick">
-<a href="http://flickr.com/photos/cunyjschool/"><img src="<?php bloginfo('template_directory'); ?>/img/icon-flickr.png" alt="CUNY J-School on Flickr" id="flickr-icon" /></a>
+<a href="http://flickr.com/photos/cunyjschool/"><img src="<?php bloginfo('template_directory'); ?>/images/icon-flickr.png" alt="CUNY J-School on Flickr" id="flickr-icon" /></a>
 	  <div>
 		
 <?php 
@@ -160,7 +145,7 @@ get_flickrRSS(array(
       </div>
     
       <div id="twit">
-      <a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/img/icon-twitter.png" alt="CUNY J-School on Twitter" /></a>
+      <a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icon-twitter.png" alt="CUNY J-School on Twitter" /></a>
 
 <?php
 if (function_exists('SimplePieWP')) {
@@ -195,7 +180,7 @@ echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array
   
 <h4 style="float: left; padding-bottom: 20px;">CUNY J-School Network</h4>
 
-<h4 style="float: right;">View All Recent Activity on the <a href="/wire/">Wire &raquo;</a></h4> 
+<h4 style="float: right;">View All Recent Activity on the <a href="<?php bloginfo('url'); ?>/wire/">Wire &raquo;</a></h4> 
     
     <div class="jsite" style="clear: both;">
     <h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/student-work/">Clips of the Week</a></h3>
@@ -284,7 +269,7 @@ echo SimplePieWP('http://219mag.com/feed/', array(
   <div class="clearfix" id="row3">
     <div id="dc">
         <h3>Dean's Corner</h3>
-<a href="<?php bloginfo('url'); ?>/about/deans-corner/"><img src="<?php bloginfo('template_directory'); ?>/img/dean-shepard.jpg"></a>
+<a href="<?php bloginfo('url'); ?>/about/deans-corner/"><img src="<?php bloginfo('template_directory'); ?>/images/dean-shepard.jpg"></a>
 Stephen B. Shepard is the founding dean of the Graduate School of Journalism at the City University of New York. From 1984 to 2005, he was editor-in-chief of Business Week, the largest business magazine in the world. <a href="<?php bloginfo('url'); ?>/about/deans-corner/">More &raquo;</a>
 
 <ul style="padding: 10px 0 0 10px;">
