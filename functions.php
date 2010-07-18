@@ -1,6 +1,4 @@
 <?php
-update_option('siteurl','http://www.journalism.cuny.edu');
-update_option('home','http://www.journalism.cuny.edu');
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
