@@ -5,6 +5,7 @@ Description: WordPress for the CUNY Graduate School of Journalism
 Version: 1.0
 Author: Daniel Bachhuber
 Author URI: http://www.journalism.cuny.edu
+Tags: buddypress
 */
 
 
@@ -15,7 +16,8 @@ body {
 	padding: 0;
 	color: #333;
 	line-height: 170%;
-	font-size: small; }
+	font-size: small;
+}
 
 ul {
 	padding: 0;
