@@ -20,6 +20,7 @@
   <?php if (is_home()) : ?>
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css" type="text/css" media="screen" />
   <?php endif; ?>
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/buddypress.css" type="text/css" media="screen" />
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />

@@ -1,14 +1,16 @@
 <?php get_header() ?>
-
-<div id="container">
-	<div id="content">
+  
+<div class="wrap" id="buddypress">
+    
+	<div id="main">
+	  
+	  <div id="content">
 
 		<?php do_action( 'bp_before_member_home_content' ) ?>
 
 		<div id="item-header">
 			<?php locate_template( array( 'members/single/member-header.php' ), true ) ?>
 		</div><!-- #item-header -->
-
 		<div id="item-nav">
 			<div class="item-list-tabs no-ajax" id="object-nav">
 				<ul>
@@ -49,7 +51,10 @@
 		<?php do_action( 'bp_after_member_home_content' ) ?>
 
 	</div><!-- #content -->
-</div><!-- #container -->
+	
+	</div>
+	
+</div><!-- /.wrap -->
 
 <?php locate_template( array( 'sidebar.php' ), true ) ?>
 

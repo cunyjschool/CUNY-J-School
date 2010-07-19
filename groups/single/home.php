@@ -1,6 +1,9 @@
 <?php get_header() ?>
 
 <div id="container">
+  
+  <div class="main">
+  
 	<div id="content">
 
 			<?php if ( bp_has_groups() ) : while ( bp_groups() ) : bp_the_group(); ?>
@@ -68,6 +71,9 @@
 			<?php endwhile; endif; ?>
 
 	</div><!-- #content -->
+	
+	</div>
+	
 </div><!-- #container -->
 
 	<?php locate_template( array( 'sidebar.php' ), true ) ?>

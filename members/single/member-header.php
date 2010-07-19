@@ -1,24 +1,14 @@
 <?php do_action( 'bp_before_member_header' ) ?>
 
+<?php $curauth = get_userdata(bp_displayed_user_id()); ?>
+
 <div id="item-header-avatar">
-	<a href="<?php bp_user_link() ?>">
-		<?php bp_displayed_user_avatar( 'type=full' ) ?>
-	</a>
+  <?php bp_displayed_user_avatar( 'type=full' ) ?>
 </div><!-- #item-header-avatar -->
 
 <div id="item-header-content">
-
-	<h2 class="fn"><a href="<?php bp_user_link() ?>"><?php bp_displayed_user_fullname() ?></a> <span class="highlight">@<?php bp_displayed_user_username() ?> <span>?</span></span></h2>
-	<span class="activity"><?php bp_last_activity( bp_displayed_user_id() ) ?></span>
-
-	<?php do_action( 'bp_before_member_header_meta' ) ?>
-
-	<div id="item-meta">
-		<?php if ( function_exists( 'bp_activity_latest_update' ) ) : ?>
-			<div id="latest-update">
-				<?php bp_activity_latest_update( bp_displayed_user_id() ) ?>
-			</div>
-		<?php endif; ?>
+  
+  <div id="item-meta">
 
 		<div id="item-buttons">
 			<?php if ( function_exists( 'bp_add_friend_button' ) ) : ?>
@@ -37,6 +27,18 @@
 				</div>
 			<?php endif; ?>
 		</div><!-- #item-buttons -->
+
+    <h2 class="fn"><span class="activity"><?php bp_last_activity( bp_displayed_user_id() ) ?></span><?php bp_displayed_user_fullname(); ?></h2>
+    
+    <div class="item-description"><?php echo $curauth->description; ?></div>
+	
+		<?php if ( function_exists( 'bp_activity_latest_update' ) ) : ?>
+			<div id="latest-update">
+				<?php bp_activity_latest_update( bp_displayed_user_id() ) ?>
+			</div>
+		<?php endif; ?>
+
+	<?php do_action( 'bp_before_member_header_meta' ) ?>
 
 		<?php
 		 /***

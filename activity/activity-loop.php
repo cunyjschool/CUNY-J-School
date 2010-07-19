@@ -24,7 +24,7 @@
 
 	<?php if ( bp_get_activity_count() == bp_get_activity_per_page() ) : ?>
 		<li class="load-more">
-			<a href="#more"><?php _e( 'Load More', 'buddypress' ) ?></a> &nbsp; <span class="ajax-loader"></span>
+			<a href="#more">Load more</a> &nbsp; <span class="ajax-loader"></span>
 		</li>
 	<?php endif; ?>
 
@@ -33,9 +33,11 @@
 	<?php endif; ?>
 
 <?php else : ?>
-	<div id="message" class="info">
-		<p><?php _e( 'Sorry, there was no activity found. Please try a different filter.', 'buddypress' ) ?></p>
+  
+	<div class="notice alert">
+		<p>Sorry, there's no recent activity to display for this member.</p>
 	</div>
+	
 <?php endif; ?>
 
 <?php do_action( 'bp_after_activity_loop' ) ?>

@@ -1,0 +1,70 @@
+#buddypress #main h2 {
+  font-size: 24px;
+  margin-top: 10px;  
+}
+
+#buddypress #item-meta {
+  width: auto;
+}
+
+#buddypress div#item-header div#item-header-content {
+  float: none;
+}
+
+#buddypress #item-meta #item-buttons {
+  float: right;
+}
+
+#buddypress h2 span.activity {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+  float: right;
+}
+
+
+#item-nav {
+  float:left;
+  width: 150px;
+}
+
+#buddypress div.item-list-tabs {
+  clear: none;
+  border-bottom: none;
+}
+
+.item-list-tabs#object-nav ul {
+  display: block;
+}
+
+.item-list-tabs#object-nav ul li {
+  float: none;
+}
+
+#buddypress .item-list-tabs#object-nav ul li.selected {
+  background-color:;
+}
+
+.item-list-tabs#object-nav ul li a {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.item-list-tabs#subnav ul {
+  
+}
+
+.item-list-tabs#subnav ul li {
+  padding: 3px;
+}
+
+.item-list-tabs#subnav ul li a {
+  text-decoration: none;
+}
+
+#buddypress #main #item-body {
+  margin-left: 175px;
+}
