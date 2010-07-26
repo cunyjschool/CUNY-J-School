@@ -11,4 +11,15 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h2>',
     ));
 
+/**
+ * Modify the primary navigation menu with the admin
+ */ 
+if ( function_exists( 'register_nav_menus' ) ) {
+	register_nav_menus(
+		array(
+			'primary_navigation' => 'Primary Navigation'
+			)
+		);
+}
+
 ?>

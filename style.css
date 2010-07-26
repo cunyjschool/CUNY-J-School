@@ -56,7 +56,7 @@ h2 {
 h3 {
 	margin: 10px 0; }	
 	
-.wrap, .main {
+.wrap {
 	margin: 0 auto;
 	width: 900px;
 }
@@ -184,20 +184,19 @@ h3 {
 	background: #444;
 	color: #fff; }
 	
-#nav {
-	margin: 0 auto;
+#primary_nav {
 	height: 50px;
 	background: #1b1b1b;
-	clear: both;
-	font-size: 11px; }
+	font-size: 11px;
+}
 
-#nav li {
+#primary_nav li {
 	float: left;
 	margin: 0;
 	padding: 0 1px 0 0;
 	list-style: none; }
 
-#nav li a { 
+#primary_nav li a { 
   	float: left;
   	display: block;
   	height: 15px;
@@ -213,13 +212,13 @@ h3 {
 	-moz-border-radius-topright: 2px;
 }
 
-#nav li a:hover {
+#primary_nav li a:hover {
 	text-decoration: none;
 	color: #fff;
 	background: #444; }
 
-#nav a, #nav a:visited, #col2 a, #col2 a:visited { text-decoration: none; }
-#nav a:hover, #col2 a:hover { text-decoration: underline; }
+#primary_nav a, #nav a:visited, #col2 a, #col2 a:visited { text-decoration: none; }
+#primary_nav a:hover, #col2 a:hover { text-decoration: underline; }
 	
 #col1 {
 	float: left;
