@@ -570,9 +570,24 @@ img.news-photo {
 	background: #f9f9f9;
 	padding: 10px;
 	margin-bottom: 40px; }
+
+span.edit a {
+	float: right;
+	text-transform: uppercase;
+	background: #efefef url(images/icons/card_pencil.png) no-repeat 10px;
+	padding: 3px 10px 3px 35px;
+	font-size: 12px;
+	font-weight: normal;
+	display: inline-block;
+}
+
+span.edit a:hover {
+	background-color: #ff9900;
+}
 	
 li.edit {
-	margin: 7px 0 40px 0; }
+	margin: 7px 0 40px 0;
+}
 		
 li.edit a, li.edit a:visited {
 	text-transform: uppercase;

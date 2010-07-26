@@ -10,7 +10,7 @@ Template Name: Section - Contact Us
 
 	<div id="sidebar">
 		<ul id="sidebar-nav">
-			<li><h4><a href="/contact-us/">Contact Us</a></h4></li>
+			<li><h4><a href="<?php bloginfo('url'); ?>/contact-us/">Contact Us</a></h4></li>
 		</ul><!-- end sidebar-nav -->
 	</div><!-- end sidebar -->
 
@@ -19,8 +19,7 @@ Template Name: Section - Contact Us
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 		<div class="post" id="post-<?php the_ID(); ?>">
-		<?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
-		<h2><?php the_title(); ?></h2>
+		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
 		
 			<div class="entry">
 			<?php if(get_post_meta($post->ID, page_image, true) != "") { ?>

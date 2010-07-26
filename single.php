@@ -8,18 +8,14 @@ echo '<div class="boxon">As the tools of the media trade continue to evolve, the
 } 
 		?>
     
-    <div class="post" id="post-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
+	<div class="post" id="post-<?php the_ID(); ?>">
 
-<div style="text-align: right;"><?php if (function_exists('sharethis_button')) { sharethis_button(); } ?></div>
-
-<h2><?php the_title(); ?></h2>
+		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
 
       <div class="timestamp">Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
 
 <?php if(get_post_meta($post->ID, photo, true) != "") { ?>
-<img src="http://www.journalism.cuny.edu/scripts/timthumb.php?src=<?php echo get_post_meta( $post->ID,"photo", $single=true ) ; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"> 
+<img src="<?php bloginfo('template_directory'); ?>/php/timthumb.php?src=<?php echo get_post_meta( $post->ID,"photo", $single=true ) ; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"> 
 <?php } ?>
 
 <?php if(get_post_meta($post->ID, photo_caption, true) != "") { ?><div class="photo-caption"><?php echo get_post_meta( $post->ID,"photo_caption", $single=true ) ; ?></div><?php } ?>
@@ -40,9 +36,8 @@ echo '<div class="boxon">As the tools of the media trade continue to evolve, the
 
 <?php
 if ( in_category(161) ) {
-	include 'sidebar-internships.php'; } 
-
-else {
+	include 'sidebar-internships.php';
+} else {
 	include 'sidebar-news.php'; } ?>
 
 </div>

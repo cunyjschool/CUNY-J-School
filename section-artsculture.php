@@ -10,24 +10,21 @@ Template Name: Section - Arts and Culture
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/academics/">Academics</a></h4></li>
-  <li><a href="/academics/course-descriptions/">Course Descriptions</a></li>
-  <li><a href="/academics/sample-courses-of-study/">Sample Courses of Study</a></li>
-  <li><a href="/academics/summer-internship/">Summer Internship</a></li>
-  <li><a href="/academics/january-academy/">January Academy</a></li>
-  <li><a href="/academics/subject-concentrations/">Subject Concentrations</a>
+  <li><h4><a href="<?php bloginfo('url'); ?>/academics/">Academics</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/academics/course-descriptions/">Course Descriptions</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/academics/sample-courses-of-study/">Sample Courses of Study</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/academics/summer-internship/">Summer Internship</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/academics/january-academy/">January Academy</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/">Subject Concentrations</a>
     <ul>
-      <li><a href="/academics/subject-concentrations/arts-culture/">Arts/Culture</a>
+      <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/arts-culture/">Arts/Culture</a>
         <ul>
-          <li><a href="/academics/subject-concentrations/arts-culture/program-highlights/">Program Highlights</a></li>
+          <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/arts-culture/program-highlights/">Program Highlights</a></li>
         </ul>
       </li>
-      <li><a href="/academics/subject-concentrations/business-economics/">Business/Economics</a></li>
-<!-- Health & Medicine concentration was dissolved - Josh - 2010.04.13
-      <li><a href="/academics/subject-concentrations/health-medicine/">Health/Medicine</a></li>
--->
-      <li><a href="/academics/subject-concentrations/international/">International</a></li>
-      <li><a href="/academics/subject-concentrations/urban/">Urban</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/business-economics/">Business/Economics</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/international/">International</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/urban/">Urban</a></li>
     </ul>
   </li>
 </ul>
@@ -36,13 +33,12 @@ Template Name: Section - Arts and Culture
   <div id="right">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="post" id="post-<?php the_ID(); ?>">
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
+	
+	<div class="post" id="post-<?php the_ID(); ?>">
 
-	<h2><?php the_title(); ?></h2>
+	<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
-    
-      <div class="entry">
+		<div class="entry">
       
       	<?php if(get_post_meta($post->ID, page_image, true) != "") { ?>
         <div id="page-image">

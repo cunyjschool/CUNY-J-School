@@ -9,20 +9,18 @@ Template Name: Section - Faculty
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/faculty/">Faculty</a></h4></li>
-  <li><a href="/category/news/faculty-news/">Faculty in the News</a></li>
+  <li><h4><a href="<?php bloginfo('url'); ?>/faculty/">Faculty</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/category/news/faculty-news/">Faculty in the News</a></li>
 </ul>
   </div>
       
   <div id="right">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="post" id="post-<?php the_ID(); ?>">
     
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
-
-
-	<h2><?php the_title(); ?></h2>
+	<div class="post" id="post-<?php the_ID(); ?>">
+    
+		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
     
       <div class="entry">

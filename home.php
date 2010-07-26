@@ -66,7 +66,7 @@
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
 
-<?php query_posts('cat=9&showposts=3&offset=1'); ?>
+<?php query_posts('category_slug=news&showposts=3&offset=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
     <?php endwhile; else: ?><p>There are currently no stories.</p>
@@ -80,7 +80,7 @@
     <div id="events-home">
       <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
 
-  <?php query_posts('cat=15&showposts=4&meta_key=event_date&order=ASC&orderby=meta_value'); ?>
+  <?php query_posts('category_slug=events&showposts=4&meta_key=event_date&order=ASC&orderby=meta_value'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="event clearfix">    
 	<table class="cal">

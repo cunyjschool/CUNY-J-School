@@ -10,24 +10,24 @@ Template Name: Section - Career Services
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/career-services/">Career Services</a></h4></li>
-  <li><a href="/career-services/news-events/">News & Events</a></li>
-  <li><a href="/category/career-services/internships/">Internship Listings</a></li>
-  <li><a href="/career-services/freelance-community-publications/">Freelance: Community Publications</a></li>
-  <li><a href="/career-services/job-hunting-career-info-links/">Job-Hunting & Career-Info Links</a></li>
-  <li><a href="/career-services/professional-organizations/">Professional Organizations</a></li>
-  <li><a href="/career-services/for-employers/">For Employers</a></li>
-  <li><a href="/career-services/where-our-alumni-are-working/">Where Our Alumni Are Working</a></li>
+  <li><h4><a href="<?php bloginfo('url'); ?>/career-services/">Career Services</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/news-events/">News & Events</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/category/career-services/internships/">Internship Listings</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/freelance-community-publications/">Freelance: Community Publications</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/job-hunting-career-info-links/">Job-Hunting & Career-Info Links</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/professional-organizations/">Professional Organizations</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/for-employers/">For Employers</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/where-our-alumni-are-working/">Where Our Alumni Are Working</a></li>
 </ul>
 
 <ul id="sidebar-nav" style="margin-top: 20px;">
   <li><h4>Job-Search Tips</h4></li>
-  <li><a href="/job-search-tips/resume/">Resume</a></li>
-  <li><a href="/job-search-tips/cover-letter/">Cover Letter</a></li>
-  <li><a href="/job-search-tips/references/">References</a></li>
-  <li><a href="/job-search-tips/clips-tapes/">Clips &amp; Tapes</a></li>
-  <li><a href="/job-search-tips/search-strategies/">Search Strategies</a></li>
-  <li><a href="/job-search-tips/interview-salary-negotiation/">Interview &amp; Salary Negotiation</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/resume/">Resume</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/cover-letter/">Cover Letter</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/references/">References</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/clips-tapes/">Clips &amp; Tapes</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/search-strategies/">Search Strategies</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/interview-salary-negotiation/">Interview &amp; Salary Negotiation</a></li>
 </ul>
 
 <h3>Contact Us</h3>
@@ -49,12 +49,10 @@ Career Services Coordinator<br />
   <div id="right">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="post" id="post-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
+	<div class="post" id="post-<?php the_ID(); ?>">
 
-	<h2><?php the_title(); ?></h2>    
+		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>    
       <div class="entry">
       
       	<?php if(get_post_meta($post->ID, page_image, true) != "") { ?>

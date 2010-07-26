@@ -10,12 +10,12 @@ Template Name: Section - Alumni
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/alumni/">Alumni</a></h4></li>
-  <li><a href="/career-services/">Career Services</a></li>
-  <li><a href="/continuing-education/">Continuing Education</a></li>
-  <li><a href="http://www.journalism.cuny.edu/alumni/update-your-contact-information/">Update Your Contact Information</a></li>
-  <li><a href="/career-services/where-our-alumni-are-working/">Where Our Alumni Are Working</a></li>
-  <li><a href="#">Give (Coming Soon)</a></li>
+  <li><h4><a href="<?php bloginfo('url'); ?>/alumni/">Alumni</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/">Career Services</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/continuing-education/">Continuing Education</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/alumni/update-your-contact-information/">Update Your Contact Information</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/where-our-alumni-are-working/">Where Our Alumni Are Working</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/donate/">Give</a></li>
 </ul>
 
 
@@ -29,9 +29,9 @@ Template Name: Section - Alumni
 
 <div id="sidebar-nav" style="margin-top: 20px; margin-left: 5px;">
   <ul><li><h4 style="margin: 0 0 10px 0;">News & Events</h4></li></a>
-<li><a href="/category/featured-news//">School News</li>
-<li><a href="/category/featured-events/">Upcoming Events</a></li>
-<li><a href="/career-services/news-events/">Career Services Events</a></li>
+<li><a href="<?php bloginfo('url'); ?>/category/featured-news//">School News</li>
+<li><a href="<?php bloginfo('url'); ?>/category/featured-events/">Upcoming Events</a></li>
+<li><a href="<?php bloginfo('url'); ?>/career-services/news-events/">Career Services Events</a></li>
   </ul>
 </div>
 	
@@ -44,11 +44,8 @@ Template Name: Section - Alumni
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="post" id="post-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
-	<h2><?php the_title(); ?></h2>
-    
+			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
       <div class="entry">
       

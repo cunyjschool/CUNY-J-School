@@ -10,44 +10,44 @@ Template Name: Section - Admissions
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/admissions/">Admissions</a></h4></li>
+  <li><h4><a href="<?php bloginfo('url'); ?>/admissions/">Admissions</a></h4></li>
   <li><a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a>
     <ul>
-      <li><a href="/admissions/information-sessions/">Information Sessions</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Information Sessions</a></li>
     </ul>
   </li>
-  <li><a href="/admissions/how-to-apply/">How To Apply</a>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/how-to-apply/">How To Apply</a>
   <?php if(is_page(array(137,164))) { ?>  	
     <ul>
-      <li><a href="/admissions/sample-entrance-exam/">Sample Entrance Exam</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/sample-entrance-exam/">Sample Entrance Exam</a></li>
     </ul>
   <?php } ?>
   </li>
-  <li><a href="/admissions/paying-for-j-school/">Paying for J-School</a>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/paying-for-j-school/">Paying for J-School</a>
   <?php if(is_page(array(139,142,144,1008))) { ?>  	
     <ul>
-      <li><a href="/admissions/tuition-and-fees/">Tuition and Fees</a></li>
-      <li><a href="/admissions/scholarships/">Scholarships</a></li>
-      <li><a href="/admissions/financial-aid/">Financial Aid</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/tuition-and-fees/">Tuition and Fees</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/scholarships/">Scholarships</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/financial-aid/">Financial Aid</a></li>
     </ul>
   <?php } ?>
   </li>
-  <li><a href="/admissions/international-students/">International Students</a></li>
-  <li><a href="/admissions/admitted-students/">Admitted Students</a>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/international-students/">International Students</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/">Admitted Students</a>
   <?php if(is_page(array(154,156,158,160,1731,4396,8424))) { ?>  	
 	<ul>
-      <li><a href="/admissions/admitted-students/business-cards/">Business Cards</a></li>
-      <li><a href="/admissions/admitted-students/laptop-information/">Laptop Information</a></li>
-      <li><a href="/admissions/admitted-students/open-house/">Open House</a></li>
-      <li><a href="/admissions/admitted-students/orientation/">Orientation</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/business-cards/">Business Cards</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/laptop-information/">Laptop Information</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/open-house/">Open House</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/orientation/">Orientation</a></li>
       <!-- <li><a href="/admissions/admitted-students/software-installation/">Software Installation</a></li> -->
     </ul>
   <?php } ?>
   </li>
-  <li><a href="/admissions/frequently-asked-questions/">Frequently Asked Questions</a></li>
-  <li><a href="/admissions/ten-reasons-to-choose-cuny/">Ten Reasons to Choose CUNY</a></li>
-  <li><a href="/admissions/class-of-2010/">Class of 2010 Profile</a></li>
-<li><a href="/2010/05/17/august-academy-for-class-of-2012-applicants/">August Academy</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">Frequently Asked Questions</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/ten-reasons-to-choose-cuny/">Ten Reasons to Choose CUNY</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2010/">Class of 2010 Profile</a></li>
+<li><a href="<?php bloginfo('url'); ?>/2010/05/17/august-academy-for-class-of-2012-applicants/">August Academy</a></li>
 </ul>
 
 
@@ -79,13 +79,9 @@ Admissions/Outreach Counselor
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="post" id="post-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
+			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
 
-	<h2><?php the_title(); ?></h2>
-    
-    
       <div class="entry">
       
       	<?php if(get_post_meta($post->ID, page_image, true) != "") { ?>

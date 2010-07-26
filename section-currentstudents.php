@@ -10,21 +10,14 @@ Template Name: Section - Current Students
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/current-students/">Current Students</a></h4></li>
-  <li><a href="/current-students/academic-calendar/">Academic Calendar</a></li>
-  <li><a href="/career-services/">Career Services</a></li>
-  <li><a href="/current-students/class-schedule/">Class Schedule</a></li>
-  <li><a href="/current-students/commencement-guide">Commencement Guide</a></li>
-  <li><a href="/current-students/registration/">Registration</a></li>
-  <li><a href="/research-center/">Research Center</a></li>
-  <li><a href="http://tech.journalism.cuny.edu">Technical Support</a></li>
-<?php 
-/*
-  <li><a href="/current-students/student-handbook/">Student Handbook</a></li>
-  <li><a href="/current-students/student-services/">Student Services</a></li> 
-  <li><a href="http://wiki.journalism.cuny.edu/">Wiki</a></li>
-*/ 
-?>
+  <li><h4><a href="<?php bloginfo('url'); ?>/current-students/">Current Students</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/current-students/academic-calendar/">Academic Calendar</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/">Career Services</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/current-students/class-schedule/">Class Schedule</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/current-students/commencement-guide">Commencement Guide</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/current-students/registration/">Registration</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a></li>
+  <li><a href="http://help.journalism.cuny.edu">Technical Support</a></li>
 </ul>
 	</div>
           
@@ -32,10 +25,8 @@ Template Name: Section - Current Students
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="post" id="post-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
-	<h2><?php the_title(); ?></h2>
+	<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
     
       <div class="entry">

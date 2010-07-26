@@ -10,26 +10,26 @@ Template Name: Research Center Page
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/research-center/">Research Center</a></h4></li>
-  <li><a href="/research-center/about/">About Us</a>
+  <li><h4><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/research-center/about/">About Us</a>
   <?php if(is_page(array(214,216,218,221,223,225))) { ?>  	
     <ul>
-      <li><a href="/research-center/about/collections/">Collections</a></li>
-      <li><a href="/research-center/about/mission-and-goals/">Mission & Goals</a></li>
-      <li><a href="/research-center/about/hours-and-schedules/">Hours & Schedules</a></li>
-      <li><a href="/research-center/about/staff/">Staff</a></li>
-      <li><a href="/research-center/about/code-of-conduct/">Code of Conduct</a></li>
-      <li><a href="/research-center/about/access-borrowing/">Access & Borrowing</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about/collections/">Collections</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about/mission-and-goals/">Mission & Goals</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about/hours-and-schedules/">Hours & Schedules</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about/staff/">Staff</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about/code-of-conduct/">Code of Conduct</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about/access-borrowing/">Access & Borrowing</a></li>
     </ul>
   <?php } ?>
   </li>
-  <li><a href="/research-center/search-tools/">Search Tools</a></li>
-  <li><a href="/research-center/services/">Services</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/research-center/search-tools/">Search Tools</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/research-center/services/">Services</a></li>
   <li><a href="http://journalism.cuny.bepress.com/">MediaWorks</a></li>
 </ul>
 
     <div style="margin-top: 20px;">
-<h3 style="margin: 0 0 10px 0;"><a href="/research-center/ask-a-librarian/">Ask a Librarian</a></h3>
+<h3 style="margin: 0 0 10px 0;"><a href="<?php bloginfo('url'); ?>/research-center/ask-a-librarian/">Ask a Librarian</a></h3>
 <embed src="http://widget.meebo.com/mm.swf?RQPbTHsvoL" type="application/x-shockwave-flash" wmode="transparent" height="275" width="200">
 
 <h3 style="margin: 20px 0 10px 0;">Poll</h3>
@@ -41,7 +41,7 @@ Template Name: Research Center Page
 <?php the_content(); ?>  
 <?php endwhile; ?>
 
-<a href="/category/research-center/research-center-polls/">View past polls &raquo;</a>
+<a href="<?php bloginfo('url'); ?>/category/research-center/research-center-polls/">View past polls &raquo;</a>
     </div>
 
 <h4 style="margin-top: 40px;">Contact Us</h4>
@@ -54,11 +54,8 @@ Send questions, comments or suggestions to: <a href="mailto:research@journalism.
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
   if( $post->ID == $do_not_duplicate ) continue; update_post_caches($posts); ?>
     <div class="post" id="post-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
-
-	<h2><?php the_title(); ?></h2>
+			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
     <?php if(is_page('210') ) { ?>
     <img src="http://www.journalism.cuny.edu/wp-content/uploads/2008/09/research-center-wide.jpg" alt="Research Center entrance" style="border: 10px solid #eee;" />
@@ -76,10 +73,12 @@ Send questions, comments or suggestions to: <a href="mailto:research@journalism.
 
 
 <?php
+if (function_exists('SimplePieWP')) {
 echo SimplePieWP('http://blogs.journalism.cuny.edu/researchcenter/feed/', array(
 	'items' => 4,
 	'cache_duration' => 900
 	));
+}
 ?>
 
         </div>
