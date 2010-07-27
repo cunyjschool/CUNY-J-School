@@ -52,7 +52,6 @@
     </div>
   </div>
   
-  
 <!-- End Slideshow and Nav -->
 
 
@@ -60,15 +59,16 @@
   <div class="clearfix" id="news-home">
     <div id="news">
   <h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
-<?php query_posts('cat=9&showposts=1'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 
-    <?php endwhile; else: ?><p>There are currently no stories.</p>
-<?php endif; ?>
 
-<?php query_posts('category_slug=news&showposts=3&offset=1'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
+<?php $news_posts = new WP_Query(array('category_name'=>'News','showposts'=>4));
+$i = 0; ?>
+  <?php if ( $news_posts->have_posts() ) : while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+		<?php if ($i == 0) : ?>
+    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<?php $i++; ?>
+		<?php else : ?>
+			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		<?php endif; ?>
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
 
@@ -80,8 +80,8 @@
     <div id="events-home">
       <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
 
-  <?php query_posts('category_slug=events&showposts=4&meta_key=event_date&order=ASC&orderby=meta_value'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php $events = new WP_Query(array('category_name'=>'Events','showposts'=>4,'meta_key'=>'event_date','order'=>'ASC','orderby'=>'meta_value')); ?>
+  <?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
 	<div class="event clearfix">    
 	<table class="cal">
       <tr>
@@ -137,8 +137,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 		
 <?php 
 if (function_exists('get_flickrRSS')) {
-get_flickrRSS(array(
-    'num_items' => 4)); 
+	get_flickrRSS(array('num_items'=>4)); 
 }
 			?>
         </div>
@@ -187,8 +186,8 @@ echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array
       <h5>Student work</h5>
       <div>
 <ul>
-<?php query_posts('cat=17&showposts=2'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php $student_clips = new WP_Query(array('category_name'=>'Clips of the Week','showposts'=>3)); ?>
+  <?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
@@ -273,8 +272,8 @@ echo SimplePieWP('http://219mag.com/feed/', array(
 Stephen B. Shepard is the founding dean of the Graduate School of Journalism at the City University of New York. From 1984 to 2005, he was editor-in-chief of Business Week, the largest business magazine in the world. <a href="<?php bloginfo('url'); ?>/about/deans-corner/">More &raquo;</a>
 
 <ul style="padding: 10px 0 0 10px;">
-<?php query_posts('cat=248&showposts=3'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php $deans_corner = new WP_Query(array('category_name'=>"Dean's Corner",'showposts'=>3)); ?>
+  <?php if ( $deans_corner->have_posts() ) : while ( $deans_corner->have_posts() ) : $deans_corner->the_post(); ?>
 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
@@ -282,13 +281,16 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
     </div>
       
     <div style="float: left; width: 240px; margin-right: 20px;">
-<?php query_posts('cat=271&showposts=1'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php $inside_story = new WP_Query(array('category_name'=>'Inside Story','showposts'=>1)); ?>
+  <?php if ( $inside_story->have_posts() ) :
+		while ( $inside_story->have_posts() ) : $inside_story->the_post(); ?>
 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 <?php if(get_post_meta($post->ID, inside_story_thumb, true) != "") { ?>
-<a href="<?php the_permalink(); ?>"><img src="/scripts/timthumb.php?src=<?php echo get_post_meta( $post->ID,"inside_story_thumb", $single=true ) ; ?>&h=250&w=200&zc=1&q=100" alt="" class="photo"></a>
+<a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/php/timthumb.php?src=<?php echo get_post_meta( $post->ID,"inside_story_thumb", $single=true ) ; ?>&h=250&w=200&zc=1&q=100" alt="" class="photo"></a>
 <?php } ?>
-    <?php endwhile; else: ?><p>There are currently no stories.</p>
+    <?php endwhile;
+		else: ?>
+			<p>There are currently no stories.</p>
 <?php endif; ?>
     </div>
       
