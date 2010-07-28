@@ -3,6 +3,9 @@
 // Let us use jQuery on the front-end
 wp_enqueue_script('jquery');
 
+//define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
+define( 'CUNYJ_PREFIX' , 'cunjy_' );
+
 include_once('php/cunyj_events.php');
 
 class cunyj

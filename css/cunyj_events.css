@@ -1,0 +1,43 @@
+
+#cunyj-events .buttonize:hover {
+	cursor: pointer;
+}
+
+#cunyj-events .hidden {
+	display: none;
+}
+
+#cunyj-events h4 {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#cunyj-events #intro {
+	margin: 10px;
+}
+
+#cunyj-events .event_date_time .inline {
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+#cunyj-events .sub {
+	margin-bottom: 10px;
+}
+
+#cunyj-events #inner {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	background-color: #EEEEEE;
+	border: 1px solid #CCCCCC;
+}
+
+#cunyj-events #time-date {
+	
+}
+
+#cunyj-events #time-date label {
+	width: 200px;
+	display: inline-block;
+}

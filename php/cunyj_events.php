@@ -9,10 +9,13 @@ class cunyj_events
 		add_action('init', array(&$this, 'create_post_type'));
 		
 		// Set up metabox and related actions
-		//add_action('admin_menu', array(&$this, 'add_post_meta_box'));
+		add_action('admin_menu', array(&$this, 'add_post_meta_box'));
 		//add_action('save_post', array(&$this, 'save_post_meta_box'));
 		//add_action('edit_post', array(&$this, 'save_post_meta_box'));
 		//add_action('publish_post', array(&$this, 'save_post_meta_box'));
+		
+		// Load necessary scripts and stylesheets
+		add_action('admin_enqueue_scripts', array(&$this, 'add_admin_scripts'));
 		
 	}
 	
@@ -54,9 +57,176 @@ class cunyj_events
 		}
 	}
 	
+	// Loads scripts 
+	function add_admin_scripts() {
+		global $pagenow;
+		
+		if ($pagenow == 'post.php' || $pagenow == 'post-new.php' || $pagenow == 'page.php') {
+			wp_enqueue_script('cunyj_events', '/wp-content/themes/CUNY-J-School/js/cunyj_events.js', array('jquery'), false, true);
+			wp_enqueue_style('cunyj_events-styles', '/wp-content/themes/CUNY-J-School/css/cunyj_events.css', false, false, 'all');
+		}
+		
+	}
+	
+	function add_post_meta_box() {
+		global $cunyj;
+		
+		if (function_exists('add_meta_box')) {
+			add_meta_box('cunyj-events', __('Event', 'cunyj-events'), array(&$this, 'post_meta_box'), 'cunyj_event', 'normal', 'high');
+		}
+	}
+	
 	function post_meta_box() {
 		global $post, $cunyj;
 		
+		$all_months = array(
+				'January',
+				'February',
+				'March',
+				'April',
+				'May',
+				'June',
+				'July',
+				'August',
+				'September',
+				'October',
+				'November',
+				'December');
+		
+		$featured = get_post_meta($post->ID, '_cunyj_events_featured', true);
+		if (!$featured) {
+			$featured = 'off';
+		}
+				
+		$all_day = get_post_meta($post->ID, '_cunyj_events_all_day', true);
+		if (!$all_day) {
+			$all_day = 'on';
+		}		
+		
+		$start_date = get_post_meta($post->ID, '_cunyj_events_start_date', true);
+		$end_date = get_post_meta($post->ID, '_cunyj_events_end_date', true);
+		// Use today's date as start date if start date doesn't exist yet
+		if (!$start_date) {
+			$start_date_month = date_i18n('F');
+			$start_date_day = date_i18n('j');
+			$start_date_year = date_i18n('Y');
+			$start_date_hour = date_i18n('g');
+			$start_date_minute = date_i18n('i');		
+		}
+		if (!$end_date) {
+			$end_date_month = date_i18n('F');
+			$end_date_day = date_i18n('j');
+			$end_date_year = date_i18n('Y');
+			// @todo adjust hour plus one
+			$end_date_hour = date_i18n('g');
+			$end_date_minute = date_i18n('i');
+		}
+		
+		?>
+		
+		<div id="intro">
+		
+			<p><label for="cunyj_events-featured">Should this be featured?</label><input type="checkbox" id="cunyj_events-featured" name="cunyj_events-featured"<?php if ($featured == 'on') { echo ' checked="checked"'; } ?> /></p>
+		
+		</div>
+		
+		<div id="inner">
+		
+		<div id="time-date">
+		
+			<h4 class="buttonize">Date &amp; Time</h4>
+			
+			<div class="sub">
+			
+			<p><label for="cunyj_events-all_day">All day event?</label><input type="checkbox" id="cunyj_events-all_day" name="cunyj_events-all_day"<?php if ($all_day == 'on') { echo ' checked="checked"'; } ?> /></p>
+			
+			<p><label>From:</label>
+				<select id="cunyj_events-start_date_month" name="cunyj_events-start_date_month">
+					<?php foreach( $all_months as $month ) : ?>
+						<option<?php if ($start_date_month == $month) echo ' selected="selected"'; ?>><?php echo $month; ?></option>
+					<?php endforeach; ?>
+				</select>
+				<input type="text" id="cunyj_events-start_date_day" name="cunyj_events-start_date_day" value="<?php echo $start_date_day; ?>" size="2" maxlength="2" autocomplete="off" />
+				<input type="text" id="cunyj_events-start_date_year" name="cunyj_events-start_date_year" value="<?php echo $start_date_year; ?>" size="4" maxlength="4" autocomplete="off" />
+				<span class="event_date_time<?php if ($all_day == 'on') { echo ' hidden'; } ?>">
+					<span class="inline">at</span>
+					<input type="text" id="cunyj_events-start_date_hour" name="cunyj_events-start_date_hour" value="<?php echo $start_date_hour; ?>" size="2" maxlength="2" autocomplete="off" />
+					<input type="text" id="cunyj_events-start_date_minute" name="cunyj_events-start_date_minute" value="<?php echo $start_date_minute; ?>" size="2" maxlength="2" autocomplete="off" />
+				</span>
+			</p>
+			
+			<p><label>To:</label>
+				<select id="cunyj_events-end_date_month" name="cunyj_events-end_date_month">
+					<?php foreach( $all_months as $month ) : ?>
+						<option<?php if ($end_date_month == $month) echo ' selected="selected"'; ?>><?php echo $month; ?></option>
+					<?php endforeach; ?>
+				</select>
+				<input type="text" id="cunyj_events-end_date_day" name="cunyj_events-end_date_day" value="<?php echo $end_date_day; ?>" size="2" maxlength="2" autocomplete="off" />
+				<input type="text" id="cunyj_events-end_date_year" name="cunyj_events-end_date_year" value="<?php echo $end_date_year; ?>" size="4" maxlength="4" autocomplete="off" />
+				<span class="event_date_time<?php if ($all_day == 'on') { echo ' hidden'; } ?>">
+					<span class="inline">at</span>
+					<input type="text" id="cunyj_events-end_date_hour" name="cunyj_events-end_date_hour" value="<?php echo $end_date_hour; ?>" size="2" maxlength="2" autocomplete="off" />
+					<input type="text" id="cunyj_events-end_date_minute" name="cunyj_events-end_date_minute" value="<?php echo $end_date_minute; ?>" size="2" maxlength="2" autocomplete="off" />
+				</span>
+			</p>
+			
+			</div>
+		
+		</div>
+		
+		<div id="details">
+			
+			<h4>Details</h4>
+			
+			<div class="sub">
+				
+			</div>
+			
+		</div>
+
+		<div id="contact">
+			
+			<h4>Contact</h4>
+			
+			<div class="sub">
+			
+				Coming soon
+				
+			</div>
+			
+		</div>
+		
+		<div id="related-links">
+			
+			<h4>Related Links</h4>
+			
+			<div class="sub">
+				
+				Coming soon
+				
+			</div>
+			
+		</div>
+		
+		</div>
+		
+		<input type="hidden" name="cunyj_events-nonce" id="cunyj_events-nonce" value="<?php echo wp_create_nonce('cunyj_events-nonce'); ?>" />
+		
+		<?php 
+		
+	}
+	
+	function save_post_meta_box($post_id) {
+		global $cunyj, $post;
+		
+		if ( !wp_verify_nonce( $_POST['cunyj_events-nonce'], 'cunyj_events-nonce')) {
+			return $post_id;  
+		}
+		
+		if( !wp_is_post_revision($post) && !wp_is_post_autosave($post) ) {
+			
+			// Save the data
+		}		
 	}
 	
 	
