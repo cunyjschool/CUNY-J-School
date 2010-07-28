@@ -9,5 +9,11 @@ jQuery(document).ready(function(){
 		
 	});
 	
+	jQuery('a.action#add_street_address').click(function() {
+		jQuery(this).remove()
+		jQuery('#street_address_wrap').show();
+		return false;
+	});
+	
 	
 });

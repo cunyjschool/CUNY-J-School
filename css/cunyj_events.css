@@ -25,6 +25,10 @@
 	margin-bottom: 10px;
 }
 
+#cunyj-events .sub a.action {
+	margin-left: 205px;
+}
+
 #cunyj-events #inner {
 	margin-left: 10px;
 	margin-right: 10px;
@@ -37,7 +41,7 @@
 	
 }
 
-#cunyj-events #time-date label {
+#cunyj-events #time-date label, #cunyj-events #details label {
 	width: 200px;
 	display: inline-block;
 }

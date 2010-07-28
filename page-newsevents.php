@@ -10,7 +10,7 @@ Template Name: Page - News & Events
     
 <h2>Featured News</h2>
 
-<?php query_posts('cat=9&showposts=1'); ?>
+<?php query_posts('category_name=News&showposts=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php if(get_post_meta($post->ID, photo, true) != "") { ?>
 <a href="<?php the_permalink(); ?>"><img src="http://www.journalism.cuny.edu/scripts/timthumb.php?src=<?php echo get_post_meta( $post->ID,"photo", $single=true ) ; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"></a>
@@ -24,7 +24,7 @@ Template Name: Page - News & Events
       </div>
 
 <ul style="margin-top: 20px; padding-top: 20px; border-top: 1px dashed #eee; padding-bottom: 20px;" class="clearfix">
-<?php query_posts('cat=9&showposts=2&offset=1'); ?>
+<?php query_posts('category_name=News&showposts=2&offset=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li>
 	<?php if(get_post_meta($post->ID, photo, true) != "") { ?>
@@ -44,7 +44,7 @@ Template Name: Page - News & Events
 <h2>More News</h2>
 
 <ul>
-<?php query_posts('cat=9&showposts=5&offset=3'); ?>
+<?php query_posts('category_name=News&showposts=5&offset=3'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li>     
 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 

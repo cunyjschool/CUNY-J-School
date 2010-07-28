@@ -427,7 +427,27 @@ img.news-photo {
 	margin: 0 40px 0 0;}
 
 #posts h2 a, #posts h2 a:visited, #posts-internships h2 a, #posts-internships h2 a:visited {
-	text-decoration: none; }
+	text-decoration: none;
+}
+
+.event h2 {
+	font-size: 24px;
+}
+	
+.event .event_details {
+	background-color: #EEEEEE;
+	padding: 5px;
+	text-align: right;
+}
+
+.event .timestamp {
+	padding-top: 5px;
+}
+
+.event .event_details p span {
+	color: #666666;
+	float: left;
+}
 	
 .post h2 {
 	font-size: 150%;

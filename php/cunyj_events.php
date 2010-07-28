@@ -47,7 +47,7 @@ class cunyj_events
 						'editor',
 						'comments',
 						'excerpt',
-						'thumbnail'
+						'thumbnail',
 					),
 					'taxonomies' => array(
 						'post_tag'
@@ -128,6 +128,12 @@ class cunyj_events
 		$end_date_minute = date_i18n('i', $end_date);
 		$end_date_ampm = date_i18n('A', $end_date);
 		
+		$venue = get_post_meta($post->ID, '_cunyj_events_venue', true);
+		$street = get_post_meta($post->ID, '_cunyj_events_street', true);
+		$city = get_post_meta($post->ID, '_cunyj_events_city', true);
+		$state = get_post_meta($post->ID, '_cunyj_events_state', true);
+		$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true);
+		
 		?>
 		
 		<div id="intro">
@@ -193,6 +199,24 @@ class cunyj_events
 			<h4>Details</h4>
 			
 			<div class="sub">
+				
+				<p><label for="cunyj_events-venue">Venue:</label>
+					<input type="text" id="cunyj_events-venue" name="cunyj_events-venue" value="<?php echo $venue; ?>" size="50" /></p>
+				<?php if (!$street && !$city && !$state && !$zipcode) : ?>
+				<p><a href="#" id="add_street_address" class="action">Add street address</a></p>
+				<?php endif; ?>
+				<div id="street_address_wrap" <?php if (!$street && !$city && !$state && !$zipcode) { echo ' class="hidden"'; } ?>>
+				<p><label for="cunyj_events-street">Street:</label>
+					<input type="text" id="cunyj_events-street" name="cunyj_events-street" value="<?php echo $street; ?>" size="50" /></p>
+				<p><label for="cunyj_events-city">City:</label>
+					<input type="text" id="cunyj_events-city" name="cunyj_events-city" value="<?php echo $city; ?>" size="50" /></p>
+					
+				<p><label for="cunyj_events-state">State:</label>
+					<input type="text" id="cunyj_events-state" name="cunyj_events-state" value="<?php echo $state; ?>" size="50" /></p>
+				<p><label for="cunyj_events-zipcode">Zipcode:</label>
+					<input type="text" id="cunyj_events-zipcode" name="cunyj_events-zipcode" value="<?php echo $zipcode; ?>" size="50" /></p>
+					
+				</div>
 				
 			</div>
 			
@@ -288,6 +312,12 @@ class cunyj_events
 			//$end_date = get_gmt_from_date($end_date); // @todo we should probably store this as unix timestamp
 			$end_date = strtotime($end_date);
 			update_post_meta($post_id, '_cunyj_events_end_date', $end_date);
+			
+			update_post_meta($post_id, '_cunyj_events_venue', esc_html($_POST['cunyj_events-venue']));
+			update_post_meta($post_id, '_cunyj_events_street', esc_html($_POST['cunyj_events-street']));
+			update_post_meta($post_id, '_cunyj_events_city', esc_html($_POST['cunyj_events-city']));
+			update_post_meta($post_id, '_cunyj_events_state', esc_html($_POST['cunyj_events-state']));
+			update_post_meta($post_id, '_cunyj_events_zipcode', esc_html($_POST['cunyj_events-zipcode']));
 			
 			// Save the data
 		}		
