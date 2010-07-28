@@ -27,6 +27,8 @@ http://assistive.usablenet.com/tt/<?php bloginfo('url'); ?>">Text-Only</a>
   </script>
 
   <?php wp_footer(); ?>
+
+	<!-- New site ^DB 7/27 -->
         
 </body>
 </html>

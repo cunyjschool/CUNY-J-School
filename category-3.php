@@ -8,7 +8,7 @@ function alternate_rows($i){if($i % 2) {echo ' class="on"';} else {echo ' class=
 <div class="wrap clearfix" id="content">
   <div id="posts">
 
-<h3 style="margin-top: 20px; margin-bottom: 15px;">Upcoming Events <a href="http://www.journalism.cuny.edu/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/img/icons/feed.png" alt="Events Feed" class="feed" /></a></h3>
+<h3 style="margin-top: 20px; margin-bottom: 15px;">Upcoming Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed.png" alt="Events Feed" class="feed" /></a></h3>
 
 
 <?php
@@ -44,7 +44,7 @@ $eventdate = get_post_meta($post->ID, "event_date", true);
 </ul>
 <?php endif; ?>
 
-<h3 style="margin-top: 60px; margin-bottom: 15px;">Past Events <a href="http://www.journalism.cuny.edu/category/events/feed/"></a></h3>
+<h3 style="margin-top: 60px; margin-bottom: 15px;">Past Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"></a></h3>
 
 <?php
 $timecutoff = date("Y-m-d");

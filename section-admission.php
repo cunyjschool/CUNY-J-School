@@ -53,20 +53,23 @@ Template Name: Section - Admissions
 
 <h4 style="margin-top: 20px;"><strong>Contacts</strong></h4>
 
-<p><strong><a href="mailto:stephen.dougherty@journalism.cuny.edu">Stephen Dougherty</a></strong><br />
+<p><strong>Stephen Dougherty</strong><br />
 Dir. of Admissions/Student Affairs<br />
+<a href="mailto:stephen.dougherty@journalism.cuny.edu">stephen.dougherty@journalism.cuny.edu</a><br />
 (Office) 646-758-7731<br />
 (Fax) 646-758-7709<br />
 (Skype) stephend12</p>
 
-<p><strong><a href="mailto:yahaira.castro@journalism.cuny.edu">Yahaira Castro</a></strong><br />
+<p><strong>Yahaira Castro</strong><br />
 Assoc. Dir. of Admissions/Student Affairs<br />
+<a href="mailto:yahaira.castro@journalism.cuny.edu">yahaira.castro@journalism.cuny.edu</a><br />
 (Office) 646-758-7726<br />
 (Fax) 646-758-7709<br />
 (Skype) ycwrite</p>
 
-<p><strong><a href="mailto:colleen.marshall@journalism.cuny.edu">Colleen Marshall</a></strong><br />
+<p><strong>Colleen Marshall</strong><br />
 Admissions/Outreach Counselor
+<a href="mailto:colleen.marshall@journalism.cuny.edu">colleen.marshall@journalism.cuny.edu</a><br />
 (Office) 646-758-7852<br />
 (Fax) 646-758-7709<br />
 (Skype) colleen923</p>

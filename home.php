@@ -14,12 +14,7 @@
 <!-- Start Slideshow and Nav -->
   <div style="width: 700px; height: 400px; background: #eee; padding: 10px; float: left;">
   
-    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="700" height="400" id="homepage" align="middle">
-	    <param name="movie" value="/home-slideshow.swf" />
-	    <param name="base" value="." />
-	    <embed base="." src="/home-slideshow.swf" quality="best" bgcolor="#666666" width="700" height="400" name="MediaPlayer" align="middle" allowScriptAccess="sameDomain"
-      type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-    </object>
+   <img src="http://ssp.journalism.cuny.edu/ssp_director/albums/album-4/cache/perrysantanachote.jpg_700_400_1_100_1_50_50.jpg" height="400px" />
 
   </div>
   
@@ -286,7 +281,7 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 		while ( $inside_story->have_posts() ) : $inside_story->the_post(); ?>
 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 <?php if(get_post_meta($post->ID, inside_story_thumb, true) != "") { ?>
-<a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_directory'); ?>/php/timthumb.php?src=<?php echo get_post_meta( $post->ID,"inside_story_thumb", $single=true ) ; ?>&h=250&w=200&zc=1&q=100" alt="" class="photo"></a>
+<a href="<?php the_permalink(); ?>"><img src="<?php echo get_post_meta( $post->ID,"inside_story_thumb", $single=true ) ; ?>" height="250px" alt="" class="photo"></a>
 <?php } ?>
     <?php endwhile;
 		else: ?>

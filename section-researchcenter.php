@@ -11,15 +11,15 @@ Template Name: Research Center Page
   <div id="sidebar">
 <ul id="sidebar-nav">
   <li><h4><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a></h4></li>
-  <li><a href="<?php bloginfo('url'); ?>/research-center/about/">About Us</a>
+  <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/">About Us</a>
   <?php if(is_page(array(214,216,218,221,223,225))) { ?>  	
     <ul>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about/collections/">Collections</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about/mission-and-goals/">Mission & Goals</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about/hours-and-schedules/">Hours & Schedules</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about/staff/">Staff</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about/code-of-conduct/">Code of Conduct</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about/access-borrowing/">Access & Borrowing</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/collections/">Collections</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/mission-and-goals/">Mission & Goals</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/hours-and-schedules/">Hours & Schedules</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/staff/">Staff</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/code-of-conduct/">Code of Conduct</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/access-borrowing/">Access & Borrowing</a></li>
     </ul>
   <?php } ?>
   </li>
@@ -58,7 +58,7 @@ Send questions, comments or suggestions to: <a href="mailto:research@journalism.
 			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
     <?php if(is_page('210') ) { ?>
-    <img src="http://www.journalism.cuny.edu/wp-content/uploads/2008/09/research-center-wide.jpg" alt="Research Center entrance" style="border: 10px solid #eee;" />
+    <img src="<?php bloginfo('url'); ?>/files/2008/09/research-center-wide.jpg" alt="Research Center entrance" style="border: 10px solid #eee;" />
    	<?php } ?>
 
     
