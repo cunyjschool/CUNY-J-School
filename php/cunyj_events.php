@@ -10,9 +10,9 @@ class cunyj_events
 		
 		// Set up metabox and related actions
 		add_action('admin_menu', array(&$this, 'add_post_meta_box'));
-		//add_action('save_post', array(&$this, 'save_post_meta_box'));
-		//add_action('edit_post', array(&$this, 'save_post_meta_box'));
-		//add_action('publish_post', array(&$this, 'save_post_meta_box'));
+		add_action('save_post', array(&$this, 'save_post_meta_box'));
+		add_action('edit_post', array(&$this, 'save_post_meta_box'));
+		add_action('publish_post', array(&$this, 'save_post_meta_box'));
 		
 		// Load necessary scripts and stylesheets
 		add_action('admin_enqueue_scripts', array(&$this, 'add_admin_scripts'));
@@ -104,23 +104,29 @@ class cunyj_events
 		}		
 		
 		$start_date = get_post_meta($post->ID, '_cunyj_events_start_date', true);
-		$end_date = get_post_meta($post->ID, '_cunyj_events_end_date', true);
 		// Use today's date as start date if start date doesn't exist yet
 		if (!$start_date) {
-			$start_date_month = date_i18n('F');
-			$start_date_day = date_i18n('j');
-			$start_date_year = date_i18n('Y');
-			$start_date_hour = date_i18n('g');
-			$start_date_minute = date_i18n('i');		
+			$start_date = false;
 		}
+		$start_date_month = date_i18n('F', $start_date);
+		$start_date_day = date_i18n('j', $start_date);
+		$start_date_year = date_i18n('Y', $start_date);
+		$start_date_hour = date_i18n('g', $start_date);
+		$start_date_minute = date_i18n('i', $start_date);
+		$start_date_ampm = date_i18n('A', $start_date);
+			
+		$end_date = get_post_meta($post->ID, '_cunyj_events_end_date', true);
+		// Use today's date as end date if end date doesn't exist yet
 		if (!$end_date) {
-			$end_date_month = date_i18n('F');
-			$end_date_day = date_i18n('j');
-			$end_date_year = date_i18n('Y');
-			// @todo adjust hour plus one
-			$end_date_hour = date_i18n('g');
-			$end_date_minute = date_i18n('i');
+			$end_date = false;
 		}
+		$end_date_month = date_i18n('F', $end_date);
+		$end_date_day = date_i18n('j', $end_date);
+		$end_date_year = date_i18n('Y', $end_date);
+		// @todo adjust hour plus one
+		$end_date_hour = date_i18n('g', $end_date);
+		$end_date_minute = date_i18n('i', $end_date);
+		$end_date_ampm = date_i18n('A', $end_date);
 		
 		?>
 		
@@ -152,6 +158,10 @@ class cunyj_events
 					<span class="inline">at</span>
 					<input type="text" id="cunyj_events-start_date_hour" name="cunyj_events-start_date_hour" value="<?php echo $start_date_hour; ?>" size="2" maxlength="2" autocomplete="off" />
 					<input type="text" id="cunyj_events-start_date_minute" name="cunyj_events-start_date_minute" value="<?php echo $start_date_minute; ?>" size="2" maxlength="2" autocomplete="off" />
+					<select id="cunyj_events-start_date_ampm" name="cunyj_events-start_date_ampm">
+							<option<?php if ($start_date_ampm == 'AM') echo ' selected="selected"'; ?>>AM</option>
+							<option<?php if ($start_date_ampm == 'PM') echo ' selected="selected"'; ?>>PM</option>							
+					</select>
 				</span>
 			</p>
 			
@@ -167,6 +177,10 @@ class cunyj_events
 					<span class="inline">at</span>
 					<input type="text" id="cunyj_events-end_date_hour" name="cunyj_events-end_date_hour" value="<?php echo $end_date_hour; ?>" size="2" maxlength="2" autocomplete="off" />
 					<input type="text" id="cunyj_events-end_date_minute" name="cunyj_events-end_date_minute" value="<?php echo $end_date_minute; ?>" size="2" maxlength="2" autocomplete="off" />
+					<select id="cunyj_events-end_date_ampm" name="cunyj_events-end_date_ampm">
+							<option<?php if ($end_date_ampm == 'AM') echo ' selected="selected"'; ?>>AM</option>
+							<option<?php if ($end_date_ampm == 'PM') echo ' selected="selected"'; ?>>PM</option>							
+					</select>
 				</span>
 			</p>
 			
@@ -224,6 +238,56 @@ class cunyj_events
 		}
 		
 		if( !wp_is_post_revision($post) && !wp_is_post_autosave($post) ) {
+			
+			$featured = $_POST['cunyj_events-featured'];
+			if ($featured) {
+				$featured = 'on';
+			} else {
+				$featured = 'off';
+			}
+			update_post_meta($post_id, '_cunyj_events_featured', $featured);
+			
+			$all_day = $_POST['cunyj_events-all_day'];
+			if ($all_day) {
+				$all_day = 'on';
+			} else {
+				$all_day = 'off';
+			}
+			update_post_meta($post_id, '_cunyj_events_all_day', $all_day);
+			
+			$default_time = ' 12:00 PM';
+			
+			$start_date_month = $_POST['cunyj_events-start_date_month'];
+			$start_date_day = (int)$_POST['cunyj_events-start_date_day'];
+			$start_date_year = (int)$_POST['cunyj_events-start_date_year'];
+			$start_date_hour = (int)$_POST['cunyj_events-start_date_hour'];
+			$start_date_minute = (int)$_POST['cunyj_events-start_date_minute'];
+			$start_date_ampm = $_POST['cunyj_events-start_date_ampm'];
+			$start_date = $start_date_month . ' ' . $start_date_day . ', ' . $start_date_year;
+			if ($all_day == 'off') {
+				$start_date .= ' ' . $start_date_hour . ':' . $start_date_minute . ' ' . $start_date_ampm;
+			} else {
+				$start_date .= ' ' . $default_time;
+			}
+			//$start_date = get_gmt_from_date($start_date); // @todo we should probably store this as unix timestamp
+			$start_date = strtotime($start_date);
+			update_post_meta($post_id, '_cunyj_events_start_date', $start_date);
+			
+			$end_date_month = $_POST['cunyj_events-end_date_month'];
+			$end_date_day = (int)$_POST['cunyj_events-end_date_day'];
+			$end_date_year = (int)$_POST['cunyj_events-end_date_year'];
+			$end_date_hour = (int)$_POST['cunyj_events-end_date_hour'];
+			$end_date_minute = (int)$_POST['cunyj_events-end_date_minute'];
+			$end_date_ampm = $_POST['cunyj_events-end_date_ampm'];
+			$end_date = $end_date_month . ' ' . $end_date_day . ', ' . $end_date_year;
+			if ($all_day == 'off') {
+				$end_date .= ' ' . $end_date_hour . ':' . $end_date_minute . ' ' . $end_date_ampm;
+			} else {
+				$end_date .= ' ' . $default_time;
+			}
+			//$end_date = get_gmt_from_date($end_date); // @todo we should probably store this as unix timestamp
+			$end_date = strtotime($end_date);
+			update_post_meta($post_id, '_cunyj_events_end_date', $end_date);
 			
 			// Save the data
 		}		
