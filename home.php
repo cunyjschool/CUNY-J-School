@@ -14,7 +14,7 @@
 <!-- Start Slideshow and Nav -->
   <div style="width: 700px; height: 400px; background: #eee; padding: 10px; float: left;">
   
-   <img src="http://ssp.journalism.cuny.edu/ssp_director/albums/album-4/cache/perrysantanachote.jpg_700_400_1_100_1_50_50.jpg" height="400px" />
+   <img src="/files/2010/07/banners_h700.jpg" height="400px" />
 
   </div>
   
