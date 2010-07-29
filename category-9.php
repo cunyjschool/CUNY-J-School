@@ -10,24 +10,24 @@ function alternate_rows($i){if($i % 2) {echo ' class="on"';} else {echo ' class=
 
   <div id="sidebar">
 <ul id="sidebar-nav">
-  <li><h4><a href="/career-services/">Career Services</a></h4></li>
-  <li><a href="/career-services/news-events/">News & Events</a></li>
-  <li><a href="/category/career-services/internships/">Internship Listings</a></li>
-  <li><a href="/career-services/freelance-community-publications/">Freelance: Community Publications</a></li>
-  <li><a href="/career-services/job-hunting-career-info-links/">Job-Hunting & Career-Info Links</a></li>
-  <li><a href="/career-services/professional-organizations/">Professional Organizations</a></li>
-  <li><a href="/career-services/for-employers/">For Employers</a></li>
-  <li><a href="/career-services/where-our-alumni-are-working/">Where Our Alumni Are Working</a></li>
+  <li><h4><a href="<?php bloginfo('url'); ?>/career-services/">Career Services</a></h4></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/news-events/">News & Events</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/category/career-services/internships/">Internship Listings</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/freelance-community-publications/">Freelance: Community Publications</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/job-hunting-career-info-links/">Job-Hunting & Career-Info Links</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/professional-organizations/">Professional Organizations</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/for-employers/">For Employers</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/career-services/where-our-alumni-are-working/">Where Our Alumni Are Working</a></li>
 </ul>
 
 <ul id="sidebar-nav" style="margin-top: 20px;">
   <li><h4>Job-Search Tips</h4></li>
-  <li><a href="/job-search-tips/resume/">Resume</a></li>
-  <li><a href="/job-search-tips/cover-letter/">Cover Letter</a></li>
-  <li><a href="/job-search-tips/references/">References</a></li>
-  <li><a href="/job-search-tips/clips-tapes/">Clips &amp; Tapes</a></li>
-  <li><a href="/job-search-tips/search-strategies/">Search Strategies</a></li>
-  <li><a href="/job-search-tips/interview-salary-negotiation/">Interview &amp; Salary Negotiation</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/resume/">Resume</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/cover-letter/">Cover Letter</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/references/">References</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/clips-tapes/">Clips &amp; Tapes</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/search-strategies/">Search Strategies</a></li>
+  <li><a href="<?php bloginfo('url'); ?>/job-search-tips/interview-salary-negotiation/">Interview &amp; Salary Negotiation</a></li>
 </ul>
 
 <h3>Contact Us</h3>
@@ -52,19 +52,19 @@ Career Services Coordinator<br />
   
 <h2>Internship Opportunities</h2>
 
-<img src="http://www.journalism.cuny.edu/wp-content/uploads/2010/06/internship2-edit.png" width="320px" style="border: 5px solid #efefef;" />
+<img src="<?php bloginfo('url'); ?>/files/2010/06/internship2-edit.png" width="320px" style="border: 5px solid #efefef;" />
 
 <div style="width: 320px; -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding; background:#EFEFEF none repeat scroll 0 0; padding:5px;"><!--start filter-->
 
-See all <a href="/category/career-services/internships/internships-upcoming-deadlines/">Upcoming Deadlines</a> or sort by:
+See all <a href="<?php bloginfo('url'); ?>/category/career-services/internships/internships-upcoming-deadlines/">Upcoming Deadlines</a> or sort by:
 <div style="border-bottom: 1px solid #eee; margin-top:10px;">
 <table>
     <tbody>
        <tr style="vertical-align: top; width: 371px;">
             <td style="width: 70px; line-height:12px;"><p><strong>Semester:</strong></p></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/summer-internships-career-services/">Summer</a></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="/category/career-services/fall-internships-career-services/">Fall</a></td>
-            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/spring-internships-career-services/">Spring</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="<?php bloginfo('url'); ?>/category/career-services/summer-internships-career-services/">Summer</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="<?php bloginfo('url'); ?>/category/career-services/fall-internships-career-services/">Fall</a></td>
+            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="<?php bloginfo('url'); ?>/category/career-services/spring-internships-career-services/">Spring</a></td>
         </tr>
     </tbody>
 </table>
@@ -75,9 +75,9 @@ See all <a href="/category/career-services/internships/internships-upcoming-dead
     <tbody>
        <tr style="vertical-align: top; width: 371px;">
             <td style="width: 70px; line-height:12px;"><p><strong>Platform:</strong></p></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/broadcast-internships-career-services/">Broadcast</a></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="/category/career-services/print-internships-career-services/">Print</a></td>
-            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/online-internships-career-services/">Online</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="<?php bloginfo('url'); ?>/category/career-services/broadcast-internships-career-services/">Broadcast</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="<?php bloginfo('url'); ?>/category/career-services/print-internships-career-services/">Print</a></td>
+            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="<?php bloginfo('url'); ?>/category/career-services/online-internships-career-services/">Online</a></td>
         </tr>
     </tbody>
 </table>
@@ -88,9 +88,9 @@ See all <a href="/category/career-services/internships/internships-upcoming-dead
     <tbody>
        <tr style="vertical-align: top; width: 371px;">
             <td style="width: 70px; line-height:12px;"><p><strong>Location:</strong></p></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px;background: #f7f7f7;"><a href="/category/career-services/new-york-internships-career-services/">NYC</a></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="/category/career-services/other-us-cities/">Other U.S. Cities</a></td>
-            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/international/">International</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px;background: #f7f7f7;"><a href="<?php bloginfo('url'); ?>/category/career-services/new-york-internships-career-services/">NYC</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="<?php bloginfo('url'); ?>/category/career-services/other-us-cities/">Other U.S. Cities</a></td>
+            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="<?php bloginfo('url'); ?>/category/career-services/international/">International</a></td>
         </tr>
     </tbody>
 </table>
@@ -104,7 +104,7 @@ See all <a href="/category/career-services/internships/internships-upcoming-dead
 <table style="width: 100%; margin-top: 0px; clear:both;">
 <h4 style="margin-top:50px;">All Internships Opportunities:</h4>
 
-  <?php $posts = query_posts($query_string . '&orderby=title&order=asc&posts_per_page=-1');
+  <?php $posts = query_posts('cat=9&orderby=title&order=asc&posts_per_page=-1');
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php $i++; ?>  
@@ -130,7 +130,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<?php endif; ?>
   </div>
   
-  <?php include (TEMPLATEPATH . '/sidebar-internships.php'); ?>
+  <?php get_sidebar('careerservices_internships'); ?>
 
 
 </div>

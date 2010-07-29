@@ -11,7 +11,7 @@
     <div id="latest-news">
 <h3>Latest News</h3>
 <ul>
-<?php query_posts('cat=4&showposts=5'); ?>
+<?php query_posts('category_name=News&showposts=5'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
   
@@ -23,7 +23,7 @@
     <div id="upcoming-events">
 <h3>Upcoming Events</h3>
 <ul>
-<?php query_posts('cat=15&showposts=3'); ?>
+<?php query_posts('category_name=Events&showposts=3'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
   
@@ -36,7 +36,7 @@
       <div id="category-list">
 <h3>More News</h3>
 <ul>
-<?php wp_list_categories('child_of=4&title_li=&exclude=13'); ?>
+<?php wp_list_categories('child_of=19&title_li=&exclude=13'); ?>
 </ul>
       </div>
      

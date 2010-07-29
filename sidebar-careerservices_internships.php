@@ -41,6 +41,22 @@ echo $local_date_values[1] . "/" .
   <li><strong><a href="/2009/07/16/more-resources-for-internship-information/">More Resources for Internship Information</a></strong></li>
 </ul>
 
-</div>
+<!--
+<h3 style="margin-top: 30px;">Sort Internships by Tag</h3>
+<ul style="float: left; width: 100px; margin-right: 20px;">
+  <li><a href="/tag/summer+internship/">Summer</a></li>
+  <li><a href="/tag/fall+internship/">Fall</a></li>
+  <li><a href="/tag/winter+internship/">Winter</a></li>
+  <li><a href="/tag/spring+internship/">Spring</a></li>
+</ul>
+
+<ul style="float: left; width: 100px;">
+  <li><a href="/tag/broadcast+internship/">Broadcast</a></li>
+  <li><a href="/tag/interactive+internship/">Interactive</a></li>
+  <li><a href="/tag/print+internship/">Print</a></li>
+</ul>
+-->
+
+  </div>
 
 
