@@ -30,9 +30,12 @@ if ( function_exists('register_sidebar') ) {
         'before_title' => '<h2 class="widgettitle">',
         'after_title' => '</h2>',
     ));
-
+	
+		register_sidebar( 'about' );
+		register_sidebar( 'academics' );
 		register_sidebar( 'careerservices_left' );
 		register_sidebar( 'careerservices_internships' );
+		register_sidebar( 'default_page' );
 		
 }
 

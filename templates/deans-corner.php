@@ -3,7 +3,7 @@
 <ul>
 <?php
     $args=array(
-      'cat' => 248,
+      'cat' => 10,
       'numberposts'=>1,
     );
 	
@@ -18,7 +18,7 @@ if ($catposts) {
 ?>
 <?php
     $args=array(
-      'cat' => 248,
+      'cat' => 10,
       'numberposts'=>4,
 	  'offset'=>1,
     );
