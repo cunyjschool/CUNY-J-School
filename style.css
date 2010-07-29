@@ -200,6 +200,11 @@ h3 {
 	padding: 0 1px 0 0;
 	list-style: none; }
 
+#primary_nav li.current-page-ancestor a, #primary_nav li.current_page_item a {
+	background: #444;
+	color: #FFF;
+}
+
 #primary_nav li a { 
   	float: left;
   	display: block;
@@ -409,7 +414,7 @@ table.cal td.month {
 }
 
 #sidebar ul.navigation li ul.children li a {
-	font-size: 14px;
+	font-size: 13px;
 }
 
 #sidebar ul.navigation li ul.children li ul.children li a {
