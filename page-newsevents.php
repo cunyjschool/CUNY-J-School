@@ -58,7 +58,7 @@ Template Name: Page - News & Events
 
 <ul id="up-events">
 <?php
-$events = get_posts('category_name=events&meta_key=event_date&orderby=meta_value&numberposts=4&order=asc');
+$events = get_posts('cat=11&meta_key=event_date&orderby=meta_value&numberposts=4&order=asc');
   $count = 0;
 	foreach($events as $post) :
 	  if ($count >= 3) {
@@ -94,7 +94,7 @@ $events = get_posts('category_name=events&meta_key=event_date&orderby=meta_value
     <div style="clear: both; border-top: 1px solid #eee; padding-top: 20px;">
       <div id="news-social-left">
         <div id="news-twitter">
-      <a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/img/icon-twitter.png" alt="CUNY J-School on Twitter" /></a>
+      <a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icon-twitter.png" alt="CUNY J-School on Twitter" /></a>
 
 <?php
 echo SimplePieWP('http://feeds2.feedburner.com/cunyjschool', array(
@@ -105,7 +105,7 @@ echo SimplePieWP('http://feeds2.feedburner.com/cunyjschool', array(
           </div>
         
           <div id="news-flickr">
-          <a href="http://flickr.com/photos/cunyjschool/"><img src="<?php bloginfo('template_directory'); ?>/img/icon-flickr.jpg" alt="CUNY J-School on Flickr" style="margin: 20px 0;" /></a>
+          <a href="http://flickr.com/photos/cunyjschool/"><img src="<?php bloginfo('template_directory'); ?>/images/icon-flickr.jpg" alt="CUNY J-School on Flickr" style="margin: 20px 0;" /></a>
             <div id="news-flickr-photos">
             <?php get_flickrRSS(array(
     'num_items' => 9)); 
@@ -130,8 +130,8 @@ echo SimplePieWP('http://vimeo.com/cunyjschool/videos/rss', array(
         </div>
         
         <div id="news-social-more">
-        <a href="http://www.facebook.com/pages/New-York-NY/CUNY-Graduate-School-of-Journalism/17117865082"><img src="<?php bloginfo('template_directory'); ?>/img/find-us-on-facebook.gif" alt="Find Us On Facebook" /></a>
-        <a href="http://www.youtube.com/user/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/img/watch-youtube.jpg" alt=Watch Us On YouTube" /></a>         
+        <a href="http://www.facebook.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/find-us-on-facebook.gif" alt="Find Us On Facebook" /></a>
+        <a href="http://www.youtube.com/user/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/watch-youtube.jpg" alt="Watch Us On YouTube" /></a>         
         </div>
       </div>
     </div>
@@ -140,7 +140,7 @@ echo SimplePieWP('http://vimeo.com/cunyjschool/videos/rss', array(
       <div id="news-clips">
       <h3>Clips of the Week</h3>
 	    <ul>
-<?php query_posts('cat=17&showposts=3'); ?>
+<?php query_posts('cat=332&showposts=3'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     <?php endwhile; else: ?><p>There are currently no stories.</p>
@@ -151,7 +151,7 @@ echo SimplePieWP('http://vimeo.com/cunyjschool/videos/rss', array(
     <div id="news-faculty">
     <h3>Faculty News</h3>
 	  <ul>
-<?php query_posts('cat=8&showposts=3'); ?>
+<?php query_posts('cat=35&showposts=3'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     <?php endwhile; else: ?><p>There are currently no stories.</p>
@@ -162,7 +162,7 @@ echo SimplePieWP('http://vimeo.com/cunyjschool/videos/rss', array(
     <div id="news-alumni">
     <h3>Alumni News</h3>
 	  <ul>
-<?php query_posts('cat=6&showposts=3'); ?>
+<?php query_posts('cat=30&showposts=3'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
     <?php endwhile; else: ?><p>There are currently no stories.</p>
