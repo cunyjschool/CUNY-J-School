@@ -502,9 +502,10 @@ img.news-photo {
 	float: left;
 }
 	
-.post h2 {
-	font-size: 150%;
-	margin-top: 20px; }
+.post h2, .page h2 {
+	font-size: 24px;
+	margin-top: 20px;
+}
 	
 .entry {
 	margin-top: 20px; }
