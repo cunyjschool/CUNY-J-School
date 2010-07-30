@@ -33,6 +33,7 @@ if ( function_exists('register_sidebar') ) {
 	
 		register_sidebar( 'about' );
 		register_sidebar( 'admissions' );
+		register_sidebar( 'alumni' );
 		register_sidebar( 'careerservices_left' );
 		register_sidebar( 'careerservices_internships' );
 		register_sidebar( 'default_page' );
