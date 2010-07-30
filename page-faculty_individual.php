@@ -7,12 +7,12 @@ Template Name: Page - Faculty Individual
 
 <div class="wrap clearfix" id="content">
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar('faculty'); ?>
       
   <div id="right">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div class="post" id="post-<?php the_ID(); ?>">
+	<div class="page" id="post-<?php the_ID(); ?>">
     
 		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
@@ -26,9 +26,6 @@ Template Name: Page - Faculty Individual
 
 		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 		<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-        
-
-
 
       </div>
     </div>

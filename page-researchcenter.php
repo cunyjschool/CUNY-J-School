@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Research Center Page
+Template Name: Page - Research Center
 */
 ?>
 
@@ -9,23 +9,23 @@ Template Name: Research Center Page
 <div class="wrap clearfix" id="content">
 
   <div id="sidebar">
-<ul id="sidebar-nav">
-  <li><h4><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a></h4></li>
+<ul class="navigation">
+  <li><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a>
+<ul class="children">
   <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/">About Us</a>
-  <?php if(is_page(array(214,216,218,221,223,225))) { ?>  	
-    <ul>
+    <ul class="children">
       <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/collections/">Collections</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/mission-and-goals/">Mission & Goals</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/hours-and-schedules/">Hours & Schedules</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/mission-and-goals/">Mission &amp; Goals</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/hours-and-schedules/">Hours &amp; Schedules</a></li>
       <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/staff/">Staff</a></li>
       <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/code-of-conduct/">Code of Conduct</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/access-borrowing/">Access & Borrowing</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/access-borrowing/">Access &amp; Borrowing</a></li>
     </ul>
-  <?php } ?>
   </li>
   <li><a href="<?php bloginfo('url'); ?>/research-center/search-tools/">Search Tools</a></li>
   <li><a href="<?php bloginfo('url'); ?>/research-center/services/">Services</a></li>
   <li><a href="http://journalism.cuny.bepress.com/">MediaWorks</a></li>
+</ul></li>
 </ul>
 
     <div style="margin-top: 20px;">

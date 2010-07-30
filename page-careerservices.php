@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Section - Career Services
+Template Name: Page - Career Services
 */
 ?>
 
@@ -19,13 +19,13 @@ Template Name: Section - Career Services
 		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>    
       <div class="entry">
       
-      	<?php if(get_post_meta($post->ID, page_image, true) != "") { ?>
+      	<?php if(get_post_meta($post->ID, 'page_image', true) != "") { ?>
         <div id="page-image">
 <img src="<?php echo get_post_meta( $post->ID,"page_image", $single=true ) ; ?>" />
         </div>
   		<?php } ?>
 
-<?php if(get_post_meta($post->ID, page_image_wide, true) != "") { ?>
+<?php if(get_post_meta($post->ID, 'page_image_wide', true) != "") { ?>
         <div id="page-image-wide">
 <img src="<?php echo get_post_meta( $post->ID,"page_image_wide", $single=true ) ; ?>" />
         </div>

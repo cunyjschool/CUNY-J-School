@@ -37,6 +37,7 @@ if ( function_exists('register_sidebar') ) {
 		register_sidebar( 'careerservices_left' );
 		register_sidebar( 'careerservices_internships' );
 		register_sidebar( 'default_page' );
+		register_sidebar( 'faculty' );
 		register_sidebar( 'giving' );
 		
 }

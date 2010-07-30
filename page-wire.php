@@ -28,11 +28,12 @@ Template Name: Page - Wire
   
   
   <div id="right">
-    <div class="post">
+    <div class="page" id="cunyj-wire">
 <h2>The Wire</h2>
     
 
 <?php
+if (function_exists('SimplePieWP')) {
 echo SimplePieWP(array(
 	'http://nycitynewsservice.com/category/top-stories/feed/',
 	'http://roadtrip.journalism.cuny.edu/feed/',
@@ -50,6 +51,8 @@ echo SimplePieWP(array(
 	'date_format' => 'j M Y, g:i a',
 	'template' => 'Wire'
 ));
+}
+
 ?>
 
    
