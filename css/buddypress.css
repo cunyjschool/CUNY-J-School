@@ -1,3 +1,7 @@
+#wp-admin-bar a:hover {
+	text-decoration: none;
+}
+
 #buddypress #main h2 {
   font-size: 24px;
   margin-top: 10px;  

@@ -7,6 +7,7 @@ wp_enqueue_script('jquery');
 define( 'CUNYJ_PREFIX' , 'cunjy_' );
 
 include_once('php/cunyj_events.php');
+include_once('php/cunyj_buddypress.php');
 
 class cunyj
 {
@@ -15,6 +16,7 @@ class cunyj
 		global $wpdb;
 		
 		$this->events = new cunyj_events();
+		$this->buddypress = new cunyj_buddypress();
 		
 	}
 	
