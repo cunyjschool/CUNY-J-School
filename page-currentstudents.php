@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Section - Current Students
+Template Name: Page - Current Students
 */
 ?>
 
@@ -9,16 +9,14 @@ Template Name: Section - Current Students
 <div class="wrap clearfix" id="content">
 
   <div id="sidebar">
-<ul id="sidebar-nav">
-  <li><h4><a href="<?php bloginfo('url'); ?>/current-students/">Current Students</a></h4></li>
-  <li><a href="<?php bloginfo('url'); ?>/current-students/academic-calendar/">Academic Calendar</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/career-services/">Career Services</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/current-students/class-schedule/">Class Schedule</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/current-students/commencement-guide">Commencement Guide</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/current-students/registration/">Registration</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a></li>
-  <li><a href="http://help.journalism.cuny.edu">Technical Support</a></li>
-</ul>
+
+			<?php wp_nav_menu(
+						array(
+							'menu' => 'Current Students',
+							'menu_class' => 'navigation'
+							)
+						); ?>
+
 	</div>
           
   <div id="right">
@@ -31,13 +29,13 @@ Template Name: Section - Current Students
     
       <div class="entry">
       
-      	<?php if(get_post_meta($post->ID, page_image, true) != "") { ?>
+      	<?php if(get_post_meta($post->ID, 'page_image', true) != "") { ?>
         <div id="page-image">
 <img src="<?php echo get_post_meta( $post->ID,"page_image", $single=true ) ; ?>" />
         </div>
   		<?php } ?>
 
-<?php if(get_post_meta($post->ID, page_image_wide, true) != "") { ?>
+<?php if(get_post_meta($post->ID, 'page_image_wide', true) != "") { ?>
         <div id="page-image-wide">
 <img src="<?php echo get_post_meta( $post->ID,"page_image_wide", $single=true ) ; ?>" />
         </div>
