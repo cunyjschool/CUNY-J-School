@@ -75,7 +75,7 @@ $i = 0; ?>
     <div id="events-home">
       <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
 
-  <?php $events = new WP_Query(array('category_name'=>'Events','showposts'=>4,'meta_key'=>'event_date','order'=>'ASC','orderby'=>'meta_value')); ?>
+  <?php $events = new WP_Query(array('category_name'=>'Events','showposts'=>4,'meta_key'=>'event_date','order'=>'DESC','orderby'=>'meta_value')); ?>
   <?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
 	<div class="event clearfix">    
 	<table class="cal">
