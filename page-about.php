@@ -8,7 +8,16 @@ Template Name: Page - About
 
 <div class="wrap clearfix" id="content">
 
-  <?php get_sidebar('default_page'); ?>
+  <div id="sidebar">
+
+		<?php wp_nav_menu(
+					array(
+						'menu' => 'About',
+						'menu_class' => 'navigation'
+						)
+					); ?>
+
+	</div>
           
   <div id="right">
   
