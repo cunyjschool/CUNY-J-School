@@ -1,10 +1,10 @@
 <?php get_header() ?>
 
-<div id="container">
-  
-  <div class="main">
-  
-	<div id="content">
+<div class="wrap">
+	
+	<div id="buddypress">
+	
+	<div id="groups_single" class="content">
 
 			<?php if ( bp_has_groups() ) : while ( bp_groups() ) : bp_the_group(); ?>
 
@@ -70,12 +70,10 @@
 
 			<?php endwhile; endif; ?>
 
-	</div><!-- #content -->
+	</div><!-- /.content -->
 	
-	</div>
+	</div><!-- /#buddypress -->
 	
-</div><!-- #container -->
-
-	<?php locate_template( array( 'sidebar.php' ), true ) ?>
+</div><!-- /.wrap -->
 
 <?php get_footer() ?>

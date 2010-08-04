@@ -2,9 +2,63 @@
 	text-decoration: none;
 }
 
-#buddypress #main h2 {
+#buddypress h2 {
   font-size: 24px;
   margin-top: 10px;  
+}
+
+#buddypress .settings .item-body {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #EEEEEE;
+	border: 1px solid #CCCCCC;
+}
+
+#buddypress .settings.left {
+	width: 600px;
+}
+
+#buddypress span.required {
+	color: #990000;
+}
+
+#buddypress .settings fieldset.standard {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#buddypress .settings fieldset.standard label {
+	margin: 0;
+}
+
+#buddypress .settings fieldset.standard ul.explanation {
+	margin-top: 3px;
+	margin-left: 25px;
+}
+
+#buddypress .settings fieldset input, #buddypress .settings fieldset textarea {
+	padding: 5px;
+	font-size: 14px;
+	font-family:"Trebuchet MS",Arial,Verdana,sans-serif;
+}
+
+#buddypress .settings input.large {
+	width: 500px;
+}
+
+#buddypress .settings textarea.large {
+	width: 502px;
+}
+
+#buddypress .settings div.submit {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#buddypress .settings div.submit .button {
+	margin-right: 10px;
 }
 
 #buddypress #item-meta {
@@ -27,7 +81,7 @@
 }
 
 #item-nav {
-  float:left;
+  float: left;
   width: 150px;
 }
 
