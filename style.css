@@ -521,6 +521,14 @@ img.news-photo {
 	border-bottom: 1px solid #eee;
 	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px; }
 	
+.entry ul li.facebook {
+	background: url(images/icons/socialnetworking/facebook_16.png) no-repeat 10px 8px;
+}
+
+.entry ul li.twitter {
+	background: url(images/icons/socialnetworking/twitter_16.png) no-repeat 10px 8px;
+}
+	
 .entry ul li#research-toolbox {
 	padding-left: 30px;
 	background: url(images/icons/hammer.png) no-repeat 10px 7px; }
