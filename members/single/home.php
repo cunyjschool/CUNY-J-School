@@ -1,10 +1,10 @@
 <?php get_header() ?>
   
-<div class="wrap" id="buddypress">
-    
-	<div id="main">
-	  
-	  <div id="content">
+<div class="wrap">
+	
+	<div id="buddypress">
+	
+	<div id="members_single" class="content">
 
 		<?php do_action( 'bp_before_member_home_content' ) ?>
 

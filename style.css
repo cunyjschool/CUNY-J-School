@@ -71,7 +71,7 @@ fieldset {
 	float: right;
 }
 
-.button {
+input.button {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 7px;
@@ -83,13 +83,13 @@ fieldset {
 	border-style: solid;
 }
 
-.button.secondary {
+input.button.secondary {
 	background-color: #999999;
 	border-color: #999999;
 	color: #FFFFFF;
 }
 
-.button.primary {
+input.button.primary {
 	background-color: #0066CC;
 	border-color: #0066CC;
 	color: #FFFFFF;

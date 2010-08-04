@@ -65,15 +65,20 @@
   width: auto;
 }
 
+#buddypress div#item-header h2 a {
+	color: #333333;
+}
+
 #buddypress div#item-header div#item-header-content {
   float: none;
+	margin-left: 170px;
 }
 
 #buddypress #item-meta #item-buttons {
   float: right;
 }
 
-#buddypress h2 span.activity {
+#buddypress h2 span.activity, #buddypress h2 span.meta {
   font-size: 14px;
   font-weight: normal;
   color: #999;
@@ -122,8 +127,8 @@
   text-decoration: none;
 }
 
-#buddypress #main #item-body {
-  margin-left: 175px;
+#buddypress #item-body {
+  margin-left: 170px;
 }
 
 #buddypress .message {

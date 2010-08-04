@@ -3,7 +3,7 @@
 <?php $curauth = get_userdata(bp_displayed_user_id()); ?>
 
 <div id="item-header-avatar">
-	<a href="">
+	<a href="<?php //bp_member_home_permalink(); ?>">
   	<?php bp_displayed_user_avatar( 'type=full' ) ?>
 	</a>
 </div><!-- #item-header-avatar -->
