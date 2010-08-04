@@ -69,6 +69,14 @@ h3 {
 	padding: 20px; 
 	background: #fff; }
 	
+#main, #buddypress {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 40px;
+	background: #FFFFFF;
+}
+	
 #tile-orange {
 	height: 7px;
 	background: url(images/tile-orange.jpg) repeat-x; }

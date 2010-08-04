@@ -71,3 +71,13 @@
 #buddypress #main #item-body {
   margin-left: 175px;
 }
+
+#buddypress .message {
+	border: 2px solid;
+	padding: 2px 10px;
+}
+
+#buddypress .message.alert {
+	border-color: #0066CC;
+	background-color: #CDE2FF;
+}

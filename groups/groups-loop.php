@@ -31,6 +31,7 @@
 				<div class="item-meta"><span class="activity"><?php printf( __( 'active %s ago', 'buddypress' ), bp_get_group_last_active() ) ?></span></div>
 
 				<?php do_action( 'bp_directory_groups_item' ) ?>
+				
 			</div>
 
 			<div class="action">
@@ -49,8 +50,8 @@
 
 <?php else: ?>
 
-	<div id="message" class="info">
-		<p><?php _e( 'There were no groups found.', 'buddypress' ) ?></p>
+	<div class="message alert">
+		<p><?php _e( 'There were no groups found.', 'buddypress' ) ?><?php if ( is_user_logged_in() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_domain() . '/' . BP_GROUPS_SLUG . '/create/' ?>"><?php _e( "Why don't you start one?", 'buddypress' ) ?></a><?php endif; ?></p>
 	</div>
 
 <?php endif; ?>
