@@ -133,6 +133,16 @@
 	margin-right: 10px;
 }
 
+#buddypress .activity-inner {
+	font-size: 16px;
+}
+
+#buddypress #activity_single .activity {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+
 #buddypress ul.item-list#members-list li {
 	padding-bottom: 10px;
 	margin-bottom: 10px;
@@ -250,6 +260,7 @@
 	margin-bottom: 0;
 	padding-top: 0px;
 	padding-bottom: 5px;
+	border-bottom: none;
 }
 
 #buddypress .item-list-tabs#subnav ul {
@@ -260,6 +271,20 @@
   padding: 3px;
 }
 
+#buddypress .item-list-tabs#subnav ul li a {
+  text-decoration: none;
+	padding: 0 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #F9F9F9;
+	border-color: #F9F9F9;
+	display: inline-block;
+	font-size: 11px;
+}
+
 #buddypress .item-list-tabs#subnav ul li.feed a {
 	padding-left: 20px;
 	background-image: url(../images/icons/feed_s16.png);
@@ -268,9 +293,6 @@
 	display: inline-block;
 }
 
-#buddypress .item-list-tabs#subnav ul li a {
-  text-decoration: none;
-}
 
 #buddypress .profile-fields .label {
 	width: 150px;

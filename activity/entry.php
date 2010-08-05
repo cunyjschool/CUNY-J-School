@@ -11,15 +11,15 @@
 
 	<div class="activity-content">
 
-		<div class="activity-header">
-			<?php bp_activity_action() ?>
-		</div>
-
-		<?php if ( bp_get_activity_content_body() ) : ?>
+    <?php if ( bp_get_activity_content_body() ) : ?>
 			<div class="activity-inner">
 				<?php bp_activity_content_body() ?>
 			</div>
 		<?php endif; ?>
+
+		<div class="activity-header">
+			<?php bp_activity_action() ?>
+		</div>
 
 		<?php do_action( 'bp_activity_entry_content' ) ?>
 

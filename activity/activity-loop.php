@@ -34,7 +34,7 @@
 
 <?php else : ?>
   
-	<div class="notice alert">
+	<div class="message info">
 		<p>Sorry, there's no recent activity to display for this member.</p>
 	</div>
 	
