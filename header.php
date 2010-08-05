@@ -31,9 +31,7 @@
 
 <body>
 
-  <!-- <div id="tile-orange"></div> -->
-  <div id="home-alert"><a href="http://wiki.journalism.cuny.edu/Getting%20a%20Fast%20Start">Getting a Fast Start: CLASS OF 2011</a></div>
-
+<div id="tile-orange"></div>
 
 <div id="global">
   <div class="wrap clearfix">
