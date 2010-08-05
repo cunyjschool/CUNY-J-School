@@ -1,34 +1,39 @@
 <?php do_action( 'bp_before_profile_edit_content' ) ?>
 
 <?php if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) ) : while ( bp_profile_groups() ) : bp_the_profile_group(); ?>
+	
+<div class="settings">
 
 <form action="<?php bp_the_profile_group_edit_form_action() ?>" method="post" id="profile-edit-form" class="standard-form <?php bp_the_profile_group_slug() ?>">
 
 	<?php do_action( 'bp_before_profile_field_content' ) ?>
 
-		<h4><?php printf( __( "Editing '%s' Profile Group", "buddypress" ), bp_get_the_profile_group_name() ); ?></h4>
+		<h3><?php printf( __( "Editing '%s' Profile Group", "buddypress" ), bp_get_the_profile_group_name() ); ?></h3>
 
 		<ul class="button-nav">
 			<?php bp_profile_group_tabs(); ?>
 		</ul>
-
-		<div class="clear"></div>
 
 		<?php while ( bp_profile_fields() ) : bp_the_profile_field(); ?>
 
 			<div<?php bp_field_css_class( 'editfield' ) ?>>
 
 				<?php if ( 'textbox' == bp_get_the_profile_field_type() ) : ?>
-
+					
+					
+				<fieldset class="standard">
 					<label for="<?php bp_the_profile_field_input_name() ?>"><?php bp_the_profile_field_name() ?> <?php if ( bp_get_the_profile_field_is_required() ) : ?><?php _e( '(required)', 'buddypress' ) ?><?php endif; ?></label>
-					<input type="text" name="<?php bp_the_profile_field_input_name() ?>" id="<?php bp_the_profile_field_input_name() ?>" value="<?php bp_the_profile_field_edit_value() ?>" />
+					<input type="text" name="<?php bp_the_profile_field_input_name() ?>" id="<?php bp_the_profile_field_input_name() ?>" value="<?php bp_the_profile_field_edit_value() ?>" class="large" />
+				</fieldset>
 
 				<?php endif; ?>
 
 				<?php if ( 'textarea' == bp_get_the_profile_field_type() ) : ?>
 
+				<fieldset class="standard">
 					<label for="<?php bp_the_profile_field_input_name() ?>"><?php bp_the_profile_field_name() ?> <?php if ( bp_get_the_profile_field_is_required() ) : ?><?php _e( '(required)', 'buddypress' ) ?><?php endif; ?></label>
 					<textarea rows="5" cols="40" name="<?php bp_the_profile_field_input_name() ?>" id="<?php bp_the_profile_field_input_name() ?>"><?php bp_the_profile_field_edit_value() ?></textarea>
+				</fieldset>
 
 				<?php endif; ?>
 
@@ -104,13 +109,15 @@
 	<?php do_action( 'bp_after_profile_field_content' ) ?>
 
 	<div class="submit">
-		<input type="submit" name="profile-group-edit-submit" id="profile-group-edit-submit" value="<?php _e( 'Save Changes', 'buddypress' ) ?> " />
+		<input type="submit" class="button primary" name="profile-group-edit-submit" id="profile-group-edit-submit" value="<?php _e( 'Save Changes', 'buddypress' ) ?> " />
 	</div>
 
 	<input type="hidden" name="field_ids" id="field_ids" value="<?php bp_the_profile_group_field_ids() ?>" />
 	<?php wp_nonce_field( 'bp_xprofile_edit' ) ?>
 
 </form>
+
+</div>
 
 <?php endwhile; endif; ?>
 

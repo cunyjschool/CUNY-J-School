@@ -8,19 +8,13 @@
 		</div>
 	<?php endif; ?>
 
-	<div id="whats-new-avatar">
-		<a href="<?php echo bp_loggedin_user_domain() ?>">
-			<?php bp_loggedin_user_avatar( 'width=60&height=60' ) ?>
-		</a>
-	</div>
-
-	<h5>
+	<h3>
 		<?php if ( bp_is_group() ) : ?>
-			<?php printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname() ) ?>
+			<?php printf( __( "What's happening in %s?", 'buddypress' ), bp_get_group_name() ) ?>
 		<?php else : ?>
-			<?php printf( __( "What's new %s?", 'buddypress' ), bp_get_user_firstname() ) ?>
+			<?php printf( __( "What's happening %s?", 'buddypress' ), bp_get_user_firstname() ) ?>
 		<?php endif; ?>
-	</h5>
+	</h3>
 
 	<div id="whats-new-content">
 		<div id="whats-new-textarea">
@@ -30,7 +24,7 @@
 		<div id="whats-new-options">
 			<div id="whats-new-submit">
 				<span class="ajax-loader"></span> &nbsp;
-				<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php _e( 'Post Update', 'buddypress' ) ?>" />
+				<input class="button primary" type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php _e( 'Post Update', 'buddypress' ) ?>" />
 			</div>
 
 			<?php if ( function_exists('bp_has_groups') && !bp_is_my_profile() && !bp_is_group() ) : ?>

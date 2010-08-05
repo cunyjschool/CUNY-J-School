@@ -7,6 +7,48 @@
   margin-top: 10px;  
 }
 
+#buddypress form#whats-new-form {
+	padding-bottom: 10px;
+}
+
+#buddypress form#whats-new-form h5 {
+	margin-left: 0;
+}
+
+#buddypress form#whats-new-form #whats-new-content {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#buddypress #item-body {
+	min-height: 300px;
+	margin-left: 170px;
+}
+
+#buddypress .item-list-tabs {
+	margin-top: 0;
+	margin-bottom: 0;
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#buddypress .generic-button a {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #999999;
+	border-color: #999999;
+	color: #FFFFFF;
+	display: inline-block;
+	text-decoration: none;
+}
+
 #buddypress .settings .item-body {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -22,6 +64,11 @@
 
 #buddypress span.required {
 	color: #990000;
+}
+
+#buddypress .settings .standard-form ul.button-nav li {
+	display: inline-block;
+	margin-right: 10px;
 }
 
 #buddypress .settings fieldset.standard {
@@ -61,8 +108,28 @@
 	margin-right: 10px;
 }
 
+#buddypress .item-list .item h4 a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+#buddypress .item-list .item {
+	margin-left: 95px;
+}
+
+#buddypress .item-list .item-meta span.label {
+	width: 100px;
+	display: inline-block;
+	color: #999999;
+}
+
 #buddypress #item-meta {
   width: auto;
+}
+
+#buddypress div#item-header {
+	padding-bottom: 0;
 }
 
 #buddypress div#item-header h2 a {
@@ -92,7 +159,11 @@
 
 #buddypress div.item-list-tabs {
   clear: none;
-  border-bottom: none;
+}
+
+#buddypress .item-list-tabs#object-nav {
+	margin-top: 0;
+	border: none;
 }
 
 .item-list-tabs#object-nav ul {
@@ -107,31 +178,51 @@
   background-color:;
 }
 
-.item-list-tabs#object-nav ul li a {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  width: 100%;
-  display: inline-block;
-  text-decoration: none;
+#buddypress .item-list-tabs#object-nav ul li a {
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 4px;
+	width: 100%;
+	display: inline-block;
+	text-decoration: none;
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #EEEEEE;
+	background-color: #F9F9F9;
 }
 
-.item-list-tabs#subnav ul {
+#buddypress .item-list-tabs#object-nav ul li.current a {
+	border-top-color: #CCCCCC;
+	background-color: #EEEEEE;
+	border-bottom-color: #CCCCCC;
+	color: #666666;
+}
+
+#buddypress .item-list-tabs#object-nav ul li a:hover {
+	color: #FFFFFF;
+	border-top-color: #EF8F00;
+	background-color: #FF9900;
+}
+
+#buddypress .item-list-tabs#subnav ul {
   
 }
 
-.item-list-tabs#subnav ul li {
+#buddypress .item-list-tabs#subnav ul li {
   padding: 3px;
 }
 
-.item-list-tabs#subnav ul li a {
+#buddypress .item-list-tabs#subnav ul li a {
   text-decoration: none;
 }
 
-#buddypress #item-body {
-  margin-left: 170px;
+#buddypress .profile-fields .label {
+	width: 150px;
 }
 
 #buddypress .message {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border: 2px solid;
 	padding: 2px 10px;
 }

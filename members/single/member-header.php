@@ -30,7 +30,7 @@
 			<?php endif; ?>
 		</div><!-- #item-buttons -->
 
-    <h2 class="fn"><span class="activity"><?php bp_last_activity( bp_displayed_user_id() ) ?></span><?php bp_displayed_user_fullname(); ?></h2>
+    <h2 class="fn"><span class="meta"><?php bp_profile_field_data( 'field=Title' ); ?></span><?php bp_displayed_user_fullname(); ?></h2>
     
     <div class="item-description"><?php echo $curauth->description; ?></div>
 	

@@ -56,6 +56,4 @@
 	
 </div><!-- /.wrap -->
 
-<?php locate_template( array( 'sidebar.php' ), true ) ?>
-
 <?php get_footer() ?>

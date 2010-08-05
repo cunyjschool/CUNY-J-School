@@ -16,7 +16,7 @@ body {
 	padding: 0;
 	color: #333;
 	line-height: 170%;
-	font-size: small;
+	font-size: 12px;
 }
 
 ul {
@@ -35,8 +35,10 @@ p {
 	margin: 0;
 	padding: .5em 0; }
 
-a:link {color: #0066cc; text-decoration: underline; }
-a:visited {color: #0066cc; text-decoration: underline; }
+a {
+	color: #0066cc;
+	text-decoration: underline; 
+}
 a:hover {color: #000; text-decoration: underline; }
 
 a img {

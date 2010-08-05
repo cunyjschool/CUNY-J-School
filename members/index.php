@@ -1,17 +1,16 @@
 <?php get_header() ?>
 
-<div id="container">
-	<div id="content">
+<div class="wrap">
+	
+	<div id="buddypress">
+	
+	<div id="members_directory" class="content">
 
 		<form action="" method="post" id="members-directory-form" class="dir-form">
 
-			<h3><?php _e( 'Members Directory', 'buddypress' ) ?></h3>
+			<h2>CUNY Graduate School of Journalism Directory</h2>
 
 			<?php do_action( 'bp_before_directory_members_content' ) ?>
-
-			<div id="members-dir-search" class="dir-search">
-				<?php bp_directory_members_search_form() ?>
-			</div><!-- #members-dir-search -->
 
 			<div class="item-list-tabs">
 				<ul>
@@ -52,9 +51,10 @@
 
 		</form><!-- #members-directory-form -->
 
-	</div><!-- #content -->
-</div><!-- #container -->
+		</div>
 
-<?php locate_template( array( 'sidebar.php' ), true ) ?>
+	</div><!-- /#buddypress -->
+	
+</div><!-- /.wrap -->
 
 <?php get_footer() ?>
