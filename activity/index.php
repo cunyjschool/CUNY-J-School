@@ -18,7 +18,7 @@
 
 			<?php do_action( 'template_notices' ) ?>
 
-			<div class="item-list-tabs activity-type-tabs">
+			<div class="item-list-tabs activity-type-tabs" id="primary-nav">
 				<ul>
 					<?php do_action( 'bp_before_activity_type_tab_all' ) ?>
 

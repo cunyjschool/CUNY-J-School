@@ -12,7 +12,7 @@
 
 			<?php do_action( 'bp_before_directory_members_content' ) ?>
 
-			<div class="item-list-tabs">
+			<div class="item-list-tabs" id="primary-nav">
 				<ul>
 					<li class="selected" id="members-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Members (%s)', 'buddypress' ), bp_get_total_member_count() ) ?></a></li>
 

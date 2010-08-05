@@ -32,8 +32,8 @@
 
 <?php else: ?>
 
-	<div id="message" class="info">
-		<p><?php _e( 'You have no pending friendship requests.', 'buddypress' ); ?></p>
+	<div class="message info">
+		<p>You have no pending friendship requests.</p>
 	</div>
 
 <?php endif;?>

@@ -13,6 +13,12 @@
 			<div class="item-avatar">
 				<a href="<?php bp_member_permalink() ?>"><?php bp_member_avatar( 'width=80&height=80' ) ?></a>
 			</div>
+			
+			<div class="item-action">
+				<?php bp_member_add_friend_button() ?>
+
+				<?php do_action( 'bp_directory_members_actions' ) ?>
+			</div>
 
 			<div class="item">
 				<div class="item-title">
@@ -47,14 +53,9 @@
 				  */
 				?>
 			</div>
-
-			<div class="action">
-				<?php bp_member_add_friend_button() ?>
-
-				<?php do_action( 'bp_directory_members_actions' ) ?>
-			</div>
-
-			<div class="clear"></div>
+			
+			<div style="clear:left;"></div>
+			
 		</li>
 
 	<?php endwhile; ?>
