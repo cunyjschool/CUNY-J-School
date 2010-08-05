@@ -3,11 +3,13 @@
 <?php do_action( 'bp_before_activity_entry' ) ?>
 
 <li class="<?php bp_activity_css_class() ?>" id="activity-<?php bp_activity_id() ?>">
+	<?php if ( bp_get_activity_content_body() ) : ?>
 	<div class="activity-avatar">
 		<a href="<?php bp_activity_user_link() ?>">
 			<?php bp_activity_avatar( 'type=full&width=100&height=100' ) ?>
 		</a>
 	</div>
+	<?php endif; ?>
 
 	<div class="activity-content">
 
