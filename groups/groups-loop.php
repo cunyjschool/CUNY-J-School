@@ -4,31 +4,23 @@
 
 <?php if ( bp_has_groups( bp_ajax_querystring( 'groups' ) ) ) : ?>
 
-	<div class="pagination">
-
-		<div class="pag-count" id="group-dir-count">
-			<?php bp_groups_pagination_count() ?>
-		</div>
-
-		<div class="pagination-links" id="group-dir-pag">
-			<?php bp_groups_pagination_links() ?>
-		</div>
-
-	</div>
-
 	<ul id="groups-list" class="item-list">
 	<?php while ( bp_groups() ) : bp_the_group(); ?>
 
 		<li>
 			<div class="item-avatar">
-				<a href="<?php bp_group_permalink() ?>"><?php bp_group_avatar( 'type=thumb&width=50&height=50' ) ?></a>
+				<a href="<?php bp_group_permalink() ?>"><?php bp_group_avatar( 'width=80&height=80' ) ?></a>
 			</div>
 
 			<div class="item">
-				<div class="item-title"><a href="<?php bp_group_permalink() ?>"><?php bp_group_name() ?></a> <span class="item-info"><?php bp_group_type() ?> / <?php bp_group_member_count() ?></span></div>
+				
+				<div class="item-title">
+					<h4><a href="<?php bp_group_permalink() ?>"><?php bp_group_name() ?></a></h4>		
+				</div>
+			
 				<div class="item-desc"><?php bp_group_description_excerpt() ?></div>				
 				
-				<div class="item-meta"><span class="activity"><?php printf( __( 'active %s ago', 'buddypress' ), bp_get_group_last_active() ) ?></span></div>
+				<div class="item-meta"><span class="item-info"><?php bp_group_type() ?> / <?php bp_group_member_count() ?></span> /  <span class="activity"><?php printf( __( 'active %s ago', 'buddypress' ), bp_get_group_last_active() ) ?></span></div>
 
 				<?php do_action( 'bp_directory_groups_item' ) ?>
 				
@@ -47,6 +39,19 @@
 	</ul>
 
 	<?php do_action( 'bp_after_groups_loop' ) ?>
+	
+	<div class="pagination">
+
+		<div class="pag-count" id="group-dir-count">
+			<?php bp_groups_pagination_count() ?>
+		</div>
+
+		<div class="pagination-links" id="group-dir-pag">
+			<?php bp_groups_pagination_links() ?>
+		</div>
+
+	</div>
+	
 
 <?php else: ?>
 

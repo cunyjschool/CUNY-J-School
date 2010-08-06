@@ -12,6 +12,8 @@
   
   <div id="item-meta">
 
+    <h2 class="fn"><span class="meta"><?php bp_profile_field_data( 'field=Title' ); ?></span><?php bp_displayed_user_fullname(); ?></h2>
+
 		<div id="item-buttons">
 			<?php if ( function_exists( 'bp_add_friend_button' ) ) : ?>
 				<?php bp_add_friend_button() ?>
@@ -29,16 +31,8 @@
 				</div>
 			<?php endif; ?>
 		</div><!-- #item-buttons -->
-
-    <h2 class="fn"><span class="meta"><?php bp_profile_field_data( 'field=Title' ); ?></span><?php bp_displayed_user_fullname(); ?></h2>
     
     <div class="item-description"><?php echo $curauth->description; ?></div>
-	
-		<?php if ( function_exists( 'bp_activity_latest_update' ) ) : ?>
-			<div id="latest-update">
-				<?php bp_activity_latest_update( bp_displayed_user_id() ) ?>
-			</div>
-		<?php endif; ?>
 
 	<?php do_action( 'bp_before_member_header_meta' ) ?>
 
@@ -46,6 +40,11 @@
 		 /***
 		  * If you'd like to show specific profile fields here use:
 		  * bp_profile_field_data( 'field=About Me' ); -- Pass the name of the field
+		  * <?php if ( function_exists( 'bp_activity_latest_update' ) ) : ?>
+				<div id="latest-update">
+					<?php bp_activity_latest_update( bp_displayed_user_id() ) ?>
+				</div>
+			<?php endif; ?>
 		  */
 		?>
 

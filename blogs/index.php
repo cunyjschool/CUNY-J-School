@@ -1,19 +1,18 @@
 <?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
+<div class="wrap">
+	
+	<div id="buddypress">
+	
+	<div id="blogs_directory" class="content">
 
 		<form action="" method="post" id="blogs-directory-form" class="dir-form">
 
-			<h3><?php _e( 'Blogs Directory', 'buddypress' ) ?><?php if ( is_user_logged_in() && bp_blog_signup_enabled() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_domain() . '/' . BP_BLOGS_SLUG . '/create/' ?>"><?php _e( 'Create a Blog', 'buddypress' ) ?></a><?php endif; ?></h3>
+			<h2>CUNY Graduate School of Journalism Blogs Directory<?php if ( is_user_logged_in() && bp_blog_signup_enabled() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_domain() . '/' . BP_BLOGS_SLUG . '/create/' ?>"><?php _e( 'Create a Blog', 'buddypress' ) ?></a><?php endif; ?></h2>
 
 			<?php do_action( 'bp_before_directory_blogs_content' ) ?>
 
-			<div id="blog-dir-search" class="dir-search">
-				<?php bp_directory_blogs_search_form() ?>
-			</div><!-- #blog-dir-search -->
-
-			<div class="item-list-tabs">
+			<div id="primary-nav" class="item-list-tabs">
 				<ul>
 					<li class="selected" id="blogs-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Blogs (%s)', 'buddypress' ), bp_get_total_blog_count() ) ?></a></li>
 
@@ -46,10 +45,10 @@
 			<?php wp_nonce_field( 'directory_blogs', '_wpnonce-blogs-filter' ) ?>
 
 		</form><!-- #blogs-directory-form -->
+		
+		</div>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
-
-	<?php locate_template( array( 'sidebar.php' ), true ) ?>
 
 <?php get_footer() ?>

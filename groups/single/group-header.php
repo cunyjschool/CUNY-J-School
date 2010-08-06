@@ -14,9 +14,10 @@
 	<?php do_action( 'bp_before_group_header_meta' ) ?>
 
 	<div id="item-meta">
+		<div id="item-buttons">
+			<?php bp_group_join_button() ?>
+		</div>
 		<?php bp_group_description() ?>
-
-		<?php bp_group_join_button() ?>
 
 		<?php do_action( 'bp_group_header_meta' ) ?>
 	</div>

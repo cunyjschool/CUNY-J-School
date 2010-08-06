@@ -25,7 +25,7 @@
 					<h4><a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a></h4>		
 				</div>
 				
-				<div class="item-meta">
+				<div class="item-desc">
 					<?php if ($title = bp_get_member_profile_data( 'field=Title' )) : ?>
 					<p><span class="label">Title:</span><?php echo $title; ?></p>
 					<?php endif; ?>
@@ -53,8 +53,6 @@
 				  */
 				?>
 			</div>
-			
-			<div style="clear:left;"></div>
 			
 		</li>
 

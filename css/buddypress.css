@@ -61,6 +61,25 @@
 }
 
 #buddypress .generic-button a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #F9F9F9;
+	border-color: #EEEEEE;
+}
+
+#buddypress .generic-button a:hover {
+	background-color: #FF9900;
+	border-color: #EF8F00;
+	color: #FFFFFF; 
+}
+
+#buddypress .settings .generic-button a {
 	padding: 0 5px;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -143,8 +162,12 @@
 	width: 600px;
 }
 
+#buddypress ul.item-list li {
+	min-height: 80px;
+	margin-bottom: 20px;	
+}
+
 #buddypress ul.item-list#members-list li {
-	padding-bottom: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #EEEEEE;
 }
@@ -163,10 +186,14 @@
 	margin-left: 95px;
 }
 
-#buddypress .item-list .item-meta span.label {
+#buddypress .item-list .item-desc span.label {
 	width: 100px;
 	display: inline-block;
 	color: #999999;
+}
+
+#buddypress .item-list .item-meta {
+	color: #666666;
 }
 
 #buddypress #item-meta {
@@ -191,7 +218,7 @@
 }
 
 #buddypress h2 span.activity, #buddypress h2 span.meta {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   color: #999;
   float: right;
@@ -210,6 +237,7 @@
 	margin-top: 0;
 	border: none;
 	font-size: 12px;
+	padding-top: 0;
 }
 
 .item-list-tabs#object-nav ul {
@@ -246,7 +274,6 @@
 	border-top-color: #CCCCCC;
 	background-color: #EEEEEE;
 	border-bottom-color: #CCCCCC;
-	color: #666666;
 }
 
 #buddypress .item-list-tabs#object-nav ul li a:hover {
@@ -273,16 +300,27 @@
 
 #buddypress .item-list-tabs#subnav ul li a {
   text-decoration: none;
-	padding: 0 5px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+	padding: 0 7px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	border-width: 1px;
 	border-style: solid;
 	background-color: #F9F9F9;
-	border-color: #F9F9F9;
+	border-color: #EEEEEE;
 	display: inline-block;
 	font-size: 11px;
+}
+
+#buddypress .item-list-tabs#subnav ul li.current a {
+	border-color: #CCCCCC;
+	background-color: #EEEEEE;
+}
+
+#buddypress .item-list-tabs#subnav ul li a:hover {
+	color: #FFFFFF;
+	border-top-color: #EF8F00;
+	background-color: #FF9900;
 }
 
 #buddypress .item-list-tabs#subnav ul li.feed a {
@@ -290,6 +328,7 @@
 	background-image: url(../images/icons/feed_s16.png);
 	background-repeat: no-repeat;
 	background-position: 0 4px;
+	background-color: none;
 	display: inline-block;
 }
 

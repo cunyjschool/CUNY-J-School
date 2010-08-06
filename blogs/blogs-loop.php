@@ -4,6 +4,41 @@
 
 <?php if ( bp_has_blogs( bp_ajax_querystring( 'blogs' ) ) ) : ?>
 
+	<ul id="blogs-list" class="item-list">
+	<?php while ( bp_blogs() ) : bp_the_blog(); ?>
+
+		<li>
+			<div class="item-avatar">
+				<a href="<?php bp_blog_permalink() ?>"><?php bp_blog_avatar('width=80&height=80') ?></a>
+			</div>
+
+			<div class="item">
+				<div class="item-title"><a href="<?php bp_blog_permalink() ?>"><?php bp_blog_name() ?></a></div>
+				<div class="item-content">
+					<?php bp_blog_latest_post() ?>
+				</div>
+				<div class="item-meta"><span class="activity"><?php bp_blog_last_active() ?></span></div>
+
+				<?php do_action( 'bp_directory_blogs_item' ) ?>
+			</div>
+
+			<div class="action">
+				<div class="generic-button blog-button visit">
+					<a href="<?php bp_blog_permalink() ?>" class="visit" title="<?php _e( 'Visit Blog', 'buddypress' ) ?>"><?php _e( 'Visit Blog', 'buddypress' ) ?></a>
+				</div>
+
+				<?php do_action( 'bp_directory_blogs_actions' ) ?>
+			</div>
+			
+		</li>
+
+	<?php endwhile; ?>
+	</ul>
+
+	<?php do_action( 'bp_after_directory_blogs_list' ) ?>
+
+	<?php bp_blog_hidden_fields() ?>
+	
 	<div class="pagination">
 
 		<div class="pag-count" id="blog-dir-count">
@@ -15,43 +50,6 @@
 		</div>
 
 	</div>
-
-	<ul id="blogs-list" class="item-list">
-	<?php while ( bp_blogs() ) : bp_the_blog(); ?>
-
-		<li>
-			<div class="item-avatar">
-				<a href="<?php bp_blog_permalink() ?>"><?php bp_blog_avatar('type=thumb') ?></a>
-			</div>
-
-			<div class="item">
-				<div class="item-title"><a href="<?php bp_blog_permalink() ?>"><?php bp_blog_name() ?></a></div>
-				<div class="item-meta"><span class="activity"><?php bp_blog_last_active() ?></span></div>
-
-				<?php do_action( 'bp_directory_blogs_item' ) ?>
-			</div>
-
-			<div class="action">
-				<div class="generic-button blog-button visit">
-					<a href="<?php bp_blog_permalink() ?>" class="visit" title="<?php _e( 'Visit Blog', 'buddypress' ) ?>"><?php _e( 'Visit Blog', 'buddypress' ) ?></a>
-				</div>
-
-				<div class="meta">
-					<?php bp_blog_latest_post() ?>
-				</div>
-
-				<?php do_action( 'bp_directory_blogs_actions' ) ?>
-			</div>
-
-			<div class="clear"></div>
-		</li>
-
-	<?php endwhile; ?>
-	</ul>
-
-	<?php do_action( 'bp_after_directory_blogs_list' ) ?>
-
-	<?php bp_blog_hidden_fields() ?>
 
 <?php else: ?>
 

@@ -4,6 +4,8 @@
 	</ul>
 </div><!-- .item-list-tabs -->
 
+<div class="settings">
+
 <form action="<?php bp_group_admin_form_action() ?>" name="group-settings-form" id="group-settings-form" class="standard-form" method="post" enctype="multipart/form-data">
 
 <?php do_action( 'bp_before_group_admin_content' ) ?>
@@ -309,4 +311,6 @@
 <?php do_action( 'bp_after_group_admin_content' ) ?>
 
 </form>
+
+</div>
 
