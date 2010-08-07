@@ -7,6 +7,23 @@
   margin-top: 10px;  
 }
 
+#buddypress h2 a.create.button {
+	float: right;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #F9F9F9;
+	border-color: #EEEEEE;
+	font-size: 16px;
+	margin-left: 15px;
+	font-weight: normal;
+}
+
 #buddypress form#whats-new-form {
 	padding-bottom: 10px;
 }
@@ -328,8 +345,14 @@
 	background-image: url(../images/icons/feed_s16.png);
 	background-repeat: no-repeat;
 	background-position: 0 4px;
-	background-color: none;
+	background-color: #FFFFFF;
+	border: none;
 	display: inline-block;
+}
+
+#buddypress .item-list-tabs#subnav ul li.feed a:hover {
+	background-color: none;
+	color: #0066CC;
 }
 
 

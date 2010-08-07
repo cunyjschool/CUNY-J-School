@@ -7,11 +7,11 @@
 	<div id="groups_directory" class="content">
 
 		<form action="" method="post" id="groups-directory-form" class="dir-form">
-			<h3><?php _e( 'Groups Directory', 'buddypress' ) ?><?php if ( is_user_logged_in() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_domain() . '/' . BP_GROUPS_SLUG . '/create/' ?>"><?php _e( 'Create a Group', 'buddypress' ) ?></a><?php endif; ?></h3>
+			<h2><?php if ( is_user_logged_in() ) : ?><a class="create button" href="<?php echo bp_get_root_domain() . '/' . BP_GROUPS_SLUG . '/create/' ?>"><?php _e( 'Create a Group', 'buddypress' ) ?></a><?php endif; ?>Groups Directory</h2>
 
 			<?php do_action( 'bp_before_directory_groups_content' ) ?>
 
-			<div class="item-list-tabs">
+			<div id="primary-nav" class="item-list-tabs">
 				<ul>
 					<li class="selected" id="groups-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Groups (%s)', 'buddypress' ), bp_get_total_group_count() ) ?></a></li>
 
