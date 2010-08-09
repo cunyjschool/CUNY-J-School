@@ -132,7 +132,14 @@
 #socialnet li#hfoursquare {
 	padding-left: 20px;
 	background: url(../images/icons/socialnetworking/foursquare_16.png) no-repeat 0 3px; }
-	
+
+#home-slideshow {
+	width: 700px;
+	background: #eee;
+	padding: 10px;
+	float: left;
+}
+
 #news-home {
 	clear: both;
 	margin-bottom: 20px;

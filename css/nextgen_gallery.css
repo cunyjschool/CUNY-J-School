@@ -1,0 +1,19 @@
+div.galleryview {
+	
+}
+
+div.galleryview div.panel {
+	padding-top: 0;
+	font-weight: normal;
+}
+
+div.galleryview div.panel img {
+	width: 700px;
+	height: 400px;
+}
+
+div.galleryview div.panel div.panel-overlay, div.galleryview div.panel div.overlay {
+	height:100px;
+	top: 295px !important;
+	height: 125px !important;
+}

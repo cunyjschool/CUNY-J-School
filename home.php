@@ -12,9 +12,10 @@
 
 
 <!-- Start Slideshow and Nav -->
-  <div style="width: 700px; height: 400px; background: #eee; padding: 10px; float: left;">
+  <div id="home-slideshow">
   
-   <img src="/files/2010/07/banners_h700.jpg" height="400px" />
+   <!-- <img src="/files/2010/07/banners_h700.jpg" height="400px" /> -->
+		<?php echo do_shortcode('[nggallery id=1 template="galleryview" images=0]'); ?>
 
   </div>
   
