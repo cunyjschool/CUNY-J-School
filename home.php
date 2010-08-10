@@ -2,15 +2,6 @@
 
 <div class="wrap clearfix" id="content">
 
-<?php query_posts('cat=144&showposts=1'); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <div id="home-alert">
-<strong><?php the_title(); ?></a></strong> <?php remove_filter ('the_content', 'wpautop'); ?><?php the_content(); ?>
-  </div> 
-    <?php endwhile; else: ?>
-<?php endif; ?>
-
-
 <!-- Start Slideshow and Nav -->
   <div id="home-slideshow">
   
