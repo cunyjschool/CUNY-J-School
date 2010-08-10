@@ -104,6 +104,14 @@ input.button.primary {
 .button:hover {
 	cursor: pointer;
 }
+
+#wp-admin-bar .padder ul.main-nav li:hover a {
+	padding-bottom: 4px;
+}
+
+#wp-admin-bar .padder ul.main-nav li a:hover {
+	background-color: transparent;
+}
 	
 #content {
 	padding: 20px; 

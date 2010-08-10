@@ -77,7 +77,7 @@
 
 <?php else: ?>
 
-	<div class="message alert">
+	<div class="message info">
 		<p><?php _e( "Sorry, no members were found.", 'buddypress' ) ?></p>
 	</div>
 

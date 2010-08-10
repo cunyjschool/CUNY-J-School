@@ -57,7 +57,7 @@
 
 <?php else: ?>
 
-	<div class="message alert">
+	<div class="message info">
 		<p>There were no groups found.</p>
 	</div>
 
