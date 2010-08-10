@@ -8,7 +8,7 @@
 
 		<form action="" method="post" id="members-directory-form" class="dir-form">
 
-			<h2>CUNY Graduate School of Journalism Directory</h2>
+			<h2>Members Directory</h2>
 
 			<?php do_action( 'bp_before_directory_members_content' ) ?>
 

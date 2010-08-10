@@ -13,18 +13,20 @@
 			</div>
 
 			<div class="item">
-				<div class="item-title"><a href="<?php bp_blog_permalink() ?>"><?php bp_blog_name() ?></a></div>
-				<div class="item-content">
-					<?php bp_blog_latest_post() ?>
+				<div class="item-title">
+					<h4><a href="<?php bp_blog_permalink() ?>"><?php bp_blog_name() ?></a></h4>
 				</div>
-				<div class="item-meta"><span class="activity"><?php bp_blog_last_active() ?></span></div>
+				<div class="item-desc">
+					<p><span class="label">Description:</span><?php bp_blog_description() ?></p>
+					<p class="latest-post"><?php bp_blog_latest_post() ?></p>
+				</div>
 
 				<?php do_action( 'bp_directory_blogs_item' ) ?>
 			</div>
 
 			<div class="action">
 				<div class="generic-button blog-button visit">
-					<a href="<?php bp_blog_permalink() ?>" class="visit" title="<?php _e( 'Visit Blog', 'buddypress' ) ?>"><?php _e( 'Visit Blog', 'buddypress' ) ?></a>
+					<a href="<?php bp_blog_permalink() ?>" class="visit" title="Visit">Visit</a>
 				</div>
 
 				<?php do_action( 'bp_directory_blogs_actions' ) ?>

@@ -52,7 +52,7 @@
 }
 
 #buddypress .item-list-tabs#primary-nav ul li {
-	margin-right: 10px;
+	margin-right: 15px;
 }
 
 #buddypress .item-list-tabs#primary-nav ul li.last {
@@ -61,20 +61,16 @@
 
 #buddypress .item-list-tabs#primary-nav ul li a {
 	text-decoration: none;
-	padding: 0 5px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-width: 1px;
-	border-style: solid;
-	background-color: #F9F9F9;
-	border-color: #F9F9F9;
-	display: inline-block;
+	font-size: 12px;
 }
 
 #buddypress .item-list-tabs#primary-nav ul li.selected a {
-	background-color: #EEEEEE;
-	border-color: #CCCCCC;
+	color: #333333;
+	font-weight: bold;
+}
+
+#buddypress .item-list-tabs#primary-nav ul li.selected a:hover {
+	background-color: #FFFFFF;
 }
 
 #buddypress .generic-button a {
@@ -149,7 +145,7 @@
 #buddypress .settings fieldset input, #buddypress .settings fieldset textarea {
 	padding: 5px;
 	font-size: 14px;
-	font-family:"Trebuchet MS",Arial,Verdana,sans-serif;
+	font-family:"Trebuchet MS", Arial,Verdana,sans-serif;
 }
 
 #buddypress .settings input.large {
@@ -184,29 +180,42 @@
 	margin-bottom: 20px;	
 }
 
-#buddypress ul.item-list#members-list li {
-	margin-bottom: 10px;
-	border-bottom: 1px solid #EEEEEE;
-}
-
 #buddypress ul.item-list li div.item-action {
 	float: right;
 }
 
-#buddypress ul.item-list .item h4 a {
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: normal;
+#buddypress .item-list .item {
+	margin-left: 100px;
 }
 
-#buddypress .item-list .item {
-	margin-left: 95px;
+#buddypress ul.item-list .item h4 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+#buddypress ul.item-list .item h4 a {
+	text-decoration: none;
+}
+
+#buddypress .item-list .item-desc p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
 }
 
 #buddypress .item-list .item-desc span.label {
 	width: 100px;
 	display: inline-block;
 	color: #999999;
+}
+
+#buddypress .item-list .item-desc p.latest-post {
+	color: #999999;
+}
+
+#buddypress .item-list .item-desc p.latest-post a {
+	margin-left: 33px;
 }
 
 #buddypress .item-list .item-meta {
@@ -312,32 +321,21 @@
 }
 
 #buddypress .item-list-tabs#subnav ul li {
-  padding: 3px;
+	margin-right: 15px;
 }
 
 #buddypress .item-list-tabs#subnav ul li a {
-  text-decoration: none;
-	padding: 0 7px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-width: 1px;
-	border-style: solid;
-	background-color: #F9F9F9;
-	border-color: #EEEEEE;
-	display: inline-block;
-	font-size: 11px;
+	text-decoration: none;
+	font-size: 12px;	
 }
 
 #buddypress .item-list-tabs#subnav ul li.current a {
-	border-color: #CCCCCC;
-	background-color: #EEEEEE;
+	color: #333333;
+	font-weight: bold;
 }
 
-#buddypress .item-list-tabs#subnav ul li a:hover {
-	color: #FFFFFF;
-	border-top-color: #EF8F00;
-	background-color: #FF9900;
+#buddypress .item-list-tabs#subnav ul li.current a:hover {
+	background-color: #FFFFFF;
 }
 
 #buddypress .item-list-tabs#subnav ul li.feed a {
@@ -370,4 +368,12 @@
 #buddypress .message.info {
 	border-color: #0066CC;
 	background-color: #CDE2FF;
+}
+
+#buddypress .pagination {
+	margin-top: 40px;
+}
+
+#buddypress .pagination .pag-count {
+	color: #666666;
 }
