@@ -12,7 +12,7 @@
 
 				<div class="bp-widget <?php bp_the_profile_group_slug() ?>">
 					<?php if ( 1 != bp_get_the_profile_group_id() ) : ?>
-						<h4><?php bp_the_profile_group_name() ?></h4>
+						<h3><?php bp_the_profile_group_name() ?></h3>
 					<?php endif; ?>
 
 					<table class="profile-fields">
@@ -22,7 +22,7 @@
 								<tr>
 
 									<td class="label">
-										<?php bp_the_profile_field_name() ?>
+										<?php bp_the_profile_field_name() ?>:
 									</td>
 
 									<td class="data">

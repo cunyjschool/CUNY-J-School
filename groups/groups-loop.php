@@ -18,7 +18,9 @@
 					<h4><a href="<?php bp_group_permalink() ?>"><?php bp_group_name() ?></a></h4>		
 				</div>
 			
-				<div class="item-desc"><?php bp_group_description_excerpt() ?></div>				
+				<div class="item-desc">
+					<?php bp_group_description_excerpt() ?>
+				</div>
 				
 				<div class="item-meta"><span class="item-info"><?php bp_group_type() ?> / <?php bp_group_member_count() ?></span> /  <span class="activity"><?php printf( __( 'active %s ago', 'buddypress' ), bp_get_group_last_active() ) ?></span></div>
 
@@ -56,7 +58,7 @@
 <?php else: ?>
 
 	<div class="message alert">
-		<p><?php _e( 'There were no groups found.', 'buddypress' ) ?><?php if ( is_user_logged_in() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_domain() . '/' . BP_GROUPS_SLUG . '/create/' ?>"><?php _e( "Why don't you start one?", 'buddypress' ) ?></a><?php endif; ?></p>
+		<p>There were no groups found.</p>
 	</div>
 
 <?php endif; ?>

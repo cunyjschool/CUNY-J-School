@@ -9,6 +9,9 @@
 <?php do_action( 'bp_before_profile_content' ) ?>
 
 <div class="profile">
+	
+	<h3>Profile</h3>
+	
 	<?php if ( 'edit' == bp_current_action() ) : ?>
 		<?php locate_template( array( 'members/single/profile/edit.php' ), true ) ?>
 

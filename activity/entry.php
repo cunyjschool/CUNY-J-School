@@ -3,13 +3,6 @@
 <?php do_action( 'bp_before_activity_entry' ) ?>
 
 <li class="<?php bp_activity_css_class() ?>" id="activity-<?php bp_activity_id() ?>">
-	<?php if ( bp_get_activity_content_body() ) : ?>
-	<div class="activity-avatar">
-		<a href="<?php bp_activity_user_link() ?>">
-			<?php bp_activity_avatar( 'type=full&width=100&height=100' ) ?>
-		</a>
-	</div>
-	<?php endif; ?>
 
 	<div class="activity-content">
 
@@ -19,13 +12,16 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="activity-header">
-			<?php bp_activity_action() ?>
-		</div>
-
 		<?php do_action( 'bp_activity_entry_content' ) ?>
 
 		<div class="activity-meta">
+			<div class="activity-avatar">
+				<a href="<?php bp_activity_user_link() ?>">
+					<?php bp_activity_avatar( 'width=40&height=40' ) ?>
+				</a>
+			</div>
+			<?php bp_activity_action() ?>
+			<p>
 			<?php if ( is_user_logged_in() && bp_activity_can_comment() ) : ?>
 				<a href="<?php bp_activity_comment_link() ?>" class="acomment-reply" id="acomment-comment-<?php bp_activity_id() ?>"><?php _e( 'Reply', 'buddypress' ) ?> (<span><?php bp_activity_comment_count() ?></span>)</a>
 			<?php endif; ?>
@@ -37,6 +33,7 @@
 					<a href="<?php bp_activity_unfavorite_link() ?>" class="unfav" title="<?php _e( 'Remove Favorite', 'buddypress' ) ?>"><?php _e( 'Remove Favorite', 'buddypress' ) ?></a>
 				<?php endif; ?>
 			<?php endif;?>
+			</p>
 
 			<?php do_action( 'bp_activity_entry_meta' ) ?>
 		</div>

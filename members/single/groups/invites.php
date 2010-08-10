@@ -30,8 +30,8 @@
 
 <?php else: ?>
 
-	<div id="message" class="info">
-		<p><?php _e( 'You have no outstanding group invites.', 'buddypress' ) ?></p>
+	<div class="message info">
+		<p>You have no outstanding group invites.</p>
 	</div>
 
 <?php endif;?>

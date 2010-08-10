@@ -2,37 +2,17 @@
 
 <?php $curauth = get_userdata(bp_displayed_user_id()); ?>
 
-<div id="item-header-avatar">
-	<a href="<?php //bp_member_home_permalink(); ?>">
-  	<?php bp_displayed_user_avatar( 'type=full' ) ?>
-	</a>
-</div><!-- #item-header-avatar -->
-
 <div id="item-header-content">
   
   <div id="item-meta">
 
-    <h2 class="fn"><span class="meta"><?php bp_profile_field_data( 'field=Title' ); ?></span><?php bp_displayed_user_fullname(); ?></h2>
-
-		<div id="item-buttons">
-			<?php if ( function_exists( 'bp_add_friend_button' ) ) : ?>
-				<?php bp_add_friend_button() ?>
-			<?php endif; ?>
-
-			<?php if ( is_user_logged_in() && !bp_is_my_profile() && function_exists( 'bp_send_public_message_link' ) ) : ?>
-				<div class="generic-button" id="post-mention">
-					<a href="<?php bp_send_public_message_link() ?>" title="<?php _e( 'Mention this user in a new public message, this will send the user a notification to get their attention.', 'buddypress' ) ?>"><?php _e( 'Mention this User', 'buddypress' ) ?></a>
-				</div>
-			<?php endif; ?>
-
-			<?php if ( is_user_logged_in() && !bp_is_my_profile() && function_exists( 'bp_send_private_message_link' ) ) : ?>
-				<div class="generic-button" id="send-private-message">
-					<a href="<?php bp_send_private_message_link() ?>" title="<?php _e( 'Send a private message to this user.', 'buddypress' ) ?>"><?php _e( 'Send Private Message', 'buddypress' ) ?></a>
-				</div>
-			<?php endif; ?>
-		</div><!-- #item-buttons -->
-    
-    <div class="item-description"><?php echo $curauth->description; ?></div>
+    <h2 class="fn"><span id="item-buttons"><?php if ( is_user_logged_in() && !bp_is_my_profile() && function_exists( 'bp_send_private_message_link' ) ) : ?>
+					<div class="generic-button" id="send-private-message">
+						<a href="<?php bp_send_private_message_link() ?>" title="<?php _e( 'Send a private message to this user.', 'buddypress' ) ?>"><?php _e( 'Send Private Message', 'buddypress' ) ?></a>
+					</div>
+				<?php endif; ?><?php if ( function_exists( 'bp_add_friend_button' ) ) : ?>
+			<?php bp_add_friend_button() ?>
+		<?php endif; ?></span><?php bp_displayed_user_fullname(); ?></h2>
 
 	<?php do_action( 'bp_before_member_header_meta' ) ?>
 
