@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 <div class="wrap clearfix" id="content">
+	
+	<!-- Pingdom check -->
+	
 
 <?php query_posts('cat=144&showposts=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -56,7 +59,7 @@
     <div id="news">
   <h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
-<?php $news_posts = new WP_Query(array('category_name'=>'News','showposts'=>4));
+<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4));
 $i = 0; ?>
   <?php if ( $news_posts->have_posts() ) : while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
 		<?php if ($i == 0) : ?>
@@ -76,7 +79,7 @@ $i = 0; ?>
     <div id="events-home">
       <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
 
-  <?php $events = new WP_Query(array('category_name'=>'Events','showposts'=>4,'meta_key'=>'event_date','order'=>'DESC','orderby'=>'meta_value')); ?>
+  <?php $events = new WP_Query(array('category_name'=>'events','showposts'=>4,'meta_key'=>'event_date','order'=>'DESC','orderby'=>'meta_value')); ?>
   <?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
 	<div class="event clearfix">    
 	<table class="cal">
@@ -182,7 +185,7 @@ echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array
       <h5>Student work</h5>
       <div>
 <ul>
-<?php $student_clips = new WP_Query(array('category_name'=>'Clips of the Week','showposts'=>3)); ?>
+<?php $student_clips = new WP_Query(array('category_name'=>'clips-of-the-week','showposts'=>3)); ?>
   <?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
     <?php endwhile; else: ?><p>There are currently no stories.</p>
