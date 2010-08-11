@@ -1,0 +1,44 @@
+#main .sidebar.large {
+	width: 320px;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event h5 {
+	margin-left: 100px;
+	font-size: 12px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event h5 a {
+	color: #0066CC;
+}
+	
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date {
+	float: left;
+	border: 1px solid #eee;
+	text-transform: uppercase;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span {
+	display: inline-block;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.month {
+	background: #de1515;
+	color: #FFFFFF;
+	padding: 2px 6px;
+	width: 25px;
+	text-align: center;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.day {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 8px;
+}

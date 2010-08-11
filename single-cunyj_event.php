@@ -10,9 +10,9 @@
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
-	<div class="event" id="post-<?php the_ID(); ?>">
+	<div class="event" id="event-<?php the_ID(); ?>">
 
-		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
+		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		
 			<?php
 			
@@ -32,12 +32,15 @@
 			<div class="event_details">
 				<?php if ($start_date) : ?>
 					<p class="event_date">
-						<span class="label">Date &amp; Time</span>
+						<span class="label">Date &amp; Time:</span>
 						<?php if ($start_date == $end_date) {
 							echo date_i18n('F j, Y', $start_date);
 							if ($all_day == 'off') {
 								echo ' at ' . date_i18n('g:i A', $start_date);
 							}
+						} else if (date_i18n('F j', $start_date) == date_i18n('F j', $end_date)) {
+							echo 'From ' . date_i18n('g:i A', $start_date) . ' to ' . date_i18n('g:i A', $end_date);
+							echo ' on ' . date_i18n('F j, Y', $start_date);
 						} else {
 							echo 'From ' . date_i18n('F j, Y', $start_date);
 							if ($all_day == 'off') {
@@ -53,7 +56,7 @@
 				
 				<?php if ($venue = get_post_meta($post->ID, '_cunyj_events_venue', true)) : ?>
 					<p class="event_location">
-						<span class="label">Location</span>
+						<span class="label">Location:</span>
 						<?php echo $venue; ?>
 						<?php if ($street) {
 							echo '<br />' . $street;
@@ -70,24 +73,29 @@
 			</div>
 
 
-      <div class="entry">
+	<div class="entry">
 				
-				<?php the_content(); ?>
+		<?php the_content(); ?>
 			
-				<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+		<p><?php the_tags( 'Tags: ', ', ', ''); edit_post_link('Edit event', ' | ', ''); ?></p>
 
-      </div>
+	</div>
 
-			<div class="timestamp">Last updated <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
+	<div class="timestamp">Last updated <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
 
     </div>
     <?php endwhile; else: ?>
-			<p>Sorry, no posts matched your criteria.</p>
-		<?php endif; ?>
+			<p>Sorry, no events matched your criteria.</p>
+	
+	<?php endif; ?>
 		
   </div>
 
-</div>
+	<div style="clear:both;"></div>
+
+	</div><!-- /#main -->
+
+</div><!-- /.wrap -->
 
 <?php get_footer(); ?>
 

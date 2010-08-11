@@ -37,26 +37,35 @@ p {
 
 a {
 	color: #0066cc;
-	text-decoration: underline; 
-}
-
-a:hover {
-	color: #0066CC;
 }
 
 a img {
 	border: 0; }
 	
-h2, h3, h4 {
+h1, h2, h3, h4 {
 	margin: 0;
-	padding: 0; }
+	padding: 0;
+}
 	
 h2 {
-	color: #333;
-	padding: 0 0 15px 0;
-	margin: 30px 0 10px 0;
+	color: #333333;
+	margin: 10px 0 10px 0;
 	font-size: 24px;
-	border-bottom: 1px solid #eee;
+	line-height: 30px;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {
+	text-decoration: none;
+}
+
+h2 a, h3 a {
+	color: #333333;
+}
+
+h2 a:hover, h3 a:hover {
+	color: #333333;
+	text-decoration: none;
+	background-color: #EEEEEE;
 }
 
 h3 {
@@ -114,8 +123,8 @@ input.button.primary {
 }
 	
 #content {
-	padding: 20px; 
-	background: #fff; }
+	background: #fff;
+}
 	
 #main, #buddypress {
 	padding-top: 20px;
@@ -525,6 +534,15 @@ img.news-photo {
 #right ul li {
 	list-style: bullet; }
 	
+#main #content h2 {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+#main #content h2 a:hover {
+	
+}
+
 #posts {
 	float: left;
 	width: 520px;
@@ -539,23 +557,37 @@ img.news-photo {
 	text-decoration: none;
 }
 
-.event h2 {
+#main #content .event {
+	width: 520px;
+}
+
+#main #content .event h2 {
 	font-size: 24px;
 }
 	
-.event .event_details {
+#main #content .event .event_details {
 	background-color: #EEEEEE;
-	padding: 5px;
-	text-align: right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
-.event .timestamp {
+#main #content .event .event_details p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+}
+
+#main #content .event .timestamp {
 	padding-top: 5px;
 }
 
-.event .event_details p span {
+#main #content .event .event_details p span {
 	color: #666666;
 	float: left;
+	display: inline-block;
+	width: 150px;
 }
 	
 .post h2, .page h2 {
