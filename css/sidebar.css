@@ -1,3 +1,89 @@
+#sidebar {
+	float: left; 
+	width: 225px;
+	margin-right: 20px;
+}
+	
+#sidebar h4 {
+	font-size: 120%;
+}
+	
+#sidebar h4 a, #sidebar h4 a:visited {
+	text-decoration: none; }
+
+#sidebar-nav li a, #sidebar-nav li a:visited {
+	display: block;
+	padding: 7px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #eee;
+	text-decoration: none;
+	background: #f9f9f9;
+}
+
+#sidebar ul.navigation li {
+	font-size: 16px;
+}
+
+#sidebar .navigation li a {
+	display: block;
+	padding: 7px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #eee;
+	text-decoration: none;
+	background: #f9f9f9;
+}
+
+#sidebar .navigation li a:hover {
+	border-top: 1px solid #ef8f00;
+	background: #ff9900;
+	color: #fff;
+}
+
+#sidebar ul.navigation li ul.children li a, #sidebar ul.navigation li ul.sub-menu li a {
+	font-size: 13px;
+}
+
+#sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
+	font-size: 12px;
+	padding: 5px 10px 5px 25px;
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
+}
+
+#sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
+	color: #0066cc;
+	border-top: 1px solid #fff;
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
+}
+
+#sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
+	font-size: 10px;
+	background: #f9f9f9;
+	color: #666;
+	padding: 5px 10px 5px 35px;
+}
+	
+#sidebar-nav li a:hover {
+	border-top: 1px solid #ef8f00;
+	background: #ff9900;
+	color: #fff; }
+	
+#sidebar-nav li li a, #sidebar-nav li li a:visited {
+	font-size: 90%;
+	padding: 5px 10px 5px 25px;
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	
+#sidebar-nav li li a:hover {
+	color: #0066cc;
+	border-top: 1px solid #fff;
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	
+#sidebar-nav li li li a, #sidebar-nav li li li a:visited {
+	font-size: 90%;
+	background: #f9f9f9;
+	color: #666;
+	padding: 5px 10px 5px 35px; }
+	
+
 #main .sidebar.large {
 	width: 320px;
 }
