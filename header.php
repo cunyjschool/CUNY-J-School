@@ -11,20 +11,20 @@
 <?php endif; ?>
 
 
-  <meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
-  <meta http-equiv="content-language" content="en" />
+	<meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
+	<meta http-equiv="content-language" content="en" />
 
-  <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
 	<meta name="google-site-verification" content="HclfSOn_fMggPZnL-xG4QRz4QvnPSBO-P7AJaOEhA-8" />
 
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-  <?php if (is_home()) : ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nextgen_gallery.css" type="text/css" media="screen" />
-  <?php endif; ?>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	
 	<?php /* Other supplemental stylesheets broken up for simplicity */ ?>
+	<?php if (is_home()) : ?>
+	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nextgen_gallery.css" type="text/css" media="screen" />
+	  <?php endif; ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sidebar.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/buddypress.css" type="text/css" media="screen" />
 

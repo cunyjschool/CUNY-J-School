@@ -1,99 +1,73 @@
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
 	
 	<!-- Pingdom check -->
+	
+	<div id="main">
+	
+	 <div id="content">
 	
 
 <!-- Start Slideshow and Nav -->
   <div id="home-slideshow">
-  
-   <!-- <img src="/files/2010/07/banners_h700.jpg" height="400px" /> -->
 		<?php echo do_shortcode('[nggallery id=1 template="galleryview" images=0]'); ?>
-
   </div>
   
   <div id="nav-items">
-    <div class="clearfix" id="ad-ac">
-  
-<ul id="acad">
-  <li><h3><a href="<?php bloginfo('url'); ?>/academics/">Academics</a></h3></li>
-  <li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/">Subjects</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/academics/course-descriptions/">Course Descriptions</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/academics/summer-internship/">Summer Internship</a></li>
-</ul>
+	
+    <div id="ad-ac">
+	<ul id="acad">
+  		<li><h3><a href="<?php bloginfo('url'); ?>/academics/">Academics</a></h3></li>
+		<li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/">Subjects</a></li>
+		<li><a href="<?php bloginfo('url'); ?>/academics/course-descriptions/">Course Descriptions</a></li>
+		<li><a href="<?php bloginfo('url'); ?>/academics/summer-internship/">Summer Internship</a></li>
+	</ul>
 
-<ul id="admiss">
-  <li><h3><a href="<?php bloginfo('url'); ?>/admissions/">Admissions</a></h3></li>
-  <li id="profile"><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">FAQs</a></li>
-  <li id="sessions"><a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a></li>
-  <li id="tuition"><a href="<?php bloginfo('url'); ?>/admissions/tuition-and-fees/">Tuition &amp; Fees</a></li>
-</ul>
-  
-
-    </div>
+	<ul id="admiss">
+		<li><h3><a href="<?php bloginfo('url'); ?>/admissions/">Admissions</a></h3></li>
+		<li id="profile"><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">FAQs</a></li>
+		<li id="sessions"><a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a></li>
+		<li id="tuition"><a href="<?php bloginfo('url'); ?>/admissions/tuition-and-fees/">Tuition &amp; Fees</a></li>
+	</ul>
+	</div>
     
     <div id="ad-app">
-    <h3><a href="<?php bloginfo('url'); ?>/admissions/how-to-apply/">How to Apply</a></h3>
+		<a href="<?php bloginfo('url'); ?>/admissions/how-to-apply/">How to Apply</a>
     </div>
     
     <div id="ad-info">
-    <h3><a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a></h3>
+		<a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a>
     </div>
   </div>
   
 <!-- End Slideshow and Nav -->
 
+	<div class="section">
 
-  
-  <div class="clearfix" id="news-home">
-    <div id="news">
-  <h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
+	<div id="news-home">
+		<div id="news">
+			<h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
-<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4));
-$i = 0; ?>
-  <?php if ( $news_posts->have_posts() ) : while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
-		<?php if ($i == 0) : ?>
-    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<?php $i++; ?>
-		<?php else : ?>
-			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); $i = 0; ?>
+  		<?php if ( $news_posts->have_posts() ) : while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+			<?php if ($i == 0) : ?>
+    			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				<?php $i++; ?>
+			<?php else : ?>
+				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+			<?php endif; ?>
+    	<?php endwhile; else: ?><p>There are currently no stories.</p>
 		<?php endif; ?>
-    <?php endwhile; else: ?><p>There are currently no stories.</p>
-<?php endif; ?>
+		
+      	<div class="morelinks"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a></div>
 
-      <div class="morelinks" style="margin-top: 15px;"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a> | <a href="">In The News</a>
-      </div>
-    </div>
-  
-  
-    <div id="events-home">
-      <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
+		</div>
 
-  <?php $events = new WP_Query(array('post_type'=>'cunyj_event','showposts'=>4,'meta_key'=>'_cunyj_events_start_date','order'=>'ASC','orderby'=>'meta_value', 'taxonomy'=>'cunyj_event_category', 'term'=>'featured')); ?>
-  <?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
-	<div class="event">
-	<?php $start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true ); ?>
-	<?php $end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", $single=true ); ?>
-	<table class="cal">
-      <tr>
-        <td class="month"><?php echo date_i18n('M', $start_date) ; ?></td>
-        <td class="daynumber"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></td>
-      </tr>
-	</table> 
-    
-	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
-      </div>
-    <?php endwhile; else: ?>
+	</div><!-- /#news-home -->
+
 	
-	<p>Check back soon for more upcoming events.</p>
-<?php endif; ?>
-
-      <div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">More Events</a> | <a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a>
-      </div>
-    </div>
-    
-    <div id="featured-home">
+  	<div id="featured-home">
       <div id="fh-inner"><a href="http://www.nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/nycitynewsservice_h200.png" height="50px" width="200px" alt="NY City News Service" /></a>
         <div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 5px 0;">Student-powered wire service</div>
       
@@ -112,10 +86,46 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 <div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 0 0;">Brooklyn-based citizen journalism</div>
 </div>
 
+    </div><!-- /#featured-home -->
 
-    </div>
+    <div id="events-home">
+		<h3>Events</h3>
 
-  </div>
+		<?php 
+		$args = array( 	'post_type'=>'cunyj_event',
+						'showposts'=>4,
+						'meta_key'=>'_cunyj_events_start_date',
+						'order'=>'ASC',
+						'orderby'=>'meta_value',
+						'taxonomy'=>'cunyj_event_category',
+						'term'=>'featured'
+					);
+		$events = new WP_Query($args);
+		?>
+		<ul>
+		<?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
+		<li class="event"><a href="<?php the_permalink(); ?>">
+			<?php 
+			$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true );
+			$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", $single=true );
+			?>
+			<div class="calendar-date">
+		        <span class="month"><?php echo date_i18n('M', $start_date) ; ?></span>
+		        <span class="day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></td>
+		      </span>
+			</div> 
+			<h5><?php the_title(); ?></h5>
+		</a></li>
+		<?php endwhile; else: ?>
+		<li>Check back soon for more upcoming events.</li>
+		<?php endif; ?>
+		</ul>
+
+		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">More Events</a> | <a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
+	</div><!-- /#events-home -->
+
+</div><!-- /.section -->
+    
   
   <div class="clearfix" id="soc">
     <div style="float: left; width: 400px;">
@@ -293,7 +303,13 @@ For more information about the programs offered or how to apply to the Graduate 
 <h1>(646) 758-7700</h1>
 <h3><a href="mailto:admissions@journalism.cuny.edu">admissions@journalism.cuny.edu</a></h3>
     </div>
+	
+	</div>
+
   </div>
+
+	</div>
+
 </div>
 	
 <?php get_footer(); ?>

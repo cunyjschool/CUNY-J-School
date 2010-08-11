@@ -64,6 +64,9 @@ h2 a, h3 a {
 
 h2 a:hover, h3 a:hover {
 	color: #333333;
+}
+
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 	text-decoration: none;
 	background-color: #EEEEEE;
 }
@@ -132,6 +135,12 @@ input.button.primary {
 	padding-right: 20px;
 	padding-bottom: 40px;
 	background: #FFFFFF;
+}
+
+#main .section {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	clear: both;
 }
 	
 #tile-orange {
@@ -350,48 +359,8 @@ img.feed {
 .morelinks {
 	padding: 0;
 	margin-bottom: 10px;
-	font-size: 90%; }
-	
-table {
-	margin: 0;
-	border-collapse: collapse;
-	padding: 0; }
-	
-table td {
-	padding: 0;
-	margin: 0; }
-	
-table.cal {
-	float: left;
-	margin: 0 20px 5px 0;
-	border: 1px solid #eee; }	
-	
-table.cal th {
-	color: #fff;
-	background: #ccc;
-	padding: 3px;
-	margin: 0;
-	text-transform: uppercase;
-	font-size: 90%; }
-	
-table.cal td {
-	padding: 0;
-	text-align: center; }
-	
-table.cal td.daynumber {
-	background: #fff;
-	padding: 2px;
-	font-size: 100%; }
-	
-table.cal td.month {
-	background: #de1515;
-	color: #fff;
-	font-size: 85%;
-	text-transform: uppercase;
-	padding: 2px 6px; }
-	
-#events h4 {
-	margin-top: 20px; }
+	font-size: 90%;
+}	
 	
 #events ul li {
 	background: url(images/icons/arrow_000_small.png) 0 5px no-repeat;

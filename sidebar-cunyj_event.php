@@ -19,7 +19,7 @@
 		</li>
 	    <?php endwhile; else: ?>
 		
-		<li>There are no upcoming events.</li>
+		<li>Check back soon for more upcoming events.</li>
 		
 		<?php endif;?>
 	</ul>
