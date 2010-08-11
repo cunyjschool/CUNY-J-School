@@ -7,6 +7,10 @@ div.galleryview div.panel {
 	font-weight: normal;
 }
 
+div.galleryview div.panel a:hover {
+	background-color: transparent;
+}
+
 div.galleryview div.panel img {
 	width: 700px;
 	height: 400px;

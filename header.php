@@ -16,6 +16,8 @@
 
   <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
+	<meta name="google-site-verification" content="HclfSOn_fMggPZnL-xG4QRz4QvnPSBO-P7AJaOEhA-8" />
+
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
   <?php if (is_home()) : ?>
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css" type="text/css" media="screen" />
