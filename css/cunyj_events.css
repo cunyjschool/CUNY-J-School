@@ -26,7 +26,7 @@
 }
 
 #cunyj-events .sub a.action {
-	margin-left: 205px;
+	margin-left: 130px;
 }
 
 #cunyj-events #inner {
@@ -41,7 +41,12 @@
 	
 }
 
+#cunyj-events #intro label {
+	width: 135px;
+	display: inline-block;
+}
+
 #cunyj-events #time-date label, #cunyj-events #details label {
-	width: 200px;
+	width: 125px;
 	display: inline-block;
 }

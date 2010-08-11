@@ -70,13 +70,15 @@ $i = 0; ?>
     <div id="events-home">
       <h3>Events <a href="<?php bloginfo('url'); ?>/category/events/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Feed" class="feed" /></a></h3>
 
-  <?php $events = new WP_Query(array('post_type'=>'cunyj_event','showposts'=>4,'meta_key'=>'_cunyj_events_start_date','order'=>'DESC','orderby'=>'meta_value', 'taxonomy'=>'cunyj_event_category', 'term'=>'featured')); ?>
+  <?php $events = new WP_Query(array('post_type'=>'cunyj_event','showposts'=>4,'meta_key'=>'_cunyj_events_start_date','order'=>'ASC','orderby'=>'meta_value', 'taxonomy'=>'cunyj_event_category', 'term'=>'featured')); ?>
   <?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
-	<div class="event clearfix">    
+	<div class="event">
+	<?php $start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true ); ?>
+	<?php $end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", $single=true ); ?>
 	<table class="cal">
       <tr>
-        <td class="month"><?php echo date_i18n('M', get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true )) ; ?></td>
-        <td class="daynumber"><?php echo date_i18n('d', get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true )); ?></td>
+        <td class="month"><?php echo date_i18n('M', $start_date) ; ?></td>
+        <td class="daynumber"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></td>
       </tr>
 	</table> 
     
@@ -87,7 +89,7 @@ $i = 0; ?>
 	<p>Check back soon for more upcoming events.</p>
 <?php endif; ?>
 
-      <div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/category/events/">More Events</a> | <a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a>
+      <div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">More Events</a> | <a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a>
       </div>
     </div>
     

@@ -1,8 +1,12 @@
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
 	
-  <div id="posts">
+	<div id="main">
+		
+	<?php get_sidebar('cunyj_event'); ?>
+	
+  <div id="content">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
@@ -21,8 +25,8 @@
 				$street = get_post_meta($post->ID, '_cunyj_events_street', true);
 				$city = get_post_meta($post->ID, '_cunyj_events_city', true);
 				$state = get_post_meta($post->ID, '_cunyj_events_state', true);
-				$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true)
-			
+				$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true);
+	
 			?>
 			
 			<div class="event_details">

@@ -7,6 +7,7 @@ class cunyj_events
 		
 		// Add Event post type
 		add_action('init', array(&$this, 'create_post_type'));
+		add_action('init', array(&$this, 'create_taxonomies'));
 		
 		// Set up metabox and related actions
 		add_action('admin_menu', array(&$this, 'add_post_meta_box'));
@@ -50,11 +51,24 @@ class cunyj_events
 						'thumbnail',
 					),
 					'taxonomies' => array(
-						'post_tag'
+						'post_tag',
+						'cunyj_event_category'
 					)
 		    )
 		  );
 		}
+	}
+	
+	function create_taxonomies() {
+		
+		$args = array(	'label' => 'Event Categories',	
+						'show_tagcloud' => false,
+						'hierarchical' => true,
+						);
+		
+		register_taxonomy('cunyj_event_category', 'cunyj_event', $args);
+		
+		
 	}
 	
 	// Loads scripts 
@@ -62,8 +76,8 @@ class cunyj_events
 		global $pagenow;
 		
 		if ($pagenow == 'post.php' || $pagenow == 'post-new.php' || $pagenow == 'page.php') {
-			wp_enqueue_script('cunyj_events', '/wp-content/themes/CUNY-J-School/js/cunyj_events.js', array('jquery'), false, true);
-			wp_enqueue_style('cunyj_events-styles', '/wp-content/themes/CUNY-J-School/css/cunyj_events.css', false, false, 'all');
+			wp_enqueue_script('cunyj_events', get_bloginfo('template_url') . '/js/cunyj_events.js', array('jquery'), false, true);
+			wp_enqueue_style('cunyj_events-styles', get_bloginfo('template_url') . '/css/cunyj_events.css', false, false, 'all');
 		}
 		
 	}
@@ -92,11 +106,6 @@ class cunyj_events
 				'October',
 				'November',
 				'December');
-		
-		$featured = get_post_meta($post->ID, '_cunyj_events_featured', true);
-		if (!$featured) {
-			$featured = 'off';
-		}
 				
 		$all_day = get_post_meta($post->ID, '_cunyj_events_all_day', true);
 		if (!$all_day) {
@@ -135,12 +144,6 @@ class cunyj_events
 		$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true);
 		
 		?>
-		
-		<div id="intro">
-		
-			<p><label for="cunyj_events-featured">Should this be featured?</label><input type="checkbox" id="cunyj_events-featured" name="cunyj_events-featured"<?php if ($featured == 'on') { echo ' checked="checked"'; } ?> /></p>
-		
-		</div>
 		
 		<div id="inner">
 		
@@ -263,14 +266,6 @@ class cunyj_events
 		
 		if( !wp_is_post_revision($post) && !wp_is_post_autosave($post) ) {
 			
-			$featured = $_POST['cunyj_events-featured'];
-			if ($featured) {
-				$featured = 'on';
-			} else {
-				$featured = 'off';
-			}
-			update_post_meta($post_id, '_cunyj_events_featured', $featured);
-			
 			$all_day = $_POST['cunyj_events-all_day'];
 			if ($all_day) {
 				$all_day = 'on';
@@ -282,10 +277,10 @@ class cunyj_events
 			$default_time = ' 12:00 PM';
 			
 			$start_date_month = $_POST['cunyj_events-start_date_month'];
-			$start_date_day = (int)$_POST['cunyj_events-start_date_day'];
-			$start_date_year = (int)$_POST['cunyj_events-start_date_year'];
-			$start_date_hour = (int)$_POST['cunyj_events-start_date_hour'];
-			$start_date_minute = (int)$_POST['cunyj_events-start_date_minute'];
+			$start_date_day = $_POST['cunyj_events-start_date_day'];
+			$start_date_year = $_POST['cunyj_events-start_date_year'];
+			$start_date_hour = $_POST['cunyj_events-start_date_hour'];
+			$start_date_minute = $_POST['cunyj_events-start_date_minute'];
 			$start_date_ampm = $_POST['cunyj_events-start_date_ampm'];
 			$start_date = $start_date_month . ' ' . $start_date_day . ', ' . $start_date_year;
 			if ($all_day == 'off') {
@@ -298,10 +293,10 @@ class cunyj_events
 			update_post_meta($post_id, '_cunyj_events_start_date', $start_date);
 			
 			$end_date_month = $_POST['cunyj_events-end_date_month'];
-			$end_date_day = (int)$_POST['cunyj_events-end_date_day'];
-			$end_date_year = (int)$_POST['cunyj_events-end_date_year'];
-			$end_date_hour = (int)$_POST['cunyj_events-end_date_hour'];
-			$end_date_minute = (int)$_POST['cunyj_events-end_date_minute'];
+			$end_date_day = $_POST['cunyj_events-end_date_day'];
+			$end_date_year = $_POST['cunyj_events-end_date_year'];
+			$end_date_hour = $_POST['cunyj_events-end_date_hour'];
+			$end_date_minute = $_POST['cunyj_events-end_date_minute'];
 			$end_date_ampm = $_POST['cunyj_events-end_date_ampm'];
 			$end_date = $end_date_month . ' ' . $end_date_day . ', ' . $end_date_year;
 			if ($all_day == 'off') {
