@@ -190,9 +190,6 @@
 	min-height: 27px;
 	padding-bottom: 5px;
 	border-bottom: 1px dotted #eee;
-	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
-	border-right: 1px solid #FFFFFF;
 }
 
 #main #events-home li.event a {
