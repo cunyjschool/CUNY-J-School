@@ -992,7 +992,7 @@ h3 a:hover {
 	
 #news-left {
 	float: left; 
-	width: 520px; 
+	width: 510px; 
 	margin-right: 20px; }
 	
 #news-left p {
@@ -1031,7 +1031,7 @@ h3 a:hover {
 	float: left;
 	width: 300px;
 	border-right: 1px dashed #eee;
-	padding: 20px 40px 20px 20px;
+	padding: 20px 10px 20px 20px;
 	margin-right: 20px; }	
 	
 #news-twitter ul {
@@ -1071,7 +1071,7 @@ h3 a:hover {
 	
 #news-clips, #news-faculty, #news-alumni {
 	 float: left; 
-	 width: 280px; 
+	 width: 265px; 
 	 margin-right: 20px; }
 	 
 #news-video {

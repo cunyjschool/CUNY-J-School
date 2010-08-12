@@ -16,7 +16,7 @@ Template Name: Page - Career Services
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<div class="post" id="post-<?php the_ID(); ?>">
+	<div class="page" id="page-<?php the_ID(); ?>">
 
 		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>    
       <div class="entry">

@@ -5,9 +5,9 @@ Template Name: Page - News & Events
 ?>
 <?php get_header(); ?>
 
-  <div class="wrap clearfix news-events" id="content">
+  <div class="wrap news-events">
 	
-	
+	<div id="main">
 	
     <div id="news-left">
     
@@ -173,6 +173,11 @@ echo SimplePieWP('http://vimeo.com/cunyjschool/videos/rss', array(
 </ul> 
     </div>
   </div>
+
+	<div style="clear:both;"></div>
+
+	</div>
+
 </div>
 
 <?php get_footer(); ?>
