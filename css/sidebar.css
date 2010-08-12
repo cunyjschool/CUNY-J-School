@@ -8,8 +8,9 @@
 	font-size: 120%;
 }
 	
-#sidebar h4 a, #sidebar h4 a:visited {
-	text-decoration: none; }
+#sidebar h4 a {
+	text-decoration: none;
+}
 
 #sidebar-nav li a, #sidebar-nav li a:visited {
 	display: block;
@@ -70,22 +71,100 @@
 #sidebar-nav li li a, #sidebar-nav li li a:visited {
 	font-size: 90%;
 	padding: 5px 10px 5px 25px;
-	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px; }
 	
 #sidebar-nav li li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
-	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px; }
 	
 #sidebar-nav li li li a, #sidebar-nav li li li a:visited {
 	font-size: 90%;
 	background: #f9f9f9;
 	color: #666;
 	padding: 5px 10px 5px 35px; }
-	
+
+
+#sidebar-internships {
+	float: left;
+	width: 290px; }
+
+.sidebar#news h3, #sidebar-internships h3 {
+	margin: 0 0 10px 0; }
+
+.sidebar#news h3 a, #sidebar-internships h3 a {
+	text-decoration: none;
+}
+
+.sidebar#news li, #sidebar-internships li {
+	line-height: 175%;
+	padding: 4px 3px 4px 20px;
+	border-bottom: 1px dashed #efefef;
+	background: url(../images/icons/arrow_000_small.png) no-repeat 0 8px;
+}
+
+.sidebar#news li a, #sidebar-internships li a {
+	text-decoration: none;
+}
+
+#sidebar-news li a:hover, #sidebar-internships li a:hover {
+	text-decoration: underline; }
+
+#main .sidebar.right {
+	float:right;
+}
+
+#sideba
+
+#sidebar ul.navigation li {
+	font-size: 16px;
+}
+
+#sidebar .navigation li a {
+	display: block;
+	padding: 7px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #eee;
+	text-decoration: none;
+	background: #f9f9f9;
+}
+
+#sidebar .navigation li a:hover {
+	border-top: 1px solid #ef8f00;
+	background: #ff9900;
+	color: #fff;
+}
+
+#sidebar ul.navigation li ul.children li a, #sidebar ul.navigation li ul.sub-menu li a {
+	font-size: 13px;
+}
+
+#sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
+	font-size: 12px;
+	padding: 5px 10px 5px 25px;
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
+}
+
+#sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
+	color: #0066cc;
+	border-top: 1px solid #fff;
+	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
+}
+
+#sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
+	font-size: 10px;
+	background: #f9f9f9;
+	color: #666;
+	padding: 5px 10px 5px 35px;
+}
+
 
 #main .sidebar.large {
 	width: 320px;
+}
+
+#main .sidebar.medium {
+	width: 290px;
 }
 
 #main .sidebar#cunyj_event-sidebar li.event {

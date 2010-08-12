@@ -6,6 +6,9 @@ Template Name: Page - News & Events
 <?php get_header(); ?>
 
   <div class="wrap clearfix news-events" id="content">
+	
+	
+	
     <div id="news-left">
     
 <h2>Featured News</h2>

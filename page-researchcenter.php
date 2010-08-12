@@ -6,7 +6,9 @@ Template Name: Page - Research Center
 
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
 
   <div id="sidebar">
 <ul class="navigation">
@@ -48,12 +50,12 @@ Template Name: Page - Research Center
 Send questions, comments or suggestions to: <a href="mailto:research@journalism.cuny.edu">research@journalism.cuny.edu</a>.
   </div>
           
-  <div id="right">
+  <div id="content" class="right small">
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
   if( $post->ID == $do_not_duplicate ) continue; update_post_caches($posts); ?>
-    <div class="post" id="post-<?php the_ID(); ?>">
+    <div class="page" id="page-<?php the_ID(); ?>">
 
 			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
@@ -65,9 +67,9 @@ Send questions, comments or suggestions to: <a href="mailto:research@journalism.
       <div class="entry">
       
 		<?php if(is_page('210') ) { ?>
-        <div style="width: 300px; float: left; margin-right: 20px;">
+        <div style="width: 280px; float: left; margin-right: 20px;">
         
-<ul style="width: 300px; margin-bottom: 0; padding-bottom: 0;">
+<ul style="width: 280px; margin-bottom: 0; padding-bottom: 0;">
 	<li id="research-blog"><strong>Research Center Blog</strong></li>
 </ul>
 
@@ -84,7 +86,7 @@ echo SimplePieWP('http://blogs.journalism.cuny.edu/researchcenter/feed/', array(
         </div>
         
         
-        <div style="width: 300px; float: left;">
+        <div style="width: 280px; float: left;">
         
 <style type="text/css" media="screen"> .gr_grid_container { /* customize grid container div here. eg: width: 500px; */ } .gr_grid_book_container { /* customize book cover container div here */ float: left; width: 39px; height: 60px; margin: 5px; border: 3px solid #eee; overflow: hidden; } 
        #gr_grid_widget_1236291550 h2 {
@@ -147,6 +149,11 @@ echo SimplePieWP('http://blogs.journalism.cuny.edu/researchcenter/feed/', array(
     </div>
 		<?php endwhile; endif; ?>
   </div>
+
+	<div style="clear:both;"></div>
+
+</div>
+
 </div>
 
 

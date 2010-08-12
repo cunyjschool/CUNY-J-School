@@ -6,7 +6,9 @@ Template Name: Community and Ethnic Media Conference
 
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
 
   <div id="sidebar">
   
@@ -30,10 +32,10 @@ Template Name: Community and Ethnic Media Conference
 
 </div><!-- end sidebar -->
 
-  <div id="right">
+  <div id="content" class="right small">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="post" id="post-<?php the_ID(); ?>">
+    <div class="page" id="page-<?php the_ID(); ?>">
     
     <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
@@ -54,7 +56,11 @@ Template Name: Community and Ethnic Media Conference
     </div><!-- end post -->
 		<?php endwhile; endif; ?>
 </div><!-- end wrap right -->
+
+<div style="clear:both;"></div>
 </div><!-- end wrap clearfix -->
+
+</div>
 
 
 <?php get_footer(); ?>

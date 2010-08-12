@@ -124,9 +124,21 @@ input.button.primary {
 #wp-admin-bar .padder ul.main-nav li a:hover {
 	background-color: transparent;
 }
-	
+
+#content.right {
+	float: none;
+}
+
 #content {
-	background: #fff;
+	background-color: #FFFFFF;
+}
+
+#content.right.small {
+	margin-left: 255px;
+}
+
+#main {
+	clear: both;
 }
 	
 #main, #buddypress {
@@ -493,17 +505,21 @@ img.news-photo {
 	padding: 0;
 }
 
-#posts {
-	float: left;
+#post {
 	width: 520px;
-	margin: 0 40px 0 0; }
+	margin: 0 40px 0 0;
+}
+
+.page {
+	width: 600px;
+}
 
 #posts-internships {
 	float: left;
 	width: 320px;
 	margin: 0 40px 0 0;}
 
-#posts h2 a, #posts h2 a:visited, #posts-internships h2 a, #posts-internships h2 a:visited {
+#post h2 a, #posts-internships h2 a, #posts-internships h2 a:visited {
 	text-decoration: none;
 }
 
@@ -542,7 +558,7 @@ img.news-photo {
 	
 .post h2, .page h2 {
 	font-size: 24px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 	
 .entry {
@@ -598,7 +614,7 @@ img.news-photo {
 
 
 #page-image-wide { 
-	width: 650px;
+	width: 600px;
 	border: 5px solid #efefef;
 	margin: 0 0 20px 0;
 	-webkit-border-radius: 5px;
@@ -607,34 +623,8 @@ img.news-photo {
 }
 	
 #page-image-wide img {
-	width: 650px;
+	width: 600px;
 }
-	
-#sidebar-news {
-	float: left;
-	width: 340px; }
-
-#sidebar-internships {
-	float: left;
-	width: 290px; }
-	
-#sidebar-news h3, #sidebar-internships h3 {
-	margin: 0 0 10px 0; }
-	
-#sidebar-news h3 a, #sidebar-news h3 a:visited, #sidebar-internships h3 a, #sidebar-internships h3 a:visited {
-	text-decoration: none; }
-	
-#sidebar-news li, #sidebar-internships li {
-	line-height: 175%;
-	padding: 4px 3px 4px 20px;
-	border-bottom: 1px dashed #efefef;
-	background: url(images/icons/arrow_000_small.png) no-repeat 0 8px; }
-	
-#sidebar-news li a, #sidebar-news li a:visited, #sidebar-internships li a, #sidebar-internships li a:visited {
-	text-decoration: none; }
-	
-#sidebar-news li a:hover, #sidebar-internships li a:hover {
-	text-decoration: underline; }
 	
 .caption {
 	padding: 10px;
@@ -1117,7 +1107,7 @@ ul#up-events li {
 .contacts {
 	font-size: 12px;
 	float: left;
-	width: 280px; 
+	width: 260px; 
 	margin: 10px;
 	padding: 10px;
 	background: #f9f9f9;

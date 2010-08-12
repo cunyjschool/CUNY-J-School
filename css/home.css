@@ -299,7 +299,7 @@
 #jnet .jsite {
 	float: left;
 	min-height: 240px;
-	width: 245px;
+	width: 230px;
 	padding: 10px;
 	margin-bottom: 20px;
 	background: #fff;
@@ -369,7 +369,7 @@
 #dc {
 	float: left; 
 	margin-right: 40px;
-	width: 300px; }
+	width: 260px; }
 	
 #dc img {
 	border: 5px solid #fff;
@@ -394,8 +394,8 @@
    	
 #flick-twit {
 	float: left;
-	margin: 0 0 20px 40px;
-	width: 420px; }
+	margin: 0 0 20px 20px;
+	width: 400px; }
 	
 #flick {
 	padding: 10px 0 20px 0;

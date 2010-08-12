@@ -5,7 +5,10 @@ Template Name: Page - Wire
 ?>
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
+	
   <div id="sidebar">  
   
 <h4 style="margin-top: 20px; padding-bottom: 10px; border-bottom: 1px dotted #eee;">J-School Sites</h4>
@@ -27,7 +30,7 @@ Template Name: Page - Wire
   </div>    
   
   
-  <div id="right">
+  <div id="content" class="right small">
     <div class="page" id="cunyj-wire">
 <h2>The Wire</h2>
     
@@ -58,6 +61,10 @@ echo SimplePieWP(array(
    
     </div>  
   </div>
+<div style="clear:both;"></div>
+
+</div>
+
 </div>
 
 

@@ -5,11 +5,13 @@ Template Name: Page - Faculty Individual
 ?>
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
 
 	<?php get_sidebar('faculty'); ?>
       
-  <div id="right">
+  <div id="content" class="right small">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div class="page" id="post-<?php the_ID(); ?>">
@@ -31,6 +33,9 @@ Template Name: Page - Faculty Individual
     </div>
 		<?php endwhile; endif; ?>
   </div>
+
+	<div style="clear:both;"></div>
+</div>
 </div>
 
 

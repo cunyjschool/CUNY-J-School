@@ -1,14 +1,16 @@
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
 
   <?php get_sidebar( 'default_page' ); ?>
-          
-  <div id="right">
+  
+	<div id="content" class="right small">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-    <div class="page" id="post-<?php the_ID(); ?>">
+    <div class="page" id="page-<?php the_ID(); ?>">
 
 			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
@@ -32,6 +34,8 @@
     </div>
 		<?php endwhile; endif; ?>
   </div>
+
+	</div>
 </div>
 
 

@@ -6,11 +6,13 @@ Template Name: Page - Career Services
 
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
 
   <?php get_sidebar('careerservices_left'); ?>
           
-  <div id="right">
+  <div id="content" class="right small">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -37,6 +39,11 @@ Template Name: Page - Career Services
     </div>
 		<?php endwhile; endif; ?>
   </div>
+
+	<div style="clear:both;"></div>
+
+</div>
+
 </div>
 
 

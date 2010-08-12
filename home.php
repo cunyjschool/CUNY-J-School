@@ -49,14 +49,10 @@
 		<div id="news">
 			<h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
-		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); $i = 0; ?>
+		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); ?>
   		<?php if ( $news_posts->have_posts() ) : while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
-			<?php if ($i == 0) : ?>
-    			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<?php $i++; ?>
-			<?php else : ?>
-				<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-			<?php endif; ?>
+			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
     	<?php endwhile; else: ?><p>There are currently no stories.</p>
 		<?php endif; ?>
 		
@@ -123,6 +119,8 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 
 		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">More Events</a> | <a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
 	</div><!-- /#events-home -->
+	
+	<div style="clear:both;"></div>
 
 </div><!-- /.section -->
     

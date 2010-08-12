@@ -6,14 +6,16 @@ Template Name: Page - Admissions
 
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div id="main">
 
   <?php get_sidebar('admissions'); ?>
           
-  <div id="right">
+  <div id="content" class="right small">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="post" id="post-<?php the_ID(); ?>">
+    <div class="page" id="page-<?php the_ID(); ?>">
 
 			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
 
@@ -37,6 +39,11 @@ Template Name: Page - Admissions
     </div>
 		<?php endwhile; endif; ?>
   </div>
+
+	<div style="clear:both;"></div>
+
+</div>
+
 </div>
 
 

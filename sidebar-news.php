@@ -1,4 +1,4 @@
-  <div class="clearfix" id="sidebar-news">
+<div id="news" class="sidebar right medium">
     <div id="admiss-links">
       <h3><a href="/admissions/">Admissions</a></h3>
       <ul>
@@ -8,7 +8,7 @@
     </div>
     
      
-    <div id="latest-news">
+    <?php /* <div id="latest-news">
 <h3>Latest News</h3>
 <ul>
 <?php query_posts('category_name=News&showposts=5'); ?>
@@ -18,7 +18,7 @@
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
 </ul>
-    </div>
+    </div> 
     
     <div id="upcoming-events">
 <h3>Upcoming Events</h3>
@@ -30,9 +30,9 @@
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
 </ul>
-    </div>
+    </div> */ ?>
     
-    <div class="clearfix" id="cats-archives">
+    <div id="cats-archives">
       <div id="category-list">
 <h3>More News</h3>
 <ul>
@@ -47,4 +47,4 @@
 </ul>
       </div>
     </div>
-  </div>
+</div>

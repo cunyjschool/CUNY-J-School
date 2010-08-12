@@ -1,7 +1,17 @@
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
-  <div id="posts">
+<div class="wrap">
+	
+	<div id="main">
+		
+		<?php
+		if ( in_category(161) ) {
+			include 'sidebar-internships.php';
+		} else {
+			include 'sidebar-news.php'; } ?>
+	
+  <div id="content">
+	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     	<?php if ( in_category(37) ) {
 echo '<div class="boxon">As the tools of the media trade continue to evolve, the CUNY Graduate School of Journalism wants to help you stay current.<br />See more about our <a href="http://www.journalism.cuny.edu/continuing-education/">Continuing Education program</a>.</div>';
@@ -33,12 +43,7 @@ echo '<div class="boxon">As the tools of the media trade continue to evolve, the
 <?php endif; ?>
   </div>
 
-
-<?php
-if ( in_category(161) ) {
-	include 'sidebar-internships.php';
-} else {
-	include 'sidebar-news.php'; } ?>
+</div>
 
 </div>
 
