@@ -10,7 +10,7 @@
 		} else {
 			include 'sidebar-news.php'; } ?>
 	
-  <div id="content">
+  <div id="content" class="left">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     	<?php if ( in_category(37) ) {

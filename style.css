@@ -72,7 +72,10 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 }
 
 h3 {
-	margin: 10px 0; }	
+	font-size: 18px;
+	line-height: 24px;
+	margin: 10px 0;
+}
 	
 .wrap {
 	margin: 0 auto;
@@ -505,9 +508,8 @@ img.news-photo {
 	padding: 0;
 }
 
-#post {
-	width: 520px;
-	margin: 0 40px 0 0;
+.post {
+	width: 540px;
 }
 
 .page {
@@ -522,6 +524,8 @@ img.news-photo {
 #post h2 a, #posts-internships h2 a, #posts-internships h2 a:visited {
 	text-decoration: none;
 }
+
+
 
 #main #content .cunyj_event {
 	width: 520px;
@@ -659,7 +663,7 @@ img.news-photo {
 	
 #category-list, #archives {
 	float: left;
-	width: 165px;  }
+	width: 120px;  }
 	
 #archives {
 	width: 75px; }
@@ -977,12 +981,6 @@ ul#other-internships li div {
 	
 	
  /* Start News-Events Page Styles */
-
-h3 a, h3 a:visited {
-	text-decoration: none; }
-	
-h3 a:hover {
-	text-decoration: underline; }
 	
 .news-events a, .news-events a:visited {
 	text-decoration: none; }
