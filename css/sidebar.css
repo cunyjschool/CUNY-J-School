@@ -167,33 +167,40 @@
 	width: 290px;
 }
 
-#main .sidebar#cunyj_event-sidebar li.event {
+#main .sidebar#cunyj_event-sidebar li.event, #main .sidebar#news li.event {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-#main .sidebar#cunyj_event-sidebar li.event h5 {
+#main .sidebar#news li.event {
+	background-image: none;
+	padding-left: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#main .sidebar#cunyj_event-sidebar li.event h5, #main .sidebar#news li.event h5 {
 	margin-left: 100px;
 	font-size: 12px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-#main .sidebar#cunyj_event-sidebar li.event h5 a {
+#main .sidebar#cunyj_event-sidebar li.event h5 a, #main .sidebar#news li.event h5 a {
 	color: #0066CC;
 }
 	
-#main .sidebar#cunyj_event-sidebar li.event div.calendar-date {
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date, #main .sidebar#news li.event div.calendar-date {
 	float: left;
 	border: 1px solid #eee;
 	text-transform: uppercase;
 }
 
-#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span {
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span, #main .sidebar#news li.event div.calendar-date span {
 	display: inline-block;
 }
 
-#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.month {
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.month, #main .sidebar#news li.event div.calendar-date span.month {
 	background: #de1515;
 	color: #FFFFFF;
 	padding: 2px 6px;
@@ -201,7 +208,7 @@
 	text-align: center;
 }
 
-#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.day {
+#main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.day, #main .sidebar#news li.event div.calendar-date span.day {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 5px;

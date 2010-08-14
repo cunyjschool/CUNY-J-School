@@ -43,6 +43,8 @@ echo '<div class="boxon">As the tools of the media trade continue to evolve, the
 <?php endif; ?>
   </div>
 
+	<div style="clear:both;"></div>
+
 </div>
 
 </div>

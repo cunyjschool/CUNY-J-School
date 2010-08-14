@@ -24,8 +24,7 @@
 		?>
 			<div class="calendar-date">
 		        <span class="month"><?php echo date_i18n('M', $start_date) ; ?></span>
-		        <span class="day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></td>
-		      </span>
+		        <span class="day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></span>
 			</div> 
 
 			<h5><?php the_title(); ?></h5>
