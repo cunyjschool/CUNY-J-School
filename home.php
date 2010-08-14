@@ -239,11 +239,11 @@ echo SimplePieWP('http://motthavenherald.com/feed/', array(
     
     
     <div class="jsite">
-	<h3 id="dnj"><a href="http://digitalnewsjournalist.com/">Digital News Journalist</a></h3>
-      <h5>Tips, tools & resources</h5>
+	<h3 id="dnj"><a href="http://www.digitalnewsjournalist.com/">Digital News Journalist</a></h3>
+      <h5>Tips, tools &amp; resources</h5>
       <?php
 if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://digitalnewsjournalist.com/feed/', array(
+echo SimplePieWP('http://www.digitalnewsjournalist.com/feed/', array(
 	'items' => 3,
 	'cache_duration' => 1800
 	));
