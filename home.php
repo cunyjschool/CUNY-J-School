@@ -117,7 +117,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 		<?php endif; ?>
 		</ul>
 
-		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">More Events</a> | <a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
+		<div class="morelinks" style="margin-top: 10px;"><a href="http://tech.journalism.cuny.edu/calendars/">Calendars</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
 	</div><!-- /#events-home -->
 	
 	<div style="clear:both;"></div>
@@ -253,7 +253,7 @@ echo SimplePieWP('http://www.digitalnewsjournalist.com/feed/', array(
     
     <div class="jsite third">
 	<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
-      <h5>A journal of issues & ideas</h5>
+      <h5>A journal of issues &amp; ideas</h5>
       <?php
 if (function_exists('SimplePieWP')) {
 echo SimplePieWP('http://219mag.com/feed/', array(
