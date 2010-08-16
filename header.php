@@ -38,7 +38,11 @@
 
 <body>
 
-<div id="tile-orange"></div>
+<?php if (!is_user_logged_in()) : ?>
+	<div id="home-alert"><a href="http://wiki.journalism.cuny.edu/Getting%20a%20Fast%20Start">Getting a Fast Start: CLASS OF 2011</a></div>
+<?php else : ?>
+	<div id="tile-orange"></div>
+<?php endif; ?>
 
 <div id="global">
   <div class="wrap clearfix">
