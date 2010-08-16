@@ -14,8 +14,13 @@ class cunyj
 	function __construct() {
 		global $wpdb;
 		
-		$this->events = new cunyj_events();
+		$this->events = new cunyj_events();	
 		
+	}
+	
+	function init() {
+		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
+		$version = $details['Version'];
 	}
 	
 }

@@ -1,3 +1,8 @@
+<?php 
+	$theme_details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
+	$theme_version = $theme_details['Version'];
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 
@@ -10,7 +15,6 @@
 <meta name="description" content="The CUNY Graduate School of Journalism, located one block from Times Square in the heart of New York City, offers a three-semester program with a converged curriculum, paid internships and faculty who are leaders in their fields." />
 <?php endif; ?>
 
-
 	<meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
 	<meta http-equiv="content-language" content="en" />
 
@@ -18,15 +22,15 @@
 
 	<meta name="google-site-verification" content="HclfSOn_fMggPZnL-xG4QRz4QvnPSBO-P7AJaOEhA-8" />
 
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-	
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
+
 	<?php /* Other supplemental stylesheets broken up for simplicity */ ?>
 	<?php if (is_home()) : ?>
-	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nextgen_gallery.css" type="text/css" media="screen" />
+	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nextgen_gallery.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
 	  <?php endif; ?>
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sidebar.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/buddypress.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sidebar.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/buddypress.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
 
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
