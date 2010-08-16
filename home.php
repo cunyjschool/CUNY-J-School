@@ -102,8 +102,8 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 		<?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
 		<li class="event"><a href="<?php the_permalink(); ?>">
 			<?php 
-			$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true );
-			$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", $single=true );
+			$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", true );
+			$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", true );
 			?>
 			<div class="calendar-date">
 		        <span class="month"><?php echo date_i18n('M', $start_date) ; ?></span>
