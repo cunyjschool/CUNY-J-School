@@ -10,8 +10,6 @@
 
 <div class="profile">
 	
-	<h3>Profile</h3>
-	
 	<?php if ( 'edit' == bp_current_action() ) : ?>
 		<?php locate_template( array( 'members/single/profile/edit.php' ), true ) ?>
 
@@ -19,6 +17,9 @@
 		<?php locate_template( array( 'members/single/profile/change-avatar.php' ), true ) ?>
 
 	<?php else : ?>
+		
+		<h3>Profile</h3>
+		
 		<?php locate_template( array( 'members/single/profile/profile-loop.php' ), true ) ?>
 
 	<?php endif; ?>

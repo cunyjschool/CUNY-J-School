@@ -28,6 +28,29 @@ class cunyj
 global $cunyj;
 $cunyj = new cunyj();
 
+function cunyj_get_member_profile_data( $args = '' ) {
+	global $members_template;
+
+	if ( !function_exists( 'xprofile_install' ) )
+		return false;
+
+	$defaults = array(
+		'field' => false, // Field name
+		'user_id' => $members_template->member->id
+	);
+
+	$r = wp_parse_args( $args, $defaults );
+	extract( $r, EXTR_SKIP );
+
+	// Populate the user if it hasn't been already.
+	if ( empty( $members_template->member->profile_data ) && method_exists( 'BP_XProfile_ProfileData', 'get_all_for_user' ) )
+		$members_template->member->profile_data = BP_XProfile_ProfileData::get_all_for_user( $r['user_id'] );
+
+	$data = xprofile_format_profile_field( $members_template->member->profile_data[$field]['field_type'], $members_template->member->profile_data[$field]['field_data'] );
+
+	return apply_filters( 'bp_get_member_profile_data', $data );
+}
+
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
