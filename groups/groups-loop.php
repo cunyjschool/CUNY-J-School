@@ -34,7 +34,6 @@
 				<?php do_action( 'bp_directory_groups_actions' ) ?>
 			</div>
 
-			<div class="clear"></div>
 		</li>
 
 	<?php endwhile; ?>

@@ -29,6 +29,9 @@
 					<?php if ($title = bp_get_member_profile_data( 'field=Title' )) : ?>
 					<p><span class="label">Title:</span><?php echo $title; ?></p>
 					<?php endif; ?>
+					<?php if ($interests = bp_get_member_profile_data( 'field=Interests' )) : ?>
+					<p><span class="label">Interests:</span><?php echo $interests; ?></p>
+					<?php endif; ?>
 					<?php //if ($groups = bp_has_groups('user_id='.bp_user_id())) : ?>
 
 					<?php //endif; ?>
