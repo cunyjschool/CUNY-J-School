@@ -270,8 +270,17 @@
   width: auto;
 }
 
+#buddypress #whats-new-form h3 {
+	font-size: 16px;
+}
+
+#buddypress #activity_stream #whats-new-form h3 {
+	font-size: 18px;
+}
+
 #buddypress div#item-header {
 	padding-bottom: 0;
+	margin-left: 170px;
 }
 
 #buddypress div#item-header div#item-header-avatar {
@@ -283,9 +292,10 @@
 }
 
 #buddypress div#item-header div#item-header-content {
-  	float: none;
-	margin-left: 20px;
+	float: none;
 }
+
+
 
 #buddypress #item-buttons {
 	float: right;
@@ -445,7 +455,7 @@
 	width: 40px;
 }
 
-#buddypress .message {
+#buddypress .message, #buddypress #message {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border: 2px solid;
@@ -455,6 +465,11 @@
 #buddypress .message.info {
 	border-color: #0066CC;
 	background-color: #CDE2FF;
+}
+
+#buddypress #message.updated {
+	border-color: #ADEBBD;
+	background-color: #E1F8E7;
 }
 
 #buddypress .pagination {
