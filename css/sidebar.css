@@ -47,13 +47,13 @@
 #sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
 	font-size: 12px;
 	padding: 5px 10px 5px 25px;
-	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
+	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
 #sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
-	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
+	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
 #sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
