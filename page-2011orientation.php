@@ -78,10 +78,11 @@ Template Name: Page - 2011 Orientation
 		<?php if ( function_exists( 'get_flickrRSS' ) ) : ?>
 		<div id="orientation2010-flickr">
 			
-			<h3><span class="tip">Add your own by uploading to Flickr and tagging with 'cunyj2011'</span>Photostream</h3>
+			<h3><span class="tip">Add your own by uploading to Flickr and tagging with '<a href="http://www.flickr.com/photos/tags/cunyj2011/">cunyj2011</a>'</span>Photostream</h3>
 			
 			<?php $flickr_args = array( 'num_items' => 16,
-			 							'type' => 'public'
+			 							'type' => 'public',
+										'tags' => 'cunyj2011'
 								);
 			?>
 			<?php get_flickrRSS( $flickr_args ); ?>
