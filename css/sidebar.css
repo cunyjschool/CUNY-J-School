@@ -186,6 +186,13 @@
 	margin-bottom: 0;
 }
 
+#main .sidebar#cunyj_event-sidebar li.event p.location, #main .sidebar#news li.event p.location {
+	margin-left: 100px;
+	color: #666666;
+	padding: 0;
+	font-size: 10px;
+}
+
 #main .sidebar#cunyj_event-sidebar li.event h5 a, #main .sidebar#news li.event h5 a {
 	color: #0066CC;
 }

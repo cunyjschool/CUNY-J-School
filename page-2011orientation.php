@@ -37,7 +37,7 @@ Template Name: Page - 2011 Orientation
 			<?php
 			$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", true );
 			$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", true );
-			$location = get_post_meta( $post->ID,"_location", true );
+			$venue = get_post_meta( $post->ID,"_cunyj_events_venue", true );
 			?>
 			<div class="calendar-date">
 	        	<span class="month"><?php echo date_i18n('M', $start_date) ; ?></span>
@@ -45,7 +45,7 @@ Template Name: Page - 2011 Orientation
 		</div> 
 
 		<h5><?php the_title(); ?></h5>
-		<p class="location"><?php echo $location; ?></p>
+		<p class="location"><?php echo $venue; ?></p>
 		<div style="clear:left;"></div>
 	</a></li>
     <?php endwhile; else: ?>
@@ -78,7 +78,7 @@ Template Name: Page - 2011 Orientation
 		<?php if ( function_exists( 'get_flickrRSS' ) ) : ?>
 		<div id="orientation2010-flickr">
 			
-			<h3><span class="tip">Add your own by uploading to Flickr and tagging with '<a href="http://www.flickr.com/photos/tags/cunyj2011/">cunyj2011</a>'</span>Photostream</h3>
+			<h3><span class="tip"><a href="http://www.flickr.com/photos/tags/cunyj2011/">Add your own by uploading to Flickr and tagging with 'cunyj2011'</a></span>Photostream</h3>
 			
 			<?php $flickr_args = array( 'num_items' => 16,
 			 							'type' => 'public',
