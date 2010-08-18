@@ -9,7 +9,7 @@
 
 		<li>
 			<div class="item-avatar">
-				<a href="<?php bp_blog_permalink() ?>"><?php bp_blog_avatar('width=80&height=80') ?></a>
+				<a href="<?php bp_blog_permalink() ?>"><?php bp_blog_avatar( 'width=80&height=80' ) ?></a>
 			</div>
 
 			<div class="item">

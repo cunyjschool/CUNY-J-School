@@ -30,19 +30,25 @@
 					</div>
 					
 					<div class="item-desc">
-						<?php if ($title = bp_get_member_profile_data( 'field=Title' )) : ?>
+						<?php $title_args = array(	'field' => 'Title',
+													'user_id' => bp_get_group_member_id()
+												);
+						?>
+						<?php if ($title = cunyj_get_member_profile_data( $title_args )) : ?>
 						<p><span class="label">Title:</span><?php echo $title; ?></p>
 						<?php endif; ?>
-						<?php //if ($groups = bp_has_groups('user_id='.bp_user_id())) : ?>
-
-						<?php //endif; ?>
+						<?php $interest_args = array(	'field' => 'Interests',
+														'user_id' => bp_get_group_member_id()
+												);
+						?>
+						<?php if ($interests = cunyj_get_member_profile_data( $interest_args )) : ?>
+						<p><span class="label">Interests:</span><?php echo $interests; ?></p>
+						<?php endif; ?>
 					</div>
 					
 					<div class="item-meta"></div>
 					
 				</div>
-				
-				<div style="clear:left;"></div>
 
 				<?php do_action( 'bp_group_members_list_item' ) ?>
 

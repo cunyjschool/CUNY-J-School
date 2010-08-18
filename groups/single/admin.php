@@ -15,23 +15,29 @@
 
 	<?php do_action( 'bp_before_group_details_admin' ); ?>
 
-	<label for="group-name">* <?php _e( 'Group Name', 'buddypress' ) ?></label>
+	<fieldset class="standard">
+	<label for="group-name"><?php _e( 'Group Name', 'buddypress' ) ?> <span class="required">(required)</span></label>
 	<input type="text" name="group-name" id="group-name" value="<?php bp_group_name() ?>" />
+	</fieldset>
 
-	<label for="group-desc">* <?php _e( 'Group Description', 'buddypress' ) ?></label>
+	<fieldset class="standard">
+	<label for="group-desc"><?php _e( 'Group Description', 'buddypress' ) ?> <span class="required">(required)</span></label>
 	<textarea name="group-desc" id="group-desc"><?php bp_group_description_editable() ?></textarea>
+	</fieldset>
 
 	<?php do_action( 'groups_custom_group_fields_editable' ) ?>
 
-	<p>
+	<fieldset class="standard">
 		<label for="group-notifiy-members"><?php _e( 'Notify group members of changes via email', 'buddypress' ); ?></label>
 		<input type="radio" name="group-notify-members" value="1" /> <?php _e( 'Yes', 'buddypress' ); ?>&nbsp;
 		<input type="radio" name="group-notify-members" value="0" checked="checked" /> <?php _e( 'No', 'buddypress' ); ?>&nbsp;
-	</p>
+	</fieldset>
 
 	<?php do_action( 'bp_after_group_details_admin' ); ?>
 
-	<p><input type="submit" value="<?php _e( 'Save Changes', 'buddypress' ) ?> &rarr;" id="save" name="save" /></p>
+	<div class="submit">
+	<input type="submit" class="button primary" value="<?php _e( 'Save Changes', 'buddypress' ) ?> &rarr;" id="save" name="save" />
+	</div>
 	<?php wp_nonce_field( 'groups_edit_group_details' ) ?>
 
 <?php endif; ?>
@@ -60,11 +66,11 @@
 		<?php endif; ?>
 
 	<?php endif; ?>
-
-	<hr />
+	
 
 	<h4><?php _e( 'Privacy Options', 'buddypress' ); ?></h4>
 
+	<fieldset class="standard">
 	<div class="radio">
 		<label>
 			<input type="radio" name="group-status" value="public"<?php bp_group_show_status_setting('public') ?> />
@@ -96,10 +102,13 @@
 			</ul>
 		</label>
 	</div>
+	</fieldset>
 
 	<?php do_action( 'bp_after_group_settings_admin' ); ?>
 
-	<p><input type="submit" value="<?php _e( 'Save Changes', 'buddypress' ) ?> &rarr;" id="save" name="save" /></p>
+	<div class="submit">
+	<input class="button primary" type="submit" value="<?php _e( 'Save Changes', 'buddypress' ) ?> &rarr;" id="save" name="save" />
+	</div>
 	<?php wp_nonce_field( 'groups_edit_group_settings' ) ?>
 
 <?php endif; ?>
@@ -113,7 +122,7 @@
 
 			<p>
 				<input type="file" name="file" id="file" />
-				<input type="submit" name="upload" id="upload" value="<?php _e( 'Upload Image', 'buddypress' ) ?>" />
+				<input class="button primary" type="submit" name="upload" id="upload" value="<?php _e( 'Upload Image', 'buddypress' ) ?>" />
 				<input type="hidden" name="action" id="action" value="bp_avatar_upload" />
 			</p>
 
@@ -121,7 +130,7 @@
 				<p><?php _e( "If you'd like to remove the existing avatar but not upload a new one, please use the delete avatar button.", 'buddypress' ) ?></p>
 
 				<div class="generic-button" id="delete-group-avatar-button">
-					<a class="edit" href="<?php bp_group_avatar_delete_link() ?>" title="<?php _e( 'Delete Avatar', 'buddypress' ) ?>"><?php _e( 'Delete Avatar', 'buddypress' ) ?></a>
+					<a class="edit button secondary" href="<?php bp_group_avatar_delete_link() ?>" title="<?php _e( 'Delete Avatar', 'buddypress' ) ?>"><?php _e( 'Delete Avatar', 'buddypress' ) ?></a>
 				</div>
 			<?php endif; ?>
 
@@ -139,7 +148,7 @@
 			<img src="<?php bp_avatar_to_crop() ?>" id="avatar-crop-preview" class="avatar" alt="<?php _e( 'Avatar preview', 'buddypress' ) ?>" />
 		</div>
 
-		<input type="submit" name="avatar-crop-submit" id="avatar-crop-submit" value="<?php _e( 'Crop Image', 'buddypress' ) ?>" />
+		<input class="button primary" type="submit" name="avatar-crop-submit" id="avatar-crop-submit" value="<?php _e( 'Crop Image', 'buddypress' ) ?>" />
 
 		<input type="hidden" name="image_src" id="image_src" value="<?php bp_avatar_to_crop_src() ?>" />
 		<input type="hidden" id="x" name="x" />
@@ -159,21 +168,21 @@
 	<?php do_action( 'bp_before_group_manage_members_admin' ); ?>
 
 	<div class="bp-widget">
-		<h4><?php _e( 'Administrators', 'buddypress' ); ?></h4>
+		<h3><?php _e( 'Administrators', 'buddypress' ); ?></h3>
 		<?php bp_group_admin_memberlist( true ) ?>
 	</div>
 
 	<?php if ( bp_group_has_moderators() ) : ?>
 
 		<div class="bp-widget">
-			<h4><?php _e( 'Moderators', 'buddypress' ) ?></h4>
+			<h3><?php _e( 'Moderators', 'buddypress' ) ?></h3>
 			<?php bp_group_mod_memberlist( true ) ?>
 		</div>
 
 	<?php endif; ?>
 
 	<div class="bp-widget">
-		<h4><?php _e("Members", "buddypress"); ?></h4>
+		<h3><?php _e("Members", "buddypress"); ?></h3>
 
 		<?php if ( bp_group_has_members( 'per_page=15&exclude_banned=false' ) ) : ?>
 
@@ -270,7 +279,7 @@
 
 	<?php else: ?>
 
-		<div id="message" class="info">
+		<div class="message info">
 			<p><?php _e( 'There are no pending membership requests.', 'buddypress' ); ?></p>
 		</div>
 
@@ -296,7 +305,7 @@
 	<?php do_action( 'bp_after_group_delete_admin' ); ?>
 
 	<div class="submit">
-		<input type="submit" disabled="disabled" value="<?php _e( 'Delete Group', 'buddypress' ) ?> &rarr;" id="delete-group-button" name="delete-group-button" />
+		<input class="" type="submit" disabled="disabled" value="<?php _e( 'Delete Group', 'buddypress' ) ?> &rarr;" id="delete-group-button" name="delete-group-button" />
 	</div>
 
 	<input type="hidden" name="group-id" id="group-id" value="<?php bp_group_id() ?>" />

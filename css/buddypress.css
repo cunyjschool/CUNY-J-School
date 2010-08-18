@@ -102,7 +102,7 @@
 	text-decoration: none;
 }
 
-#buddypress .settings .item-body {
+#buddypress .settings .item-body, #buddypress .settings .standard-form {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 15px;
@@ -124,13 +124,44 @@
 	margin-right: 10px;
 }
 
+#buddypress .settings .standard-form ul.button-nav li a {
+	text-decoration: none;
+}
+
+#buddypress .settings .standard-form ul.button-nav li.current a {
+		color: #333333;
+		font-weight: bold;
+}
+
 #buddypress .settings fieldset.standard {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
 #buddypress .settings fieldset.standard label {
+	margin-top: 0;
+	margin-bottom: 5px;
+	margin-left: 0;
+	font-size: 14px;
+}
+
+#buddypress .settings fieldset.standard .bp-profile-privacy {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	color: #666666;	
+}
+
+#buddypress .settings fieldset.standard .bp-profile-privacy span {
+	display: inline-block;
+	float:left;
+	width: 190px;
 	margin: 0;
+}
+
+#buddypress .settings fieldset.standard p.description {
+	padding:0;
+	margin-top:3px;
+	color: #666666;
 }
 
 #buddypress .settings fieldset.standard ul.explanation {
@@ -239,8 +270,17 @@
   width: auto;
 }
 
+#buddypress #whats-new-form h3 {
+	font-size: 16px;
+}
+
+#buddypress #activity_stream #whats-new-form h3 {
+	font-size: 18px;
+}
+
 #buddypress div#item-header {
 	padding-bottom: 0;
+	margin-left: 170px;
 }
 
 #buddypress div#item-header div#item-header-avatar {
@@ -252,9 +292,10 @@
 }
 
 #buddypress div#item-header div#item-header-content {
-  	float: none;
-	margin-left: 20px;
+	float: none;
 }
+
+
 
 #buddypress #item-buttons {
 	float: right;
@@ -414,7 +455,7 @@
 	width: 40px;
 }
 
-#buddypress .message {
+#buddypress .message, #buddypress #message {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border: 2px solid;
@@ -424,6 +465,11 @@
 #buddypress .message.info {
 	border-color: #0066CC;
 	background-color: #CDE2FF;
+}
+
+#buddypress #message.updated {
+	border-color: #ADEBBD;
+	background-color: #E1F8E7;
 }
 
 #buddypress .pagination {

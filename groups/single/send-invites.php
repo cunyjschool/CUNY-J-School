@@ -68,7 +68,7 @@
 
 <?php else : ?>
 
-	<div id="message" class="info">
+	<div class="message info">
 		<p><?php _e( 'Once you have built up friend connections you will be able to invite others to your group. You can send invites any time in the future by selecting the "Send Invites" option when viewing your new group.', 'buddypress' ); ?></p>
 	</div>
 

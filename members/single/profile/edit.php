@@ -8,8 +8,6 @@
 
 	<?php do_action( 'bp_before_profile_field_content' ) ?>
 
-		<h3><?php printf( __( "Editing '%s' Profile Group", "buddypress" ), bp_get_the_profile_group_name() ); ?></h3>
-
 		<ul class="button-nav">
 			<?php bp_profile_group_tabs(); ?>
 		</ul>
@@ -18,22 +16,19 @@
 
 			<div<?php bp_field_css_class( 'editfield' ) ?>>
 
+			<fieldset class="standard">
+
 				<?php if ( 'textbox' == bp_get_the_profile_field_type() ) : ?>
 					
-					
-				<fieldset class="standard">
 					<label for="<?php bp_the_profile_field_input_name() ?>"><?php bp_the_profile_field_name() ?> <?php if ( bp_get_the_profile_field_is_required() ) : ?><?php _e( '(required)', 'buddypress' ) ?><?php endif; ?></label>
 					<input type="text" name="<?php bp_the_profile_field_input_name() ?>" id="<?php bp_the_profile_field_input_name() ?>" value="<?php bp_the_profile_field_edit_value() ?>" class="large" />
-				</fieldset>
 
 				<?php endif; ?>
 
 				<?php if ( 'textarea' == bp_get_the_profile_field_type() ) : ?>
 
-				<fieldset class="standard">
 					<label for="<?php bp_the_profile_field_input_name() ?>"><?php bp_the_profile_field_name() ?> <?php if ( bp_get_the_profile_field_is_required() ) : ?><?php _e( '(required)', 'buddypress' ) ?><?php endif; ?></label>
 					<textarea rows="5" cols="40" name="<?php bp_the_profile_field_input_name() ?>" id="<?php bp_the_profile_field_input_name() ?>"><?php bp_the_profile_field_edit_value() ?></textarea>
-				</fieldset>
 
 				<?php endif; ?>
 
@@ -102,6 +97,8 @@
 				<?php do_action( 'bp_custom_profile_edit_fields' ) ?>
 
 				<p class="description"><?php bp_the_profile_field_description() ?></p>
+				
+				</fieldset>
 			</div>
 
 		<?php endwhile; ?>

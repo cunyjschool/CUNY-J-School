@@ -64,7 +64,7 @@
 
 <?php else: ?>
 
-	<div id="message" class="info">
+	<div class="message info">
 		<p><?php _e( 'Sorry, no messages were found.', 'buddypress' ); ?></p>
 	</div>
 
