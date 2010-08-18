@@ -14,15 +14,18 @@ Template Name: Page - 2011 Orientation
 	
 	<div id="orientation2010">
 		
-	<div id="orientation2010-events" class="sidebar right large">
+	<div id="cunyj_event-sidebar" class="sidebar right large">
 		
-		<h3>Upcoming Events</h3>
+		<h3><a href="/events/faststart-orientation-for-the-class-of-2011/">FastStart Orientation Schedule</a></h3>
 		<?php 
+		$current_time = date_i18n('U', time());		
 		$args = array( 	'post_type'=>'cunyj_event',
-						'showposts'=>4,
+						'showposts'=>5,
 						'meta_key'=>'_cunyj_events_start_date',
 						'order'=>'ASC',
 						'orderby'=>'meta_value',
+						'meta_compare' => '>',
+						'meta_value' => $current_time,
 						'taxonomy'=>'cunyj_event_category',
 						'term'=>'class-of-2011-orientation'
 					);
@@ -72,9 +75,18 @@ Template Name: Page - 2011 Orientation
 
 		<?php endwhile; endif; ?>
 		
-		<div id="get-help">
+		<?php if ( function_exists( 'get_flickrRSS' ) ) : ?>
+		<div id="orientation2010-flickr">
 			
+			<h3><span class="tip">Add your own by uploading to Flickr and tagging with 'cunyj2011'</span>Photostream</h3>
+			
+			<?php $flickr_args = array( 'num_items' => 16,
+			 							'type' => 'public'
+								);
+			?>
+			<?php get_flickrRSS( $flickr_args ); ?>
 		</div>
+		<?php endif; ?>
 	
 	</div>
 	

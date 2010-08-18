@@ -520,6 +520,31 @@ img.news-photo {
 	width: 520px;
 }
 
+#orientation2010 #orientation2010-flickr {
+	background-color: #FF9900;
+	padding:10px;
+}
+
+#orientation2010 #orientation2010-flickr h3 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#orientation2010 #orientation2010-flickr h3 span.tip {
+	float: right;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+#orientation2010 #orientation2010-flickr a img {
+	margin: 10px;
+	border: 5px solid #EEEEEE;
+}
+
+#orientation2010 #orientation2010-flickr a img:hover {
+	border-color: #FFFFFF;
+}
+
 #posts-internships {
 	float: left;
 	width: 320px;
