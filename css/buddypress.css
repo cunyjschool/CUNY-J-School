@@ -200,6 +200,7 @@
 
 #buddypress .activity-inner p {
 	padding-top: 0;
+	padding-bottom: 0;
 }
 
 #buddypress #activity_single .activity {
@@ -214,11 +215,32 @@
 }
 
 #buddypress ul.item-list.activity-list li {
-	min-height: auto;
+	min-height: 0;
 	margin-bottom: 0;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	padding: 0;
+}
+
+#buddypress div.activity-content {
+	margin-left: 0;
+	padding: 0;
+}
+
+#buddypress div.activity-content div.activity-meta {
+	margin-top: 5px;
+	color: #666666;
+}
+
+#buddypress div.activity-meta p {
+	padding-top: 0;
+	padding-bottom: 2px;
+	margin-left: 55px;
+}
+
+#buddypress ul.activity-list li img.avatar {
+	height: 40px;
+	width: 40px;
 }
 
 #buddypress ul.item-list li div.item-action {
@@ -436,26 +458,6 @@
 	color: #999999;	
 }
 
-#buddypress div.activity-content {
-	margin-left: 0;
-	padding: 0;
-}
-
-#buddypress div.activity-meta {
-	margin-top: 10px;
-	color: #666666;
-}
-
-#buddypress div.activity-meta p {
-	padding-top: 0;
-	padding-bottom: 2px;
-	margin-left: 55px;
-}
-
-#buddypress ul.activity-list li img.avatar {
-	height: 40px;
-	width: 40px;
-}
 
 #buddypress .message, #buddypress #message {
 	margin-top: 10px;
