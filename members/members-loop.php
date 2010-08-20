@@ -32,9 +32,21 @@
 					<?php if ($interests = bp_get_member_profile_data( 'field=Interests' )) : ?>
 					<p><span class="label">Interests:</span><?php echo $interests; ?></p>
 					<?php endif; ?>
-					<?php //if ($groups = bp_has_groups('user_id='.bp_user_id())) : ?>
-
-					<?php //endif; ?>
+					<?php
+					$groups = groups_get_user_groups( bp_get_member_user_id() );
+					if ( count($groups) ) {
+						$all_groups = '';
+						echo '<p><span class="label">Groups:</span>';
+						foreach ( $groups['groups'] as $group_id ) {
+							$group = groups_get_group( 'group_id=' . $group_id );
+							$all_groups .= '<a href="' . bp_get_root_domain() . '/' . BP_GROUPS_SLUG .'/' . $group->slug . '/';
+							$all_groups .= '">' . $group->name . '</a>, ';
+						}
+						echo rtrim( $all_groups, ', ' );
+						echo '</p>';
+					}
+					?>
+					
 				</div>
 
 				<?php do_action( 'bp_directory_members_item' ) ?>
