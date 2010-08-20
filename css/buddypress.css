@@ -1,6 +1,8 @@
 #buddypress h2 {
   font-size: 24px;
-  margin-top: 10px;  
+  margin-top: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 10px;
 }
 
 #buddypress h2 a.create.button {
