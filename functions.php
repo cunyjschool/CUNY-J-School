@@ -14,13 +14,24 @@ class cunyj
 	function __construct() {
 		global $wpdb;
 		
-		$this->events = new cunyj_events();	
+		$this->events = new cunyj_events();
 		
+		add_action('init', array(&$this, 'init'));
 	}
 	
 	function init() {
 		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
 		$version = $details['Version'];
+		
+		if ( !is_admin() ) {
+			// Enqueue our stylesheets
+			wp_enqueue_style( 'cunyj_primary', get_bloginfo('template_directory') . '/style.css', false, $version);
+			wp_enqueue_style( 'cunyj_sidebar', get_bloginfo('template_directory') . '/css/sidebar.css', array('cunyj_primary'), $version);
+			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), $version);
+			
+			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
+			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), $version);
+		}
 	}
 	
 }

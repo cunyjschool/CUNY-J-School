@@ -21,16 +21,12 @@
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
 	<meta name="google-site-verification" content="HclfSOn_fMggPZnL-xG4QRz4QvnPSBO-P7AJaOEhA-8" />
-
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
-
-	<?php /* Other supplemental stylesheets broken up for simplicity */ ?>
-	<?php if (is_home()) : ?>
-	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nextgen_gallery.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
-	  <?php endif; ?>
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/sidebar.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/buddypress.css?v=<?php echo $theme_version; ?>" type="text/css" media="screen" />
+	
+	<?php
+	/**
+	 * All stylesheets are enqueued in functions.php
+	 */
+	?>
 
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
