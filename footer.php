@@ -14,9 +14,6 @@
 http://assistive.usablenet.com/tt/<?php bloginfo('url'); ?>">Text-Only</a>
 
   </div>
-  
-  <script language="javascript">AC_FL_RunContent = 0;</script>
-  <script src="/js/AC_RunActiveContent.js" language="javascript"></script>
 
   <script language="JavaScript">
   	jQuery(document).ready(function(){
