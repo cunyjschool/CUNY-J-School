@@ -4,7 +4,8 @@
 <?php if (is_category(161)) { ?>
 <?php } else { ?>
 <?php } ?>
-    
+
+<?php /*   
 <h3 style="margin-top: 30px;">Upcoming Deadlines</h3>
 <ul>
 
@@ -13,7 +14,6 @@
 <?php query_posts('cat=9&showposts=10&meta_key=deadline&order=ASC&orderby=meta_value'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span style="color: #999; font-size: 10px;"> <?php if(get_post_meta($post->ID, deadline, true) != "") { ?>Deadline: <?php 
-/* Change the way the date metavalue displays to MM/DD/YYYY */
 $local_date_values = split("/", get_post_meta( $post->ID,"deadline", $single=true ));
 echo $local_date_values[1] . "/" .
  $local_date_values[2] . "/" .
@@ -22,7 +22,7 @@ echo $local_date_values[1] . "/" .
   
     <?php endwhile; else: ?><p>There are currently no stories.</p>
 <?php endif; ?>
-</ul>
+</ul> */ ?>
 
 
 <h3 style="margin-top: 30px;">Recently Added &amp; Updated Internships</h3>
