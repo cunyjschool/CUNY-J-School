@@ -9,7 +9,7 @@
 	
 		<?php //bp_group_description() ?>
 
-		<?php do_action( 'bp_group_header_meta' ) ?>
+		<?php //do_action( 'bp_group_header_meta' ) ?>
 
 </div>
 
