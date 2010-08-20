@@ -34,7 +34,7 @@
 					<?php endif; ?>
 					<?php
 					$groups = groups_get_user_groups( bp_get_member_user_id() );
-					if ( count($groups) ) {
+					if ( count( $groups['groups'] ) ) {
 						$all_groups = '';
 						echo '<p><span class="label">Groups:</span>';
 						foreach ( $groups['groups'] as $group_id ) {
