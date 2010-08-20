@@ -251,6 +251,10 @@
 	margin-left: 100px;
 }
 
+#buddypress .item-list .item.no-margin {
+	margin-left: 0;
+}
+
 #buddypress .item-list#member-list div.item-avatar img {
 	height: 80px;
 	width: 80px;

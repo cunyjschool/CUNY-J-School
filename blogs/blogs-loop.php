@@ -8,11 +8,7 @@
 	<?php while ( bp_blogs() ) : bp_the_blog(); ?>
 
 		<li>
-			<div class="item-avatar">
-				<a href="<?php bp_blog_permalink() ?>"><?php bp_blog_avatar( 'width=80&height=80' ) ?></a>
-			</div>
-
-			<div class="item">
+			<div class="item no-margin">
 				<div class="item-title">
 					<h4><a href="<?php bp_blog_permalink() ?>"><?php bp_blog_name() ?></a></h4>
 				</div>
