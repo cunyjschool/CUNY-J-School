@@ -54,6 +54,9 @@
 			<ul id="cssdropdown">
 				<li class="headlink"><a href="#" class="olink">Quicklinks &darr;</a>
 					<ul>
+						<?php if ( !is_user_logged_in() ) : ?>
+						<li class="login"><a href="<?php bloginfo('url'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_bloginfo('url')); ?>">Login</a></li>
+						<?php endif; ?>
 						<li><a href="http://wiki.journalism.cuny.edu/session/login?return_to_page=FrontPage">Wiki</a></li>
 						<li><a href="http://mail.journalism.cuny.edu">E-mail</a></li>
 						<li><a href="http://help.journalism.cuny.edu">Help Desk</a></li>
