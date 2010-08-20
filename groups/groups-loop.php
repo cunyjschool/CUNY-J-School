@@ -31,7 +31,7 @@
 			<div class="action">
 				<?php bp_group_join_button() ?>
 
-				<?php do_action( 'bp_directory_groups_actions' ) ?>
+				<?php //do_action( 'bp_directory_groups_actions' ) ?>
 			</div>
 
 		</li>
