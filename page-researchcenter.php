@@ -76,7 +76,7 @@ Send questions, comments or suggestions to: <a href="mailto:research@journalism.
 
 <?php
 if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://blogs.journalism.cuny.edu/researchcenter/feed/', array(
+echo SimplePieWP('http://researchcenter.journalism.cuny.edu/feed/', array(
 	'items' => 4,
 	'cache_duration' => 900
 	));
