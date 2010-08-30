@@ -68,12 +68,12 @@
         <div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 5px 0;">Student-powered wire service</div>
       
     <?php
-if (function_exists('SimplePieWP')) {
+/* if (function_exists('SimplePieWP')) {
 echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', array(
 	'items' => 4,
 	'cache_duration' => 1800
 	));
-}
+} */
 	?>
     
     </div> 
