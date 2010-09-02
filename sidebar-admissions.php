@@ -64,6 +64,13 @@ Admissions/Outreach Counselor
 (Fax) 646-758-7709<br />
 (Skype) colleen923</p>
 
+<p><strong>Ray Villalona</strong><br />
+Financial Aid Manager<br />
+<a href="mailto:rvillalona@gc.cuny.edu">rvillalona@gc.cuny.edu</a><br />
+(Office) 212-817-7459<br />
+(Fax) 212-817-1623<br />
+(Skype) rmac0719</p>
+
 <p><strong>Office Hours</strong><br />
 9 a.m.-5 p.m., Monday-Friday</p>
 </div>
