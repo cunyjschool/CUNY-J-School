@@ -15,13 +15,11 @@ http://assistive.usablenet.com/tt/<?php bloginfo('url'); ?>">Text-Only</a>
 
   </div>
 
-  <script language="JavaScript">
-  	jQuery(document).ready(function(){
-  		jQuery('#cssdropdown li.headlink').hover(
-  			function() { jQuery('ul', this).css('display', 'block'); },
-  			function() { jQuery('ul', this).css('display', 'none'); });
-  	});
-  </script>
+<!-- Clicky analytics tag -->
+<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">clicky.init(249402);</script>
+<noscript><p style="display:none;"><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/249402ns.gif" /></p></noscript>
+<!-- End Clicky analytics -->
 
   <?php wp_footer(); ?>
 
