@@ -301,7 +301,7 @@ input.button.primary {
   	height: 15px;
 	margin-top: 13px;
   	padding: 7px 15px 15px 15px;
-	background: #333 url(images/nav_back.jpg) repeat-x bottom; 
+	background: #333 repeat-x bottom; 
 	color: #ccc;
 	border-radius-topleft: 2px;
 	border-radius-topright: 2px;
