@@ -2,7 +2,7 @@
 Theme Name: CUNY J-School
 Theme URI: http://journalism.cuny.edu/
 Description: WordPress for the CUNY Graduate School of Journalism
-Version: 1.0.3
+Version: 1.0.4
 Author: Daniel Bachhuber
 Author URI: http://www.journalism.cuny.edu
 Tags: buddypress
@@ -632,6 +632,24 @@ img.news-photo {
 .entry ul li#research-search {
 	padding-left: 30px;
 	background: url(images/icons/magnifier.png) no-repeat 10px 7px; }
+	
+.entry p img {
+	background-color: #EEEEEE;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.entry p img.alignleft, .entry p img.align-left {
+	float: left;
+	margin-right: 10px;
+}
+
+.entry p img.alignright, .entry p img.align-right {
+	float: right;
+	margin-left: 10px;
+}
 	
 #page-image {
 	float: right;
