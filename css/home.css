@@ -243,11 +243,30 @@
 	
 #fh-inner {
 	background: #f9f9f9;
-	padding: 15px;
 	margin-bottom: 5px;
 	color: #666;
+	padding: 15px;	
+	border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px; }
+	-moz-border-radius: 5px;
+}
+
+#fh-inner a {
+
+}
+
+#fh-inner p, #fh-inner p a {
+	color: #666;
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 3px 0 0 0;
+}
+
+#fh-inner p img.nyt-logo {
+	position: absolute;
+	margin-left: 8px;
+	margin-top: 2px;
+}
 	
 #featured-home li {
 	padding: 3px 0;
