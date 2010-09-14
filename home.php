@@ -65,7 +65,7 @@
 	
   	<div id="featured-home">
       <div id="fh-inner"><a href="http://www.nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/nycitynewsservice_h200.png" height="50px" width="200px" alt="NY City News Service" /></a>
-        <div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 5px 0;">Student-powered wire service</div>
+        <p><a href="http://www.nycitynewsservice.com/">Student-powered wire service</a></p>
       
     <?php
 /* if (function_exists('SimplePieWP')) {
@@ -79,7 +79,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
     </div> 
 
 <div id="fh-inner"><a href="http://fort-greene.thelocal.nytimes.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/fort-greene_h200.jpg" height="50px" width="200px" alt="The Local" /></a>
-<div style="color: #999; font-size: 11px; text-transform: uppercase; margin: 3px 0 0 0;">Brooklyn-based citizen journalism</div>
+<p><a href="http://fort-greene.thelocal.nytimes.com/">CUNY Graduate School of Journalism<br>with <img height="25" src="<?php bloginfo('template_directory'); ?>/images/logos/nytlogo379x64.gif" class="nyt-logo" alt="NYT logo" /></a></p>
 </div>
 
     </div><!-- /#featured-home -->
