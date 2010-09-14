@@ -215,7 +215,7 @@ echo SimplePieWP('http://newsinnovation.com/feed/', array(
       <h5>tips to improve your writing</h5>
       <?php
 if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://blogs.journalism.cuny.edu/writestuff/feed/', array(
+echo SimplePieWP('http://writestuff.journalism.cuny.edu/feed/', array(
 	'items' => 4,
 	'cache_duration' => 1800
 	));
