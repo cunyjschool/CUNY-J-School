@@ -214,10 +214,10 @@ input.button.primary {
 #home-alert {
 	padding: 10px 20px; 
 	background: #ff9900 url(images/backgrounds/orange-back.jpg) repeat; 
-	margin-bottom: 5px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
   text-align:center;
 }
 
@@ -514,6 +514,10 @@ img.news-photo {
 
 .page {
 	width: 600px;
+}
+
+.page.full {
+	width: auto;
 }
 
 #orientation2010 .page {
