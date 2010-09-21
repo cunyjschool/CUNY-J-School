@@ -8,9 +8,9 @@
 	
 	 <div id="content">
 		
-		<div id="home-alert">
-			<strong>Upcoming Livestream:</strong> A Conversation with Adam Moss, <em>New York</em> Magazine Editor, Tuesday, Sept. 21st, at 12:15 pm ET. <a href="http://www.journalism.cuny.edu/events/a-conversation-with-adam-moss-editor-of-new-york-magazine/">More information &rarr;</a>
-		</div>
+		<?php /* <div id="home-alert">
+			<strong>Livestream:</strong> A Conversation with Adam Moss, <em>New York</em> Magazine Editor, Tuesday, Sept. 21st, at 12:15 pm ET. <a href="http://www.journalism.cuny.edu/live/">Watch now &rarr;</a>
+		</div> */ ?>
 	
 
 <!-- Start Slideshow and Nav -->
