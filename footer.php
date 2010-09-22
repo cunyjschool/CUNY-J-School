@@ -10,7 +10,7 @@
 
 &copy; <?php echo date('Y'); ?> <a href="http://www.journalism.cuny.edu/">Graduate School of Journalism</a> | <a href="http://cuny.edu/">City University of New York</a><br />
 219 W. 40th Street | New York, NY 10018 | <a href="<?php bloginfo('url'); ?>/about/map-and-directions/">Map and Directions</a> | <a href="<?php bloginfo('url'); ?>/about/campus-facilities/hours-of-operation/">Hours of Operation</a><br />
-<a href="http://www.cuny.edu/flu">H1N1 Info</a> | <a href="<?php bloginfo('url'); ?>/docs/clery-report.pdf">Campus Safety Report</a> [pdf] | <a href="<?php bloginfo('url'); ?>/contact-us/">Contact Us</a> | <a href="http://www.cuny.edu/employment.html">Employment</a> | <a href="https://cunyjschool.wufoo.com/forms/web-feedback-form/">Web Feedback</a> | <a href="<?php bloginfo('url'); ?>/site-credits/">Site Credits</a> | <a href=" 
+<a href="http://www.cuny.edu/about/administration/offices/ehsrm/flu.html">H1N1 Info</a> | <a href="<?php bloginfo('url'); ?>/files/2010/09/2010-JSchool-Clery.pdf">Campus Safety Report</a> [pdf] | <a href="<?php bloginfo('url'); ?>/contact-us/">Contact Us</a> | <a href="http://www.cuny.edu/employment.html">Employment</a> | <a href="https://cunyjschool.wufoo.com/forms/web-feedback-form/">Web Feedback</a> | <a href="<?php bloginfo('url'); ?>/site-credits/">Site Credits</a> | <a href=" 
 http://assistive.usablenet.com/tt/<?php bloginfo('url'); ?>">Text-Only</a>
 
   </div>
