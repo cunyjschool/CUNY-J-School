@@ -35,6 +35,8 @@
 		<?php endwhile; endif; ?>
   </div>
 
+	<div style="clear:left;"></div>
+
 	</div>
 </div>
 
