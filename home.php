@@ -8,9 +8,9 @@
 	
 	 <div id="content">
 		
-		<?php /* <div id="home-alert">
-			<strong>Livestream:</strong> A Conversation with Adam Moss, <em>New York</em> Magazine Editor, Tuesday, Sept. 21st, at 12:15 pm ET. <a href="http://www.journalism.cuny.edu/live/">Watch now &rarr;</a>
-		</div> */ ?>
+		<div id="home-alert">
+			<strong>Today and tomorrow:</strong> SABEW's 2010 Fall Conference, happening at the J-School. <a href="http://cunyatsabew.com/">Follow the coverage</a> or <a href="http://www.journalism.cuny.edu/live/">watch the livestream</a>.
+		</div>
 	
 
 <!-- Start Slideshow and Nav -->
