@@ -13,10 +13,6 @@
   <div id="content" class="left">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    	<?php if ( in_category(37) ) {
-echo '<div class="boxon">As the tools of the media trade continue to evolve, the CUNY Graduate School of Journalism wants to help you stay current.<br />See more about our <a href="http://www.journalism.cuny.edu/continuing-education/">Continuing Education program</a>.</div>';
-} 
-		?>
     
 	<div class="post" id="post-<?php the_ID(); ?>">
 
@@ -24,11 +20,11 @@ echo '<div class="boxon">As the tools of the media trade continue to evolve, the
 
       <div class="timestamp">Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
 
-<?php if(get_post_meta($post->ID, photo, true) != "") { ?>
-<img src="<?php bloginfo('template_directory'); ?>/php/timthumb.php?src=<?php echo get_post_meta( $post->ID,"photo", $single=true ) ; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"> 
+<?php if ( $photo = get_post_meta($post->ID, 'photo', true) ) { ?>
+<img src="<?php bloginfo('template_directory'); ?>/php/timthumb.php?src=<?php echo $photo; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"> 
 <?php } ?>
 
-<?php if(get_post_meta($post->ID, photo_caption, true) != "") { ?><div class="photo-caption"><?php echo get_post_meta( $post->ID,"photo_caption", $single=true ) ; ?></div><?php } ?>
+<?php if ( $photo_caption = get_post_meta($post->ID, 'photo_caption', true) ) { ?><div class="photo-caption"><?php echo $photo_caption; ?></div><?php } ?>
 
 
       <div class="entry">
