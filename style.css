@@ -726,7 +726,7 @@ img.news-photo {
 	margin-right: 20px;
 	border-right: 1px solid #eee; }
 	
-.timestamp, .postmetadata {
+.timestamp, .postmetadata, .post .meta {
 	font-size: 95%;
 	color: #999;
 	text-transform: uppercase; }
