@@ -31,7 +31,7 @@
 		<div class="details">Updated <?php the_time('F j, Y'); ?></div>
 		<?php endif; ?>
 		<?php if ($post_type == 'post') : ?>
-		<div class="details"><?php the_author_posts_link(); ?> <?php if (get_the_tags()) { echo ' - ' . get_the_tags(); } ?></div>
+		<div class="details"><?php the_author_posts_link(); ?> <?php if (get_the_tags()) { echo ' - '; the_tags(); } ?></div>
 		<?php endif; ?>
 		<?php
 		if ($post_type == 'cunyj_event') : ?>
