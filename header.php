@@ -47,12 +47,17 @@
 
 <div id="global">
   <div class="wrap clearfix">
-	<?php if ( !$cunyj->is_search_page() ) : ?>	
+	<?php if ( !$cunyj->is_search_page() ) : ?>		
     <div id="logo">
       <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="75px" width="360px" /></a>
     </div>
+	<?php else: ?>
+	 <div id="logo">
+	      <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="45px" /></a>
+	    </div>	
 	<?php endif; ?>
     
+	<?php if ( !$cunyj->is_search_page() ) : ?>	
 		<div id="aud-search">
 			<ul id="cssdropdown">
 				<li class="headlink first-item"><a href="#" class="olink">Quicklinks &darr;</a>
@@ -77,6 +82,7 @@
 				<li class="no-background"><a href="http://facebook.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icons/socialnetworking/facebook_16.png" alt="Facebook" /></a></li>
 				<li class="no-background"><a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icons/socialnetworking/twitter_16.png" alt="Twitter" /></a></li>
 			</ul>
+			<?php endif; ?>
 			
 			<?php if ( !$cunyj->is_search_page() ) : ?>
 				<?php include (TEMPLATEPATH . '/searchform.php'); ?>
@@ -86,14 +92,15 @@
   </div><!-- /.wrap -->
 </div><!-- /#global -->
 
+<?php if ( !$cunyj->is_search_page() ) : ?>	
 <div id="primary_nav">
-	<div class="wrap">	
-	
+	<div class="wrap">
+		
 	<?php wp_nav_menu(
 				array(
 					'theme_location' => 'primary_navigation'
 					)
 				); ?>
-
 	</div><!-- /.wrap -->
 </div>
+<?php endif; ?>

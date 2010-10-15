@@ -4,11 +4,11 @@
 	
 	<div id="buddypress">
 	
-	<div id="members_directory" class="content">
+	<?php include (TEMPLATEPATH . '/members/sidebar.php'); ?>
+	
+	<div id="members_directory" class="content directory">
 
 		<form action="" method="post" id="members-directory-form" class="dir-form">
-
-			<h2>Members Directory</h2>
 
 			<?php do_action( 'bp_before_directory_members_content' ) ?>
 			

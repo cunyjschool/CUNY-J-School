@@ -35,6 +35,10 @@
 	padding-left: 0;
 }
 
+#buddypress .content.directory {
+	width: 600px;
+}
+
 #buddypress #item-body {
 	min-height: 300px;
 	margin-left: 170px;

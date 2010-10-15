@@ -42,9 +42,11 @@ class cunyj
 		global $pagenow, $bp;
 		
 		if ( is_search() ) {
-			return true;
+			return 'posts';
 		} else if ( $bp->current_component == 'members' ) {
-			return true;
+			return 'members';
+		} else if ( $bp->current_component == 'groups' ) {
+			return 'groups';
 		}
 		return false;
 	}
