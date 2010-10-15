@@ -164,12 +164,13 @@ input.button.primary {
 }
 	
 #global img {
-	float: left; }
+	float: left;
+}
 	
 #global {
-	height: 90px;
-	padding: 0 20px 40px 20px; 
-	background: #222; }
+	padding: 0 20px 0 20px; 
+	background: #222;
+}
 	
 #global a {
 	text-decoration: none;
@@ -185,12 +186,13 @@ input.button.primary {
 #logo {
 	padding-top: 30px;
 	float: left;
-	width: 375px; }
+	width: 375px;
+	padding-bottom: 15px;
+}
 	
 #aud-search {
 	float: right;
 	font-size: 11px;
-	height: 75px;
 	width: 500px;
 	padding-bottom: 10px; }
 	

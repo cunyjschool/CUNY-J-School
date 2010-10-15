@@ -34,6 +34,21 @@ class cunyj
 		}
 	}
 	
+	/**
+	 * Check whether the current page has a large search box on it
+	 * @return bool $is_search_page Whether it's a search page or not
+	 */
+	function is_search_page() {
+		global $pagenow, $bp;
+		
+		if ( is_search() ) {
+			return true;
+		} else if ( $bp->current_component == 'members' ) {
+			return true;
+		}
+		return false;
+	}
+	
 }
 
 global $cunyj;

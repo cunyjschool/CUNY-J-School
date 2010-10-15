@@ -1,6 +1,7 @@
 <?php 
 	$theme_details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
 	$theme_version = $theme_details['Version'];
+	$cunyj = new cunyj();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -46,9 +47,11 @@
 
 <div id="global">
   <div class="wrap clearfix">
+	<?php if ( !$cunyj->is_search_page() ) : ?>	
     <div id="logo">
       <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="75px" width="360px" /></a>
     </div>
+	<?php endif; ?>
     
 		<div id="aud-search">
 			<ul id="cssdropdown">
@@ -72,8 +75,10 @@
 				<li><a href="<?php bloginfo('url'); ?>/alumni/">Alumni</a></li>
 				<li style="border-right: 0;"><a href="<?php bloginfo('url'); ?>/continuing-education/">Continuing Education</a></li>
 			</ul>
-
-			<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+			
+			<?php if ( !$cunyj->is_search_page() ) : ?>
+				<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+			<?php endif; ?>
     </div><!-- /#aud-search -->
 
   </div><!-- /.wrap -->
