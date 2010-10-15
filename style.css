@@ -163,7 +163,7 @@ input.button.primary {
 	background: url(images/tile-orange.jpg) repeat-x;
 }
 	
-#global img {
+#global #logo img {
 	float: left;
 }
 	
@@ -193,14 +193,12 @@ input.button.primary {
 #aud-search {
 	float: right;
 	font-size: 11px;
-	width: 500px;
-	padding-bottom: 10px; }
+	padding-bottom: 10px;
+}
 	
 #aud-search ul {
 	float: right;
-	border-top: 4px solid #111;
-	background: #1b1b1b;
-	padding: 5px;
+	padding-bottom: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px; }
 			
@@ -210,8 +208,41 @@ input.button.primary {
 	font-size: 10px; }
 	
 #aud-search ul li a {
-	display: block; 
-	padding: 0 10px; }
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;	
+	background: #1b1b1b;
+	display: block;
+		
+}	
+
+#aud-search ul li.last-item {
+	border-right: none;
+}
+
+#aud-search ul li.first-item a {
+	-webkit-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+}
+
+#aud-search ul li.last-item a {
+	-webkit-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomright: 5px;
+}
+
+#aud-search ul li.no-background {
+	background-color: #222222;
+	border-right: none;
+	padding-top: 2px;
+}
+
+#aud-search ul li.no-background a {
+	background-color: #222222;
+	padding:0;
+	margin-left: 10px;
+	margin-top: 5px;
+}
 
 #home-alert {
 	padding: 10px 20px; 
@@ -220,7 +251,7 @@ input.button.primary {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-  text-align:center;
+	text-align:center;
 }
 
 #home-alert a, #livestream a:visited {

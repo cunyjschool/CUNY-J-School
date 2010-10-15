@@ -55,7 +55,7 @@
     
 		<div id="aud-search">
 			<ul id="cssdropdown">
-				<li class="headlink"><a href="#" class="olink">Quicklinks &darr;</a>
+				<li class="headlink first-item"><a href="#" class="olink">Quicklinks &darr;</a>
 					<ul>
 						<?php if ( !is_user_logged_in() ) : ?>
 						<li class="login"><a href="<?php bloginfo('url'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_bloginfo('url')); ?>">Login</a></li>
@@ -73,7 +73,9 @@
 				<li><a href="<?php bloginfo('url'); ?>/admissions/">Prospective Students</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/current-students/">Current Students</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/alumni/">Alumni</a></li>
-				<li style="border-right: 0;"><a href="<?php bloginfo('url'); ?>/continuing-education/">Continuing Education</a></li>
+				<li class="last-item"><a href="<?php bloginfo('url'); ?>/continuing-education/">Continuing Education</a></li>
+				<li class="no-background"><a href="http://facebook.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icons/socialnetworking/facebook_16.png" alt="Facebook" /></a></li>
+				<li class="no-background"><a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icons/socialnetworking/twitter_16.png" alt="Twitter" /></a></li>
 			</ul>
 			
 			<?php if ( !$cunyj->is_search_page() ) : ?>
