@@ -11,6 +11,10 @@
 			<h2>Members Directory</h2>
 
 			<?php do_action( 'bp_before_directory_members_content' ) ?>
+			
+			<div id="primary-search">
+				<?php include (TEMPLATEPATH . '/members/searchform.php'); ?>
+			</div>
 
 			<div class="item-list-tabs" id="primary-nav">
 				<ul>
