@@ -10,7 +10,7 @@
 		$user_results = 0;
 		if ( count( $users['users'] ) ) {		
 			echo '<div id="search_members_results" class="buddypress_search_results with-avatar">';
-			echo '<h3>Members (' . count( $users['users'] ) . ')</h3>';
+			echo '<h3>Members</h3>';
 			echo '<ul>';
 			foreach ( $users['users'] as $user ) {
 				if ( $user_results < $maximum_results ) {
@@ -50,7 +50,7 @@
 		$group_results = 0;
 		if ( count( $groups['groups'] ) ) {		
 			echo '<div id="search_groups_results" class="buddypress_search_results with-avatar">';
-			echo '<h3>Groups (' . count( $groups['groups'] ) . ')</h3>';
+			echo '<h3>Groups</h3>';
 			echo '<ul>';
 			foreach ( $groups['groups'] as $group ) {
 				if ( $group_results < $maximum_results ) {
@@ -85,7 +85,7 @@
 		
 		if ( count( $blogs['blogs'] ) ) {		
 			echo '<div id="search_blogs_results" class="buddypress_search_results no-avatar">';
-			echo '<h3>Blogs (' . count( $blogs['blogs'] ) . ')</h3>';
+			echo '<h3>Blogs</h3>';
 			echo '<ul>';			
 			foreach ( $blogs['blogs'] as $blog ) {
 				if ( $blogs_results < $maximum_results ) {
