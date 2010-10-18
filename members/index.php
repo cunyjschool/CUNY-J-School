@@ -18,7 +18,7 @@
 
 			<div class="item-list-tabs" id="primary-nav">
 				<ul>
-					<li class="selected" id="members-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All People (%s)', 'buddypress' ), bp_get_total_member_count() ) ?></a></li>
+					<li class="selected" id="members-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Members (%s)', 'buddypress' ), bp_get_total_member_count() ) ?></a></li>
 
 					<?php if ( is_user_logged_in() && function_exists( 'bp_get_total_friend_count' ) && bp_get_total_friend_count( bp_loggedin_user_id() ) ) : ?>
 						<li id="members-personal"><a href="<?php echo bp_loggedin_user_domain() . BP_FRIENDS_SLUG . '/my-friends/' ?>"><?php printf( __( 'My Friends (%s)', 'buddypress' ), bp_get_total_friend_count( bp_loggedin_user_id() ) ) ?></a></li>
@@ -56,6 +56,8 @@
 		</form><!-- #members-directory-form -->
 
 		</div>
+		
+		<div style="clear:right;"></div>
 
 	</div><!-- /#buddypress -->
 	

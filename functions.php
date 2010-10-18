@@ -47,6 +47,8 @@ class cunyj
 			return 'members';
 		} else if ( $bp->current_component == 'groups' ) {
 			return 'groups';
+		} else if ( $bp->current_component == 'blogs' ) {
+			return 'blogs';
 		}
 		return false;
 	}
