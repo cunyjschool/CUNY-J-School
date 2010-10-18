@@ -39,7 +39,7 @@
 						echo '<p><span class="label">Groups:</span>';
 						foreach ( $groups['groups'] as $group_id ) {
 							$group = groups_get_group( 'group_id=' . $group_id );
-							$all_groups .= '<a href="' . bp_get_root_domain() . '/' . BP_GROUPS_SLUG .'/' . $group->slug . '/';
+							$all_groups .= '<a href="' . bp_get_group_permalink( $group );
 							$all_groups .= '">' . $group->name . '</a>, ';
 						}
 						echo rtrim( $all_groups, ', ' );
