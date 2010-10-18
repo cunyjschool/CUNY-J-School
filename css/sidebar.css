@@ -114,7 +114,41 @@
 	float:right;
 }
 
-#sideba
+#search_sidebar {
+	width: 240px;
+}
+
+#search_sidebar .buddypress_search_results ul li {
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+#search_sidebar .buddypress_search_results ul li:hover {
+	background-color: #EEEEEE;
+}
+
+#search_sidebar .buddypress_search_results.with-avatar .avatar {
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+#search_sidebar .buddypress_search_results h4 {
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#search_sidebar .buddypress_search_results p {
+	color: #333333;
+	padding-top: 0;
+}
+
+#search_sidebar .buddypress_search_results.with-avatar h4, #search_sidebar .buddypress_search_results.with-avatar p {
+	margin-left: 40px;
+}
 
 #sidebar ul.navigation li {
 	font-size: 16px;

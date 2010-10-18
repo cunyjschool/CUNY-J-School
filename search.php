@@ -3,8 +3,11 @@
 <div class="wrap">
 
 	<div id="main">
+		
+	<?php include (TEMPLATEPATH . '/sidebar-search.php');
+	?>		
 
-	<div id="content">
+	<div id="content" class="search-content">
 		
 		<div id="primary-search">
 			<?php include (TEMPLATEPATH . '/searchform.php'); ?>

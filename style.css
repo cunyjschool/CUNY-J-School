@@ -140,6 +140,10 @@ input.button.primary {
 	margin-left: 255px;
 }
 
+#content.search-content {
+	width: 600px;
+}
+
 #main {
 	clear: both;
 }
