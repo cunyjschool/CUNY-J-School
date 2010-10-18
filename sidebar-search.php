@@ -18,7 +18,7 @@
 				} else {
 					break;
 				}
-				echo '<li><a href="' . bp_core_get_user_domain( $user->id, $user->user_nicename, $user->$user_login ) . '">';
+				echo '<li><a href="' .  bp_core_get_user_domain( $user->id ) . '">';
 				echo bp_core_fetch_avatar( array( 'item_id' => $user->id, 'type' => 'thumb', 'width' => 30, 'height' => 30 ) );
 				echo '<h4>' . $user->display_name . '</h4>';
 				echo '</a></li>';

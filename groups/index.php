@@ -3,8 +3,10 @@
 <div class="wrap">
 	
 	<div id="buddypress">
+		
+	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>
 	
-	<div id="groups_directory" class="content">
+	<div id="groups_directory" class="content directory">
 
 		<form action="" method="post" id="groups-directory-form" class="dir-form">
 			<h2><?php if ( is_user_logged_in() ) : ?><a class="create button" href="<?php echo bp_get_root_domain() . '/' . BP_GROUPS_SLUG . '/create/' ?>"><?php _e( 'Create a Group', 'buddypress' ) ?></a><?php endif; ?>Groups</h2>

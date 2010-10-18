@@ -41,6 +41,10 @@ class cunyj
 	function is_search_page() {
 		global $pagenow, $bp;
 		
+		if ( !get_search_query() ) {
+			return false;
+		}
+		
 		if ( is_search() ) {
 			return 'posts';
 		} else if ( $bp->current_component == 'members' ) {
@@ -49,8 +53,9 @@ class cunyj
 			return 'groups';
 		} else if ( $bp->current_component == 'blogs' ) {
 			return 'blogs';
+		} else {
+			return false;
 		}
-		return false;
 	}
 	
 }
