@@ -21,6 +21,13 @@
 				echo '<li><a href="' .  bp_core_get_user_domain( $user->id ) . '">';
 				echo bp_core_fetch_avatar( array( 'item_id' => $user->id, 'type' => 'thumb', 'width' => 30, 'height' => 30 ) );
 				echo '<h4>' . $user->display_name . '</h4>';
+				$title = cunyj_get_member_profile_data( 'field=Title&user_id=' . $user->id );
+				$organization = cunyj_get_member_profile_data( 'field=Organization&user_id=' . $user->id );
+				if ( $title && $organization ) {
+					echo '<p class="description">' . $title . ', ' . $organization . '</p>';
+				} else if ( $title || $organization ) {
+					echo '<p class="description">' . $title . $organization . '</p>';
+				}
 				echo '</a></li>';
 			}
 			echo '</ul>';
