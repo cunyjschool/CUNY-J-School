@@ -10,7 +10,7 @@
 		
 		<div id="left-sidebar">
 			<div id="item-header-avatar">
-				<a href="<?php //bp_member_home_permalink(); ?>">
+				<a href="<?php echo bp_core_get_user_domain( bp_displayed_user_id() ); ?>">
 		  		<?php bp_displayed_user_avatar( 'type=full' ) ?>
 				</a>
 			</div><!-- #item-header-avatar -->
