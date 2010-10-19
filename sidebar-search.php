@@ -27,7 +27,28 @@
 					echo 'Updated ' . get_the_time( 'F j, Y', $post->ID );
 				} else if ( $post->post_type == 'post' ) {
 					echo get_the_author_meta( 'display_name', $post->post_author ) . ' - ' . get_the_time( 'F j, Y', $post->ID );
+				} else if ( $post->post_type == 'cunyj_event' ) {
+					$start_date = get_post_meta($post->ID, '_cunyj_events_start_date', true);
+					$end_date = get_post_meta($post->ID, '_cunyj_events_end_date', true);
+					$venue = get_post_meta($post->ID, '_cunyj_events_venue', true);
+
+					if ($start_date) {
+						if ($start_date == $end_date) {
+							echo date_i18n('F j, Y', $start_date);
+						} else {
+							echo date_i18n('F j, Y', $start_date);
+							echo ' to ' . date_i18n('F j, Y', $end_date);
+						}
+					}
+
+					if ($start_date && $venue) {
+						echo ' - ';
+					}
+					if ($venue) {
+						echo $venue;
+					}
 				}
+				
 				echo '</a></li>';
 			}
 			echo '</ul>';
