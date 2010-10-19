@@ -136,7 +136,11 @@
 }
 
 #search_sidebar .buddypress_search_results ul li:hover {
-	background-color: #E4EAFF;
+	background-color: #F8F8F8;
+}
+
+#search_sidebar .buddypress_search_results ul li a {
+	display: block;
 }
 
 #search_sidebar .buddypress_search_results.with-avatar .avatar {
