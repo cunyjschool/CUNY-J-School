@@ -546,6 +546,23 @@ img.news-photo {
 	padding: 0;
 }
 
+div.message, div#message {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 2px solid;
+	padding: 2px 10px;
+}
+
+div.message.info {
+	border-color: #0066CC;
+	background-color: #CDE2FF;
+}
+
+div#message.updated {
+	border-color: #ADEBBD;
+	background-color: #E1F8E7;
+}
+
 .post {
 	width: 540px;
 }

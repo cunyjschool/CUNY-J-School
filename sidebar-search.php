@@ -3,14 +3,58 @@
 	<?php
 	global $cunyj;
 	$maximum_results = 3;
+	
+	if ( $cunyj->is_search_page() != 'posts' && get_search_query() ) {
+		$args = array( 'showposts' => $maximum_results + 1,
+						'post_type' => 'any',
+						'search_terms' => get_search_query() );
+		$posts = new WP_Query( $args );
+		$post_results = 0;
+		echo '<div id="search_posts_results" class="buddypress_search_results no-avatar">';
+		echo '<h3>Posts and Pages</h3>';
+		if ( $posts->have_posts() ) {
+			echo '<ul>';
+			while ( $posts->have_posts() ) {
+				$posts->the_post();
+				if ( $post_results < $maximum_results ) {
+					$post_results++;
+				} else {
+					break;
+				}
+				echo '<li><a href="' .  get_permalink( $post->id ) . '">';
+				echo '<h4>' . $post->post_title . '</h4>';
+				echo '<p class="description">';
+				if ( $post_type == 'page' ) {
+					echo 'Updated ' . the_time('F j, Y');
+				} else if ($post_type == 'post') {
+					echo the_author_posts_link() . ' - ' . the_time('F j, Y');
+				}
+				echo '</a></li>';
+			}
+			echo '</ul>';
+		} else {
+			echo '<div class="message info">No posts or pages matched your search</div>';
+		}
+		if ( $post_results == $maximum_results ) {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/?s=' . get_search_query() . '">View all post and page results</a>';
+			echo '</div>';
+		} else {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/?s=">Search all posts and pages</a>';
+			echo '</div>';
+		}
+		echo '</div>';
+		
+	}
 
 	if ( $cunyj->is_search_page() != 'members' && get_search_query() ) {
 		$args = array( 'search_terms' => get_search_query() );
 		$users = bp_core_get_users( $args );
 		$user_results = 0;
-		if ( count( $users['users'] ) ) {		
-			echo '<div id="search_members_results" class="buddypress_search_results with-avatar">';
-			echo '<h3>Members</h3>';
+		echo '<div id="search_members_results" class="buddypress_search_results with-avatar">';
+		echo '<h3>Members</h3>';
+		if ( count( $users['users'] ) ) {
 			echo '<ul>';
 			foreach ( $users['users'] as $user ) {
 				if ( $user_results < $maximum_results ) {
@@ -31,26 +75,28 @@
 				echo '</a></li>';
 			}
 			echo '</ul>';
-			if ( $user_results == $maximum_results ) {
-				echo '<div class="buddypress_more_results">';
-				echo '<a href="' . bp_core_get_root_domain() . '/' . BP_MEMBERS_SLUG . '/?s=' . get_search_query() . '">View all member results</a>';
-				echo '</div>';
-			} else {
-				echo '<div class="buddypress_more_results">';
-				echo '<a href="' . bp_core_get_root_domain() . '/' . BP_MEMBERS_SLUG . '/">Search all members</a>';
-				echo '</div>';
-			}
+		} else {
+			echo '<div class="message info">No members matched your search</div>';
+		}
+		if ( $user_results == $maximum_results ) {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/' . BP_MEMBERS_SLUG . '/?s=' . get_search_query() . '">View all member results</a>';
+			echo '</div>';
+		} else {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/' . BP_MEMBERS_SLUG . '/?s=' . get_search_query() . '">Search all members</a>';
 			echo '</div>';
 		}
+		echo '</div>';
 		
 	}
 	if ( $cunyj->is_search_page() != 'groups' && get_search_query() ) {
 		$args = array( 'search_terms' => get_search_query() );
 		$groups = groups_get_groups( $args );
 		$group_results = 0;
-		if ( count( $groups['groups'] ) ) {		
-			echo '<div id="search_groups_results" class="buddypress_search_results with-avatar">';
-			echo '<h3>Groups</h3>';
+		echo '<div id="search_groups_results" class="buddypress_search_results with-avatar">';
+		echo '<h3>Groups</h3>';
+		if ( count( $groups['groups'] ) ) {
 			echo '<ul>';
 			foreach ( $groups['groups'] as $group ) {
 				if ( $group_results < $maximum_results ) {
@@ -65,17 +111,19 @@
 				echo '</a></li>';
 			}
 			echo '</ul>';
-			if ( $group_results == $maximum_results ) {
-				echo '<div class="buddypress_more_results">';
-				echo '<a href="' . bp_core_get_root_domain() . '/' . BP_GROUPS_SLUG . '/?s=' . get_search_query() . '">View all group results</a>';
-				echo '</div>';
-			} else {
-				echo '<div class="buddypress_more_results">';
-				echo '<a href="' . bp_core_get_root_domain() . '/' . BP_GROUPS_SLUG . '/">Search all groups</a>';
-				echo '</div>';
-			}
+		} else {
+			echo '<div class="message info">No groups matched your search</div>';
+		}
+		if ( $group_results == $maximum_results ) {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/' . BP_GROUPS_SLUG . '/?s=' . get_search_query() . '">View all group results</a>';
+			echo '</div>';
+		} else {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/' . BP_GROUPS_SLUG . '/?s=' . get_search_query() . '">Search all groups</a>';
 			echo '</div>';
 		}
+		echo '</div>';
 
 	} // END - if ( $cunyj->is_search_page() != 'groups' )
 	
@@ -83,9 +131,10 @@
 		$args = array( 'search_terms' => get_search_query() );
 		$blogs = bp_blogs_get_blogs( $args );
 		
-		if ( count( $blogs['blogs'] ) ) {		
-			echo '<div id="search_blogs_results" class="buddypress_search_results no-avatar">';
-			echo '<h3>Blogs</h3>';
+		echo '<div id="search_blogs_results" class="buddypress_search_results no-avatar">';
+		echo '<h3>Blogs</h3>';
+		$blog_results = 0;
+		if ( count( $blogs['blogs'] ) ) {
 			echo '<ul>';			
 			foreach ( $blogs['blogs'] as $blog ) {
 				if ( $blogs_results < $maximum_results ) {
@@ -99,17 +148,19 @@
 				echo '</a></li>';
 			}
 			echo '</ul>';
-			if ( $blogs_results == $maximum_results ) {
-				echo '<div class="buddypress_more_results">';
-				echo '<a href="' . bp_core_get_root_domain() . '/' . BP_BLOGS_SLUG . '/?s=' . get_search_query() . '">View all blog results</a>';
-				echo '</div>';
-			} else {
-				echo '<div class="buddypress_more_results">';
-				echo '<a href="' . bp_core_get_root_domain() . '/' . BP_BLOGS_SLUG . '/">Search all blogs</a>';
-				echo '</div>';
-			}
+		} else {
+			echo '<div class="message info">No blogs matched your search</div>';
+		}
+		if ( $blogs_results == $maximum_results ) {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/' . BP_BLOGS_SLUG . '/?s=' . get_search_query() . '">View all blog results</a>';
+			echo '</div>';
+		} else {
+			echo '<div class="buddypress_more_results">';
+			echo '<a href="' . bp_core_get_root_domain() . '/' . BP_BLOGS_SLUG . '/?s=' . get_search_query() . '">Search all blogs</a>';
 			echo '</div>';
 		}
+		echo '</div>';
 
 	} // END - if ( $cunyj->is_search_page() != 'blogs' )
 	

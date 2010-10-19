@@ -56,6 +56,8 @@
 
 	</div><!-- /.content -->
 	
+	<div class="clear:right;"></div>
+	
 	</div>
 	
 </div><!-- /.wrap -->
