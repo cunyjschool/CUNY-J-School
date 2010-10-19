@@ -132,6 +132,7 @@
 	margin-right: -10px;
 	min-height: 40px;
 	clear: left;
+	display: block;
 }
 
 #search_sidebar .buddypress_search_results ul li:hover {
@@ -149,9 +150,10 @@
 	font-size: 14px;
 }
 
-#search_sidebar .buddypress_search_results p {
-	color: #333333;
+#search_sidebar .buddypress_search_results p, #search_sidebar .buddypress_search_results p a {
+	color: #333333 !important;
 	padding-top: 0;
+	text-decoration: none;
 }
 
 #search_sidebar .buddypress_search_results.with-avatar h4, #search_sidebar .buddypress_search_results.with-avatar p {

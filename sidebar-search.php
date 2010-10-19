@@ -7,15 +7,14 @@
 	if ( $cunyj->is_search_page() != 'posts' && get_search_query() ) {
 		$args = array( 'showposts' => $maximum_results + 1,
 						'post_type' => 'any',
-						'search_terms' => get_search_query() );
-		$posts = new WP_Query( $args );
+						's' => get_search_query() );
+		$posts = get_posts( $args );
 		$post_results = 0;
 		echo '<div id="search_posts_results" class="buddypress_search_results no-avatar">';
 		echo '<h3>Posts and Pages</h3>';
-		if ( $posts->have_posts() ) {
+		if ( count( $posts) ) {
 			echo '<ul>';
-			while ( $posts->have_posts() ) {
-				$posts->the_post();
+			foreach ( $posts as $post ) {
 				if ( $post_results < $maximum_results ) {
 					$post_results++;
 				} else {
@@ -24,10 +23,10 @@
 				echo '<li><a href="' .  get_permalink( $post->id ) . '">';
 				echo '<h4>' . $post->post_title . '</h4>';
 				echo '<p class="description">';
-				if ( $post_type == 'page' ) {
-					echo 'Updated ' . the_time('F j, Y');
-				} else if ($post_type == 'post') {
-					echo the_author_posts_link() . ' - ' . the_time('F j, Y');
+				if ( $post->post_type == 'page' ) {
+					echo 'Updated ' . get_the_time( 'F j, Y', $post->ID );
+				} else if ( $post->post_type == 'post' ) {
+					echo get_the_author_meta( 'display_name', $post->post_author ) . ' - ' . get_the_time( 'F j, Y', $post->ID );
 				}
 				echo '</a></li>';
 			}
