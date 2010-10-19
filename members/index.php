@@ -7,17 +7,18 @@
 	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>
 	
 	<div id="members_directory" class="content directory">
+		
+		<div id="primary-search">
+			<?php include (TEMPLATEPATH . '/members/searchform.php'); ?>
+		</div>		
 
 		<form action="" method="post" id="members-directory-form" class="dir-form">
 
 			<?php do_action( 'bp_before_directory_members_content' ) ?>
-			
-			<div id="primary-search">
-				<?php include (TEMPLATEPATH . '/members/searchform.php'); ?>
-			</div>
 
 			<div class="item-list-tabs" id="primary-nav">
 				<ul>
+					<?php if ( !$cunyj->is_search_page() ) : ?>
 					<li class="selected" id="members-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Members (%s)', 'buddypress' ), bp_get_total_member_count() ) ?></a></li>
 
 					<?php if ( is_user_logged_in() && function_exists( 'bp_get_total_friend_count' ) && bp_get_total_friend_count( bp_loggedin_user_id() ) ) : ?>
@@ -25,6 +26,7 @@
 					<?php endif; ?>
 
 					<?php do_action( 'bp_members_directory_member_types' ) ?>
+					<?php endif;  // END - !$cunyj->is_search_page() ?>
 
 					<li id="members-order-select" class="last filter">
 
