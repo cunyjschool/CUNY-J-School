@@ -4,8 +4,7 @@
 
 	<div id="main">
 		
-	<?php include (TEMPLATEPATH . '/sidebar-search.php');
-	?>		
+	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>		
 
 	<div id="content" class="search-content">
 		
@@ -75,8 +74,7 @@
 
 	<?php else : ?>
 		
-		<p>No results found.</p>
-		
+		<div class="message info">No posts or pages matched your search</div>
 		
 	<?php endif; ?>
 	
@@ -84,9 +82,12 @@
 
 	</div>
 	
+	<div style="clear:right;"></div>
+	
 	</div>
 	
-  </div>
-</div>
+  </div><!-- /END #main -->
+
+</div><!-- /END .wrap -->
 
 <?php get_footer(); ?>
