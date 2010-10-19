@@ -141,6 +141,7 @@
 
 #search_sidebar .buddypress_search_results ul li a {
 	display: block;
+	text-decoration: none;
 }
 
 #search_sidebar .buddypress_search_results.with-avatar .avatar {
