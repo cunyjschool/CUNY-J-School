@@ -10,11 +10,11 @@
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<?php if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( is_single() || is_page() ) { ?>
 <meta name="description" content=" <?php the_excerpt_rss( 50, 2 ); ?> " />
-<?php endwhile; endif; elseif(is_home()) : ?>
+<?php } else { ?>
 <meta name="description" content="The CUNY Graduate School of Journalism, located one block from Times Square in the heart of New York City, offers a three-semester program with a converged curriculum, paid internships and faculty who are leaders in their fields." />
-<?php endif; ?>
+<?php } ?>
 
 	<meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
 	<meta http-equiv="content-language" content="en" />
@@ -52,7 +52,7 @@
       <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="75px" width="360px" /></a>
     </div>
 	<?php else: ?>
-	 <div id="logo">
+	 <div id="logo" class="minimal">
 	      <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="45px" /></a>
 	    </div>	
 	<?php endif; ?>
@@ -65,13 +65,13 @@
 						<?php if ( !is_user_logged_in() ) : ?>
 						<li class="login"><a href="<?php bloginfo('url'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_bloginfo('url')); ?>">Login</a></li>
 						<?php endif; ?>
-						<li><a href="http://wiki.journalism.cuny.edu/session/login?return_to_page=FrontPage">Wiki</a></li>
+						<li><a href="http://wiki.journalism.cuny.edu/">Wiki</a></li>
 						<li><a href="http://mail.journalism.cuny.edu">E-mail</a></li>
 						<li><a href="http://help.journalism.cuny.edu">Help Desk</a></li>
 						<li><a href="https://cunyjschool.wufoo.com/forms/equipment-request-form/">Equipment Request</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/about/room-request/">Room Reservation</a></li>
 						<li><a href="https://blackboard-doorway.cuny.edu/">Blackboard</a></li>
-						<li><a href="http://www.cuny.edu/flu">H1N1 Info</a></li>
+						<li><a href="http://www.cuny.edu/flu/">H1N1 Info</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/about/campus-facilities/hours-of-operation/">Hours of Operation</a></li>
 					</ul>
 				</li>
@@ -85,7 +85,14 @@
 			<?php endif; ?>
 			
 			<?php if ( !$cunyj->is_search_page() ) : ?>
-				<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+			<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+				<label class="hidden" for="s"><?php _e(''); ?></label>
+				<div id="search">
+					<input class="search-box" type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
+			        <button class="search-button" type="submit">Search</button>
+				<p class="alternate-methods">Or browse <a href="<?php echo get_bloginfo('url') . '/' . BP_MEMBERS_SLUG . '/'; ?>">members</a>, <a href="<?php echo get_bloginfo('url') . '/' . BP_GROUPS_SLUG . '/'; ?>">groups</a>, or <a href="<?php echo get_bloginfo('url') . '/' . BP_BLOGS_SLUG . '/'; ?>">blogs</a></p>
+				</div>
+			</form>
 			<?php endif; ?>
     </div><!-- /#aud-search -->
 

@@ -193,6 +193,10 @@ input.button.primary {
 	width: 375px;
 	padding-bottom: 15px;
 }
+
+#logo.minimal {
+	padding-top: 15px;
+}
 	
 #aud-search {
 	float: right;
@@ -281,39 +285,52 @@ input.button.primary {
 
 #aud-search #search {
 	clear: both;
-	float: right;
-	padding: 20px 0;
-	text-align: right;
-	width: 290px;
+	padding-top: 5px;
 	height: 26px;
-	display: block; }
+	float: right;
+}
 	
 #aud-search #searchform input#s {
 	border: 7px solid #1b1b1b;
 	color: #666;
 	padding: 5px;
 	margin: 10px 0 0 0;
-	display: inline;
-	width: 175px;
-	float: left; }
+	width: 275px;
+	font-size: 11px;
+}
 		
 #aud-search #searchform button {
 	padding: 5px 10px;
 	text-transform: uppercase;
-	font-size: 10px;
+	font-size: 11px;
 	color: #eee;
-	background: #333;
-	display: block;
-	float: left;
+	background: #333333;
 	border: 0;
 	cursor: pointer;
-	margin: 16px 0 0 12px;
+	margin: 16px 0 0 3px;
 	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px; }
+	-moz-border-radius: 2px;
+}
 	
 #aud-search #searchform button:hover {
 	background: #444;
-	color: #fff; }
+	color: #fff;
+}
+
+#aud-search p.alternate-methods {
+	padding-top: 0;
+	text-align: right;
+	color: #555;
+}
+
+#aud-search p.alternate-methods a {
+	text-decoration: underline;
+	color: #555;
+}
+
+#aud-search p.alternate-methods a:hover {
+	color: #999;	
+}
 	
 #primary_nav {
 	height: 50px;
