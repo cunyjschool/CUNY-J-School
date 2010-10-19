@@ -3,14 +3,18 @@
 <div class="wrap">
 	
 	<div id="buddypress">
+		
+	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>		
 	
-	<div id="blogs_directory" class="content">
+	<div id="blogs_directory" class="content directory">
 
 		<form action="" method="post" id="blogs-directory-form" class="dir-form">
 
-			<h2>Blogs Directory</h2>
-
 			<?php do_action( 'bp_before_directory_blogs_content' ) ?>
+			
+			<div id="primary-search">
+				<?php include (TEMPLATEPATH . '/blogs/searchform.php'); ?>
+			</div>
 
 			<div id="primary-nav" class="item-list-tabs">
 				<ul>
@@ -47,8 +51,11 @@
 		</form><!-- #blogs-directory-form -->
 		
 		</div>
+		
+		<div style="clear:right;"></div>
 
-		</div><!-- #content -->
+		</div>
+		
 	</div><!-- #container -->
 
 <?php get_footer() ?>
