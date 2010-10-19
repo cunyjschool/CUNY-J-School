@@ -68,7 +68,7 @@ h2 a:hover, h3 a:hover {
 
 h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 	text-decoration: none;
-	background-color: #EEEEEE;
+	background-color: #E4EAFF;
 }
 
 h3 {
@@ -572,7 +572,7 @@ div.message, div#message {
 
 div.message.info {
 	border-color: #0066CC;
-	background-color: #CDE2FF;
+	background-color: #E4EAFF;
 }
 
 div#message.updated {
