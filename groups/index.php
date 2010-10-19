@@ -7,17 +7,18 @@
 	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>
 	
 	<div id="groups_directory" class="content directory">
+		
+		<div id="primary-search">
+			<?php include (TEMPLATEPATH . '/groups/searchform.php'); ?>
+		</div>
 
 		<form action="" method="post" id="groups-directory-form" class="dir-form">
-				
-			<div id="primary-search">
-				<?php include (TEMPLATEPATH . '/groups/searchform.php'); ?>
-			</div>
 
 			<?php do_action( 'bp_before_directory_groups_content' ) ?>
 
 			<div id="primary-nav" class="item-list-tabs">
 				<ul>
+					<?php if ( !$cunyj->is_search_page() ) : ?>					
 					<li class="selected" id="groups-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Groups (%s)', 'buddypress' ), bp_get_total_group_count() ) ?></a></li>
 
 					<?php if ( is_user_logged_in() && bp_get_total_group_count_for_user( bp_loggedin_user_id() ) ) : ?>
@@ -25,6 +26,7 @@
 					<?php endif; ?>
 
 					<?php do_action( 'bp_groups_directory_group_types' ) ?>
+					<?php endif;  // END - !$cunyj->is_search_page() ?>					
 
 					<li id="groups-order-select" class="last filter">
 
@@ -55,7 +57,7 @@
 
 	</div><!-- /.content -->
 	
-	<div class="clear:right;"></div>
+	<div style="clear:right;"></div>	
 	
 	</div>
 	

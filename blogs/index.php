@@ -8,16 +8,17 @@
 	
 	<div id="blogs_directory" class="content directory">
 
+		<div id="primary-search">
+			<?php include (TEMPLATEPATH . '/blogs/searchform.php'); ?>
+		</div>		
+
 		<form action="" method="post" id="blogs-directory-form" class="dir-form">
 
 			<?php do_action( 'bp_before_directory_blogs_content' ) ?>
-			
-			<div id="primary-search">
-				<?php include (TEMPLATEPATH . '/blogs/searchform.php'); ?>
-			</div>
 
 			<div id="primary-nav" class="item-list-tabs">
 				<ul>
+					<?php if ( !$cunyj->is_search_page() ) : ?>					
 					<li class="selected" id="blogs-all"><a href="<?php bp_root_domain() ?>"><?php printf( __( 'All Blogs (%s)', 'buddypress' ), bp_get_total_blog_count() ) ?></a></li>
 
 					<?php if ( is_user_logged_in() && bp_get_total_blog_count_for_user( bp_loggedin_user_id() ) ) : ?>
@@ -25,6 +26,7 @@
 					<?php endif; ?>
 
 					<?php do_action( 'bp_blogs_directory_blog_types' ) ?>
+					<?php endif;  // END - !$cunyj->is_search_page() ?>					
 
 					<li id="blogs-order-select" class="last filter">
 
