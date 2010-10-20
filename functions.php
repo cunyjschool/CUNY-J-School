@@ -30,10 +30,8 @@ class cunyj
 			wp_enqueue_style( 'cunyj_media', get_bloginfo('template_directory') . '/css/media.css', array('cunyj_primary'), $version);
 			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), $version);
 			
-			if ( is_home() ) {
-				wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
-				wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), $version);
-			}
+			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
+			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), $version);
 		}
 	}
 	
