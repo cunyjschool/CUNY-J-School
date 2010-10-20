@@ -16,6 +16,75 @@
 	margin-left: 10px;
 }
 
-.main .image h2 {
+.main .content .image .parent-link a {
+	color: #999999;
+}
+
+.main .content .image h2 {
 	border: 0;
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+
+.main .content .image div.primary-image {
+	text-align: center;
+}
+
+.main .content .image div.primary-image img {
+	margin-top: 10px;
+	background-color: #EEEEEE;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.main .content .image div.image-meta {
+	color: #999999;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.main .content .image div.image-caption p {
+	font-size: 18px;
+	line-height: 24px;
+	padding:0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.main .content .image div.image-description p {
+	font-size: 14px;
+	line-height: 18px;
+	padding:0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.main .content .image .navigation {
+	margin-top: 10px;
+	padding-top: 5px;
+	border-top: 1px solid #EEEEEE;
+}
+
+.main .content .image .navigation-link p {
+	padding:0;
+	margin-top: 5px;
+}
+
+.main .content .image .navigation-link a {
+	color: #999999;
+}
+
+.main .content .image .left-navigation {
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.main .content .image .right-navigation {
+	float: right;
+	margin-top: 10px;
+	margin-left: 10px;	
 }
