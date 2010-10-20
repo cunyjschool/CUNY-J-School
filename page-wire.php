@@ -7,7 +7,7 @@ Template Name: Page - Wire
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 	
   <div id="sidebar">  
   

@@ -8,7 +8,7 @@ Template Name: Page - About
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
   <div id="sidebar">
 

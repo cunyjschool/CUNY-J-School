@@ -2,7 +2,7 @@
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 		
 	<?php get_sidebar('cunyj_event'); ?>
 	

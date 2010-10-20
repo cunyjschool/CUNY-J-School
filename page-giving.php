@@ -8,7 +8,7 @@ Template Name: Page - Giving
 
 <div class="wrap" id="content">
 	
-	<div id="main">
+	<div class="main">
 
   <?php get_sidebar('giving'); ?>
           

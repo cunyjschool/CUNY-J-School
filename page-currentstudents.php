@@ -8,7 +8,7 @@ Template Name: Page - Current Students
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
   <div id="sidebar">
 

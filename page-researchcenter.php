@@ -8,7 +8,7 @@ Template Name: Page - Research Center
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
   <div id="sidebar">
 <ul class="navigation">

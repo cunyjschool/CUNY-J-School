@@ -8,7 +8,7 @@ Template Name: Template - Full
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
   
 	<div id="content">
 

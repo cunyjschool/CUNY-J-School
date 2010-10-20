@@ -1,0 +1,21 @@
+.entry p img {
+	background-color: #EEEEEE;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.entry p img.alignleft, .entry p img.align-left {
+	float: left;
+	margin-right: 10px;
+}
+
+.entry p img.alignright, .entry p img.align-right {
+	float: right;
+	margin-left: 10px;
+}
+
+.main .image h2 {
+	border: 0;
+}

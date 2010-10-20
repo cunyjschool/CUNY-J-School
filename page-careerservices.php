@@ -8,7 +8,7 @@ Template Name: Page - Career Services
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
   <?php get_sidebar('careerservices_left'); ?>
           

@@ -7,7 +7,7 @@ Template Name: Page - Faculty Individual
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
 	<?php get_sidebar('faculty'); ?>
       

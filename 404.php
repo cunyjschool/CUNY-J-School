@@ -2,7 +2,7 @@
 
   <div class="wrap clearfix" id="content">
     
-    <div id="main">
+    <div class="main">
     
     <h1 style="font-size: 60px; margin-bottom: 60px;">Stop the Presses!</h1>
     

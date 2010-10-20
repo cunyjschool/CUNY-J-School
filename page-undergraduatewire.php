@@ -8,7 +8,7 @@ Template Name: Community and Ethnic Media Conference
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
   <div id="sidebar">
   

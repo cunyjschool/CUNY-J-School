@@ -7,7 +7,7 @@ Template Name: Page - News & Events
 
   <div class="wrap news-events">
 	
-	<div id="main">
+	<div class="main">
 	
     <div id="news-left">
     
@@ -15,7 +15,7 @@ Template Name: Page - News & Events
 
 <?php query_posts('category_name=News&showposts=1'); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php if(get_post_meta($post->ID, photo, true) != "") { ?>
+	<?php if(get_post_meta($post->ID, 'photo', true) != "") { ?>
 <a href="<?php the_permalink(); ?>"><img src="http://www.journalism.cuny.edu/scripts/timthumb.php?src=<?php echo get_post_meta( $post->ID,"photo", $single=true ) ; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"></a>
 	<?php } ?>
     

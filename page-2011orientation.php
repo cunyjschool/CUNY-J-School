@@ -8,10 +8,8 @@ Template Name: Page - 2011 Orientation
 
 <div class="wrap">
 	
-	<div id="main">
-	
-	
-	
+	<div class="main">
+
 	<div id="orientation2010">
 		
 	<div id="cunyj_event-sidebar" class="sidebar right large">

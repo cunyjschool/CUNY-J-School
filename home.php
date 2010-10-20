@@ -4,7 +4,7 @@
 	
 	<!-- Pingdom check -->
 	
-	<div id="main">
+	<div class="main">
 	
 	 <div id="content">
 		

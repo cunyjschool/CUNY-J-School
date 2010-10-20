@@ -2,7 +2,7 @@
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 		
 		<?php
 		if ( in_category(161) ) {

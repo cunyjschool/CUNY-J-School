@@ -144,11 +144,11 @@ input.button.primary {
 	width: 600px;
 }
 
-#main {
+.main {
 	clear: both;
 }
 	
-#main, #buddypress {
+.main, #buddypress {
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -156,7 +156,7 @@ input.button.primary {
 	background: #FFFFFF;
 }
 
-#main .section {
+.main .section {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	clear: both;
@@ -490,12 +490,12 @@ img.news-photo {
 #right ul li {
 	list-style: bullet; }
 	
-#main #content h2 {
+.main #content h2 {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #eee;
 }
 
-#main #content h2 a:hover {
+.main #content h2 a:hover {
 	
 }
 
@@ -634,15 +634,15 @@ div#message.updated {
 	clear: left !important;
 }
 
-#main #content .cunyj_event {
+.main #content .cunyj_event {
 	width: 520px;
 }
 
-#main #content .cunyj_event h2 {
+.main #content .cunyj_event h2 {
 	font-size: 24px;
 }
 	
-#main #content .cunyj_event .event_details {
+.main #content .cunyj_event .event_details {
 	background-color: #F9F9F9;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -650,17 +650,17 @@ div#message.updated {
 	padding-right: 10px;
 }
 
-#main #content .cunyj_event .event_details p {
+.main #content .cunyj_event .event_details p {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	padding: 0;
 }
 
-#main #content .cunyj_event .timestamp {
+.main #content .cunyj_event .timestamp {
 	padding-top: 5px;
 }
 
-#main #content .cunyj_event .event_details p span {
+.main #content .cunyj_event .event_details p span {
 	color: #666666;
 	float: left;
 	display: inline-block;
@@ -709,26 +709,9 @@ div#message.updated {
 	
 .entry ul li#research-search {
 	padding-left: 30px;
-	background: url(images/icons/magnifier.png) no-repeat 10px 7px; }
-	
-.entry p img {
-	background-color: #EEEEEE;
-	padding: 5px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+	background: url(images/icons/magnifier.png) no-repeat 10px 7px;
 }
 
-.entry p img.alignleft, .entry p img.align-left {
-	float: left;
-	margin-right: 10px;
-}
-
-.entry p img.alignright, .entry p img.align-right {
-	float: right;
-	margin-left: 10px;
-}
-	
 #page-image {
 	float: right;
 	width: 300px;

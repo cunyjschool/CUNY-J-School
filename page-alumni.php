@@ -8,7 +8,7 @@ Template Name: Page - Alumni
 
 <div class="wrap">
 	
-	<div id="main">
+	<div class="main">
 
 	<?php get_sidebar('alumni'); ?>
           

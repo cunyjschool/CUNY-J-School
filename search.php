@@ -2,7 +2,7 @@
 
 <div class="wrap">
 
-	<div id="main">
+	<div class="main">
 		
 	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>		
 
