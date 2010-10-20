@@ -1,21 +1,29 @@
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+
+<div class="main">
+	
+  <?php include (TEMPLATEPATH . '/sidebar-news.php'); ?>	
+
+<div id="content">	
+	
   <div id="posts">
   
   
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="post">
 
-<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-      <div class="timestamp">Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
+		<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+		
+		<div class="entry"><?php the_excerpt(); ?></div>
+		
+		<div class="timestamp">Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
 
+		<div class="postmetadata">Posted in <?php the_category(', ') ?> <?php edit_post_link('Edit', '| ', ''); ?></div>
 	
-
-	  <div class="postmetadata">Posted in <?php the_category(', ') ?> <?php edit_post_link('Edit', '| ', ''); ?></div>
-    </div>
+	</div>
     
-
 	<?php endwhile; ?>
 
 		<div class="navigation">
@@ -31,9 +39,10 @@
 
 	<?php endif; ?>
   </div>
-  
-  <?php include (TEMPLATEPATH . '/sidebar-news.php'); ?>
 
+</div>
+
+</div>
 
 </div>
 
