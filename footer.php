@@ -1,5 +1,7 @@
 <div id="footer">
-  <div class="wrap" id="footerwrap">
+  <div class="wrap">
+	
+	<div id="footerwrap">
   
   <?php if(is_page(1146) || $post->post_parent=="1146" ) { ?>  	
 <a href="http://www1.cuny.edu/news/alert.html"><img src="<?php bloginfo('template_directory'); ?>/img/cuny-alert.jpg" style="float: right;" alt="CUNY A!ert" /></a>
@@ -14,6 +16,10 @@
 http://assistive.usablenet.com/tt/<?php bloginfo('url'); ?>">Text-Only</a>
 
   </div>
+
+</div>
+
+</div>
 
 <!-- Clicky analytics tag -->
 <?php if ( get_bloginfo('url') == 'http://www.journalism.cuny.edu' ) : ?>
