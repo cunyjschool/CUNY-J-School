@@ -151,7 +151,7 @@
 	margin-bottom: 20px; 
 }
 	
-#news {
+.main .content #news {
 	float: left;
 	width: 280px;
 }
@@ -173,15 +173,15 @@
 	text-decoration: none;
 }
 
-#main #events-home a:hover {
+.main #events-home a:hover {
 	background-color: #EEEEEE;
 }
 
-#main #events-home ul {
+.main #events-home ul {
 
 }
 
-#main #events-home li.event {
+.main #events-home li.event {
 	margin-left: 0;
 	margin-right: 0;
 	margin-bottom: 0;
@@ -192,34 +192,34 @@
 	border-bottom: 1px dotted #eee;
 }
 
-#main #events-home li.event a {
+.main #events-home li.event a {
 	display: block;
 	text-decoration: none;
 	background-color: transparent;
 }
 
-#main #events-home li.event h5 {
+.main #events-home li.event h5 {
 	margin-left: 100px;
 	font-size: 12px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-#main #events-home li.event h5 a {
+.main #events-home li.event h5 a {
 	color: #0066CC;
 }
 
-#main #events-home li.event div.calendar-date {
+.main #events-home li.event div.calendar-date {
 	float: left;
 	border: 1px solid #eee;
 	text-transform: uppercase;
 }
 
-#main #events-home li.event div.calendar-date span {
+.main #events-home li.event div.calendar-date span {
 	display: inline-block;
 }
 
-#main #events-home li.event div.calendar-date span.month {
+.main #events-home li.event div.calendar-date span.month {
 	background: #de1515;
 	color: #FFFFFF;
 	padding: 2px 6px;
@@ -227,7 +227,7 @@
 	text-align: center;
 }
 
-#main #events-home li.event div.calendar-date span.day {
+.main #events-home li.event div.calendar-date span.day {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 5px;

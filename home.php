@@ -4,9 +4,9 @@
 	
 	<!-- Pingdom check -->
 	
-	<div class="main">
+	<div class="main" id="home">
 	
-	 <div id="content">
+	 <div class="content">
 		
 		<?php /* <div id="home-alert">
 			<strong>Today and tomorrow:</strong> SABEW's 2010 Fall Conference, happening at the J-School. <a href="http://cunyatsabew.com/">Follow the coverage</a> or <a href="http://www.journalism.cuny.edu/live/">watch the livestream</a>.
