@@ -27,6 +27,7 @@ class cunyj
 			// Enqueue our stylesheets
 			wp_enqueue_style( 'cunyj_primary', get_bloginfo('template_directory') . '/style.css', false, $version);
 			wp_enqueue_style( 'cunyj_sidebar', get_bloginfo('template_directory') . '/css/sidebar.css', array('cunyj_primary'), $version);
+			wp_enqueue_style( 'cunyj_media', get_bloginfo('template_directory') . '/css/media.css', array('cunyj_primary'), $version);
 			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), $version);
 			
 			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
