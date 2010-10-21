@@ -10,7 +10,7 @@ Template Name: Page - Research Center
 	
 	<div class="main" id="research-center">
 		
-	<h2>Research Center</h2>
+	<h2><span class="social-links right"><a href="http://facebook.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/facebook_32.png" alt="Facebook" height="32px" width="32px" /><a href="http://twitter.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/twitter_32.png" alt="Twitter" height="32px" width="32px" /></span><?php the_title(); ?></h2>
 	
 	<img class="ribbon" src="<?php bloginfo('template_directory'); ?>/images/pages/researchcenter_h850.jpg" alt="Research Center entrance" height="100px" width="850px" />
 		
@@ -36,6 +36,8 @@ Template Name: Page - Research Center
 	</div>	
           
 	<div class="content">
+	
+	<div class="page right">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); 
 
@@ -107,6 +109,8 @@ echo SimplePieWP('http://researchcenter.journalism.cuny.edu/feed/', array(
       </div>
     </div>
 		<?php endwhile; endif; ?>
+		
+	</div>
 
 	<div style="clear:both;"></div>
 

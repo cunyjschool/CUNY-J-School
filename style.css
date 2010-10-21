@@ -496,10 +496,20 @@ img.news-photo {
 	
 #right ul li {
 	list-style: bullet; }
+
+.main#research-center h2 span.social-links {
+	font-weight: normal;
+	font-size: 14px;
+	color: #999999;
+}
+
+.main#research-center h2 span.social-links img {
+	margin-left: 10px;
+}
 	
 .main#research-center img.ribbon {
 	border: 5px solid #EEEEEE;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 	
 .main #content h2 {
