@@ -21,27 +21,15 @@ Template Name: Page - Research Center
 					'fallback_cb' => false,
 			);
 		
-		wp_nav_menu( $args ); ?>
+		wp_nav_menu( $args );
+		
+		echo '<ul class="widgets">';
+		dynamic_sidebar( 'research_center' );
+		echo '</ul>';
+		
+		?>
 
-    <div style="margin-top: 20px;">
-<h3 style="margin: 0 0 10px 0;"><a href="<?php bloginfo('url'); ?>/research-center/ask-a-librarian/">Ask a Librarian</a></h3>
-<embed src="http://widget.meebo.com/mm.swf?RQPbTHsvoL" type="application/x-shockwave-flash" wmode="transparent" height="275" width="200">
-
-<h3 style="margin: 20px 0 10px 0;">Poll</h3>
-
-    
-    <?php $my_query = new WP_Query('cat=272&showposts=1');
-  while ($my_query->have_posts()) : $my_query->the_post();
-  $do_not_duplicate = $post->ID;?>
-<?php the_content(); ?>  
-<?php endwhile; ?>
-
-<a href="<?php bloginfo('url'); ?>/category/research-center/research-center-polls/">View past polls &raquo;</a>
-    </div>
-
-<h4 style="margin-top: 40px;">Contact Us</h4>
-Send questions, comments or suggestions to: <a href="mailto:research@journalism.cuny.edu">research@journalism.cuny.edu</a>.
-  </div>
+	</div>
           
   <div id="content" class="right small">
 
@@ -51,12 +39,7 @@ Send questions, comments or suggestions to: <a href="mailto:research@journalism.
     <div class="page" id="page-<?php the_ID(); ?>">
 
 			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
-    
-    <?php if(is_page('210') ) { ?>
-    <img src="<?php bloginfo('url'); ?>/files/2008/09/research-center-wide.jpg" alt="Research Center entrance" style="border: 10px solid #eee;" />
-   	<?php } ?>
-
-    
+   
       <div class="entry">
       
 		<?php if(is_page('210') ) { ?>

@@ -123,6 +123,15 @@
 	margin-right: 20px;
 }
 
+.sidebar.standard ul.widgets {
+	
+}
+
+.sidebar.standard li.widget {
+	margin-top: 20px;
+	list-style-type: none;
+}
+
 #search_sidebar {
 	width: 240px;
 }

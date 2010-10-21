@@ -95,15 +95,17 @@ if ( function_exists('register_sidebar') ) {
         'after_title' => '</h2>',
     ));
 	
-		register_sidebar( 'about' );
-		register_sidebar( 'admissions' );
-		register_sidebar( 'alumni' );
-		register_sidebar( 'careerservices_left' );
-		register_sidebar( 'careerservices_internships' );
-		register_sidebar( 'cunyj_event' );
-		register_sidebar( 'default_page' );
-		register_sidebar( 'faculty' );
-		register_sidebar( 'giving' );
+	register_sidebar( 'about' );
+	register_sidebar( 'admissions' );
+	register_sidebar( 'alumni' );
+	register_sidebar( 'careerservices_left' );
+	register_sidebar( 'careerservices_internships' );
+	register_sidebar( 'cunyj_event' );
+	register_sidebar( 'default_page' );
+	register_sidebar( 'faculty' );
+	register_sidebar( 'giving' );
+	// Sidebar for the Research Center pages
+	register_sidebar( array( 'id' => 'research_center', 'name' => 'Research Center', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
 		
 }
 
