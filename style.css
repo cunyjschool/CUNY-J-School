@@ -497,13 +497,14 @@ img.news-photo {
 #right ul li {
 	list-style: bullet; }
 	
+.main#research-center img.ribbon {
+	border: 5px solid #EEEEEE;
+	margin-bottom: 10px;
+}
+	
 .main #content h2 {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #eee;
-}
-
-.main #content h2 a:hover {
-	
 }
 
 #primary-search input.search-box {
