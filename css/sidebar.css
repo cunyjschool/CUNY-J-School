@@ -3,7 +3,7 @@
 	width: 225px;
 	margin-right: 20px;
 }
-	
+
 #sidebar h4 {
 	font-size: 120%;
 }
@@ -21,11 +21,11 @@
 	background: #f9f9f9;
 }
 
-#sidebar ul.navigation li {
+#sidebar ul.navigation li, .sidebar ul.navigation li {
 	font-size: 16px;
 }
 
-#sidebar .navigation li a {
+#sidebar .navigation li a, .sidebar .navigation li a {
 	display: block;
 	padding: 7px;
 	border-top: 1px solid #fff;
@@ -34,29 +34,29 @@
 	background: #f9f9f9;
 }
 
-#sidebar .navigation li a:hover {
+#sidebar .navigation li a:hover, .sidebar .navigation li a:hover {
 	border-top: 1px solid #ef8f00;
 	background: #ff9900;
 	color: #fff;
 }
 
-#sidebar ul.navigation li ul.children li a, #sidebar ul.navigation li ul.sub-menu li a {
+#sidebar ul.navigation li ul.children li a, #sidebar ul.navigation li ul.sub-menu li a, .sidebar ul.navigation li ul.children li a, .sidebar ul.navigation li ul.sub-menu li a {
 	font-size: 13px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
+#sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a, .sidebar ul.navigation li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
 	font-size: 12px;
 	padding: 5px 10px 5px 25px;
 	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
+#sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover, .sidebar ul.navigation li ul.children li ul.children li a:hover, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
 	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
+#sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a, .sidebar ul.navigation li ul.children li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
 	font-size: 10px;
 	background: #f9f9f9;
 	color: #666;
@@ -110,8 +110,17 @@
 #sidebar-news li a:hover, #sidebar-internships li a:hover {
 	text-decoration: underline; }
 
-.main .sidebar.right {
+.sidebar.right {
 	float:right;
+}
+
+.sidebar.left {
+	float: left;
+}
+
+.sidebar.left.standard {
+	width: 225px;
+	margin-right: 20px;
 }
 
 #search_sidebar {

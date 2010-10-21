@@ -115,7 +115,8 @@ if ( function_exists( 'register_nav_menus' ) ) {
 		array(
 			'primary_navigation' => 'Primary Navigation',
 			'currentstudents' => 'Current Students',
-			'about' => 'About'
+			'about' => 'About',
+			'research_center' => 'Research Center'
 			)
 		);
 }

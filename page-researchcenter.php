@@ -9,26 +9,19 @@ Template Name: Page - Research Center
 <div class="wrap">
 	
 	<div class="main">
+		
+	<div class="sidebar left standard">
 
-  <div id="sidebar">
-<ul class="navigation">
-  <li><a href="<?php bloginfo('url'); ?>/research-center/">Research Center</a>
-<ul class="children">
-  <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/">About Us</a>
-    <ul class="children">
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/collections/">Collections</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/mission-and-goals/">Mission &amp; Goals</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/hours-and-schedules/">Hours &amp; Schedules</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/staff/">Staff</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/code-of-conduct/">Code of Conduct</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/research-center/about-us/access-borrowing/">Access &amp; Borrowing</a></li>
-    </ul>
-  </li>
-  <li><a href="<?php bloginfo('url'); ?>/research-center/search-tools/">Search Tools</a></li>
-  <li><a href="<?php bloginfo('url'); ?>/research-center/services/">Services</a></li>
-  <li><a href="http://journalism.cuny.bepress.com/">MediaWorks</a></li>
-</ul></li>
-</ul>
+		<?php
+		
+		$args = array(
+					'theme_location' => 'research_center',
+					'menu_class' => 'navigation default',
+					'menu_id' => 'research-center-navigation',
+					'fallback_cb' => false,
+			);
+		
+		wp_nav_menu( $args ); ?>
 
     <div style="margin-top: 20px;">
 <h3 style="margin: 0 0 10px 0;"><a href="<?php bloginfo('url'); ?>/research-center/ask-a-librarian/">Ask a Librarian</a></h3>
