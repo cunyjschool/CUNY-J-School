@@ -141,6 +141,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 				$args = array(	'num_items' => 12,
 								'type' => 'user',
 								'id' => '12817495@N03',
+								'do_cache' => true,
 							);
 				get_flickrRSS( $args ); 
 			}
