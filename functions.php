@@ -123,6 +123,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
 			'currentstudents' => 'Current Students',
 			'about' => 'About',
 			'research_center' => 'Research Center',
+			'entrepreneurial_journalism' => 'Entrepreneurial Journalism',
 			)
 		);
 }

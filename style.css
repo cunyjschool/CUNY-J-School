@@ -507,7 +507,7 @@ img.news-photo {
 	margin-left: 10px;
 }
 	
-.main#research-center img.ribbon {
+.main#research-center img.ribbon, .main#entrepreneurial-journalism img.ribbon {
 	border: 5px solid #EEEEEE;
 	margin-bottom: 15px;
 }
