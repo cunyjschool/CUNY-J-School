@@ -337,34 +337,35 @@
 	margin-left: 10px;
 	list-style-type: square;
 	color: #EEE;
-	border-bottom: 1px dotted #EEE; }
+	border-bottom: 1px dotted #EEE;
+}
 
 #jnet h3#ns {
-	background: url(../images/wire/ico-ns.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-ns.jpg) no-repeat 0 4px; }
 	
 #jnet h3#bsb {
-	background: url(../images/wire/ico-bsb.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-bsb.jpg) no-repeat 0 4px; }
 	
 #jnet h3#rt {
-	background: url(../images/wire/ico-rt.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-rt.jpg) no-repeat 0 4px; }
 	
 #jnet h3#ni {
-	background: url(../images/wire/ico-ni.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-ni.jpg) no-repeat 0 4px; }
 	
 #jnet h3#mh {
-	background: url(../images/wire/ico-mh.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-mh.jpg) no-repeat 0 4px; }
 	
 #jnet h3#ws {
-	background: url(../images/wire/ico-ws.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-ws.jpg) no-repeat 0 4px; }
 	
 #jnet h3#dnj {
-	background: url(../images/wire/ico-dnj.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-dnj.jpg) no-repeat 0 4px; }
 	
 #jnet h3#mag {
-	background: url(../images/wire/ico-219.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-219.jpg) no-repeat 0 4px; }
 	
 #jnet h3#clips {
-	background: url(../images/wire/ico-clips.jpg) no-repeat 0 3px; }
+	background: url(../images/wire/ico-clips.jpg) no-repeat 0 4px; }
 	
 #row3 {
 	background: #ff9900 url(../images/orange-back.jpg) repeat;
@@ -377,7 +378,7 @@
     -moz-box-shadow: 5px 5px 0 #eee;  
     box-shadow: 5px 5px 0 #eee; }
 	
-#row3 h3, #row3 h3 a {
+#home #row3 h3, #home #row3 h3 a {
 	margin: 0 0 10px 0;
 	color: #333333;
 }
