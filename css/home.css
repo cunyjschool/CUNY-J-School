@@ -333,9 +333,11 @@
 	margin-right: 0; }
 	
 #jnet ul li {
-	padding: 3px 0 3px 10px;
-	background: url(../images/list-gray-square.jpg) no-repeat 3px 12px; 
-	border-bottom: 1px dotted #eee; }
+	padding: 3px 0 3px 0;
+	margin-left: 10px;
+	list-style-type: square;
+	color: #EEE;
+	border-bottom: 1px dotted #EEE; }
 
 #jnet h3#ns {
 	background: url(../images/wire/ico-ns.jpg) no-repeat 0 3px; }
