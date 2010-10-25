@@ -123,7 +123,6 @@ if ( function_exists( 'register_nav_menus' ) ) {
 			'currentstudents' => 'Current Students',
 			'about' => 'About',
 			'research_center' => 'Research Center',
-			'research_center_search_tools' => 'Research Center Search Tools'
 			)
 		);
 }

@@ -40,18 +40,6 @@ Template Name: Page - Research Center
 	<div class="page right">
 		
 	<?php if ( is_page( 'research-center' ) ) : ?>
-		
-	<?php $args = array(
-				'theme_location' => 'research_center_search_tools',
-				'fallback_cb' => false,
-				'echo' => false,
-		);
-
-	if ( $search_tools = wp_nav_menu( $args ) ) {
-		echo '<div id="research-center-search-tools" class="research-center-info-zone"><h4><a href="' . get_bloginfo('url') . '/research-center/search-tools/">Search tools</a></h4>' . $search_tools . '</div>';
-	}
-	
-	?>
 	
 	<div id="research-center-blog" class="research-center-info-zone">
 		<h4><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
