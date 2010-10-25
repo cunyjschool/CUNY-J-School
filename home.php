@@ -130,45 +130,32 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
     
   
   <div class="clearfix" id="soc">
-    <div style="float: left; width: 400px;">
+    <div id="vimeo-player">
   <object type="application/x-shockwave-flash" width="400" height="300" data="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=uploaded_videos&amp;id=&amp;server=vimeo.com">	<param name="quality" value="best" />		<param name="allowfullscreen" value="true" />		<param name="allowscriptaccess" value="always" />	<param name="scale" value="showAll" />	<param name="movie" value="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=uploaded_videos&amp;id=&amp;server=vimeo.com" /></object>
     </div>
     
     <div id="flick-twit">
-      <div id="flick">
-<a href="http://flickr.com/photos/cunyjschool/"><img src="<?php bloginfo('template_directory'); ?>/images/icon-flickr.png" alt="CUNY J-School on Flickr" id="flickr-icon" /></a>
-	  <div>
-		
-<?php 
-if (function_exists('get_flickrRSS')) {
-	get_flickrRSS(array('num_items'=>4)); 
-}
+		<div id="flick">
+			<?php 
+			if ( function_exists('get_flickrRSS') ) {
+				$args = array(	'num_items' => 12,
+								'type' => 'user',
+								'id' => '12817495@N03',
+							);
+				get_flickrRSS( $args ); 
+			}
 			?>
-        </div>
-      </div>
-    
-      <div id="twit">
-      <a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icon-twitter.png" alt="CUNY J-School on Twitter" /></a>
-
-<?php
-if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array(
-	'items' => 1,
-	'cache_duration' => 1800
-	));
-}
-?>
-
-      </div>
-    </div>
-  </div>
+		</div>
+	</div>
+	
+  </div><!-- END - #soc -->
   
   
   <div class="clearfix" id="socialnet">
 <ul>
   <li id="hfacebook"><a href="http://www.facebook.com/cunyjschool">Facebook</a></li>
   <li id="htwitter"><a href="http://twitter.com/cunyjschool/">Twitter</a></li>
-  <li id="htwitter"><a href="/twitter-lists/">Twitter Lists</a></li>
+  <li id="htwitter"><a href="<?php bloginfo('url'); ?>/twitter-lists/">Twitter Lists</a></li>
   <li id="hyoutube"><a href="http://www.youtube.com/user/cunyjschool">YouTube</a></li>
   <li id="hvimeo"><a href="http://vimeo.com/cunyjschool/">Vimeo</a></li>
   <li id="hlinkedin"><a href="http://www.linkedin.com/groups?gid=130402">LinkedIn</a></li>

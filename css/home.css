@@ -456,32 +456,27 @@
 	
 #soc a:hover {
 	color: #222;
-	text-decoration: underline; }
+	text-decoration: underline;
+}
+
+#soc #vimeo-player {
+	float: left;
+	width: 400px;
+}
    	
 #flick-twit {
-	float: left;
-	margin: 0 0 20px 20px;
-	width: 400px; }
+	margin-left: 420px;
+}
 	
 #flick {
-	padding: 10px 0 20px 0;
-	border-bottom: none; }
-	
-#flick img#flickr-icon {
-	border: none;
-	margin-bottom: 20px; }
+	border-bottom: none; 
+}
 		
-#flick div img {
+#flick img {
 	margin: 7px; }
 	
-#flick div a img {
+#flick a img {
 	border: 5px solid #eee; }
 	
-#flick div a:hover img {
+#flick a:hover img {
 	border: 5px solid #fff; }
-	
-#twit a, #twit a:visited {
-	text-decoration: none; }
-	
-#twit img {
-	margin: 20px 0 20px 0; }
