@@ -215,46 +215,23 @@ echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array
     </div>
     
     
-    <div class="jsite">
-	<h3 id="mh"><a href="http://motthavenherald.com/">Mott Haven Herald</a></h3>
-      <h5>Local news in the Bronx</h5>
-      <?php
-if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://motthavenherald.com/feed/', array(
-	'items' => 3,
-	'cache_duration' => 1800
-	));
-}
-?>
-    </div>
+    <div class="jsite" id="mott-haven-herald-posts">
+		<h3 id="mh"><a href="http://motthavenherald.com/">Mott Haven Herald</a></h3>
+		<h5>Local News in the Bronx</h5>
+	</div>
     
     
-    <div class="jsite">
-	<h3 id="dnj"><a href="http://www.digitalnewsjournalist.com/">Digital News Journalist</a></h3>
-      <h5>Tips, tools &amp; resources</h5>
-      <?php
-if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://www.digitalnewsjournalist.com/feed/', array(
-	'items' => 3,
-	'cache_duration' => 1800
-	));
-}
-?>
+    <div class="jsite" id="digital-news-journalist-posts">
+		<h3 id="dnj"><a href="http://digitalnewsjournalist.com/">Digital News Journalist</a></h3>
+		<h5>Tips, Tools &amp; Resources</h5>
     </div>
     
-    <div class="jsite third">
-	<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
-      <h5>A journal of issues &amp; ideas</h5>
-      <?php
-if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://219mag.com/feed/', array(
-	'items' => 3,
-	'cache_duration' => 1800
-	));
-}
-?>
-    </div>
-  </div>
+	<div class="jsite third" id="219-mag-posts">
+		<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
+		<h5>A Journal of Issues &amp; Ideas</h5>
+	</div>
+	
+  </div><!-- END - #jnet -->
   
 	<div class="clearfix" id="row3">
 	
