@@ -46,7 +46,7 @@ Template Name: Page - Research Center
 		<?php
 		if ( function_exists('SimplePieWP') ) {
 		echo SimplePieWP('http://researchcenter.journalism.cuny.edu/feed/', array(
-			'items' => 4,
+			'items' => 8,
 			'cache_duration' => 1800
 			));
 		}
