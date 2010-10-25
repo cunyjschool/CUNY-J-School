@@ -185,46 +185,33 @@ echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array
 
 <h4 style="float: right;">View All Recent Activity on the <a href="<?php bloginfo('url'); ?>/wire/">Wire &raquo;</a></h4> 
     
-    <div class="jsite" style="clear: both;">
-    <h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/student-work/">Clips of the Week</a></h3>
-      <h5>Student work</h5>
-      <div>
-<ul>
-<?php $student_clips = new WP_Query(array('category_name'=>'clips-of-the-week','showposts'=>3)); ?>
-  <?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
-<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
-    <?php endwhile; else: ?><p>There are currently no stories.</p>
-<?php endif; ?>
-</ul>
-      </div>
-    </div>
+    <div class="jsite" id="clips-of-the-week" style="clear: both;">
+		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/student-work/">Clips of the Week</a></h3>
+		<h5>Student work</h5>
+		<ul>
+		<?php
+		$args = array(	'category_name'=>'clips-of-the-week',
+						'showposts'=>3
+				);
+		$student_clips = new WP_Query( $args ); ?>
+		<?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
+			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
+		<?php endwhile; else: ?>
+			<li>There are currently no stories.</li>
+		<?php endif; ?>
+		</ul>
+	</div>
     
     
-    <div class="jsite">
-    <h3 id="ni"><a href="http://newsinnovation.com/">NewsInnovation</a></h3>
-      <h5>New business models for news</h5>
-    <?php
-if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://newsinnovation.com/feed/', array(
-	'items' => 4,
-	'cache_duration' => 1800
-	));
-}
-	?>
-    </div>
+    <div class="jsite dynamic-content-load" id="news-innovation-posts">
+		<h3 id="ni"><a href="http://newsinnovation.com/">NewsInnovation</a></h3>
+		<h5>New Business Models For News</h5>
+	</div>
     
     
-    <div class="jsite third">
-	<h3 id="ws"><a href="http://blogs.journalism.cuny.edu/writestuff/">The Write Stuff</a></h3>
-      <h5>tips to improve your writing</h5>
-      <?php
-if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://writestuff.journalism.cuny.edu/feed/', array(
-	'items' => 4,
-	'cache_duration' => 1800
-	));
-}
-?>
+    <div class="jsite third" id="write-stuff-posts">
+	<h3 id="ws"><a href="http://writestuff.journalism.cuny.edu/">The Write Stuff</a></h3>
+      <h5>Tips to Improve Your Writing</h5>
     </div>
     
     

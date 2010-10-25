@@ -33,6 +33,10 @@ class cunyj
 			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
 			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), $version);
 		}
+				
+		// Add our dynamic content loading methods to the homepage
+		wp_enqueue_script( 'cunyj_home', get_bloginfo('template_directory') . '/js/home.js', array('jquery'), $version, true );
+		
 	}
 	
 	/**

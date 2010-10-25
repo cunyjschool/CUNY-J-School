@@ -332,7 +332,7 @@
 #jnet .third {
 	margin-right: 0; }
 	
-#jnet div li {
+#jnet ul li {
 	padding: 3px 0 3px 10px;
 	background: url(../images/list-gray-square.jpg) no-repeat 3px 12px; 
 	border-bottom: 1px dotted #eee; }
