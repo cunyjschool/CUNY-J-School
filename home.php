@@ -202,33 +202,35 @@ echo SimplePieWP('http://twitter.com/statuses/user_timeline/14345137.rss', array
 		</ul>
 	</div>
     
-    
     <div class="jsite dynamic-content-load" id="news-innovation-posts">
 		<h3 id="ni"><a href="http://newsinnovation.com/">NewsInnovation</a></h3>
 		<h5>New Business Models For News</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
     
-    
     <div class="jsite third" id="write-stuff-posts">
-	<h3 id="ws"><a href="http://writestuff.journalism.cuny.edu/">The Write Stuff</a></h3>
-      <h5>Tips to Improve Your Writing</h5>
+		<h3 id="ws"><a href="http://writestuff.journalism.cuny.edu/">The Write Stuff</a></h3>
+		<h5>Tips to Improve Your Writing</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
     </div>
     
     
     <div class="jsite" id="mott-haven-herald-posts">
 		<h3 id="mh"><a href="http://motthavenherald.com/">Mott Haven Herald</a></h3>
 		<h5>Local News in the Bronx</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>		
 	</div>
-    
     
     <div class="jsite" id="digital-news-journalist-posts">
 		<h3 id="dnj"><a href="http://digitalnewsjournalist.com/">Digital News Journalist</a></h3>
 		<h5>Tips, Tools &amp; Resources</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
     </div>
     
 	<div class="jsite third" id="219-mag-posts">
 		<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
 		<h5>A Journal of Issues &amp; Ideas</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
 	
   </div><!-- END - #jnet -->
