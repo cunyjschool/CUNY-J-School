@@ -1,3 +1,7 @@
+/**
+ * Loads the JSON feed for a given site and inserts blog post links
+ * @author danielbachhuber
+ */
 function cunyj_load_home_blog_posts( url, items, zone ) {
 	
 	url = url + 'api/get_recent_posts/?count=' + items;
@@ -7,6 +11,7 @@ function cunyj_load_home_blog_posts( url, items, zone ) {
 		dataType: 'jsonp',
 		success: function(data) {
 			var html = '';
+			// Only add data if the status has returned 'ok'
 			if ( data.status == 'ok' ) {
 				html += '<ul>';
 				jQuery.each(data.posts, function( index, item ) {
