@@ -10,7 +10,7 @@
 		} else {
 			include 'sidebar-news.php'; } ?>
 	
-  <div id="content" class="left">
+  <div class="content left">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
