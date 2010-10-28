@@ -110,6 +110,8 @@ if ( function_exists('register_sidebar') ) {
 	register_sidebar( 'giving' );
 	// Sidebar for the Research Center pages
 	register_sidebar( array( 'id' => 'research_center', 'name' => 'Research Center', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
+	// Sidebar for Entrepreneurial Journalism
+	register_sidebar( array( 'id' => 'entrepreneurial_journalism', 'name' => 'Entrepreneurial Journalism', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
 		
 }
 

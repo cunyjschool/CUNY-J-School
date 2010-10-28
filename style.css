@@ -136,7 +136,7 @@ input.button.primary {
 	float: none;
 }
 
-#content {
+#content, .content {
 	background-color: #FFFFFF;
 }
 
@@ -509,7 +509,14 @@ img.news-photo {
 	
 .main#research-center img.ribbon, .main#entrepreneurial-journalism img.ribbon {
 	border: 5px solid #EEEEEE;
+	background-color: #EEEEEE;
 	margin-bottom: 15px;
+}
+
+.main#entrepreneurial-journalism .entry p:first-child {
+	font-size: 16px;
+	line-height: 24px;
+	padding-top: 0;
 }
 
 .main#research-center .research-center-info-zone {
@@ -565,7 +572,7 @@ img.news-photo {
 	padding-left: 30px;
 	background: url(images/icons/information_frame.png) no-repeat 10px 7px; }
 	
-.main #content h2 {
+.main #content h2, .main .content h2 {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #eee;
 }
@@ -649,6 +656,23 @@ div.message.info {
 div#message.updated {
 	border-color: #ADEBBD;
 	background-color: #E1F8E7;
+}
+
+.content .entry a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.content .entry a:hover {
+	background-color: #FF9900;
+	color: #FFFFFF;
+	border-bottom: 1px solid #FF9900;
+}
+
+.entry blockquote.pull {
+	width: 300px;
+	font-size: 14px;
+	font-style: italic;
 }
 
 .post {

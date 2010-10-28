@@ -12,7 +12,7 @@ Template Name: Page - Entrepreneurial Journalism
 		
 		<h2><?php the_title(); ?></h2>
 	
-		<img class="ribbon" src="<?php bloginfo('template_directory'); ?>/images/pages/researchcenter_h850.jpg" alt="Research Center entrance" height="100px" width="850px" />
+		<img class="ribbon" src="<?php bloginfo('template_directory'); ?>/images/pages/entrepreneurialjournalism_h850.png" alt="Entrepreneurial Journalism" height="200px" width="850px" />
 		
 	<div class="sidebar right standard">
 
