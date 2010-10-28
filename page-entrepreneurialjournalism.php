@@ -10,9 +10,7 @@ Template Name: Page - Entrepreneurial Journalism
 	
 	<div class="main" id="entrepreneurial-journalism">
 		
-		<h2><?php the_title(); ?></h2>
-	
-		<img class="ribbon" src="<?php bloginfo('template_directory'); ?>/images/pages/entrepreneurialjournalism_h850.png" alt="Entrepreneurial Journalism" height="200px" width="850px" />
+		<h2 class="banner"><?php the_title(); ?></h2>
 		
 	<div class="sidebar right standard">
 

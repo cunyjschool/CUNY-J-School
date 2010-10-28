@@ -506,6 +506,15 @@ img.news-photo {
 .main#research-center h2 span.social-links img {
 	margin-left: 10px;
 }
+
+.main#entrepreneurial-journalism h2.banner {
+	background-color: #FF9900;
+	color: #FFFFFF;
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	padding: 10px;
+}
 	
 .main#research-center img.ribbon, .main#entrepreneurial-journalism img.ribbon {
 	border: 5px solid #EEEEEE;
