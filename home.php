@@ -174,7 +174,7 @@ echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', arra
 <h4 style="float: right;">View All Recent Activity on the <a href="<?php bloginfo('url'); ?>/wire/">Wire &raquo;</a></h4> 
     
     <div class="jsite" id="clips-of-the-week" style="clear: both;">
-		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/student-work/">Clips of the Week</a></h3>
+		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/clips-of-the-week/">Clips of the Week</a></h3>
 		<h5>Student work</h5>
 		<ul>
 		<?php
