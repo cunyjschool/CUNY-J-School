@@ -8,10 +8,11 @@
 	
 	 <div class="content">
 		
-		<?php /* <div id="home-alert">
-			<strong>Today and tomorrow:</strong> SABEW's 2010 Fall Conference, happening at the J-School. <a href="http://cunyatsabew.com/">Follow the coverage</a> or <a href="http://www.journalism.cuny.edu/live/">watch the livestream</a>.
-		</div> */ ?>
-	
+		<?php
+		if ( isset( $cunyj->options['enable_announcement'] ) && $cunyj->options['enable_announcement'] ) {
+			echo '<div id="home-alert">' . $cunyj->options['homepage_announcement'] . '</div>';
+		} 
+		?>
 
 <!-- Start Slideshow and Nav -->
   <div id="home-slideshow">

@@ -11,17 +11,28 @@ include_once('php/cunyj_events.php');
 class cunyj
 {
 	
+	var $options_group = 'cunyj_';
+	var $options_group_name = 'cunyj_options';
+	var $settings_page = 'cunyj_settings';
+	
 	function __construct() {
 		global $wpdb;
 		
 		$this->events = new cunyj_events();
 		
-		add_action('init', array(&$this, 'init'));
+		add_action( 'init', array( &$this, 'init' ) );
+		add_action( 'admin_init', array( &$this, 'admin_init' ) );
 	}
 	
 	function init() {
 		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
 		$version = $details['Version'];
+		
+		$this->options = get_option( $this->options_group_name );	
+
+		if ( is_admin() ) {
+			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
+		}
 		
 		if ( !is_admin() ) {
 			// Enqueue our stylesheets
@@ -37,6 +48,100 @@ class cunyj
 		// Add our dynamic content loading methods to the homepage
 		wp_enqueue_script( 'cunyj_home', get_bloginfo('template_directory') . '/js/home.js', array('jquery'), $version, true );
 		
+	}
+	
+	function admin_init() {
+
+		$this->register_settings();
+
+	}
+	
+	/**
+	 * Any admin menu items we need
+	 */
+	function add_admin_menu_items() {
+
+		add_submenu_page( 'themes.php', 'CUNY J-School Theme Options', 'Theme Options', 'manage_options', 'cunyj_options', array( &$this, 'options_page' ) );			
+
+	}
+
+	function register_settings() {
+
+		register_setting( $this->options_group, $this->options_group_name, array( &$this, 'settings_validate' ) );
+
+		add_settings_section( 'cunyj_homepage', 'Homepage', array(&$this, 'settings_homepage_section'), $this->settings_page );
+		add_settings_field( 'enable_announcement', 'Enable home announcement', array(&$this, 'settings_enable_announcement_option'), $this->settings_page, 'cunyj_homepage' );
+		add_settings_field( 'homepage_announcement', 'Text for home announcement', array(&$this, 'settings_homepage_announcement_option'), $this->settings_page, 'cunyj_homepage' );
+
+	}
+	
+	function settings_homepage_section() {
+
+	}
+	
+	/**
+	 * Enable or disable the homepage announcement
+	 */
+	function settings_enable_announcement_option() {
+		$options = $this->options;
+		echo '<select id="enable_announcement" name="' . $this->options_group_name . '[enable_announcement]">';
+		echo '<option value="0">Disabled</option>';
+		echo '<option value="1"';
+		if ( isset( $options['enable_announcement'] ) && $options['enable_announcement'] ) {
+			echo ' selected="selected"';
+		}
+		echo '>Enabled</option>';
+		echo '</select>';
+	}
+	
+	/**
+	 * Determine the text to go in the announcement
+	 */
+	function settings_homepage_announcement_option() {
+		$options = $this->options;
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a>' );
+		
+		echo '<textarea id="homepage_announcement" name="' . $this->options_group_name . '[homepage_announcement]" cols="60" rows="4">';
+		if ( isset( $options['homepage_announcement'] ) && $options['homepage_announcement'] ) {
+			echo $options['homepage_announcement'];
+		}
+		echo '</textarea>';
+		echo '<p class="description">The following tags are permitted: ' . $allowed_tags . '</p>';
+	}
+	
+	/**
+	 * Validation and sanitization on the settings field
+	 */
+	function settings_validate( $input ) {
+		
+		// Homepage announcement can only have basic HTML
+		$allowed_tags = '<b><strong><em><i><span><a>';
+		$input['homepage_announcement'] = strip_tags( $input['homepage_announcement'], $allowed_tags );
+		
+		return $input;
+
+	}	
+	
+	/**
+	 * Options page for the theme
+	 */
+	function options_page() {
+		?>                                   
+		<div class="wrap">
+			<div class="icon32" id="icon-options-general"><br/></div>
+
+			<h2><?php _e('CUNY J-School Theme Options', 'cunyj-theme') ?></h2>
+
+			<form action="options.php" method="post">
+
+				<?php settings_fields( $this->options_group ); ?>
+				<?php do_settings_sections( $this->settings_page ); ?>
+
+				<p class="submit"><input name="submit" type="submit" class="button-primary" value="<?php esc_attr_e('Save Changes'); ?>" /></p>
+
+			</form>
+		</div>
+		<?php
 	}
 	
 	/**
