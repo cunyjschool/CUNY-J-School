@@ -789,14 +789,7 @@ div#message.updated {
 .entry ul li {
 	padding: 5px 10px 5px 30px;
 	border-bottom: 1px solid #eee;
-	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px; }
-	
-.entry ul li.facebook {
-	background: url(images/icons/socialnetworking/facebook_16.png) no-repeat 10px 8px;
-}
-
-.entry ul li.twitter {
-	background: url(images/icons/socialnetworking/twitter_16.png) no-repeat 10px 8px;
+	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px;
 }
 
 #page-image {
