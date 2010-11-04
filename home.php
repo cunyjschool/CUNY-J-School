@@ -25,6 +25,7 @@
   		<li><h3><a href="<?php bloginfo('url'); ?>/academics/">Academics</a></h3></li>
 		<li><a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/">Subjects</a></li>
 		<li><a href="<?php bloginfo('url'); ?>/academics/course-descriptions/">Course Descriptions</a></li>
+		<li><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/">Entrepreneurial Journalism</a></li>		
 		<li><a href="<?php bloginfo('url'); ?>/academics/summer-internship/">Summer Internship</a></li>
 	</ul>
 
