@@ -385,8 +385,13 @@
 	padding: 3px 0 3px 0;
 	margin-left: 10px;
 	list-style-type: square;
-	color: #EEE;
-	border-bottom: 1px dotted #EEE;
+	color: #EEEEEE;
+	border-bottom: 1px dotted #EEEEEE;
+}
+
+#jnet ul li a {
+	display: block;
+	width: 100%;
 }
 
 #jnet h3#ns a {
