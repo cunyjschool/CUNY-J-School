@@ -368,7 +368,7 @@
 	background: url(../images/wire/ico-clips.jpg) no-repeat 0 4px; }
 	
 #row3 {
-	background: #ff9900 url(../images/orange-back.jpg) repeat;
+	background: #ff9900 url(../images/backgrounds/orange-back.jpg) repeat;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -443,7 +443,7 @@
 }
 
 #soc {
-	background: #ff9900 url(../images/orange-back.jpg) repeat;
+	background: #ff9900 url(../images/backgrounds/orange-back.jpg) repeat;
 	padding: 20px;
 	-webkit-box-shadow: 5px 5px 0 #eee;  
     -moz-box-shadow: 5px 5px 0 #eee;  
