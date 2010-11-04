@@ -68,26 +68,19 @@
 	</div><!-- /#news-home -->
 
 	
-  	<div id="featured-home">
-      <div id="fh-inner"><a href="http://www.nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/nycitynewsservice_h200.png" height="50px" width="200px" alt="NY City News Service" /></a>
-        <p><a href="http://www.nycitynewsservice.com/">Student-powered wire service</a></p>
-      
-    <?php
-/* if (function_exists('SimplePieWP')) {
-echo SimplePieWP('http://nycitynewsservice.com/category/top-stories/feed/', array(
-	'items' => 4,
-	'cache_duration' => 1800
-	));
-} */
-	?>
-    
-    </div> 
+	<div id="featured-home">
+		<a href="http://nycitynewsservice.com/">
+		<div class="fh-inner" id="nycitynewsservice">
+        	<p class="description">Student-powered wire service</p>
+    	</div>
+		</a>
 
-<div id="fh-inner"><a href="http://fort-greene.thelocal.nytimes.com/"><img src="<?php bloginfo('template_directory'); ?>/images/projects/fort-greene_h200.jpg" height="50px" width="200px" alt="The Local" /></a>
-<p><a href="http://fort-greene.thelocal.nytimes.com/">CUNY Graduate School of Journalism<br>with <img height="25" src="<?php bloginfo('template_directory'); ?>/images/logos/nytlogo379x64.gif" class="nyt-logo" alt="NYT logo" /></a></p>
-</div>
+		<a href="http://fort-greene.thelocal.nytimes.com/">
+		<div class="fh-inner" id="nytlocal">
+			<p class="description">CUNY Graduate School of Journalism<br>with <img height="25" src="<?php bloginfo('template_directory'); ?>/images/logos/nytlogo379x64.gif" class="nyt-logo" alt="NYT logo" /></p>
+		</div></a>
 
-    </div><!-- /#featured-home -->
+	</div><!-- /#featured-home -->
 
     <div id="events-home">
 		<h3>Events</h3>

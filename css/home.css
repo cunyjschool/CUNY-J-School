@@ -241,8 +241,8 @@
 	float: right;
 }
 	
-#fh-inner {
-	background: #f9f9f9;
+.fh-inner {
+	background-color: #f9f9f9;
 	margin-bottom: 5px;
 	color: #666;
 	padding: 15px;	
@@ -251,18 +251,31 @@
 	-moz-border-radius: 5px;
 }
 
-#fh-inner a {
-
+.fh-inner#nycitynewsservice {
+	background-image: url(../images/projects/nycitynewsservice_h200.png);
+	background-repeat: no-repeat;
+	background-position: 15px 15px;
 }
 
-#fh-inner p, #fh-inner p a {
+.fh-inner#nytlocal {
+	background-image: url(../images/projects/fort-greene_h200.png);
+	background-repeat: no-repeat;
+	background-position: 15px 15px;
+}
+
+.fh-inner a {
 	color: #666;
+}
+
+.fh-inner p.description {
 	font-size: 11px;
 	text-transform: uppercase;
-	margin: 3px 0 0 0;
+	margin-top: 55px;
+	margin-bottom: 0;
+	padding: 0;
 }
 
-#fh-inner p img.nyt-logo {
+.fh-inner p img.nyt-logo {
 	position: absolute;
 	margin-left: 8px;
 	margin-top: 2px;
