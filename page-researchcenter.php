@@ -43,14 +43,9 @@ Template Name: Page - Research Center
 	
 	<div id="research-center-blog" class="research-center-info-zone">
 		<h4><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
-		<?php
-		if ( function_exists('SimplePieWP') ) {
-		echo SimplePieWP('http://researchcenter.journalism.cuny.edu/feed/', array(
-			'items' => 8,
-			'cache_duration' => 1800
-			));
-		}
-		?>
+		<ul>
+			<li>Loading...</li>
+		</ul>
 	</div>
 
 	<div id="research-center-goodreads" class="research-center-info-zone">

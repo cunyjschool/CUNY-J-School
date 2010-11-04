@@ -43,10 +43,9 @@ class cunyj
 			
 			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
 			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), $version);
+			
+			add_action( 'wp_enqueue_scripts', array(&$this, 'wp_enqueue_scripts' ) );
 		}
-				
-		// Add our dynamic content loading methods to the homepage
-		wp_enqueue_script( 'cunyj_home', get_bloginfo('template_directory') . '/js/home.js', array('jquery'), $version, true );
 		
 	}
 	
@@ -54,6 +53,17 @@ class cunyj
 
 		$this->register_settings();
 
+	}
+	
+	/**
+	 * Enqueue Javascript we need for various pages
+	 */
+	function wp_enqueue_scripts() {
+		
+		wp_enqueue_script( 'cunyj_home', get_bloginfo('template_directory') . '/js/home.js', array('jquery'), $this->version, true );
+		
+		wp_enqueue_script( 'cunyj_research', get_bloginfo('template_directory') . '/js/research_center.js', array('jquery'), $this->version, true );
+		
 	}
 	
 	/**
