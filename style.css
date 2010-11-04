@@ -547,6 +547,15 @@ img.news-photo {
 	font-size: 14px;	
 }
 
+.main#research-center #research-center-blog ul {
+	margin: 10px 0 20px 0; }
+	
+.main#research-center #research-center-blog ul li {
+	padding: 5px 10px 5px 30px;
+	border-bottom: 1px solid #eee;
+	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px;
+}
+
 .main#research-center #research-center-search-tools h4 {
 	/* padding-left: 15px;
 	background: url('../images/icons/magnifier.png') no-repeat 10px 7px; */
