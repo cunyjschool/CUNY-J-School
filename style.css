@@ -92,7 +92,11 @@ fieldset {
 	margin: 0;
 }
 
-.right {
+.left, .alignleft {
+	float: left;
+}
+
+.right, .alignright {
 	float: right;
 }
 
@@ -676,23 +680,6 @@ div#message.updated {
 	background-color: #E1F8E7;
 }
 
-.content .entry a {
-	text-decoration: none;
-	border-bottom: 1px solid;
-}
-
-.content .entry a:hover {
-	background-color: #FF9900;
-	color: #FFFFFF;
-	border-bottom: 1px solid #FF9900;
-}
-
-.entry blockquote.pull {
-	width: 300px;
-	font-size: 14px;
-	font-style: italic;
-}
-
 .post {
 	width: 540px;
 }
@@ -785,10 +772,6 @@ div#message.updated {
 	margin-top: 10px;
 }
 	
-.entry {
-	
-}
-	
 .entry h4 {
 	margin-top: 20px; }
 	
@@ -826,11 +809,49 @@ div#message.updated {
 #page-image-wide img {
 	width: 600px;
 }
+
+.content .entry a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.content .entry a:hover {
+	background-color: #FF9900;
+	color: #FFFFFF;
+	border-bottom: 1px solid #FF9900;
+}
+
+.entry blockquote.pull {
+	width: 300px;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.entry a img, .entry a:hover img {
+	border: none;
+	text-decoration: none;
+}
+
+.entry .wp-caption {
+	background: #efefef;
+	padding: 5px;
+}
+
+.entry .wp-caption.alignleft {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.entry .wp-caption.alignright {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
 	
 .caption {
 	padding: 10px;
 	margin-bottom: 20px;
-	border-bottom: 1px solid #efefef; }
+	border-bottom: 1px solid #efefef;
+}
 	
 .credit {
 	font-size: 90%;
