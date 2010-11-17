@@ -22,24 +22,26 @@ function cunyj_load_home_twitter() {
  */
 function cunyj_load_home_blog_posts( url, items, zone ) {
 	
-	url = url + 'api/get_recent_posts/?count=' + items;
-	
-	jQuery.ajax({
-		url: url,
-		dataType: 'jsonp',
-		success: function(data) {
-			var html = '';
-			// Only add data if the status has returned 'ok'
-			if ( data.status == 'ok' ) {
-				html += '<ul>';
-				jQuery.each(data.posts, function( index, item ) {
-					html += '<li><a href="' + item.url + '">' + item.title + '</a></li>';
-				})
-				html += '</ul>';				
-			}
-			jQuery('#'+zone).append(html);
-		},
-	});
+	// Only attempt the AJAX call if the div exists
+	if ( jQuery('#'+zone).length > 0 ) {	
+		url = url + 'api/get_recent_posts/?count=' + items;		
+		jQuery.ajax({
+			url: url,
+			dataType: 'jsonp',
+			success: function(data) {
+				var html = '';
+				// Only add data if the status has returned 'ok'
+				if ( data.status == 'ok' ) {
+					html += '<ul>';
+					jQuery.each(data.posts, function( index, item ) {
+						html += '<li><a href="' + item.url + '">' + item.title + '</a></li>';
+					})
+					html += '</ul>';				
+				}
+				jQuery('#'+zone).append(html);
+			},
+		});
+	}
 }
 
 jQuery(document).ready(function() {
