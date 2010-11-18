@@ -20,15 +20,15 @@ class cunyj
 		
 		$this->events = new cunyj_events();
 		
+		$this->options = get_option( $this->options_group_name );
+		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
+		$version = $details['Version'];
+		
 		add_action( 'init', array( &$this, 'init' ) );
 		add_action( 'admin_init', array( &$this, 'admin_init' ) );
 	}
 	
 	function init() {
-		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
-		$version = $details['Version'];
-		
-		$this->options = get_option( $this->options_group_name );	
 
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
@@ -80,6 +80,10 @@ class cunyj
 		register_setting( $this->options_group, $this->options_group_name, array( &$this, 'settings_validate' ) );
 
 		add_settings_section( 'cunyj_homepage', 'Homepage', array(&$this, 'settings_homepage_section'), $this->settings_page );
+		// Top homepage announcement
+		add_settings_field( 'enable_top_announcement', 'Enable top announcement', array(&$this, 'settings_enable_top_announcement_option'), $this->settings_page, 'cunyj_homepage' );
+		add_settings_field( 'top_announcement', 'Text for top announcement', array(&$this, 'settings_top_announcement_option'), $this->settings_page, 'cunyj_homepage' );
+		// Primary homepage announcement
 		add_settings_field( 'enable_announcement', 'Enable home announcement', array(&$this, 'settings_enable_announcement_option'), $this->settings_page, 'cunyj_homepage' );
 		add_settings_field( 'homepage_announcement', 'Text for home announcement', array(&$this, 'settings_homepage_announcement_option'), $this->settings_page, 'cunyj_homepage' );
 
@@ -87,6 +91,37 @@ class cunyj
 	
 	function settings_homepage_section() {
 
+	}
+	
+	/**
+	 * Enable or disable the homepage announcement
+	 */
+	function settings_enable_top_announcement_option() {
+		$options = $this->options;
+		echo '<select id="enable_top_announcement" name="' . $this->options_group_name . '[enable_top_announcement]">';
+		echo '<option value="0">Disabled</option>';
+		echo '<option value="1"';
+		if ( isset( $options['enable_top_announcement'] ) && $options['enable_top_announcement'] ) {
+			echo ' selected="selected"';
+		}
+		echo '>Enabled</option>';
+		echo '</select>';
+		echo '<p class="description">Shows up to logged-out users</p>';
+	}
+	
+	/**
+	 * Determine the text to go in the announcement
+	 */
+	function settings_top_announcement_option() {
+		$options = $this->options;
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a>' );
+		
+		echo '<textarea id="top_announcement" name="' . $this->options_group_name . '[top_announcement]" cols="60" rows="2">';
+		if ( isset( $options['top_announcement'] ) && $options['top_announcement'] ) {
+			echo $options['top_announcement'];
+		}
+		echo '</textarea>';
+		echo '<p class="description">The following tags are permitted: ' . $allowed_tags . '</p>';
 	}
 	
 	/**
@@ -126,6 +161,7 @@ class cunyj
 		
 		// Homepage announcement can only have basic HTML
 		$allowed_tags = '<b><strong><em><i><span><a>';
+		$input['top_announcement'] = strip_tags( $input['top_announcement'], $allowed_tags );		
 		$input['homepage_announcement'] = strip_tags( $input['homepage_announcement'], $allowed_tags );
 		
 		return $input;
