@@ -94,7 +94,7 @@ class cunyj
 	}
 	
 	/**
-	 * Enable or disable the homepage announcement
+	 * Enable or disable the top announcement
 	 */
 	function settings_enable_top_announcement_option() {
 		$options = $this->options;
