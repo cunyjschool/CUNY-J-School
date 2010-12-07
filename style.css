@@ -520,7 +520,7 @@ img.news-photo {
 	margin-left: 10px;
 }
 
-.main#entrepreneurial-journalism h2.banner {
+.main#entrepreneurial-journalism h2.banner, .main#cunyj-live h2.banner {
 	background-color: #FF9900;
 	color: #FFFFFF;
 	font-weight: normal;
