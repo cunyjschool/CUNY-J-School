@@ -271,19 +271,22 @@ input.button.primary {
 	margin-top: 5px;
 }
 
-#home-alert {
+#top-alert, #home-alert {
 	padding: 10px 20px; 
 	background: #ff9900 url(images/backgrounds/orange-back.jpg) repeat; 
 	margin-bottom: 10px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 	text-align:center;
 }
 
-#home-alert a, #livestream a:visited {
+#home-alert {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#top-alert a, #home-alert a, #livestream a:visited {
 	color: #fff; 
-  text-align:center;         
+	text-align:center;         
 }
 	
 /* Quicklinks Dropdown */
@@ -520,8 +523,17 @@ img.news-photo {
 	margin-left: 10px;
 }
 
-.main#entrepreneurial-journalism h2.banner, .main#cunyj-live h2.banner {
+.main#entrepreneurial-journalism h2.banner {
 	background-color: #FF9900;
+	color: #FFFFFF;
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	padding: 10px;
+}
+
+.main#cunyj-live h2.banner {
+	background-color: #CCCCCC;
 	color: #FFFFFF;
 	font-weight: normal;
 	margin-bottom: 20px;
