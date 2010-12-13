@@ -39,6 +39,6 @@ jQuery(document).ready(function() {
 	/**
 	 * Dynamically load blog posts for the Research Center
 	 */
-	cunyj_load_research_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 8, 'research-center-blog' );
+	cunyj_load_research_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 6, 'research-center-blog' );
 
 });
