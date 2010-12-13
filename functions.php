@@ -277,6 +277,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
 			'about' => 'About',
 			'research_center' => 'Research Center',
 			'entrepreneurial_journalism' => 'Entrepreneurial Journalism',
+			'livestream_navigation' => 'CUNY J-School Live',			
 			)
 		);
 }

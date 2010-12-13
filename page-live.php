@@ -45,6 +45,15 @@ Template Name: Page - Live
 
 <div id="global">
 	<div class="wrap">
+		
+		<?php wp_nav_menu(
+					array(
+						'theme_location' => 'livestream_navigation',
+						'fallback_cb' => false,
+						'menu_id' => 'livestream-navigation',
+						)
+					); ?>
+		
  		<div id="logo" class="minimal">
 	      <a title="<?php bloginfo('title'); ?>" href="<?php bloginfo('url'); ?>"><img alt="CUNY Graduate School of Journalism" src="<?php bloginfo('template_directory'); ?>/images/logos/cunyj-logo_h360.png" height="45px" /></a>
 	    </div>
@@ -67,6 +76,18 @@ Template Name: Page - Live
 		<div class="video-player">
 			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="720" height="480" id="utv174"><param name="flashvars" value="autoplay=false&brand=embed&cid=18332%2Ftest&locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/18332/test"/><embed flashvars="autoplay=false&brand=embed&cid=18332%2Ftest&locale=en_US" width="720" height="480" allowfullscreen="true" allowscriptaccess="always" id="utv174" name="utv_n_143574" src="http://www.ustream.tv/flash/live/18332/test" type="application/x-shockwave-flash" /></object>
 		</div>
+		
+		<div class="video-sidebar">
+			<div class="sidebar-item" id="interest-capture">
+				<a class="sign-up" href="https://cunyjschool.wufoo.com/forms/s7p4p3/" onclick="window.open(this.href,  null, 'height=340, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Sign up for updates">Sign up for email updates</a>
+			</div>
+			
+			<div class="sidebar-item" id="report-trouble">
+				<p>Trouble with the livestream or chat? Email <a href="mailto:webmaster@journalism.cuny.edu?subject=Issue with livestream and/or chat">webmaster@journalism.cuny.edu</a> and we'll help out!</p>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
     
     	<div class="entry">
 
