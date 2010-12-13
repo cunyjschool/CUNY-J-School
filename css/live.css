@@ -63,6 +63,23 @@ iframe#wufooForms7p4p3 form.wufoo h2 {
 	display: none;
 }
 
+body#live .main .content .video-sidebar .sidebar-item#interest-capture a {
+	font-size: 16px;
+	padding: 10px;
+	display: inline-block;
+	width: 215px;
+	color: #FF9900;
+	text-decoration: none;
+	border-top:1px solid #F9F9F9;
+	border-bottom:1px solid #EEEEEE;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#interest-capture a:hover {
+	background-color: #FF9900;
+	color: #FFF;
+	border-top-color: #DDDDDD;
+}
+
 body#live .main .content .video-sidebar .sidebar-item p {
 	padding: 5px;
 	line-height: 16px;
