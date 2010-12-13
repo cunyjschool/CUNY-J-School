@@ -64,6 +64,8 @@ class cunyj
 		
 		wp_enqueue_script( 'cunyj_research', get_bloginfo('template_directory') . '/js/research_center.js', array('jquery'), $this->version, true );
 		
+		wp_enqueue_script( 'cunyj_live', get_bloginfo('template_directory') . '/js/live.js', array('jquery'), $this->version, true );
+		
 	}
 	
 	/**
