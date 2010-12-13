@@ -1,0 +1,7 @@
+body#live #global {
+	height: 80px;
+}
+
+body#live #global #logo {
+	float: none;
+}
