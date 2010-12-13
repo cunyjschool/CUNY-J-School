@@ -80,6 +80,10 @@ body#live .main .content .video-sidebar .sidebar-item#interest-capture a:hover {
 	border-top-color: #DDDDDD;
 }
 
+body#live .main .content .video-sidebar .sidebar-item#report-trouble, body#live .main .content .video-sidebar .sidebar-item#report-trouble a {
+	color: #999999;
+}
+
 body#live .main .content .video-sidebar .sidebar-item p {
 	padding: 5px;
 	line-height: 16px;
