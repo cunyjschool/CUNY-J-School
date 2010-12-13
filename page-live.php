@@ -79,7 +79,7 @@ Template Name: Page - Live
 		
 		<div class="video-sidebar">
 			<div class="sidebar-item" id="interest-capture">
-				<a class="sign-up" href="https://cunyjschool.wufoo.com/forms/s7p4p3/" onclick="window.open(this.href,  null, 'height=340, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Sign up for updates">Sign up for J-School updates</a>
+				<a class="sign-up" target="_blank" href="https://cunyjschool.wufoo.com/forms/s7p4p3/" onclick="window.open(this.href,  null, 'height=340, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Sign up for updates">Sign up for J-School updates</a>
 			</div>
 			
 			<div class="sidebar-item" id="report-trouble">
@@ -88,6 +88,8 @@ Template Name: Page - Live
 		</div>
 		
 		<div class="clear"></div>
+		
+		<div class="video-backup">If this video is down, please <a target="_blank" href="http://www.livestream.com/cunyjournalism">try the mirror stream</a></div>
     
     	<div class="entry">
 

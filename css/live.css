@@ -88,3 +88,12 @@ body#live .main .content .video-sidebar .sidebar-item p {
 	padding: 5px;
 	line-height: 16px;
 }
+
+body#live .main .content .video-backup {
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+body#live .main .content .video-backup, body#live .main .content .video-backup a {
+	color: #999999;
+}
