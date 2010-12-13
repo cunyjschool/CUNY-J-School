@@ -40,8 +40,20 @@ body#live #global ul#livestream-navigation li a:hover {
 	color: #FFFFFF;
 }
 
+body#live .main {
+	padding: 0;
+}
+
+body#live .main h2.banner {
+	background-color: #EEEEEE;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-bottom: -2px;
+}
+
 body#live .main .content {
-	
+	padding: 20px;
 }
 
 body#live .main .content .video-player {
