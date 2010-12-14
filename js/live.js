@@ -1,6 +1,15 @@
 var flickr_timeout;
 var twitter_timeout;
 
+function stripslashes(str) {
+str=str.replace(/\\'/g,'\'');
+str=str.replace(/\"/g,'"');
+str=str.replace(/\\"/g,'"');
+str=str.replace(/\\0/g,'\0');
+str=str.replace(/\\\\/g,'\\');
+return str;
+}
+
 /**
  * Handler method that determines which streams to add when the page loads
  */
@@ -116,6 +125,13 @@ function cunyj_live_meebochat() {
 }
 
 jQuery(document).ready(function(){
+	
+	jQuery('.video-backup a').click(function(){
+		var embed_to_load = cunyj_live_secondary_livestream;
+		jQuery('.video-player').html(embed_to_load);
+		jQuery('.video-backup').remove();
+		jQuery('.video-backup-data').remove();		
+	})
 	
 	jQuery('ul.switcher li').click(function(){
 		jQuery('.updates-wrap').hide();

@@ -138,7 +138,7 @@ Template Name: Page - Live
 		
 		<?php if ( $secondary_livestream = get_post_meta( get_the_id(), 'secondary_livestream', true ) ) : ?>
 		<div class="video-backup">If this video is down, please <a href="#">try the mirror stream</a></div>
-		<div class="video-backup-data"><?php echo addslashes( $secondary_livestream ); ?></div>
+		<div class="video-backup-data"><?php echo "<script type='text/javascript'> var cunyj_live_secondary_livestream = '$secondary_livestream'; </script>"; ?></div>
     	<?php endif; ?>
 
     	<div class="entry">
