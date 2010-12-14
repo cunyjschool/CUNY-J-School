@@ -82,8 +82,33 @@ Template Name: Page - Live
 				<a class="sign-up" target="_blank" href="https://cunyjschool.wufoo.com/forms/s7p4p3/" onclick="window.open(this.href,  null, 'height=340, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Sign up for updates">Sign up for J-School updates</a>
 			</div>
 			
+			<div class="sidebar-item" id="live-updates">
+				<ul class="switcher">
+					<li class="button" id="flickr">Photos</li>
+					<li class="button" id="twitter">Tweets</li>
+				</ul>
+				
+				<ul id="flickr-updates">
+					
+				</ul>
+				
+				<ul id="flickr-updates">
+
+				</ul>
+				
+			</div>
+			
 			<div class="sidebar-item" id="report-trouble">
 				<p>Trouble with the livestream or chat? Email <a href="mailto:webmaster@journalism.cuny.edu?subject=Issue with livestream and/or chat">webmaster@journalism.cuny.edu</a> and we'll help out!</p>
+			</div>
+			
+			<div class="sidebar-data">
+				<?php if ( $flickr_json = get_post_meta( get_the_id(), 'flickr_json', true ) ) : ?>
+					<span id="flickr-json"><?php echo $flickr_json; ?></span>
+				<?php endif; ?>
+				<?php if ( $twitter_json = get_post_meta( get_the_id(), 'twitter_json', true ) ) : ?>
+					<span id="twitter-json"><?php echo $twitter_json; ?></span>
+				<?php endif; ?>
 			</div>
 		</div>
 		

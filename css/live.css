@@ -50,6 +50,8 @@ body#live .main h2.banner {
 	text-transform: uppercase;
 	color: #FFFFFF;
 	margin-bottom: -2px;
+	text-stroke-color: #DDDDDD;
+	text-stroke-width: 2px;
 }
 
 body#live .main .content {
@@ -69,6 +71,7 @@ body#live .main .content .video-sidebar {
 	width: 235px;
 	background-color: #F9F9F9;
 	border-left: 5px solid #DDDDDD;
+	padding-bottom: 5px;
 }
 
 iframe#wufooForms7p4p3 form.wufoo h2 {
@@ -96,9 +99,57 @@ body#live .main .content .video-sidebar .sidebar-item#report-trouble, body#live 
 	color: #999999;
 }
 
+body#live .main .content .video-sidebar .sidebar-item#live-updates {
+	border-bottom:1px solid #EEEEEE;
+	display: none;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher {
+	
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li {
+	display: inline-block;
+	padding-left: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	color: #555555;
+	width: 75px;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li.active {
+	background-color: #F2F2F2;
+	color: #333333;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li#twitter {
+	background-image:url("../images/sprites/20101104sprite.png");
+	background-position:5px -40px;
+	background-repeat:no-repeat;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li#flickr {
+	background-image:url("../images/sprites/20101104sprite.png");
+	background-position:5px -184px;
+	background-repeat:no-repeat;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li:hover {
+	cursor: pointer;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul#flickr-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates ul#twitter-updates {
+	display:none;
+}
+
 body#live .main .content .video-sidebar .sidebar-item p {
 	padding: 5px;
 	line-height: 16px;
+}
+
+body#live .main .content .video-sidebar .sidebar-data {
+	display: none;
 }
 
 body#live .main .content .video-backup {
