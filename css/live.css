@@ -227,3 +227,7 @@ body#live .main .content .video-backup {
 body#live .main .content .video-backup, body#live .main .content .video-backup a {
 	color: #999999;
 }
+
+body#live .main .content .video-backup-data {
+	display: none;
+}

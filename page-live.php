@@ -136,13 +136,16 @@ Template Name: Page - Live
 		
 		<div class="clear"></div>
 		
-		<div class="video-backup">If this video is down, please <a target="_blank" href="http://www.livestream.com/cunyjournalism">try the mirror stream</a></div>
-    
+		<?php if ( $secondary_livestream = get_post_meta( get_the_id(), 'secondary_livestream', true ) ) : ?>
+		<div class="video-backup">If this video is down, please <a href="#">try the mirror stream</a></div>
+		<div class="video-backup-data"><?php echo addslashes( $secondary_livestream ); ?></div>
+    	<?php endif; ?>
+
     	<div class="entry">
 
 			<?php the_content(); ?>
 		
-      </div>
+      	</div>
 
     </div>
 		<?php endwhile; endif; ?>
