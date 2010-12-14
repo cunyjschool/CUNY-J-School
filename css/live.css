@@ -63,6 +63,7 @@ body#live .main .content .video-player {
 	padding: 10px;
 	width: 720px;
 	float: left;
+	min-height: 400px;
 }
 
 body#live .main .content .video-sidebar {

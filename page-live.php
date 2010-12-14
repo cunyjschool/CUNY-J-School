@@ -74,7 +74,11 @@ Template Name: Page - Live
     <div class="page full" id="page-<?php the_ID(); ?>">
 		
 		<div class="video-player">
-			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="720" height="480" id="utv174"><param name="flashvars" value="autoplay=false&brand=embed&cid=18332%2Ftest&locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/18332/test"/><embed flashvars="autoplay=false&brand=embed&cid=18332%2Ftest&locale=en_US" width="720" height="480" allowfullscreen="true" allowscriptaccess="always" id="utv174" name="utv_n_143574" src="http://www.ustream.tv/flash/live/18332/test" type="application/x-shockwave-flash" /></object>
+			<?php if ( $primary_livestream = get_post_meta( get_the_id(), 'primary_livestream', true ) ) : ?>
+				<?php echo $primary_livestream; ?>
+			<?php else: ?>
+				<p>Please add an embed code to the 'primary_livestream' custom field for this page.</p>
+			<?php endif; ?>
 		</div>
 		
 		<div class="video-sidebar">
