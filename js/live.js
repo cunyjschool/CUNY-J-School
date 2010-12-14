@@ -130,7 +130,8 @@ jQuery(document).ready(function(){
 		var embed_to_load = cunyj_live_secondary_livestream;
 		jQuery('.video-player').html(embed_to_load);
 		jQuery('.video-backup').remove();
-		jQuery('.video-backup-data').remove();		
+		jQuery('.video-backup-data').remove();
+		return false;
 	})
 	
 	jQuery('ul.switcher li').click(function(){
