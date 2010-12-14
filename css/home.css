@@ -173,9 +173,15 @@
 #home-slideshow {
 	width: 700px;
 	height: 450px;
+	overflow: hidden;
 	background: #eee;
 	padding: 10px;
 	float: left;
+}
+
+#home-slideshow #ngg-gallery-1-0 {
+	height: 450px;
+	overflow: hidden;
 }
 
 #news-home {
