@@ -122,10 +122,10 @@ Template Name: Page - Live
 			
 			<div class="sidebar-data">
 				<?php if ( $flickr_json = get_post_meta( get_the_id(), 'flickr_json', true ) ) : ?>
-					<span id="flickr-json"><?php echo $flickr_json; ?></span>
+					<span id="flickr-json"><?php echo html_entity_decode( $flickr_json ); ?></span>
 				<?php endif; ?>
 				<?php if ( $twitter_json = get_post_meta( get_the_id(), 'twitter_json', true ) ) : ?>
-					<span id="twitter-json"><?php echo $twitter_json; ?></span>
+					<span id="twitter-json"><?php echo html_entity_decode( $twitter_json ); ?></span>
 				<?php endif; ?>
 			</div>
 		</div>

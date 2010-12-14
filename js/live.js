@@ -25,6 +25,7 @@ function cunyj_live_flickrstream() {
 	jQuery('#flickr-updates').show();
 	var json_url = jQuery('#flickr-json').html();
 	json_url += '&callback=?';
+	json_url = json_url.replace(/&amp;/ig, '&' );
 	jQuery.getJSON( json_url );
 }
 
@@ -36,7 +37,6 @@ function jsonFlickrFeed( data ) {
 	}
 	jQuery.each( data.items, function( key, item ) {
 		if ( key < 6 ) {
-			
 			var item_html = '<li id="' + item.link + '"><a href="' + item.link + '" target="_blank">';
 			// Replace the medium size with the square size
 			item_img = item.media.m.replace( 'm.jpg', 's.jpg' );
@@ -66,7 +66,8 @@ function cunyj_live_twitterstream() {
 	jQuery('ul.switcher li#twitter').addClass('active');
 	jQuery('#twitter-updates').show();
 	var json_url = jQuery('#twitter-json').html();
-	json_url += '&callback=?';
+	json_url = json_url.replace(/&amp;/ig, '&' );	
+	json_url += '&callback=?';	
 	jQuery.getJSON( json_url, null, function( data ) {
 		jsonTwitterFeed( data );
 	} );
