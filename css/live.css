@@ -99,6 +99,10 @@ body#live .main .content .video-sidebar .sidebar-item#report-trouble, body#live 
 	color: #999999;
 }
 
+body#live .main .content .video-sidebar .sidebar-item#report-trouble a:hover {
+	color: #FFFFFF;
+}
+
 body#live .main .content .video-sidebar .sidebar-item#live-updates {
 	border-bottom:1px solid #EEEEEE;
 	display: none;
@@ -180,8 +184,16 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-upda
 }
 
 body#live .main .content .video-sidebar .sidebar-item p {
-	padding: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	line-height: 16px;
+}
+
+body#live .main .content .video-sidebar .sidebar-item p a:hover {
+	background-color: #FF9900;
+	color: #FFFFFF;
 }
 
 body#live .main .content .video-sidebar .sidebar-data {
