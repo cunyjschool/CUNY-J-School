@@ -167,6 +167,7 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-upda
 	margin-right: 5px;
 	margin-top: 7px;
 	margin-bottom: 7px;
+	clear: left;
 }
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates ul li img.avatar {

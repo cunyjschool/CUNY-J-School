@@ -35,7 +35,7 @@ function jsonFlickrFeed( data ) {
 		var run_once = true;
 	}
 	jQuery.each( data.items, function( key, item ) {
-		if ( key < 10 ) {
+		if ( key < 6 ) {
 			
 			var item_html = '<li id="' + item.link + '"><a href="' + item.link + '" target="_blank">';
 			// Replace the medium size with the square size
@@ -79,7 +79,7 @@ function jsonTwitterFeed( data ) {
 		var run_once = true;
 	}
 	jQuery.each( data.results, function( key, tweet ) {
-		if ( key < 10 ) {
+		if ( key < 3 ) {
 			
 			var tweet_html = '<li id="' + tweet.id + '">'
 			tweet_html += '<img src="' + tweet.profile_image_url + '" height="32px" width="32px" class="avatar" />';			
