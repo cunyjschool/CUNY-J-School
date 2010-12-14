@@ -67,7 +67,7 @@ body#live .main .content .video-player {
 
 body#live .main .content .video-sidebar {
 	float: left;
-	margin-top: 20px;
+	margin-top:10px;
 	width: 235px;
 	background-color: #F9F9F9;
 	border-left: 5px solid #DDDDDD;
@@ -79,20 +79,26 @@ iframe#wufooForms7p4p3 form.wufoo h2 {
 }
 
 body#live .main .content .video-sidebar .sidebar-item#interest-capture a {
-	font-size: 16px;
-	padding: 10px;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-left: 35px;
+	padding-bottom: 15px;
+	padding-right: 10px;
+	margin-left: -5px;
+	background-color: #FFFFFF;
+	background-image:url("../images/icons/email_s24.png");
+	background-position:8px 6px;
+	background-repeat:no-repeat;
 	display: inline-block;
-	width: 215px;
-	color: #FF9900;
-	text-decoration: none;
-	border-top:1px solid #F9F9F9;
-	border-bottom:1px solid #EEEEEE;
+	width: 195px;
+	color: #0066cc;
+	text-decoration: underline;
 }
 
 body#live .main .content .video-sidebar .sidebar-item#interest-capture a:hover {
 	background-color: #FF9900;
 	color: #FFF;
-	border-top-color: #DDDDDD;
+	text-decoration: none;
 }
 
 body#live .main .content .video-sidebar .sidebar-item#report-trouble, body#live .main .content .video-sidebar .sidebar-item#report-trouble a {
@@ -119,7 +125,7 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher l
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 5px;
-	color: #666666;
+	color: #999999;
 	width: 75px;
 	background-color: #F1F1F1;
 }
