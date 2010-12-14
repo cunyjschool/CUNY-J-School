@@ -124,21 +124,12 @@ Template Name: Page - Live
 				<p>Trouble with the livestream or chat? Email <a href="mailto:webmaster@journalism.cuny.edu?subject=Issue with livestream and/or chat">webmaster@journalism.cuny.edu</a> and we'll help out!</p>
 			</div>
 			
-			<div class="sidebar-data">
-				<?php if ( $flickr_json = get_post_meta( get_the_id(), 'flickr_json', true ) ) : ?>
-					<span id="flickr-json"><?php echo html_entity_decode( $flickr_json ); ?></span>
-				<?php endif; ?>
-				<?php if ( $twitter_json = get_post_meta( get_the_id(), 'twitter_json', true ) ) : ?>
-					<span id="twitter-json"><?php echo html_entity_decode( $twitter_json ); ?></span>
-				<?php endif; ?>
-			</div>
 		</div>
 		
 		<div class="clear"></div>
 		
 		<?php if ( $secondary_livestream = get_post_meta( get_the_id(), 'secondary_livestream', true ) ) : ?>
 		<div class="video-backup">If this video is down, please <a href="#">try the mirror stream</a></div>
-		<div class="video-backup-data"><?php echo "<script type='text/javascript'> var cunyj_live_secondary_livestream = '$secondary_livestream'; </script>"; ?></div>
     	<?php endif; ?>
 
     	<div class="entry">
@@ -153,6 +144,20 @@ Template Name: Page - Live
 
 	</div>
 </div>
+
+<?php 
+$flickr_json = ( $flickr_json = get_post_meta( get_the_id(), 'flickr_json', true ) ) ? $flickr_json : '';
+$twitter_json = ( $twitter_json = get_post_meta( get_the_id(), 'twitter_json', true ) ) ? $twitter_json : '';
+$meebo_chat = ( $meebo_chat = get_post_meta( get_the_id(), 'meebo_chat', true ) ) ? $meebo_chat : '';
+$primary_livestream = ( $primary_livestream = get_post_meta( get_the_id(), 'primary_livestream', true ) ) ? $primary_livestream : '';
+$secondary_livestream = ( $secondary_livestream = get_post_meta( get_the_id(), 'secondary_livestream', true ) ) ? $secondary_livestream : '';				?>
+<script type="text/javascript">
+	var cunyj_live_flickr_json = '<?php echo $flickr_json; ?>';
+	var cunyj_live_twitter_json = '<?php echo $twitter_json; ?>';
+	var cunyj_live_meebo_chat = '<?php echo $meebo_chat; ?>';	
+	var cunyj_live_primary_livestream = '<?php echo $primary_livestream; ?>';	
+	var cunyj_live_secondary_livestream = '<?php echo $secondary_livestream; ?>';	
+</script>
 
 
 <?php get_footer(); ?>

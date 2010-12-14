@@ -15,10 +15,10 @@ return str;
  */
 function cunyj_live_loadpage() {
 	
-	if ( jQuery('#flickr-json').length > 0 || jQuery('#twitter-json').length > 0 ) {
+	if ( typeof(cunyj_live_flickr_json) != 'undefined' || typeof(cunyj_live_twitter_json) != 'undefined' ) {
 		jQuery('#live-updates').show();
-		if ( jQuery('#flickr-json').length > 0 ) {
-			cunyj_live_flickrstream();
+		if ( typeof(cunyj_live_flickr_json) != 'undefined' ) {
+			cunyj_live_flickrstream();			
 		}
 	} else {
 		return false;
@@ -30,9 +30,12 @@ function cunyj_live_loadpage() {
  * Starts the live imagestream updates
  */
 function cunyj_live_flickrstream() {
+	if ( typeof(cunyj_live_flickr_json) == 'undefined' ) {
+		return false;
+	}
 	jQuery('ul.switcher li#flickr').addClass('active');
 	jQuery('#flickr-updates').show();
-	var json_url = jQuery('#flickr-json').html();
+	var json_url = cunyj_live_flickr_json;
 	json_url += '&callback=?';
 	json_url = json_url.replace(/&amp;/ig, '&' );
 	jQuery.getJSON( json_url );
@@ -72,9 +75,12 @@ function jsonFlickrFeed( data ) {
  * Starts the live Twitterstream updates
  */
 function cunyj_live_twitterstream() {
+	if ( typeof(cunyj_live_twitter_json) == 'undefined' ) {
+		return false;
+	}
 	jQuery('ul.switcher li#twitter').addClass('active');
 	jQuery('#twitter-updates').show();
-	var json_url = jQuery('#twitter-json').html();
+	var json_url = cunyj_live_twitter_json;
 	json_url = json_url.replace(/&amp;/ig, '&' );	
 	json_url += '&callback=?';	
 	jQuery.getJSON( json_url, null, function( data ) {
@@ -118,10 +124,13 @@ function jsonTwitterFeed( data ) {
  * Insert the chat widget into the page
  */
 function cunyj_live_meebochat() {
-	var chat_embed = '<div style="width:225px"><style>.mcrmeebo { display: block; background:url("http://widget.meebo.com/r.gif") no-repeat top right; } .mcrmeebo:hover { background:url("http://widget.meebo.com/ro.gif") no-repeat top right; } </style><object width="225" height="275"><param name="movie" value="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM"></param><embed src="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM" type="application/x-shockwave-flash" width="225" height="275" /></object><a target="_blank" href="http://www.meebo.com/rooms/" class="mcrmeebo"><img alt="Create a Meebo Chat Room" src="http://widget.meebo.com/b.gif" width="225" height="45" style="border:0px"/></a></div>';
+	if ( typeof(cunyj_live_meebo_chat) == 'undefined' ) {
+		return false;
+	}	
+	//var chat_embed = '<div style="width:225px"><style>.mcrmeebo { display: block; background:url("http://widget.meebo.com/r.gif") no-repeat top right; } .mcrmeebo:hover { background:url("http://widget.meebo.com/ro.gif") no-repeat top right; } </style><object width="225" height="275"><param name="movie" value="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM"></param><embed src="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM" type="application/x-shockwave-flash" width="225" height="275" /></object><a target="_blank" href="http://www.meebo.com/rooms/" class="mcrmeebo"><img alt="Create a Meebo Chat Room" src="http://widget.meebo.com/b.gif" width="225" height="45" style="border:0px"/></a></div>';
 	jQuery('ul.switcher li#meebo').addClass('active');
 	jQuery('#meebo-chat').show();
-	jQuery('#meebo-chat').append(chat_embed);
+	jQuery('#meebo-chat').append(cunyj_live_meebo_chat);
 }
 
 jQuery(document).ready(function(){
