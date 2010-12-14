@@ -122,12 +122,12 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher {
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li {
 	display: inline-block;
-	padding-left: 35px;
+	padding-left: 27px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 5px;
 	color: #999999;
-	width: 75px;
+	width: 43px;
 	background-color: #F1F1F1;
 }
 
@@ -138,21 +138,28 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher l
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li#twitter {
 	background-image:url("../images/sprites/20101104sprite.png");
-	background-position:5px -40px;
+	background-position:-3px -40px;
 	background-repeat:no-repeat;
 }
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li#flickr {
 	background-image:url("../images/sprites/20101104sprite.png");
-	background-position:5px -184px;
+	background-position:-3px -184px;
 	background-repeat:no-repeat;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li#meebo {
+	background-image:url("../images/icons/googletalk_s16.png");
+	background-position:7px 6px;
+	background-repeat:no-repeat;
+	width: 44px;
 }
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li:hover {
 	cursor: pointer;
 }
 
-body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates {
+body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates #meebo-chat {
 	display:none;
 	margin-bottom: 5px;
 }
@@ -190,6 +197,11 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-upda
 	margin-left: 37px;
 }
 
+body#live .main .content .video-sidebar .sidebar-item#live-updates #meebo-chat {
+	padding: 5px;
+	margin-top: 5px;
+}
+
 body#live .main .content .video-sidebar .sidebar-item p {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -199,8 +211,7 @@ body#live .main .content .video-sidebar .sidebar-item p {
 }
 
 body#live .main .content .video-sidebar .sidebar-item p a:hover {
-	background-color: #FF9900;
-	color: #FFFFFF;
+	background-color: #FFF7A6;
 }
 
 body#live .main .content .video-sidebar .sidebar-data {

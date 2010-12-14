@@ -104,37 +104,50 @@ function jsonTwitterFeed( data ) {
 	twitter_timeout = setTimeout( 'cunyj_live_twitterstream()', 3000 );	
 }
 
+/**
+ * Insert the chat widget into the page
+ */
+function cunyj_live_meebochat() {
+	var chat_embed = '<div style="width:225px"><style>.mcrmeebo { display: block; background:url("http://widget.meebo.com/r.gif") no-repeat top right; } .mcrmeebo:hover { background:url("http://widget.meebo.com/ro.gif") no-repeat top right; } </style><object width="225" height="275"><param name="movie" value="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM"></param><embed src="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM" type="application/x-shockwave-flash" width="225" height="275" /></object><a target="_blank" href="http://www.meebo.com/rooms/" class="mcrmeebo"><img alt="Create a Meebo Chat Room" src="http://widget.meebo.com/b.gif" width="225" height="45" style="border:0px"/></a></div>';
+	jQuery('ul.switcher li#meebo').addClass('active');
+	jQuery('#meebo-chat').show();
+	jQuery('#meebo-chat').append(chat_embed);
+}
+
 jQuery(document).ready(function(){
 	
 	jQuery('ul.switcher li').click(function(){
+		jQuery('.updates-wrap').hide();
+		clearTimeout(flickr_timeout);
+		clearTimeout(twitter_timeout);		
+		jQuery('#twitter-updates ul li').remove();
+		jQuery('#flickr-updates ul li').remove();
+		jQuery('#meebo-chat').empty();
+		
 		if ( jQuery(this).attr('id') == 'twitter') {
 			if ( jQuery(this).hasClass('active') ) {
 				jQuery('ul.switcher li').removeClass('active');
-				clearTimeout(twitter_timeout);				
-				jQuery('#twitter-updates').hide();			
-				jQuery('#twitter-updates ul li').remove();
 			} else {
 				jQuery('ul.switcher li').removeClass('active');
 				jQuery(this).addClass('active');
-				clearTimeout(flickr_timeout);
-				jQuery('#flickr-updates').hide();		
-				jQuery('#flickr-updates ul li').remove();
 				cunyj_live_twitterstream();
 			}
 		} else if ( jQuery(this).attr('id') == 'flickr' ) {
 			if ( jQuery(this).hasClass('active') ) {
 				jQuery('ul.switcher li').removeClass('active');
-				clearTimeout(flickr_timeout);				
-				jQuery('#flickr-updates').hide();		
-				jQuery('#flickr-updates ul li').remove();
 			} else {
 				jQuery('ul.switcher li').removeClass('active');
 				jQuery(this).addClass('active');
-				clearTimeout(twitter_timeout);
-				jQuery('#twitter-updates').hide();			
-				jQuery('#twitter-updates ul li').remove();
 				cunyj_live_flickrstream();
 			}	
+		} else if ( jQuery(this).attr('id') == 'meebo' ) {					
+			if ( jQuery(this).hasClass('active') ) {
+				jQuery('ul.switcher li').removeClass('active');
+			} else {
+				jQuery('ul.switcher li').removeClass('active');
+				jQuery(this).addClass('active');
+				cunyj_live_meebochat();
+			}
 		}
 	});
 	

@@ -86,9 +86,10 @@ Template Name: Page - Live
 				<ul class="switcher">
 					<li class="button" id="flickr">Photos</li>
 					<li class="button" id="twitter">Tweets</li>
+					<li class="button" id="meebo">Chat</li>
 				</ul>
 				
-				<div id="flickr-updates">
+				<div id="flickr-updates" class="updates-wrap">
 					<ul>
 						
 					</ul>
@@ -98,7 +99,7 @@ Template Name: Page - Live
 					<p></p>
 				</div>
 				
-				<div id="twitter-updates">
+				<div id="twitter-updates" class="updates-wrap">
 					<ul>
 						
 					</ul>
@@ -106,6 +107,10 @@ Template Name: Page - Live
 					<div style="clear:left;"></div>
 					
 					<p></p>
+				</div>
+				
+				<div id="meebo-chat" class="updates-wrap">
+					
 				</div>
 				
 			</div>
