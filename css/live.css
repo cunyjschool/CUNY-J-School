@@ -105,7 +105,8 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates {
 }
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher {
-	
+	background-color: #F1F1F1;
+	margin-right: 1px;	
 }
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li {
@@ -114,12 +115,13 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher l
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 5px;
-	color: #555555;
+	color: #666666;
 	width: 75px;
+	background-color: #F1F1F1;
 }
 
 body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher li.active {
-	background-color: #F2F2F2;
+	background-color: #F9F9F9;
 	color: #333333;
 }
 
@@ -139,8 +141,41 @@ body#live .main .content .video-sidebar .sidebar-item#live-updates ul.switcher l
 	cursor: pointer;
 }
 
-body#live .main .content .video-sidebar .sidebar-item#live-updates ul#flickr-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates ul#twitter-updates {
+body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates, body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates {
 	display:none;
+	margin-bottom: 5px;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates ul li {
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-top: 10px;
+	float: left;
+	line-height: 0;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates ul li a img {
+	border: 5px solid #DDDDDD;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates #flickr-updates ul li a:hover img {
+	border-color: #FF9900;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates ul li {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates ul li img.avatar {
+	float: left;
+	margin-top: 5px;
+}
+
+body#live .main .content .video-sidebar .sidebar-item#live-updates #twitter-updates ul li div.tweet-text {
+	margin-left: 37px;
 }
 
 body#live .main .content .video-sidebar .sidebar-item p {

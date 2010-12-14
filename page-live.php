@@ -88,15 +88,28 @@ Template Name: Page - Live
 					<li class="button" id="twitter">Tweets</li>
 				</ul>
 				
-				<ul id="flickr-updates">
+				<div id="flickr-updates">
+					<ul>
+						
+					</ul>
 					
-				</ul>
+					<div style="clear:left;"></div>
+					
+					<p></p>
+				</div>
 				
-				<ul id="flickr-updates">
-
-				</ul>
+				<div id="twitter-updates">
+					<ul>
+						
+					</ul>
+					
+					<div style="clear:left;"></div>
+					
+					<p></p>
+				</div>
 				
 			</div>
+			
 			
 			<div class="sidebar-item" id="report-trouble">
 				<p>Trouble with the livestream or chat? Email <a href="mailto:webmaster@journalism.cuny.edu?subject=Issue with livestream and/or chat">webmaster@journalism.cuny.edu</a> and we'll help out!</p>
