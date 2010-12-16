@@ -24,44 +24,44 @@
 	cursor: pointer;
 }
 
-#databases .content {
+#databases .content, #single_database .content {
 	margin-top: 10px;
 }
 
-#databases .database {
+#databases .database, #single_database .database {
 	border-bottom: 1px solid #EEEEEE;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-#databases .database .left-col {
+#databases .database .left-col, #single_database .database .left-col {
 	float: left;
-	width: 250px;
+	width: 235px;
 }
 
-#databases .database .right-col {
+#databases .database .right-col, #single_database .database .right-col {
 	margin-left: 250px;
 }
 
-#databases .database .right-col .topics {
-	text-transform: uppercase;
-}
-
-#databases .database h3.title {
+#databases .database h3.title, #single_database .database h3.title {
 	font-weight: normal;
 	margin-top: 5px;
 }
 
-#databases .database h3.title a {
+#databases .database h3.title a, #single_database .database h3.title a {
 	color: #0066cc;
 }
 
-#databases .database .description {
+#databases .database .description, #single_database .database .description {
 	font-size: 14px;
 	line-height: 22px;
 }
 
-#databases .database p.meta, #databases .database p.meta a {
+#databases .database p.meta, #databases .database p.meta a, #single_database .database p.meta, #single_database .database p.meta a {
 	color: #999999;
 	font-size: 12px;
+}
+
+#databases .database .right-col .topics, #single_database .database .right-col .topics {
+	text-transform: uppercase;
 }
