@@ -73,7 +73,7 @@ class cunyj_databases
 						'show_tagcloud' => false,
 						);
 		
-		register_taxonomy('cunyj_database_topics', 'cunyj_database', $args);
+		register_taxonomy( 'cunyj_database_topics', 'cunyj_database', $args );
 		
 		
 	}

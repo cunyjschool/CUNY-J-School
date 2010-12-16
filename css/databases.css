@@ -1,0 +1,70 @@
+#database-search input.search-box {
+	padding: 3px;
+	font-size: 16px;
+	width: 510px;
+}
+
+#database-search button.search-button {
+	text-decoration: none;
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #F9F9F9;
+	border-color: #EEEEEE;
+	font-size: 16px;
+	margin-left: 3px;
+}
+
+#database-search button.search-button:hover {
+	background-color: #FF9900;
+	border-color: #EF8F00;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+#databases .content {
+	margin-top: 10px;
+}
+
+#databases .database {
+	border-bottom: 1px solid #EEEEEE;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#databases .database .left-col {
+	float: left;
+	width: 250px;
+}
+
+#databases .database .right-col {
+	margin-left: 250px;
+}
+
+#databases .database .right-col .topics {
+	text-transform: uppercase;
+}
+
+#databases .database h3.title {
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+#databases .database h3.title a {
+	color: #0066cc;
+}
+
+#databases .database .description {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+#databases .database p.meta, #databases .database p.meta a {
+	color: #999999;
+}
+
+#databases .database p.meta a.permalink {
+	float: right;
+}

@@ -46,6 +46,8 @@ class cunyj
 			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), $version);
 			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), $version);
 			
+			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), $version);
+			
 			add_action( 'wp_enqueue_scripts', array(&$this, 'wp_enqueue_scripts' ) );
 		}
 		
