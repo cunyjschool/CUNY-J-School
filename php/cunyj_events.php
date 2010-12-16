@@ -1,5 +1,7 @@
 <?php
 
+if ( !class_exists( 'cunyj_events' ) ) {
+
 class cunyj_events
 {
 	
@@ -318,8 +320,8 @@ class cunyj_events
 		}		
 	}
 	
-	
 }
 
+}
 
 ?>
