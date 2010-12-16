@@ -51,7 +51,14 @@
 			}
 			$all_topics = rtrim( $all_topics, ', ' );
 			?>
-			<p class="meta"><a class="permalink" href="<?php the_permalink(); ?>">Permalink</a><?php echo $all_topics; ?></p>
+			<p class="meta">
+				<span class="right">
+				<?php if ( $tutorial_link ): ?>
+				<a class="tutorial" href="<?php echo $tutorial_link; ?>">Tutorial</a> | 
+				<?php endif; ?>	
+				<a class="permalink" href="<?php the_permalink(); ?>">Permalink</a>
+				</span>
+				<span class="topics"><?php echo $all_topics; ?></span></p>
 			<?php endif; ?>
 		</div>
 	

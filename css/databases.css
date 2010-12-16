@@ -63,8 +63,5 @@
 
 #databases .database p.meta, #databases .database p.meta a {
 	color: #999999;
-}
-
-#databases .database p.meta a.permalink {
-	float: right;
+	font-size: 12px;
 }
