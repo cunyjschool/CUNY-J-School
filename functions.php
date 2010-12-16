@@ -7,6 +7,7 @@ wp_enqueue_script('jquery');
 define( 'CUNYJ_PREFIX' , 'cunjy_' );
 
 include_once('php/cunyj_events.php');
+include_once('php/cunyj_databases.php');
 
 class cunyj
 {
@@ -19,6 +20,7 @@ class cunyj
 		global $wpdb;
 		
 		$this->events = new cunyj_events();
+		$this->databases = new cunyj_databases();		
 		
 		$this->options = get_option( $this->options_group_name );
 		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
