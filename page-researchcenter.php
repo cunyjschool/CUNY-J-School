@@ -89,9 +89,12 @@ Template Name: Page - Research Center
     
 		<?php the_content(); ?>
 		<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-      </div>
+		
+		<?php edit_post_link( 'Edit page', '<div class="edit-link">', '</div>' ); ?>
+		
     </div>
-		<?php endwhile; endif; ?>
+
+	<?php endwhile; endif; ?>
 		
 	</div>
 

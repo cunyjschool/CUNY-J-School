@@ -41,7 +41,7 @@ Template Name: Page - Entrepreneurial Journalism
 			<?php the_content(); ?>
 			<?php wp_link_pages(); ?>
 			
-			<?php edit_post_link( 'Edit this page', '<div class="edit-link">', '</div>' ); ?>
+			<?php edit_post_link( 'Edit page', '<div class="edit-link">', '</div>' ); ?>
       	
 		</div><!-- END .entry -->
 	

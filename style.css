@@ -799,6 +799,7 @@ div#message.updated {
 .entry div.edit-link {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	text-align: right;
 }
 
 .entry div.edit-link a {
