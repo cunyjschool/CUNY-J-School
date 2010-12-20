@@ -721,6 +721,7 @@ img.news-photo {
 	line-height: 24px;
 	font-weight: normal;
 	margin-top: 3px;
+	font-style: italic;
 }
 
 .main#entrepreneurial-journalism-landing #pitch-competition-winners ul li p {
@@ -762,16 +763,23 @@ img.news-photo {
 	margin-bottom: 10px;
 }
 
+.main#entrepreneurial-journalism-landing #application-information {
+	text-align: center;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .main#entrepreneurial-journalism-landing #application-information h3 {
 	font-weight: normal;
 	font-size: 24px;
 	margin-bottom: 15px;
-	margin-top: 10px;
+	margin-top: 25px;
 }
 
 .main#entrepreneurial-journalism-landing #application-information p {
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .main#entrepreneurial-journalism .sidebar .widget_text h4 {
