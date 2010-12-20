@@ -137,6 +137,30 @@
 	list-style-type: none;
 }
 
+.sidebar .widget a.interest-capture {
+	font-size: 15px;
+	padding-top: 6px;
+	padding-left: 35px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+	margin-left: -5px;
+	border-top: 7px solid #FFFFFF;
+	border-left: 7px solid #FFFFFF;	
+	border-bottom: 12px solid #FFFFFF;	
+	background-color: #FFF7A6;
+	background-image:url("../images/icons/email_s24.png");
+	background-position:4px 3px;
+	background-repeat:no-repeat;
+	display: block;
+	width: auto;
+	color: #666666;
+	text-decoration: none;
+}
+
+.sidebar .widget a.interest-capture:hover {
+	text-decoration: underline;
+}
+
 #search_sidebar {
 	width: 240px;
 }

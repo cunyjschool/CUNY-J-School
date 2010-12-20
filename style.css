@@ -544,23 +544,46 @@ img.news-photo {
 	padding-top: 0;
 }
 
-.main#entrepreneurial-journalism .sidebar #entrepreneurial-journalism-course-summaries {
-	background-color: #F9F9F9;
+.main#entrepreneurial-journalism .content #news-innovation-blog {
+	margin-top: 10px;
+	float: right;
+	width: 275px;
 }
 
-.main#entrepreneurial-journalism .sidebar #entrepreneurial-journalism-course-summaries h4 {
-	border-bottom:1px solid #EEEEEE;
-	border-top:1px solid #FFFFFF;
-	font-size: 14px;
-	padding: 5px;
+.main#entrepreneurial-journalism .content #news-innovation-blog h4 {
+	background-image:url("images/sprites/20101104sprite.png");
+	background-position:-10px -296px;
+	background-repeat:no-repeat;
+	padding-left: 23px;
 }
 
-.main#entrepreneurial-journalism .sidebar #entrepreneurial-journalism-course-summaries h4 a {
+.main#entrepreneurial-journalism .content #news-innovation-blog h4 a {
+	color: #333333;
+}
+
+.main#entrepreneurial-journalism .content #news-innovation-blog ul {
+	margin-top: 5px;
+}
+
+.main#entrepreneurial-journalism .content #news-innovation-blog ul li {
+	padding: 5px 0 5px 0;
+	margin-left: 10px;
+	list-style-type: square;
+	color: #EEEEEE;
+	border-bottom: 1px dotted #EEEEEE;
+}
+
+.main#entrepreneurial-journalism .content #news-innovation-blog ul li a {
 	display: block;
+	width: 100%;
+	text-decoration: none;
 }
 
-.main#entrepreneurial-journalism .sidebar #entrepreneurial-journalism-course-summaries p {
-	padding: 5px;
+.main#entrepreneurial-journalism .sidebar .widget_text h4 {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	margin-top: 10px;
 }
 
 .main#research-center .research-center-info-zone {
@@ -823,6 +846,20 @@ div#message.updated {
 
 .entry div.edit-link a {
 	color: #999999;
+}
+
+.content .thumbnails {
+	background-color: #F9F9F9;
+	padding: 5px;
+}
+
+.content .thumbnails a img {
+	border: 5px solid #FFFFFF;
+	margin: 5px;	
+}
+
+.content .thumbnails a:hover img {
+	border-color: #FF9900;
 }
 
 #page-image {
