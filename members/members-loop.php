@@ -16,8 +16,6 @@
 			
 			<div class="item-action">
 				<?php bp_member_add_friend_button() ?>
-
-				<?php do_action( 'bp_directory_members_actions' ) ?>
 			</div>
 
 			<div class="item">
