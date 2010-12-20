@@ -51,6 +51,17 @@ class cunyj
 			add_action( 'wp_enqueue_scripts', array(&$this, 'wp_enqueue_scripts' ) );
 		}
 		
+		register_nav_menus(
+			array(
+				'primary_navigation' => 'Primary Navigation',
+				'currentstudents' => 'Current Students',
+				'about' => 'About',
+				'research_center' => 'Research Center',
+				'entrepreneurial_journalism' => 'Entrepreneurial Journalism',
+				'livestream_navigation' => 'CUNY J-School Live',			
+				)
+			);
+		
 	}
 	
 	function admin_init() {
@@ -270,22 +281,6 @@ if ( function_exists('register_sidebar') ) {
 	// Sidebar for Entrepreneurial Journalism
 	register_sidebar( array( 'id' => 'entrepreneurial_journalism', 'name' => 'Entrepreneurial Journalism', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
 		
-}
-
-/**
- * Modify the primary navigation menu with the admin
- */ 
-if ( function_exists( 'register_nav_menus' ) ) {
-	register_nav_menus(
-		array(
-			'primary_navigation' => 'Primary Navigation',
-			'currentstudents' => 'Current Students',
-			'about' => 'About',
-			'research_center' => 'Research Center',
-			'entrepreneurial_journalism' => 'Entrepreneurial Journalism',
-			'livestream_navigation' => 'CUNY J-School Live',			
-			)
-		);
 }
 
 ?>
