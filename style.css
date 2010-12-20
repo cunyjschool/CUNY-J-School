@@ -46,6 +46,31 @@ a {
 a img {
 	border: 0; }
 	
+a.interest-capture {
+	font-size: 15px;
+	padding-top: 6px;
+	padding-left: 35px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+	margin-left: -5px;
+	border-top: 7px solid #FFFFFF;
+	border-left: 7px solid #FFFFFF;	
+	border-bottom: 12px solid #FFFFFF;	
+	background-color: #FFF7A6;
+	background-image:url("images/icons/email_s24.png");
+	background-position:4px 3px;
+	background-repeat:no-repeat;
+	display: block;
+	width: auto;
+	color: #666666;
+	text-decoration: none;
+}
+
+a.interest-capture:hover {
+	text-decoration: underline;
+}
+	
+	
 h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
@@ -649,7 +674,7 @@ img.news-photo {
 	width: 600px;
 }
 
-.main#entrepreneurial-journalism-landing .body-text .entry p:first-child {
+.main#entrepreneurial-journalism-landing .body-text .entry p {
 	font-size: 16px;
 	line-height: 24px;
 }
@@ -735,6 +760,18 @@ img.news-photo {
 .main#entrepreneurial-journalism-landing #lead-by img.alignright {
 	margin-left: 20px;
 	margin-bottom: 10px;
+}
+
+.main#entrepreneurial-journalism-landing #application-information h3 {
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.main#entrepreneurial-journalism-landing #application-information p {
+	font-size: 14px;
+	line-height: 20px;
 }
 
 .main#entrepreneurial-journalism .sidebar .widget_text h4 {
