@@ -667,9 +667,9 @@ img.news-photo {
 }
 
 .main#entrepreneurial-journalism-landing .program-courses ul li {
-	display: inline-block;
+	float: left;
 	width: 150px;
-	margin-right: 18px;
+	margin-right: 20px;
 }
 
 .main#entrepreneurial-journalism-landing .program-courses ul li h4 {
@@ -679,10 +679,33 @@ img.news-photo {
 	line-height: 24px;
 }
 
+.main#entrepreneurial-journalism-landing #pitch-competition-winners {
+	padding: 10px 20px; 
+	background: #ff9900 url(images/backgrounds/orange-back.jpg) repeat;
+}
+
+.main#entrepreneurial-journalism-landing #pitch-competition-winners h3 {
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+.main#entrepreneurial-journalism-landing #pitch-competition-winners ul li h4 {
+	float: left;
+	width: 175px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	margin-top: 3px;
+}
+
+.main#entrepreneurial-journalism-landing #pitch-competition-winners ul li p {
+	margin-top: 0px;
+	margin-left: 200px;
+}
+
 .main#entrepreneurial-journalism-landing #lead-by {
-	margin-left: auto;
-	margin-right: auto;
-	width: 760px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .main#entrepreneurial-journalism-landing #lead-by .bio {
