@@ -796,6 +796,15 @@ div#message.updated {
 	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px;
 }
 
+.entry div.edit-link {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.entry div.edit-link a {
+	color: #999999;
+}
+
 #page-image {
 	float: right;
 	width: 300px;
