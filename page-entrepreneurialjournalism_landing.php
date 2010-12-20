@@ -7,32 +7,34 @@ Template Name: Page - Entrepreneurial Journalism landing
 <?php get_header(); ?>
 
 <div class="wrap">
-
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
+	
 	<div class="main" id="entrepreneurial-journalism">
-
+		
 		<h2 class="banner"><?php the_title(); ?></h2>
-
+		
 	<div class="sidebar right standard">
 
-		<?php
-			$courses = get_post_meta( get_the_id(), 'associated_course' );
-			
-			if ( count( $courses ) ) {
-				echo '<div class="sidebar-item" id="entrepreneurial-journalism-course-summaries">';
-				foreach( $courses as $course ) {
-					echo '<div class="course-description">' . $course . '</div>';
-				}
-				echo '</div>';
-			}
-		?>
+	<?php
+		$args = array(
+					'theme_location' => 'entrepreneurial_journalism',
+					'menu_class' => 'navigation default',
+					'menu_id' => 'entrepreneurial-journalism-navigation',
+					'fallback_cb' => false,
+			);
+
+		wp_nav_menu( $args );
+
+		echo '<ul class="widgets">';
+		dynamic_sidebar( 'entrepreneurial_journalism' );
+		echo '</ul>'; ?>
 
 	</div><!-- END .sidebar -->
-
+          
 	<div class="content">
+	
+	<div class="page left">
 
-	<div class="page left">	
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 		<div class="entry">
     
@@ -42,22 +44,15 @@ Template Name: Page - Entrepreneurial Journalism landing
 			<?php edit_post_link( 'Edit page', '<div class="edit-link">', '</div>' ); ?>
       	
 		</div><!-- END .entry -->
+	
+	<?php endwhile; endif; ?>
 		
 	</div><!-- END .page -->
 
 	<div style="clear:both;"></div>
 
-</div><!-- END .main -->	
-	
-	<?php endwhile; endif; ?>
+</div><!-- END .main -->
 
 </div><!-- END .wrap -->
 
 <?php get_footer(); ?>
-
-
-
-
-
-
-
