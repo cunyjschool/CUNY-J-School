@@ -51,6 +51,7 @@ class cunyj
 			add_action( 'wp_enqueue_scripts', array(&$this, 'wp_enqueue_scripts' ) );
 		}
 		
+		// Register all of our navigation menus
 		register_nav_menus(
 			array(
 				'primary_navigation' => 'Primary Navigation',
@@ -61,6 +62,11 @@ class cunyj
 				'livestream_navigation' => 'CUNY J-School Live',			
 				)
 			);
+			
+		// Add theme support for post thumbnails and register sizes
+		add_theme_support( 'post-thumbnails' );
+		add_image_size( '600px-width', 600 );
+		add_image_size( '64px-thumb', 64, 64, true );		
 		
 	}
 	
