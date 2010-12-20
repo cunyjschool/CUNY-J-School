@@ -538,6 +538,7 @@ img.news-photo {
 	margin-bottom: 15px;
 }
 
+
 .main#entrepreneurial-journalism .entry p:first-child {
 	font-size: 16px;
 	line-height: 24px;
@@ -577,6 +578,140 @@ img.news-photo {
 	display: block;
 	width: 100%;
 	text-decoration: none;
+}
+
+.main#entrepreneurial-journalism-landing .title {
+	color: #FF9900;
+	font-weight: normal;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.main#entrepreneurial-journalism-landing .statement {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main#entrepreneurial-journalism-landing .statement h2 {
+	text-align: center;
+	font-family: "Times New Roman", "Times", "Georgia", serif;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 42px;
+	margin-bottom: 30px;
+}
+
+.main#entrepreneurial-journalism-landing .row-section {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.main#entrepreneurial-journalism-landing .sidebar .sidebar-item#why h4 {
+	font-weight: normal;
+	color: #999999;
+	font-size: 14px;
+	margin-top: 7px;
+	margin-bottom: 15px;
+	font-style: italic;
+}
+
+.main#entrepreneurial-journalism-landing .sidebar .sidebar-item#why ol {
+	margin-left: 0px;
+	padding-left: 20px;
+	color: #999999;
+	font-style: italic;	
+}
+
+.main#entrepreneurial-journalism-landing .sidebar .sidebar-item#why ol li {
+	border-bottom: 1px dotted #EEEEEE;
+	margin-top: 5px;
+	padding-bottom: 7px;	
+}
+
+.main#entrepreneurial-journalism-landing .sidebar .sidebar-item#why ol li span {
+	color: #333333;
+	font-style: normal;
+}
+
+.main#entrepreneurial-journalism-landing .sidebar .sidebar-item a.twitter-follow {
+	display: block;
+	background-image:url("images/icons/twitter_32.png");
+	background-repeat:no-repeat;
+	padding-left: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size:15px;
+}
+
+.main#entrepreneurial-journalism-landing .body-text {
+	width: 600px;
+}
+
+.main#entrepreneurial-journalism-landing .body-text .entry p:first-child {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.main#entrepreneurial-journalism-landing .program-courses h3 {
+	font-weight: normal;
+	color: #999999;
+	font-size: 24px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.main#entrepreneurial-journalism-landing .program-courses ul {
+	
+}
+
+.main#entrepreneurial-journalism-landing .program-courses ul li {
+	display: inline-block;
+	width: 150px;
+	margin-right: 18px;
+}
+
+.main#entrepreneurial-journalism-landing .program-courses ul li h4 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 10px;
+	line-height: 24px;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by {
+	margin-left: auto;
+	margin-right: auto;
+	width: 760px;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by .bio {
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by .bio h3 {
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by .bio#jeremy h3 {
+	text-align: right;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by img {
+	border: 5px solid #EEEEEE;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by img.alignleft {
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.main#entrepreneurial-journalism-landing #lead-by img.alignright {
+	margin-left: 20px;
+	margin-bottom: 10px;
 }
 
 .main#entrepreneurial-journalism .sidebar .widget_text h4 {
