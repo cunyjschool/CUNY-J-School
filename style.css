@@ -1133,15 +1133,25 @@ div#message.updated {
 	color: #999;
 	padding: 10px 10px 0 10px;
 	text-align: right; }
+	
+.main .post h2 {
+	padding-bottom: 10px;
+}
 
 .post .lead-image {
 	background-color: #EFEFEF;
 	padding: 10px;
+	color: #666666;	
+}
+
+.post .lead-credit {
+	font-size: 10px;
+	float: right;
+	font-style: italic;
 }
 
 .post .lead-caption {
-	margin-top: 5px;
-	color: #666666;
+	margin-top: 3px;
 }
 		
 .photo {

@@ -19,6 +19,15 @@
 		<?php if ( has_post_thumbnail() ) {
 			echo '<div class="lead-image">';
 			the_post_thumbnail( '520px-width' );
+			$image_meta = wp_get_attachment_metadata( get_post_thumbnail_id() );
+			if ( $image_meta['image_meta']['credit'] ) {
+				echo '<div class="lead-credit">Photo by ' . $image_meta['image_meta']['credit'] . '</div>';
+			}
+			$image_data = get_post( get_post_thumbnail_id() );
+			if ( $image_data->post_excerpt ) {
+				echo '<div class="lead-caption">' . $image_data->post_excerpt . '</div>';
+			}
+			echo '<div class="clear"></div>';
 			echo '</div>';
 		} else if ( $photo = get_post_meta( get_the_id(), 'photo', true) ) {
 			echo '<div class="lead-image">';			
