@@ -104,8 +104,11 @@ Template Name: Page - Research Center
 
 </div>
 
-<?php get_footer(); ?>
+<script type="text/javascript">
+	cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 6, 'research-center-blog' );
+</script>
 
+<?php get_footer(); ?>
 
 
 
