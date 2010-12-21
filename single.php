@@ -15,15 +15,19 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
 	<div class="post" id="post-<?php the_ID(); ?>">
+		
+		<?php if ( has_post_thumbnail() ) {
+			echo '<div class="lead-image">';
+			the_post_thumbnail( '520px-width' );
+			echo '</div>';
+		} else if ( $photo = get_post_meta($post->ID, 'photo', true) ) {
+			echo '<img src="' . get_bloginfo('template_directory') . '/php/timthumb.php?src=' . $photo . '&h=300&w=540&zc=1&q=100" />';
+		} ?>
 
 		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
 
-      <div class="meta">By <?php the_author_link(); ?> | Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
-
-<?php if ( $photo = get_post_meta($post->ID, 'photo', true) ) { ?>
-<img src="<?php bloginfo('template_directory'); ?>/php/timthumb.php?src=<?php echo $photo; ?>&h=300&w=500&zc=1&q=100" alt="" class="photo"> 
-<?php } ?>
-
+		<div class="meta">By <?php the_author_link(); ?> | Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
+		
 <?php if ( $photo_caption = get_post_meta($post->ID, 'photo_caption', true) ) { ?><div class="photo-caption"><?php echo $photo_caption; ?></div><?php } ?>
 
 

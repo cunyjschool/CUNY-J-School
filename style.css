@@ -1133,6 +1133,11 @@ div#message.updated {
 	color: #999;
 	padding: 10px 10px 0 10px;
 	text-align: right; }
+
+.post .lead-image {
+	background-color: #EFEFEF;
+	padding: 10px;
+}
 		
 .photo {
 	border: 7px solid #efefef; }

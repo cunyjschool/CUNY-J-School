@@ -68,6 +68,7 @@ class cunyj
 			
 		// Add theme support for post thumbnails and register sizes
 		add_image_size( '600px-width', 600 );
+		add_image_size( '520px-width', 520 );
 		add_image_size( '64px-thumb', 64, 64, true );		
 		
 	}
