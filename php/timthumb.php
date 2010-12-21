@@ -33,8 +33,8 @@ if(!function_exists('imagecreatetruecolor')) {
 define ('CACHE_SIZE', 250);					// number of files to store before clearing cache
 define ('CACHE_CLEAR', 5);					// maximum number of files to delete on each cache clear
 define ('VERSION', '1.14');					// version number (to force a cache refresh)
-define ('DIRECTORY_CACHE', './cache');		// cache directory
-define ('DIRECTORY_TEMP', './temp');		// temp directory
+define ('DIRECTORY_CACHE', '../cache');		// cache directory
+define ('DIRECTORY_TEMP', '../temp');		// temp directory
 
 if (function_exists('imagefilter') && defined('IMG_FILTER_NEGATE')) {
 	$imageFilters = array(
