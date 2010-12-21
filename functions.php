@@ -3,6 +3,9 @@
 // Let us use jQuery on the front-end
 wp_enqueue_script('jquery');
 
+// Our theme needs to support post thumbnails
+add_theme_support( 'post-thumbnails' );
+
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
 define( 'CUNYJ_PREFIX' , 'cunjy_' );
 
@@ -64,7 +67,6 @@ class cunyj
 			);
 			
 		// Add theme support for post thumbnails and register sizes
-		add_theme_support( 'post-thumbnails' );
 		add_image_size( '600px-width', 600 );
 		add_image_size( '64px-thumb', 64, 64, true );		
 		
