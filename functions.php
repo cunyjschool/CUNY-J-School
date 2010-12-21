@@ -87,7 +87,6 @@ class cunyj
 		wp_enqueue_script( 'cunyj_main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), $this->version );
 		
 		// Load in footer
-		wp_enqueue_script( 'cunyj_home', get_bloginfo('template_directory') . '/js/home.js', array('jquery'), $this->version, true );
 		wp_enqueue_script( 'cunyj_live', get_bloginfo('template_directory') . '/js/live.js', array('jquery'), $this->version, true );
 		
 	}

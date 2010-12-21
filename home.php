@@ -263,5 +263,14 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 	</div>
 
 </div>
+
+<script type="text/javascript">
+	// Dynamically load network content on the homepage
+	cunyj_load_blog_posts( 'http://newsinnovation.com/', 4, 'news-innovation-posts' );
+	cunyj_load_blog_posts( 'http://writestuff.journalism.cuny.edu/', 4, 'write-stuff-posts' );
+	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
+	cunyj_load_blog_posts( 'http://digitalnewsjournalist.com/', 4, 'digital-news-journalist-posts' );	
+	cunyj_load_blog_posts( 'http://219mag.com/', 4, '219-mag-posts' );
+</script>
 	
 <?php get_footer(); ?>
