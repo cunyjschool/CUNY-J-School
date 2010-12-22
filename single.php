@@ -38,9 +38,9 @@
 			echo '</div>';
 		} ?>
 
-		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
+		<h2><?php the_title(); ?></h2>
 
-		<div class="meta">By <?php the_author_link(); ?> | Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
+		<div class="meta">By <?php the_author_link(); ?> | Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?><?php edit_post_link( 'Edit', ' | ', '' ); ?></div>
 
 			<div class="entry">
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
