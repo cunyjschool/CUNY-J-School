@@ -12,6 +12,7 @@ define( 'CUNYJ_VERSION', '1.2.7' );
 
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
+include_once('php/cunyj_capstones.php');
 
 class cunyj
 {
@@ -24,7 +25,8 @@ class cunyj
 		global $wpdb;
 		
 		$this->events = new cunyj_events();
-		$this->databases = new cunyj_databases();		
+		$this->databases = new cunyj_databases();
+		$this->databases = new cunyj_capstones();				
 		
 		$this->options = get_option( $this->options_group_name );
 		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
