@@ -243,6 +243,41 @@
 	width: 290px;
 }
 
+/**
+ * sidebar-news.php
+ */
+
+.main .sidebar .sidebar-item#admiss-links {
+	
+}
+
+.main .sidebar .sidebar-item#admiss-links ul {
+	
+}
+
+.main .sidebar .sidebar-item#admiss-links ul li {
+	background-image: none;
+	border-bottom: none;
+	padding: 0;
+	margin-left: 10px;
+}
+
+.main .sidebar .sidebar-item#admiss-links ul li a {
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-bottom: 1px solid #EEEEEE;
+	border-top: 1px solid #FFFFFF;
+	display: block;
+	padding: 7px 15px 7px 15px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.main .sidebar .sidebar-item#admiss-links ul li a:hover {
+	border-top-color: #EF8F00;
+	background-color: #FF9900;
+	color: #FFFFFF;
+}
+
 .main .sidebar#cunyj_event-sidebar li.event, .main .sidebar#news li.event {
 	margin-top: 20px;
 	margin-bottom: 20px;

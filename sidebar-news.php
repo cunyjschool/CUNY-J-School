@@ -1,14 +1,13 @@
 <div id="news" class="sidebar right medium">
-    <div id="admiss-links">
-      <h3><a href="/admissions/">Admissions</a></h3>
-      <ul>
-        <li><a href="/admissions/how-to-apply/">How to Apply</a></li>
-        <li><a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a></li>
-      </ul>
-    </div>
-    
+	
+    <div id="admiss-links" class="sidebar-item">
+		<ul>
+			<li id="how-to-apply"><a href="<?php bloginfo('url'); ?>/admissions/how-to-apply/">How to Apply</a></li>
+			<li id="request-info"><a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a></li>
+		</ul>
+	</div>
      
-	<div id="latest-news">
+	<div id="latest-news" class="sidebar-item">
 		<h3>Latest News</h3>
 		<ul>
 	<?php 
@@ -25,7 +24,7 @@
 		</ul>
     </div>
     
-    <div id="upcoming-events">
+    <div id="upcoming-events" class="sidebar-item">
 		<h3>Upcoming Events</h3>
 		<?php 
 		$args = array( 	'post_type'=>'cunyj_event',

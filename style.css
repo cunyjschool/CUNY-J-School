@@ -1170,9 +1170,10 @@ div#message.updated {
 	margin-bottom: 20px;
 	border-bottom: 1px dashed #eee; }
 	
-#latest-news, #upcoming-events, #cats-archives, #admiss-links {
+#latest-news, #upcoming-events, #cats-archives {
 	border-bottom: 1px solid #eee;
-	padding: 20px; }
+	padding: 20px;
+}
 	
 #category-list, #archives {
 	float: left;
