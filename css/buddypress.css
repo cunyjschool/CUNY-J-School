@@ -1,6 +1,10 @@
+#buddypress #item-header {
+	overflow:visible;
+}
+
 #buddypress h2 {
-  font-size: 24px;
-  margin-top: 10px;
+  	font-size: 24px;
+	margin-top: 0;
 	border-bottom: 1px solid #EEEEEE;
 	padding-bottom: 10px;
 }
@@ -341,8 +345,9 @@
 	margin-left: 170px;
 }
 
-#buddypress div#item-header div#item-header-avatar {
+#buddypress div#item-header-avatar {
 	float: none;
+	line-height: 0px;
 }
 
 #buddypress div#item-header h2 a {
