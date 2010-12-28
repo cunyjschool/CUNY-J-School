@@ -1,7 +1,7 @@
 <div id="sidebar">
 
 <ul id="give-now">
-<li><h4><a href="https://cunyjschool.wufoo.com/forms/q7p7r3/">DONATE NOW!</a></li>
+<li><h4><a href="<?php bloginfo('url'); ?>/donate/donate-to-j-school-online/">DONATE NOW!</a></li>
 </ul>
 
 <ul id="sidebar-nav">
