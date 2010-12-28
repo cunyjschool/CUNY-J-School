@@ -51,20 +51,25 @@ Template Name: Page - Entrepreneurial Journalism
   		<div class="program-courses row-section">
 			<h3>Program Courses</h3>
 			<ul>
-				<li><h4>New Business Models for News</h4>
+				<li><h4><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/new-business-models-for-news/">New Business Models for News</a></h4>
 					<p>Get a firm grounding in the dynamics of the news industry from profs and leading media execs sharing insights into how their businesses work.</p>
+					<p><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/new-business-models-for-news/">Learn more &rarr;</a></p>
 				</li>
-				<li><h4>Technology Immersion</h4>
+				<li><h4><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/technology-immersion/">Technology Immersion</a></h4>
 					<p>Dive into the newest tech - from iPad app development to HTML5 - focusing on the media and business context and journalistic opportunities.</p>
+					<p><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/technology-immersion/">Learn more &rarr;</a></p>
 				</li>
-				<li><h4>New Media Apprenticeship</h4>
+				<li><h4><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/media-apprenticeship/">New Media Apprenticeship</a></h4>
 					<p>Spend up to 10 days immersed in a New York startup. The startups need not be journalistic, but in most cases students will bring journalism value to the startup.</p>
+					<p><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/media-apprenticeship/">Learn more &rarr;</a></p>
 				</li>
-				<li><h4>New Business Incubation</h4>
+				<li><h4><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/business-incubation/">New Business Incubation</a></h4>
 					<p>Students will develop ideas, identify business models and create business plans. Incubation includes a weekly gathering and 1-on-1 work with faculty and industry experts.</p>
+					<p><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/business-incubation/">Learn more &rarr;</a></p>
 				</li>				
-				<li><h4>Fundamentals of Business</h4>
+				<li><h4><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/fundamentals-of-business/">Fundamentals of Business</a></h4>
 					<p>Master business basics through a rigorous combination of interactive workshops, live exercises, case studies, lively readings and engaging assignments.</p>
+					<p><a href="<?php bloginfo('url'); ?>/academics/entrepreneurial-journalism/fundamentals-of-business/">Learn more &rarr;</a></p>
 				</li>
 			</ul>
 			
