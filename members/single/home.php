@@ -32,7 +32,10 @@
 		<div id="item-body">
 			<?php do_action( 'bp_before_member_body' ) ?>
 
-			<?php if ( bp_is_user_activity() || !bp_current_component() ) : ?>
+			<?php if ( bp_is_user_profile() || !bp_current_component() ) : ?>
+				<?php locate_template( array( 'members/single/profile.php' ), true ) ?>
+
+			<?php elseif ( bp_is_user_activity() ) : ?>
 				<?php locate_template( array( 'members/single/activity.php' ), true ) ?>
 
 			<?php elseif ( bp_is_user_blogs() ) : ?>
@@ -46,9 +49,6 @@
 
 			<?php elseif ( bp_is_user_messages() ) : ?>
 				<?php locate_template( array( 'members/single/messages.php' ), true ) ?>
-
-			<?php elseif ( bp_is_user_profile() ) : ?>
-				<?php locate_template( array( 'members/single/profile.php' ), true ) ?>
 
 			<?php endif; ?>
 
