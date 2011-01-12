@@ -709,9 +709,14 @@ img.news-photo {
 	background: #ff9900 url(images/backgrounds/orange-back.jpg) repeat;
 }
 
-.main#entrepreneurial-journalism-landing #pitch-competition-winners h3 {
+.main#entrepreneurial-journalism-landing #pitch-competition-winners h3 a {
 	color: #FFFFFF;
 	font-weight: normal;
+}
+
+.main#entrepreneurial-journalism-landing #pitch-competition-winners a:hover {
+	background-color: transparent;
+	text-decoration: underline;
 }
 
 .main#entrepreneurial-journalism-landing #pitch-competition-winners ul li h4 {
@@ -727,6 +732,14 @@ img.news-photo {
 .main#entrepreneurial-journalism-landing #pitch-competition-winners ul li p {
 	margin-top: 0px;
 	margin-left: 200px;
+}
+
+.main#entrepreneurial-journalism-landing #pitch-competition-winners p#learn-more-awards {
+	text-align: right;
+}
+
+.main#entrepreneurial-journalism-landing #pitch-competition-winners p#learn-more-awards a {
+	color: #FFFFFF;
 }
 
 .main#entrepreneurial-journalism-landing #lead-by {

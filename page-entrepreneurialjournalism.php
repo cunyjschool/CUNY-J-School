@@ -96,7 +96,7 @@ Template Name: Page - Entrepreneurial Journalism
 		
 		<div class="row-section" id="pitch-competition-winners">
 				
-			<h3>2010 Student Seed Fund Recipients</h3>
+			<h3><a href="http://www.journalism.cuny.edu/2010/12/14/judges-hand-out-40000-in-seed-money-to-launch-journalistic-ventures/">2010 Student Seed Fund Recipients</a></h3>
 				
 			<ul>
 				<li><h4>Clear Health Costs</h4>
@@ -112,6 +112,8 @@ Template Name: Page - Entrepreneurial Journalism
 					<p>Overflow Publishing is an advertising cooperative that helps strengthen Brooklyn's print and online publications by aggregating audiences for advertisers in creative new ways.</p>
 				</li>
 			</ul>
+			
+			<p id="learn-more-awards"><a href="http://www.journalism.cuny.edu/2010/12/14/judges-hand-out-40000-in-seed-money-to-launch-journalistic-ventures/">Learn more about the awards &rarr;</a></p>
 			
 		</div>
 		
