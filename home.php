@@ -56,11 +56,18 @@
 			<h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
 		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); ?>
-  		<?php if ( $news_posts->have_posts() ) : while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
-			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-    	<?php endwhile; else: ?><p>There are currently no stories.</p>
+		<ul>
+  		<?php if ( $news_posts->have_posts() ) : ?>
+		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+			<li class="news-item">
+				<a href="<?php the_permalink(); ?>">
+				<h4><?php the_title(); ?></h4>
+				</a>
+			</li>
+    	<?php endwhile; else: ?>
+			<li>There are currently no stories.</li>
 		<?php endif; ?>
+		</ul>
 		
       	<div class="morelinks"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a></div>
 
