@@ -1790,8 +1790,9 @@ ul#give-now li li li a, #give-now li li li a:visited {
 	color: #666;
 	padding: 5px 10px 5px 35px; }
 
-
-
+.entry.event{
+  padding:10px;
+}
 
 
  /* Hide from IE Mac \*/

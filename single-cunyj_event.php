@@ -73,7 +73,7 @@
 			</div>
 
 
-	<div class="entry">
+	<div class="entry event">
 				
 		<?php the_content(); ?>
 			
