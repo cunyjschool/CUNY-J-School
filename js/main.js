@@ -44,6 +44,9 @@ function cunyj_load_flickr_thumbnails( url, items, zone ) {
 		jQuery.ajax({
 			url: url,
 			dataType: 'jsonp',
+			success: function( data ) {
+				
+			},
 		});
 	}
 } // END - cunyj_load_flickr_thumbnails()
