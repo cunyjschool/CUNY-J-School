@@ -2,7 +2,7 @@
 
 <div class="wrap">
 	
-	<div class="main">
+	<div class="main" id="single-main">
 		
 		<?php
 		if ( in_category(161) ) {
@@ -10,7 +10,7 @@
 		} else {
 			include 'sidebar-news.php'; } ?>
 	
-  <div class="content left">
+  <div class="content left" id="single-content">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     

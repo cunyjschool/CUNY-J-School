@@ -2,11 +2,11 @@
 
 <div class="wrap">
 	
-	<div class="main">
+	<div class="main" id="page-main">
 
   <?php get_sidebar( 'default_page' ); ?>
   
-	<div id="content" class="right small">
+	<div class="content right small" id="page-content">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	

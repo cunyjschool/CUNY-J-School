@@ -183,10 +183,6 @@ input.button.primary {
 	background-color: #FFFFFF;
 }
 
-#content.right.small {
-	margin-left: 255px;
-}
-
 /**
  * Property: width
  */
@@ -207,6 +203,9 @@ body.single-post .content {
  * Property: margin
  */
 
+.content.right.small {
+	margin-left: 255px;
+}
 
 /**
  * Element: h2
@@ -218,8 +217,8 @@ body.single-post h2, body.page h2 {
 
 body.archive h2 {
 	padding-bottom: 5px;
-	border-bottom: 3px solid #F8F8F8;
-	border-right: 3px solid #F8F8F8;
+	border-bottom: 3px solid #EEEEEE;
+	border-right: 3px solid #EEEEEE;
 }
 
 body.archive h2 span {
