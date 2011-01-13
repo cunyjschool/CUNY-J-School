@@ -37,7 +37,7 @@
   
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 <?php if ( !is_user_logged_in() && isset( $cunyj->options['enable_top_announcement']) && $cunyj->options['enable_top_announcement'] ) : ?>
 	<div id="top-alert"><?php echo $cunyj->options['top_announcement']; ?></div>
 <?php else : ?>
