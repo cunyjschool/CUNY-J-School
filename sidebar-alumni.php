@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="sidebar left">
 <ul id="sidebar-nav">
   <li><h4><a href="<?php bloginfo('url'); ?>/alumni/">Alumni</a></h4></li>
   <li><a href="<?php bloginfo('url'); ?>/career-services/">Career Services</a></li>

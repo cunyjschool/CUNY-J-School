@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="sidebar left">
 <ul id="sidebar-nav">
 <li><h4><a href="<?php bloginfo('url'); ?>/admissions/">Admissions</a></h4></li>
 <li><a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a>

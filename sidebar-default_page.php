@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="sidebar left">
 	<?php
 	//if the post has a parent
 	if ($post->post_parent){

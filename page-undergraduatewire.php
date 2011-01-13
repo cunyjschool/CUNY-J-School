@@ -1,41 +1,42 @@
 <?php
 /*
-Template Name: Community and Ethnic Media Conference
+Template Name: Section - CUNY Undergraduate Wire
 */
 ?>
 
 <?php get_header(); ?>
 
-<div class="wrap">
-	
-	<div class="main">
+<div class="wrap clearfix" id="content">
 
-  <div id="sidebar">
-  
+<div id="sidebar">
+
 <ul id="sidebar-nav">
-  <li><h4><a href="/community-and-ethnic-news-conference/">Community and Ethnic Media Conference</a></h4></li>
 
-  <li><a href="/community-and-ethnic-news-conference/agenda/">Agenda</a></li>
-  <li><a href="/community-and-ethnic-news-conference/rsvp/">RSVP</a></li>
-  <li><a href="/community-and-ethnic-news-conference/survey/">Survey</a></li>
-</ul><!-- end Sidebar-nav -->
+  <li><h4><a href="/cuny-undergraduate-wire/">CUNY Undergraduate Wire</a></h4></li>
 
-<div style="margin-top: 20px; margin-left: 5px;">
-  <ul><li><h4 style="margin: 0 0 10px 0;">Co-Sponsors</h4></li>
-  <li><a href="http://www.citylimits.org/"><img src="http://www.journalism.cuny.edu/wp-content/uploads/2010/04/CITYLIMITS_HORZ-210x110px.png" /></a></li>
-  <li><a href="http://www.hillmanfoundation.org/"><img src="http://www.journalism.cuny.edu/wp-content/uploads/2010/04/SHF_LogoLckup_LgSymb_2Crgb-210x110px.png" /></a></li>
-  <li><a href="http://www.indypressny.org/nycma/voices/418/"><img src="http://www.journalism.cuny.edu/wp-content/uploads/2010/04/NYCMA-LOGO-210x110px.png" /></a></li>
+  <h4 style="margin-top: 20px;"><strong>Sources:</strong></h4>
 
-  <li><a href="http://www.newyorkpressassociation.com/home.aspx"><img src="http://www.journalism.cuny.edu/wp-content/uploads/2010/04/NYPA_logo-210x113px.png" /></a></li>
-</ul>
-</div>
-
+<p><strong><a href="http://www.bridgenewspaper.net/">The Bridge</a></strong></p>
+<p><strong><a href="http://www.bronxnet.org/ ">Bronx Net</a></strong></p>
+<p><strong><a href="http://www.lcmeridian.com/ ">Meridian</a></strong></p>
+<p><strong><a href="http://www.brooklynexcelsior.com/home/index.cfm?buttonPushed=1&event=displaySearchResults&q=backgrounds">Excelsior</a></strong></p>
+<p><strong><a href="http://mywbcr.com ">WBCR</a></strong></p>
+<p><strong><a href="http://www.adafi.org/">ADAFI: The Voice of Medgar Evers College</a></strong></p>
+<p><strong><a href="http://www.baruchgradvoice.com/ ">The Graduate Voice</a></strong></p>
+<p><strong><a href="http://www.ccnycampus.com/ ">The Campus</a></strong></p>
+<p><strong><a href="http://www.ccnythepaper.com">The Paper</a></strong></p>
+<p><strong><a href="http://www.thehunterenvoy.com">The Envoy</a></strong></p>
+<p><strong><a href="http://whcs.tumblr.com/ ">WHCS</a></strong></p>
+<p><strong><a href="http://www.qcknightnews.com">The Knight News</a></strong></p>
+  
+</ul><!-- end sidebar-nav -->
+	
 </div><!-- end sidebar -->
-
-  <div id="content" class="right small">
+          
+  <div id="right">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="page" id="page-<?php the_ID(); ?>">
+    <div class="post" id="post-<?php the_ID(); ?>">
     
     <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
 
@@ -56,11 +57,8 @@ Template Name: Community and Ethnic Media Conference
     </div><!-- end post -->
 		<?php endwhile; endif; ?>
 </div><!-- end wrap right -->
-
-<div style="clear:both;"></div>
 </div><!-- end wrap clearfix -->
-
-</div>
 
 
 <?php get_footer(); ?>
+

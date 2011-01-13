@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="sidebar left">
 
 <ul id="give-now">
 <li><h4><a href="<?php bloginfo('url'); ?>/donate/donate-to-j-school-online/">DONATE NOW!</a></li>

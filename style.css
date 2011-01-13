@@ -76,16 +76,11 @@ a.interest-capture:hover {
 }
 	
 	
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
-}
-	
-h2 {
-	color: #333333;
-	margin: 10px 0 10px 0;
-	font-size: 24px;
-	line-height: 30px;
+	font-weight: normal;
+	color: #000000;
 }
 
 h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -175,10 +170,6 @@ input.button.primary {
 	background-color: transparent;
 }
 
-#content.right {
-	float: none;
-}
-
 #content, .content {
 	background-color: #FFFFFF;
 }
@@ -203,27 +194,38 @@ body.single-post .content {
  * Property: margin
  */
 
-.content.right.small {
-	margin-left: 255px;
+body.page .content.left-sidebar {
+	margin-left: 245px;
 }
 
 /**
  * Element: h2
  */
 
+h2 {
+	margin: 10px 0 10px 0;
+	font-size: 24px;
+	line-height: 30px;
+}
+
 body.single-post h2, body.page h2 {
-	
+	color: #000000;
+}
+
+body.single-post h2 {
+	margin-top: 15px;
 }
 
 body.archive h2 {
 	padding-bottom: 5px;
 	border-bottom: 3px solid #EEEEEE;
 	border-right: 3px solid #EEEEEE;
+	color: #000000
 }
 
 body.archive h2 span {
 	color: #999999;
-	font-weight: normal;
+	font-weight: lighter;
 }
 
 /**
@@ -1222,15 +1224,16 @@ div#message.updated {
 	
 #category-list, #archives {
 	float: left;
-	width: 120px;  }
+	width: 120px;
+}
 	
 #archives {
 	width: 75px; }
 	
 #category-list {
-	padding-right: 20px;
 	margin-right: 20px;
-	border-right: 1px solid #eee; }
+	border-right: 1px solid #eee;
+}
 	
 .timestamp, .postmetadata, .post .meta {
 	font-size: 95%;

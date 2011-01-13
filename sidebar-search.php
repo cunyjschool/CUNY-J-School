@@ -1,4 +1,4 @@
-<div id="search_sidebar" class="sidebar right">
+<div class="sidebar right" id="sidebar-search">
 	
 	<?php
 	global $cunyj;

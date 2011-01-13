@@ -1,4 +1,4 @@
-<div id="news" class="sidebar right medium">
+<div id="sidebar-news" class="sidebar right medium">
 	
     <div id="admiss-links" class="sidebar-item">
 		<ul>

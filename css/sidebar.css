@@ -1,14 +1,14 @@
-#sidebar {
+.sidebar.left {
 	float: left; 
 	width: 225px;
 	margin-right: 20px;
 }
 
-#sidebar h4 {
+.sidebar.left h4 {
 	font-size: 120%;
 }
 	
-#sidebar h4 a {
+.sidebar.left h4 a {
 	text-decoration: none;
 }
 
@@ -21,11 +21,11 @@
 	background: #f9f9f9;
 }
 
-#sidebar ul.navigation li, .sidebar ul.navigation li {
+.sidebar ul.navigation li {
 	font-size: 16px;
 }
 
-#sidebar .navigation li a, .sidebar .navigation li a {
+.sidebar .navigation li a {
 	display: block;
 	padding: 7px;
 	border-top: 1px solid #fff;
@@ -34,29 +34,29 @@
 	background: #f9f9f9;
 }
 
-#sidebar .navigation li a:hover, .sidebar .navigation li a:hover {
+.sidebar .navigation li a:hover {
 	border-top: 1px solid #ef8f00;
 	background: #ff9900;
 	color: #fff;
 }
 
-#sidebar ul.navigation li ul.children li a, #sidebar ul.navigation li ul.sub-menu li a, .sidebar ul.navigation li ul.children li a, .sidebar ul.navigation li ul.sub-menu li a {
+.sidebar ul.navigation li ul.children li a, .sidebar ul.navigation li ul.sub-menu li a {
 	font-size: 13px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a, .sidebar ul.navigation li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
+.sidebar ul.navigation li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
 	font-size: 12px;
 	padding: 5px 10px 5px 25px;
 	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover, .sidebar ul.navigation li ul.children li ul.children li a:hover, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
+.sidebar ul.navigation li ul.children li ul.children li a:hover, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
 	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a, .sidebar ul.navigation li ul.children li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
+.sidebar ul.navigation li ul.children li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
 	font-size: 10px;
 	background: #f9f9f9;
 	color: #666;
@@ -89,21 +89,21 @@
 	float: left;
 	width: 290px; }
 
-.sidebar#news h3, #sidebar-internships h3 {
+.sidebar#sidebar-news h3, #sidebar-internships h3 {
 	margin: 0 0 10px 0; }
 
-.sidebar#news h3 a, #sidebar-internships h3 a {
+.sidebar#sidebar-news h3 a, #sidebar-internships h3 a {
 	text-decoration: none;
 }
 
-.sidebar#news li, #sidebar-internships li {
+.sidebar#sidebar-news li, #sidebar-internships li {
 	line-height: 175%;
 	padding: 4px 3px 4px 20px;
 	border-bottom: 1px dashed #efefef;
 	background: url(../images/icons/arrow_000_small.png) no-repeat 0 8px;
 }
 
-.sidebar#news li a, #sidebar-internships li a {
+.sidebar#sidebar-news li a, #sidebar-internships li a {
 	text-decoration: none;
 }
 
@@ -141,15 +141,15 @@
 	text-decoration: underline;
 }
 
-#search_sidebar {
+.sidebar#sidebar-search {
 	width: 240px;
 }
 
-#search_sidebar .buddypress_search_results h3 {
+.sidebar#sidebar-search .buddypress_search_results h3 {
 	clear: left;
 }
 
-#search_sidebar .buddypress_search_results ul li {
+.sidebar#sidebar-search .buddypress_search_results ul li {
 	padding-top: 5px;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -162,41 +162,41 @@
 	display: block;
 }
 
-#search_sidebar .buddypress_search_results ul li:hover {
+.sidebar#sidebar-search .buddypress_search_results ul li:hover {
 	background-color: #F8F8F8;
 }
 
-#search_sidebar .buddypress_search_results ul li a {
+.sidebar#sidebar-search .buddypress_search_results ul li a {
 	display: block;
 	text-decoration: none;
 }
 
-#search_sidebar .buddypress_search_results.with-avatar .avatar {
+.sidebar#sidebar-search .buddypress_search_results.with-avatar .avatar {
 	float: left;
 	margin-top: 3px;
 	margin-right: 10px;
 }
 
-#search_sidebar .buddypress_search_results h4 {
+.sidebar#sidebar-search .buddypress_search_results h4 {
 	font-weight: normal;
 	font-size: 14px;
 }
 
-#search_sidebar .buddypress_search_results p, #search_sidebar .buddypress_search_results p a {
+.sidebar#sidebar-search .buddypress_search_results p, .sidebar#sidebar-search .buddypress_search_results p a {
 	color: #333333 !important;
 	padding-top: 0;
 	text-decoration: none;
 }
 
-#search_sidebar .buddypress_search_results.with-avatar h4, #search_sidebar .buddypress_search_results.with-avatar p {
+.sidebar#sidebar-search .buddypress_search_results.with-avatar h4, .sidebar#sidebar-search .buddypress_search_results.with-avatar p {
 	margin-left: 40px;
 }
 
-#sidebar ul.navigation li {
+.sidebar ul.navigation li {
 	font-size: 16px;
 }
 
-#sidebar .navigation li a {
+.sidebar .navigation li a {
 	display: block;
 	padding: 7px;
 	border-top: 1px solid #fff;
@@ -205,29 +205,29 @@
 	background: #f9f9f9;
 }
 
-#sidebar .navigation li a:hover {
+.sidebar .navigation li a:hover {
 	border-top: 1px solid #ef8f00;
 	background: #ff9900;
 	color: #fff;
 }
 
-#sidebar ul.navigation li ul.children li a, #sidebar ul.navigation li ul.sub-menu li a {
+.sidebar ul.navigation li ul.children li a, .sidebar ul.navigation li ul.sub-menu li a {
 	font-size: 13px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
+.sidebar ul.navigation li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a {
 	font-size: 12px;
 	padding: 5px 10px 5px 25px;
 	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li a:hover, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
+.sidebar ul.navigation li ul.children li ul.children li a:hover, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
 	background: #f9f9f9 url(images/icons/arrow_000_small.png) no-repeat 10px 7px;
 }
 
-#sidebar ul.navigation li ul.children li ul.children li ul.children li a, #sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
+.sidebar ul.navigation li ul.children li ul.children li ul.children li a, .sidebar ul.navigation li ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
 	font-size: 10px;
 	background: #f9f9f9;
 	color: #666;
@@ -278,47 +278,47 @@
 	color: #FFFFFF;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event, .main .sidebar#news li.event {
+.main .sidebar#cunyj_event-sidebar li.event, .main .sidebar#sidebar-news li.event {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-.main .sidebar#news li.event {
+.main .sidebar#sidebar-news li.event {
 	background-image: none;
 	padding-left: 3px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event h5, .main .sidebar#news li.event h5 {
+.main .sidebar#cunyj_event-sidebar li.event h5, .main .sidebar#sidebar-news li.event h5 {
 	margin-left: 100px;
 	font-size: 12px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event p.location, .main .sidebar#news li.event p.location {
+.main .sidebar#cunyj_event-sidebar li.event p.location, .main .sidebar#sidebar-news li.event p.location {
 	margin-left: 100px;
 	color: #666666;
 	padding: 0;
 	font-size: 10px;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event h5 a, .main .sidebar#news li.event h5 a {
+.main .sidebar#cunyj_event-sidebar li.event h5 a, .main .sidebar#sidebar-news li.event h5 a {
 	color: #0066CC;
 }
 	
-.main .sidebar#cunyj_event-sidebar li.event div.calendar-date, .main .sidebar#news li.event div.calendar-date {
+.main .sidebar#cunyj_event-sidebar li.event div.calendar-date, .main .sidebar#sidebar-news li.event div.calendar-date {
 	float: left;
 	border: 1px solid #eee;
 	text-transform: uppercase;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event div.calendar-date span, .main .sidebar#news li.event div.calendar-date span {
+.main .sidebar#cunyj_event-sidebar li.event div.calendar-date span, .main .sidebar#sidebar-news li.event div.calendar-date span {
 	display: inline-block;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.month, .main .sidebar#news li.event div.calendar-date span.month {
+.main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.month, .main .sidebar#sidebar-news li.event div.calendar-date span.month {
 	background: #de1515;
 	color: #FFFFFF;
 	padding: 2px 6px;
@@ -326,7 +326,7 @@
 	text-align: center;
 }
 
-.main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.day, .main .sidebar#news li.event div.calendar-date span.day {
+.main .sidebar#cunyj_event-sidebar li.event div.calendar-date span.day, .main .sidebar#sidebar-news li.event div.calendar-date span.day {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 5px;

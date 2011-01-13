@@ -1,4 +1,4 @@
-	<div id="sidebar">
+	<div class="sidebar left">
 
 <ul id="sidebar-nav">
   <li><h4><a href="<?php $parent_link = get_permalink($post->post_parent); echo $parent_link; ?>"><?php $parent_title = get_the_title($post->post_parent); echo $parent_title; ?></a></h4></li>
