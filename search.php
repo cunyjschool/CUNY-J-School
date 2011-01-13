@@ -2,17 +2,17 @@
 
 <div class="wrap">
 
-	<div class="main">
+	<div class="main" id="search-main">
 		
 	<?php include (TEMPLATEPATH . '/sidebar-search.php'); ?>		
 
-	<div id="content" class="search-content">
+	<div class="content" id="search-content">
 		
 		<div id="primary-search">
 			<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 		</div>
 		
-	<div id="search-results">
+	<div class="all-posts" id="search-results">
   
 	<?php if (have_posts()) : ?>
 
@@ -21,19 +21,32 @@
 	<?php
 	$post_type = get_post_type(get_the_id());
 	?>
+	<?php
+		$item_classes = array(	'result',
+								$post_type,
+								'item'
+							);
+		if ( has_post_thumbnail() ) {
+			$item_classes[] = 'post-thumbnail';
+		}
+	?>
 
-	<div class="<?php echo $post_type; ?> result" id="<?php echo $post_type . '-' . the_ID(); ?>">
+	<div class="<?php echo implode( $item_classes, ' ' ); ?>" id="<?php echo $post_type . '-' . get_the_ID(); ?>">
+		<?php if ( has_post_thumbnail() ) {
+			echo '<a href="' . get_permalink() . '">';
+			the_post_thumbnail( array( 100, 100 ) );
+			echo '</a>';
+		} ?>
 		<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-
+		<?php if ($post_type == 'post') : ?>
+		<div class="details">By <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?> | <?php the_time('F j, Y'); ?> | <?php the_category(', '); ?><?php edit_post_link('Edit', ' | ', ''); ?></div>
+		<?php endif; ?>
 		<div class="entry">
 			<?php the_excerpt(); ?>
 		</div>
 		
 		<?php if ($post_type == 'page') : ?>
 		<div class="details">Updated <?php the_time('F j, Y'); ?></div>
-		<?php endif; ?>
-		<?php if ($post_type == 'post') : ?>
-		<div class="details"><?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?> - <?php the_time('F j, Y'); ?><?php if (get_the_tags()) { echo ' - '; the_tags(); } ?></div>
 		<?php endif; ?>
 		<?php
 		if ($post_type == 'cunyj_event') : ?>
@@ -86,8 +99,8 @@
 	
 	</div>
 	
-  </div><!-- /END #main -->
+  </div><!-- END - #main -->
 
-</div><!-- /END .wrap -->
+</div><!-- END - .wrap -->
 
 <?php get_footer(); ?>

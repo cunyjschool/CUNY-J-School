@@ -2,27 +2,46 @@
 
 <div class="wrap">
 
-<div class="main">
+	<div class="main" id="archive-main">
 	
-  <?php include (TEMPLATEPATH . '/sidebar-news.php'); ?>	
+		<?php get_sidebar( 'news' ); ?>	
 
-<div id="content">	
+	<div class="content" id="archive-content">	
 	
-  <div id="posts">
+		<div class="all-posts">
+
+		<h2>Archive</h2>			
   
-  
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="post">
-
-		<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-		
-		<div class="entry"><?php the_excerpt(); ?></div>
-		
-		<div class="timestamp">Last updated on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?></div>
-
-		<div class="postmetadata">Posted in <?php the_category(', ') ?> <?php edit_post_link('Edit', '| ', ''); ?></div>
+  		<?php if ( have_posts()) : ?>
 	
-	</div>
+	 	<?php while (have_posts()) : the_post(); ?>
+		
+			<?php
+				$item_classes = array(	'post',
+										'item'
+									);
+				if ( has_post_thumbnail() ) {
+					$item_classes[] = 'post-thumbnail';
+				}
+			?>
+    	
+			<div class="<?php echo implode( $item_classes, ' ' ); ?>" id="post-<?php the_ID(); ?>">
+				
+				<?php if ( has_post_thumbnail() ) {
+					echo '<a href="' . get_permalink() . '">';
+					the_post_thumbnail( array( 100, 100 ) );
+					echo '</a>';
+				} ?>
+
+				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+		
+				<div class="details">By <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?> | <?php the_time('F j, Y'); ?> | <?php the_category(', '); ?><?php edit_post_link('Edit', ' | ', ''); ?></div>
+		
+				<div class="entry">
+					<?php the_excerpt(); ?>
+				</div>
+	
+			</div><!-- END - .post -->
     
 	<?php endwhile; ?>
 
@@ -38,12 +57,15 @@
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 
 	<?php endif; ?>
+	
   </div>
 
-</div>
+	<div style="clear:right;"></div>
 
 </div>
 
-</div>
+</div><!-- END - .main#archive-main -->
+
+</div><!-- END - .wrap -->
 
 <?php get_footer(); ?>
