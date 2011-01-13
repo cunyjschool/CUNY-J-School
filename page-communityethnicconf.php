@@ -9,6 +9,8 @@ Template Name: Community and Ethnic Media Conference
 <div class="wrap">
 	
 	<div class="main">
+		
+		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 
   <div id="sidebar">
   
@@ -36,10 +38,6 @@ Template Name: Community and Ethnic Media Conference
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="page" id="page-<?php the_ID(); ?>">
-    
-    <?php edit_post_link('Edit this entry', '<ul><li class="edit">', '</li></ul>'); ?>
-
-	<h2><?php the_title(); ?></h2>
     
     
       <div class="entry">

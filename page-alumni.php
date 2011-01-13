@@ -9,6 +9,8 @@ Template Name: Page - Alumni
 <div class="wrap">
 	
 	<div class="main">
+		
+		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 
 	<?php get_sidebar('alumni'); ?>
           
@@ -16,8 +18,6 @@ Template Name: Page - Alumni
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="page" id="page-<?php the_ID(); ?>">
-
-		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
    
      		<?php if ( $page_image = get_post_meta( $post->ID, 'page_image', true ) ) : ?>
 			<div id="page-image">

@@ -10,7 +10,7 @@ Template Name: Page - Research Center
 	
 	<div class="main" id="research-center">
 		
-		<h2><span class="social-links right"><a href="http://facebook.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/facebook_32.png" alt="Facebook" height="32px" width="32px" /></a><a href="http://twitter.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/twitter_32.png" alt="Twitter" height="32px" width="32px" /></a></span><?php the_title(); ?></h2>
+		<h2><span class="social-links right"><a href="http://facebook.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/facebook_32.png" alt="Facebook" height="32px" width="32px" /></a><a href="http://twitter.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/twitter_32.png" alt="Twitter" height="32px" width="32px" /></a></span><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 	
 		<img class="ribbon" src="<?php bloginfo('template_directory'); ?>/images/pages/researchcenter_h850.jpg" alt="Research Center entrance" height="100px" width="850px" />
 		
@@ -88,11 +88,10 @@ Template Name: Page - Research Center
 	<div class="entry">
     
 		<?php the_content(); ?>
-		<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-		
-		<?php edit_post_link( 'Edit page', '<div class="edit-link">', '</div>' ); ?>
 		
     </div>
+
+	<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 
 	<?php endwhile; endif; ?>
 		

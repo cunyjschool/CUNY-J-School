@@ -9,14 +9,14 @@ Template Name: Template - Full
 <div class="wrap">
 	
 	<div class="main">
+		
+		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
   
 	<div class="content" id="page-full-content">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
     <div class="page full" id="page-<?php the_ID(); ?>">
-
-		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
     
     	<div class="entry">
 

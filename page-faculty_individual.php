@@ -11,12 +11,12 @@ Template Name: Page - Faculty Individual
 
 	<?php get_sidebar('faculty'); ?>
       
-  <div id="content" class="right small">
+  <div class="content left-sidebar">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div class="page" id="post-<?php the_ID(); ?>">
     
-		<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
+		<h2><?php the_title(); ?><?php edit_post_link('Edit', '<span class="edit">', '</span>'); ?></h2>
     
     <div class="entry">
       

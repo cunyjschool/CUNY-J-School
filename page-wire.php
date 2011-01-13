@@ -8,6 +8,8 @@ Template Name: Page - Wire
 <div class="wrap">
 	
 	<div class="main">
+		
+		<h2>The Wire</h2>
 	
   <div class="sidebar left">  
   
@@ -32,8 +34,6 @@ Template Name: Page - Wire
   
   <div class="content left-sidebar">
     <div class="page" id="cunyj-wire">
-<h2>The Wire</h2>
-    
 
 <?php
 if (function_exists('SimplePieWP')) {

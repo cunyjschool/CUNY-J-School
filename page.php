@@ -3,16 +3,16 @@
 <div class="wrap">
 	
 	<div class="main" id="page-main">
+		
+		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 
-  <?php get_sidebar( 'default_page' ); ?>
+		<?php get_sidebar( 'default_page' ); ?>
   
 	<div class="content left-sidebar" id="page-content">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-    <div class="page" id="page-<?php the_ID(); ?>">
-
-			<h2><?php edit_post_link('Edit', '<span class="edit button">', '</span>'); ?><?php the_title(); ?></h2>
+    		<div class="page" id="page-<?php the_ID(); ?>">
     
     		<?php if ( $page_image = get_post_meta( $post->ID, 'page_image', true ) ) : ?>
 				<div id="page-image">

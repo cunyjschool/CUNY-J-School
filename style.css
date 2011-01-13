@@ -216,6 +216,12 @@ body.single-post h2 {
 	margin-top: 15px;
 }
 
+body.page h2 {
+	font-size: 30px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
 body.archive h2 {
 	padding-bottom: 5px;
 	border-bottom: 3px solid #EEEEEE;
@@ -1153,9 +1159,6 @@ div#message.updated {
 	padding-left: 10px;
 	padding-top: 10px;
 	padding-bottom: 5px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 }
 
 .entry .wp-caption a, .entry .wp-caption a:hover {
@@ -1249,18 +1252,16 @@ div#message.updated {
 	margin-bottom: 40px; }
 
 span.edit a {
-	float: right;
-	text-transform: uppercase;
-	background: #efefef url(images/icons/card_pencil.png) no-repeat 10px;
-	padding: 3px 10px 3px 35px;
-	font-size: 12px;
-	font-weight: normal;
-	display: inline-block;
+	color: #999999;
+	text-decoration: underline;
+	font-size: 14px;
+	line-height: 18px;
+	vertical-align: 3px;
+	margin-left: 15px;
 }
 
 span.edit a:hover {
-	background-color: #ff9900;
-	text-decoration: none;
+	background-color: transparent;
 }
 	
 li.edit {
