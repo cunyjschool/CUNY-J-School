@@ -2,15 +2,15 @@
 
 <div class="wrap">
 
-	<div class="main" id="category-main">
+	<div class="main" id="tag-main">
 	
 		<?php get_sidebar( 'news' ); ?>	
 
-	<div class="content" id="category-content">
+	<div class="content" id="tag-content">
 	
 		<div class="all-posts">
 			
-		<h2><span>Category:</span> <?php single_cat_title(); ?></h2>			
+		<h2><span>Tag:</span> <?php single_tag_title(); ?></h2>			
   
   		<?php if ( have_posts()) : ?>
 	

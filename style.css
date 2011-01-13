@@ -8,6 +8,11 @@ Author URI: http://www.journalism.cuny.edu
 Tags: buddypress
 */
 
+
+/**
+ * Standards across the site
+ */
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -182,19 +187,79 @@ input.button.primary {
 	margin-left: 255px;
 }
 
-/** Define widths **/
+/**
+ * Property: width
+ */
 
 body.search-results .content {
 	width: 600px;	
 }
 
 body.archive .content {
-	width: 600px;	
+	width: 560px;	
 }
 
 body.single-post .content {
 	width: 540px;
 }
+
+/**
+ * Property: margin
+ */
+
+
+/**
+ * Element: h2
+ */
+
+body.single-post h2, body.page h2 {
+	
+}
+
+body.archive h2 {
+	padding-bottom: 5px;
+	border-bottom: 3px solid #F8F8F8;
+	border-right: 3px solid #F8F8F8;
+}
+
+body.archive h2 span {
+	color: #999999;
+	font-weight: normal;
+}
+
+/**
+ * Element: h3
+ */
+
+.content .all-posts .item h3 {
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+
+.content .all-posts .item h3 a {
+	color: #0066cc;
+}
+
+.content .all-posts .item h3 span {
+	color: #666666;
+	margin-right: 20px;
+}
+
+/**
+ * Element: img
+ */
+
+.content .all-posts .item.post-thumbnail a img {
+	float: right;
+	border:5px solid #EEEEEE;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+
+
 
 .main {
 	clear: both;
@@ -907,33 +972,6 @@ img.news-photo {
 	margin-bottom: 15px;
 }
 
-#search-results a {
-	color: #0066CC;	
-}
-
-.content .all-posts .item.post-thumbnail a img {
-	float: right;
-	border:5px solid #EEEEEE;
-	margin-left: 10px;
-	margin-bottom: 5px;
-}
-
-.content .all-posts .item h3 {
-	font-size: 18px;
-	margin-top: 0;
-	margin-bottom: 0;
-	font-weight: normal;
-}
-
-.content .all-posts .item h3 a {
-	color: #0066cc;
-}
-
-.content .all-posts .item h3 span {
-	color: #666666;
-	margin-right: 20px;
-}
-
 .content .all-posts .item .details, .content .all-posts .item .details a {
 	color: #666666;
 	text-transform: uppercase;
@@ -959,14 +997,6 @@ div.message.info {
 div#message.updated {
 	border-color: #ADEBBD;
 	background-color: #E1F8E7;
-}
-
-.single_post .post {
-	width: 540px;
-}
-
-.single_page .page {
-	width: 600px;
 }
 
 .page.full {
@@ -1046,11 +1076,6 @@ div#message.updated {
 	float: left;
 	display: inline-block;
 	width: 150px;
-}
-	
-.post h2, .page h2 {
-	font-size: 24px;
-	margin-top: 10px;
 }
 	
 .entry h4 {
@@ -1156,10 +1181,7 @@ div#message.updated {
 	font-size: 90%;
 	color: #999;
 	padding: 10px 10px 0 10px;
-	text-align: right; }
-	
-.main .post h2 {
-	padding-bottom: 10px;
+	text-align: right;
 }
 
 .post .lead-image {
