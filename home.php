@@ -138,34 +138,24 @@
     
     <div id="flick-twit">
 		<div id="flick">
-			<?php 
-			if ( function_exists('get_flickrRSS') ) {
-				$args = array(	'num_items' => 12,
-								'type' => 'user',
-								'id' => '12817495@N03',
-								'do_cache' => true,
-							);
-				get_flickrRSS( $args ); 
-			}
-			?>
 		</div>
 	</div>
 	
   </div><!-- END - #soc -->
   
   
-  <div class="clearfix" id="socialnet">
-<ul>
-  <li id="hfacebook"><a href="http://www.facebook.com/cunyjschool">Facebook</a></li>
-  <li id="htwitter"><a href="http://twitter.com/cunyjschool/">Twitter</a></li>
-  <li id="htwitter"><a href="<?php bloginfo('url'); ?>/twitter-lists/">Twitter Lists</a></li>
-  <li id="hyoutube"><a href="http://www.youtube.com/user/cunyjschool">YouTube</a></li>
-  <li id="hvimeo"><a href="http://vimeo.com/cunyjschool/">Vimeo</a></li>
-  <li id="hlinkedin"><a href="http://www.linkedin.com/groups?gid=130402">LinkedIn</a></li>
-  <li id="hflickr"><a href="http://www.flickr.com/photos/cunyjschool/">Flickr</a></li>
-  <li id="hfoursquare"><a href="http://foursquare.com/venue/216018">foursquare</a></li>
-</ul>
-  </div>
+	<div class="clearfix" id="socialnet">
+		<ul>
+			<li id="hfacebook"><a href="http://www.facebook.com/cunyjschool">Facebook</a></li>
+			<li id="htwitter"><a href="http://twitter.com/cunyjschool/">Twitter</a></li>
+			<li id="htwitter"><a href="<?php bloginfo('url'); ?>/twitter-lists/">Twitter Lists</a></li>
+			<li id="hyoutube"><a href="http://www.youtube.com/user/cunyjschool">YouTube</a></li>
+			<li id="hvimeo"><a href="http://vimeo.com/cunyjschool/">Vimeo</a></li>
+			<li id="hlinkedin"><a href="http://www.linkedin.com/groups?gid=130402">LinkedIn</a></li>
+			<li id="hflickr"><a href="http://www.flickr.com/photos/cunyjschool/">Flickr</a></li>
+			<li id="hfoursquare"><a href="http://foursquare.com/venue/216018">foursquare</a></li>
+		</ul>
+	</div>
 
 
   
@@ -272,6 +262,30 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 </div>
 
 <script type="text/javascript">
+
+	/**
+	 * jsonFlickrFeed()
+	 * Callback method for the jsonp request to Flickr. Places images as thumbnails on homepage
+	 */
+	function jsonFlickrFeed( data ) {
+		
+		jQuery.each( data.items, function( key, item ) {
+			if ( key < 12 ) {
+				var item_html = '<a href="' + item.link + '" target="_blank">';
+				// Replace the medium size with the square size
+				item_img = item.media.m.replace( 'm.jpg', 's.jpg' );
+				item_html += '<img src="' + item_img + '" height="75px" width="75px" title="' + item.title + '" />';
+				item_html += '</a>';
+				jQuery('#flick').append(item_html);
+			} else {
+				return;
+			}
+		});
+		
+	} // END - jsonFlickrFeed()
+
+	// Dyanmically load Flickr images
+	cunyj_load_flickr_thumbnails( 'http://api.flickr.com/services/feeds/photos_public.gne?id=12817495@N03&lang=en-us&format=json', 12, 'flick' );
 	// Dynamically load network content on the homepage
 	cunyj_load_blog_posts( 'http://newsinnovation.com/', 4, 'news-innovation-posts' );
 	cunyj_load_blog_posts( 'http://writestuff.journalism.cuny.edu/', 4, 'write-stuff-posts' );
