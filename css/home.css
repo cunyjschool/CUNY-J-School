@@ -200,6 +200,7 @@
 #news h4 {
 	border-bottom: 1px dotted #eee; 
 	padding: 5px 0;
+	color: #0066cc;
 }
 	
 #events-home {
@@ -241,10 +242,7 @@
 	font-size: 12px;
 	margin-top: 0;
 	margin-bottom: 0;
-}
-
-.main #events-home li.event h5 a {
-	color: #0066CC;
+	color: #0066cc;
 }
 
 .main #events-home li.event div.calendar-date {

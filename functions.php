@@ -37,9 +37,7 @@ class cunyj
 
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
-		}
-		
-		if ( !is_admin() ) {
+		} else {
 			// Enqueue our stylesheets
 			wp_enqueue_style( 'cunyj_primary', get_bloginfo('template_directory') . '/style.css', false, $version);
 			wp_enqueue_style( 'cunyj_sidebar', get_bloginfo('template_directory') . '/css/sidebar.css', array('cunyj_primary'), $version);
@@ -51,7 +49,11 @@ class cunyj
 			
 			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), $version);
 			
-			add_action( 'wp_enqueue_scripts', array(&$this, 'wp_enqueue_scripts' ) );
+			// Load in header
+			wp_enqueue_script( 'cunyj_main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), $this->version );
+
+			// Load in footer
+			wp_enqueue_script( 'cunyj_live', get_bloginfo('template_directory') . '/js/live.js', array('jquery'), $this->version, true );
 		}
 		
 		// Register all of our navigation menus
@@ -77,19 +79,6 @@ class cunyj
 
 		$this->register_settings();
 
-	}
-	
-	/**
-	 * Enqueue Javascript we need for various pages
-	 */
-	function wp_enqueue_scripts() {
-		
-		// Load in header
-		wp_enqueue_script( 'cunyj_main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), $this->version );
-		
-		// Load in footer
-		wp_enqueue_script( 'cunyj_live', get_bloginfo('template_directory') . '/js/live.js', array('jquery'), $this->version, true );
-		
 	}
 	
 	/**
