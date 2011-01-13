@@ -6,7 +6,7 @@ function alternate_rows($i){if($i % 2) {echo ' class="on"';} else {echo ' class=
 
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap clearfix content">
 
   <?php get_sidebar('careerservices_left'); ?>
 

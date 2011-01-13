@@ -9,7 +9,7 @@ Template Name: Page - Wire
 	
 	<div class="main">
 	
-  <div id="sidebar">  
+  <div class="sidebar left">  
   
 <h4 style="margin-top: 20px; padding-bottom: 10px; border-bottom: 1px dotted #eee;">J-School Sites</h4>
 
@@ -30,7 +30,7 @@ Template Name: Page - Wire
   </div>    
   
   
-  <div id="content" class="right small">
+  <div class="content left-sidebar">
     <div class="page" id="cunyj-wire">
 <h2>The Wire</h2>
     

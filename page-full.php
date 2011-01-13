@@ -10,7 +10,7 @@ Template Name: Template - Full
 	
 	<div class="main">
   
-	<div id="content">
+	<div class="content" id="page-full-content">
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
@@ -22,7 +22,7 @@ Template Name: Template - Full
 
 			<?php the_content(); ?>
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-      </div>
+      	</div>
 
     </div>
 		<?php endwhile; endif; ?>

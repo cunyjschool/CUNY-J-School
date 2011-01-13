@@ -35,9 +35,9 @@ Template Name: Page - Research Center
 
 	</div>	
           
-	<div class="content">
+	<div class="content left-sidebar">
 	
-	<div class="page right">
+	<div class="page">
 		
 	<?php if ( is_page( 'research-center' ) ) : ?>
 	

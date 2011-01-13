@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Section - CUNY Undergraduate Wire
+Template Name: Page - CUNY Undergraduate Wire
 */
 ?>
 
@@ -8,7 +8,7 @@ Template Name: Section - CUNY Undergraduate Wire
 
 <div class="wrap clearfix" id="content">
 
-<div id="sidebar">
+<div class="sidebar left">
 
 <ul id="sidebar-nav">
 
