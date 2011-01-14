@@ -50,3 +50,29 @@
 	width: 125px;
 	display: inline-block;
 }
+
+#cunyj-events .calendar{
+	width:100%;
+}
+#cunyj-events .calendar caption.calendar-month{
+	font-size:2em;
+	margin-bottom:1em;
+}
+#cunyj-events .calendar td{
+	border:1px solid #cccccc;
+	height:100px;
+	width:100px;
+	vertical-align:top;
+}
+#cunyj-events td.empty-days{
+	background-color:#f0f0f0;
+}
+#cunyj-events .cal-day{
+	text-align:right;
+	background-color:#f8f9ff;
+	padding:2px 8px;
+}
+#cunyj-events .cal-today{
+	background-color:#FAD163;
+	font-weight:bold;
+}
