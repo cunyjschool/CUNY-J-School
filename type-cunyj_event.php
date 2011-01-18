@@ -2,6 +2,7 @@
 
 function generate_calendar($year, $month, $days = array(), $day_name_length = 4, $month_href = NULL, $first_day = 0, $pn = array()){
     $first_of_month = gmmktime(0,0,0,$month,1,$year);
+		$pn = array('&laquo;'=>'/events/', '&raquo;'=>'/events/');
     $day_names = array(); #generate all the day names according to the current locale
     for($n=0,$t=(3+$first_day)*86400; $n<7; $n++,$t+=86400) #January 4, 1970 was a Sunday
         $day_names[$n] = ucfirst(gmstrftime('%A',$t)); #%A means full textual day name
@@ -28,24 +29,19 @@ function generate_calendar($year, $month, $days = array(), $day_name_length = 4,
             $weekday   = 0; #start a new week
             $calendar .= "</tr>\n<tr>";
         }
-        if(isset($days[$day]) and is_array($days[$day])){
-            @list($link, $classes, $content) = $days[$day];
-            if(is_null($content))  $content  = $day;
-            $calendar .= '<td'.($classes ? ' class="'.htmlspecialchars($classes).'">' : '>').
-                ($link ? '<a href="'.htmlspecialchars($link).'">'.$content.'</a>' : $content).'</td>';
-        }
-        else $calendar .= 
+				@list($link, $classes, $content) = $days[$day];
+				$calendar .= 
 					'<td>
-						<div class="cal-day">'.$day.'</div>
-						<div class="cal-day-events">
-						
-						</div>
+						<div class="cal-day '.$classes.'">'.$day.'</div>
+						<div class="cal-events"><a href='.$link.'>'.$content.'</a></div>
 					</td>';
+
     }
     if($weekday != 7) $calendar .= '<td class="empty-days" colspan="'.(7-$weekday).'">&nbsp;</td>'; #remaining "empty" days
 
     return $calendar."</tr>\n</table>\n";
 }
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/cunyj_events.css" media="screen" />
@@ -55,13 +51,34 @@ function generate_calendar($year, $month, $days = array(), $day_name_length = 4,
 <div class="main" id="cunyj-events">
 	
 <?php
+	$time = time();
+	$today = date('j',$time);
+	$days = array(
+		// 4=>array('URL', NULL, 'Stuff'),
+		$today=>array('URL', 'cal-today', 'Foobar'),
+	);
+	echo generate_calendar(date('Y', $time), date('n', $time), $days,	4, NULL, 0, $pn); 	
 
-    $time = time();
-		$today = date('j',$time);
-		$days = array($today=>array(NULL,NULL,'<div class="cal-day cal-today">'.$today.'</div>'));    
-    echo generate_calendar(date('Y', $time), date('n', $time), $days);		
+	$args = array(	'order' => 'ASC',
+					'nopaging' => true,
+					'posts_per_page' => '-1',
+					'post_type' => 'cunyj_event',
+					);
+	$events = new WP_Query( $args );
+
+	if ( $events->have_posts()) : while ( $events->have_posts() ) : $events->the_post();
+			$post_id = get_the_id();
+			$event_link = get_permalink( $post_id );
+			$event_title = get_the_title( $post_id );
+			$start_date = get_post_meta($post->ID, '_cunyj_events_start_date', true);
+			$the_day = date('j',$start_date);
+			
+			echo '<a href='.$event_link.'>'.$event_title.'</a><br />';
+		
+	endwhile; endif;
 
 ?>
+
 
 </div>
 
