@@ -283,23 +283,49 @@ body.page .content.left-sidebar {
  * Module: tabber
  */
 
+ul.tabber-navigation {
+	margin-bottom: 4px;
+	display: none;
+}
+
 ul.tabber-navigation li {
 	display: inline;
 	font-size: 14px;
-	padding: 3px 7px;
+	padding: 5px 8px;
+	background-color: #F9F9F9;
+	color: #666666;
+}
+
+ul.tabber-navigation li.active {
+	background-color: #0066cc;
+	color: #FFFFFF;
 }
 
 ul.tabber-navigation li:hover {
 	cursor: pointer;
+	background-color: #FF9900;
+	color: #FFFFFF;
 }
 
 div.tabber-item {
 	display: none;
+	background-color: #F9F9F9;
+	padding: 10px;
+}
+
+#research-center-main div.tabber-item {
+	width: 530px;
+	background-color: #0066cc;
+	color: #FFFFFF;
+	font-size: 14px;
 }
 
 div.tabber-item.active {
 	display: block;
 }
+
+
+
 
 .main {
 	clear: both;
@@ -937,7 +963,7 @@ img.news-photo {
 }
 
 .main#research-center-main #research-center-blog {
-	width: 280px;
+	width: 260px;
 	float: right;
 	margin-right: 20px;
 	min-height: 300px;
