@@ -4,6 +4,10 @@
 	
 	<div class="main">
 		
+		<div class="breadcrumb">
+			<a href="<?php bloginfo('url'); ?>/events/">&larr; Back to events</a>
+		</div>
+		
 	<?php get_sidebar('cunyj_event'); ?>
 	
   <div id="content">
