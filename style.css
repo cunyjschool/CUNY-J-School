@@ -236,6 +236,15 @@ body.archive h2 span {
 }
 
 /**
+ * Element: h4
+ */
+
+h4.blog-header {
+	padding-left: 30px;
+	background: url(images/icons/blog.png) no-repeat 10px 3px;
+}
+
+/**
  * Element: img
  */
 
@@ -270,6 +279,27 @@ body.page .content.left-sidebar {
 	margin-left: 245px;
 }
 
+/**
+ * Module: tabber
+ */
+
+ul.tabber-navigation li {
+	display: inline;
+	font-size: 14px;
+	padding: 3px 7px;
+}
+
+ul.tabber-navigation li:hover {
+	cursor: pointer;
+}
+
+div.tabber-item {
+	display: none;
+}
+
+div.tabber-item.active {
+	display: block;
+}
 
 .main {
 	clear: both;
@@ -906,8 +936,16 @@ img.news-photo {
 	font-size: 14px;	
 }
 
+.main#research-center-main #research-center-blog {
+	width: 280px;
+	float: right;
+	margin-right: 20px;
+	min-height: 300px;
+}
+
 .main#research-center-main #research-center-blog ul {
-	margin: 10px 0 20px 0; }
+	margin: 10px 0 20px 0;
+}
 	
 .main#research-center-main #research-center-blog ul li {
 	padding: 5px 10px 5px 30px;
@@ -925,20 +963,9 @@ img.news-photo {
 	margin-right: 5px;
 }
 
-.main#research-center-main #research-center-blog {
-	width: 280px;
-	float: right;
-	margin-right: 20px;
-	min-height: 300px;
-}
-
 .entry ul li#research-toolbox {
 	padding-left: 30px;
 	background: url(images/icons/hammer.png) no-repeat 10px 7px; }
-	
-.entry ul li#research-blog {
-	padding-left: 30px;
-	background: url(images/icons/blog.png) no-repeat 10px 7px; }
 	
 .entry ul li#research-about {
 	padding-left: 30px;

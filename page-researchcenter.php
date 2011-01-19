@@ -42,7 +42,7 @@ Template Name: Page - Research Center
 	<?php if ( is_page( 'research-center' ) ) : ?>
 	
 	<div id="research-center-blog" class="research-center-info-zone">
-		<h4><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
+		<h4 class="blog-header"><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
 		<ul>
 			<li>Loading...</li>
 		</ul>
@@ -51,11 +51,11 @@ Template Name: Page - Research Center
 	<div class="tabber" id="research-center-tabber">
 		<?php
 			$tabs_fields = array();
-			$tabs_fields['databases'] = get_post_meta( get_the_id(), 'databases_tab', true );
-			$tabs_fields['subject_guides'] = get_post_meta( get_the_id(), 'subject_guides_tab', true );
-			$tabs_fields['journals'] = get_post_meta( get_the_id(), 'journals_tab', true );
-			$tabs_fields['books'] = get_post_meta( get_the_id(), 'books_tab', true );
-			$tabs_fields['ebooks'] = get_post_meta( get_the_id(), 'ebooks_tab', true );
+			$tabs_fields['databases'] = get_post_meta( $post->ID, 'rc_databases_tab', true );
+			$tabs_fields['subject_guides'] = get_post_meta( $post->ID, 'rc_subject_guides_tab', true );
+			$tabs_fields['journals'] = get_post_meta( $post->ID, 'rc_journals_tab', true );
+			$tabs_fields['books'] = get_post_meta( $post->ID, 'rc_books_tab', true );
+			$tabs_fields['ebooks'] = get_post_meta( $post->ID, 'rc_ebooks_tab', true );
 			
 			$tabs_navigation = '';
 			$tabs_content = '';
@@ -66,23 +66,23 @@ Template Name: Page - Research Center
 						switch( $key ) {
 							case 'databases':
 								$tabs_navigation .= 'Databases';
-								$tabs_content .= '<div class="tabber-item" "databases-tabber-item">' . $value . '</div>';							
+								$tabs_content .= '<div class="tabber-item" id="databases-tabber-item">' . $value . '</div>';							
 								break;
 							case 'subject_guides':
 								$tabs_navigation .= 'Subject Guides';
-								$tabs_content .= '<div class="tabber-item" "subject-guides-tabber-item">' . $value . '</div>';
+								$tabs_content .= '<div class="tabber-item" id="subject-guides-tabber-item">' . $value . '</div>';
 								break;
 							case 'journals':
 								$tabs_navigation .= 'Journals/Periodicals';
-								$tabs_content .= '<div class="tabber-item" "journals-tabber-item">' . $value . '</div>';							
+								$tabs_content .= '<div class="tabber-item" id="journals-tabber-item">' . $value . '</div>';							
 								break;
 							case 'books':
 								$tabs_navigation .= 'Books';
-								$tabs_content .= '<div class="tabber-item" "books-tabber-item">' . $value . '</div>';							
+								$tabs_content .= '<div class="tabber-item" id="books-tabber-item">' . $value . '</div>';							
 								break;	
 							case 'ebooks':
 								$tabs_navigation .= 'E-Books';
-								$tabs_content .= '<div class="tabber-item" "ebooks-tabber-item">' . $value . '</div>';							
+								$tabs_content .= '<div class="tabber-item" id="ebooks-tabber-item">' . $value . '</div>';							
 								break;																							
 							default:
 								$tabs_navigation .= 'Unknown';
@@ -142,7 +142,26 @@ Template Name: Page - Research Center
 </div>
 
 <script type="text/javascript">
-	cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 6, 'research-center-blog' );
+	
+	jQuery(document).ready(function(){
+		
+		cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 6, 'research-center-blog' );
+		
+		jQuery('ul.tabber-navigation li:eq(0)').addClass('active');
+		jQuery('div.tabber-item:eq(0)').addClass('active');
+		
+		jQuery('ul.tabber-navigation li').click(function() {
+			// Remove the existing 'active' classes
+			jQuery('ul.tabber-navigation li').removeClass('active');
+			jQuery('div.tabber-item').removeClass('active');
+			// Add the 'active' class to the newly active elements
+			jQuery(this).addClass('active');
+			var index = jQuery(this).index();
+			jQuery('div.tabber-item:eq('+index+')').addClass('active');
+		});
+		
+	});
+	
 </script>
 <script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=22&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
 
