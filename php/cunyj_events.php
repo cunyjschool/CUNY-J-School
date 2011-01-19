@@ -79,7 +79,7 @@ class cunyj_events
 		
 		if ($pagenow == 'post.php' || $pagenow == 'post-new.php' || $pagenow == 'page.php') {
 			wp_enqueue_script('cunyj_events', get_bloginfo('template_url') . '/js/cunyj_events.js', array('jquery'), false, true);
-			wp_enqueue_style('cunyj_events-styles', get_bloginfo('template_url') . '/css/cunyj_events.css', false, false, 'all');
+			wp_enqueue_style('cunyj_events', get_bloginfo('template_url') . '/css/cunyj_events.css', false, false, 'all');
 		}
 		
 	}

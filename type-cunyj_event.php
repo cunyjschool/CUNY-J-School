@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/cunyj_events.css" media="screen" />
 
 <div class="wrap">
 
 <div class="main" id="cunyj-events">
-
+	
 <?php 
 
 global $wpdb, $m, $monthnum, $year, $wp_locale, $posts;
@@ -15,14 +14,6 @@ if ( $cache = wp_cache_get( 'get_calendar_custom', 'calendar_custom' ) ) {
 		echo $cache[ $key ];
 		return;
 	}
-}
-
-ob_start();
-// Quick check. If we have no posts at all, abort!
-if ( !$posts ) {
-	$gotsome = $wpdb->get_var("SELECT ID from $wpdb->posts WHERE post_type = 'cunyj_event' AND post_status = 'publish' ORDER BY post_date DESC LIMIT 1");
-	if ( !$gotsome )
-		return;
 }
 
 if ( isset($_GET['w']) )
@@ -49,6 +40,7 @@ if ( !empty($monthnum) && !empty($year) ) {
 } else {
 	$thisyear = gmdate('Y', current_time('timestamp'));
 	$thismonth = gmdate('m', current_time('timestamp'));
+	$thismonth_timestamp = strtotime( $thisyear . '-' . $thismonth . '-1' );
 }
 
 $unixmonth = mktime(0, 0 , 0, $thismonth, 1, $thisyear);
@@ -78,66 +70,42 @@ echo '
 <tr>';
 
 // Get days with posts
-$dyp_sql = "SELECT DISTINCT DAYOFMONTH(post_date)
-	FROM $wpdb->posts 
 
-	LEFT JOIN $wpdb->term_relationships ON($wpdb->posts.ID = $wpdb->term_relationships.object_id) 
-	LEFT JOIN $wpdb->term_taxonomy ON($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id) 
-	
-	WHERE MONTH(post_date) = '$thismonth' 
-	AND YEAR(post_date) = '$thisyear' 
-	AND post_type = 'cunyj_event' AND post_status = 'publish' 
-	AND post_date < '" . current_time('mysql') . "'";
-	
-$dayswithposts = $wpdb->get_results($dyp_sql, ARRAY_N);
+$args = array(	'order' => 'ASC',
+				'nopaging' => true,
+				'posts_per_page' => '-1',
+				'post_type' => 'cunyj_event',
+				'meta_key' => '_cunyj_events_start_date',
+				'meta_value' => $thismonth_timestamp,
+				'meta_compare' => '>='
+			);
+$events = new WP_Query( $args );
 
-if ( $dayswithposts ) {
-	foreach ( (array) $dayswithposts as $daywith ) {
-		$daywithpost[] = $daywith[0];
-	}
-} else {
-	$daywithpost = array();
-}
-
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false || strpos(strtolower($_SERVER['HTTP_USER_AGENT']), 'camino') !== false || strpos(strtolower($_SERVER['HTTP_USER_AGENT']), 'safari') !== false)
-	$ak_title_separator = "\n";
-else
-	$ak_title_separator = ', ';
-
-$ak_titles_for_day = array();
-$ak_post_titles = $wpdb->get_results("SELECT post_title, DAYOFMONTH(post_date) as dom "
-	."FROM $wpdb->posts "
-	
-	."LEFT JOIN $wpdb->term_relationships ON($wpdb->posts.ID = $wpdb->term_relationships.object_id) "
-	."LEFT JOIN $wpdb->term_taxonomy ON($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id) "
-	
-	."WHERE YEAR(post_date) = '$thisyear' "
-
-	."AND MONTH(post_date) = '$thismonth' "
-	."AND post_date < '".current_time('mysql')."' "
-	."AND post_type = 'cunyj_event' AND post_status = 'publish'"
-);
-if ( $ak_post_titles ) {
-	foreach ( (array) $ak_post_titles as $ak_post_title ) {
-
-			$post_title = apply_filters( "the_title", $ak_post_title->post_title );
-			$post_title = str_replace('"', '&quot;', wptexturize( $post_title ));
-
-			if ( empty($ak_titles_for_day['day_'.$ak_post_title->dom]) )
-				$ak_titles_for_day['day_'.$ak_post_title->dom] = '';
-			if ( empty($ak_titles_for_day["$ak_post_title->dom"]) ) // first one
-				$ak_titles_for_day["$ak_post_title->dom"] = $post_title;
-			else
-				$ak_titles_for_day["$ak_post_title->dom"] .= $ak_title_separator . $post_title;
+// Put all of the events into an array sorted by month day
+$all_events = array();
+if ( $events->have_posts()) {
+	while ( $events->have_posts() ) {
+		$events->the_post();
+		$post_id = get_the_id();
+		$start_date = get_post_meta( $post_id, '_cunyj_events_start_date', true );
+		$event_day = date_i18n( 'j', $start_date );
+		// Don't include events that start in other months
+		if ( date_i18n( 'm', $start_date ) != $thismonth ) {
+			continue;
+		}
+		$all_events[$event_day][$post_id]['permalink'] = get_permalink();
+		$all_events[$event_day][$post_id]['title'] = get_the_title();
+		$all_events[$event_day][$post_id]['excerpt'] = get_the_excerpt();
+		$all_events[$event_day][$post_id]['start_date'] = $start_date;
+		$all_events[$event_day][$post_id]['event_date'] = date_i18n('M j, Y', $start_date);
 	}
 }
-
 
 // See how much we should pad in the beginning
 $pad = calendar_week_mod(date('w', $unixmonth)-$week_begins);
 if ( 0 != $pad )
 	echo "\n\t\t".'<td colspan="'.$pad.'" class="pad">&nbsp;</td>';
-
+	
 $daysinmonth = intval(date('t', $unixmonth));
 for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	if ( isset($newrow) && $newrow )
@@ -151,10 +119,15 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 		echo '<td>';
 
 	echo '<div class="cal-day">'.$day.'</div>';
-	if ( in_array($day, $daywithpost) ) // any posts today?
-		echo '<a href="' . get_day_link($thisyear, $thismonth, $day) . "\" >$ak_titles_for_day[$day]</a>";
-	else
+	if ( array_key_exists( $day, $all_events ) ) {
+		echo '<ul>';
+		foreach( $all_events[$day] as $post_id => $event ) {
+			echo '<li><a href="' . $event['permalink'] . '">' . $event['title'] . '</a></li>';
+		}
+		echo '</ul>';
+	} else {
 		echo '&nbsp;';
+	}
 	echo '</td>';
 
 	if ( 6 == calendar_week_mod(date('w', mktime(0, 0 , 0, $thismonth, $day, $thisyear))-$week_begins) )
@@ -169,26 +142,19 @@ echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
 $args = array(	'order' => 'ASC',	'nopaging' => true,	'posts_per_page' => '-1',	'post_type' => 'cunyj_event');
 $events = new WP_Query( $args );
-
-if ( $events->have_posts()) : while ( $events->have_posts() ) : $events->the_post();
-		$link = get_permalink();
-		$title = the_title(NULL,NULL,FALSE);
-		$content = get_the_excerpt();
-		$start_date = get_post_meta($post->ID, '_cunyj_events_start_date', true);
-		$event_date = date_i18n('M j, Y', $start_date);
-		$post_id = $post->ID;
-		$results[] = Array('id' => $post_id, 'title' => $title, 'link' => $link, 'date' => $event_date, 'content' => $content);
-		
-		endwhile; endif;
 		
 echo '<h2 class="cal-title">Upcoming Events</h2>';
 
-if ($results) {
-	foreach ( $results as $result ) {
-		echo '<div class="feature">';
-		echo '<h2><a href="'.$result['link'].'" title="'.$result['title'].'">'.$result['date'].' - '.$result['title'].'</a></h2>';
-		echo $result['content'];
-		echo '<div class="clear"></div></div>';
+if ( count( $all_events ) ) {
+	foreach ( $all_events as $key => $day ) {
+		// @todo Convert this to day headings
+		echo '<h3>' . $key . '</h3>';
+		foreach( $day as $post_id => $event ) {
+			echo '<div class="feature">';
+			echo '<h4><a href="' . $event['permalink'] . '">'. $event['title'] . '</a></h4>';
+			echo $event['excerpt'];
+			echo '<div class="clear"></div></div>';
+		}
 	}
 }
 
