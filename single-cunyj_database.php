@@ -38,6 +38,7 @@
 			?>
 			<p class="meta">
 				<span class="right">
+				<?php edit_post_link( 'Edit', '', ' | ' ); ?>
 				<?php if ( $tutorial_link ): ?>
 				<a class="tutorial" href="<?php echo $tutorial_link; ?>">Tutorial</a> | 
 				<?php endif; ?>	
