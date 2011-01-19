@@ -1041,11 +1041,11 @@ img.news-photo {
 
 .content .all-posts .item {
 	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .content .all-posts .item .details, .content .all-posts .item .details a {
-	color: #666666;
+	color: #999999;
 	text-transform: uppercase;
 	font-size: 11px;
 }
