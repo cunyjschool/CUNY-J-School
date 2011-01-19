@@ -130,7 +130,7 @@
 
 </div><!-- /.section -->
     
-  
+  <?php /* 
   <div class="clearfix" id="soc">
     <div id="vimeo-player">
   		<object type="application/x-shockwave-flash" width="400" height="300" data="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com">	<param name="quality" value="best" />		<param name="allowfullscreen" value="true" />		<param name="allowscriptaccess" value="always" />	<param name="scale" value="showAll" />	<param name="movie" value="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com" /></object>
@@ -156,7 +156,7 @@
 			<li id="hfoursquare"><a href="http://foursquare.com/venue/216018">foursquare</a></li>
 		</ul>
 	</div>
-
+	*/ ?>
 
   
   <div class="clearfix" id="jnet">
@@ -285,7 +285,7 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 	} // END - jsonFlickrFeed()
 
 	// Dyanmically load Flickr images
-	cunyj_load_flickr_thumbnails( 'http://api.flickr.com/services/feeds/photos_public.gne?id=12817495@N03&lang=en-us&format=json', 12, 'flick' );
+	// cunyj_load_flickr_thumbnails( 'http://api.flickr.com/services/feeds/photos_public.gne?id=12817495@N03&lang=en-us&format=json', 12, 'flick' );
 	// Dynamically load network content on the homepage
 	cunyj_load_blog_posts( 'http://newsinnovation.com/', 4, 'news-innovation-posts' );
 	cunyj_load_blog_posts( 'http://writestuff.journalism.cuny.edu/', 4, 'write-stuff-posts' );
