@@ -4,9 +4,13 @@
 	
 	<div class="main">
 		
+		<div class="breadcrumb">
+			<a href="<?php bloginfo('url'); ?>/events/">&larr; Back to events</a>
+		</div>
+		
 	<?php get_sidebar('cunyj_event'); ?>
 	
-  <div id="content">
+  <div class="content">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     

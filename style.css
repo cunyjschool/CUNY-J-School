@@ -283,23 +283,63 @@ body.page .content.left-sidebar {
  * Module: tabber
  */
 
+ul.tabber-navigation {
+	margin-bottom: 2px;
+	display: none;
+}
+
 ul.tabber-navigation li {
 	display: inline;
 	font-size: 14px;
-	padding: 3px 7px;
+	padding: 5px 8px;
+	background-color: #F9F9F9;
+	color: #666666;
+	border-left: 1px solid #CCCCCC;
+}
+
+ul.tabber-navigation li:first-child {
+	border-left: none;
+}
+
+ul.tabber-navigation li.active {
+	background-color: #0066cc;
+	border-right-color: #0066cc;
+	color: #FFFFFF;
 }
 
 ul.tabber-navigation li:hover {
 	cursor: pointer;
+	background-color: #FF9900;
+	color: #FFFFFF;
+	border-left-color: #FF9900;
 }
 
 div.tabber-item {
 	display: none;
+	background-color: #F9F9F9;
+	padding: 10px;
+	z-index: 100;
+	position: relative;
+}
+
+div.tabber-item ul li {
+	list-style-type: square;
+	margin-left: 20px;
+}
+
+#research-center-main div.tabber-item {
+	width: 530px;
+	background-color: #0066cc;
+	color: #FFFFFF;
+	font-size: 14px;
 }
 
 div.tabber-item.active {
 	display: block;
 }
+
+
+
 
 .main {
 	clear: both;
@@ -937,7 +977,7 @@ img.news-photo {
 }
 
 .main#research-center-main #research-center-blog {
-	width: 280px;
+	width: 260px;
 	float: right;
 	margin-right: 20px;
 	min-height: 300px;
@@ -1077,15 +1117,15 @@ div#message.updated {
 	clear: left !important;
 }
 
-.main #content .cunyj_event {
+.main .content .cunyj_event {
 	width: 520px;
 }
 
-.main #content .cunyj_event h2 {
+.main .content .cunyj_event h2 {
 	font-size: 24px;
 }
 	
-.main #content .cunyj_event .event_details {
+.main .content .cunyj_event .event_details {
 	background-color: #F9F9F9;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -1093,17 +1133,17 @@ div#message.updated {
 	padding-right: 10px;
 }
 
-.main #content .cunyj_event .event_details p {
+.main .content .cunyj_event .event_details p {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	padding: 0;
 }
 
-.main #content .cunyj_event .timestamp {
+.main .content .cunyj_event .timestamp {
 	padding-top: 5px;
 }
 
-.main #content .cunyj_event .event_details p span {
+.main .content .cunyj_event .event_details p span {
 	color: #666666;
 	float: left;
 	display: inline-block;
