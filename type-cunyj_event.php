@@ -88,6 +88,13 @@ if ( $events->have_posts()) {
 		$events->the_post();
 		$post_id = get_the_id();
 		$start_date = get_post_meta( $post_id, '_cunyj_events_start_date', true );
+		$all_day = get_post_meta($post->ID, '_cunyj_events_all_day', true);
+		$end_date = get_post_meta($post->ID, '_cunyj_events_end_date', true);
+		$venue = get_post_meta($post->ID, '_cunyj_events_venue', true);
+		$street = get_post_meta($post->ID, '_cunyj_events_street', true);
+		$city = get_post_meta($post->ID, '_cunyj_events_city', true);
+		$state = get_post_meta($post->ID, '_cunyj_events_state', true);
+		$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true);
 		$event_day = date_i18n( 'j', $start_date );
 		// Don't include events that start in other months
 		if ( date_i18n( 'm', $start_date ) != $thismonth ) {
@@ -96,8 +103,13 @@ if ( $events->have_posts()) {
 		$all_events[$event_day][$post_id]['permalink'] = get_permalink();
 		$all_events[$event_day][$post_id]['title'] = get_the_title();
 		$all_events[$event_day][$post_id]['excerpt'] = get_the_excerpt();
-		$all_events[$event_day][$post_id]['start_date'] = $start_date;
 		$all_events[$event_day][$post_id]['event_date'] = date_i18n('M j, Y', $start_date);
+		$all_events[$event_day][$post_id]['start_date'] = $start_date;
+		$all_events[$event_day][$post_id]['venue'] = $venue;
+		$all_events[$event_day][$post_id]['street'] = $street;
+		$all_events[$event_day][$post_id]['city'] = $city;
+		$all_events[$event_day][$post_id]['state'] = $state;
+		$all_events[$event_day][$post_id]['zipcode'] = $zipcode;
 	}
 }
 
@@ -118,7 +130,7 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	else
 		echo '<td>';
 
-	echo '<div class="cal-day">'.$day.'</div>';
+	echo '<div class="cal-day">' . $day . '</div>';
 	if ( array_key_exists( $day, $all_events ) ) {
 		echo '<ul>';
 		foreach( $all_events[$day] as $post_id => $event ) {
@@ -142,17 +154,31 @@ echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
 $args = array(	'order' => 'ASC',	'nopaging' => true,	'posts_per_page' => '-1',	'post_type' => 'cunyj_event');
 $events = new WP_Query( $args );
+$current_month = gmdate('F', current_time('timestamp'));
 		
-echo '<h2 class="cal-title">Upcoming Events</h2>';
+echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
 
 if ( count( $all_events ) ) {
 	foreach ( $all_events as $key => $day ) {
 		// @todo Convert this to day headings
-		echo '<h3>' . $key . '</h3>';
+		echo '<h3 class="upcoming">' . $key . '</h3>';
 		foreach( $day as $post_id => $event ) {
 			echo '<div class="feature">';
-			echo '<h4><a href="' . $event['permalink'] . '">'. $event['title'] . '</a></h4>';
-			echo $event['excerpt'];
+			echo '<h4 class="feature-title"><a href="' . $event['permalink'] . '">'. $event['title'] . '</a></h4>';
+			echo '<p>' . $event['excerpt'] . '</p>';
+			if ($event['venue']) {
+				echo '<p class="event-location"><span class="label">Location: </span><span>' . $event['venue'];
+				if ($event['street']) {
+					echo '&nbsp;&mdash;&nbsp;' . $event['street'];
+				}
+				if ($event['city'] || $event['state'] || $event['zipcode']) {
+					echo '&nbsp;&mdash;&nbsp;' . $event['city'] . ', ' . $event['state'];
+					if ($event['zipcode']) {
+						echo '&nbsp;' . $event['zipcode'];
+					}
+				}
+				echo '</span></p>';
+			}
 			echo '<div class="clear"></div></div>';
 		}
 	}

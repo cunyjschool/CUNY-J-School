@@ -76,7 +76,29 @@
 	background-color:#f8f9ff;
 	padding:2px 8px;
 }
+#cunyj-events #wp-calendar td ul li{
+  padding:1px 4px;
+}
 #cunyj-events td#today .cal-day{
 	background-color:#FAD163;
 	font-weight:bold;
+}
+#cunyj-events h2.upcoming-title{
+  padding:0 10px;
+  margin-top:25px;
+}
+#cunyj-events h4.feature-title{
+  font-size:1.3em;
+}
+
+#cunyj-events h3.upcoming{
+  background:#eeeeee;
+  color:#333333;
+  padding:5px 10px;
+  border:1px solid #dddddd;
+  margin-top:20px;
+}
+#cunyj-events .event-location .label{
+  color:#666666;
+  margin-top:10px;
 }
