@@ -48,6 +48,62 @@ Template Name: Page - Research Center
 		</ul>
 	</div>
 	
+	<div class="tabber" id="research-center-tabber">
+		<?php
+			$tabs_fields = array();
+			$tabs_fields['databases'] = get_post_meta( get_the_id(), 'databases_tab', true );
+			$tabs_fields['subject_guides'] = get_post_meta( get_the_id(), 'subject_guides_tab', true );
+			$tabs_fields['journals'] = get_post_meta( get_the_id(), 'journals_tab', true );
+			$tabs_fields['books'] = get_post_meta( get_the_id(), 'books_tab', true );
+			$tabs_fields['ebooks'] = get_post_meta( get_the_id(), 'ebooks_tab', true );
+			
+			$tabs_navigation = '';
+			$tabs_content = '';
+			if ( count( $tabs_fields ) ) {
+				foreach( $tabs_fields as $key => $value ) {
+					if ( $value ) {
+						$tabs_navigation .= '<li>';
+						switch( $key ) {
+							case 'databases':
+								$tabs_navigation .= 'Databases';
+								$tabs_content .= '<div class="tabber-item" "databases-tabber-item">' . $value . '</div>';							
+								break;
+							case 'subject_guides':
+								$tabs_navigation .= 'Subject Guides';
+								$tabs_content .= '<div class="tabber-item" "subject-guides-tabber-item">' . $value . '</div>';
+								break;
+							case 'journals':
+								$tabs_navigation .= 'Journals/Periodicals';
+								$tabs_content .= '<div class="tabber-item" "journals-tabber-item">' . $value . '</div>';							
+								break;
+							case 'books':
+								$tabs_navigation .= 'Books';
+								$tabs_content .= '<div class="tabber-item" "books-tabber-item">' . $value . '</div>';							
+								break;	
+							case 'ebooks':
+								$tabs_navigation .= 'E-Books';
+								$tabs_content .= '<div class="tabber-item" "ebooks-tabber-item">' . $value . '</div>';							
+								break;																							
+							default:
+								$tabs_navigation .= 'Unknown';
+								break;
+						}
+						$tabs_navigation .= '</li>';					
+					}
+				} // END - foreach( $tabs_content as $key => $value )
+			}
+			
+			// Only print the tabs functionality if the buttons are set
+			if ( $tabs_navigation ) {
+				echo '<ul class="tabber-navigation">' . $tabs_navigation . '</ul>';
+				echo $tabs_content;
+			}
+		
+		?>
+		
+		
+	</div>
+	
 	<div style="clear:both;"></div>
 
 	<div id="research-center-goodreads" class="research-center-info-zone">
