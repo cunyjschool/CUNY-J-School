@@ -211,6 +211,10 @@ body.archive h2 span {
 	font-weight: lighter;
 }
 
+.main#research-center-main #research-center-goodreads h2 a {
+	font-size: 18px;
+}
+
 /**
  * Element: h3
  */
@@ -619,13 +623,13 @@ img.news-photo {
 #right ul li {
 	list-style: bullet; }
 
-.main#research-center h2 span.social-links {
+.main#research-center-main h2 span.social-links {
 	font-weight: normal;
 	font-size: 14px;
 	color: #999999;
 }
 
-.main#research-center h2 span.social-links img {
+.main#research-center-main h2 span.social-links img {
 	margin-left: 10px;
 }
 
@@ -638,7 +642,7 @@ img.news-photo {
 	padding: 10px;
 }
 	
-.main#research-center img.ribbon, .main#entrepreneurial-journalism img.ribbon {
+.main#research-center-main img.ribbon, .main#entrepreneurial-journalism img.ribbon {
 	border: 5px solid #EEEEEE;
 	background-color: #EEEEEE;
 	margin-bottom: 15px;
@@ -883,54 +887,49 @@ img.news-photo {
 	margin-top: 10px;
 }
 
-.main#research-center .research-center-info-zone {
+.main#research-center-main .research-center-info-zone {
 	margin-bottom: 15px;
 }
 
-.main#research-center .research-center-info-zone h4 {
+.main#research-center-main .research-center-info-zone h4 {
 	margin-top: 5px;
 	margin-bottom: 10px;
 	font-size: 14px;
 }
 
-.main#research-center .research-center-info-zone h4 a {
+.main#research-center-main .research-center-info-zone h4 a {
 	color: #333;
 }
 
-.main#research-center .research-center-info-zone h2 {
+.main#research-center-main .research-center-info-zone h2 {
 	margin-top: 0;
 	font-size: 14px;	
 }
 
-.main#research-center #research-center-blog ul {
+.main#research-center-main #research-center-blog ul {
 	margin: 10px 0 20px 0; }
 	
-.main#research-center #research-center-blog ul li {
+.main#research-center-main #research-center-blog ul li {
 	padding: 5px 10px 5px 30px;
 	border-bottom: 1px solid #eee;
 	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px;
 }
 
-.main#research-center #research-center-search-tools h4 {
+.main#research-center-main #research-center-search-tools h4 {
 	/* padding-left: 15px;
 	background: url('../images/icons/magnifier.png') no-repeat 10px 7px; */
 }
 
-.main#research-center #research-center-search-tools ul li {
+.main#research-center-main #research-center-search-tools ul li {
 	display: inline;
 	margin-right: 5px;
 }
 
-.main#research-center #research-center-blog {
-	width: 280px;
-	float: left;
-	margin-right: 20px;
-	min-height: 300px;
-}
-
-.main#research-center #research-center-goodreads {
+.main#research-center-main #research-center-blog {
 	width: 280px;
 	float: right;
+	margin-right: 20px;
+	min-height: 300px;
 }
 
 .entry ul li#research-toolbox {
