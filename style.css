@@ -284,7 +284,7 @@ body.page .content.left-sidebar {
  */
 
 ul.tabber-navigation {
-	margin-bottom: 4px;
+	margin-bottom: 2px;
 	display: none;
 }
 
@@ -294,10 +294,16 @@ ul.tabber-navigation li {
 	padding: 5px 8px;
 	background-color: #F9F9F9;
 	color: #666666;
+	border-left: 1px solid #CCCCCC;
+}
+
+ul.tabber-navigation li:first-child {
+	border-left: none;
 }
 
 ul.tabber-navigation li.active {
 	background-color: #0066cc;
+	border-right-color: #0066cc;
 	color: #FFFFFF;
 }
 
@@ -305,12 +311,20 @@ ul.tabber-navigation li:hover {
 	cursor: pointer;
 	background-color: #FF9900;
 	color: #FFFFFF;
+	border-left-color: #FF9900;
 }
 
 div.tabber-item {
 	display: none;
 	background-color: #F9F9F9;
 	padding: 10px;
+	z-index: 100;
+	position: relative;
+}
+
+div.tabber-item ul li {
+	list-style-type: square;
+	margin-left: 20px;
 }
 
 #research-center-main div.tabber-item {
