@@ -78,7 +78,7 @@ Template Name: Page - Research Center
 
 		</div>
 
-		<div style="clear:both;"></div>
+		<div style="clear:right;"></div>
 		
 		<?php endif; ?>
 		
