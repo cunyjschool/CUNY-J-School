@@ -44,16 +44,16 @@ if ( !empty($monthnum) && !empty($year) ) {
 }
 
 $unixmonth = mktime(0, 0 , 0, $thismonth, 1, $thisyear);
-$prevmonth = date("F", strtotime("-1 months"));
-$prevmonthlink = date("m/Y", strtotime("-1 months"));
-$nextmonth = date("F", strtotime("+1 months"));
-$nextmonthlink = date("m/Y", strtotime("+1 months"));
+$prevmonth = gmdate("F", strtotime("-1 months"));
+$prevmonthlink = gmdate("Y/m", strtotime("-1 months"));
+$nextmonth = gmdate("F", strtotime("+1 months"));
+$nextmonthlink = gmdate("Y/m", strtotime("+1 months"));
 
 echo '<div id="calendar_wrap">
 <table id="wp-calendar" summary="' . __('Calendar') . '">
 	<caption>
-		<span class="prev-month"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
-		' . $wp_locale->get_month($thismonth) .' ' . date('Y', $unixmonth) . '
+		<span class="prev-month"><a href="/archives/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
+		' . $wp_locale->get_month($thismonth) .' ' . gmdate('Y', $unixmonth) . '
 		<span class="next-month"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>
 	</caption>
 	<thead>
@@ -168,8 +168,8 @@ echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>'
 
 if ( count( $all_events ) ) {
 	foreach ( $all_events as $key => $day ) {
-		// @todo Convert this to day headings
-		echo '<h3 class="upcoming">' . $key . '</h3>';
+		$heading = gmdate('l, F jS', $key);
+		echo '<h3 class="upcoming">' . $heading . '</h3>';
 		foreach( $day as $post_id => $event ) {
 			echo '<div class="feature">';
 			echo '<h4 class="feature-title"><a href="' . $event['permalink'] . '">'. $event['title'] . '</a></h4>';
