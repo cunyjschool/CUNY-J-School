@@ -44,12 +44,20 @@ if ( !empty($monthnum) && !empty($year) ) {
 }
 
 $unixmonth = mktime(0, 0 , 0, $thismonth, 1, $thisyear);
+$prevmonth = date("F", strtotime("-1 months"));
+$prevmonthlink = date("m/Y", strtotime("-1 months"));
+$nextmonth = date("F", strtotime("+1 months"));
+$nextmonthlink = date("m/Y", strtotime("+1 months"));
 
 echo '<div id="calendar_wrap">
 <table id="wp-calendar" summary="' . __('Calendar') . '">
-<caption>' . sprintf(_c('%1$s %2$s|Used as a calendar caption'), $wp_locale->get_month($thismonth), date('Y', $unixmonth)) . '</caption>
-<thead>
-<tr>';
+	<caption>
+		<span class="prev-month"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
+		' . $wp_locale->get_month($thismonth) .' ' . date('Y', $unixmonth) . '
+		<span class="next-month"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>
+	</caption>
+	<thead>
+		<tr>';
 
 $myweek = array();
 

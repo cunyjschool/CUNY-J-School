@@ -102,3 +102,11 @@
   color:#666666;
   margin-top:10px;
 }
+#cunyj-events caption span.prev-month{
+  font-size:0.6em;
+  float:left;
+}
+#cunyj-events caption span.next-month{
+  font-size:0.6em;
+  float:right;
+}
