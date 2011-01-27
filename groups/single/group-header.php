@@ -3,7 +3,7 @@
 
 <div id="item-header-content">
 	
-	<h2><span id="item-buttons"<?php bp_group_join_button(); ?></span><?php bp_group_name() ?></h2>
+	<h2><span id="item-buttons"><?php bp_group_join_button(); ?></span><?php bp_group_name() ?></h2>
 
 	<?php do_action( 'bp_before_group_header_meta' ) ?>
 	
