@@ -7,7 +7,7 @@
 	<div id="database-search">
 		<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/databases/">
 		      <div id="search">
-				<input class="search-box" type="text" value="<?php echo $_GET['q']; ?>" name="q" id="database-search" />
+				<input class="search-box" type="text" value="<?php echo $_GET['s']; ?>" name="s" id="database-search" />
 		        <button class="search-button" type="submit">Search</button>
 		       </div>
 		</form>
@@ -16,7 +16,7 @@
 <div class="content" id="results">
 	
 	<?php
-		$search_query = ( $_GET['q'] ) ? $_GET['q'] : false;
+		$search_query = ( $_GET['s'] ) ? $_GET['s'] : false;
 		$args = array(	'order' => 'ASC',
 						'nopaging' => true,
 						'posts_per_page' => '-1',
