@@ -150,7 +150,7 @@ Template Name: Page - Research Center
 	
 	jQuery(document).ready(function(){
 		
-		cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 6, 'research-center-blog' );
+		cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 4, 'research-center-blog' );
 		
 		jQuery('ul.tabber-navigation').show();
 		jQuery('ul.tabber-navigation li:eq(0)').addClass('active');
