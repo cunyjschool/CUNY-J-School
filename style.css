@@ -334,6 +334,11 @@ div.tabber-item ul li {
 	font-size: 14px;
 }
 
+#research-center-main div.tabber-item a {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
 div.tabber-item.active {
 	display: block;
 }
