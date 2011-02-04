@@ -8,14 +8,6 @@
 
 global $wpdb, $m, $monthnum, $year, $wp_locale, $posts;
 
-$key = md5( $m . $monthnum . $year );
-if ( $cache = wp_cache_get( 'get_calendar_custom', 'calendar_custom' ) ) {
-	if ( isset( $cache[ $key ] ) ) {
-		echo $cache[ $key ];
-		return;
-	}
-}
-
 if ( isset($_GET['w']) )
 	$w = ''.intval($_GET['w']);
 
@@ -163,10 +155,11 @@ echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 $args = array(	'order' => 'ASC',	'nopaging' => true,	'posts_per_page' => '-1',	'post_type' => 'cunyj_event');
 $events = new WP_Query( $args );
 $current_month = gmdate('F', current_time('timestamp'));
-		
-echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
+
+echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar Feed</a></div>';
 
 if ( count( $all_events ) ) {
+  echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
 	foreach ( $all_events as $key => $day ) {
 		$heading = gmdate('l, F jS', $key);
 		echo '<h3 class="upcoming">' . $heading . '</h3>';

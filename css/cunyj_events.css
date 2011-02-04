@@ -37,9 +37,6 @@
 	border: 1px solid #CCCCCC;
 }
 
-#cunyj-events #time-date {
-	
-}
 
 #cunyj-events #intro label {
 	width: 135px;
@@ -109,4 +106,19 @@
 #cunyj-events caption span.next-month{
   font-size:0.6em;
   float:right;
+}
+.ical-feed{
+	text-align:right;
+	padding:5px 10px;	
+}
+.ical-feed img{
+	display:inline;
+	margin-right:5px;
+	vertical-align:middle;
+}
+.ical-feed a{
+	text-decoration:none;
+}
+.ical-feed a:hover{
+	text-decoration:underline;
 }
