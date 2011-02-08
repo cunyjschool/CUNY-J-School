@@ -34,7 +34,7 @@
                         </a>
 					<?php endif; ?>
                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					<p>By: <?php the_author_posts_link(); ?></p>
+					<p>By: <?php the_author(); ?></p>
     				<p>Pub. Year: <?php echo $capstone_year; ?></p>
 					<p>Concentration: <?php echo $concentrations; ?></p>
     				</li>
@@ -66,7 +66,7 @@
                         </a>
 					<?php endif; ?>
                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                    <p>By: <?php the_author_posts_link(); ?></p>
+                    <p>By: <?php the_author(); ?></p>
                     <p>Pub. Year: <?php echo $capstone_year; ?></p>
                     <p>Concentration: <?php echo $concentrations; ?></p>
                     </li>
@@ -98,7 +98,7 @@
                         </a>
 					<?php endif; ?>
                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                    <p>By: <?php the_author_posts_link(); ?></p>
+                    <p>By: <?php the_author(); ?></p>
                     <p>Pub. Year: <?php echo $capstone_year; ?></p>
                     <p>Concentration: <?php echo $concentrations; ?></p>
                     </li>
