@@ -45,6 +45,7 @@ div.capstone-box h3 {
 	text-transform:uppercase;
 	color: #666666;
 	font-size: 14px;
+	margin: -3px 0;
 }
 
 div.capstone-box ul li {
@@ -82,12 +83,7 @@ div.capstone-box ul li p {
 	width: 100%;
 }
 
-.capstone-content{
-	float:left;
-	width: 70%;
-}
-
-.capstone-right{
+.capstone-right {
 	max-width: 25%;
 	float: right;
 	padding: 4px 8px;
@@ -98,147 +94,27 @@ div.capstone-box ul li p {
 }
 
 .capstone-right h4 {
-font-size:16px;
-margin-bottom:5%;
-margin-top: 10px;
-border-bottom:1px solid #DADADA;
+	font-size:16px;
+	margin-bottom:5%;
+	margin-top: 10px;
+	border-bottom:1px solid #DADADA;
+}
+
+.capstone-right span {
+	text-transform:uppercase;
+}
+
+.capstone-right p {
+	padding: 0;
+}
+
+.capstone-content{
+	float:left;
+	width: 70%;
 }
 
 .capstone-screenshot {
 	font-size: .8em;
 	text-transform: uppercase;
 	font-weight:bold;
-}
-
-.capstone-single-box {
-	padding: 5px 0 20px 0;
-	border-bottom: 1px dotted #ddd;
-
-}
-
-
-/* By Media Type */
-
-
-.no-caps {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	text-transform: lowercase;
-}
-
-
-.capstones-info, .capstones-packages-info {
-	color: #6a6a6a;
-	float: left;
-	font-size: 11px;
-	margin-bottom: 20px;
-	text-transform: uppercase;
-	width: auto;
-	position: relative;
-	border-bottom: 1px solid #ebebeb;
-	border-top: 1px solid #ebebeb;
-	padding-bottom: 7px;
-}
-
-.capstones-info ul{
-	margin-left:0px;	
-}
-
-.capstones-info a, .capstones-packages-info a {
-	font-style: normal;
-	color: #ed8137;
-}
-
-.capstones-info ul li {
-	display: inline;
-	float: left;
-	padding-right: 15px;
-	padding-top: 7px;
-}
-
-.no-caps {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	text-transform: lowercase;
-}
-
-.capstones-info ul {
-	border-right: 0px;
-	padding-right: 5px;
-}
-
-#full-width .capstones-info ul {
-	border-right: 0px;
-	width: auto;
-	padding-right: 5px;
-}
-
-#capstones {
-	float: left;
-	height: auto;
-	min-height: 200px;
-	margin: 20px 0px;
-	width:600px;
-}
-
-
-#capstones .capstones-info ul {
-	border-right: 0px;
-	width: auto;
-	padding-right: 5px;
-}
-
-#capstones .capstones-packages-info ul {
-	border-right: 0px;
-	width: auto;
-	padding-right: 5px;
-	float: left;
-}
-
-
-.capstones-info ul li.capstones-info-comments {
-	border-right: 0px;
-	float: right;
-	padding-right: 0px;
-}
-
-.capstones-article-img {
-	float: left;
-	background-color:#FEFEFE;
-	border:1px solid #D9D9D9;
-	padding:4px;
-	width: 200px;
-	margin: 0 10px 10px 0;
-}
-
-.capstones-packages-img {
-	float: left;
-	background-color:#FEFEFE;
-	border:1px solid #D9D9D9;
-	padding:4px;
-	width: 280px;
-	margin: 0 10px 10px 0;
-}
-
-.capstones-post {
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-.capstones-post h3 a,.capstones-post-packages h3 a {
-	font-size: 18px;
-	margin-bottom: 11px;
-	font-style: normal;
-	color: #6a6a6a;
-}
-
-.capstones-post h3 a:hover, .capstones-post-packages a:hover{
-    color: #454545;
-	text-decoration: none;
-}
-
-
-
-.capstones-post{
-	float:left;
 }
