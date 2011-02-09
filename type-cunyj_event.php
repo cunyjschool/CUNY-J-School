@@ -89,13 +89,13 @@ if ( $events->have_posts() ) {
 		$events->the_post();
 		$post_id = get_the_id();
 		$start_date = get_post_meta( $post_id, '_cunyj_events_start_date', true );
-		$all_day = get_post_meta($post->ID, '_cunyj_events_all_day', true);
-		$end_date = get_post_meta($post->ID, '_cunyj_events_end_date', true);
-		$venue = get_post_meta($post->ID, '_cunyj_events_venue', true);
-		$street = get_post_meta($post->ID, '_cunyj_events_street', true);
-		$city = get_post_meta($post->ID, '_cunyj_events_city', true);
-		$state = get_post_meta($post->ID, '_cunyj_events_state', true);
-		$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true);
+		$all_day = get_post_meta( $post->ID, '_cunyj_events_all_day', true );
+		$end_date = get_post_meta( $post->ID, '_cunyj_events_end_date', true );
+		$venue = get_post_meta( $post->ID, '_cunyj_events_venue', true );
+		$street = get_post_meta( $post->ID, '_cunyj_events_street', true );
+		$city = get_post_meta( $post->ID, '_cunyj_events_city', true );
+		$state = get_post_meta( $post->ID, '_cunyj_events_state', true );
+		$zipcode = get_post_meta( $post->ID, '_cunyj_events_zipcode', true );
 		// Calculate the days this event should be placed in
 		$start_date_day = date_i18n( 'j', $start_date );
 		$end_date_day = date_i18n( 'j', $end_date );
@@ -167,8 +167,6 @@ if ( $pad != 0 && $pad != 7 )
 
 echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
-$args = array(	'order' => 'ASC',	'nopaging' => true,	'posts_per_page' => '-1',	'post_type' => 'cunyj_event');
-$events = new WP_Query( $args );
 $current_month = gmdate('F', current_time('timestamp'));
 
 echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar</a></div>';
