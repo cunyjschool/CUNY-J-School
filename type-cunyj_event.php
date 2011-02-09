@@ -83,7 +83,8 @@ $events = new WP_Query( $args );
 
 // Put all of the events into an array sorted by month day
 $all_events = array();
-if ( $events->have_posts()) {
+if ( $events->have_posts() ) {
+	
 	while ( $events->have_posts() ) {
 		$events->the_post();
 		$post_id = get_the_id();
@@ -110,8 +111,9 @@ if ( $events->have_posts()) {
 		$all_events[$event_day][$post_id]['city'] = $city;
 		$all_events[$event_day][$post_id]['state'] = $state;
 		$all_events[$event_day][$post_id]['zipcode'] = $zipcode;
-	}
-}
+	} // END while ( $events->have_posts() )
+	
+} // END if ( $events->have_posts() )
 
 // See how much we should pad in the beginning
 $pad = calendar_week_mod(date('w', $unixmonth)-$week_begins);
@@ -158,10 +160,14 @@ $current_month = gmdate('F', current_time('timestamp'));
 
 echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar</a></div>';
 
+echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
 if ( count( $all_events ) ) {
-  echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
+
+	// Sort the events by day (aka the key)
+	ksort( $all_events );
+
 	foreach ( $all_events as $key => $day ) {
-	  $timestamp = mktime( 0, 0 , 0, $thismonth, $key, $thisyear );
+		$timestamp = mktime( 0, 0 , 0, $thismonth, $key, $thisyear );
 		$heading = gmdate( 'l, F jS', $timestamp );
 		echo '<h3 class="upcoming">' . $heading . '</h3>';
 		foreach( $day as $post_id => $event ) {
@@ -184,7 +190,12 @@ if ( count( $all_events ) ) {
 			echo '<div class="clear"></div></div>';
 		}
 	}
-}
+	
+} else {
+	
+	echo '<div class="info notice">There are no upcoming events this month.</div>';
+	
+} // END if ( count( $all_events ) )
 
 ?>
 
