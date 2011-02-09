@@ -334,6 +334,11 @@ div.tabber-item ul li {
 	font-size: 14px;
 }
 
+#research-center-main div.tabber-item a {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
 div.tabber-item.active {
 	display: block;
 }
@@ -981,7 +986,7 @@ img.news-photo {
 	width: 260px;
 	float: right;
 	margin-right: 20px;
-	min-height: 300px;
+	min-height: 140px;
 }
 
 .main#research-center-main #research-center-blog ul {
