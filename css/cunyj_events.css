@@ -107,6 +107,23 @@
   font-size:0.6em;
   float:right;
 }
+#cunyj-events .multi-day {
+	background:#CCE6FF;
+	border-top:1px solid #0066CC;
+	border-bottom:1px solid #0066CC;
+}
+#cunyj-events .start-day {
+	border-radius:8px 0 0 8px;
+	-moz-border-radius:8px 0 0 8px;
+	-webkit-border-radius:8px 0 0 8px;
+	border-left:1px solid #0066CC;
+}
+#cunyj-events .end-day {
+	border-radius:0 8px 8px 0;
+	-moz-border-radius:0 8px 8px 0;
+	-webkit-border-radius:0 8px 8px 0;
+	border-right:1px solid #0066CC;
+}
 .ical-feed{
 	text-align:right;
 	padding:5px 10px;	

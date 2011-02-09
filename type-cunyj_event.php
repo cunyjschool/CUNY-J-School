@@ -44,7 +44,7 @@ $nextmonthlink = gmdate("Y/m", strtotime("+1 months"));
 echo '<div id="calendar_wrap">
 <table id="wp-calendar" summary="' . __('Calendar') . '">
 	<caption>
-		<span class="prev-month"><a href="/archives/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
+		<span class="prev-month"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
 		' . $wp_locale->get_month($thismonth) .' ' . gmdate('Y', $unixmonth) . '
 		<span class="next-month"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>
 	</caption>
@@ -101,20 +101,28 @@ if ( $events->have_posts() ) {
 		$end_date_day = date_i18n( 'j', $end_date );
 		$total_day_span = $end_date_day - $start_date_day;
 		$event_days = array();
-		for ( $i = 0; $i < $total_day_span; $i++ ) {
+		for ( $i = 0; $i <= $total_day_span; $i++ ) {
 			$event_days[] = $start_date_day + $i;
 		}
 		// Don't include events that start in other months
 		if ( date_i18n( 'm', $start_date ) != $thismonth ) {
 			continue;
 		}
+		// Is it multi-day or not?
+		if ( count( $event_days ) > 1 ) {
+			$multi_day = true;
+		} else {
+			$multi_day = false;
+		}
+		
 		// Place the event on every day it is in our array
 		foreach( $event_days as $event_day ) {
 			$all_events[$event_day][$post_id]['permalink'] = get_permalink();
 			$all_events[$event_day][$post_id]['title'] = get_the_title();
 			$all_events[$event_day][$post_id]['excerpt'] = get_the_excerpt();
 			$all_events[$event_day][$post_id]['event_date'] = date_i18n('M j, Y', $start_date);
-			$all_events[$event_day][$post_id]['all_day'] = $all_day;		
+			$all_events[$event_day][$post_id]['all_day'] = $all_day;
+			$all_events[$event_day][$post_id]['multi_day'] = $multi_day;				
 			$all_events[$event_day][$post_id]['start_date'] = $start_date;
 			$all_events[$event_day][$post_id]['end_date'] = $end_date;
 			$all_events[$event_day][$post_id]['venue'] = $venue;
@@ -148,8 +156,20 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	echo '<div class="cal-day">' . $day . '</div>';
 	if ( array_key_exists( $day, $all_events ) ) {
 		echo '<ul>';
+		
 		foreach( $all_events[$day] as $post_id => $event ) {
-			echo '<li><a href="' . $event['permalink'] . '">' . $event['title'] . '</a></li>';
+			$event_classes = array();
+			if ( $event['multi_day'] ) {
+				$event_classes[] = 'multi-day';
+				if ( $day == date_i18n( 'j', $event['start_date'] ) ) {
+					$event_classes[] = 'start-day';
+				} 
+				if ( $day == date_i18n( 'j', $event['end_date'] ) ) {
+					$event_classes[] = 'end-day';
+				}
+			}
+			$event_classes_list = implode(" ", $event_classes);
+			echo '<li class="' . $event_classes_list . '"><a href="' . $event['permalink'] . '">' . $event['title'] . '</a></li>';
 		}
 		echo '</ul>';
 	} else {
