@@ -51,6 +51,7 @@ class cunyj
 			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), CUNYJ_VERSION);
 			
 			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_capstones', get_bloginfo('template_directory') . '/css/capstones.css', array( 'cunyj_primary' ), CUNYJ_VERSION);			
 			wp_enqueue_style( 'cunyj_events', get_bloginfo('template_directory') . '/css/cunyj_events.css', array( 'cunyj_primary' ), CUNYJ_VERSION);
 			
 			// Load in header
