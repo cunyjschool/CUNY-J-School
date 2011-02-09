@@ -192,7 +192,7 @@ echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
 $current_month = gmdate('F', current_time('timestamp'));
 
-echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar</a></div>';
+// echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar</a></div>';
 
 echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
 if ( count( $all_events ) ) {
