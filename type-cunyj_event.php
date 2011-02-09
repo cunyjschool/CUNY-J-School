@@ -156,12 +156,13 @@ $args = array(	'order' => 'ASC',	'nopaging' => true,	'posts_per_page' => '-1',	'
 $events = new WP_Query( $args );
 $current_month = gmdate('F', current_time('timestamp'));
 
-echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar Feed</a></div>';
+echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar</a></div>';
 
 if ( count( $all_events ) ) {
   echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
 	foreach ( $all_events as $key => $day ) {
-		$heading = gmdate('l, F jS', $key);
+	  $timestamp = mktime( 0, 0 , 0, $thismonth, $key, $thisyear );
+		$heading = gmdate( 'l, F jS', $timestamp );
 		echo '<h3 class="upcoming">' . $heading . '</h3>';
 		foreach( $day as $post_id => $event ) {
 			echo '<div class="feature">';
