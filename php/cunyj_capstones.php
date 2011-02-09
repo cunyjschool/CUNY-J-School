@@ -12,7 +12,7 @@ class cunyj_capstones
 	
 	function __construct() {
 		
-		// Add Database post type
+		// Add Capstone post type
 		add_action( 'init', array(&$this, 'create_post_type') );
 		add_action( 'init', array(&$this, 'create_taxonomies') );		
 			
@@ -96,7 +96,9 @@ class cunyj_capstones
 	 */
 	function add_post_meta_box() {
 		
-		add_meta_box( 'cunyj-capstones', __( 'Metadata', 'cunyj-capstones' ), array(&$this, 'post_meta_box'), 'cunyj_capstone', 'side', 'high' );
+		if ( function_exists('add_meta_box') ) {
+			add_meta_box( 'cunyj-capstones', __( 'Metadata', 'cunyj-capstones' ), array(&$this, 'post_meta_box'), 'cunyj_capstone', 'side', 'high' );
+		}
 		
 	} // END add_post_meta_box()
 	

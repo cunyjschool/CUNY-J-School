@@ -26,7 +26,7 @@ class cunyj
 		
 		$this->events = new cunyj_events();
 		$this->databases = new cunyj_databases();
-		$this->databases = new cunyj_capstones();				
+		$this->capstones = new cunyj_capstones();				
 		
 		$this->options = get_option( $this->options_group_name );
 		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
