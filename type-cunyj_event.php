@@ -41,14 +41,17 @@ $prevmonthlink = gmdate("Y/m", strtotime("-1 months"));
 $nextmonth = gmdate("F", strtotime("+1 months"));
 $nextmonthlink = gmdate("Y/m", strtotime("+1 months"));
 
-echo '<div id="calendar_wrap">
-<table id="wp-calendar" summary="' . __('Calendar') . '">
+echo '<div id="calendar_wrap">';
+echo '<h2 class="calendar-title">' . $wp_locale->get_month($thismonth) .' ' . gmdate('Y', $unixmonth) . '</h2>';
+echo '<table id="wp-calendar" summary="' . __('Calendar') . '">';
+/* 
 	<caption>
 		<span class="prev-month"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
 		' . $wp_locale->get_month($thismonth) .' ' . gmdate('Y', $unixmonth) . '
 		<span class="next-month"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>
 	</caption>
-	<thead>
+*/
+echo '<thead>
 		<tr>';
 
 $myweek = array();
