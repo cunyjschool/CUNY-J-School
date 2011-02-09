@@ -24,6 +24,10 @@
 	cursor: pointer;
 }
 
+#database-search p.jump {
+	color: #999999;
+}
+
 #databases .content, #single_database .content {
 	margin-top: 10px;
 }
