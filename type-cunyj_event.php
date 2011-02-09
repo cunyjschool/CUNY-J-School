@@ -96,21 +96,34 @@ if ( $events->have_posts() ) {
 		$city = get_post_meta($post->ID, '_cunyj_events_city', true);
 		$state = get_post_meta($post->ID, '_cunyj_events_state', true);
 		$zipcode = get_post_meta($post->ID, '_cunyj_events_zipcode', true);
-		$event_day = date_i18n( 'j', $start_date );
+		// Calculate the days this event should be placed in
+		$start_date_day = date_i18n( 'j', $start_date );
+		$end_date_day = date_i18n( 'j', $end_date );
+		$total_day_span = $end_date_day - $start_date_day;
+		$event_days = array();
+		for ( $i = 0; $i < $total_day_span; $i++ ) {
+			$event_days[] = $start_date_day + $i;
+		}
 		// Don't include events that start in other months
 		if ( date_i18n( 'm', $start_date ) != $thismonth ) {
 			continue;
 		}
-		$all_events[$event_day][$post_id]['permalink'] = get_permalink();
-		$all_events[$event_day][$post_id]['title'] = get_the_title();
-		$all_events[$event_day][$post_id]['excerpt'] = get_the_excerpt();
-		$all_events[$event_day][$post_id]['event_date'] = date_i18n('M j, Y', $start_date);
-		$all_events[$event_day][$post_id]['start_date'] = $start_date;
-		$all_events[$event_day][$post_id]['venue'] = $venue;
-		$all_events[$event_day][$post_id]['street'] = $street;
-		$all_events[$event_day][$post_id]['city'] = $city;
-		$all_events[$event_day][$post_id]['state'] = $state;
-		$all_events[$event_day][$post_id]['zipcode'] = $zipcode;
+		// Place the event on every day it is in our array
+		foreach( $event_days as $event_day ) {
+			$all_events[$event_day][$post_id]['permalink'] = get_permalink();
+			$all_events[$event_day][$post_id]['title'] = get_the_title();
+			$all_events[$event_day][$post_id]['excerpt'] = get_the_excerpt();
+			$all_events[$event_day][$post_id]['event_date'] = date_i18n('M j, Y', $start_date);
+			$all_events[$event_day][$post_id]['all_day'] = $all_day;		
+			$all_events[$event_day][$post_id]['start_date'] = $start_date;
+			$all_events[$event_day][$post_id]['end_date'] = $end_date;
+			$all_events[$event_day][$post_id]['venue'] = $venue;
+			$all_events[$event_day][$post_id]['street'] = $street;
+			$all_events[$event_day][$post_id]['city'] = $city;
+			$all_events[$event_day][$post_id]['state'] = $state;
+			$all_events[$event_day][$post_id]['zipcode'] = $zipcode;
+		}
+		
 	} // END while ( $events->have_posts() )
 	
 } // END if ( $events->have_posts() )
