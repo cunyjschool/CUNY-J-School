@@ -90,6 +90,39 @@
 	-moz-border-radius-topright: 2px;
 	-moz-border-radius-bottomright: 2px; }
 	
+#ad-social {
+	font-size: 11px;
+	margin-top: 4px;
+	margin-left: 5px;
+}
+
+#ad-social ul li {
+	margin-top: 3px;
+}
+
+#ad-social ul li a {
+	padding-left: 20px;
+	color: #999999;
+	display: block;
+}
+
+#ad-social ul li a:hover {
+	text-decoration: underline;
+	color: #888888;
+}
+
+#ad-social ul li a.facebook {
+	background-image: url('../images/sprites/20101104sprite.png');
+	background-repeat: no-repeat;
+	background-position: -10px -9px;
+}
+
+#ad-social ul li a.twitter {
+	background-image: url('../images/sprites/20101104sprite.png');
+	background-repeat: no-repeat;
+	background-position: -10px -45px;
+}
+	
 #socialnet {
 	clear: both;
 	border-top: 5px solid #eee;

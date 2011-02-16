@@ -78,8 +78,6 @@
 				<li><a href="<?php bloginfo('url'); ?>/current-students/">Current Students</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/alumni/">Alumni</a></li>
 				<li class="last-item"><a href="<?php bloginfo('url'); ?>/continuing-education/">Continuing Education</a></li>
-				<li class="no-background"><a href="http://facebook.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icons/socialnetworking/facebook_16.png" alt="Facebook" /></a></li>
-				<li class="no-background"><a href="http://twitter.com/cunyjschool"><img src="<?php bloginfo('template_directory'); ?>/images/icons/socialnetworking/twitter_16.png" alt="Twitter" /></a></li>
 			</ul>
 			<?php endif; ?>
 			

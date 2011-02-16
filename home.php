@@ -19,7 +19,7 @@
 		<?php echo do_shortcode('[nggallery id=1 template="galleryview" images=0]'); ?>
   </div>
   
-  <div id="nav-items">
+<div id="nav-items">
 	
     <div id="ad-ac">
 	<ul id="acad">
@@ -45,7 +45,15 @@
     <div id="ad-info">
 		<a href="https://cunyjschool.wufoo.com/forms/information-request-form/">Request Info</a>
     </div>
-  </div>
+
+	<div id="ad-social">
+		<ul>
+			<li><a class="facebook" href="http://facebook.com/cunyjschool">Fan us on Facebook</a></li>
+			<li><a class="twitter" href="http://twitter.com/cunyjschool">Follow us on Twitter</a></li>
+		</ul>
+	</div>
+
+</div>
   
 <!-- End Slideshow and Nav -->
 
