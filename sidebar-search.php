@@ -20,8 +20,8 @@
 				} else {
 					break;
 				}
-				echo '<li><a href="' .  get_permalink( $post->id ) . '">';
-				echo '<h4>' . $post->post_title . '</h4>';
+				echo '<li>';
+				echo '<h4><a href="' .  get_permalink( $post->id ) . '">' . $post->post_title . '</a></h4>';
 				echo '<p class="description">';
 				if ( $post->post_type == 'page' ) {
 					echo 'Updated ' . get_the_time( 'F j, Y', $post->ID );
@@ -76,9 +76,9 @@
 				} else {
 					break;
 				}
-				echo '<li><a href="' .  bp_core_get_user_domain( $user->id ) . '">';
+				echo '<li>';
 				echo bp_core_fetch_avatar( array( 'item_id' => $user->id, 'type' => 'thumb', 'width' => 30, 'height' => 30 ) );
-				echo '<h4>' . $user->display_name . '</h4>';
+				echo '<h4><a href="' .  bp_core_get_user_domain( $user->id ) . '">' . $user->display_name . '</a></h4>';
 				$title = cunyj_get_member_profile_data( 'field=Title&user_id=' . $user->id );
 				$organization = cunyj_get_member_profile_data( 'field=Organization&user_id=' . $user->id );
 				if ( $title && $organization ) {
@@ -86,7 +86,7 @@
 				} else if ( $title || $organization ) {
 					echo '<p class="description">' . $title . $organization . '</p>';
 				}
-				echo '</a></li>';
+				echo '</li>';
 			}
 			echo '</ul>';
 		} else {
@@ -112,11 +112,11 @@
 				} else {
 					break;
 				}
-				echo '<li><a href="' . bp_get_group_permalink( $group ) . '">';
+				echo '<li>';
 				echo bp_core_fetch_avatar( array( 'item_id' => $group->id, 'object' => 'group', 'type' => 'thumb', 'width' => 30, 'height' => 30 ) );
-				echo '<h4>' . $group->name . '</h4>';
+				echo '<h4><a href="' . bp_get_group_permalink( $group ) . '">' . $group->name . '</a></h4>';
 				echo '<p class="description">' . $group->description . '</p>';
-				echo '</a></li>';
+				echo '</li>';
 			}
 			echo '</ul>';
 		} else {
@@ -144,10 +144,10 @@
 				} else {
 					break;
 				}
-				echo '<li><a href="http://' . $blog->domain . '">';
-				echo '<h4>' . $blog->name . '</h4>';
+				echo '<li>';
+				echo '<h4><a href="http://' . $blog->domain . '">' . $blog->name . '</a></h4>';
 				echo '<p class="description">' . $blog->description . '</p>';
-				echo '</a></li>';
+				echo '</li>';
 			}
 			echo '</ul>';
 		} else {

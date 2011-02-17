@@ -159,16 +159,10 @@
 	margin-right: -10px;
 	min-height: 40px;
 	clear: left;
-	display: block;
 }
 
 .sidebar#sidebar-search .buddypress_search_results ul li:hover {
-	background-color: #F8F8F8;
-}
 
-.sidebar#sidebar-search .buddypress_search_results ul li a {
-	display: block;
-	text-decoration: none;
 }
 
 .sidebar#sidebar-search .buddypress_search_results.with-avatar .avatar {

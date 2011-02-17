@@ -17,7 +17,7 @@
 	?>
 	<ul>
 	  <?php if ( $upcoming_events->have_posts() ) : while ( $upcoming_events->have_posts() ) : $upcoming_events->the_post(); ?>
-		<li class="event"><a href="<?php the_permalink(); ?>">			
+		<li class="event">
 		<?php
 		$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", $single=true );
 		$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", $single=true );
@@ -27,9 +27,9 @@
 		        <span class="day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></span>
 			</div> 
 
-			<h5><?php the_title(); ?></h5>
+			<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 			<div style="clear:left;"></div>
-		</a></li>
+		</li>
 	    <?php endwhile; else: ?>
 		
 		<li>Check back soon for more upcoming events.</li>
