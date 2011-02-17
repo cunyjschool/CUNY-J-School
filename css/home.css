@@ -1,5 +1,10 @@
 /* CSS Document */
 
+#home h3 {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
 #home h3 a:hover {
 	background-color: #FFFFFF;
 }
@@ -30,7 +35,7 @@
 	padding: 0;
 }
 	
-#nav-items #ad-ac h3 a {
+#nav-items h3 a {
 	color: #333;
 }
 	
@@ -102,7 +107,7 @@
 
 #ad-social ul li a {
 	padding-left: 20px;
-	color: #999999;
+	color: #999999 !important;
 	display: block;
 }
 
@@ -217,60 +222,71 @@
 	overflow: hidden;
 }
 
-#news-home {
+#news-events-section #latest-news-wrap {
 	float: left;
-	margin-bottom: 20px; 
+	width: 480px;
 }
-	
-.main .content #news {
+
+#news-events-section #latest-news-wrap .feed {
+	float: right;
+	margin-top: 3px;
+}
+
+#news-events-section #latest-news-wrap ul li {
 	float: left;
-	width: 280px;
+	width: 130px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
-	
-#news a, #news a:visited {
-	text-decoration: none; }
-	
-#news h4 {
+
+#news-events-section #latest-news-wrap ul li img {
+	border: 5px solid #EEEEEE;
+}
+
+#news-events-section #latest-news-wrap ul li h4 {
 	border-bottom: 1px dotted #eee; 
 	padding: 5px 0;
 	color: #0066cc;
 }
-	
-#events-home {
-	width: 280px;
-	margin-left: 300px;
+
+#news-events-section #latest-news-wrap .more-links {
+	text-align: right;
 }
 
-#events-home h3 a:hover {
+#news-events-section #upcoming-events-wrap, #news-events-section #latest-news-wrap {
+	border-top: solid 5px #FF9900;
+}
+	
+#news-events-section #upcoming-events-wrap {
+	width: 350px;
+	float: right;
+}
+
+#news-events-section #upcoming-events-wrap h3 a:hover {
 	text-decoration: none;
 }
 
-.main #events-home a:hover {
+#news-events-section #upcoming-events-wrap a:hover {
 	background-color: #EEEEEE;
 }
 
-.main #events-home ul {
-
-}
-
-.main #events-home li.event {
+#news-events-section #upcoming-events-wrap li.event {
 	margin-left: 0;
 	margin-right: 0;
 	margin-bottom: 0;
 	margin-top: 5px;
-	width: 280px;
-	min-height: 27px;
+	min-height: 35px;
 	padding-bottom: 5px;
 	border-bottom: 1px dotted #eee;
 }
 
-.main #events-home li.event a {
+#news-events-section #upcoming-events-wrap li.event a {
 	display: block;
 	text-decoration: none;
 	background-color: transparent;
 }
 
-.main #events-home li.event h5 {
+#news-events-section #upcoming-events-wrap li.event h5 {
 	margin-left: 100px;
 	font-size: 12px;
 	margin-top: 0;
@@ -278,17 +294,17 @@
 	color: #0066cc;
 }
 
-.main #events-home li.event div.calendar-date {
+#news-events-section #upcoming-events-wrap li.event div.calendar-date {
 	float: left;
 	border: 1px solid #eee;
 	text-transform: uppercase;
 }
 
-.main #events-home li.event div.calendar-date span {
+#news-events-section #upcoming-events-wrap li.event div.calendar-date span {
 	display: inline-block;
 }
 
-.main #events-home li.event div.calendar-date span.month {
+#news-events-section #upcoming-events-wrap li.event div.calendar-date span.month {
 	background: #de1515;
 	color: #FFFFFF;
 	padding: 2px 6px;
@@ -296,7 +312,7 @@
 	text-align: center;
 }
 
-.main #events-home li.event div.calendar-date span.day {
+#news-events-section #upcoming-events-wrap li.event div.calendar-date span.day {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 5px;

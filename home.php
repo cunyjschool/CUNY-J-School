@@ -57,49 +57,42 @@
   
 <!-- End Slideshow and Nav -->
 
-	<div class="section">
+<div id="news-events-section" class="section">
 
-	<div id="news-home">
-		<div id="news">
-			<h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
+	<div id="latest-news-wrap">
+			
+			<h3><a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a>Latest News</h3>
 
-		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); ?>
-		<ul>
-  		<?php if ( $news_posts->have_posts() ) : ?>
-		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
-			<li class="news-item">
-				<a href="<?php the_permalink(); ?>">
-				<h4><?php the_title(); ?></h4>
-				</a>
-			</li>
-    	<?php endwhile; else: ?>
-			<li>There are currently no stories.</li>
-		<?php endif; ?>
-		</ul>
+			<?php
+				$args = array(
+					'category_name'=>'news',
+					'showposts'=>3		
+				);
+				$news_posts = new WP_Query( $args );
+			?>
+			<ul>
+	  		<?php if ( $news_posts->have_posts() ) : ?>
+			<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+				<li class="news-item">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 100, 100 ) ); ?></a>
+					<?php endif; ?>
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				</li>
+	    	<?php endwhile; else: ?>
+				<li>There are currently no stories.</li>
+			<?php endif; ?>
+			</ul>
+			
+			<div style="clear:left;"></div>
 		
-      	<div class="morelinks"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a></div>
+      		<div class="more-links"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a></div>
 
-		</div>
+	</div><!-- END #latest-news-wrap -->
 
-	</div><!-- /#news-home -->
-
+    <div id="upcoming-events-wrap">
 	
-	<div id="featured-home">
-		<a href="http://nycitynewsservice.com/">
-		<div class="fh-inner" id="nycitynewsservice">
-        	<p class="description">Student-powered wire service</p>
-    	</div>
-		</a>
-
-		<a href="http://fort-greene.thelocal.nytimes.com/">
-		<div class="fh-inner" id="nytlocal">
-			<p class="description">CUNY Graduate School of Journalism<br>with <img height="25" src="<?php bloginfo('template_directory'); ?>/images/logos/nytlogo379x64.gif" class="nyt-logo" alt="NYT logo" /></p>
-		</div></a>
-
-	</div><!-- /#featured-home -->
-
-    <div id="events-home">
-		<h3>Events</h3>
+		<h3><a href="<?php bloginfo( 'url' ); ?>/events/">Upcoming Events</a></h3>
 
 		<?php 
 		$args = array( 	'post_type'=>'cunyj_event',
@@ -114,7 +107,7 @@
 		?>
 		<ul>
 		<?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
-		<li class="event"><a href="<?php the_permalink(); ?>">
+		<li class="event">
 			<?php 
 			$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", true );
 			$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", true );
@@ -124,47 +117,19 @@
 		        <span class="day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></td>
 		      </span>
 			</div> 
-			<h5><?php the_title(); ?></h5>
-		</a></li>
+			<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+		</li>
 		<?php endwhile; else: ?>
 		<li>Check back soon for more upcoming events.</li>
 		<?php endif; ?>
 		</ul>
 
-		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
+		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">All Events</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
 	</div><!-- /#events-home -->
 	
 	<div style="clear:both;"></div>
 
 </div><!-- /.section -->
-    
-  <?php /* 
-  <div class="clearfix" id="soc">
-    <div id="vimeo-player">
-  		<object type="application/x-shockwave-flash" width="400" height="300" data="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com">	<param name="quality" value="best" />		<param name="allowfullscreen" value="true" />		<param name="allowscriptaccess" value="always" />	<param name="scale" value="showAll" />	<param name="movie" value="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com" /></object>
-    </div>
-    
-    <div id="flick-twit">
-		<div id="flick">
-		</div>
-	</div>
-	
-  </div><!-- END - #soc -->
-  
-  
-	<div class="clearfix" id="socialnet">
-		<ul>
-			<li id="hfacebook"><a href="http://www.facebook.com/cunyjschool">Facebook</a></li>
-			<li id="htwitter"><a href="http://twitter.com/cunyjschool/">Twitter</a></li>
-			<li id="htwitter"><a href="<?php bloginfo('url'); ?>/twitter-lists/">Twitter Lists</a></li>
-			<li id="hyoutube"><a href="http://www.youtube.com/user/cunyjschool">YouTube</a></li>
-			<li id="hvimeo"><a href="http://vimeo.com/cunyjschool/">Vimeo</a></li>
-			<li id="hlinkedin"><a href="http://www.linkedin.com/groups?gid=130402">LinkedIn</a></li>
-			<li id="hflickr"><a href="http://www.flickr.com/photos/cunyjschool/">Flickr</a></li>
-			<li id="hfoursquare"><a href="http://foursquare.com/venue/216018">foursquare</a></li>
-		</ul>
-	</div>
-	*/ ?>
 
   
 	<div class="clearfix" id="row3">
