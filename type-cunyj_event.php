@@ -227,7 +227,7 @@ if ( count( $all_events ) ) {
 	
 } else {
 	
-	echo '<div class="info notice">There are no upcoming events this month.</div>';
+	echo '<div class="info message">There are no upcoming events this month.</div>';
 	
 } // END if ( count( $all_events ) )
 
