@@ -259,7 +259,7 @@ h4.blog-header {
  * Property: width
  */
 
-body.search-results .content {
+body.search-results .content, body.search-no-results .content {
 	width: 600px;	
 }
 
