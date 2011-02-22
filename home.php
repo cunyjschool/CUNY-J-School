@@ -57,42 +57,49 @@
   
 <!-- End Slideshow and Nav -->
 
-<div id="news-events-section" class="section">
+	<div class="section">
 
-	<div id="latest-news-wrap">
-			
-			<h3><a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a>Latest News</h3>
+	<div id="news-home">
+		<div id="news">
+			<h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
-			<?php
-				$args = array(
-					'category_name'=>'news',
-					'showposts'=>3		
-				);
-				$news_posts = new WP_Query( $args );
-			?>
-			<ul>
-	  		<?php if ( $news_posts->have_posts() ) : ?>
-			<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
-				<li class="news-item">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 100, 100 ) ); ?></a>
-					<?php endif; ?>
-					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				</li>
-	    	<?php endwhile; else: ?>
-				<li>There are currently no stories.</li>
-			<?php endif; ?>
-			</ul>
-			
-			<div style="clear:left;"></div>
+		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); ?>
+		<ul>
+  		<?php if ( $news_posts->have_posts() ) : ?>
+		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+			<li class="news-item">
+				<a href="<?php the_permalink(); ?>">
+				<h4><?php the_title(); ?></h4>
+				</a>
+			</li>
+    	<?php endwhile; else: ?>
+			<li>There are currently no stories.</li>
+		<?php endif; ?>
+		</ul>
 		
-      		<div class="more-links"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a></div>
+      	<div class="morelinks"><a href="<?php bloginfo('url'); ?>/category/news/">More News</a></div>
 
-	</div><!-- END #latest-news-wrap -->
+		</div>
 
-    <div id="upcoming-events-wrap">
+	</div><!-- /#news-home -->
+
 	
-		<h3><a href="<?php bloginfo( 'url' ); ?>/events/">Upcoming Events</a></h3>
+	<div id="featured-home">
+		<a href="http://nycitynewsservice.com/">
+		<div class="fh-inner" id="nycitynewsservice">
+        	<p class="description">Student-powered wire service</p>
+    	</div>
+		</a>
+
+		<a href="http://fort-greene.thelocal.nytimes.com/">
+		<div class="fh-inner" id="nytlocal">
+			<p class="description">CUNY Graduate School of Journalism<br>with <img height="25" src="<?php bloginfo('template_directory'); ?>/images/logos/nytlogo379x64.gif" class="nyt-logo" alt="NYT logo" /></p>
+		</div></a>
+
+	</div><!-- /#featured-home -->
+
+    <div id="events-home">
+		<h3>Events</h3>
 
 		<?php 
 		$args = array( 	'post_type'=>'cunyj_event',
@@ -107,7 +114,7 @@
 		?>
 		<ul>
 		<?php if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post(); ?>
-		<li class="event">
+		<li class="event"><a href="<?php the_permalink(); ?>">
 			<?php 
 			$start_date = get_post_meta( $post->ID,"_cunyj_events_start_date", true );
 			$end_date = get_post_meta( $post->ID,"_cunyj_events_end_date", true );
@@ -117,20 +124,104 @@
 		        <span class="day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></td>
 		      </span>
 			</div> 
-			<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-		</li>
+			<h5><?php the_title(); ?></h5>
+		</a></li>
 		<?php endwhile; else: ?>
 		<li>Check back soon for more upcoming events.</li>
 		<?php endif; ?>
 		</ul>
 
-		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">All Events</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
+		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
 	</div><!-- /#events-home -->
 	
 	<div style="clear:both;"></div>
 
 </div><!-- /.section -->
+    
+  <?php /* 
+  <div class="clearfix" id="soc">
+    <div id="vimeo-player">
+  		<object type="application/x-shockwave-flash" width="400" height="300" data="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com">	<param name="quality" value="best" />		<param name="allowfullscreen" value="true" />		<param name="allowscriptaccess" value="always" />	<param name="scale" value="showAll" />	<param name="movie" value="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com" /></object>
+    </div>
+    
+    <div id="flick-twit">
+		<div id="flick">
+		</div>
+	</div>
+	
+  </div><!-- END - #soc -->
+  
+  
+	<div class="clearfix" id="socialnet">
+		<ul>
+			<li id="hfacebook"><a href="http://www.facebook.com/cunyjschool">Facebook</a></li>
+			<li id="htwitter"><a href="http://twitter.com/cunyjschool/">Twitter</a></li>
+			<li id="htwitter"><a href="<?php bloginfo('url'); ?>/twitter-lists/">Twitter Lists</a></li>
+			<li id="hyoutube"><a href="http://www.youtube.com/user/cunyjschool">YouTube</a></li>
+			<li id="hvimeo"><a href="http://vimeo.com/cunyjschool/">Vimeo</a></li>
+			<li id="hlinkedin"><a href="http://www.linkedin.com/groups?gid=130402">LinkedIn</a></li>
+			<li id="hflickr"><a href="http://www.flickr.com/photos/cunyjschool/">Flickr</a></li>
+			<li id="hfoursquare"><a href="http://foursquare.com/venue/216018">foursquare</a></li>
+		</ul>
+	</div>
+	*/ ?>
 
+  
+  <div class="clearfix" id="jnet">
+  
+<h4 style="float: left; padding-bottom: 20px;">CUNY J-School Network</h4>
+
+<h4 style="float: right;">View All Recent Activity on the <a href="<?php bloginfo('url'); ?>/wire/">Wire &raquo;</a></h4> 
+    
+    <div class="jsite" id="clips-of-the-week" style="clear: both;">
+		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/clips-of-the-week/">Clips of the Week</a></h3>
+		<h5>Student work</h5>
+		<ul>
+		<?php
+		$args = array(	'category_name'=>'clips-of-the-week',
+						'showposts'=>3
+				);
+		$student_clips = new WP_Query( $args ); ?>
+		<?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
+			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
+		<?php endwhile; else: ?>
+			<li>There are currently no stories.</li>
+		<?php endif; ?>
+		</ul>
+	</div>
+    
+    <div class="jsite dynamic-content-load" id="news-innovation-posts">
+		<h3 id="ni"><a href="http://newsinnovation.com/">NewsInnovation</a></h3>
+		<h5>New Business Models For News</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
+	</div>
+    
+    <div class="jsite third" id="write-stuff-posts">
+		<h3 id="ws"><a href="http://writestuff.journalism.cuny.edu/">The Write Stuff</a></h3>
+		<h5>Tips to Improve Your Writing</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
+    </div>
+    
+    
+    <div class="jsite" id="mott-haven-herald-posts">
+		<h3 id="mh"><a href="http://motthavenherald.com/">Mott Haven Herald</a></h3>
+		<h5>Local News in the Bronx</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>		
+	</div>
+    
+    <div class="jsite" id="digital-news-journalist-posts">
+		<h3 id="dnj"><a href="http://digitalnewsjournalist.com/">Digital News Journalist</a></h3>
+		<h5>Tips, Tools &amp; Resources</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
+    </div>
+    
+	<div class="jsite third" id="219-mag-posts">
+		<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
+		<h5>A Journal of Issues &amp; Ideas</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
+	</div>
+	
+  </div><!-- END - #jnet -->
   
 	<div class="clearfix" id="row3">
 	
@@ -180,7 +271,35 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 
 <script type="text/javascript">
 
+	/**
+	 * jsonFlickrFeed()
+	 * Callback method for the jsonp request to Flickr. Places images as thumbnails on homepage
+	 */
+	function jsonFlickrFeed( data ) {
+		
+		jQuery.each( data.items, function( key, item ) {
+			if ( key < 12 ) {
+				var item_html = '<a href="' + item.link + '" target="_blank">';
+				// Replace the medium size with the square size
+				item_img = item.media.m.replace( 'm.jpg', 's.jpg' );
+				item_html += '<img src="' + item_img + '" height="75px" width="75px" title="' + item.title + '" />';
+				item_html += '</a>';
+				jQuery('#flick').append(item_html);
+			} else {
+				return;
+			}
+		});
+		
+	} // END - jsonFlickrFeed()
 
+	// Dyanmically load Flickr images
+	// cunyj_load_flickr_thumbnails( 'http://api.flickr.com/services/feeds/photos_public.gne?id=12817495@N03&lang=en-us&format=json', 12, 'flick' );
+	// Dynamically load network content on the homepage
+	cunyj_load_blog_posts( 'http://newsinnovation.com/', 4, 'news-innovation-posts' );
+	cunyj_load_blog_posts( 'http://writestuff.journalism.cuny.edu/', 4, 'write-stuff-posts' );
+	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
+	cunyj_load_blog_posts( 'http://digitalnewsjournalist.com/', 4, 'digital-news-journalist-posts' );	
+	cunyj_load_blog_posts( 'http://219mag.com/', 4, '219-mag-posts' );
 </script>
 	
 <?php get_footer(); ?>

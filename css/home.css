@@ -1,10 +1,5 @@
 /* CSS Document */
 
-#home h3 {
-	font-size: 16px;
-	text-transform: uppercase;
-}
-
 #home h3 a:hover {
 	background-color: #FFFFFF;
 }
@@ -35,7 +30,7 @@
 	padding: 0;
 }
 	
-#nav-items h3 a {
+#nav-items #ad-ac h3 a {
 	color: #333;
 }
 	
@@ -107,7 +102,7 @@
 
 #ad-social ul li a {
 	padding-left: 20px;
-	color: #999999 !important;
+	color: #999999;
 	display: block;
 }
 
@@ -222,71 +217,60 @@
 	overflow: hidden;
 }
 
-#news-events-section #latest-news-wrap {
+#news-home {
 	float: left;
-	width: 480px;
+	margin-bottom: 20px; 
 }
-
-#news-events-section #latest-news-wrap .feed {
-	float: right;
-	margin-top: 3px;
-}
-
-#news-events-section #latest-news-wrap ul li {
+	
+.main .content #news {
 	float: left;
-	width: 130px;
-	margin-left: 10px;
-	margin-right: 10px;
+	width: 280px;
 }
-
-#news-events-section #latest-news-wrap ul li img {
-	border: 5px solid #EEEEEE;
-}
-
-#news-events-section #latest-news-wrap ul li h4 {
+	
+#news a, #news a:visited {
+	text-decoration: none; }
+	
+#news h4 {
 	border-bottom: 1px dotted #eee; 
 	padding: 5px 0;
 	color: #0066cc;
 }
-
-#news-events-section #latest-news-wrap .more-links {
-	text-align: right;
-}
-
-#news-events-section #upcoming-events-wrap, #news-events-section #latest-news-wrap {
-	border-top: solid 5px #FF9900;
-}
 	
-#news-events-section #upcoming-events-wrap {
-	width: 350px;
-	float: right;
+#events-home {
+	width: 280px;
+	margin-left: 300px;
 }
 
-#news-events-section #upcoming-events-wrap h3 a:hover {
+#events-home h3 a:hover {
 	text-decoration: none;
 }
 
-#news-events-section #upcoming-events-wrap a:hover {
+.main #events-home a:hover {
 	background-color: #EEEEEE;
 }
 
-#news-events-section #upcoming-events-wrap li.event {
+.main #events-home ul {
+
+}
+
+.main #events-home li.event {
 	margin-left: 0;
 	margin-right: 0;
 	margin-bottom: 0;
 	margin-top: 5px;
-	min-height: 35px;
+	width: 280px;
+	min-height: 27px;
 	padding-bottom: 5px;
 	border-bottom: 1px dotted #eee;
 }
 
-#news-events-section #upcoming-events-wrap li.event a {
+.main #events-home li.event a {
 	display: block;
 	text-decoration: none;
 	background-color: transparent;
 }
 
-#news-events-section #upcoming-events-wrap li.event h5 {
+.main #events-home li.event h5 {
 	margin-left: 100px;
 	font-size: 12px;
 	margin-top: 0;
@@ -294,17 +278,17 @@
 	color: #0066cc;
 }
 
-#news-events-section #upcoming-events-wrap li.event div.calendar-date {
+.main #events-home li.event div.calendar-date {
 	float: left;
 	border: 1px solid #eee;
 	text-transform: uppercase;
 }
 
-#news-events-section #upcoming-events-wrap li.event div.calendar-date span {
+.main #events-home li.event div.calendar-date span {
 	display: inline-block;
 }
 
-#news-events-section #upcoming-events-wrap li.event div.calendar-date span.month {
+.main #events-home li.event div.calendar-date span.month {
 	background: #de1515;
 	color: #FFFFFF;
 	padding: 2px 6px;
@@ -312,7 +296,7 @@
 	text-align: center;
 }
 
-#news-events-section #upcoming-events-wrap li.event div.calendar-date span.day {
+.main #events-home li.event div.calendar-date span.day {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 5px;
