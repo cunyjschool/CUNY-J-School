@@ -131,7 +131,7 @@
 		<?php endif; ?>
 		</ul>
 
-		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
+		<div class="morelinks" style="margin-top: 10px;"><a href="<?php bloginfo('url'); ?>/events/">All Events</a> | <a href="<?php bloginfo('url'); ?>/admissions/information-sessions/">Info Sessions</a> | <a href="<?php bloginfo('url'); ?>/about/room-request/">Room Request</a></div>
 	</div><!-- /#events-home -->
 	
 	<div style="clear:both;"></div>
