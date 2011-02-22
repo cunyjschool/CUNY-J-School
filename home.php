@@ -169,9 +169,7 @@
   
   <div class="clearfix" id="jnet">
   
-<h4 style="float: left; padding-bottom: 20px;">CUNY J-School Network</h4>
-
-<h4 style="float: right;">View All Recent Activity on the <a href="<?php bloginfo('url'); ?>/wire/">Wire &raquo;</a></h4> 
+	<h3 class="section-title">Student Work</h3>
     
     <div class="jsite" id="clips-of-the-week" style="clear: both;">
 		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/clips-of-the-week/">Clips of the Week</a></h3>
@@ -190,31 +188,12 @@
 		</ul>
 	</div>
     
-    <div class="jsite dynamic-content-load" id="news-innovation-posts">
-		<h3 id="ni"><a href="http://newsinnovation.com/">NewsInnovation</a></h3>
-		<h5>New Business Models For News</h5>
-		<?php /* Content is loaded dynamically with jQuery */ ?>
-	</div>
-    
-    <div class="jsite third" id="write-stuff-posts">
-		<h3 id="ws"><a href="http://writestuff.journalism.cuny.edu/">The Write Stuff</a></h3>
-		<h5>Tips to Improve Your Writing</h5>
-		<?php /* Content is loaded dynamically with jQuery */ ?>
-    </div>
-    
-    
     <div class="jsite" id="mott-haven-herald-posts">
 		<h3 id="mh"><a href="http://motthavenherald.com/">Mott Haven Herald</a></h3>
 		<h5>Local News in the Bronx</h5>
 		<?php /* Content is loaded dynamically with jQuery */ ?>		
 	</div>
-    
-    <div class="jsite" id="digital-news-journalist-posts">
-		<h3 id="dnj"><a href="http://digitalnewsjournalist.com/">Digital News Journalist</a></h3>
-		<h5>Tips, Tools &amp; Resources</h5>
-		<?php /* Content is loaded dynamically with jQuery */ ?>
-    </div>
-    
+
 	<div class="jsite third" id="219-mag-posts">
 		<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
 		<h5>A Journal of Issues &amp; Ideas</h5>
@@ -295,10 +274,7 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 	// Dyanmically load Flickr images
 	// cunyj_load_flickr_thumbnails( 'http://api.flickr.com/services/feeds/photos_public.gne?id=12817495@N03&lang=en-us&format=json', 12, 'flick' );
 	// Dynamically load network content on the homepage
-	cunyj_load_blog_posts( 'http://newsinnovation.com/', 4, 'news-innovation-posts' );
-	cunyj_load_blog_posts( 'http://writestuff.journalism.cuny.edu/', 4, 'write-stuff-posts' );
 	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
-	cunyj_load_blog_posts( 'http://digitalnewsjournalist.com/', 4, 'digital-news-journalist-posts' );	
 	cunyj_load_blog_posts( 'http://219mag.com/', 4, '219-mag-posts' );
 </script>
 	

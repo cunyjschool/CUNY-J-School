@@ -363,7 +363,10 @@
 #jnet {
 	clear: both;
 	border-top: 1px solid #eee;
-	padding: 20px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 	margin-bottom: 40px;
 	background: #f8f8f8;
 	-webkit-box-shadow: 5px 5px 0 #eee;  
@@ -374,6 +377,11 @@
 	
 #jnet h3 {
 	margin: 10px 0 2px 0;
+}
+
+#jnet h3.section-title {
+	margin-top:0px;
+	margin-bottom: 10px;
 }
 	
 #jnet h3 a {
