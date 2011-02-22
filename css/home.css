@@ -219,7 +219,6 @@
 
 #news-home {
 	float: left;
-	margin-bottom: 20px; 
 }
 	
 .main .content #news {
@@ -373,7 +372,8 @@
     -moz-box-shadow: 5px 5px 0 #eee;  
     box-shadow: 5px 5px 0 #eee;
 	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px; }
+	-moz-border-radius: 3px;
+}
 	
 #jnet h3 {
 	margin: 10px 0 2px 0;
@@ -569,24 +569,64 @@
 	margin-bottom: 15px;
 }
 
-#soc {
+#featured-videos {
 	background: #ff9900 url(../images/backgrounds/orange-back.jpg) repeat;
 	padding: 20px;
+	margin-bottom: 30px;
 	-webkit-box-shadow: 5px 5px 0 #eee;  
     -moz-box-shadow: 5px 5px 0 #eee;  
     box-shadow: 5px 5px 0 #eee;
 	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px; } 
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: none;
+}
+
+#featured-videos .primary-video {
+	width: 550px;
+}
+
+#featured-videos .primary-video h3 a {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#featured-videos .primary-video h3 a:hover {
+	background-color: transparent;
+}
+
+#featured-videos .video-thumbnails {
+	float: right;
+	width: 250px;
+}
+
+#featured-videos .video-thumbnails .video-thumbnail {
+	margin-bottom: 14px;
+	margin-left: 9px;
+	margin-right: 9px;
+	float: left;
+	border: 3px solid #EEEEEE;
+}
+
+#featured-videos .video-thumbnails .video-thumbnail:hover {
+	cursor: pointer;
+	border-color: #0066CC;	
+}
+
+#featured-videos .video-thumbnails .video-thumbnail.active {
+	border-color: #0066CC;
+}
 	
-#soc a, #soc a:visited {
+#featured-videos a, #soc a:visited {
 	color: #333; }
 	
-#soc a:hover {
+#featured-videos a:hover {
 	color: #222;
 	text-decoration: underline;
 }
 
-#soc #vimeo-player {
+#featured-videos #vimeo-player {
 	float: left;
 	width: 400px;
 }

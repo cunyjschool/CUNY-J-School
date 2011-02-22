@@ -138,36 +138,20 @@
 
 </div><!-- /.section -->
     
-  <?php /* 
-  <div class="clearfix" id="soc">
-    <div id="vimeo-player">
-  		<object type="application/x-shockwave-flash" width="400" height="300" data="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com">	<param name="quality" value="best" />		<param name="allowfullscreen" value="true" />		<param name="allowscriptaccess" value="always" />	<param name="scale" value="showAll" />	<param name="movie" value="http://vimeo.com/hubnut/?user_id=cunyjschool&amp;color=00adef&amp;background=000000&amp;fullscreen=1&amp;slideshow=0&amp;stream=channel&amp;id=143532&amp;server=vimeo.com" /></object>
-    </div>
-    
-    <div id="flick-twit">
-		<div id="flick">
+	<div class="clearfix" id="featured-videos">
+		
+		<div class="video-thumbnails">
+			
 		</div>
-	</div>
-	
-  </div><!-- END - #soc -->
-  
-  
-	<div class="clearfix" id="socialnet">
-		<ul>
-			<li id="hfacebook"><a href="http://www.facebook.com/cunyjschool">Facebook</a></li>
-			<li id="htwitter"><a href="http://twitter.com/cunyjschool/">Twitter</a></li>
-			<li id="htwitter"><a href="<?php bloginfo('url'); ?>/twitter-lists/">Twitter Lists</a></li>
-			<li id="hyoutube"><a href="http://www.youtube.com/user/cunyjschool">YouTube</a></li>
-			<li id="hvimeo"><a href="http://vimeo.com/cunyjschool/">Vimeo</a></li>
-			<li id="hlinkedin"><a href="http://www.linkedin.com/groups?gid=130402">LinkedIn</a></li>
-			<li id="hflickr"><a href="http://www.flickr.com/photos/cunyjschool/">Flickr</a></li>
-			<li id="hfoursquare"><a href="http://foursquare.com/venue/216018">foursquare</a></li>
-		</ul>
-	</div>
-	*/ ?>
+		
+		<div class="primary-video">
+		 
+    	</div>
+    
+	</div><!-- END div#soc -->
 
   
-  <div class="clearfix" id="jnet">
+	<div class="clearfix" id="jnet">
   
 	<h3 class="section-title">Student Work</h3>
     
@@ -251,31 +235,75 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 <script type="text/javascript">
 
 	/**
-	 * jsonFlickrFeed()
-	 * Callback method for the jsonp request to Flickr. Places images as thumbnails on homepage
+	 * cunyj_load_featured_videos()
+	 * Generate a featured video player for the homepage
 	 */
-	function jsonFlickrFeed( data ) {
+	function cunyj_load_featured_videos( vimeo_channel_url ) {
 		
-		jQuery.each( data.items, function( key, item ) {
-			if ( key < 12 ) {
-				var item_html = '<a href="' + item.link + '" target="_blank">';
-				// Replace the medium size with the square size
-				item_img = item.media.m.replace( 'm.jpg', 's.jpg' );
-				item_html += '<img src="' + item_img + '" height="75px" width="75px" title="' + item.title + '" />';
-				item_html += '</a>';
-				jQuery('#flick').append(item_html);
-			} else {
-				return;
-			}
+		jQuery.ajax({
+			url: vimeo_channel_url,
+			dataType: 'jsonp',
+			success: function( data ) {
+				jQuery.each( data, function( key, video ) {
+					// Add the first video to the primary viewer
+					if ( key == 0 ) {
+						cunyj_replace_primary_video( video.url );
+					}
+					
+					if ( key <= 7 ) {
+						var html = '';
+						html += '<div class="video-thumbnail';
+						if ( key == 0 ) {
+							html += ' active';
+						}
+						html += '" id="' + video.url + '"">';
+						html += '<img src="' + video.thumbnail_small + '" height="75px" width="100px" />';
+						html += '</div>';
+						
+						jQuery('#featured-videos .video-thumbnails').append( html );
+					}
+				});
+				
+				jQuery('#featured-videos .video-thumbnail').click(function() {
+					jQuery('.video-thumbnail').removeClass('active');
+					var url = jQuery(this).attr('id');
+					cunyj_replace_primary_video( url );
+					jQuery(this).addClass('active');
+				});
+				
+				jQuery('#featured-videos').show();
+			}, 
 		});
 		
-	} // END - jsonFlickrFeed()
+	} // END cunyj_load_featured_videos()
+	
+	/**
+	 * cunyj_replace_primary_video()
+	 */
+	function cunyj_replace_primary_video( url ) {
+		
+		var request_url = 'http://vimeo.com/api/oembed.json?';
+		request_url += 'url=' + url + '&maxwidth=550&byline=false&title=false&portrait=false';
+		jQuery.ajax({
+			url: request_url,
+			dataType: 'jsonp',
+			success: function( data ) {
+				var html = '';
+				html += data.html;
+				html += '<h3><a href="' + url + '">' + data.title + '</a></h3>';
+				jQuery('#featured-videos .primary-video').empty().html( html );
+			},
+		});
+		
+	} // END cunyj_replace_primary_video()
 
-	// Dyanmically load Flickr images
-	// cunyj_load_flickr_thumbnails( 'http://api.flickr.com/services/feeds/photos_public.gne?id=12817495@N03&lang=en-us&format=json', 12, 'flick' );
+	// Dynamically load the featured video viewer
+	cunyj_load_featured_videos( 'http://vimeo.com/api/v2/channel/cunyjschool/videos.json' );
+
 	// Dynamically load network content on the homepage
 	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
 	cunyj_load_blog_posts( 'http://219mag.com/', 4, '219-mag-posts' );
+
 </script>
 	
 <?php get_footer(); ?>
