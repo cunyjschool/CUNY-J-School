@@ -11,14 +11,6 @@ h4 {
 .main-text p{
 	font-size:14px;
 }
-ul.three-wide li {
-	width:30%;
-	float:left;
-	padding-right:5%;
-}
-ul.three-wide li:last-child {
-	padding-right:0;
-}
 img{
 	border:5px solid #eeeeee;
 	-moz-border-radius:3px;
@@ -27,28 +19,30 @@ img{
 }
 .orange_bg {
 	background: url("http://www.journalism.cuny.edu/wp-content/themes/CUNY-J-School/images/backgrounds/orange-back.jpg") repeat scroll 0 0 #FF9900;
-	padding:10px 20px 20px 20px;
-	-moz-box-shadow:5px 5px 0 #EEEEEE;
-	box-shadow:5px 5px 0 #EEEEEE;
-	-webkit-box-shadow:5px 5px 0 #EEEEEE;
-	-moz-border-radius:3px;
-	border-radius:3px;
-	-webkit-border-radius:3px;
+}
+.grey_bg {
+	background: #f8f8f8;
 }
 .orange_bg .caption{
 	border-color:#555555;
 }
-.grey_bg {
-	background: #f8f8f8;
-	padding:10px 20px 20px 20px;
+.drop-shadow {
 	-moz-box-shadow:5px 5px 0 #EEEEEE;
 	box-shadow:5px 5px 0 #EEEEEE;
 	-webkit-box-shadow:5px 5px 0 #EEEEEE;
 	-moz-border-radius:3px;
 	border-radius:3px;
 	-webkit-border-radius:3px;
-	width:60%;
+}
+.pads {
+	padding:1% 1.5%;
 	margin-bottom:20px;
+}
+.one-third-width {
+	width:30%;
+}
+.two-thirds-width {
+	width:60%;
 }
 blockquote.pullquote{
 	font-size:18px;
@@ -58,10 +52,16 @@ blockquote.pullquote{
 	margin:10px auto 20px auto;
 }
 .alignleft{
-	margin-right:20px;
+	float:left;
 }
 .alignright{
-	margin:10px 0 0 20px;
+	float:right;
+}
+.alignleft.img-and-caption{
+	margin-right:20px;
+}
+.alignright.img-and-caption{
+	margin-left:20px;
 }
 .img-and-caption{
 	width:315px;
@@ -89,13 +89,15 @@ li.video{
 
 <div class="wrap">
 	
-	<div class="main" id="entrepreneurial-journalism-landing">
+	<div class="main">
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
 		<h2><?php the_title(); ?></h2>
 		
-		<div class="row-section">
+		<?php endwhile; endif; ?>
+		
+		<div>
 			
 			<div class="sidebar right standard">
 				<blockquote class="pullquote">"This is a great program and it has made me more awesome than ever. Via con dios, CUNY J-School."</blockquote>
@@ -105,16 +107,17 @@ li.video{
 				<p><strong><a href="http://www.journalism.cuny.edu/faculty/sarah-bartlett/" target="_blank">Sarah Bartlett</a></strong>, formerly of Fortune, BusinessWeek and The New York Times, heads up our urban program. She draws on an array of terrific adjuncts and working journalists with experience in print, multimedia, and broadcast to round out the <a href="/academics/subject-concentrations/urban/urban-faculty/" target="_blank">roster of instructors</a>.</p><br />
 			</div>
 						
-			<div class="body-text">
+			<div class="clearfix">
 				
-				<div class="main-text">
+				<div>
 					<div class="img-and-caption alignleft">
-						<img class="size-medium wp-image-11242" src="http://journalism.cuny.edu/files/2011/02/urbanreporting-quinn-300x200.jpg" alt="" width="300" height="200" />
+						<img class="size-medium wp-image-11242" src="http://journalism.cuny.edu/files/2011/02/urbanreporting-quinn.jpg" alt="" width="300" height="200" />
 						<div class="caption">Urban students on field trip to City Hall catch a few minutes with City Council Speaker Christine Quinn. <i>Photograph by Thomas Chan</i></div>
 					</div>
 					<p>It is hard to imagine any subject more central to the mission of the CUNY Graduate School of Journalism than the coverage of New York City. The University has an unparalleled network of professors whose research focuses on every conceivable public policy issue, neighborhood, and ethnic group. The J-School is fortunate to benefit from these connections; they inform our curriculum, provide guest speaking and adjunct opportunities, and generate eye-opening field trips.</p>
 
 					<p>Students who choose the urban reporting concentration are especially well positioned to take advantage of the School’s many distribution outlets: the <a href="http://nycitynewsservice.com/" target="_blank">NYCity News Service</a>, which promotes student work in print, multimedia, and broadcast formats about New York City; <a href="http://219tvmagazine.journalism.cuny.edu/" target="_blank">219 West</a>, the monthly TV show which airs on CUNY-TV; and and <a href="http://fort-greene.thelocal.nytimes.com/" target="_blank">The Local</a>, the hyperlocal website we run in conjunction with the New York Times.</p>
+				<p>Thanks to a generous grant from the Ford Foundation, the school is <a href="/2010/10/27/new-community-and-ethnic-media-training-program-at-cuny/" target="_blank">working closely with community and ethnic media</a> to provide online training to journalists. And in 2010, the Urban Reporting Concentration announced that it would be awarding an annual Sidney Hillman Foundation Urban Journalism Prize for Social Justice Reporting.</p>
 					
 				</div>
 				
@@ -122,10 +125,10 @@ li.video{
 			
 		</div>
 
-		<div class="row-section orange_bg">
+		<div class="orange_bg drop-shadow clearfix pads">
 	
 			<div class="img-and-caption alignright">
-				<img class="size-medium wp-image-11242" src="http://journalism.cuny.edu/files/2011/02/urbanreporting-metalworker-300x200.jpg" alt="" width="300" height="200" />
+				<img class="size-medium wp-image-11242" src="http://journalism.cuny.edu/files/2011/02/urbanreporting-metalworker.jpg" alt="" width="300" height="200" />
 				<div class="caption">Urban students get a close-up look at New York manufacturing at a metalworker’s workshop in Greenpoint. <i>Photograph by Valerie Lapinski</i></div>
 			</div>
 			<h3>Our Curriculum</h3>
@@ -135,57 +138,51 @@ li.video{
 		</div>
 		
 		
-		<div class="row-section">
+		<div class="clearfix">
 			<h3>Courses</h3>
-			<ul class="three-wide">
-				<li>
-					<h4>Covering City Government and Politics</h4>
-					<p>This course gives students a thorough understanding of how the city is governed – how power is wielded and policy decisions are reached. Using a variety of different media formats, students learn how to produce news and feature reports on the vast New York City government bureaucracy, City Council, and unofficial but key players such as lobbyists, labor unions, business, advocacy groups, and community organizations.</p>
-					<h4>Instructors:</h4>
-					<p><a>Foobar</a>, <a>Name2</a>, <a>Name3</a></p></li>
-				</li>
-				<li>
-					<h4>Covering NYC’s Economy and Business</h4>
-					<p>The goal of this course is to help students understand and report effectively on the key economic and business forces shaping life in New York City. With the aid of selected readings and guest speakers, students learn about the city’s most important industries and employers, the role of small businesses and immigrant entrepreneurs, and the impact of real estate and economic development. After getting an overview of the strengths and weaknesses of New York City’s economy, students focus on some of the cutting-edge economic issues the city faces.</p>
-					<h4>Instructors:</h4>
-					<p><a>Foobar</a>, <a>Name2</a>, <a>Name3</a></p></li>
-				</li>
-				<li>
-					<h4>Covering New York’s Social Issues</h4>
-					<p>This course teaches students how to produce fresh, compelling stories about critical social issues in New York City, such as education, housing, health, poverty, criminal justice, and race relations. Students learn about the public policies that attempt to address those social issues, different ways to measure the effectiveness of those policies, and how journalists can improve the public’s understanding of these issues.</p>
-					<h4>Instructors:</h4>
-					<p><a>Foobar</a>, <a>Name2</a>, <a>Name3</a></p></li>
-				</li>
-			</ul>
-			<div class="clear"></div>
+			<div class="one-third-width alignleft pads">
+				<h4>Covering City Government and Politics</h4>
+				<p>This course gives students a thorough understanding of how the city is governed – how power is wielded and policy decisions are reached. Using a variety of different media formats, students learn how to produce news and feature reports on the vast New York City government bureaucracy, City Council, and unofficial but key players such as lobbyists, labor unions, business, advocacy groups, and community organizations.</p>
+				<p><strong>Instructors:</strong> <a href="/faculty/louis-errol-adjunct-faculty-urban-reporting/" target="_blank">Errol Louis</a>, <a href="/faculty/muzzio-douglas-professor-covering-city-government-and-politics/" target="_blank">Douglas Muzzio</a>, <a href="faculty/sarah-bartlett/" target="_blank">Sarah Bartlett</a></p>
+			</div>
+			<div class="one-third-width alignleft pads">
+				<h4>Covering NYC’s Economy and Business</h4>
+				<p>The goal of this course is to help students understand and report effectively on the key economic and business forces shaping life in New York City. With the aid of selected readings and guest speakers, students learn about the city’s most important industries and employers, the role of small businesses and immigrant entrepreneurs, and the impact of real estate and economic development. After getting an overview of the strengths and weaknesses of New York City’s economy, students focus on some of the cutting-edge economic issues the city faces.</p>
+				<p><strong>Instructors:</strong> <a href="/faculty/greg-david/" target="_blank">Greg David</a></p>
+			</div>
+			<div class="one-third-width alignleft pads">
+				<h4>Covering New York’s Social Issues</h4>
+				<p>This course teaches students how to produce fresh, compelling stories about critical social issues in New York City, such as education, housing, health, poverty, criminal justice, and race relations. Students learn about the public policies that attempt to address those social issues, different ways to measure the effectiveness of those policies, and how journalists can improve the public’s understanding of these issues.</p>
+				<p><strong>Instructors:</strong> <a href="/faculty/griffith-mark-winston-adjunct-faculty-urban-reporting/" target="_blank">Mark Winston Griffith</a>, <a href="faculty/sarah-bartlett/" target="_blank">Sarah Bartlett</a></p></li>
+			</div>
 		</div>
 		
 		<div class="row-section">
 
-			<div class="sidebar right orange_bg" style="width:26%">
+			<div class="orange_bg drop-shadow alignright one-third-width pads">
 				<h3>Guest Speakers</h3>
-				<iframe src="http://player.vimeo.com/video/20382083" width="224" height="168" frameborder="0" scrolling="no" ></iframe>
+				<iframe src="http://player.vimeo.com/video/20382083" width="258" height="193" frameborder="0" scrolling="no" ></iframe>
 				<div class="caption">Bill de Blasio - Mar. 2010</div>
-				<iframe src="http://player.vimeo.com/video/20382448" width="224" height="168" frameborder="0" scrolling="no" ></iframe>
+				<iframe src="http://player.vimeo.com/video/20382448" width="258" height="193" frameborder="0" scrolling="no" ></iframe>
 				<div class="caption">Jane Eisner - Feb. 2011</div>
 				<p><a href="">Full list of guest speakers &rarr;</a></p>
 			</div>
-		    <div class="grey_bg">
+		    <div class="grey_bg drop-shadow alignleft two-thirds-width pads">
 				<h3>Student work</h3>
 				<ul class="clips">
 					<li class="video"><a href="http://www.youtube.com/watch?v=FyF0zhbkCNI" target="_blank">"Swaranjit Singh, first time candidate for New York City Council"</a>, by Jacqueline Linge</li>
 					<li class="video"><a href="http://www.youtube.com/watch?v=FtuVR1qLedY" target="_blank">"Urban Birds"</a>, by Sherry Mazzocchi</li>
-					<li class="print"><a href="http://cityroom.blogs.nytimes.com/2010/05/03/push-to-insulate-deaf-students-from-dissimilar-school/?scp=1&sq=kerri%20macdonald%20deaf%20and%20school&st=cse" target="_blank">"Push to Insulate Deaf Students from Dissimilar School"</a>, by Kerri MacDonald — New York Times — May 3, 2010</li>
-					<li class="print"><a href="http://www.citylimits.org/news/articles/4166/nyc-curtails-art-vending-in-public-parks" target="_blank">"NYC Continues Efforts to Curtail Art Vending in Public Parks"</a>, by Shane Dixon Kavanagh — City Limits — Aug. 27, 2010</li>
-					<li class="print"><a href="http://www.citylimits.org/news/articles/4112/pols-aim-to-bridge-racial-ethnic-divisions" target="_blank">"Pols Aim to Bridge Racial, Ethnic Divisions"</a>, by Amy Berryhill — City Limits — July 19, 2010</li>
-					<li class="print"><a href="http://www.crainsnewyork.com/keywords/2014/Economic+Outlook" target="_blank">Crain's New York special report: Economic Outlook</a>, by Annie Byrnes, Mike Reicher, Kerri Macdonald, Anastasia Economides, Daniel Macht, Joe Walker</li>
+					<li><a href="http://cityroom.blogs.nytimes.com/2010/05/03/push-to-insulate-deaf-students-from-dissimilar-school/?scp=1&sq=kerri%20macdonald%20deaf%20and%20school&st=cse" target="_blank">"Push to Insulate Deaf Students from Dissimilar School"</a>, by Kerri MacDonald — New York Times — May 3, 2010</li>
+					<li><a href="http://www.citylimits.org/news/articles/4166/nyc-curtails-art-vending-in-public-parks" target="_blank">"NYC Continues Efforts to Curtail Art Vending in Public Parks"</a>, by Shane Dixon Kavanagh — City Limits — Aug. 27, 2010</li>
+					<li><a href="http://www.citylimits.org/news/articles/4112/pols-aim-to-bridge-racial-ethnic-divisions" target="_blank">"Pols Aim to Bridge Racial, Ethnic Divisions"</a>, by Amy Berryhill — City Limits — July 19, 2010</li>
+					<li><a href="http://www.crainsnewyork.com/keywords/2014/Economic+Outlook" target="_blank">Crain's New York special report: Economic Outlook</a>, by Annie Byrnes, Mike Reicher, Kerri Macdonald, Anastasia Economides, Daniel Macht, Joe Walker</li>
 					<li class="video"><a href="http://vimeo.com/16971775" target="_blank">Jacqueline Linge describing her work "Divided Love"</a> on CUNY-TV’s Brian Lehrer Live show</li>
 					<li class="video"><a href="http://219tvmagazine.journalism.cuny.edu/2010/11/19/trafficking/" target="_blank">"Trafficking America's Children"</a>, by Teresa Tomassoni</li>
-					<li class="print"><a href="http://nycitynewsservice.com/2010/10/27/hope-and-hunger-at-food-pantry/" target="_blank">"Hope and Hunger at Food Pantry"</a>, by Uche Abanobi — NYC News Service — Oct. 27, 2010</li>
+					<li><a href="http://nycitynewsservice.com/2010/10/27/hope-and-hunger-at-food-pantry/" target="_blank">"Hope and Hunger at Food Pantry"</a>, by Uche Abanobi — NYC News Service — Oct. 27, 2010</li>
 				</ul>
 			</div>
 			
-			<div class="grey_bg">
+			<div class="grey_bg drop-shadow alignleft two-thirds-width pads">
 				<h3>Places Students Have Interned</h3>
 				<ul class="two-col">
 					<li>Daily News and NYDN.com              </li>
@@ -230,7 +227,7 @@ li.video{
 				</ul>
 				<div class="clear"></div>
 			</div>
-			<div class="grey_bg">
+			<div class="grey_bg drop-shadow alignleft two-thirds-width pads">
 
 				<h3>Places Students Have Worked After Graduating</h3>
 				<ul class="two-col">
@@ -271,9 +268,7 @@ li.video{
 		
 		</div>
 
-	<div class="clear"></div>
-	
-	<?php endwhile; endif; ?>	
+	<div class="clear"></div>	
 
 	</div><!-- END .main -->
 
