@@ -122,7 +122,7 @@ Template Name: Page - Research Center
 		
 	</div>
 	
-	<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=22&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
+	<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=11&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
 		
 	<?php endif; ?>
 
