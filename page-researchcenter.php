@@ -29,6 +29,7 @@ Template Name: Page - Research Center
 				$tabs_fields['databases'] = get_post_meta( $post->ID, 'rc_databases_tab', true );
 				$tabs_fields['subject_guides'] = get_post_meta( $post->ID, 'rc_subject_guides_tab', true );
 				$tabs_fields['journals'] = get_post_meta( $post->ID, 'rc_journals_tab', true );
+				$tabs_fields['articles'] = get_post_meta( $post->ID, 'rc_articles_tab', true );				
 				$tabs_fields['books'] = get_post_meta( $post->ID, 'rc_books_tab', true );
 				$tabs_fields['ebooks'] = get_post_meta( $post->ID, 'rc_ebooks_tab', true );
 
@@ -51,6 +52,10 @@ Template Name: Page - Research Center
 									$tabs_navigation .= 'Journals/Periodicals';
 									$tabs_content .= '<div class="tabber-item" id="journals-tabber-item">' . $value . '</div>';							
 									break;
+								case 'articles':
+									$tabs_navigation .= 'Articles';
+									$tabs_content .= '<div class="tabber-item" id="articles-tabber-item">' . $value . '</div>';							
+									break;									
 								case 'books':
 									$tabs_navigation .= 'Books';
 									$tabs_content .= '<div class="tabber-item" id="books-tabber-item">' . $value . '</div>';							
@@ -66,7 +71,7 @@ Template Name: Page - Research Center
 							$tabs_navigation .= '</li>';					
 						}
 					} // END - foreach( $tabs_content as $key => $value )
-				}
+				} // END if ( count( $tabs_fields ) )
 
 				// Only print the tabs functionality if the buttons are set
 				if ( $tabs_navigation ) {
