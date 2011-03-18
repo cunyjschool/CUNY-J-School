@@ -57,35 +57,54 @@ body.post-type-archive-cunyjevent h2 {
 	text-align: center;
 }
 
-#cunyj-events #wp-calendar{
+#cunyj-events #wp-calendar {
 	width:100%;
 }
 
-#cunyj-events #wp-calendar td{
+#cunyj-events #wp-calendar td {
 	border:1px solid #cccccc;
 	height:100px;
 	width:100px;
 	vertical-align:top;
 }
-#cunyj-events td.pad{
+#cunyj-events td.pad {
 	background-color:#f0f0f0;
 }
-#cunyj-events .cal-day{
+
+#cunyj-events .cal-day {
 	text-align:right;
 	background-color:#f8f9ff;
 	padding:2px 8px;
 }
-#cunyj-events #wp-calendar td ul li{
-  padding:1px 4px;
+
+#cunyj-events #wp-calendar td ul.cal-events {
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
+
+#cunyj-events #wp-calendar td ul.cal-events li {
+	padding:1px 4px;
+	padding-top: 2px;
+	margin-top: 4px;
+	border-top: 1px solid #EEEEEE;
+}
+
+#cunyj-events #wp-calendar td ul.cal-events li:first-child {
+	border-top: none;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
 #cunyj-events td#today .cal-day{
 	background-color:#FAD163;
 	font-weight:bold;
 }
+
 #cunyj-events h2.upcoming-title{
-  padding:0 10px;
-  margin-top:25px;
+	padding:0 10px;
+	margin-top:25px;
 }
+
 #cunyj-events h4.feature-title{
   font-size:1.3em;
 }

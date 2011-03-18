@@ -139,10 +139,11 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 
 	echo '<div class="cal-day">' . $day . '</div>';
 	if ( array_key_exists( $day, $all_events ) ) {
-		echo '<ul>';
+		echo '<ul class="cal-events">';
 		
 		foreach( $all_events[$day] as $post_id => $event ) {
 			$event_classes = array();
+			$event_classes[] = 'cal-event';
 			if ( $event['multi_day'] ) {
 				$event_classes[] = 'multi-day';
 				if ( $day == date_i18n( 'j', $event['start_date'] ) ) {
