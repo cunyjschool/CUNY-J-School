@@ -22,6 +22,7 @@ class cunyj_events
 		
 		// Add a rewrite rule to handle pagination on archive page
 		add_action( 'generate_rewrite_rules', array( &$this, 'rewrite_rules' ) );
+		add_filter( 'query_vars', array( &$this, 'query_vars' ) );
 		
 	}
 
@@ -34,13 +35,24 @@ class cunyj_events
 		$type_slug = 'events';
 
 		$new_rules = array(
-			$type_slug . '/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&year=' . $wp_rewrite->preg_index(1),
-			$type_slug . '/([0-9]+)/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&year=' . $wp_rewrite->preg_index(1) . '&monthnum=' . $wp_rewrite->preg_index(2),
+			$type_slug . '/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&cunyj_year=' . $wp_rewrite->preg_index(1),
+			$type_slug . '/([0-9]+)/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&cunyj_year=' . $wp_rewrite->preg_index(1) . '&cunyj_monthnum=' . $wp_rewrite->preg_index(2),
 		);
 
 		$wp_rewrite->rules = array_merge( $new_rules, $wp_rewrite->rules );
 
 	} // END rewrite_rules()
+	
+	/**
+	 * query_vars()
+	 * @param array $query_vars Array of query variables to watch for
+	 * @return array $query_vars Modified array of query variables to watch for
+	 */
+	function query_vars( $query_vars ) {
+		$query_vars[] = 'cunyj_year';
+		$query_vars[] = 'cunyj_monthnum';
+		return $query_vars;
+	} // END query_vars()
 	
 	function create_post_type() {
 

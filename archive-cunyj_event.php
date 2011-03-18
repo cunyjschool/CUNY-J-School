@@ -6,16 +6,15 @@
 	
 <?php 
 
-global $wpdb, $m, $monthnum, $year, $wp_locale;
+global $wpdb, $m, $wp_locale;
 
 // week_begins = 0 stands for Sunday
 $week_begins = intval( get_option( 'start_of_week' ) );
-if ( empty( $year ) && empty( $monthnum ) ) {
+$currentyear = get_query_var( 'cunyj_year' );
+$currentmonth = get_query_var( 'cunyj_monthnum' );
+if ( empty( $currentyear ) && empty( $currentmonth ) ) {
 	$currentyear = gmdate( 'Y' , current_time( 'timestamp' ) );
 	$currentmonth = gmdate( 'm' , current_time( 'timestamp' ) );
-} else {
-	$currentyear = $year;
-	$currentmonth = $monthnum;
 }
 $currentmonth_timestamp = strtotime( $currentyear . '-' . $currentmonth . '-1' );
 
