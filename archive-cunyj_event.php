@@ -25,40 +25,45 @@ $nextmonth = gmdate( 'F', strtotime( '+1 months', $currentmonth_timestamp ) );
 $nextmonthlink = gmdate( 'Y/m' , strtotime( '+ 1 months', $currentmonth_timestamp ) );
 
 echo '<div id="calendar_wrap">';
-echo '<span class="prev-month left"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>';
-echo '<span class="next-month right"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>';
+echo '<span class="prev-month left"><a href="/events/' . $prevmonthlink . '/">&larr; ' . $prevmonth .'</a></span>';
+echo '<span class="next-month right"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' &rarr;</a></span>';
 echo '<h2 class="calendar-title">' . $wp_locale->get_month( $currentmonth ) .' ' . gmdate( 'Y', $unixmonth ) . '</h2>';
 echo '<table id="wp-calendar" summary="' . __('Calendar') . '">';
-echo '<thead>
-		<tr>';
+echo '<thead><tr>';
 
 $myweek = array();
 
 for ( $wdcount=0; $wdcount<=6; $wdcount++ ) {
-	$myweek[] = $wp_locale->get_weekday(($wdcount+$week_begins)%7);
+	$myweek[] = $wp_locale->get_weekday( ( $wdcount+$week_begins) %7 );
 }
 
 foreach ( $myweek as $wd ) {
-	$day_name = $wp_locale->get_weekday_abbrev($wd);
+	$day_name = $wp_locale->get_weekday_abbrev( $wd );
 	echo "\n\t\t<th abbr=\"$wd\" scope=\"col\" title=\"$wd\">$day_name</th>";
 }
 
-echo '
-</tr>
-</thead>
+echo '</tr></thead><tbody><tr>';
 
-<tbody>
-<tr>';
+$nextmonth_convert = gmdate( 'Y-m' , strtotime( '+ 1 months', $currentmonth_timestamp ) );
+$nextmonth_timestamp = strtotime( $nextmonth_convert . '-1' );
 
-// Get days with posts
-
+// Get days with events
 $args = array(	'order' => 'ASC',
 				'nopaging' => true,
 				'posts_per_page' => '-1',
 				'post_type' => 'cunyj_event',
-				'meta_key' => '_cunyj_events_start_date',
-				'meta_value' => $currentmonth_timestamp,
-				'meta_compare' => '>='
+				'meta_query' => array(
+					array(
+						'key' => '_cunyj_events_start_date',
+						'value' => $currentmonth_timestamp,
+						'compare' => '>=',
+					),
+					array(
+						'key' => '_cunyj_events_end_date',
+						'value' => $nextmonth_timestamp,
+						'compare' => '<',
+					),
+				),
 			);
 $events = new WP_Query( $args );
 
