@@ -96,7 +96,7 @@ if ( $events->have_posts() ) {
 			$multi_day = true;
 		} else {
 			$multi_day = false;
-		}	
+		}
 		
 		// Place the event on every day it is in our array
 		foreach( $event_days as $event_day ) {
@@ -146,12 +146,15 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 			$event_classes[] = 'cal-event';
 			if ( $event['multi_day'] ) {
 				$event_classes[] = 'multi-day';
-				if ( $day == date_i18n( 'j', $event['start_date'] ) ) {
-					$event_classes[] = 'start-day';
-				} 
-				if ( $day == date_i18n( 'j', $event['end_date'] ) ) {
-					$event_classes[] = 'end-day';
-				}
+			}
+			if ( $event['all_day'] == 'on' ) {
+				$event_classes[] = 'all-day';
+			}
+			if ( $day == date_i18n( 'j', $event['start_date'] ) ) {
+				$event_classes[] = 'start-day';
+			} 
+			if ( $day == date_i18n( 'j', $event['end_date'] ) ) {
+				$event_classes[] = 'end-day';
 			}
 			$event_classes_list = implode(" ", $event_classes);
 			echo '<li class="' . $event_classes_list . '"><a href="' . $event['permalink'] . '">' . $event['title'] . '</a></li>';
