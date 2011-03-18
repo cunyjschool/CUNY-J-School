@@ -157,7 +157,15 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 				$event_classes[] = 'end-day';
 			}
 			$event_classes_list = implode(" ", $event_classes);
-			echo '<li class="' . $event_classes_list . '"><a href="' . $event['permalink'] . '">' . $event['title'] . '</a></li>';
+			echo '<li class="' . $event_classes_list . '"><a href="' . $event['permalink'] . '">' . $event['title'];
+			if ( $event['all_day'] == 'off' && $day == date_i18n( 'j', $event['start_date'] ) ) {
+				echo '<span> (' . date_i18n( 'g:i a', $event['start_date'] ) . ')</span>';
+			} else if ( $event['all_day'] == 'off' && $day != date_i18n( 'j', $event['end_date'] ) ) {
+				echo '<span> (All day)</span>';
+			} else if ( $event['all_day'] == 'off' && $day == date_i18n( 'j', $event['end_date'] ) ) {
+				echo '<span> (Ends at ' . date_i18n( 'g:i a', $event['end_date'] ) . ')</span>';
+			}
+			echo '</a></li>';
 		}
 		echo '</ul>';
 	} else {

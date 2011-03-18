@@ -83,14 +83,15 @@ body.post-type-archive-cunyjevent h2 {
 }
 
 #cunyj-events ul.cal-events li {
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #cunyj-events ul.cal-events li a {
 	padding-left: 3px;
 	padding-right: 3px;
 	display: block;
+	text-decoration: none;
 }
 
 #cunyj-events ul li.cal-event.multi-day {
@@ -103,8 +104,9 @@ body.post-type-archive-cunyjevent h2 {
 	border: 1px solid #0066CC;
 }
 
-#cunyj-events ul li.cal-event.all-day a {
+#cunyj-events ul li.cal-event a span {
 	text-decoration: none;
+	color: #999999;
 }
 
 #cunyj-events ul li.cal-event.start-day {
