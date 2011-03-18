@@ -39,9 +39,12 @@ img{
 	margin-bottom:20px;
 }
 .one-third-width {
+	width:33%;
+}
+.one-third-width.pads {
 	width:30%;
 }
-.two-thirds-width {
+.two-thirds-width.pads {
 	width:60%;
 }
 blockquote.pullquote{
@@ -60,15 +63,25 @@ blockquote.pullquote{
 .alignleft.img-and-caption{
 	margin-right:20px;
 }
-.alignright.img-and-caption{
+.alignright.img-and-caption, .alignright.soundslides{
 	margin-left:20px;
 }
 .img-and-caption{
 	width:315px;
 	padding-top:10px;
 }
-.img-and-caption .caption{
+.caption{
 	text-align:center;
+}
+.soundslides {
+	width:420px;
+	height:383px;
+	overflow:hidden;
+	margin:10px 0;
+}
+.soundslides object, .soundslides .caption {
+	position:relative;
+	top:-45px;
 }
 ul.two-col li{
 	width:30%;
@@ -126,10 +139,9 @@ li.video{
 		</div>
 
 		<div class="orange_bg drop-shadow clearfix pads">
-	
-			<div class="img-and-caption alignright">
-				<img class="size-medium wp-image-11242" src="http://journalism.cuny.edu/files/2011/02/urbanreporting-metalworker.jpg" alt="" width="300" height="200" />
-				<div class="caption">Urban students get a close-up look at New York manufacturing at a metalworker’s workshop in Greenpoint. <i>Photograph by Valerie Lapinski</i></div>
+			<div class="alignright soundslides">
+				<object id="soundslider" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="420" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowScriptAccess" value="always" /><param name="quality" value="high" /><param name="allowFullScreen" value="true" /><param name="menu" value="false" /><param name="bgcolor" value="#FFFFFF" /><param name="src" value="http://www.journalism.cuny.edu/files/soundslides/urbanreporting/soundslider.swf?size=0&amp;format=xml" /><param name="allowfullscreen" value="true" /><embed id="soundslider" type="application/x-shockwave-flash" width="420" height="385" src="http://www.journalism.cuny.edu/files/soundslides/urbanreporting/soundslider.swf?size=0&amp;format=xml" bgcolor="#FFFFFF" menu="false" allowfullscreen="true" quality="high" allowscriptaccess="always"></embed></object>
+				<div class="caption">New York City political Reporting Panel — Feb. 2011</div>
 			</div>
 			<h3>Our Curriculum</h3>
 			<p>Students who choose to specialize in urban reporting take four courses. The first, Covering City Government and Politics, is taken in their second semester.</p>
@@ -139,7 +151,7 @@ li.video{
 		
 		
 		<div class="clearfix">
-			<h3>Courses</h3>
+			<h3 style="margin-left:1.5%">Courses</h3>
 			<div class="one-third-width alignleft pads">
 				<h4>Covering City Government and Politics</h4>
 				<p>This course gives students a thorough understanding of how the city is governed – how power is wielded and policy decisions are reached. Using a variety of different media formats, students learn how to produce news and feature reports on the vast New York City government bureaucracy, City Council, and unofficial but key players such as lobbyists, labor unions, business, advocacy groups, and community organizations.</p>
@@ -157,15 +169,18 @@ li.video{
 			</div>
 		</div>
 		
-		<div class="row-section">
-
-			<div class="orange_bg drop-shadow alignright one-third-width pads">
-				<h3>Guest Speakers</h3>
-				<iframe src="http://player.vimeo.com/video/20382083" width="258" height="193" frameborder="0" scrolling="no" ></iframe>
-				<div class="caption">Bill de Blasio - Mar. 2010</div>
-				<iframe src="http://player.vimeo.com/video/20382448" width="258" height="193" frameborder="0" scrolling="no" ></iframe>
-				<div class="caption">Jane Eisner - Feb. 2011</div>
-				<p><a href="">Full list of guest speakers &rarr;</a></p>
+		<div>
+			<div class="alignright one-third-width">
+				<div class="orange_bg drop-shadow pads">
+					<div style="padding:5px 10px">
+						<h3>Guest Speakers</h3>
+						<iframe src="http://player.vimeo.com/video/20382083" width="254" height="190" frameborder="0" scrolling="no" ></iframe>
+						<div class="caption">Bill de Blasio - Mar. 2010</div>
+						<iframe src="http://player.vimeo.com/video/20382448" width="254" height="190" frameborder="0" scrolling="no" ></iframe>
+						<div class="caption">Jane Eisner - Feb. 2011</div>
+						<div style="padding-bottom:10px"><a href="">Full list of guest speakers &rarr;</a></div>
+					</div>
+				</div>
 			</div>
 		    <div class="grey_bg drop-shadow alignleft two-thirds-width pads">
 				<h3>Student work</h3>
