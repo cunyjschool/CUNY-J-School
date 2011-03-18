@@ -36,32 +36,33 @@ class cunyj_databases
 		if ( function_exists('register_post_type') ) {
 			register_post_type('cunyj_database',
 		    array(
-		      'labels' => array(
-		        'name' => 'Databases',
-		        'singular_name' => 'Database',
-						'add_new_item' => 'Add New Database',
-						'edit_item' => 'Edit Database',
-						'new_item' => 'New Database',
-						'view' => 'View Database',
-						'view_item' => 'View Database',
-						'search_items' => 'Search Databases',
-						'not_found' => 'No databases found',
-						'not_found_in_trash' => 'No databases found in Trash',
-						'parent' => 'Parent Database'
-		      ),
-					'menu_position' => 11,
-		      'public' => true,
-					'rewrite' => array(
-						'slug' => 'databases'
-					),
-					'supports' => array(
-						'title',
-						'editor',
-						'excerpt',
-					),
-					'taxonomies' => array(
-						'cunyj_database_topics',
-					)
+				'labels' => array(
+		        	'name' => 'Databases',
+		        	'singular_name' => 'Database',
+					'add_new_item' => 'Add New Database',
+					'edit_item' => 'Edit Database',
+					'new_item' => 'New Database',
+					'view' => 'View Database',
+					'view_item' => 'View Database',
+					'search_items' => 'Search Databases',
+					'not_found' => 'No databases found',
+					'not_found_in_trash' => 'No databases found in Trash',
+					'parent' => 'Parent Database'
+		      	),
+				'menu_position' => 11,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'databases'
+				),
+				'supports' => array(
+					'title',
+					'editor',
+					'excerpt',
+				),
+				'taxonomies' => array(
+					'cunyj_database_topics',
+				)
 		    )
 		  );
 		}
