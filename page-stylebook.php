@@ -66,17 +66,17 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 						<p><a href="#">Top of page</a></p>
 
 						<h4 id="headers">Headers</h4>
-						<p>The header of any page (usually the page title) should be an h2 and appear as the very first element in the content div. On this page, the title "Stylebook" above is the Page Header. Usually there should be only one of these on a page so if you need several, use h4 headings instead.</p>
+						<p>The header of any page (usually the page title) should be an h2 and appear as the very first element in the content div. On this page, the title "Stylebook" above is the Page Header. Usually there should be only one of these on a page so if you need several, use h2 subheaders instead.</p>
 						<code>h2 { font-size: 30px; margin: 5px 0 15px 0; line-height: 30px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
 
-						<h4 id="page-headers">Subheaders (This is subheader text!)</h4>
-						<p>Subheads are used as section titles on pages with multiple sections. You can have as many of these as necessary on a page but should not use subheads if there is only one section. In that case, the main page header becomes your section title.</p>
+						<h4 id="page-headers">Subheaders</h4>
+						<p>Subheads are used as titles on pages with multiple sections. You can have as many of these as necessary on a page but should not use subheads if there is only one section. In that case, the main page header becomes your title. The subheaders on this page are "Page Elements," "Media," and "Colors."</p>
 						<code>h3 { font-size: 18px; margin: 10px; line-height: 24px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
 						
 						<h4 id="section-titles">Section Titles (This is a section title!)</h4>
-						<p>Subheads are used as section titles on pages with multiple sections. You can have as many of these as necessary on a page but should not use subheads if there is only one section. In that case, the main page header becomes your section title.</p>
+						<p>Section titles are used to further break up text into more manageable pieces. They are placed within h4 tags beneath a subheader. You can have as many of these as necessary on a page but should not use section titles if there is only one. In that case, the subheader becomes your section title. "Main Page Content," "Headers," and "Subheaders" are all section titles within the subheader "Page Elements."</p>
 						<code>h4 { font-size: 14px; margin: 10px; line-height: 24px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
 
