@@ -20,7 +20,27 @@ class cunyj_events
 		// Load necessary scripts and stylesheets
 		add_action('admin_enqueue_scripts', array(&$this, 'add_admin_scripts'));
 		
+		// Add a rewrite rule to handle pagination on archive page
+		add_action( 'generate_rewrite_rules', array( &$this, 'rewrite_rules' ) );
+		
 	}
+
+	/**
+	 * rewrite_rules()
+	 */
+	function rewrite_rules( $wp_rewrite ) {
+
+		$type = 'cunyj_event';
+		$type_slug = 'events';
+
+		$new_rules = array(
+			$type_slug . '/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&year=' . $wp_rewrite->preg_index(1),
+			$type_slug . '/([0-9]+)/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&year=' . $wp_rewrite->preg_index(1) . '&monthnum=' . $wp_rewrite->preg_index(2),
+		);
+
+		$wp_rewrite->rules = array_merge($new_rules, $wp_rewrite->rules);
+
+	} // END rewrite_rules()
 	
 	function create_post_type() {
 
@@ -44,7 +64,9 @@ class cunyj_events
 				'public' => true,
 				'has_archive' => true,
 				'rewrite' => array(
-					'slug' => 'events'
+					'slug' => 'events',
+					'feeds' => false,
+					'with_front' => true
 				),
 				'supports' => array(
 					'title',
