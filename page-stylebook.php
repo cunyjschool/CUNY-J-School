@@ -20,7 +20,8 @@ td { padding:5px 10px; }
 td.color { width:14%; }
 td:first-child { width:15%; padding:0; }
 .white { color:#ffffff;}
-li.split { margin-top:10px; }
+li h4 { margin-top:10px; }
+li:first-child h4 { margin-top:0; }
 ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
 .content h4 { font-size:14px; }
 </style>
@@ -43,11 +44,11 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 				<li><a href="#unordered-lists">Unordered Lists</a></li>
 				<li><a href="#footnotes">Footnotes</a></li>
 				<li><a href="#sidebar">Sidebar Navigation</a></li>
-				<li class="split"><h4>Media</h4></li>
+				<li><h4>Media</h4></li>
 				<li><a href="#images">Images</a></li>
 				<li><a href="#video">Video</a></li>
 				<li><a href="#audio">Audio</a></li>
-				<li class="split"><h4>Colors</h4></li>
+				<li><h4>Colors</h4></li>
 				<li><a href="#color-palette">Color Palette</a></li>
 			</ul>
 		</div>
