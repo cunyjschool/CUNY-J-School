@@ -38,7 +38,7 @@ class cunyj_events
 			$type_slug . '/([0-9]+)/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&year=' . $wp_rewrite->preg_index(1) . '&monthnum=' . $wp_rewrite->preg_index(2),
 		);
 
-		$wp_rewrite->rules = array_merge($new_rules, $wp_rewrite->rules);
+		$wp_rewrite->rules = array_merge( $new_rules, $wp_rewrite->rules );
 
 	} // END rewrite_rules()
 	
