@@ -27,9 +27,9 @@ class cunyj_events
 		if (function_exists('register_post_type')) {
 			register_post_type('cunyj_event',
 		    array(
-		      'labels' => array(
-		        'name' => 'Events',
-		        'singular_name' => 'Event',
+				'labels' => array(
+		        	'name' => 'Events',
+					'singular_name' => 'Event',
 						'add_new_item' => 'Add New Event',
 						'edit_item' => 'Edit Event',
 						'new_item' => 'New Event',
@@ -39,23 +39,24 @@ class cunyj_events
 						'not_found' => 'No events found',
 						'not_found_in_trash' => 'No events found in Trash',
 						'parent' => 'Parent Event'
-		      ),
-					'menu_position' => 10,
-		      'public' => true,
-					'rewrite' => array(
-						'slug' => 'events'
-					),
-					'supports' => array(
-						'title',
-						'editor',
-						'comments',
-						'excerpt',
-						'thumbnail',
-					),
-					'taxonomies' => array(
-						'post_tag',
-						'cunyj_event_category'
-					)
+				),
+				'menu_position' => 10,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'events'
+				),
+				'supports' => array(
+					'title',
+					'editor',
+					'comments',
+					'excerpt',
+					'thumbnail',
+				),
+				'taxonomies' => array(
+					'post_tag',
+					'cunyj_event_category'
+				)
 		    )
 		  );
 		}
