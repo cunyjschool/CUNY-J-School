@@ -1,4 +1,8 @@
 
+body.post-type-archive-cunyjevent h2 {
+	border-right: none;
+}
+
 #cunyj-events .buttonize:hover {
 	cursor: pointer;
 }

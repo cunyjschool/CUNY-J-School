@@ -6,28 +6,28 @@
 	
 <?php 
 
-global $wpdb, $m, $wp_locale;
+global $wpdb, $m, $wp_locale, $currentmonth;
 
 // week_begins = 0 stands for Sunday
 $week_begins = intval( get_option( 'start_of_week' ) );
-$currentyear = get_query_var( 'cunyj_year' );
-$currentmonth = get_query_var( 'cunyj_monthnum' );
-if ( empty( $currentyear ) && empty( $currentmonth ) ) {
-	$currentyear = gmdate( 'Y' , current_time( 'timestamp' ) );
-	$currentmonth = gmdate( 'm' , current_time( 'timestamp' ) );
+$thisyear = get_query_var( 'cunyj_year' );
+$thismonth = get_query_var( 'cunyj_monthnum' );
+if ( empty( $thisyear ) && empty( $thismonth ) ) {
+	$thisyear = gmdate( 'Y' , current_time( 'timestamp' ) );
+	$thismonth = gmdate( 'm' , current_time( 'timestamp' ) );
 }
-$currentmonth_timestamp = strtotime( $currentyear . '-' . $currentmonth . '-1' );
+$thismonth_timestamp = strtotime( $thisyear . '-' . $thismonth . '-1' );
 
-$unixmonth = mktime( 0, 0 , 0, $currentmonth, 1, $currentyear );
-$prevmonth = gmdate( 'F', strtotime( '-1 months', $currentmonth_timestamp ) );
-$prevmonthlink = gmdate( 'Y/m', strtotime( '-1 months', $currentmonth_timestamp ) );
-$nextmonth = gmdate( 'F', strtotime( '+1 months', $currentmonth_timestamp ) );
-$nextmonthlink = gmdate( 'Y/m' , strtotime( '+ 1 months', $currentmonth_timestamp ) );
+$unixmonth = mktime( 0, 0 , 0, $thismonth, 1, $thisyear );
+$prevmonth = gmdate( 'F', strtotime( '-1 months', $thismonth_timestamp ) );
+$prevmonthlink = gmdate( 'Y/m', strtotime( '-1 months', $thismonth_timestamp ) );
+$nextmonth = gmdate( 'F', strtotime( '+1 months', $thismonth_timestamp ) );
+$nextmonthlink = gmdate( 'Y/m' , strtotime( '+ 1 months', $thismonth_timestamp ) );
 
 echo '<div id="calendar_wrap">';
 echo '<span class="prev-month left"><a href="/events/' . $prevmonthlink . '/">&larr; ' . $prevmonth .'</a></span>';
 echo '<span class="next-month right"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' &rarr;</a></span>';
-echo '<h2 class="calendar-title">' . $wp_locale->get_month( $currentmonth ) .' ' . gmdate( 'Y', $unixmonth ) . '</h2>';
+echo '<h2 class="calendar-title">' . $wp_locale->get_month( $thismonth ) .' ' . gmdate( 'Y', $unixmonth ) . '</h2>';
 echo '<table id="wp-calendar" summary="' . __('Calendar') . '">';
 echo '<thead><tr>';
 
@@ -44,7 +44,7 @@ foreach ( $myweek as $wd ) {
 
 echo '</tr></thead><tbody><tr>';
 
-$nextmonth_convert = gmdate( 'Y-m' , strtotime( '+ 1 months', $currentmonth_timestamp ) );
+$nextmonth_convert = gmdate( 'Y-m' , strtotime( '+ 1 months', $thismonth_timestamp ) );
 $nextmonth_timestamp = strtotime( $nextmonth_convert . '-1' );
 
 // Get days with events
@@ -55,7 +55,7 @@ $args = array(	'order' => 'ASC',
 				'meta_query' => array(
 					array(
 						'key' => '_cunyj_events_start_date',
-						'value' => $currentmonth_timestamp,
+						'value' => $thismonth_timestamp,
 						'compare' => '>=',
 					),
 					array(
@@ -69,7 +69,7 @@ $events = new WP_Query( $args );
 
 // Put all of the events into an array sorted by month day
 $all_events = array();
-if ( $events->have_posts() ) {
+if ( $events->have_posts() ) {	
 	
 	while ( $events->have_posts() ) {
 		$events->the_post();
@@ -81,7 +81,7 @@ if ( $events->have_posts() ) {
 		$street = get_post_meta( $post->ID, '_cunyj_events_street', true );
 		$city = get_post_meta( $post->ID, '_cunyj_events_city', true );
 		$state = get_post_meta( $post->ID, '_cunyj_events_state', true );
-		$zipcode = get_post_meta( $post->ID, '_cunyj_events_zipcode', true );
+		$zipcode = get_post_meta( $post->ID, '_cunyj_events_zipcode', true );		
 		// Calculate the days this event should be placed in
 		$start_date_day = date_i18n( 'j', $start_date );
 		$end_date_day = date_i18n( 'j', $end_date );
@@ -90,16 +90,13 @@ if ( $events->have_posts() ) {
 		for ( $i = 0; $i <= $total_day_span; $i++ ) {
 			$event_days[] = $start_date_day + $i;
 		}
-		// Don't include events that start in other months
-		if ( date_i18n( 'm', $start_date ) != $currentmonth ) {
-			continue;
-		}
+		
 		// Is it multi-day or not?
 		if ( count( $event_days ) > 1 ) {
 			$multi_day = true;
 		} else {
 			$multi_day = false;
-		}
+		}	
 		
 		// Place the event on every day it is in our array
 		foreach( $event_days as $event_day ) {
@@ -123,21 +120,22 @@ if ( $events->have_posts() ) {
 } // END if ( $events->have_posts() )
 
 // See how much we should pad in the beginning
-$pad = calendar_week_mod(date('w', $unixmonth)-$week_begins);
+$pad = calendar_week_mod( date( 'w', $unixmonth ) - $week_begins );
 if ( 0 != $pad )
 	echo "\n\t\t".'<td colspan="'.$pad.'" class="pad">&nbsp;</td>';
 	
-$daysinmonth = intval(date('t', $unixmonth));
+$daysinmonth = intval( date( 't', $unixmonth ) );
 for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	if ( isset($newrow) && $newrow )
 		echo "\n\t</tr>\n\t<tr>\n\t\t";
 	$newrow = false;
 
 	// Is today the day?
-	if ( $day == gmdate('j', (time() + (get_option('gmt_offset') * 3600))) && $currentmonth == gmdate('m', time()+(get_option('gmt_offset') * 3600)) && $currentyear == gmdate('Y', time()+(get_option('gmt_offset') * 3600)) )
+	if ( $day == gmdate('j', (time() + (get_option('gmt_offset') * 3600))) && $thismonth == gmdate('m', time() + ( get_option('gmt_offset') * 3600 ) ) && $thisyear == gmdate('Y', time()+(get_option('gmt_offset') * 3600)) ) {
 		echo '<td id="today">';
-	else
+	} else {
 		echo '<td>';
+	}	
 
 	echo '<div class="cal-day">' . $day . '</div>';
 	if ( array_key_exists( $day, $all_events ) ) {
@@ -163,28 +161,25 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	}
 	echo '</td>';
 
-	if ( 6 == calendar_week_mod(date('w', mktime(0, 0 , 0, $currentmonth, $day, $currentyear))-$week_begins) )
+	if ( 6 == calendar_week_mod(date('w', mktime(0, 0 , 0, $thismonth, $day, $thisyear))-$week_begins) ) {
 		$newrow = true;
+	}
 }
 
-$pad = 7 - calendar_week_mod(date('w', mktime(0, 0 , 0, $currentmonth, $day, $currentyear))-$week_begins);
+$pad = 7 - calendar_week_mod(date('w', mktime(0, 0 , 0, $thismonth, $day, $thisyear ) ) - $week_begins );
 if ( $pad != 0 && $pad != 7 )
 	echo "\n\t\t".'<td class="pad" colspan="'.$pad.'">&nbsp;</td>';
 
 echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
-$current_month = gmdate('F', current_time('timestamp'));
-
-// echo '<div class="ical-feed"><img src="' . get_bloginfo('template_directory') . '/images/icons/feed_s16.png" height="16px" width="16px" alt="Events Calendar Feed" /><a href="' . get_bloginfo('url') . '/events/?ical" class="feed">Subscribe to the Journalism School\'s Events Calendar</a></div>';
-
-echo '<h2 class="upcoming-title">Upcoming Events in ' . $current_month . '</h2>';
+echo '<h2 class="upcoming-title">Upcoming Events in ' . $wp_locale->get_month( $thismonth )  . '</h2>';
 if ( count( $all_events ) ) {
 
 	// Sort the events by day (aka the key)
 	ksort( $all_events );
 
 	foreach ( $all_events as $key => $day ) {
-		$timestamp = mktime( 0, 0 , 0, $currentmonth, $key, $currentyear );
+		$timestamp = mktime( 0, 0 , 0, $thismonth, $key, $thisyear );
 		$heading = gmdate( 'l, F jS', $timestamp );
 		echo '<h3 class="upcoming">' . $heading . '</h3>';
 		foreach( $day as $post_id => $event ) {
