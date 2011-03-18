@@ -6,51 +6,30 @@
 	
 <?php 
 
-global $wpdb, $m, $monthnum, $year, $wp_locale, $posts;
-
-if ( isset($_GET['w']) )
-	$w = ''.intval($_GET['w']);
+global $wpdb, $m, $monthnum, $year, $wp_locale;
 
 // week_begins = 0 stands for Sunday
-$week_begins = intval(get_option('start_of_week'));
-
-// Let's figure out when we are
-if ( !empty($monthnum) && !empty($year) ) {
-	$thismonth = ''.zeroise(intval($monthnum), 2);
-	$thisyear = ''.intval($year);
-} elseif ( !empty($w) ) {
-	// We need to get the month from MySQL
-	$thisyear = ''.intval(substr($m, 0, 4));
-	$d = (($w - 1) * 7) + 6; //it seems MySQL's weeks disagree with PHP's
-	$thismonth = $wpdb->get_var("SELECT DATE_FORMAT((DATE_ADD('${thisyear}0101', INTERVAL $d DAY) ), '%m')");
-} elseif ( !empty($m) ) {
-	$thisyear = ''.intval(substr($m, 0, 4));
-	if ( strlen($m) < 6 )
-			$thismonth = '01';
-	else
-			$thismonth = ''.zeroise(intval(substr($m, 4, 2)), 2);
+$week_begins = intval( get_option( 'start_of_week' ) );
+if ( empty( $year ) && empty( $monthnum ) ) {
+	$currentyear = gmdate( 'Y' , current_time( 'timestamp' ) );
+	$currentmonth = gmdate( 'm' , current_time( 'timestamp' ) );
 } else {
-	$thisyear = gmdate('Y', current_time('timestamp'));
-	$thismonth = gmdate('m', current_time('timestamp'));
-	$thismonth_timestamp = strtotime( $thisyear . '-' . $thismonth . '-1' );
+	$currentyear = $year;
+	$currentmonth = $monthnum;
 }
+$currentmonth_timestamp = strtotime( $currentyear . '-' . $currentmonth . '-1' );
 
-$unixmonth = mktime(0, 0 , 0, $thismonth, 1, $thisyear);
-$prevmonth = gmdate("F", strtotime("-1 months"));
-$prevmonthlink = gmdate("Y/m", strtotime("-1 months"));
-$nextmonth = gmdate("F", strtotime("+1 months"));
-$nextmonthlink = gmdate("Y/m", strtotime("+1 months"));
+$unixmonth = mktime( 0, 0 , 0, $currentmonth, 1, $currentyear );
+$prevmonth = gmdate( 'F', strtotime( '-1 months', $currentmonth_timestamp ) );
+$prevmonthlink = gmdate( 'Y/m', strtotime( '-1 months', $currentmonth_timestamp ) );
+$nextmonth = gmdate( 'F', strtotime( '+1 months', $currentmonth_timestamp ) );
+$nextmonthlink = gmdate( 'Y/m' , strtotime( '+ 1 months', $currentmonth_timestamp ) );
 
 echo '<div id="calendar_wrap">';
-echo '<h2 class="calendar-title">' . $wp_locale->get_month($thismonth) .' ' . gmdate('Y', $unixmonth) . '</h2>';
+echo '<span class="prev-month left"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>';
+echo '<span class="next-month right"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>';
+echo '<h2 class="calendar-title">' . $wp_locale->get_month( $currentmonth ) .' ' . gmdate( 'Y', $unixmonth ) . '</h2>';
 echo '<table id="wp-calendar" summary="' . __('Calendar') . '">';
-/* 
-	<caption>
-		<span class="prev-month"><a href="/events/' . $prevmonthlink . '/">« ' . $prevmonth .'</a></span>
-		' . $wp_locale->get_month($thismonth) .' ' . gmdate('Y', $unixmonth) . '
-		<span class="next-month"><a href="/events/' . $nextmonthlink . '/">' . $nextmonth .' »</a></span>
-	</caption>
-*/
 echo '<thead>
 		<tr>';
 
@@ -79,7 +58,7 @@ $args = array(	'order' => 'ASC',
 				'posts_per_page' => '-1',
 				'post_type' => 'cunyj_event',
 				'meta_key' => '_cunyj_events_start_date',
-				'meta_value' => $thismonth_timestamp,
+				'meta_value' => $currentmonth_timestamp,
 				'meta_compare' => '>='
 			);
 $events = new WP_Query( $args );
@@ -108,7 +87,7 @@ if ( $events->have_posts() ) {
 			$event_days[] = $start_date_day + $i;
 		}
 		// Don't include events that start in other months
-		if ( date_i18n( 'm', $start_date ) != $thismonth ) {
+		if ( date_i18n( 'm', $start_date ) != $currentmonth ) {
 			continue;
 		}
 		// Is it multi-day or not?
@@ -151,7 +130,7 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	$newrow = false;
 
 	// Is today the day?
-	if ( $day == gmdate('j', (time() + (get_option('gmt_offset') * 3600))) && $thismonth == gmdate('m', time()+(get_option('gmt_offset') * 3600)) && $thisyear == gmdate('Y', time()+(get_option('gmt_offset') * 3600)) )
+	if ( $day == gmdate('j', (time() + (get_option('gmt_offset') * 3600))) && $currentmonth == gmdate('m', time()+(get_option('gmt_offset') * 3600)) && $currentyear == gmdate('Y', time()+(get_option('gmt_offset') * 3600)) )
 		echo '<td id="today">';
 	else
 		echo '<td>';
@@ -180,11 +159,11 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	}
 	echo '</td>';
 
-	if ( 6 == calendar_week_mod(date('w', mktime(0, 0 , 0, $thismonth, $day, $thisyear))-$week_begins) )
+	if ( 6 == calendar_week_mod(date('w', mktime(0, 0 , 0, $currentmonth, $day, $currentyear))-$week_begins) )
 		$newrow = true;
 }
 
-$pad = 7 - calendar_week_mod(date('w', mktime(0, 0 , 0, $thismonth, $day, $thisyear))-$week_begins);
+$pad = 7 - calendar_week_mod(date('w', mktime(0, 0 , 0, $currentmonth, $day, $currentyear))-$week_begins);
 if ( $pad != 0 && $pad != 7 )
 	echo "\n\t\t".'<td class="pad" colspan="'.$pad.'">&nbsp;</td>';
 
@@ -201,7 +180,7 @@ if ( count( $all_events ) ) {
 	ksort( $all_events );
 
 	foreach ( $all_events as $key => $day ) {
-		$timestamp = mktime( 0, 0 , 0, $thismonth, $key, $thisyear );
+		$timestamp = mktime( 0, 0 , 0, $currentmonth, $key, $currentyear );
 		$heading = gmdate( 'l, F jS', $timestamp );
 		echo '<h3 class="upcoming">' . $heading . '</h3>';
 		foreach( $day as $post_id => $event ) {
