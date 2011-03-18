@@ -141,7 +141,7 @@ li.video{
 		<div class="orange_bg drop-shadow clearfix pads">
 			<div class="alignright soundslides">
 				<object id="soundslider" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="420" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowScriptAccess" value="always" /><param name="quality" value="high" /><param name="allowFullScreen" value="true" /><param name="menu" value="false" /><param name="bgcolor" value="#FFFFFF" /><param name="src" value="http://www.journalism.cuny.edu/files/soundslides/urbanreporting/soundslider.swf?size=0&amp;format=xml" /><param name="allowfullscreen" value="true" /><embed id="soundslider" type="application/x-shockwave-flash" width="420" height="385" src="http://www.journalism.cuny.edu/files/soundslides/urbanreporting/soundslider.swf?size=0&amp;format=xml" bgcolor="#FFFFFF" menu="false" allowfullscreen="true" quality="high" allowscriptaccess="always"></embed></object>
-				<div class="caption">New York City political Reporting Panel — Feb. 2011</div>
+				<div class="caption">New York City Political Reporting Panel — Feb. 2011</div>
 			</div>
 			<h3>Our Curriculum</h3>
 			<p>Students who choose to specialize in urban reporting take four courses. The first, Covering City Government and Politics, is taken in their second semester.</p>
