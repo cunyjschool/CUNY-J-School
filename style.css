@@ -1179,39 +1179,6 @@ div#message.updated {
 .post .gallery br {
 	clear: left !important;
 }
-
-.main .content .cunyj_event {
-	width: 520px;
-}
-
-.main .content .cunyj_event h2 {
-	font-size: 24px;
-}
-	
-.main .content .cunyj_event .event_details {
-	background-color: #F9F9F9;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.main .content .cunyj_event .event_details p {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	padding: 0;
-}
-
-.main .content .cunyj_event .timestamp {
-	padding-top: 5px;
-}
-
-.main .content .cunyj_event .event_details p span {
-	color: #666666;
-	float: left;
-	display: inline-block;
-	width: 150px;
-}
 	
 .entry h4 {
 	margin-top: 20px; }
