@@ -120,19 +120,19 @@ body.single-cunyjevent .event-location .label {
 	padding-right: 10px;
 }
 
-.main .content .cunyj_event .event_details p {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	padding: 0;
-}
-
 .main .content .cunyj_event .timestamp {
 	padding-top: 5px;
 }
 
-.main .content .cunyj_event .event_details p span {
+.main .content .cunyj_event .event_details div.label {
 	color: #666666;
 	float: left;
-	display: inline-block;
 	width: 150px;
+}
+
+.main .content .cunyj_event .event_details p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+	margin-left: 150px;
 }
