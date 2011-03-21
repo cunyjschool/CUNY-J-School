@@ -84,6 +84,9 @@ class cunyj
 			add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_items' ), 70 );
 		}
 		
+		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
+		bp_core_remove_nav_item( 'settings' );
+		
 	}
 	
 	/**
