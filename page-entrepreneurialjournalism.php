@@ -117,12 +117,6 @@ Template Name: Page - Entrepreneurial Journalism
 			
 		</div>
 		
-		<?php if ( $application_information = get_post_meta( get_the_id(), 'application_information', true ) ): ?>
-		<div class="row-section" id="application-information">	
-			<h3>Ready to apply?</h3>
-			<p><?php echo $application_information; ?></p>
-		</div>
-		<?php endif; ?>
 	
 	<div style="clear:both;"></div>
 	
