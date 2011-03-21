@@ -117,6 +117,41 @@ Template Name: Page - Entrepreneurial Journalism
 			
 		</div>
 		
+		<div class="row-section" id="entrepreneurial-journalism-participants">
+			
+			<h3>Entrepreneurial Journalism Class of 2011</h3>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/ernestchico_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://ernest.entrepreneurial.2011.journalism.cuny.edu/">Ernest Chi Cho</a></strong> is a Cameroonian broadcast journalist living in New York. Before moving to New York in 2009, Chi Cho worked as news anchor and Deputy Editor-in-Chief for Equinoxe Television, a private TV station in Douala – Cameroon. He holds a BS degree in Political Science.
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/indranidatta_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://indrani.entrepreneurial.2011.journalism.cuny.edu/">Indrani Datta</a></strong> is completing a Master's degree in Journalism while building a web startup. She started working in the software industry during the first dotcom era. Since then, she's worked in academia and in industry, for newspapers and for the government &mdash; as a researcher, a writer, a programmer, a trainer, and a project manager. 
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/shanedixon_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://shane.entrepreneurial.2011.journalism.cuny.edu/">Shane Dixon Kavanaugh</a></strong> is a reporter in New York City. His work has appeared in the New York Times, Daily News, Crain’s, New York Press, City Limits, the Oregonian, and other publications. He is also the founder and managing editor of <a href="http://www.overflowmagazine.com">OVERFLOW Magazine</a>, an arts and culture quarterly in Brooklyn. Shane completed received an M.A. from the CUNY Graduate School of Journalism in December, 2010. 
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/marianakeller_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://mariana.entrepreneurial.2011.journalism.cuny.edu/">Mariana (Vasconcellos) Keller</a></strong> is a Brazilian-born, internationally-grown multimedia journalist. She is fluent in English, Portuguese, French and Hebrew and has worked as a journalist in four continents – from the safety of The New York Times building, to being embedded in a special police force in the Amazon, to dodging bullets in Jerusalem. Her work has been distributed through Agence France-Presse, and featured in publications such as NYTimes, WSJ and TIME.com.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/mattkiser_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://matt.entrepreneurial.2011.journalism.cuny.edu/">Matt Kiser</a></strong> is the Online Production Manager for SPIN Magazine, where he works closely with online editors, producers, and web developers to manage the execution of all digital SPIN content from initial conception and product development, to delivery and deployment. Previously, he managed the radio and retail charts at the College Music Journal, was entertainment editor at the award-winning student newspaper, The Orion, and was the general manager the nationally recognized student radio station, KCSC. Matt completed the NYU Digital Media Marketing graduate certificate in 2009. 
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/youyounglee_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://youyoung.entrepreneurial.2011.journalism.cuny.edu/">Youyoung Lee</a></strong> is a lifestyle journalist based in New York. She has been on staff at Allure.com and Entertainment Weekly, and has written for Elle.com, Nylon, the New York Times’ Style blog and MTV/Frommer's Guide to England. She is formerly the managing editor of the start-up company Unlike.net, an international city guide based in Berlin, Germany.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+	
+		</div>
 	
 	<div style="clear:both;"></div>
 	

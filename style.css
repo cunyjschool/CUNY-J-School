@@ -897,7 +897,7 @@ img.news-photo {
 	line-height: 24px;
 }
 
-.main#entrepreneurial-journalism-landing .program-courses h3 {
+.main#entrepreneurial-journalism-landing .program-courses h3, .main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants h3 {
 	font-weight: normal;
 	color: #999999;
 	font-size: 24px;
@@ -984,14 +984,30 @@ img.news-photo {
 	border: 5px solid #EEEEEE;
 }
 
-.main#entrepreneurial-journalism-landing #lead-by img.alignleft {
+.main#entrepreneurial-journalism-landing img.alignleft {
 	margin-right: 20px;
 	margin-bottom: 10px;
 }
 
-.main#entrepreneurial-journalism-landing #lead-by img.alignright {
+.main#entrepreneurial-journalism-landing img.alignright {
 	margin-left: 20px;
 	margin-bottom: 10px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .hr {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	margin-left: 75px;
+	margin-right: 75px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant {
+	width: 420px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant img.avatar {
+	border: 5px solid #EEEEEE;	
 }
 
 .main#entrepreneurial-journalism-landing #application-information {
