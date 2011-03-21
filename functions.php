@@ -40,19 +40,20 @@ class cunyj
 
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
+			wp_enqueue_style( 'cunyj_events_admin', get_bloginfo('template_directory') . '/css/events_admin.css', array( 'cunyj_primary' ), CUNYJ_VERSION );
 		} else {
 			// Enqueue our stylesheets
 			wp_enqueue_style( 'cunyj_primary', get_bloginfo('template_directory') . '/style.css', false, CUNYJ_VERSION );
 			wp_enqueue_style( 'cunyj_sidebar', get_bloginfo('template_directory') . '/css/sidebar.css', array('cunyj_primary'), CUNYJ_VERSION );
 			wp_enqueue_style( 'cunyj_media', get_bloginfo('template_directory') . '/css/media.css', array('cunyj_primary'), CUNYJ_VERSION );
-			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), CUNYJ_VERSION );
 			
 			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), CUNYJ_VERSION );
-			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), CUNYJ_VERSION );
 			
-			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), CUNYJ_VERSION);
-			wp_enqueue_style( 'cunyj_capstones', get_bloginfo('template_directory') . '/css/capstones.css', array( 'cunyj_primary' ), CUNYJ_VERSION);			
-			wp_enqueue_style( 'cunyj_events', get_bloginfo('template_directory') . '/css/cunyj_events.css', array( 'cunyj_primary' ), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), CUNYJ_VERSION );
+			wp_enqueue_style( 'events', get_bloginfo('template_directory') . '/css/events.css', array( 'cunyj_primary' ), CUNYJ_VERSION );
+			wp_enqueue_style( 'cunyj_capstones', get_bloginfo('template_directory') . '/css/capstones.css', array( 'cunyj_primary' ), CUNYJ_VERSION );			
 			
 			// Load in header
 			wp_enqueue_script( 'cunyj_main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), CUNYJ_VERSION );
