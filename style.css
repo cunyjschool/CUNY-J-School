@@ -1006,6 +1006,11 @@ img.news-photo {
 	width: 420px;
 }
 
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant.center {
+	margin-left: 210px;
+	margin-right: 210px;
+}
+
 .main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant img.avatar {
 	border: 5px solid #EEEEEE;	
 }
