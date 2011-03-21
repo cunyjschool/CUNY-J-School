@@ -202,7 +202,7 @@ if ( $pad != 0 && $pad != 7 )
 
 echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
-echo '<h2 class="upcoming-title">Upcoming Events in ' . $wp_locale->get_month( $thismonth )  . '</h2>';
+echo '<h2 class="upcoming-title">Events in ' . $wp_locale->get_month( $thismonth )  . '</h2>';
 if ( count( $all_events ) ) {
 
 	foreach ( $all_events as $key => $day ) {
@@ -234,7 +234,7 @@ if ( count( $all_events ) ) {
 	
 } else {
 	
-	echo '<div class="info message">There are no upcoming events this month.</div>';
+	echo '<div class="info message">There are no events scheduled for this month.</div>';
 	
 } // END if ( count( $all_events ) )
 
