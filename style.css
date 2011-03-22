@@ -897,7 +897,7 @@ img.news-photo {
 	line-height: 24px;
 }
 
-.main#entrepreneurial-journalism-landing .program-courses h3 {
+.main#entrepreneurial-journalism-landing .program-courses h3, .main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants h3 {
 	font-weight: normal;
 	color: #999999;
 	font-size: 24px;
@@ -984,14 +984,35 @@ img.news-photo {
 	border: 5px solid #EEEEEE;
 }
 
-.main#entrepreneurial-journalism-landing #lead-by img.alignleft {
+.main#entrepreneurial-journalism-landing img.alignleft {
 	margin-right: 20px;
 	margin-bottom: 10px;
 }
 
-.main#entrepreneurial-journalism-landing #lead-by img.alignright {
+.main#entrepreneurial-journalism-landing img.alignright {
 	margin-left: 20px;
 	margin-bottom: 10px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .hr {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	margin-left: 75px;
+	margin-right: 75px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant {
+	width: 420px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant.center {
+	margin-left: 210px;
+	margin-right: 210px;
+}
+
+.main#entrepreneurial-journalism-landing #entrepreneurial-journalism-participants .entrepreneurial-journalism-participant img.avatar {
+	border: 5px solid #EEEEEE;	
 }
 
 .main#entrepreneurial-journalism-landing #application-information {
@@ -1178,39 +1199,6 @@ div#message.updated {
 
 .post .gallery br {
 	clear: left !important;
-}
-
-.main .content .cunyj_event {
-	width: 520px;
-}
-
-.main .content .cunyj_event h2 {
-	font-size: 24px;
-}
-	
-.main .content .cunyj_event .event_details {
-	background-color: #F9F9F9;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.main .content .cunyj_event .event_details p {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	padding: 0;
-}
-
-.main .content .cunyj_event .timestamp {
-	padding-top: 5px;
-}
-
-.main .content .cunyj_event .event_details p span {
-	color: #666666;
-	float: left;
-	display: inline-block;
-	width: 150px;
 }
 	
 .entry h4 {

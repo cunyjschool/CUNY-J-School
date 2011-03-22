@@ -40,19 +40,20 @@ class cunyj
 
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
+			wp_enqueue_style( 'cunyj_events_admin', get_bloginfo('template_directory') . '/css/events_admin.css', array( 'cunyj_primary' ), CUNYJ_VERSION );
 		} else {
 			// Enqueue our stylesheets
 			wp_enqueue_style( 'cunyj_primary', get_bloginfo('template_directory') . '/style.css', false, CUNYJ_VERSION );
 			wp_enqueue_style( 'cunyj_sidebar', get_bloginfo('template_directory') . '/css/sidebar.css', array('cunyj_primary'), CUNYJ_VERSION );
 			wp_enqueue_style( 'cunyj_media', get_bloginfo('template_directory') . '/css/media.css', array('cunyj_primary'), CUNYJ_VERSION );
-			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_buddypress', get_bloginfo('template_directory') . '/css/buddypress.css', array('cunyj_primary'), CUNYJ_VERSION );
 			
 			wp_enqueue_style( 'cunyj_home', get_bloginfo('template_directory') . '/css/home.css', array('cunyj_primary'), CUNYJ_VERSION );
-			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_nextgen_gallery', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array('cunyj_primary'), CUNYJ_VERSION );
 			
-			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), CUNYJ_VERSION);
-			wp_enqueue_style( 'cunyj_capstones', get_bloginfo('template_directory') . '/css/capstones.css', array( 'cunyj_primary' ), CUNYJ_VERSION);			
-			wp_enqueue_style( 'cunyj_events', get_bloginfo('template_directory') . '/css/cunyj_events.css', array( 'cunyj_primary' ), CUNYJ_VERSION);
+			wp_enqueue_style( 'cunyj_databases', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary' ), CUNYJ_VERSION );
+			wp_enqueue_style( 'events', get_bloginfo('template_directory') . '/css/events.css', array( 'cunyj_primary' ), CUNYJ_VERSION );
+			wp_enqueue_style( 'cunyj_capstones', get_bloginfo('template_directory') . '/css/capstones.css', array( 'cunyj_primary' ), CUNYJ_VERSION );			
 			
 			// Load in header
 			wp_enqueue_script( 'cunyj_main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), CUNYJ_VERSION );
@@ -77,24 +78,55 @@ class cunyj
 		add_image_size( '600px-width', 600 );
 		add_image_size( '520px-width', 520 );
 		add_image_size( '64px-thumb', 64, 64, true );
-		add_image_size( 'capstone-thumb', 230, 120, true );		
+		add_image_size( 'capstone-thumb', 230, 120, true );
+		
+		if ( is_admin_bar_showing() ) {			
+			add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_items' ), 70 );
+		}
+		
+		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
+		bp_core_remove_nav_item( 'settings' );
 		
 	}
 	
+	/**
+	 * admin_init()
+	 * Items to initialize in the WordPress admin only
+	 */
 	function admin_init() {
 
 		$this->register_settings();
 
-	}
+	} // END admin_init()
 	
 	/**
+	 * add_admin_menu_items()
 	 * Any admin menu items we need
 	 */
 	function add_admin_menu_items() {
 
 		add_submenu_page( 'themes.php', 'CUNY J-School Theme Options', 'Theme Options', 'manage_options', 'cunyj_options', array( &$this, 'options_page' ) );			
 
-	}
+	} // END add_admin_menu_items()
+	
+	/**
+	 * add_admin_bar_items()
+	 * Custom items for the J-School theme to WordPress' admin bar
+	 */
+	function add_admin_bar_items() {
+		global $wp_admin_bar;
+		
+		// Add a link to the theme's options for the users who can edit		
+		if ( current_user_can('edit_theme_options') ) {
+			$args = array(
+				'title' => 'Theme Options',
+				'href' => admin_url( 'themes.php?page=cunyj_options' ),
+				'parent' => 'appearance',
+			);
+			$wp_admin_bar->add_menu( $args );
+		}
+		
+	} // END add_admin_bar_items()
 
 	function register_settings() {
 

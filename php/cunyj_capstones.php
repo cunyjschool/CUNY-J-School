@@ -32,36 +32,37 @@ class cunyj_capstones
 		if ( function_exists('register_post_type') ) {
 			register_post_type('cunyj_capstone',
 		    array(
-		      'labels' => array(
-		        'name' => 'Capstones',
-		        'singular_name' => 'Capstone',
-						'add_new_item' => 'Add New Capstone',
-						'edit_item' => 'Edit Capstone',
-						'new_item' => 'New Capstone',
-						'view' => 'View Capstone',
-						'view_item' => 'View Capstone',
-						'search_items' => 'Search Capstones',
-						'not_found' => 'No capstones found',
-						'not_found_in_trash' => 'No capstones found in Trash',
-						'parent' => 'Parent Capstone'
-		      ),
-					'menu_position' => 12,
-		      'public' => true,
-					'rewrite' => array(
-						'slug' => 'capstones'
-					),
-					'supports' => array(
-						'title',
-						'author',
-						'editor',
-						'excerpt',						
-						'thumbnail',
-						'custom-fields',
-					),
-					'taxonomies' => array(
-						'cunyj_capstone_media_types',
-						'cunyj_concentrations',
-					)
+				'labels' => array(
+					'name' => 'Capstones',
+		        	'singular_name' => 'Capstone',
+					'add_new_item' => 'Add New Capstone',
+					'edit_item' => 'Edit Capstone',
+					'new_item' => 'New Capstone',
+					'view' => 'View Capstone',
+					'view_item' => 'View Capstone',
+					'search_items' => 'Search Capstones',
+					'not_found' => 'No capstones found',
+					'not_found_in_trash' => 'No capstones found in Trash',
+					'parent' => 'Parent Capstone'
+				),
+				'menu_position' => 12,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'capstones'
+				),
+				'supports' => array(
+					'title',
+					'author',
+					'editor',
+					'excerpt',						
+					'thumbnail',
+					'custom-fields',
+				),
+				'taxonomies' => array(
+					'cunyj_capstone_media_types',
+					'cunyj_concentrations',
+				),
 		    )
 		  );
 		}

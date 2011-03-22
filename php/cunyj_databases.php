@@ -17,7 +17,10 @@ class cunyj_databases
 		
 		// Add Database post type
 		add_action( 'init', array(&$this, 'create_post_type') );
-		add_action( 'init', array(&$this, 'create_taxonomies') );		
+		add_action( 'init', array(&$this, 'create_taxonomies') );
+		
+		// Template redirect back to archive file so search looks fine
+		add_filter( 'template_include', array( &$this, 'template_include' ) );
 		
 		// Set up metabox and related actions
 		add_action('admin_menu', array(&$this, 'add_post_meta_box'));
@@ -36,32 +39,33 @@ class cunyj_databases
 		if ( function_exists('register_post_type') ) {
 			register_post_type('cunyj_database',
 		    array(
-		      'labels' => array(
-		        'name' => 'Databases',
-		        'singular_name' => 'Database',
-						'add_new_item' => 'Add New Database',
-						'edit_item' => 'Edit Database',
-						'new_item' => 'New Database',
-						'view' => 'View Database',
-						'view_item' => 'View Database',
-						'search_items' => 'Search Databases',
-						'not_found' => 'No databases found',
-						'not_found_in_trash' => 'No databases found in Trash',
-						'parent' => 'Parent Database'
-		      ),
-					'menu_position' => 11,
-		      'public' => true,
-					'rewrite' => array(
-						'slug' => 'databases'
-					),
-					'supports' => array(
-						'title',
-						'editor',
-						'excerpt',
-					),
-					'taxonomies' => array(
-						'cunyj_database_topics',
-					)
+				'labels' => array(
+		        	'name' => 'Databases',
+		        	'singular_name' => 'Database',
+					'add_new_item' => 'Add New Database',
+					'edit_item' => 'Edit Database',
+					'new_item' => 'New Database',
+					'view' => 'View Database',
+					'view_item' => 'View Database',
+					'search_items' => 'Search Databases',
+					'not_found' => 'No databases found',
+					'not_found_in_trash' => 'No databases found in Trash',
+					'parent' => 'Parent Database'
+		      	),
+				'menu_position' => 11,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'databases'
+				),
+				'supports' => array(
+					'title',
+					'editor',
+					'excerpt',
+				),
+				'taxonomies' => array(
+					'cunyj_database_topics',
+				)
 		    )
 		  );
 		}
@@ -82,6 +86,23 @@ class cunyj_databases
 		
 		
 	} // END create_taxonomies()
+	
+	/**
+	 * template_include()
+	 * Modify search results so we use the archive template instead of search.php
+	 */
+	function template_include( $include_file ) {
+		global $wp, $wp_query;
+
+		if ( $wp->query_vars['post_type'] == 'cunyj_database' ) {
+			$file = TEMPLATEPATH . '/archive-cunyj_database.php';
+			if ( file_exists( $file ) ) {
+				$include_file = $file;
+			}
+		}
+		return $include_file;
+		
+	} // END template_include()
 	
 	/**
 	 * add_post_meta_box()

@@ -20,16 +20,48 @@ class cunyj_events
 		// Load necessary scripts and stylesheets
 		add_action('admin_enqueue_scripts', array(&$this, 'add_admin_scripts'));
 		
+		// Add a rewrite rule to handle pagination on archive page
+		add_action( 'generate_rewrite_rules', array( &$this, 'rewrite_rules' ) );
+		add_filter( 'query_vars', array( &$this, 'query_vars' ) );
+		
 	}
+
+	/**
+	 * rewrite_rules()
+	 */
+	function rewrite_rules( $wp_rewrite ) {
+
+		$type = 'cunyj_event';
+		$type_slug = 'events';
+
+		$new_rules = array(
+			$type_slug . '/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&cunyj_year=' . $wp_rewrite->preg_index(1),
+			$type_slug . '/([0-9]+)/([0-9]+)/?$' => 'index.php?post_type=' . $type . '&cunyj_year=' . $wp_rewrite->preg_index(1) . '&cunyj_monthnum=' . $wp_rewrite->preg_index(2),
+		);
+
+		$wp_rewrite->rules = array_merge( $new_rules, $wp_rewrite->rules );
+
+	} // END rewrite_rules()
+	
+	/**
+	 * query_vars()
+	 * @param array $query_vars Array of query variables to watch for
+	 * @return array $query_vars Modified array of query variables to watch for
+	 */
+	function query_vars( $query_vars ) {
+		$query_vars[] = 'cunyj_year';
+		$query_vars[] = 'cunyj_monthnum';
+		return $query_vars;
+	} // END query_vars()
 	
 	function create_post_type() {
 
 		if (function_exists('register_post_type')) {
 			register_post_type('cunyj_event',
 		    array(
-		      'labels' => array(
-		        'name' => 'Events',
-		        'singular_name' => 'Event',
+				'labels' => array(
+		        	'name' => 'Events',
+					'singular_name' => 'Event',
 						'add_new_item' => 'Add New Event',
 						'edit_item' => 'Edit Event',
 						'new_item' => 'New Event',
@@ -39,23 +71,26 @@ class cunyj_events
 						'not_found' => 'No events found',
 						'not_found_in_trash' => 'No events found in Trash',
 						'parent' => 'Parent Event'
-		      ),
-					'menu_position' => 10,
-		      'public' => true,
-					'rewrite' => array(
-						'slug' => 'events'
-					),
-					'supports' => array(
-						'title',
-						'editor',
-						'comments',
-						'excerpt',
-						'thumbnail',
-					),
-					'taxonomies' => array(
-						'post_tag',
-						'cunyj_event_category'
-					)
+				),
+				'menu_position' => 10,
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'events',
+					'feeds' => false,
+					'with_front' => true
+				),
+				'supports' => array(
+					'title',
+					'editor',
+					'comments',
+					'excerpt',
+					'thumbnail',
+				),
+				'taxonomies' => array(
+					'post_tag',
+					'cunyj_event_category'
+				)
 		    )
 		  );
 		}
