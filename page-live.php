@@ -121,7 +121,7 @@ $embed_codes['watershed'] = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-4445
 			
 			
 			<div class="sidebar-item" id="report-trouble">
-				<p>Trouble with the livestream or chat? Email <a href="mailto:webmaster@journalism.cuny.edu?subject=Issue with livestream and/or chat">webmaster@journalism.cuny.edu</a> and we'll help out!</p>
+				<p>Having trouble or something broken? Email <a href="mailto:webteam@journalism.cuny.edu?subject=Issue with livestream page">webteam@journalism.cuny.edu</a> and we'll help out!</p>
 			</div>
 			
 		</div>

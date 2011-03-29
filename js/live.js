@@ -14,12 +14,28 @@ return str;
  * Handler method that determines which streams to add when the page loads
  */
 function cunyj_live_loadpage() {
+    
+    if ( typeof(cunyj_live_flickr_json) == 'undefined' || cunyj_live_flickr_json == '' ) {
+        jQuery('ul.switcher li#flickr').hide();
+    }
+    
+    if ( typeof(cunyj_live_twitter_json) == 'undefined' || cunyj_live_twitter_json == '' ) {
+        jQuery('ul.switcher li#twitter').hide();
+    }
+    
+    if ( typeof(cunyj_live_meebo_chat) == 'undefined' || cunyj_live_meebo_chat == '' ) {
+        jQuery('ul.switcher li#meebo').hide();
+    }
 	
 	if ( typeof(cunyj_live_flickr_json) != 'undefined' || typeof(cunyj_live_twitter_json) != 'undefined' ) {
 		jQuery('#live-updates').show();
-		if ( typeof(cunyj_live_flickr_json) != 'undefined' ) {
+		if ( typeof(cunyj_live_flickr_json) != 'undefined' && cunyj_live_flickr_json != '' ) {
 			cunyj_live_flickrstream();			
-		}
+		} else if ( typeof(cunyj_live_twitter_json) != 'undefined' && cunyj_live_twitter_json != '' ) {
+		    cunyj_live_twitterstream();
+		} else if ( typeof(cunyj_live_meebo_chat) != 'undefined' && cunyj_live_meebo_chat != '' ) {
+    	    cunyj_live_meebochat();
+    	}
 	} else {
 		return false;
 	}
@@ -30,7 +46,7 @@ function cunyj_live_loadpage() {
  * Starts the live imagestream updates
  */
 function cunyj_live_flickrstream() {
-	if ( typeof(cunyj_live_flickr_json) == 'undefined' ) {
+	if ( typeof(cunyj_live_flickr_json) == 'undefined' || cunyj_live_flickr_json == '' ) {
 		return false;
 	}
 	jQuery('ul.switcher li#flickr').addClass('active');
@@ -75,7 +91,7 @@ function jsonFlickrFeed( data ) {
  * Starts the live Twitterstream updates
  */
 function cunyj_live_twitterstream() {
-	if ( typeof(cunyj_live_twitter_json) == 'undefined' ) {
+	if ( typeof(cunyj_live_twitter_json) == 'undefined' || cunyj_live_twitter_json == '' ) {
 		return false;
 	}
 	jQuery('ul.switcher li#twitter').addClass('active');
@@ -124,7 +140,7 @@ function jsonTwitterFeed( data ) {
  * Insert the chat widget into the page
  */
 function cunyj_live_meebochat() {
-	if ( typeof(cunyj_live_meebo_chat) == 'undefined' ) {
+	if ( typeof(cunyj_live_meebo_chat) == 'undefined' || cunyj_live_meebo_chat == '' ) {
 		return false;
 	}	
 	//var chat_embed = '<div style="width:225px"><style>.mcrmeebo { display: block; background:url("http://widget.meebo.com/r.gif") no-repeat top right; } .mcrmeebo:hover { background:url("http://widget.meebo.com/ro.gif") no-repeat top right; } </style><object width="225" height="275"><param name="movie" value="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM"></param><embed src="http://widget.meebo.com/mcr.swf?id=GDwcDLPmRM" type="application/x-shockwave-flash" width="225" height="275" /></object><a target="_blank" href="http://www.meebo.com/rooms/" class="mcrmeebo"><img alt="Create a Meebo Chat Room" src="http://widget.meebo.com/b.gif" width="225" height="45" style="border:0px"/></a></div>';
