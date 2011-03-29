@@ -81,6 +81,7 @@ class cunyj
 	function admin_init() {
 
 		$this->register_settings();
+		wp_enqueue_style( 'cunyj_admin_css', get_bloginfo('template_directory') . '/css/admin.css', false, CUNYJ_VERSION );
 
 	} // END admin_init()
 	
@@ -165,28 +166,50 @@ class cunyj
 			
 			$primary_stream = get_post_meta( $post->ID, '_cunyj_primary_stream', true );
 			$secondary_stream = get_post_meta( $post->ID, '_cunyj_secondary_stream', true );
+			$twitter_json = get_post_meta( $post->ID, '_cunyj_twitter_json', true );
+			$flickr_json = get_post_meta( $post->ID, '_cunyj_flickr_json', true );						
+			$meebo_chat = get_post_meta( $post->ID, '_cunyj_meebo_chat', true );
 		
 		?>
 
 		<div class="inner cunyj-page-metabox" id="cunyj-page-live-metabox">
 
-			<p id="cunyj-primary-stream">
-				Primary stream:
+			<div class="cunyj-page-metabox-option" id="cunyj-primary-stream-option">
+				<p><label for="cunyj-secondary-stream">Primary stream:</label>
 				<select name="cunyj-primary-stream">
 					<option value="no"<?php if ( $primary_stream == 'no' ) { echo ' selected="selected"'; } ?>>None</option>
 					<option value="livestream"<?php if ( $primary_stream == 'livestream' ) { echo ' selected="selected"'; } ?>>Livestream</option>
 					<option value="watershed"<?php if ( $primary_stream == 'watershed' ) { echo ' selected="selected"'; } ?>>Watershed</option>									
-				</select>
-			</p>
+				</select></p>
+			</div>
 			
-			<p id="cunyj-secondary-stream">
-				Secondary stream:
+			<div class="cunyj-page-metabox-option" id="cunyj-secondary-stream-option">
+				<p><label for="cunyj-secondary-stream">Secondary stream:</label>
 				<select name="cunyj-secondary-stream">
 					<option value="no"<?php if ( $secondary_stream == 'no' ) { echo ' selected="selected"'; } ?>>None</option>
 					<option value="livestream"<?php if ( $secondary_stream == 'livestream' ) { echo ' selected="selected"'; } ?>>Livestream</option>
 					<option value="watershed"<?php if ( $secondary_stream == 'watershed' ) { echo ' selected="selected"'; } ?>>Watershed</option>									
 				</select>
-			</p>
+				</p>
+			</div>
+			
+			<div class="cunyj-page-metabox-option">
+				<p><label for="cunyj-twitter-json">Twitter JSON feed:</label></p>
+				<input type="text" id="cunyj-twitter-json" name="cunyj-twitter-json" value="<?php echo $twitter_json; ?>" size="60" />
+				<p class="description">Leave empty to disable</p>
+			</div>
+			
+			<div class="cunyj-page-metabox-option">
+				<p><label for="cunyj-flickr-json">Flickr JSON feed:</label></p>
+				<input type="text" id="cunyj-flickr-json" name="cunyj-flickr-json" value="<?php echo $flickr_json; ?>" size="60" />
+				<p class="description">Leave empty to disable</p>
+			</div>
+			
+			<div class="cunyj-page-metabox-option">
+				<p><label for="cunyj-meebo-chat">Meebo chat embed code:</label></p>
+				<textarea id="cunyj-meebo-chat" name="cunyj-meebo-chat"><?php echo $meebo_chat; ?></textarea>
+				<p class="description">Leave empty to disable</p>
+			</div>
 			
 			<input type="hidden" name="cunyj-metabox-nonce" id="cunyj-metabox-nonce" value="<?php echo wp_create_nonce( 'cunyj-metabox-nonce' ); ?>" />
 
@@ -227,6 +250,9 @@ class cunyj
 			if ( $template_file == 'page-live.php' ) {
 				update_post_meta( $post_id, '_cunyj_primary_stream', esc_html( $_POST['cunyj-primary-stream'] ) );
 				update_post_meta( $post_id, '_cunyj_secondary_stream', esc_html( $_POST['cunyj-secondary-stream'] ) );
+				update_post_meta( $post_id, '_cunyj_twitter_json', esc_html( $_POST['cunyj-twitter-json'] ) );
+				update_post_meta( $post_id, '_cunyj_flickr_json', esc_html( $_POST['cunyj-flickr-json'] ) );
+				update_post_meta( $post_id, '_cunyj_meebo_chat', esc_html( $_POST['cunyj-meebo-chat'] ) );				
 			}
 		
 		} // END if ( !wp_is_post_revision( $post ) && !wp_is_post_autosave( $post ) )

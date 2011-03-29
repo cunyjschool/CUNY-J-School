@@ -146,17 +146,17 @@ $embed_codes['watershed'] = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-4445
 </div>
 
 <?php 
-$flickr_json = ( $flickr_json = get_post_meta( get_the_id(), 'flickr_json', true ) ) ? $flickr_json : '';
-$twitter_json = ( $twitter_json = get_post_meta( get_the_id(), 'twitter_json', true ) ) ? $twitter_json : '';
-$meebo_chat = ( $meebo_chat = get_post_meta( get_the_id(), 'meebo_chat', true ) ) ? $meebo_chat : '';
-$primary_livestream_embed = addslashes( $embed_codes[$primary_livestream] );
-$secondary_livestream_embed = addslashes( $embed_codes[$secondary_livestream] );				?>
+$flickr_json = ( $flickr_json = get_post_meta( get_the_id(), '_cunyj_flickr_json', true ) ) ? $flickr_json : '';
+$twitter_json = ( $twitter_json = get_post_meta( get_the_id(), '_cunyj_twitter_json', true ) ) ? $twitter_json : '';
+$meebo_chat = ( $meebo_chat = get_post_meta( get_the_id(), '_cunyj_meebo_chat', true ) ) ? $meebo_chat : '';
+$primary_livestream_embed = $embed_codes[$primary_livestream];
+$secondary_livestream_embed = $embed_codes[$secondary_livestream];				?>
 <script type="text/javascript">
-	var cunyj_live_flickr_json = '<?php echo $flickr_json; ?>';
-	var cunyj_live_twitter_json = '<?php echo $twitter_json; ?>';
-	var cunyj_live_meebo_chat = '<?php echo $meebo_chat; ?>';	
-	var cunyj_live_primary_livestream = '<?php echo $primary_livestream_embed; ?>';	
-	var cunyj_live_secondary_livestream = '<?php echo $secondary_livestream_embed; ?>';	
+	var cunyj_live_flickr_json = '<?php echo addslashes( $flickr_json ); ?>';
+	var cunyj_live_twitter_json = '<?php echo addslashes( $twitter_json ); ?>';
+	var cunyj_live_meebo_chat = '<?php echo addslashes( html_entity_decode( $meebo_chat ) ); ?>';	
+	var cunyj_live_primary_livestream = '<?php echo addslashes( $primary_livestream_embed ); ?>';	
+	var cunyj_live_secondary_livestream = '<?php echo addslashes( $secondary_livestream_embed ); ?>';	
 </script>
 
 
