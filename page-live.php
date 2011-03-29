@@ -146,9 +146,15 @@ $embed_codes['watershed'] = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-4445
 </div>
 
 <?php 
-$flickr_json = ( $flickr_json = get_post_meta( get_the_id(), '_cunyj_flickr_json', true ) ) ? $flickr_json : '';
-$twitter_json = ( $twitter_json = get_post_meta( get_the_id(), '_cunyj_twitter_json', true ) ) ? $twitter_json : '';
-$meebo_chat = ( $meebo_chat = get_post_meta( get_the_id(), '_cunyj_meebo_chat', true ) ) ? $meebo_chat : '';
+if ( ( '' == ( $flickr_json = get_post_meta( get_the_id(), '_cunyj_flickr_json', true ) ) ) || ( 'on' != get_post_meta( get_the_id(), '_cunyj_flickr_enabled', true ) ) ) {
+	$flickr_json = '';
+} 
+if ( ( '' == ( $twitter_json = get_post_meta( get_the_id(), '_cunyj_twitter_json', true ) ) ) || ( 'on' != get_post_meta( get_the_id(), '_cunyj_twitter_enabled', true ) ) ) {
+	$twitter_json = '';
+}
+if ( ( '' == ( $meebo_chat = get_post_meta( get_the_id(), '_cunyj_meebo_chat', true ) ) ) || ( 'on' != get_post_meta( get_the_id(), '_cunyj_meebo_enabled', true ) ) ) {
+	$meebo_chat = '';
+}
 $primary_livestream_embed = $embed_codes[$primary_livestream];
 $secondary_livestream_embed = $embed_codes[$secondary_livestream];				?>
 <script type="text/javascript">

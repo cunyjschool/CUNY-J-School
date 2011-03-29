@@ -166,8 +166,11 @@ class cunyj
 			
 			$primary_stream = get_post_meta( $post->ID, '_cunyj_primary_stream', true );
 			$secondary_stream = get_post_meta( $post->ID, '_cunyj_secondary_stream', true );
+			$twitter_enabled = get_post_meta( $post->ID, '_cunyj_twitter_enabled', true );			
 			$twitter_json = get_post_meta( $post->ID, '_cunyj_twitter_json', true );
-			$flickr_json = get_post_meta( $post->ID, '_cunyj_flickr_json', true );						
+			$flickr_enabled = get_post_meta( $post->ID, '_cunyj_flickr_enabled', true );			
+			$flickr_json = get_post_meta( $post->ID, '_cunyj_flickr_json', true );
+			$meebo_enabled = get_post_meta( $post->ID, '_cunyj_meebo_enabled', true );
 			$meebo_chat = get_post_meta( $post->ID, '_cunyj_meebo_chat', true );
 		
 		?>
@@ -194,21 +197,33 @@ class cunyj
 			</div>
 			
 			<div class="cunyj-page-metabox-option">
-				<p><label for="cunyj-twitter-json">Twitter JSON feed:</label></p>
+				<p><label for="cunyj-twitter-json">Twitter JSON feed:</label>
+				<select name="cunyj-twitter-enabled" class="cunyj-twitter-json">
+					<option value="off"<?php if ( $twitter_enabled == 'off' ) { echo ' selected="selected"'; } ?>>Disabled</option>
+					<option value="on"<?php if ( $twitter_enabled == 'on' ) { echo ' selected="selected"'; } ?>>Enabled</option>								
+				</select>
+				</p>
 				<input type="text" id="cunyj-twitter-json" name="cunyj-twitter-json" value="<?php echo $twitter_json; ?>" size="60" />
-				<p class="description">Leave empty to disable</p>
 			</div>
 			
 			<div class="cunyj-page-metabox-option">
-				<p><label for="cunyj-flickr-json">Flickr JSON feed:</label></p>
+				<p><label for="cunyj-flickr-enabled">Flickr JSON feed:</label>
+				<select name="cunyj-flickr-enabled" class="cunyj-flickr-json">
+					<option value="off"<?php if ( $flickr_enabled == 'off' ) { echo ' selected="selected"'; } ?>>Disabled</option>
+					<option value="on"<?php if ( $flickr_enabled == 'on' ) { echo ' selected="selected"'; } ?>>Enabled</option>								
+				</select>	
+				</p>
 				<input type="text" id="cunyj-flickr-json" name="cunyj-flickr-json" value="<?php echo $flickr_json; ?>" size="60" />
-				<p class="description">Leave empty to disable</p>
 			</div>
 			
 			<div class="cunyj-page-metabox-option">
-				<p><label for="cunyj-meebo-chat">Meebo chat embed code:</label></p>
-				<textarea id="cunyj-meebo-chat" name="cunyj-meebo-chat"><?php echo $meebo_chat; ?></textarea>
-				<p class="description">Leave empty to disable</p>
+				<p><label for="cunyj-meebo-chat">Meebo chat embed code:</label>
+				<select name="cunyj-meebo-enabled" class="cunyj-meebo-json">
+					<option value="off"<?php if ( $meebo_enabled == 'off' ) { echo ' selected="selected"'; } ?>>Disabled</option>
+					<option value="on"<?php if ( $meebo_enabled == 'on' ) { echo ' selected="selected"'; } ?>>Enabled</option>								
+				</select>					
+				</p>
+				<textarea id="cunyj-meebo-chat" name="cunyj-meebo-chat" cols="60" rows="6"><?php echo $meebo_chat; ?></textarea>
 			</div>
 			
 			<input type="hidden" name="cunyj-metabox-nonce" id="cunyj-metabox-nonce" value="<?php echo wp_create_nonce( 'cunyj-metabox-nonce' ); ?>" />
@@ -250,8 +265,11 @@ class cunyj
 			if ( $template_file == 'page-live.php' ) {
 				update_post_meta( $post_id, '_cunyj_primary_stream', esc_html( $_POST['cunyj-primary-stream'] ) );
 				update_post_meta( $post_id, '_cunyj_secondary_stream', esc_html( $_POST['cunyj-secondary-stream'] ) );
+				update_post_meta( $post_id, '_cunyj_twitter_enabled', esc_html( $_POST['cunyj-twitter-enabled'] ) );				
 				update_post_meta( $post_id, '_cunyj_twitter_json', esc_html( $_POST['cunyj-twitter-json'] ) );
+				update_post_meta( $post_id, '_cunyj_flickr_enabled', esc_html( $_POST['cunyj-flickr-enabled'] ) );				
 				update_post_meta( $post_id, '_cunyj_flickr_json', esc_html( $_POST['cunyj-flickr-json'] ) );
+				update_post_meta( $post_id, '_cunyj_meebo_enabled', esc_html( $_POST['cunyj-meebo-enabled'] ) );				
 				update_post_meta( $post_id, '_cunyj_meebo_chat', esc_html( $_POST['cunyj-meebo-chat'] ) );				
 			}
 		
