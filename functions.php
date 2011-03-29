@@ -59,6 +59,12 @@ class cunyj
 		add_image_size( '64px-thumb', 64, 64, true );
 		add_image_size( 'capstone-thumb', 230, 120, true );
 		
+		// Set up any metaboxes we need to add
+		add_action( 'admin_menu', array( &$this, 'add_post_meta_box' ) );
+		add_action( 'save_post', array( &$this, 'save_post_meta_box' ) );
+		add_action( 'edit_post', array( &$this, 'save_post_meta_box' ) );
+		add_action( 'publish_post', array( &$this, 'save_post_meta_box' ) );
+		
 		if ( is_admin_bar_showing() ) {			
 			add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_items' ), 70 );
 		}
@@ -135,6 +141,62 @@ class cunyj
 		}
 		
 	} // END add_admin_bar_items()
+	
+	/**
+	 * add_post_meta_box()
+	 * Add post meta boxes we may need
+	 */
+	function add_post_meta_box() {
+		
+		add_meta_box( 'cunyj_page_metabox', __( 'Page Option', 'cunyj' ), array( &$this, 'page_meta_box' ), 'page', 'normal', 'high' );
+		
+	} // END add_post_meta_box()
+	
+	/**
+	 * page_meta_box()
+	 * The HTML representation of our meta box. Allows user to save the
+	 * media type, author, concentration, year and advisor
+	 */
+	function page_meta_box() {
+		global $post;
+		$template_file = get_post_meta( $post->ID, '_wp_page_template', TRUE );
+		
+		if ( $template_file == 'page-live.php' ) {
+		
+		?>
+
+		<div class="inner cunyj-metabox" id="cunyj-page-live-metabox">
+
+			<p>tk livestream options</p>
+
+		</div>
+
+		<?php
+			
+		} else {
+		
+		?>
+		
+		<div class="inner no-options-available cunyj-metabox" id="cunyj-page-no-options-metabox">
+			
+			<p>Sorry, there aren't any custom options available for this page.</p>
+			
+		</div>
+
+		<?php
+		
+		}
+		
+	} // END page_meta_box()
+	
+	/**
+	 * save_post_meta_box()
+	 * Save new values entered by the user
+	 */
+	function save_post_meta_box( $post_id ) {
+		global $cunyj, $post;	
+		
+	} // END save_post_meta_box()
 
 	function register_settings() {
 
