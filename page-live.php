@@ -2,6 +2,12 @@
 /*
 Template Name: Page - Live
 */
+
+$embed_codes = array();
+$embed_codes['no'] = '';
+$embed_codes['livestream'] = '<object width="720" height="400" id="lsplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://cdn.livestream.com/grid/LSPlayer.swf?channel=cunyjournalism&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777"></param><param name="allowScriptAccess" value="always"></param><param name="allowFullScreen" value="true"></param><embed name="lsplayer" wmode="transparent" src="http://cdn.livestream.com/grid/LSPlayer.swf?channel=cunyjournalism&amp;color=0xe7e7e7&amp;autoPlay=false&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777" width="720" height="400" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash"></embed></object>';
+$embed_codes['watershed'] = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="720" height="480" id="utv174"><param name="flashvars" value="autoplay=false&brand=embed&cid=18332%2Ftest&locale=en_US"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/live/18332/test"/><embed flashvars="autoplay=false&brand=embed&cid=18332%2Ftest&locale=en_US" width="720" height="480" allowfullscreen="true" allowscriptaccess="always" id="utv174" name="utv_n_143574" src="http://www.ustream.tv/flash/live/18332/test" type="application/x-shockwave-flash" /></object>';
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -68,10 +74,10 @@ Template Name: Page - Live
     <div class="page full" id="page-<?php the_ID(); ?>">
 		
 		<div class="video-player">
-			<?php if ( $primary_livestream = get_post_meta( get_the_id(), 'primary_livestream', true ) ) : ?>
-				<?php echo $primary_livestream; ?>
+			<?php if ( 'no' != ( $primary_livestream = get_post_meta( get_the_id(), '_cunyj_primary_stream', true ) ) ) : ?>
+				<?php echo $embed_codes[$primary_livestream]; ?>
 			<?php else: ?>
-				<p>Please add an embed code to the 'primary_livestream' custom field for this page.</p>
+				<p>Please select a primary stream for this page.</p>
 			<?php endif; ?>
 		</div>
 		
@@ -122,7 +128,7 @@ Template Name: Page - Live
 		
 		<div class="clear"></div>
 		
-		<?php if ( $secondary_livestream = get_post_meta( get_the_id(), 'secondary_livestream', true ) ) : ?>
+		<?php if ( 'no' != ( $secondary_livestream = get_post_meta( get_the_id(), '_cunyj_secondary_stream', true ) ) ) : ?>
 		<div class="video-backup">If this video is down, please <a href="#">try the mirror stream</a></div>
     	<?php endif; ?>
 
@@ -143,14 +149,14 @@ Template Name: Page - Live
 $flickr_json = ( $flickr_json = get_post_meta( get_the_id(), 'flickr_json', true ) ) ? $flickr_json : '';
 $twitter_json = ( $twitter_json = get_post_meta( get_the_id(), 'twitter_json', true ) ) ? $twitter_json : '';
 $meebo_chat = ( $meebo_chat = get_post_meta( get_the_id(), 'meebo_chat', true ) ) ? $meebo_chat : '';
-$primary_livestream = ( $primary_livestream = get_post_meta( get_the_id(), 'primary_livestream', true ) ) ? $primary_livestream : '';
-$secondary_livestream = ( $secondary_livestream = get_post_meta( get_the_id(), 'secondary_livestream', true ) ) ? $secondary_livestream : '';				?>
+$primary_livestream_embed = addslashes( $embed_codes[$primary_livestream] );
+$secondary_livestream_embed = addslashes( $embed_codes[$secondary_livestream] );				?>
 <script type="text/javascript">
 	var cunyj_live_flickr_json = '<?php echo $flickr_json; ?>';
 	var cunyj_live_twitter_json = '<?php echo $twitter_json; ?>';
 	var cunyj_live_meebo_chat = '<?php echo $meebo_chat; ?>';	
-	var cunyj_live_primary_livestream = '<?php echo $primary_livestream; ?>';	
-	var cunyj_live_secondary_livestream = '<?php echo $secondary_livestream; ?>';	
+	var cunyj_live_primary_livestream = '<?php echo $primary_livestream_embed; ?>';	
+	var cunyj_live_secondary_livestream = '<?php echo $secondary_livestream_embed; ?>';	
 </script>
 
 

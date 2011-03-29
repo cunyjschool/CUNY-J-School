@@ -148,7 +148,7 @@ class cunyj
 	 */
 	function add_post_meta_box() {
 		
-		add_meta_box( 'cunyj_page_metabox', __( 'Page Option', 'cunyj' ), array( &$this, 'page_meta_box' ), 'page', 'normal', 'high' );
+		add_meta_box( 'cunyj_page_metabox', __( 'Page Options', 'cunyj' ), array( &$this, 'page_meta_box' ), 'page', 'normal', 'high' );
 		
 	} // END add_post_meta_box()
 	
@@ -162,12 +162,33 @@ class cunyj
 		$template_file = get_post_meta( $post->ID, '_wp_page_template', TRUE );
 		
 		if ( $template_file == 'page-live.php' ) {
+			
+			$primary_stream = get_post_meta( $post->ID, '_cunyj_primary_stream', true );
+			$secondary_stream = get_post_meta( $post->ID, '_cunyj_secondary_stream', true );
 		
 		?>
 
-		<div class="inner cunyj-metabox" id="cunyj-page-live-metabox">
+		<div class="inner cunyj-page-metabox" id="cunyj-page-live-metabox">
 
-			<p>tk livestream options</p>
+			<p id="cunyj-primary-stream">
+				Primary stream:
+				<select name="cunyj-primary-stream">
+					<option value="no"<?php if ( $primary_stream == 'no' ) { echo ' selected="selected"'; } ?>>None</option>
+					<option value="livestream"<?php if ( $primary_stream == 'livestream' ) { echo ' selected="selected"'; } ?>>Livestream</option>
+					<option value="watershed"<?php if ( $primary_stream == 'watershed' ) { echo ' selected="selected"'; } ?>>Watershed</option>									
+				</select>
+			</p>
+			
+			<p id="cunyj-secondary-stream">
+				Secondary stream:
+				<select name="cunyj-secondary-stream">
+					<option value="no"<?php if ( $secondary_stream == 'no' ) { echo ' selected="selected"'; } ?>>None</option>
+					<option value="livestream"<?php if ( $secondary_stream == 'livestream' ) { echo ' selected="selected"'; } ?>>Livestream</option>
+					<option value="watershed"<?php if ( $secondary_stream == 'watershed' ) { echo ' selected="selected"'; } ?>>Watershed</option>									
+				</select>
+			</p>
+			
+			<input type="hidden" name="cunyj-metabox-nonce" id="cunyj-metabox-nonce" value="<?php echo wp_create_nonce( 'cunyj-metabox-nonce' ); ?>" />
 
 		</div>
 
@@ -177,7 +198,7 @@ class cunyj
 		
 		?>
 		
-		<div class="inner no-options-available cunyj-metabox" id="cunyj-page-no-options-metabox">
+		<div class="inner no-options-available cunyj-page-metabox" id="cunyj-page-no-options-metabox">
 			
 			<p>Sorry, there aren't any custom options available for this page.</p>
 			
@@ -194,7 +215,21 @@ class cunyj
 	 * Save new values entered by the user
 	 */
 	function save_post_meta_box( $post_id ) {
-		global $cunyj, $post;	
+		global $cunyj, $post;
+		
+		if ( !wp_verify_nonce( $_POST['cunyj-metabox-nonce'], 'cunyj-metabox-nonce' ) ) {
+			return $post_id;  
+		}
+		
+		if ( !wp_is_post_revision( $post ) && !wp_is_post_autosave( $post ) ) {
+			
+			$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
+			if ( $template_file == 'page-live.php' ) {
+				update_post_meta( $post_id, '_cunyj_primary_stream', esc_html( $_POST['cunyj-primary-stream'] ) );
+				update_post_meta( $post_id, '_cunyj_secondary_stream', esc_html( $_POST['cunyj-secondary-stream'] ) );
+			}
+		
+		} // END if ( !wp_is_post_revision( $post ) && !wp_is_post_autosave( $post ) )
 		
 	} // END save_post_meta_box()
 

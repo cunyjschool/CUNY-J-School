@@ -138,10 +138,10 @@ jQuery(document).ready(function(){
 	jQuery('.video-backup a').click(function(){
 		var message = jQuery(this).html();
 		if ( message.indexOf('mirror') > 0 ) {
-			var embed_to_load = cunyj_live_secondary_livestream;
+			var embed_to_load = stripslashes( cunyj_live_secondary_livestream );
 			jQuery('.video-backup a').html('try the primary stream');			
 		} else {
-			var embed_to_load = cunyj_live_primary_livestream;
+			var embed_to_load = stripslashes( cunyj_live_primary_livestream );
 			jQuery('.video-backup a').html('try the mirror stream');			
 		}
 		jQuery('.video-player').html(embed_to_load);
