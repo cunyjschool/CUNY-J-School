@@ -13,6 +13,7 @@ define( 'CUNYJ_VERSION', '1.3.1' );
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
 include_once('php/cunyj_capstones.php');
+include_once('php/cunyj_internships.php');
 
 class cunyj
 {
@@ -26,7 +27,8 @@ class cunyj
 		
 		$this->events = new cunyj_events();
 		$this->databases = new cunyj_databases();
-		$this->capstones = new cunyj_capstones();				
+		$this->capstones = new cunyj_capstones();
+		$this->internships = new cunyj_internships();					
 		
 		$this->options = get_option( $this->options_group_name );
 		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
