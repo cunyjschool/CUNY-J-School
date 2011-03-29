@@ -1,11 +1,5 @@
 <?php
 
-// Let us use jQuery on the front-end
-wp_enqueue_script('jquery');
-
-// Our theme needs to support post thumbnails
-add_theme_support( 'post-thumbnails' );
-
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
 define( 'CUNYJ_PREFIX' , 'cunjy_' );
 define( 'CUNYJ_VERSION', '1.3.1' );
@@ -29,8 +23,12 @@ class cunyj
 		$this->capstones = new cunyj_capstones();				
 		
 		$this->options = get_option( $this->options_group_name );
-		$details = get_theme_data(get_bloginfo('template_directory') . '/style.css');
-		$this->version = $details['Version'];
+		
+		// Let us use jQuery on the front-end
+		wp_enqueue_script('jquery');
+
+		// Our theme needs to support post thumbnails
+		add_theme_support( 'post-thumbnails' );
 		
 		add_action( 'init', array( &$this, 'init' ) );
 		add_action( 'admin_init', array( &$this, 'admin_init' ) );
