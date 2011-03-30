@@ -148,8 +148,33 @@ class cunyj
 	 * Add post meta boxes we may need
 	 */
 	function add_post_meta_box() {
+		global $pagenow;
 		
-		add_meta_box( 'cunyj_page_metabox', __( 'Page Options', 'cunyj' ), array( &$this, 'page_meta_box' ), 'page', 'normal', 'high' );
+		if ( isset($_GET['post']) )
+			$post_id = (int) $_GET['post'];
+		elseif ( isset($_POST['post_ID']) )
+			$post_id = (int) $_POST['post_ID'];
+		else
+			$post_id = 0;
+		
+		// Take action on specific pages
+		if ( $pagenow == 'post.php' && $post_id ) {
+			
+			$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
+			
+			// Remove the editor on the live page template and add a metabox
+			if ( $template_file == 'page-live.php' ) {
+				remove_post_type_support( 'page', 'title' );
+				remove_post_type_support( 'page', 'editor' );
+				remove_post_type_support( 'page', 'revisions' );
+				remove_post_type_support( 'page', 'thumbnail' );
+				remove_post_type_support( 'page', 'custom-fields' );				
+				remove_post_type_support( 'page', 'comments' );	
+				remove_post_type_support( 'page', 'slug' );	
+				remove_post_type_support( 'page', 'author' );				
+				add_meta_box( 'cunyj_page_live_metabox', __( 'Livestream Options', 'cunyj' ), array( &$this, 'page_live_meta_box' ), 'page', 'normal', 'high' );
+			}
+		}
 		
 	} // END add_post_meta_box()
 	
@@ -158,7 +183,7 @@ class cunyj
 	 * The HTML representation of our meta box. Allows user to save the
 	 * media type, author, concentration, year and advisor
 	 */
-	function page_meta_box() {
+	function page_live_meta_box() {
 		global $post;
 		$template_file = get_post_meta( $post->ID, '_wp_page_template', TRUE );
 		
@@ -232,21 +257,9 @@ class cunyj
 
 		<?php
 			
-		} else {
-		
-		?>
-		
-		<div class="inner no-options-available cunyj-page-metabox" id="cunyj-page-no-options-metabox">
-			
-			<p>Sorry, there aren't any custom options available for this page.</p>
-			
-		</div>
-
-		<?php
-		
 		}
 		
-	} // END page_meta_box()
+	} // END page_live_meta_box()
 	
 	/**
 	 * save_post_meta_box()
