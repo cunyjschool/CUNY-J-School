@@ -63,7 +63,12 @@
 		<div id="news">
 			<h3>News <a href="<?php bloginfo('url'); ?>/category/news/feed/"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
-		<?php $news_posts = new WP_Query(array('category_name'=>'news','showposts'=>4)); ?>
+		<?php
+			$args = array(
+				'category_name' => 'featured-news',
+				'showposts' => 4
+			);
+			$news_posts = new WP_Query( $args ); ?>
 		<ul>
   		<?php if ( $news_posts->have_posts() ) : ?>
 		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
