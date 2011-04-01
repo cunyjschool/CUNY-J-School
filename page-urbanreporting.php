@@ -109,7 +109,6 @@ li.video{
 		<div>
 			
 			<div class="sidebar right standard">
-				<blockquote class="pullquote">"This is a great program and it has made me more awesome than ever. Via con dios, CUNY J-School."</blockquote>
 				
 				<h3>Who Leads our Program</h3>
 				
@@ -195,87 +194,67 @@ li.video{
 				</ul>
 			</div>
 			
-			<div class="grey_bg drop-shadow alignleft two-thirds-width pads">
-				<h3>Places Students Have Interned</h3>
+			<div class=" alignleft two-thirds-width pads">
+				<h3>Places Students Have Interned Or Worked After Graduation</h3>
 				<ul class="two-col">
-					<li>Daily News and NYDN.com              </li>
-					<li>WNYC                                 </li>
-					<li>News 12                              </li>
-					<li>Washington Post Newsweek Interactive </li> 
-					<li>Reuters TV                           </li>
-					<li>WNBC                                 </li>
-					<li>Star-Ledger                          </li>
-					<li>ABC News                             </li>
-					<li>MSNBC                                </li>
-					<li>Newsday                              </li>
-					<li>NY1                                  </li>
-					<li>Time.com                             </li>
-					<li>CBSNews.com                          </li>
-					<li>Crains New York Business             </li>
-					<li>WKBW-TV (Buffalo)                    </li>
-					<li>CUNY-TV, Brian Lehrer Live           </li>
-					<li>Bronx News Network                   </li>
-					<li>amNY                                 </li>
-					<li>New York Times                       </li>
-					<li>Salon.com                            </li>
-					<li>Christian Science Monitor            </li>
-					<li>San Francisco Magazine               </li>
-					<li>City Hall                            </li>
-					<li>WUOT (Knoxville, TN)                 </li>
-					<li>The Oregonian                        </li>
-					<li>WBRE/WYOU   (Scranton, PA)           </li>
-					<li>The Crime Report                     </li>
-					<li>UN Radio                             </li>
-					<li>New York Post                        </li>
-					<li>Norwood News                         </li>
-					<li>Times-Ledger                         </li>
-					<li>City Limits                          </li>
-					<li>Scholastic                           </li>
-					<li>New Haven Independent                </li>
-					<li>Talking Points Memo                  </li>
-					<li>Queens Courier                       </li>
-					<li>The Brooklyn Paper                   </li>
-					<li>Brooklyn Independent TV              </li>
-					<li>Haitian Times (Port au Prince bureau)</li>
-				</ul>
-				<div class="clear"></div>
-			</div>
-			
-			<div class="grey_bg drop-shadow alignleft two-thirds-width pads">
-
-				<h3>Places Students Have Worked After Graduating</h3>
-				<ul class="two-col">
-					<li>WNYC					  </li>
-					<li>WHYY (Philadelphia)       </li>
-					<li>NBC Local Integrated Media</li>
-					<li>NY1                       </li>
-					<li>The Daily Beast           </li>
-					<li>New York Daily News       </li>
-					<li>New York Times            </li>
-					<li>Mott Haven Herald		  </li>
-					<li>Hunts Point Express		  </li>
-					<li>Politico.com              </li>
+					<li>Daily News and NYDN.com</li>
+					<li>WNYC</li>
+					<li>News 12</li>
+					<li>Washington Post Newsweek Interactive</li> 
+					<li>Reuters TV</li>
+					<li>WNBC</li>
+					<li>Star-Ledger</li>
+					<li>ABC News</li>
+					<li>MSNBC</li>
+					<li>Newsday</li>
+					<li>NY1</li>
+					<li>Time.com</li>
+					<li>CBSNews.com</li>
+					<li>Crains New York Business</li>
+					<li>WKBW-TV (Buffalo)</li>
 					<li>CUNY-TV, Brian Lehrer Live</li>
-					<li>NBCNews.com               </li>
-					<li>City Hall                 </li>
+					<li>Bronx News Network</li>
+					<li>amNY</li>
+					<li>New York Times</li>
+					<li>Salon.com</li>
+					<li>Christian Science Monitor</li>
+					<li>San Francisco Magazine</li>
+					<li>City Hall</li>
+					<li>WUOT (Knoxville, TN)</li>
+					<li>The Oregonian</li>
+					<li>WBRE/WYOU (Scranton, PA)</li>
+					<li>The Crime Report</li>
+					<li>UN Radio</li>
+					<li>New York Post</li>
+					<li>Norwood News</li>
+					<li>Times-Ledger</li>
+					<li>City Limits</li>
+					<li>Scholastic</li>
+					<li>New Haven Independent</li>
+					<li>Talking Points Memo</li>
+					<li>Queens Courier</li>
+					<li>The Brooklyn Paper</li>
+					<li>Brooklyn Independent TV</li>
+					<li>Haitian Times (Port au Prince Bureau)</li>
+					<li>WHYY (Philadelphia)</li>
+					<li>NBC Local Integrated Media</li>
+					<li>The Daily Beast</li>
+					<li>Mott Haven Herald</li>
+					<li>Hunts Point Express</li>
+					<li>Politico.com</li>
+					<li>CUNY-TV, Brian Lehrer Live</li>
+					<li>NBCNews.com/li>
 					<li>Citizens Budget Commission</li>
-					<li>Bloomberg News            </li>
-					<li>WENY-TV (Elmira, NY)      </li>
-					<li>Crains New York Business  </li>
-					<li>CBSNews.com               </li>
-					<li>Riverdale Press           </li>
-					<li>amNY                      </li>
-					<li>Glamour                   </li>
-					<li>Newsday                   </li>
-					<li>AOL Patch                 </li>
-					<li>WSJ.com                   </li>
-					<li>NJ.com                    </li>
-					<li>Times Ledger              </li>
-					<li>Brooklyn Independent TV   </li>
-					<li>The Daily Pilot (LA       </li>
-					<li>New Yorl Post             </li>
-					<li>Variety                   </li>
-					<li>Jersey Journal            </li>
+					<li>Bloomberg News</li>
+					<li>WENY-TV (Elmira, NY)</li>
+					<li>Riverdale Press</li>
+					<li>Glamour</li>
+					<li>AOL Patch</li>
+					<li>WSJ.com</li>
+					<li>NJ.com</li>
+					<li>The Daily Pilot (LA)</li>
+					<li>Variety</li>
+					<li>Jersey Journal</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
