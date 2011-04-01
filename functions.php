@@ -1,7 +1,7 @@
 <?php
 
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
-define( 'CUNYJ_PREFIX' , 'cunjy_' );
+define( 'CUNYJ_PREFIX' , 'cunyj_' );
 define( 'CUNYJ_VERSION', '1.3.2' );
 
 include_once('php/cunyj_events.php');
