@@ -329,7 +329,7 @@ class cunyj
 	 */
 	function settings_top_announcement_option() {
 		$options = $this->options;
-		$allowed_tags = htmlentities( '<b><strong><em><i><span><a>' );
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
 		
 		echo '<textarea id="top_announcement" name="' . $this->options_group_name . '[top_announcement]" cols="60" rows="2">';
 		if ( isset( $options['top_announcement'] ) && $options['top_announcement'] ) {
@@ -359,7 +359,7 @@ class cunyj
 	 */
 	function settings_homepage_announcement_option() {
 		$options = $this->options;
-		$allowed_tags = htmlentities( '<b><strong><em><i><span><a>' );
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
 		
 		echo '<textarea id="homepage_announcement" name="' . $this->options_group_name . '[homepage_announcement]" cols="60" rows="4">';
 		if ( isset( $options['homepage_announcement'] ) && $options['homepage_announcement'] ) {
@@ -375,7 +375,7 @@ class cunyj
 	function settings_validate( $input ) {
 		
 		// Homepage announcement can only have basic HTML
-		$allowed_tags = '<b><strong><em><i><span><a>';
+		$allowed_tags = '<b><strong><em><i><span><a><br>';
 		$input['top_announcement'] = strip_tags( $input['top_announcement'], $allowed_tags );		
 		$input['homepage_announcement'] = strip_tags( $input['homepage_announcement'], $allowed_tags );
 		
