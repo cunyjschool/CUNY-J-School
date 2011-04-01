@@ -114,7 +114,7 @@ li.video{
 				<h3>Who Leads our Program</h3>
 				
 				<img class="size-thumbnail" src="<?php bloginfo('template_directory'); ?>/images/people/sarahbartlett_s300.jpg" alt="" width="150" height="150" />
-				<p><strong><a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></strong>, formerly of Fortune, BusinessWeek and The New York Times, heads up our urban program. She draws on an array of terrific adjuncts and working journalists with experience in print, multimedia, and broadcast to round out the <a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/urban/urban-faculty/">roster of instructors</a>.</p><br />
+				<p><strong><a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></strong>, formerly of Fortune, BusinessWeek and The New York Times, heads up our urban program. She draws on an array of terrific adjuncts and working journalists with experience in print, multimedia, and broadcast to round out the <a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/urban/urban-faculty/">roster of instructors</a>.</p>
 			</div>
 						
 			<div class="clearfix">
@@ -122,12 +122,12 @@ li.video{
 				<div>
 					<div class="img-and-caption alignleft">
 						<img class="size-medium wp-image-11242" src="<?php bloginfo('template_directory'); ?>/images/pages/urbanreporting-quinn_h300.jpg" alt="" width="300" height="200" />
-						<div class="caption">Urban students on field trip to City Hall catch a few minutes with City Council Speaker Christine Quinn. <i>Photograph by Thomas Chan</i></div>
+						<div class="caption">Urban students on field trip to City Hall catch a few minutes with City Council Speaker Christine Quinn. <em>Photograph by Thomas Chan</em></div>
 					</div>
 					<p>It is hard to imagine any subject more central to the mission of the CUNY Graduate School of Journalism than the coverage of New York City. The University has an unparalleled network of professors whose research focuses on every conceivable public policy issue, neighborhood, and ethnic group. The J-School is fortunate to benefit from these connections; they inform our curriculum, provide guest speaking and adjunct opportunities, and generate eye-opening field trips.</p>
 
 					<p>Students who choose the urban reporting concentration are especially well positioned to take advantage of the School’s many distribution outlets: the <a href="http://nycitynewsservice.com/">NYCity News Service</a>, which promotes student work in print, multimedia, and broadcast formats about New York City; <a href="http://219tvmagazine.journalism.cuny.edu/">219 West</a>, the monthly TV show which airs on CUNY-TV; and and <a href="http://fort-greene.thelocal.nytimes.com/">The Local</a>, the hyperlocal website we run in conjunction with the New York Times.</p>
-				<p>Thanks to a generous grant from the Ford Foundation, the school is <a href="/2010/10/27/new-community-and-ethnic-media-training-program-at-cuny/">working closely with community and ethnic media</a> to provide online training to journalists. And in 2010, the Urban Reporting Concentration announced that it would be awarding an annual Sidney Hillman Foundation Urban Journalism Prize for Social Justice Reporting.</p>
+				<p>Thanks to a generous grant from the Ford Foundation, the school is <a href="<?php bloginfo('url'); ?>/2010/10/27/new-community-and-ethnic-media-training-program-at-cuny/">working closely with community and ethnic media</a> to provide online training to journalists. And in 2010, the Urban Reporting Concentration announced that it would be awarding an annual Sidney Hillman Foundation Urban Journalism Prize for Social Justice Reporting.</p>
 					
 				</div>
 				
@@ -148,21 +148,22 @@ li.video{
 		
 		
 		<div class="clearfix">
+			
 			<h3 style="margin-left:1.5%">Courses</h3>
 			<div class="one-third-width alignleft pads">
 				<h4>Covering City Government and Politics</h4>
 				<p>This course gives students a thorough understanding of how the city is governed – how power is wielded and policy decisions are reached. Using a variety of different media formats, students learn how to produce news and feature reports on the vast New York City government bureaucracy, City Council, and unofficial but key players such as lobbyists, labor unions, business, advocacy groups, and community organizations.</p>
-				<p><strong>Instructors:</strong> <a href="/faculty/louis-errol-adjunct-faculty-urban-reporting/">Errol Louis</a>, <a href="/faculty/muzzio-douglas-professor-covering-city-government-and-politics/">Douglas Muzzio</a>, <a href="faculty/sarah-bartlett/">Sarah Bartlett</a></p>
+				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/louis-errol-adjunct-faculty-urban-reporting/">Errol Louis</a>, <a href="<?php bloginfo('url'); ?>/faculty/muzzio-douglas-professor-covering-city-government-and-politics/">Douglas Muzzio</a>, <a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></p>
 			</div>
 			<div class="one-third-width alignleft pads">
 				<h4>Covering NYC’s Economy and Business</h4>
 				<p>The goal of this course is to help students understand and report effectively on the key economic and business forces shaping life in New York City. With the aid of selected readings and guest speakers, students learn about the city’s most important industries and employers, the role of small businesses and immigrant entrepreneurs, and the impact of real estate and economic development. After getting an overview of the strengths and weaknesses of New York City’s economy, students focus on some of the cutting-edge economic issues the city faces.</p>
-				<p><strong>Instructors:</strong> <a href="/faculty/greg-david/">Greg David</a></p>
+				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/greg-david/">Greg David</a></p>
 			</div>
 			<div class="one-third-width alignleft pads">
 				<h4>Covering New York’s Social Issues</h4>
 				<p>This course teaches students how to produce fresh, compelling stories about critical social issues in New York City, such as education, housing, health, poverty, criminal justice, and race relations. Students learn about the public policies that attempt to address those social issues, different ways to measure the effectiveness of those policies, and how journalists can improve the public’s understanding of these issues.</p>
-				<p><strong>Instructors:</strong> <a href="/faculty/griffith-mark-winston-adjunct-faculty-urban-reporting/">Mark Winston Griffith</a>, <a href="faculty/sarah-bartlett/">Sarah Bartlett</a></p></li>
+				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/griffith-mark-winston-adjunct-faculty-urban-reporting/">Mark Winston Griffith</a>, <a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></p></li>
 			</div>
 		</div>
 		
@@ -239,6 +240,7 @@ li.video{
 				</ul>
 				<div class="clear"></div>
 			</div>
+			
 			<div class="grey_bg drop-shadow alignleft two-thirds-width pads">
 
 				<h3>Places Students Have Worked After Graduating</h3>
