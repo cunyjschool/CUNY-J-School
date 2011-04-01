@@ -104,11 +104,7 @@ li.video{
 	
 	<div class="main">
 		
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			
-		<h2><?php the_title(); ?></h2>
-		
-		<?php endwhile; endif; ?>
+		<h2>Urban Reporting</h2>
 		
 		<div>
 			
@@ -116,7 +112,8 @@ li.video{
 				<blockquote class="pullquote">"This is a great program and it has made me more awesome than ever. Via con dios, CUNY J-School."</blockquote>
 				
 				<h3>Who Leads our Program</h3>
-				<img class="size-thumbnail wp-image-10248" src="http://www.journalism.cuny.edu/files/2008/10/bartlett-sarah.jpg" alt="" width="150" height="148" />
+				
+				<img class="size-thumbnail" src="http://www.journalism.cuny.edu/files/2008/10/bartlett-sarah.jpg" alt="" width="150" height="148" />
 				<p><strong><a href="http://www.journalism.cuny.edu/faculty/sarah-bartlett/" target="_blank">Sarah Bartlett</a></strong>, formerly of Fortune, BusinessWeek and The New York Times, heads up our urban program. She draws on an array of terrific adjuncts and working journalists with experience in print, multimedia, and broadcast to round out the <a href="/academics/subject-concentrations/urban/urban-faculty/" target="_blank">roster of instructors</a>.</p><br />
 			</div>
 						
@@ -124,7 +121,7 @@ li.video{
 				
 				<div>
 					<div class="img-and-caption alignleft">
-						<img class="size-medium wp-image-11242" src="http://journalism.cuny.edu/files/2011/02/urbanreporting-quinn.jpg" alt="" width="300" height="200" />
+						<img class="size-medium wp-image-11242" src="<?php bloginfo('template_directory'); ?>/images/pages/urbanreporting-quinn_h300.jpg" alt="" width="300" height="200" />
 						<div class="caption">Urban students on field trip to City Hall catch a few minutes with City Council Speaker Christine Quinn. <i>Photograph by Thomas Chan</i></div>
 					</div>
 					<p>It is hard to imagine any subject more central to the mission of the CUNY Graduate School of Journalism than the coverage of New York City. The University has an unparalleled network of professors whose research focuses on every conceivable public policy issue, neighborhood, and ethnic group. The J-School is fortunate to benefit from these connections; they inform our curriculum, provide guest speaking and adjunct opportunities, and generate eye-opening field trips.</p>
