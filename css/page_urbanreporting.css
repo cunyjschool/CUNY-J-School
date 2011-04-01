@@ -1,0 +1,93 @@
+body.page-template-page-urbanreporting-php h4 {
+	font-size:15px;
+}
+
+body.page-template-page-urbanreporting-php #urban-reporting-courses {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+body.page-template-page-urbanreporting-php #urban-reporting-courses .urban-reporting-course {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 270px;
+}
+
+body.page-template-page-urbanreporting-php .main-text p {
+	font-size:14px;
+}
+
+body.page-template-page-urbanreporting-php .main img {
+	border:5px solid #EEEEEE;
+	-moz-border-radius:3px;
+	-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+body.page-template-page-urbanreporting-php .pads {
+	padding:5px 15px;
+	margin-bottom:20px;
+}
+
+body.page-template-page-urbanreporting-php .one-third-width {
+	width:33%;
+}
+
+body.page-template-page-urbanreporting-php .one-third-width.pads {
+	width:30%;
+}
+
+body.page-template-page-urbanreporting-php .two-thirds-width.pads {
+	width:60%;
+}
+
+body.page-template-page-urbanreporting-php blockquote.pullquote {
+    font-size:18px;
+    line-height:24px;
+}
+
+body.page-template-page-urbanreporting-php .alignleft.img-and-caption{
+	margin-right:20px;
+}
+
+body.page-template-page-urbanreporting-php .alignright.soundslides {
+	margin-left:20px;
+}
+
+body.page-template-page-urbanreporting-php .img-and-caption {
+	width:315px;
+	padding-top:10px;
+}
+
+body.page-template-page-urbanreporting-php .caption {
+	text-align:center;
+}
+
+body.page-template-page-urbanreporting-php .soundslides {
+	width:420px;
+	height:383px;
+	overflow:hidden;
+	margin:10px 0;
+}
+
+body.page-template-page-urbanreporting-php .soundslides object, body.page-template-page-urbanreporting-php .soundslides .caption {
+	position:relative;
+	top:-45px;
+}
+
+body.page-template-page-urbanreporting-php ul.two-col li {
+	width:30%;
+	margin-right:3%;
+	float:left;
+}
+
+body.page-template-page-urbanreporting-php ul.clips li {
+	border-bottom:1px solid #eeeeee;
+	padding:5px 0;
+}
+
+body.page-template-page-urbanreporting-php li.video {
+	list-style-image:url(http://www.journalism.cuny.edu/files/2011/03/television.png);
+	margin-left:25px;
+}

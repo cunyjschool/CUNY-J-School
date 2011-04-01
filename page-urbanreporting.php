@@ -4,100 +4,6 @@ Template Name: Page - Urban Reporting
 */
 ?>
 
-<style>
-h4 {
-	font-size:15px;
-}
-.main-text p{
-	font-size:14px;
-}
-img{
-	border:5px solid #eeeeee;
-	-moz-border-radius:3px;
-	-border-radius:3px;
-	-webkit-border-radius:3px;
-}
-.orange_bg {
-	background: url("http://www.journalism.cuny.edu/wp-content/themes/CUNY-J-School/images/backgrounds/orange-back.jpg") repeat scroll 0 0 #FF9900;
-}
-.grey_bg {
-	background: #f8f8f8;
-}
-.orange_bg .caption{
-	border-color:#555555;
-}
-.drop-shadow {
-	-moz-box-shadow:5px 5px 0 #EEEEEE;
-	box-shadow:5px 5px 0 #EEEEEE;
-	-webkit-box-shadow:5px 5px 0 #EEEEEE;
-	-moz-border-radius:3px;
-	border-radius:3px;
-	-webkit-border-radius:3px;
-}
-.pads {
-	padding:1% 1.5%;
-	margin-bottom:20px;
-}
-.one-third-width {
-	width:33%;
-}
-.one-third-width.pads {
-	width:30%;
-}
-.two-thirds-width.pads {
-	width:60%;
-}
-blockquote.pullquote{
-	font-size:18px;
-	line-height:24px;
-	color:#ff9900;
-	font-style:italic;
-	margin:10px auto 20px auto;
-}
-.alignleft{
-	float:left;
-}
-.alignright{
-	float:right;
-}
-.alignleft.img-and-caption{
-	margin-right:20px;
-}
-.alignright.img-and-caption, .alignright.soundslides{
-	margin-left:20px;
-}
-.img-and-caption{
-	width:315px;
-	padding-top:10px;
-}
-.caption{
-	text-align:center;
-}
-.soundslides {
-	width:420px;
-	height:383px;
-	overflow:hidden;
-	margin:10px 0;
-}
-.soundslides object, .soundslides .caption {
-	position:relative;
-	top:-45px;
-}
-ul.two-col li{
-	width:30%;
-	margin-right:3%;
-	float:left;
-}
-ul.clips li{
-	border-bottom:1px solid #eeeeee;
-	padding:5px 0;
-}
-li.video{
-	list-style-image:url(http://www.journalism.cuny.edu/files/2011/03/television.png);
-	margin-left:25px;
-}
-</style>
-
 <?php get_header(); ?>
 
 <div class="wrap">
@@ -134,7 +40,7 @@ li.video{
 			
 		</div>
 
-		<div class="orange_bg drop-shadow clearfix pads">
+		<div class="background-orange drop-shadow clearfix pads">
 			<div class="alignright soundslides">
 				<object id="soundslider" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="420" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowScriptAccess" value="always" /><param name="quality" value="high" /><param name="allowFullScreen" value="true" /><param name="menu" value="false" /><param name="bgcolor" value="#FFFFFF" /><param name="src" value="http://www.journalism.cuny.edu/files/soundslides/urbanreporting/soundslider.swf?size=0&amp;format=xml" /><param name="allowfullscreen" value="true" /><embed id="soundslider" type="application/x-shockwave-flash" width="420" height="385" src="http://www.journalism.cuny.edu/files/soundslides/urbanreporting/soundslider.swf?size=0&amp;format=xml" bgcolor="#FFFFFF" menu="false" allowfullscreen="true" quality="high" allowscriptaccess="always"></embed></object>
 				<div class="caption">New York City Political Reporting Panel — Feb. 2011</div>
@@ -145,41 +51,42 @@ li.video{
 			<p>In the third semester, students take Covering New York City’s Economy and Business and Covering New York City’s Social Issues. While the focus of the four courses is New York City, the reporting and analytical skills students develop are of universal relevance and can be applied to other urban areas as well.</p>
 		</div>
 		
-		
-		<div class="clearfix">
+		<div id="urban-reporting-courses">
 			
-			<h3 style="margin-left:1.5%">Courses</h3>
-			<div class="one-third-width alignleft pads">
+			<h3>Courses</h3>
+			<div class="float-left urban-reporting-course">
 				<h4>Covering City Government and Politics</h4>
 				<p>This course gives students a thorough understanding of how the city is governed – how power is wielded and policy decisions are reached. Using a variety of different media formats, students learn how to produce news and feature reports on the vast New York City government bureaucracy, City Council, and unofficial but key players such as lobbyists, labor unions, business, advocacy groups, and community organizations.</p>
 				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/louis-errol-adjunct-faculty-urban-reporting/">Errol Louis</a>, <a href="<?php bloginfo('url'); ?>/faculty/muzzio-douglas-professor-covering-city-government-and-politics/">Douglas Muzzio</a>, <a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></p>
 			</div>
-			<div class="one-third-width alignleft pads">
+			<div class="float-left urban-reporting-course">
 				<h4>Covering NYC’s Economy and Business</h4>
 				<p>The goal of this course is to help students understand and report effectively on the key economic and business forces shaping life in New York City. With the aid of selected readings and guest speakers, students learn about the city’s most important industries and employers, the role of small businesses and immigrant entrepreneurs, and the impact of real estate and economic development. After getting an overview of the strengths and weaknesses of New York City’s economy, students focus on some of the cutting-edge economic issues the city faces.</p>
 				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/greg-david/">Greg David</a></p>
 			</div>
-			<div class="one-third-width alignleft pads">
+			<div class="float-left urban-reporting-course">
 				<h4>Covering New York’s Social Issues</h4>
 				<p>This course teaches students how to produce fresh, compelling stories about critical social issues in New York City, such as education, housing, health, poverty, criminal justice, and race relations. Students learn about the public policies that attempt to address those social issues, different ways to measure the effectiveness of those policies, and how journalists can improve the public’s understanding of these issues.</p>
 				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/griffith-mark-winston-adjunct-faculty-urban-reporting/">Mark Winston Griffith</a>, <a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></p></li>
 			</div>
-		</div>
+			
+			<div class="clear-both"></div>
+		
+		</div><!-- END #urban-reporting-courses -->
+		
 		
 		<div>
 			<div class="alignright one-third-width">
-				<div class="orange_bg drop-shadow pads">
-					<div style="padding:5px 10px">
-						<h3>Guest Speakers</h3>
-						<iframe src="http://player.vimeo.com/video/20382083" width="254" height="190" frameborder="0" scrolling="no" ></iframe>
-						<div class="caption">Bill de Blasio - Mar. 2010</div>
-						<iframe src="http://player.vimeo.com/video/20382448" width="254" height="190" frameborder="0" scrolling="no" ></iframe>
-						<div class="caption">Jane Eisner - Feb. 2011</div>
-						<div style="padding-bottom:10px"><a href="">Full list of guest speakers &rarr;</a></div>
-					</div>
+				<div id="urban-reporting-guest-speakers" class="background-orange drop-shadow pads">
+					<h3>Guest Speakers</h3>
+					<iframe src="http://player.vimeo.com/video/20382083" width="254" height="190" frameborder="0" scrolling="no" ></iframe>
+					<div class="caption">Bill de Blasio - Mar. 2010</div>
+					<iframe src="http://player.vimeo.com/video/20382448" width="254" height="190" frameborder="0" scrolling="no" ></iframe>
+					<div class="caption">Jane Eisner - Feb. 2011</div>
+					<div style="padding-bottom:10px"><a href="">Full list of guest speakers &rarr;</a></div>
 				</div>
 			</div>
-		    <div class="grey_bg drop-shadow alignleft two-thirds-width pads">
+		    <div class="background-light-grey drop-shadow alignleft two-thirds-width pads">
 				<h3>Student work</h3>
 				<ul class="clips">
 					<li class="video"><a href="http://www.youtube.com/watch?v=FyF0zhbkCNI">"Swaranjit Singh, first time candidate for New York City Council"</a>, by Jacqueline Linge</li>

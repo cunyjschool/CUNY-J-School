@@ -107,10 +107,14 @@ class cunyj
 		// Load in header
 		wp_enqueue_script( 'cunyj_main_js', get_bloginfo('template_directory') . '/js/main.js', array( 'jquery' ), CUNYJ_VERSION );
 
-		// Only enqueue this on the live page
+		// Only enqueue on specific pages
 		if ( is_page( 'live' ) ) {
 			wp_enqueue_script( 'cunyj_live_js', get_bloginfo('template_directory') . '/js/live.js', array( 'jquery' ), CUNYJ_VERSION, true );
 		}
+		if ( is_page( 'urban' ) ) {
+			wp_enqueue_style( 'cunyj_page_urbanreporting_css', get_bloginfo('template_directory') . '/css/page_urbanreporting.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
+		}
+		
 		
 	} // END enqueue_resources()
 	
