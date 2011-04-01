@@ -161,7 +161,7 @@ class cunyj
 	 */
 	function register_taxonomies() {
 		
-		// Media type taxonomy
+		// Location taxonomy
 		$args = array(
 			'label' => 'Locations',
 			'labels' => array(
@@ -190,9 +190,43 @@ class cunyj
 		);
 		$post_types = array(
 			'post',
-			'cunyj_internship'
+			'cunyj_internship',
+			'cunyj_event'
 		);
 		register_taxonomy( 'cunyj_locations', $post_types, $args );
+		
+		// Organization taxonomy
+		$args = array(
+			'label' => 'Organizations',
+			'labels' => array(
+				'name' => 'Organizations',
+				'singular_name' => 'Organization',
+				'search_items' =>  'Search Organizations',
+				'popular_items' => 'Popular Organizations',
+				'all_items' => 'All Organizations',
+				'parent_item' => 'Parent Organizations',
+				'parent_item_colon' => 'Parent Organizations:',
+				'edit_item' => 'Edit Organization', 
+				'update_item' => 'Update Organization',
+				'add_new_item' => 'Add New Organization',
+				'new_item_name' => 'New Organization',
+				'separate_items_with_commas' => 'Separate organizations with commas',
+				'add_or_remove_items' => 'Add or remove organizations',
+				'choose_from_most_used' => 'Choose from the most common organizations',
+				'menu_name' => 'Organizations',
+			),
+			'show_tagcloud' => false,
+			'hierarchical' => true,
+			'rewrite' => array(
+				'slug' => 'organizations',
+				'hierarchical' => true,
+			),
+		);
+		$post_types = array(
+			'post',
+			'cunyj_internship',
+		);
+		register_taxonomy( 'cunyj_organization', $post_types, $args );
 		
 	} // END register_taxonomies()
 	
