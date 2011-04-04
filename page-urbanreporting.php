@@ -18,6 +18,8 @@ Template Name: Page - Urban Reporting
 				
 				<h3>Who Leads our Program</h3>
 				
+				<blockquote class="pullquote">
+				
 				<img class="size-thumbnail" src="<?php bloginfo('template_directory'); ?>/images/people/sarahbartlett_s300.jpg" alt="" width="150" height="150" />
 				<p><strong><a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></strong>, formerly of Fortune, BusinessWeek and The New York Times, heads up our urban program. She draws on an array of terrific adjuncts and working journalists with experience in print, multimedia, and broadcast to round out the <a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/urban/urban-faculty/">roster of instructors</a>.</p>
 			</div>
