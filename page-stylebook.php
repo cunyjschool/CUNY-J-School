@@ -20,7 +20,13 @@ td { padding:5px 10px; }
 td.color { width:14%; }
 td:first-child { width:15%; padding:0; }
 .white { color:#ffffff;}
+<<<<<<< HEAD
+li h4 { margin-top:10px; }
+li:first-child h4 { margin-top:0; }
+ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
+=======
 li.split { margin-top:10px; }
+>>>>>>> 70fe163024896970bc8da0b6903bf620e2f62f22
 .content h4 { font-size:14px; }
 ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
 </style>
@@ -43,11 +49,11 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 				<li><a href="#unordered-lists">Unordered Lists</a></li>
 				<li><a href="#footnotes">Footnotes</a></li>
 				<li><a href="#sidebar">Sidebar Navigation</a></li>
-				<li class="split"><h4>Media</h4></li>
+				<li><h4>Media</h4></li>
 				<li><a href="#images">Images</a></li>
 				<li><a href="#video">Video</a></li>
 				<li><a href="#audio">Audio</a></li>
-				<li class="split"><h4>Colors</h4></li>
+				<li><h4>Colors</h4></li>
 				<li><a href="#color-palette">Color Palette</a></li>
 			</ul>
 		</div>
@@ -66,11 +72,12 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 						<p><a href="#">Top of page</a></p>
 
 						<h4 id="headers">Headers</h4>
-						<p>The header of any page (usually the page title) should be an h2 and appear as the very first element in the content div. On this page, the title "Stylebook" above is the Page Header. Usually there should be only one of these on a page so if you need several, use h4 headings instead.</p>
+						<p>The header of any page (usually the page title) should be an h2 and appear as the very first element in the content div. On this page, the title "Stylebook" above is the Page Header. Usually there should be only one of these on a page so if you need several, use h2 subheaders instead.</p>
 						<code>h2 { font-size: 30px; margin: 5px 0 15px 0; line-height: 30px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
 
 						<h4 id="page-headers">Subheaders</h4>
+
 						<p>Subheads are used as section titles on pages with multiple sections. "Page Elements" and "Media" on this page are examples of subheaders. You can have as many of these as necessary on a page but should not use subheads if there is only one section. In that case, the main page header becomes your section title.</p>
 						
 						<code>h3 { font-size: 18px; margin: 10px; line-height: 24px; color: #000000; }</code>
@@ -78,7 +85,7 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 						
 						<h4 id="section-titles">Section Titles (This is a section title!)</h4>
 
-						<p>Section Titles are used to break up blocks of paragraphs within sections into smaller pieces. For example, the large section labeled Page Elements is broken up by section titles "Main Page Content," "Headers," etc.</p>
+						<p>Section titles are used to further break up text into more manageable pieces. They are placed within h4 tags beneath a subheader. You can have as many of these as necessary on a page but should not use section titles if there is only one. In that case, the subheader becomes your section title. "Main Page Content," "Headers," and "Subheaders" are all section titles within the subheader "Page Elements."</p>
 
 						<code>h4 { font-size: 14px; margin: 10px; line-height: 24px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
