@@ -1,7 +1,7 @@
 <?php
 
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
-define( 'CUNYJ_PREFIX' , 'cunjy_' );
+define( 'CUNYJ_PREFIX' , 'cunyj_' );
 define( 'CUNYJ_VERSION', '1.3.2' );
 
 include_once('php/cunyj_events.php');
@@ -107,10 +107,14 @@ class cunyj
 		// Load in header
 		wp_enqueue_script( 'cunyj_main_js', get_bloginfo('template_directory') . '/js/main.js', array( 'jquery' ), CUNYJ_VERSION );
 
-		// Only enqueue this on the live page
+		// Only enqueue on specific pages
 		if ( is_page( 'live' ) ) {
 			wp_enqueue_script( 'cunyj_live_js', get_bloginfo('template_directory') . '/js/live.js', array( 'jquery' ), CUNYJ_VERSION, true );
 		}
+		if ( is_page( 'urban' ) ) {
+			wp_enqueue_style( 'cunyj_page_urbanreporting_css', get_bloginfo('template_directory') . '/css/page_urbanreporting.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
+		}
+		
 		
 	} // END enqueue_resources()
 	
@@ -329,7 +333,7 @@ class cunyj
 	 */
 	function settings_top_announcement_option() {
 		$options = $this->options;
-		$allowed_tags = htmlentities( '<b><strong><em><i><span><a>' );
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
 		
 		echo '<textarea id="top_announcement" name="' . $this->options_group_name . '[top_announcement]" cols="60" rows="2">';
 		if ( isset( $options['top_announcement'] ) && $options['top_announcement'] ) {
@@ -359,7 +363,7 @@ class cunyj
 	 */
 	function settings_homepage_announcement_option() {
 		$options = $this->options;
-		$allowed_tags = htmlentities( '<b><strong><em><i><span><a>' );
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
 		
 		echo '<textarea id="homepage_announcement" name="' . $this->options_group_name . '[homepage_announcement]" cols="60" rows="4">';
 		if ( isset( $options['homepage_announcement'] ) && $options['homepage_announcement'] ) {
@@ -375,7 +379,7 @@ class cunyj
 	function settings_validate( $input ) {
 		
 		// Homepage announcement can only have basic HTML
-		$allowed_tags = '<b><strong><em><i><span><a>';
+		$allowed_tags = '<b><strong><em><i><span><a><br>';
 		$input['top_announcement'] = strip_tags( $input['top_announcement'], $allowed_tags );		
 		$input['homepage_announcement'] = strip_tags( $input['homepage_announcement'], $allowed_tags );
 		
