@@ -16,7 +16,7 @@
     
 	<div class="cunyj_event" id="cunyj_event-<?php the_ID(); ?>">
 
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<h2><?php the_title(); ?></h2>
 		
 			<?php
 			
@@ -35,8 +35,8 @@
 			
 			<div class="event_details">
 				<?php if ($start_date) : ?>
-					<p class="event_date">
-						<span class="label">Date &amp; Time:</span>
+					<div class="event_date">
+						<div class="label">Date &amp; Time:</div>
 						<?php if ($start_date == $end_date) {
 							echo date_i18n('F j, Y', $start_date);
 							if ($all_day == 'off') {
@@ -55,23 +55,24 @@
 								echo ' at ' . date_i18n('g:i A', $end_date);
 							}
 						} ?>
-					</p>
+					</div>
 				<?php endif; ?>
 				
 				<?php if ($venue = get_post_meta($post->ID, '_cunyj_events_venue', true)) : ?>
-					<p class="event_location">
-						<span class="label">Location:</span>
-						<?php echo $venue; ?>
+					<div class="event_location">
+						<div class="label">Location:</div>
+						<p><?php echo $venue; ?></p>
 						<?php if ($street) {
-							echo '<br />' . $street;
+							echo '<p>' . $street . '</p>';
 						} ?>
 						<?php if ($city || $state || $zipcode) {
-							echo '<br />' . $city . ', ' . $state;
+							echo '<p>' . $city . ', ' . $state;
 							if ($zipcode) {
 								echo '&nbsp;&nbsp;&nbsp;' . $zipcode;
 							}
+							echo '</p>';
 						} ?>
-					</p>
+					</div>
 				<?php endif; ?>
 				
 			</div>

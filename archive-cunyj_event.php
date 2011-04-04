@@ -98,26 +98,33 @@ if ( $events->have_posts() ) {
 			$multi_day = false;
 		}
 		
+		$new_event = array();
+		$new_event['post_id'] = $post_id;
+		$new_event['permalink'] = get_permalink();
+		$new_event['title'] = get_the_title();
+		$new_event['excerpt'] = get_the_excerpt();
+		$new_event['event_date'] = date_i18n('M j, Y', $start_date);
+		$new_event['all_day'] = $all_day;
+		$new_event['multi_day'] = $multi_day;				
+		$new_event['start_date'] = $start_date;
+		$new_event['end_date'] = $end_date;
+		$new_event['venue'] = $venue;
+		$new_event['street'] = $street;
+		$new_event['city'] = $city;
+		$new_event['state'] = $state;
+		$new_event['zipcode'] = $zipcode;
+		
 		// Place the event on every day it is in our array
 		foreach( $event_days as $event_day ) {
-			$all_events[$event_day][$post_id]['permalink'] = get_permalink();
-			$all_events[$event_day][$post_id]['title'] = get_the_title();
-			$all_events[$event_day][$post_id]['excerpt'] = get_the_excerpt();
-			$all_events[$event_day][$post_id]['event_date'] = date_i18n('M j, Y', $start_date);
-			$all_events[$event_day][$post_id]['all_day'] = $all_day;
-			$all_events[$event_day][$post_id]['multi_day'] = $multi_day;				
-			$all_events[$event_day][$post_id]['start_date'] = $start_date;
-			$all_events[$event_day][$post_id]['end_date'] = $end_date;
-			$all_events[$event_day][$post_id]['venue'] = $venue;
-			$all_events[$event_day][$post_id]['street'] = $street;
-			$all_events[$event_day][$post_id]['city'] = $city;
-			$all_events[$event_day][$post_id]['state'] = $state;
-			$all_events[$event_day][$post_id]['zipcode'] = $zipcode;
+			$all_events[$event_day][$start_date][$post_id] = $new_event;
 		}
 		
 	} // END while ( $events->have_posts() )
 	
 } // END if ( $events->have_posts() )
+
+// Sort the events by day (aka the key)
+ksort( $all_events );
 
 // See how much we should pad in the beginning
 $pad = calendar_week_mod( date( 'w', $unixmonth ) - $week_begins );
@@ -141,36 +148,47 @@ for ( $day = 1; $day <= $daysinmonth; ++$day ) {
 	if ( array_key_exists( $day, $all_events ) ) {
 		echo '<ul class="cal-events">';
 		
-		foreach( $all_events[$day] as $post_id => $event ) {
-			$event_classes = array();
-			$event_classes[] = 'cal-event';
-			if ( $event['multi_day'] ) {
-				$event_classes[] = 'multi-day';
+		$all_day_html = array();
+		foreach( $all_events[$day] as $key => $single_event ) {
+			foreach ( $single_event as $post_id => $event ) {
+				$single_event_html = array();
+				$event_classes = array();
+				$event_classes[] = 'cal-event';
+				if ( $event['multi_day'] ) {
+					$event_classes[] = 'multi-day';
+				}
+				if ( $event['all_day'] == 'on' ) {
+					$event_classes[] = 'all-day';
+				}
+				if ( $day == date_i18n( 'j', $event['start_date'] ) ) {
+					$event_classes[] = 'start-day';
+				} 
+				if ( $day == date_i18n( 'j', $event['end_date'] ) ) {
+					$event_classes[] = 'end-day';
+				}
+				$event_classes_list = implode( " ", $event_classes );
+				$single_event_html[] = '<li class="' . $event_classes_list . '"><a href="' . $event['permalink'] . '">' . $event['title'];
+				if ( $event['all_day'] == 'off' && $day == date_i18n( 'j', $event['start_date'] ) ) {
+					$single_event_html[] = '<span> (' . date_i18n( 'g:i a', $event['start_date'] ) . ')</span>';
+				} else if ( $event['all_day'] == 'off' && $day != date_i18n( 'j', $event['end_date'] ) ) {
+					$single_event_html[] = '<span> (All day)</span>';
+				} else if ( $event['all_day'] == 'off' && $day == date_i18n( 'j', $event['end_date'] ) ) {
+					$single_event_html[] = '<span> (Ends at ' . date_i18n( 'g:i a', $event['end_date'] ) . ')</span>';
+				}
+				$single_event_html[] = '</a></li>';
+				// Add all-day events to the top of the list
+				if ( $event['all_day'] == 'on' ) {
+					array_unshift( $all_day_html, implode( " ", $single_event_html ) );
+				} else {
+					$all_day_html[] = implode( " ", $single_event_html );
+				}
 			}
-			if ( $event['all_day'] == 'on' ) {
-				$event_classes[] = 'all-day';
-			}
-			if ( $day == date_i18n( 'j', $event['start_date'] ) ) {
-				$event_classes[] = 'start-day';
-			} 
-			if ( $day == date_i18n( 'j', $event['end_date'] ) ) {
-				$event_classes[] = 'end-day';
-			}
-			$event_classes_list = implode(" ", $event_classes);
-			echo '<li class="' . $event_classes_list . '"><a href="' . $event['permalink'] . '">' . $event['title'];
-			if ( $event['all_day'] == 'off' && $day == date_i18n( 'j', $event['start_date'] ) ) {
-				echo '<span> (' . date_i18n( 'g:i a', $event['start_date'] ) . ')</span>';
-			} else if ( $event['all_day'] == 'off' && $day != date_i18n( 'j', $event['end_date'] ) ) {
-				echo '<span> (All day)</span>';
-			} else if ( $event['all_day'] == 'off' && $day == date_i18n( 'j', $event['end_date'] ) ) {
-				echo '<span> (Ends at ' . date_i18n( 'g:i a', $event['end_date'] ) . ')</span>';
-			}
-			echo '</a></li>';
 		}
+		echo implode( " ", $all_day_html );
 		echo '</ul>';
 	} else {
 		echo '&nbsp;';
-	}
+	} // END if ( array_key_exists( $day, $all_events ) )
 	echo '</td>';
 
 	if ( 6 == calendar_week_mod(date('w', mktime(0, 0 , 0, $thismonth, $day, $thisyear))-$week_begins) ) {
@@ -184,40 +202,39 @@ if ( $pad != 0 && $pad != 7 )
 
 echo "\n\t</tr>\n\t</tbody>\n\t</table></div>";
 
-echo '<h2 class="upcoming-title">Upcoming Events in ' . $wp_locale->get_month( $thismonth )  . '</h2>';
+echo '<h2 class="upcoming-title">Events in ' . $wp_locale->get_month( $thismonth )  . '</h2>';
 if ( count( $all_events ) ) {
-
-	// Sort the events by day (aka the key)
-	ksort( $all_events );
 
 	foreach ( $all_events as $key => $day ) {
 		$timestamp = mktime( 0, 0 , 0, $thismonth, $key, $thisyear );
 		$heading = gmdate( 'l, F jS', $timestamp );
 		echo '<h3 class="upcoming">' . $heading . '</h3>';
-		foreach( $day as $post_id => $event ) {
-			echo '<div class="feature">';
-			echo '<h4 class="feature-title"><a href="' . $event['permalink'] . '">'. $event['title'] . '</a></h4>';
-			echo '<p>' . $event['excerpt'] . '</p>';
-			if ($event['venue']) {
-				echo '<p class="event-location"><span class="label">Location: </span><span>' . $event['venue'];
-				if ($event['street']) {
-					echo '&nbsp;&mdash;&nbsp;' . $event['street'];
-				}
-				if ($event['city'] || $event['state'] || $event['zipcode']) {
-					echo '&nbsp;&mdash;&nbsp;' . $event['city'] . ', ' . $event['state'];
-					if ($event['zipcode']) {
-						echo '&nbsp;' . $event['zipcode'];
+		foreach( $day as $key => $single_event ) {
+			foreach ( $single_event as $post_id => $event ) {
+				echo '<div class="feature">';
+				echo '<h4 class="feature-title"><a href="' . $event['permalink'] . '">'. $event['title'] . '</a></h4>';
+				echo '<p>' . $event['excerpt'] . '</p>';
+				if ($event['venue']) {
+					echo '<p class="event-location"><span class="label">Location: </span><span>' . $event['venue'];
+					if ($event['street']) {
+						echo '&nbsp;&mdash;&nbsp;' . $event['street'];
 					}
+					if ($event['city'] || $event['state'] || $event['zipcode']) {
+						echo '&nbsp;&mdash;&nbsp;' . $event['city'] . ', ' . $event['state'];
+						if ($event['zipcode']) {
+							echo '&nbsp;' . $event['zipcode'];
+						}
+					}
+					echo '</span></p>';
 				}
-				echo '</span></p>';
+				echo '<div class="clear"></div></div>';
 			}
-			echo '<div class="clear"></div></div>';
 		}
 	}
 	
 } else {
 	
-	echo '<div class="info message">There are no upcoming events this month.</div>';
+	echo '<div class="info message">There are no events scheduled for this month.</div>';
 	
 } // END if ( count( $all_events ) )
 

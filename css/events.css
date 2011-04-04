@@ -1,0 +1,138 @@
+body.post-type-archive-cunyjevent h2 {
+	border-right: none;
+}
+
+body.post-type-archive-cunyjevent h2.calendar-title {
+	margin-top: 0;
+	text-align: center;
+}
+
+body.post-type-archive-cunyjevent #wp-calendar {
+	width:100%;
+}
+
+body.post-type-archive-cunyjevent #wp-calendar td {
+	border:1px solid #cccccc;
+	height:100px;
+	width:100px;
+	vertical-align:top;
+}
+body.post-type-archive-cunyjevent td.pad {
+	background-color:#f0f0f0;
+}
+
+body.post-type-archive-cunyjevent .cal-day {
+	text-align:right;
+	background-color:#f8f9ff;
+	padding:2px 8px;
+}
+
+body.post-type-archive-cunyjevent ul.cal-events {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+body.post-type-archive-cunyjevent ul.cal-events li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+body.post-type-archive-cunyjevent ul.cal-events li a {
+	padding-left: 3px;
+	padding-right: 3px;
+	display: block;
+	text-decoration: none;
+}
+
+body.post-type-archive-cunyjevent ul li.cal-event.multi-day {
+	background-color: #EEEEEE;
+	border-color: #EEEEEE;
+}
+
+body.post-type-archive-cunyjevent ul li.cal-event.all-day {
+	background-color: #CCE6FF;
+	border: 1px solid #0066CC;
+}
+
+body.post-type-archive-cunyjevent ul li.cal-event a span {
+	text-decoration: none;
+	color: #999999;
+}
+
+body.post-type-archive-cunyjevent ul li.cal-event.start-day {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+body.post-type-archive-cunyjevent ul li.cal-event.end-day {
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+body.post-type-archive-cunyjevent td#today .cal-day{
+	background-color:#FAD163;
+	font-weight:bold;
+}
+
+body.post-type-archive-cunyjevent h2.upcoming-title{
+	padding:0 10px;
+	margin-top:25px;
+}
+
+body.post-type-archive-cunyjevent h4.feature-title{
+  font-size:1.3em;
+}
+
+body.post-type-archive-cunyjevent h3.upcoming{
+  background:#eeeeee;
+  color:#333333;
+  padding:5px 10px;
+  border:1px solid #dddddd;
+  margin-top:20px;
+}
+
+body.single-cunyjevent .event-location .label {
+  color:#666666;
+  margin-top:10px;
+}
+
+.main .content .cunyj_event {
+	width: 520px;
+}
+
+.main .content .cunyj_event h2 {
+	font-size: 24px;
+}
+	
+.main .content .cunyj_event .event_details {
+	background-color: #F9F9F9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.main .content .cunyj_event .timestamp {
+	padding-top: 5px;
+}
+
+.main .content .cunyj_event .event_details div.label {
+	color: #666666;
+	float: left;
+	width: 150px;
+}
+
+.main .content .cunyj_event .event_details p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+	margin-left: 150px;
+}

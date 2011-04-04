@@ -112,9 +112,10 @@ class cunyj_events
 	function add_admin_scripts() {
 		global $pagenow;
 		
-		if ($pagenow == 'post.php' || $pagenow == 'post-new.php' || $pagenow == 'page.php') {
-			wp_enqueue_script('cunyj_events', get_bloginfo('template_url') . '/js/cunyj_events.js', array('jquery'), false, true);
-			wp_enqueue_style('cunyj_events', get_bloginfo('template_url') . '/css/cunyj_events.css', false, false, 'all');
+		// Only load scripts and styles on relevant pages in the WordPress admin
+		if ( $pagenow == 'post.php' || $pagenow == 'post-new.php' || $pagenow == 'page.php' ) {
+			wp_enqueue_script( 'cunyj_events_js', get_bloginfo('template_url') . '/js/events_admin.js', array('jquery'), CUNYJ_VERSION, true );
+			wp_enqueue_style( 'cunyj_events_admin_css', get_bloginfo('template_url') . '/css/events_admin.css', false, CUNYJ_VERSION, 'all' );
 		}
 		
 	}

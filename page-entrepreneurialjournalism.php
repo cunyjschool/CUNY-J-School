@@ -117,12 +117,66 @@ Template Name: Page - Entrepreneurial Journalism
 			
 		</div>
 		
-		<?php if ( $application_information = get_post_meta( get_the_id(), 'application_information', true ) ): ?>
-		<div class="row-section" id="application-information">	
-			<h3>Ready to apply?</h3>
-			<p><?php echo $application_information; ?></p>
+		<div class="row-section" id="entrepreneurial-journalism-participants">
+			
+			<h3>Entrepreneurial Journalism Class of 2011</h3>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/ernestchico_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://ernest.entrepreneurial.2011.journalism.cuny.edu/">Ernest Chi Cho</a></strong> is a broadcast journalist from Cameroon. Before moving to New York in 2009, Chi Cho worked as news anchor and as deputy editor-in-chief for Equinoxe Television, a private TV station in Douala, Cameroon. He holds a B.S. degree in Political Science.
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/indranidatta_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://indrani.entrepreneurial.2011.journalism.cuny.edu/">Indrani Datta</a></strong> is completing her degree at the CUNY Graduate School of Journalism while building a web startup. She started working in the software industry during the first dot-com era. Since then, she has worked in academia and in industry, for newspapers and for the government — as a researcher, writer, programmer, trainer, and project manager.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/shanedixon_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://shane.entrepreneurial.2011.journalism.cuny.edu/">Shane Dixon Kavanaugh</a></strong> is a reporter in New York City. His work has appeared in the New York Times, Daily News, Crain’s, New York Press, City Limits, the Oregonian, and other publications. He is also the founder and managing editor of <a href="http://overflowmagazine.com/">OVERFLOW Magazine</a>, an arts and culture quarterly in Brooklyn. He earned an M.A. from the CUNY Graduate School of Journalism in December 2010.
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/marianakeller_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://mariana.entrepreneurial.2011.journalism.cuny.edu/">Mariana (Vasconcellos) Keller</a></strong> is a Brazilian-born, internationally grown multimedia journalist. She is fluent in English, Portuguese, French, and Hebrew and has worked as a journalist on four continents – from the safety of the the New York Times building, to being embedded in a special police force in the Amazon, to dodging bullets in Jerusalem. Her work has been distributed through Agence France-Presse and featured on NYTimes.com, WSJ.com, and TIME.com.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/mattkiser_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://matt.entrepreneurial.2011.journalism.cuny.edu/">Matt Kiser</a></strong> is Online Production Manager for SPIN Magazine, where he works closely with online editors, producers, and web developers to manage the execution of all digital SPIN content from conception and product development to delivery and deployment. Previously, he managed the radio and retail charts at the College Music Journal, was entertainment editor at the award-winning student newspaper, The Orion, and was general manager for the nationally recognized student radio station, KCSC. He completed the NYU Digital Media Marketing graduate certificate in 2009.
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/youyounglee_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://youyoung.entrepreneurial.2011.journalism.cuny.edu/">Youyoung Lee</a></strong>  is a lifestyle journalist based in New York. She has been on staff at Allure.com and Entertainment Weekly, and has written for Elle.com, Nylon, the New York Times’ Style blog and MTV/Frommer's Guide to England. She was managing editor of the startup Unlike.net, an international city guide based in Berlin, Germany.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/robinmonheit_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://robin.entrepreneurial.2011.journalism.cuny.edu/">Robin Monheit</a></strong> is an editor in the Network Programming division of Hearst Digital Media. Monheit began her career at her (very) local Long Island newspaper and later graduated with a journalism degree from the University of Maryland, College Park. She started reporting for Us Weekly in 2004, then worked her way up from editorial assistant to senior associate editor at Twist magazine. She made the leap to digital in 2008 after a six-month stint travel-blogging from Australia. Until recently, she was a web editor at O, the Oprah Magazine, and has contributed to In Touch, Spin.com, Blender and GenArt.org.
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/mathiasoesterlund_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://mathias.entrepreneurial.2011.journalism.cuny.edu/">Mathias Oesterlund</a></strong> is a Danish journalist who most recently lived in Uganda blogging about its presidential election in February 2011. Uganda is Denmark’s greatest receiver of aid money. Among the stories he investigated: how Danish money is spent, given corruption in Uganda. He began his carrier at JydskeVestkysten, Denmark’s biggest regional newspaper, where, among other projects, he kickstarted mobile journalism on the organization’s website. The paper was the first in Denmark to explore hyperlocal and citizen journalism in depth.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant left">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/ikilezirubagumya_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://ikilezi.entrepreneurial.2011.journalism.cuny.edu/">Ikilezi Rubagumya</a></strong> is a writer, social activist, and aspiring media entrepreneur. A child of the diaspora experience shared by many Africans, she was born of Rwandan parents in the Democratic Republic of Congo, was raised in Uganda, and studied in Kenya before coming to the United States to pursue undergraduate degrees in Economics and Foreign Affairs at the University of Virginia. She was among the youngest recipients of a multi-disciplinary research grant awarded by the Center for Global Health for her study of women's micro-finance initiatives in Rwanda. As a Public Media Corps Fellow at PBS Interactive, she helped build partnerships between D.C's lowest-income communities and legacy public media institutions.
+			</div>
+			
+			<div class="entrepreneurial-journalism-participant right">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/sonalisamarasinghe_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://sonali.entrepreneurial.2011.journalism.cuny.edu/">Sonali Samarasinghe Wickrematunge</a></strong> is an international award-winning investigative journalist and editor from Sri Lanka. Shortly after her husband was murdered by allegedly government-sponsored assassins as he travelled to work in January 2009, Samarasinghe herself was driven from her country by threats to her life. In September 2008 she received the Global Shining Light Award for Investigative Journalism. In 2006 she received the Zonta International Woman of Achievement Award for print and electronic media and was recognized as the first woman to launch and edit a national newspaper in Sri Lanka. Samarasinghe has a degree in International Affairs from the Australian National University, Canberra, and a Law Degree from the University of London. Enrolled as an Attorney at Law of the Supreme Court of Sri Lanka in 1992, she worked for several years in the Attorney General’s Department in Sri Lanka. She is also an Edward R. Murrow Fellow and a Harvard Nieman Fellow.
+			</div>
+			
+			<div class="hr" style="clear:both;"></div>
+			
+			<div class="entrepreneurial-journalism-participant center">
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/hongqu_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://hong.entrepreneurial.2011.journalism.cuny.edu/">Hong Qu</a></strong> builds social media tools that help us better understand ourselves and the world around us. As an early YouTube employee, he designed, programmed, and launched vital parts of the site such as the homepage, sharing tools, channels, and video response. In addition to YouTube, he has worked at Google, Yahoo, and also at numerous startups in New York and Silicon Valley. Hong has a master's degree from UC Berkeley's School of Information with a focus on social media and data mining, and a bachelor's degree from Wesleyan University.
+			</div>
+			
+	
 		</div>
-		<?php endif; ?>
 	
 	<div style="clear:both;"></div>
 	
