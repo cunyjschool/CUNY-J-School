@@ -16,12 +16,35 @@ Template Name: Page - CUNY Campus Wire
 
 		<ul>
 			<li>
+				<h4><a href="http://www.adafi.org/">ADAFI: The Voice of Medgar Evers College</a></h4>
+				<p>Medgar Evers College</p>
+			<li>
 				<h4><a href="http://www.thebridgenews.com/">The Bridge</a></h4>
 				<p>LaGuardia Community College</p>
 			</li>
 			<li>
 				<h4><a href="http://www.bronxnet.org/">Bronx Net</a></h4>
 				<p>Lehman College</p>
+			</li>
+			<li>
+				<h4><a href="http://www.thehunterenvoy.com/">The Envoy</a></h4>
+				<p>Hunter College</p>
+			</li>
+			<li>
+				<h4><a href="http://www.brooklynexcelsior.com/">The Excelsior</a></h4>
+				<p>Brooklyn College</p>
+			</li>
+			<li>
+				<h4><a href="http://www.theknightnews.com/">The Knight News</a></h4>
+				<p>Queens College</p>
+			</li>
+			<li>
+				<h4><a href="http://www.lcmeridian.com/">Meridian</a></h4>
+				<p>Lehman College</p>
+			</li>
+			<li>
+				<h4><a href="http://whcs.hunter.cuny.edu/">WHCS Hunter</a></h4>
+				<p>WHCS Hunter</p>
 			</li>
 		</ul>
 	

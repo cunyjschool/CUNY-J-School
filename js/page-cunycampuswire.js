@@ -40,6 +40,24 @@ function cunyj_get_publication_name( link ) {
 	if ( link.indexOf( 'thebridgenews.com/' ) != -1 ) {
 		publication = 'The Bridge';
 	}
+	if ( link.indexOf( 'bronxnet.org/' ) != -1 ) {
+		publication = 'BronxNet';
+	}
+	if ( link.indexOf( 'brooklynexcelsior.com/' != -1 ) ) {
+		publication = 'The Excelsior';
+	}
+	if ( link.indexOf( 'thehunterenvoy.com/' != -1 ) ) {
+		publication = 'The Envoy';
+	}
+	if ( link.indexOf( 'theknightnews.com/' != -1 ) ) {
+		publication = 'The Knight News';
+	}
+	if ( link.indexOf( 'lcmeridian.com/' ) != -1 ) {
+		publication = 'Meridian';
+	}
+	if ( link.indexOf( 'whcs.hunter.cuny.edu/' ) != -1 ) {
+		publication = 'WHCS Hunter';
+	}
 	
 	return publication;
 	
