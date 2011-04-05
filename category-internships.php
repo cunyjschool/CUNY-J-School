@@ -3,13 +3,18 @@ function alternate_rows($i){if($i % 2) {echo ' class="on"';} else {echo ' class=
 } ;
 ?>
 
-
 <?php get_header(); ?>
 
-<div class="wrap clearfix content">
 
-  <?php get_sidebar('careerservices_left'); ?>
+<div class="wrap">
+	
+	<div class="main">
 
+	<?php get_sidebar( 'careerservices_left' ); ?>
+	
+	<?php get_sidebar( 'careerservices_internships' ); ?>
+
+	<div class="content left-sidebar">
 
   <div id="posts-internships">
   
@@ -67,8 +72,16 @@ See all <a href="<?php bloginfo('url'); ?>/category/career-services/internships/
 <table style="width: 100%; margin-top: 0px; clear:both;">
 <h4 style="margin-top:50px;">All Internships Opportunities:</h4>
 
-  <?php $posts = query_posts('cat=9&orderby=title&order=asc&posts_per_page=-1');
-if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php
+$args = array(
+	'category_name' => 'internships',
+	'orderby' => 'title',
+	'order' => 'asc',
+	'posts_per_page' => '-1'
+);
+$listings = new WP_Query( $args );
+
+if ( $listings->have_posts() ) : while ( $listings->have_posts() ) : $listings->the_post(); ?>
 
 <?php $i++; ?>  
 
@@ -78,11 +91,6 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
   </tr>
 	<?php endwhile; ?>
 </table>
-
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
 
 	<?php else : ?>
 
@@ -94,10 +102,13 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<?php endif; ?>
   </div>
-  
-  <?php get_sidebar('careerservices_internships'); ?>
 
+	</div>
+	
+	<div class="clear-both"></div>
 
-</div>
+	</div><!-- END .main -->
+
+</div><!-- END .wrap -->
 
 <?php get_footer(); ?>

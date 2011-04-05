@@ -86,8 +86,8 @@
 
 
 #sidebar-internships {
-	float: left;
-	width: 290px; }
+	width: 250px;
+}
 
 .sidebar#sidebar-news h3, #sidebar-internships h3 {
 	margin: 0 0 10px 0; }

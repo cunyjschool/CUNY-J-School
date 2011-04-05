@@ -1,4 +1,4 @@
-<div class="clearfix" id="sidebar-internships">
+<div class="right sidebar" id="sidebar-internships">
     
     
 <?php if (is_category(161)) { ?>

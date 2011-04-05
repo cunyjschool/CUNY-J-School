@@ -6,10 +6,15 @@ function alternate_rows($i){if($i % 2) {echo ' class="on"';} else {echo ' class=
 
 <?php get_header(); ?>
 
-<div class="wrap clearfix" id="content">
+<div class="wrap">
+	
+	<div class="main">
 
-  <?php get_sidebar('careerservices_left'); ?>
+	<?php get_sidebar('careerservices_left'); ?>
 
+	<?php get_sidebar('careerservices_internships'); ?>
+	
+	<div class="content left-sidebar">
 
   <div id="posts-internships">
   
@@ -23,7 +28,7 @@ See all <a href="/category/career-services/internships/internships-upcoming-dead
     <tbody>
        <tr style="vertical-align: top; width: 371px;">
             <td style="width: 70px; line-height:12px;"><p><strong>Semester:</strong></p></td>
-            <td style="width: 70px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/summer-internships-career-services/">Summer</a></td>
+            <td style="width: 70px; line-height:20px; padding-left: 8px; background: #f7f7f7;">Summer</td>
             <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="/category/career-services/fall-internships-career-services/">Fall</a></td>
             <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/spring-internships-career-services/">Spring</a></td>
         </tr>
@@ -51,7 +56,7 @@ See all <a href="/category/career-services/internships/internships-upcoming-dead
             <td style="width: 70px; line-height:12px;"><p><strong>Location:</strong></p></td>
             <td style="width: 70px; line-height:20px; padding-left: 8px;background: #f7f7f7;"><a href="/category/career-services/new-york-internships-career-services/">NYC</a></td>
             <td style="width: 70px; line-height:20px; padding-left: 8px;"><a href="/category/career-services/other-us-cities/">Other U.S. Cities</a></td>
-            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;">International</td>
+            <td style="width: 80px; line-height:20px; padding-left: 8px; background: #f7f7f7;"><a href="/category/career-services/international/">International</a></td>
         </tr>
     </tbody>
 </table>
@@ -64,8 +69,9 @@ See all <a href="/category/career-services/internships/internships-upcoming-dead
 
 <table style="width: 100%; margin-top: 0px; clear:both;">
 
-<h4 style="margin-top:50px;">International Internships:</h4>
-  <?php $posts = query_posts('cat=17&orderby=title&order=asc&posts_per_page=-1');
+<h4 style="margin-top:50px;">Summer Internships:</h4>
+
+  <?php $posts = query_posts('category_name=summer-internships-career-services&orderby=title&order=asc&posts_per_page=-1');
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php $i++; ?>  
@@ -77,25 +83,22 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<?php endwhile; ?>
 </table>
 
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
-
 	<?php else : ?>
 
 		<h2 class="center">Not Found</h2>
 		<p class="center">Sorry, but you are looking for something that isn't here.</p>
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
-		
-		</table>
 
 	<?php endif; ?>
   </div>
-  
-  <?php get_sidebar('careerservices_internships'); ?>
 
+	</div><!-- END .content -->
+	
+	<div class="clear-both"></div>
+	
+	</div><!-- END .main -->
 
-</div>
+</div><!-- END .wrap -->
+
 
 <?php get_footer(); ?>

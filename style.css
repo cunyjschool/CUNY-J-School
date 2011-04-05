@@ -311,7 +311,7 @@ body.single-post .content {
  * Property: margin
  */
 
-body.page .content.left-sidebar {
+body.page .content.left-sidebar, body.archive .content.left-sidebar {
 	margin-left: 245px;
 }
 
