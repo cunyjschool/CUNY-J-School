@@ -12,23 +12,30 @@ Template Name: Page - CUNY Campus Wire
 	
 	<h2>CUNY Campus Wire</h2>
 
-<div class="sidebar left">
+	<div class="sidebar left">
 
-	<ul>
-		<li>
-			<h4><a href="http://www.thebridgenews.com/">The Bridge</a></h4>
-			<p>LaGuardia Community College</p>
-		</li>
-		<li>
-			<h4><a href="http://www.bronxnet.org/">Bronx Net</a></h4>
-			<p>Lehman College</p>
-		</li>
-	</ul>
+		<ul>
+			<li>
+				<h4><a href="http://www.thebridgenews.com/">The Bridge</a></h4>
+				<p>LaGuardia Community College</p>
+			</li>
+			<li>
+				<h4><a href="http://www.bronxnet.org/">Bronx Net</a></h4>
+				<p>Lehman College</p>
+			</li>
+		</ul>
 	
-</div><!-- END .sidebar -->
-          
+	</div><!-- END .sidebar -->
+	
+	<div class="content left-sidebar">
+		
+		<div id="cuny-campus-wire-dynamic-load">
 
-<div class="clear-both"></div>
+		</div>
+		
+	</div><!-- END .content.left-sidebar -->
+
+	<div class="clear-both"></div>
 
 </div><!-- END .main -->
 
