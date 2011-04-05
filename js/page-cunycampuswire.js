@@ -73,16 +73,39 @@ function cunyj_render_cunycampuswire( data ) {
 	var html = Array();
 	
 	var previous_publication = null;
+	var previous_date = null;
+	var month=new Array(12);
+	month[0]="Jan";
+	month[1]="Feb";
+	month[2]="Mar";
+	month[3]="Apr";
+	month[4]="May";
+	month[5]="Jun";
+	month[6]="Jul";
+	month[7]="Aug";
+	month[8]="Sep";
+	month[9]="Oct";
+	month[10]="Nov";
+	month[11]="Dec";
 	
 	jQuery.each( data.value.items, function( index, item ) {
 		
 		var this_publication = cunyj_get_publication_name( item.link );
-		html.push( '<div class="wire-item">' );
-		html.push( '<h4><a href="' + item.link + '">' + item.title + '</a></h4>' );
+		
 		var pub_date = new Date( item.pubDate );
-		html.push( '<p class="wire-item-meta meta">' + pub_date.getMonth() + pub_date.getDate() + pub_date.getYear() );
-		html.push( this_publication + '</p>' );
-		html.push( '</div>' );		
+		var this_date = month[pub_date.getMonth()] + ' ' + pub_date.getDate();
+		if ( this_date != previous_date ) {
+			html.push( '<div class="wire-date">' + this_date + '</div>' );
+			previous_date = this_date;
+		}
+		html.push( '<div class="wire-item"><a href="' + item.link + '">' );
+		html.push( '<h4 class="wire-item-title"> ');
+		html.push( '<span class="wire-item-publication float-right">' + this_publication + '</span>' );
+		html.push( item.title + '</h4>' );
+		if ( item.description ) {
+			html.push( '<p class="wire-item-description">' + item.description + '</p>' );
+		}
+		html.push( '</a></div>' );		
 		
 	});
 	

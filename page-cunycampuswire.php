@@ -12,7 +12,7 @@ Template Name: Page - CUNY Campus Wire
 	
 	<h2>CUNY Campus Wire</h2>
 
-	<div class="sidebar left">
+	<div class="sidebar right">
 
 		<ul>
 			<li>
@@ -50,7 +50,7 @@ Template Name: Page - CUNY Campus Wire
 	
 	</div><!-- END .sidebar -->
 	
-	<div class="content left-sidebar">
+	<div class="content">
 		
 		<div id="cuny-campus-wire-dynamic-load">
 
