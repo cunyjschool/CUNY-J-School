@@ -1186,6 +1186,15 @@ div.message.info {
 	background-color: #E4EAFF;
 }
 
+div.message.loading {
+	border-color: #EEEEEE;
+	background-color: #F8F8F8;
+	background-image: url(images/icons/loading_s16.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 3px;
+	padding-left: 25px;
+}
+
 div#message.updated {
 	border-color: #ADEBBD;
 	background-color: #E1F8E7;

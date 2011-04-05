@@ -10,10 +10,10 @@ function cunyj_download_cunycampuswire() {
 	if ( jQuery('#cuny-campus-wire-dynamic-load').length > 0 ) {
 		
 		// Loading message for the wire
-		var html = '<div class="message info"><p>Loading CUNY Campus Wire...</p></div>';
+		var html = '<div class="message loading">Loading CUNY Campus Wire...</div>';
 		jQuery('#cuny-campus-wire-dynamic-load').append(html);
 		
-		var cunycampuswire_json = 'http://pipes.yahoo.com/pipes/pipe.run?_id=fd6e096ae2c202c5a1d6ede49f686495&_render=json&_callback=cunyj_render_cunycampuswire';
+		var cunycampuswire_json = 'http://pipes.yahoo.com/pipes/pipe.run?_id=aaee703dfb8af98292545662c1d06134&_render=json&_callback=cunyj_render_cunycampuswire';
 	
 		jQuery.ajax({
 			url: cunycampuswire_json,
@@ -77,14 +77,11 @@ function cunyj_render_cunycampuswire( data ) {
 	jQuery.each( data.value.items, function( index, item ) {
 		
 		var this_publication = cunyj_get_publication_name( item.link );
-		if ( this_publication != previous_publication ) {
-			html.push( '<h3 class="wire-publication">' + this_publication + '</h3>' );
-			previous_publication = this_publication;
-		}
 		html.push( '<div class="wire-item">' );
 		html.push( '<h4><a href="' + item.link + '">' + item.title + '</a></h4>' );
 		var pub_date = new Date( item.pubDate );
-		html.push( '<p class="wire-item-meta meta">' + pub_date.getMonth() + pub_date.getDate() + pub_date.getYear() + '</p>' );
+		html.push( '<p class="wire-item-meta meta">' + pub_date.getMonth() + pub_date.getDate() + pub_date.getYear() );
+		html.push( this_publication + '</p>' );
 		html.push( '</div>' );		
 		
 	});
