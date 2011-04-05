@@ -43,14 +43,14 @@ function cunyj_get_publication_name( link ) {
 	if ( link.indexOf( 'bronxnet.org/' ) != -1 ) {
 		publication = 'BronxNet';
 	}
-	if ( link.indexOf( 'brooklynexcelsior.com/' != -1 ) ) {
+	if ( link.indexOf( 'brooklynexcelsior.com/' ) != -1 ) {
 		publication = 'The Excelsior';
 	}
-	if ( link.indexOf( 'thehunterenvoy.com/' != -1 ) ) {
+	if ( link.indexOf( 'thehunterenvoy.com/' ) != -1 ) {
 		publication = 'The Envoy';
 	}
-	if ( link.indexOf( 'theknightnews.com/' != -1 ) ) {
-		publication = 'The Knight News';
+	if ( link.indexOf( 'theknightnews.com/' ) != -1 ) {
+		publication = 'The Knight News';		
 	}
 	if ( link.indexOf( 'lcmeridian.com/' ) != -1 ) {
 		publication = 'Meridian';
@@ -72,14 +72,19 @@ function cunyj_render_cunycampuswire( data ) {
 	
 	var html = Array();
 	
+	var previous_publication = null;
+	
 	jQuery.each( data.value.items, function( index, item ) {
-	   
+		
+		var this_publication = cunyj_get_publication_name( item.link );
+		if ( this_publication != previous_publication ) {
+			html.push( '<h3 class="wire-publication">' + this_publication + '</h3>' );
+			previous_publication = this_publication;
+		}
 		html.push( '<div class="wire-item">' );
 		html.push( '<h4><a href="' + item.link + '">' + item.title + '</a></h4>' );
-		var publication = cunyj_get_publication_name( item.link );
-		if ( publication ) {
-			html.push( '<p>' + publication + '</p>' );
-		}
+		var pub_date = new Date( item.pubDate );
+		html.push( '<p class="wire-item-meta meta">' + pub_date.getMonth() + pub_date.getDate() + pub_date.getYear() + '</p>' );
 		html.push( '</div>' );		
 		
 	});
