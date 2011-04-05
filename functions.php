@@ -219,7 +219,6 @@ class cunyj
 				'menu_name' => 'Organizations',
 			),
 			'show_tagcloud' => false,
-			'hierarchical' => true,
 			'rewrite' => array(
 				'slug' => 'organizations',
 				'hierarchical' => true,
