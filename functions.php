@@ -2,7 +2,7 @@
 
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
 define( 'CUNYJ_PREFIX' , 'cunyj_' );
-define( 'CUNYJ_VERSION', '1.3.2' );
+define( 'CUNYJ_VERSION', '1.3.3' );
 
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
