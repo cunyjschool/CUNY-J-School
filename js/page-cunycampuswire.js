@@ -29,6 +29,23 @@ function cunyj_download_cunycampuswire() {
 } // END - cunyj_download_cunycampuswire()
 
 /**
+ * cunyj_get_publiation_name()
+ */
+function cunyj_get_publication_name( link ) {
+	
+	var publication = null;
+ 	if ( link.indexOf( 'adafi.org/' ) != -1 ) {
+		publication = 'ADAFI: The Voice of Medgar Evers College';	
+	}
+	if ( link.indexOf( 'thebridgenews.com/' ) != -1 ) {
+		publication = 'The Bridge';
+	}
+	
+	return publication;
+	
+} // END cunyj_get_publication_name()
+
+/**
  * cunyj_render_cunycampuswire()
  */
 function cunyj_render_cunycampuswire( data ) {
@@ -41,6 +58,10 @@ function cunyj_render_cunycampuswire( data ) {
 	   
 		html.push( '<div class="wire-item">' );
 		html.push( '<h4><a href="' + item.link + '">' + item.title + '</a></h4>' );
+		var publication = cunyj_get_publication_name( item.link );
+		if ( publication ) {
+			html.push( '<p>' + publication + '</p>' );
+		}
 		html.push( '</div>' );		
 		
 	});
