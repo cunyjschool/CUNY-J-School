@@ -7,6 +7,7 @@ define( 'CUNYJ_VERSION', '1.3.2' );
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
 include_once('php/cunyj_capstones.php');
+include_once('php/cunyj_internships.php');
 
 class cunyj
 {
@@ -15,12 +16,16 @@ class cunyj
 	var $options_group_name = 'cunyj_options';
 	var $settings_page = 'cunyj_settings';
 	
+	/**
+	 * __construct()
+	 */
 	function __construct() {
 		global $wpdb;
 		
 		$this->events = new cunyj_events();
 		$this->databases = new cunyj_databases();
-		$this->capstones = new cunyj_capstones();				
+		$this->capstones = new cunyj_capstones();
+		$this->internships = new cunyj_internships();					
 		
 		$this->options = get_option( $this->options_group_name );
 		
@@ -31,10 +36,14 @@ class cunyj
 		add_theme_support( 'post-thumbnails' );
 		
 		add_action( 'init', array( &$this, 'init' ) );
+		add_action( 'init', array( &$this, 'register_taxonomies' ) );		
 		add_action( 'admin_init', array( &$this, 'admin_init' ) );
-		add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_resources' ) ); 
-	}
+		add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_resources' ) ); 		
+	} // END __construct()
 	
+	/**
+	 * init()
+	 */
 	function init() {
 
 		if ( is_admin() ) {
@@ -72,7 +81,7 @@ class cunyj
 		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
 		bp_core_remove_nav_item( 'settings' );
 		
-	}
+	} // END init()
 	
 	/**
 	 * admin_init()
@@ -149,6 +158,80 @@ class cunyj
 		}
 		
 	} // END add_admin_bar_items()
+	
+	/**
+	 * register_taxonomies()
+	 */
+	function register_taxonomies() {
+		
+		// Location taxonomy
+		$args = array(
+			'label' => 'Locations',
+			'labels' => array(
+				'name' => 'Locations',
+				'singular_name' => 'Location',
+				'search_items' =>  'Search Locations',
+				'popular_items' => 'Popular Locations',
+				'all_items' => 'All Locations',
+				'parent_item' => 'Parent Location',
+				'parent_item_colon' => 'Parent Location:',
+				'edit_item' => 'Edit Location', 
+				'update_item' => 'Update Location',
+				'add_new_item' => 'Add New Location',
+				'new_item_name' => 'New Location',
+				'separate_items_with_commas' => 'Separate locations with commas',
+				'add_or_remove_items' => 'Add or remove locations',
+				'choose_from_most_used' => 'Choose from the most common locations',
+				'menu_name' => 'Locations',
+			),
+			'show_tagcloud' => false,
+			'hierarchical' => true,
+			'rewrite' => array(
+				'slug' => 'locations',
+				'hierarchical' => true,
+			),
+		);
+		$post_types = array(
+			'post',
+			'cunyj_internship',
+			'cunyj_event'
+		);
+		register_taxonomy( 'cunyj_locations', $post_types, $args );
+		
+		// Organization taxonomy
+		$args = array(
+			'label' => 'Organizations',
+			'labels' => array(
+				'name' => 'Organizations',
+				'singular_name' => 'Organization',
+				'search_items' =>  'Search Organizations',
+				'popular_items' => 'Popular Organizations',
+				'all_items' => 'All Organizations',
+				'parent_item' => 'Parent Organizations',
+				'parent_item_colon' => 'Parent Organizations:',
+				'edit_item' => 'Edit Organization', 
+				'update_item' => 'Update Organization',
+				'add_new_item' => 'Add New Organization',
+				'new_item_name' => 'New Organization',
+				'separate_items_with_commas' => 'Separate organizations with commas',
+				'add_or_remove_items' => 'Add or remove organizations',
+				'choose_from_most_used' => 'Choose from the most common organizations',
+				'menu_name' => 'Organizations',
+			),
+			'show_tagcloud' => false,
+			'hierarchical' => true,
+			'rewrite' => array(
+				'slug' => 'organizations',
+				'hierarchical' => true,
+			),
+		);
+		$post_types = array(
+			'post',
+			'cunyj_internship',
+		);
+		register_taxonomy( 'cunyj_organization', $post_types, $args );
+		
+	} // END register_taxonomies()
 	
 	/**
 	 * add_post_meta_box()
