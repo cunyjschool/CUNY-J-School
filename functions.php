@@ -112,9 +112,10 @@ class cunyj
 			wp_enqueue_script( 'cunyj_live_js', get_bloginfo('template_directory') . '/js/live.js', array( 'jquery' ), CUNYJ_VERSION, true );
 		}
 		if ( is_page( 'urban' ) ) {
-			wp_enqueue_style( 'cunyj_page_urbanreporting_css', get_bloginfo('template_directory') . '/css/page_urbanreporting.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
+			wp_enqueue_style( 'cunyj_page_urbanreporting_css', get_bloginfo('template_directory') . '/css/page-urbanreporting.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		}
 		if ( is_page( 'cuny-campus-wire' ) ) {
+			wp_enqueue_style( 'cunyj_page_cunycampuswire_css', get_bloginfo('template_directory') . '/css/page-cunycampuswire.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 			wp_enqueue_script( 'cunyj_page_cunycampuswire_js', get_bloginfo('template_directory') . '/js/page-cunycampuswire.js', array( 'jquery' ), CUNYJ_VERSION, true );
 		}
 		
