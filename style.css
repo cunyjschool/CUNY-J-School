@@ -103,11 +103,11 @@ img.aligncenter {
 	text-align: center;
 }
 
-.left, .alignleft {
+.left, .alignleft, .float-left {
 	float: left;
 }
 
-.right, .alignright {
+.right, .alignright, .float-right {
 	float: right;
 }
 
@@ -256,6 +256,16 @@ h4.blog-header {
 }
 
 /**
+ * Element: blockquote
+ */
+
+blockquote.pullquote {
+    color:#ff9900;
+    font-style:italic;
+    margin:10px auto 20px auto;
+} 
+
+/**
  * Property: width
  */
 
@@ -270,6 +280,32 @@ body.archive .content {
 body.single-post .content {
 	width: 540px;
 }
+
+/**
+ * Property: background
+ */
+
+.background-orange {
+	background: url(images/backgrounds/orange-back.jpg) repeat scroll 0 0 #FF9900;
+}
+
+.background-light-grey {
+	background: #f8f8f8;
+}
+
+/**
+ * Property: box-shadow
+ */
+ 
+.drop-shadow {
+    -webkit-box-shadow:5px 5px 0 #EEEEEE;
+	-moz-box-shadow:5px 5px 0 #EEEEEE;
+	box-shadow:5px 5px 0 #EEEEEE;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+
 
 /**
  * Property: margin
@@ -1150,6 +1186,15 @@ div.message.info {
 	background-color: #E4EAFF;
 }
 
+div.message.loading {
+	border-color: #EEEEEE;
+	background-color: #F8F8F8;
+	background-image: url(images/icons/loading_s16.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 3px;
+	padding-left: 25px;
+}
+
 div#message.updated {
 	border-color: #ADEBBD;
 	background-color: #E1F8E7;
@@ -1809,7 +1854,12 @@ ul#up-events li {
 	
 .clear {
 	clear: both;
-	height: 1px; }
+	height: 1px;
+}
+
+.clear-both {
+    clear:both;
+}
 
 .clearfix:after {
     content: "."; 

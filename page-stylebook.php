@@ -20,9 +20,15 @@ td { padding:5px 10px; }
 td.color { width:14%; }
 td:first-child { width:15%; padding:0; }
 .white { color:#ffffff;}
-li.split { margin-top:10px; }
+<<<<<<< HEAD
+li h4 { margin-top:10px; }
+li:first-child h4 { margin-top:0; }
 ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
+=======
+li.split { margin-top:10px; }
+>>>>>>> 70fe163024896970bc8da0b6903bf620e2f62f22
 .content h4 { font-size:14px; }
+ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
 </style>
 
 <div class="wrap">
@@ -43,11 +49,11 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 				<li><a href="#unordered-lists">Unordered Lists</a></li>
 				<li><a href="#footnotes">Footnotes</a></li>
 				<li><a href="#sidebar">Sidebar Navigation</a></li>
-				<li class="split"><h4>Media</h4></li>
+				<li><h4>Media</h4></li>
 				<li><a href="#images">Images</a></li>
 				<li><a href="#video">Video</a></li>
 				<li><a href="#audio">Audio</a></li>
-				<li class="split"><h4>Colors</h4></li>
+				<li><h4>Colors</h4></li>
 				<li><a href="#color-palette">Color Palette</a></li>
 			</ul>
 		</div>
@@ -71,12 +77,16 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 						<p><a href="#">Top of page</a></p>
 
 						<h4 id="page-headers">Subheaders</h4>
-						<p>Subheads are used as titles on pages with multiple sections. You can have as many of these as necessary on a page but should not use subheads if there is only one section. In that case, the main page header becomes your title. The subheaders on this page are "Page Elements," "Media," and "Colors."</p>
+
+						<p>Subheads are used as section titles on pages with multiple sections. "Page Elements" and "Media" on this page are examples of subheaders. You can have as many of these as necessary on a page but should not use subheads if there is only one section. In that case, the main page header becomes your section title.</p>
+						
 						<code>h3 { font-size: 18px; margin: 10px; line-height: 24px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
 						
 						<h4 id="section-titles">Section Titles (This is a section title!)</h4>
+
 						<p>Section titles are used to further break up text into more manageable pieces. They are placed within h4 tags beneath a subheader. You can have as many of these as necessary on a page but should not use section titles if there is only one. In that case, the subheader becomes your section title. "Main Page Content," "Headers," and "Subheaders" are all section titles within the subheader "Page Elements."</p>
+
 						<code>h4 { font-size: 14px; margin: 10px; line-height: 24px; color: #000000; }</code>
 						<p><a href="#">Top of page</a></p>
 
@@ -101,30 +111,32 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 							<li><strong>Another Subheader.</strong> Unordered list item subheaders should be the same as in ordered lists.</li>
 							<li>Note the 1px grey border at the bottom of each list item.</li>
 						</ul>
-						<code>ul { margin: 12px 0; }<br>ul li {  list-style-image: url("images/icons/arrow_000_small.png"); border-bottom: 1px solid #EFEFEF; padding-left:40px;}<br>ul li:first-child { border-top: 1px solid #EFEFEF; }</code>
+
+						<code>ul { margin: 12px 0; }<br />ul li {  list-style-image: url("images/icons/arrow_000_small.png"); border-bottom: 1px solid #EFEFEF; padding-left:40px;}<br />ul li:first-child { border-top: 1px solid #EFEFEF; }</code>
 						<p><a href="#">Top of page</a></p>
 						
 						<h4 id="footnotes">Footnotes</h4>
-						<p class="footnote">This is an example of a footnote. Footnotes are rare but should always be the very last item in the main content of any page or post. The text should be within a paragraph tag with the class “footnote” which will make the text smaller and apply a grey border to the top.</p>
+						<p class="footnote" >This is an example of a footnote. Footnotes are rare but should always be the very last item in the main content of any page or post. The text should be within a paragraph tag with the class “footnote” which will make the text smaller and apply a grey border to the top.</p>
 						<code>p.footnote { border-top: 1px solid #DDDDDD; font-size: 0.9em; margin-top: 10px; padding-top: 5px; }</code>
+						<p><a href="#">Top of page</a></p>
+						
+						<h4 id="sidebar">Sidebar Navigation</h4>
+						<p>The sidebar navigation of any page is placed in a div on the top left of the page. The links are then unordered list items with a grey background and the usual blue link color. On hover, the link color changes to white and the background changes to orange. The sidebar at the top of this page is an example.</p>
+						<code>.sidebar { width:225px; margin-right:20px; float:left; }<br />ul#sidebar-nav li { list-style:none outside none; }<br />ul#sidebar-nav li a { background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }<br />ul#sidebar-nav li a:hover { background:#FF9900; border-top:1px solid #EF8F00; color:#FFFFFF; }</code>
 						<p><a href="#">Top of page</a></p>
 						
 						<h3>Media</h3>
 						
 						<h4 id="images">Images</h4>
-						<img class="img-full" src="http://www.journalism.cuny.edu/files/2008/10/classroom2.jpg">
-						<img class="img-right" src="http://www.journalism.cuny.edu/files/2008/09/samplecoursesofstudy.jpg">
+						<img class="img-full" src="http://www.journalism.cuny.edu/files/2008/10/classroom2.jpg" />
+						<img class="img-right" src="http://www.journalism.cuny.edu/files/2008/09/samplecoursesofstudy.jpg" />
 						<p>Images that appear inside the main content of a post or page should be at least 72dpi and color optimized for the Web.</p>
 						<p>Full-width images should be 605px wide to span the full page width (as shown above). </p>
-						<p style="text-align: center; font-weight: bold;">OR</p>
+						<p style="text-align:center;font-weight:bold;">OR</p>
 						<p>Any other images should be 300px wide and float right so that text can wrap around neatly (as shown to the right). These images also have 20px margins on the top, bottom, and left to push the text off the image border.</p>
-						<div style="clear: both;"></div>
-						<code>img.img-full { width:605px; border:5px solid #EFEFEF; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }<br>img.img-right { width:300px; float:right; margin:0 0 20px 20px; border:5px solid #EFEFEF; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }</code>
-						<p><a href="#">Top of page</a></p>
+						<div style="clear:both;"></div>
+						<code>img.img-full { width:605px; border:5px solid #EFEFEF; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }<br />img.img-right { width:300px; float:right; margin:0 0 20px 20px; border:5px solid #EFEFEF; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }</code>
 						
-						<h4 id="sidebar">Sidebar Navigation</h4>
-						<p>The sidebar navigation of any page is placed in a div on the top left of the page. The links are then unordered list items with a grey background and the usual blue link color. On hover, the link color changes to white and the background changes to orange. The sidebar at the top of this page is an example.</p>
-						<code>.sidebar { width:225px; margin-right:20px; float:left; }<br>ul#sidebar-nav li { list-style:none outside none; }<br>ul#sidebar-nav li a { background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }<br>ul#sidebar-nav li a:hover { background:#FF9900; border-top:1px solid #EF8F00; color:#FFFFFF; }</code>
 						<p><a href="#">Top of page</a></p>
 						
 						<h3>Colors</h3>
@@ -144,17 +156,21 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 								</tr>
 								<tr>
 									<td></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(51, 51, 51);">#333333</td>
+
+									<td class="color white" style="background:#333333;" >#333333</td>
+
 									<td>Footer background</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(34, 34, 34);">#222222</td>
+
+									<td class="color white" style="background:#222222;" >#222222</td>
+									
 									<td>Header background, footer margin background</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(27, 27, 27);">#1B1B1B</td>
+									<td class="color white" style="background:#1B1B1B;" >#1B1B1B</td>
 									<td>Header navigation background</td>
 								</tr>
 								
@@ -165,7 +181,7 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 								</tr>
 								<tr>
 									<td></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(153, 153, 153);">#999999</td>
+									<td class="color white" style="background:#999999;">#999999</td>
 									<td>Footer text</td>
 								</tr>
 								<tr>
@@ -175,12 +191,12 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 								</tr>
 								<tr>
 									<td></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(34, 34, 34);">#333333</td>
+									<td class="color white" style="background:#222222;" >#333333</td>
 									<td>Body text</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(27, 27, 27);">#000000</td>
+									<td class="color white" style="background:#1B1B1B;" >#000000</td>
 									<td>Header text &lt;h2&gt;, subheader text &lt;h4&gt;</td>
 								</tr>
 							</tbody>
@@ -189,30 +205,31 @@ ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px soli
 							<tbody>
 								<tr>
 									<td><strong>Links</strong></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(0, 102, 238);">#0066CC</td>
-									<td class="color"><strong>with hover</strong></td>
-									<td class="color white" style="background: none repeat scroll 0% 0% rgb(0, 102, 238);">#0066CC</td>
+									<td class="color white" style="background:#0066ee;">#0066CC</td>
+									<td class="color" ><strong>with hover</strong></td>
+									<td class="color white" style="background:#0066ee;">#0066CC</td>
 									<td>Body links</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td style="background: none repeat scroll 0% 0% rgb(238, 238, 238);">#EEEEEE</td>
-									<td class="color"><strong>with hover</strong></td>
-									<td style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">#FFFFFF</td>
+									<td style="background:#eeeeee;">#EEEEEE</td>
+									<td class="color" ><strong>with hover</strong></td>
+									<td style="background:#ffffff;">#FFFFFF</td>
 									<td>Footer links</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td style="background: none repeat scroll 0% 0% rgb(204, 204, 204);">#CCCCCC</td>
-									<td class="color"><strong>with hover</strong></td>
-									<td style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">#FFFFFF</td>
+									<td style="background:#cccccc;">#CCCCCC</td>
+									<td class="color" ><strong>with hover</strong></td>
+									<td style="background:#ffffff;">#FFFFFF</td>
+
 									<td>Header links</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td style="background: none repeat scroll 0% 0% rgb(255, 153, 0);">#FF9900</td>
-									<td class="color"><strong>with hover</strong></td>
-									<td style="background: none repeat scroll 0% 0% rgb(255, 153, 0);">#FF9900</td>
+									<td style="background:#ff9900;">#FF9900</td>
+									<td class="color" ><strong>with hover</strong></td>
+									<td style="background:#ff9900;">#FF9900</td>
 									<td>Special links</td>
 								</tr>
 							</tbody>
