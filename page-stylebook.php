@@ -5,32 +5,6 @@ Template Name: Stylebook
 ?>
 <?php get_header(); ?>
 
-<style>
-code{ padding:5px 10px; background:#eeeeee; margin:10px 0; display:block;}
-p.footnote { border-top: 1px solid #DDDDDD; font-size: 0.9em; margin-top: 10px; padding-top: 5px; }
-.entry ol { padding-left: 40px; margin: 12px 0; }
-.entry ol li { margin:10px 0; padding:0; }
-.entry ul { margin: 12px 0; }
-.entry ul li {  list-style-image: url("images/icons/arrow_000_small.png"); border-bottom: 1px solid #EEEEEE; padding-left:40px;}
-.entry ul li:first-child { border-top: 1px solid #EEEEEE; }
-.entry img.img-full { width:605px; border:5px solid #EEEEEE; margin-bottom:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }
-.entry img.img-right { width:300px; float:right; margin:0 0 20px 20px; border:5px solid #EEEEEE; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }
-table { width:100%; }
-td { padding:5px 10px; }
-td.color { width:14%; }
-td:first-child { width:15%; padding:0; }
-.white { color:#ffffff;}
-<<<<<<< HEAD
-li h4 { margin-top:10px; }
-li:first-child h4 { margin-top:0; }
-ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
-=======
-li.split { margin-top:10px; }
->>>>>>> 70fe163024896970bc8da0b6903bf620e2f62f22
-.content h4 { font-size:14px; }
-ul#sidebar-nav li h4 { color:#0066CC; background:#F9F9F9; border-bottom:1px solid #EEEEEE; border-top:1px solid #FFFFFF; display:block; padding:7px; }
-</style>
-
 <div class="wrap">
 
 	<div class="main">
