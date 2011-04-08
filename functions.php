@@ -79,7 +79,7 @@ class cunyj
 		}
 		
 		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
-		// bp_core_remove_nav_item( 'settings' );
+		bp_core_remove_nav_item( 'settings' );
 		
 	} // END init()
 	
@@ -122,6 +122,9 @@ class cunyj
 		}
 		if ( is_page( 'urban' ) ) {
 			wp_enqueue_style( 'cunyj_page_urbanreporting_css', get_bloginfo('template_directory') . '/css/page-urbanreporting.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
+		}
+		if ( is_page( 'stylebook' ) ) {
+			wp_enqueue_style( 'cunyj_page_stylebook_css', get_bloginfo('template_directory') . '/css/page-stylebook.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		}
 		if ( is_page( 'cuny-campus-wire' ) ) {
 			wp_enqueue_style( 'cunyj_page_cunycampuswire_css', get_bloginfo('template_directory') . '/css/page-cunycampuswire.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
