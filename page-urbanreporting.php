@@ -16,10 +16,10 @@ Template Name: Page - Urban Reporting
 			
 			<div class="sidebar right standard">
 				
-				<h3>Who Leads our Program</h3>
-				
 				<blockquote class="pullquote">"Good investigative reporting is critical medicine for a great metropolis."</blockquote>
-				<div class="caption"><em>Tom Robbins, journalist-in-residence</em></div>
+				<span class="caption"><em>Tom Robbins, journalist-in-residence</em></span>
+					
+				<h3>Who Leads our Program</h3>
 				
 				<img class="size-thumbnail" src="<?php bloginfo('template_directory'); ?>/images/people/sarahbartlett_s300.jpg" alt="" width="150" height="150" />
 				<p><strong><a href="<?php bloginfo('url'); ?>/faculty/sarah-bartlett/">Sarah Bartlett</a></strong>, formerly of Fortune, BusinessWeek and The New York Times, heads up our urban program. She draws on an array of terrific adjuncts and working journalists with experience in print, multimedia, and broadcast to round out the <a href="<?php bloginfo('url'); ?>/academics/subject-concentrations/urban/urban-faculty/">roster of instructors</a>.</p>
@@ -64,7 +64,7 @@ Template Name: Page - Urban Reporting
 			</div>
 			<div class="float-left urban-reporting-course">
 				<h4>Covering NYC’s Economy and Business</h4>
-				<p>The goal of this course is to help students understand and report effectively on the key economic and business forces shaping life in New York City. With the aid of selected readings and guest speakers, students learn about the city’s most important industries and employers, the role of small businesses and immigrant entrepreneurs, and the impact of real estate and economic development. After getting an overview of the strengths and weaknesses of New York City’s economy, students focus on some of the cutting-edge economic issues the city faces.</p>
+				<p>The goal of this course is to help students understand the economic and business forces shaping life in New York City. Students learn about the city’s most important industries and employers, the role of small businesses and immigrant entrepreneurs, and the impact of real estate and economic development. After getting an overview of the strengths and weaknesses of New York City’s economy, students focus on cutting-edge economic issues the city faces.</p>
 				<p><strong>Instructors:</strong> <a href="<?php bloginfo('url'); ?>/faculty/greg-david/">Greg David</a></p>
 			</div>
 			<div class="float-left urban-reporting-course">

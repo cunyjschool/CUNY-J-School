@@ -79,7 +79,7 @@ class cunyj
 		}
 		
 		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
-		bp_core_remove_nav_item( 'settings' );
+		// bp_core_remove_nav_item( 'settings' );
 		
 	} // END init()
 	
