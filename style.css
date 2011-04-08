@@ -82,6 +82,12 @@ h3 {
 	line-height: 24px;
 	margin: 10px 0;
 }
+
+h4 {
+	font-size: 14px;
+	line-height: 20px;
+	margin: 7px 0;
+}
 	
 .wrap {
 	margin: 0 auto;
@@ -268,7 +274,31 @@ blockquote.pullquote {
     color:#ff9900;
     font-style:italic;
     margin:10px auto 20px auto;
-} 
+}
+
+/**
+ * Element: table
+ */
+
+table.simple-table th {
+	text-align: left;
+	font-size: 13px;
+}
+
+table.simple-table td {
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 10px;
+}
+
+table td.on {
+	padding: 5px 10px;
+	background: #f7f7f7;
+}
+
+table td.off {
+	padding: 5px 10px;
+}
 
 /**
  * Property: width
@@ -1441,19 +1471,8 @@ li.edit a, li.edit a:visited {
 	padding: 10px 20px 10px 35px; }
 	
 li.edit a:hover {
-	background: #ff9900 url(images/icons/card_pencil.png) no-repeat 10px; }
-	
-table.simple-table td {
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	padding: 10px; }
-	
-table td.on {
-	padding: 5px 10px;
-	background: #f7f7f7; }
-	
-table td.off {
-	padding: 5px 10px; }
+	background: #ff9900 url(images/icons/card_pencil.png) no-repeat 10px;
+}
 	
 li#requestinfo, li#howtoapply {
 	padding: 10px;
