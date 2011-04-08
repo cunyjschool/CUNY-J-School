@@ -43,8 +43,16 @@ body.page-template-page-urbanreporting-php .two-thirds-width.pads {
 }
 
 body.page-template-page-urbanreporting-php blockquote.pullquote {
-    font-size:18px;
+    font-size:20px;
     line-height:24px;
+	margin-bottom:10px;
+	text-align:center;
+}
+
+body.page-template-page-urbanreporting-php .quote-caption {
+	text-align:center;
+	padding-bottom:3px;
+	border-bottom:1px solid #eee;
 }
 
 body.page-template-page-urbanreporting-php .alignleft.img-and-caption{
@@ -60,15 +68,23 @@ body.page-template-page-urbanreporting-php .img-and-caption {
 	padding-top:10px;
 }
 
-body.page-template-page-urbanreporting-php .caption {
+body.page-template-page-urbanreporting-php .sidebar {
+	margin-bottom:15px;
+}
+body.page-template-page-urbanreporting-php .sidebar h3 {
+	margin:20px 0 5px 0;
+}
+
+body.page-template-page-urbanreporting-php .soundslides .caption {
 	text-align:center;
+	border:0;
 }
 
 body.page-template-page-urbanreporting-php .soundslides {
 	width:420px;
 	height:383px;
 	overflow:hidden;
-	margin:10px 0;
+	margin:10px 0 10px 15px;
 }
 
 body.page-template-page-urbanreporting-php .soundslides object, body.page-template-page-urbanreporting-php .soundslides .caption {

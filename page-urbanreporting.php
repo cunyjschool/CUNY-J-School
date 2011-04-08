@@ -17,7 +17,7 @@ Template Name: Page - Urban Reporting
 			<div class="sidebar right standard">
 				
 				<blockquote class="pullquote">"Good investigative reporting is critical medicine for a great metropolis."</blockquote>
-				<span class="caption"><em>Tom Robbins, journalist-in-residence</em></span>
+				<div class="quote-caption"><em>— Tom Robbins, journalist-in-residence</em></div>
 					
 				<h3>Who Leads our Program</h3>
 				
@@ -33,7 +33,8 @@ Template Name: Page - Urban Reporting
 						<div class="caption">Urban students on field trip to City Hall catch a few minutes with City Council Speaker Christine Quinn. <em>Photograph by Thomas Chan</em></div>
 					</div>
 					<p>What better place to learn about urban reporting than New York City? The city’s richly diverse population, its sophisticated (some would say Byzantine) political system and its powerhouse economy offer endless potential for stories.</p>
-					<p>We are fortunate to be able to draw on CUNY’s unparalleled network of professors to assist in that pursuit; they inform our curriculum, provide guest speaking and adjunct opportunities, and generate eye-opening field trips. We also benefit from our professional ties to the city’s top reporters. In our most recent initiative, urban students can take an <a href="<?php bloginfo('url'); ?>/2011/03/02/former-village-voice-reporter-tom-robbins-named-cuny-j-schools-first-investigative-journalist-in-residence/" >investigative reporting course with renowned reporter Tom Robbins</a>.</p>
+					<p>We are fortunate to be able to draw on CUNY’s unparalleled network of professors to assist in that pursuit; they inform our curriculum, provide guest speaking and adjunct opportunities, and generate eye-opening field trips.</p>
+					<p>We also benefit from our professional ties to the city’s top reporters. In our most recent initiative, urban students can take an <a href="<?php bloginfo('url'); ?>/2011/03/02/former-village-voice-reporter-tom-robbins-named-cuny-j-schools-first-investigative-journalist-in-residence/" >investigative reporting course with renowned reporter Tom Robbins</a>.</p>
 					<p>The stories our urban students generate feed right into the School’s many distribution outlets: the <a href="http://nycitynewsservice.com/">NYCity News Service</a>, which promotes student work in print, multimedia, and broadcast formats; <a href="http://219tvmagazine.journalism.cuny.edu/">219 West</a>, the monthly TV show which airs on CUNY-TV; and <a href="http://fort-greene.thelocal.nytimes.com/">The Local</a>, the hyperlocal website we run in conjunction with the New York Times.</p>
 				<p>The Urban Reporting program is also <a href="<?php bloginfo('url'); ?>/2010/10/27/new-community-and-ethnic-media-training-program-at-cuny/">working closely with the city’s vast array of community and ethnic media outlets</a>, thanks to Ford Foundation grants. Separately, The Sidney Hillman Foundation every year recognizes the work of an urban concentration student with its Urban Journalism Award for Social Justice Reporting.</p>
 					
