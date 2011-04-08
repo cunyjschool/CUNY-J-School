@@ -2,7 +2,7 @@
 Theme Name: CUNY J-School
 Theme URI: http://www.journalism.cuny.edu/
 Description: WordPress for the CUNY Graduate School of Journalism
-Version: 1.3.3
+Version: 1.3.4
 Author: Daniel Bachhuber, Joe Filippazzo, Rosaleen Ortiz
 Author URI: http://tech.journalism.cuny.edu
 Tags: buddypress
@@ -82,6 +82,12 @@ h3 {
 	line-height: 24px;
 	margin: 10px 0;
 }
+
+h4 {
+	font-size: 14px;
+	line-height: 20px;
+	margin: 7px 0;
+}
 	
 .wrap {
 	margin: 0 auto;
@@ -97,6 +103,7 @@ fieldset {
 .center, .aligncenter {
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 img.aligncenter {
@@ -155,10 +162,10 @@ input.button.primary {
  * Element: a
  */
 
-a.interest-capture {
+a.interest-capture, a.take-action {
 	font-size: 15px;
 	padding-top: 6px;
-	padding-left: 35px;
+	padding-left: 8px;
 	padding-bottom: 8px;
 	padding-right: 8px;
 	margin-left: -5px;
@@ -166,16 +173,20 @@ a.interest-capture {
 	border-left: 7px solid #FFFFFF;	
 	border-bottom: 12px solid #FFFFFF;	
 	background-color: #FFF7A6;
-	background-image:url("images/icons/email_s24.png");
-	background-position:4px 3px;
-	background-repeat:no-repeat;
 	display: block;
 	width: auto;
 	color: #666666;
 	text-decoration: none;
 }
 
-a.interest-capture:hover {
+a.interest-capture {
+	background-image:url("images/icons/email_s24.png");
+	background-position:4px 3px;
+	background-repeat:no-repeat;
+	padding-left: 35px;
+}
+
+a.interest-capture:hover, a.take-action {
 	text-decoration: underline;
 }
 
@@ -263,7 +274,31 @@ blockquote.pullquote {
     color:#ff9900;
     font-style:italic;
     margin:10px auto 20px auto;
-} 
+}
+
+/**
+ * Element: table
+ */
+
+table.simple-table th {
+	text-align: left;
+	font-size: 13px;
+}
+
+table.simple-table td {
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 10px;
+}
+
+table td.on {
+	padding: 5px 10px;
+	background: #f7f7f7;
+}
+
+table td.off {
+	padding: 5px 10px;
+}
 
 /**
  * Property: width
@@ -1436,19 +1471,8 @@ li.edit a, li.edit a:visited {
 	padding: 10px 20px 10px 35px; }
 	
 li.edit a:hover {
-	background: #ff9900 url(images/icons/card_pencil.png) no-repeat 10px; }
-	
-table.simple-table td {
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	padding: 10px; }
-	
-table td.on {
-	padding: 5px 10px;
-	background: #f7f7f7; }
-	
-table td.off {
-	padding: 5px 10px; }
+	background: #ff9900 url(images/icons/card_pencil.png) no-repeat 10px;
+}
 	
 li#requestinfo, li#howtoapply {
 	padding: 10px;

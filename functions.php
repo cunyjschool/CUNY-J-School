@@ -2,7 +2,7 @@
 
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
 define( 'CUNYJ_PREFIX' , 'cunyj_' );
-define( 'CUNYJ_VERSION', '1.3.3' );
+define( 'CUNYJ_VERSION', '1.3.4' );
 
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
@@ -79,7 +79,9 @@ class cunyj
 		}
 		
 		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
-		// bp_core_remove_nav_item( 'settings' );
+		if ( function_exists( 'bp_core_remove_nav_item' ) ) {
+			bp_core_remove_nav_item( 'settings' );
+		}
 		
 	} // END init()
 	
