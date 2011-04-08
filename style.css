@@ -97,6 +97,7 @@ fieldset {
 .center, .aligncenter {
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 img.aligncenter {
@@ -155,10 +156,10 @@ input.button.primary {
  * Element: a
  */
 
-a.interest-capture {
+a.interest-capture, a.take-action {
 	font-size: 15px;
 	padding-top: 6px;
-	padding-left: 35px;
+	padding-left: 8px;
 	padding-bottom: 8px;
 	padding-right: 8px;
 	margin-left: -5px;
@@ -166,16 +167,20 @@ a.interest-capture {
 	border-left: 7px solid #FFFFFF;	
 	border-bottom: 12px solid #FFFFFF;	
 	background-color: #FFF7A6;
-	background-image:url("images/icons/email_s24.png");
-	background-position:4px 3px;
-	background-repeat:no-repeat;
 	display: block;
 	width: auto;
 	color: #666666;
 	text-decoration: none;
 }
 
-a.interest-capture:hover {
+a.interest-capture {
+	background-image:url("images/icons/email_s24.png");
+	background-position:4px 3px;
+	background-repeat:no-repeat;
+	padding-left: 35px;
+}
+
+a.interest-capture:hover, a.take-action {
 	text-decoration: underline;
 }
 
