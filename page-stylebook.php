@@ -27,6 +27,7 @@ Template Name: Stylebook
 				<li><a href="#images">Images</a></li>
 				<li><a href="#video">Video</a></li>
 				<li><a href="#audio">Audio</a></li>
+				<li><a href="#captions">Captions</a></li>
 				<li><h4>Colors</h4></li>
 				<li><a href="#color-palette">Color Palette</a></li>
 			</ul>
@@ -110,7 +111,17 @@ Template Name: Stylebook
 						<p>Any other images should be 300px wide and float right so that text can wrap around neatly (as shown to the right). These images also have 20px margins on the top, bottom, and left to push the text off the image border.</p>
 						<div style="clear:both;"></div>
 						<code>img.img-full { width:605px; border:5px solid #EFEFEF; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }<br />img.img-right { width:300px; float:right; margin:0 0 20px 20px; border:5px solid #EFEFEF; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }</code>
+						<p><a href="#">Top of page</a></p>
 						
+						<h4 id="captions">Captions</h4>
+						<div class="alignright">
+							<img class="img-right" src="http://www.journalism.cuny.edu/files/2008/09/samplecoursesofstudy.jpg" />
+							<p class="caption">What do you do with a drunken sailor?</p>
+						</div>
+						<p>The caption should be centered text with a 5px padding between the media above and the light grey line below as shown at right.</p>
+						<p>To display images or embedded media with captions, place the caption text in a paragraph tag with the class "caption" below the media. Then place the media and caption inside a div with the class "alignright".</p>
+						<div style="clear:both;"></div>
+						<code>p.caption { border-bottom:1px solid #DDDDDD; margin-left:20px; text-align:center;}</code>
 						<p><a href="#">Top of page</a></p>
 						
 						<h3>Colors</h3>
