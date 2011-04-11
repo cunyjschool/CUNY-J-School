@@ -21,6 +21,7 @@ Template Name: Stylebook
 				<li><a href="#paragraphs">Paragraphs</a></li>
 				<li><a href="#ordered-lists">Ordered Lists</a></li>
 				<li><a href="#unordered-lists">Unordered Lists</a></li>
+				<li><a href="#tables">Tables</a></li>
 				<li><a href="#footnotes">Footnotes</a></li>
 				<li><a href="#sidebar">Sidebar Navigation</a></li>
 				<li><h4>Media</h4></li>
@@ -90,6 +91,43 @@ Template Name: Stylebook
 						<code>ul { margin: 12px 0; }<br />ul li {  list-style-image: url("images/icons/arrow_000_small.png"); border-bottom: 1px solid #EFEFEF; padding-left:40px;}<br />ul li:first-child { border-top: 1px solid #EFEFEF; }</code>
 						<p><a href="#">Top of page</a></p>
 						
+						
+						<h4 id="tables">Tables</h4>
+						<p>Tables should have ample cell padding, a medium grey border and alternately colored rows to increase readability. Also, the table headers should be bold and the captions (if any) should follow the same style as the captions for embedded media. Here's an example of a table:</p>
+						<table>
+							<thead>
+								<tr>
+									<th>This is a table header</th>
+									<th>Here's a second</th>
+									<th>And a third</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Sam I Am</td>
+									<td>Green Eggs</td>
+									<td>Ham</td>
+								</tr>
+								<tr class="even">
+									<td>Cat in the Hat</td>
+									<td>Thing 1</td>
+									<td>Thing 2</td>
+								</tr>
+								<tr>
+									<td>One Fish, Two Fish</td>
+									<td>Red Fish</td>
+									<td>Blue Fish</td>
+								</tr>
+							</tbody>
+							<caption>This is the great caption!</caption>
+						</table>
+								
+
+						<code>table { font-size:13px; border-collapse:collapse; margin:15px 0; width:100%; }<br />table thead { background-color:#efefef; }<br />tr td, tr th { padding:5px 10px; border:1px solid #dfdfdf; text-align:left; }<br />tr.even td { background-color:#fafafa; }<br />caption { caption-side:bottom; padding:10px; border-bottom:1px solid #eeeeee; font-style:italic;}</code>
+						<p><a href="#">Top of page</a></p>
+						
+						
+						
 						<h4 id="footnotes">Footnotes</h4>
 						<p class="footnote" >This is an example of a footnote. Footnotes are rare but should always be the very last item in the main content of any page or post. The text should be within a paragraph tag with the class “footnote” which will make the text smaller and apply a grey border to the top.</p>
 						<code>p.footnote { border-top: 1px solid #DDDDDD; font-size: 0.9em; margin-top: 10px; padding-top: 5px; }</code>
@@ -127,7 +165,7 @@ Template Name: Stylebook
 						<h3>Colors</h3>
 						
 						<h4 id="color-palette">Color Palette</h4>
-						<table>
+						<table class="palette">
 							<tbody>
 								<tr>
 									<td><strong>Backgrounds</strong></td>

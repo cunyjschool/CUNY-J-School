@@ -1,3 +1,32 @@
+.page-template-page-stylebook-php .content table {
+	font-size:13px;
+	border-collapse:collapse;
+	margin:15px 0;
+	width:100%;
+}
+
+.page-template-page-stylebook-php .content thead {
+	background-color:#efefef;
+}
+
+.page-template-page-stylebook-php .content td, .page-template-page-stylebook-php .content th {
+	padding:5px 10px;
+	border:1px solid #dfdfdf;
+	text-align:left;
+}
+
+.page-template-page-stylebook-php .content tbody tr.even td {
+	background-color:#fafafa;
+}
+
+.page-template-page-stylebook-php .content caption {
+	caption-side:bottom;
+	padding:10px;
+	border-bottom:1px solid #eeeeee;
+	font-style:italic;
+}
+
+
 .page-template-page-stylebook-php code{
 	padding:5px 10px;
 	background:#efefef;
@@ -8,14 +37,14 @@
 }
 
 .page-template-page-stylebook-php p.footnote {
-	border-top: 1px solid #DDDDDD;
+	border-top: 1px solid #eeeeee;
 	font-size: 0.9em;
 	margin-top: 10px;
 	padding-top: 5px;
 }
 
 .page-template-page-stylebook-php p.caption {
-	border-bottom: 1px solid #DDDDDD;
+	border-bottom: 1px solid #eeeeee;
 	margin-left:20px;
 	text-align:center;
 }
@@ -63,24 +92,16 @@
 	-webkit-border-radius:5px;
 }
 
-.page-template-page-stylebook-php table {
-	width:100%;
-}
-
-.page-template-page-stylebook-php td {
-	padding:5px 10px;
-}
-
-.page-template-page-stylebook-php td.color {
+.page-template-page-stylebook-php table.palette td.color {
 	width:14%;
 }
 
-.page-template-page-stylebook-php td:first-child {
+.page-template-page-stylebook-php table.palette td:first-child {
 	width:15%;
 	padding:0;
 }
 
-.page-template-page-stylebook-php .white {
+.page-template-page-stylebook-php table.palette .white {
 	color:#ffffff;
 }
 
