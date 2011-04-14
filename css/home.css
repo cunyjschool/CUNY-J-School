@@ -229,10 +229,12 @@
 #news a, #news a:visited {
 	text-decoration: none; }
 	
-#news h4 {
+body.home-page #news h4 {
 	border-bottom: 1px dotted #eee; 
 	padding: 5px 0;
 	color: #0066cc;
+	font-size:12px;
+	margin:0;
 }
 	
 #events-home {
