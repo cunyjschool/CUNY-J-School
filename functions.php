@@ -154,11 +154,17 @@ class cunyj
 	function add_admin_bar_items() {
 		global $wp_admin_bar;
 		
-		// Add a link to the theme's options for the users who can edit		
+		// Add theme management links for users who can	
 		if ( current_user_can('edit_theme_options') ) {
 			$args = array(
 				'title' => 'Theme Options',
 				'href' => admin_url( 'themes.php?page=cunyj_options' ),
+				'parent' => 'appearance',
+			);
+			$wp_admin_bar->add_menu( $args );
+			$args = array(
+				'title' => 'Manage Gallery',
+				'href' => admin_url( 'admin.php?page=nggallery-manage-gallery' ),
 				'parent' => 'appearance',
 			);
 			$wp_admin_bar->add_menu( $args );
