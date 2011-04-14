@@ -27,7 +27,7 @@
 <?php if(is_page(array(154,156,158,160,1731,4396,8424))) { ?>  	
 <ul>
     <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/business-cards/">Business Cards</a></li>
-    <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/laptop-information/">Laptop Information</a></li>
+    <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/technical-requirements/">Technical Requirements</a></li>
     <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/open-house/">Open House</a></li>
     <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/orientation/">Orientation</a></li>
     <!-- <li><a href="/admissions/admitted-students/software-installation/">Software Installation</a></li> -->
