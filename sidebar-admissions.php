@@ -27,7 +27,7 @@
 <?php if(is_page(array(154,156,158,160,1731,4396,8424))) { ?>  	
 <ul>
     <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/business-cards/">Business Cards</a></li>
-    <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/laptop-information/">Laptop Information</a></li>
+    <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/technical-requirements/">Technical Requirements</a></li>
     <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/open-house/">Open House</a></li>
     <li><a href="<?php bloginfo('url'); ?>/admissions/admitted-students/orientation/">Orientation</a></li>
     <!-- <li><a href="/admissions/admitted-students/software-installation/">Software Installation</a></li> -->
@@ -36,7 +36,7 @@
 </li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">Frequently Asked Questions</a></li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/ten-reasons-to-choose-cuny/">Ten Reasons to Choose CUNY</a></li>
-<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2010/">Class of 2010 Profile</a></li>
+<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2011/">Class of 2011 Profile</a></li>
 <li><a href="<?php bloginfo('url'); ?>/2010/05/17/august-academy-for-class-of-2012-applicants/">August Academy</a></li>
 </ul>
 
