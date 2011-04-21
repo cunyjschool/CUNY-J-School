@@ -54,6 +54,7 @@ class cunyj
 		register_nav_menus(
 			array(
 				'primary_navigation' => 'Primary Navigation',
+				'footer_navigation' => 'Footer Navigation',
 				'currentstudents' => 'Current Students',
 				'about' => 'About',
 				'research_center' => 'Research Center',

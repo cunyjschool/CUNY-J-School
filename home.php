@@ -1,7 +1,14 @@
 <?php get_header(); ?>
 
-<div class="wrap">
+<div class="main">
 	
-</div><!-- END .wrap >
+	<div class="wrap">
+		
+		
+	</div><!-- END .wrap -->
+	
+	<div class="clear-both"></div>
+	
+</div><!-- END .main -->
 	
 <?php get_footer(); ?>

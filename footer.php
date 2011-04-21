@@ -1,8 +1,22 @@
 <div class="footer">
 	
-	<div class="wrap">
+	<div class="wrap primary-footer">
+		
+		<?php 
+			$args = array(
+				'theme_location' => 'footer_navigation',
+				'fallback_cb' => false,
+				'container_class' => 'footer-navigation-wrap',
+				'menu_class' => 'footer-navigation',
+			);
+			wp_nav_menu( $args );
+		?>
 		
 	</div><!-- END .wrap -->
+	
+	<div class="wrap secondary-footer">
+		
+	</div>
 	
 </div><!-- END .footer -->
 

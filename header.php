@@ -102,11 +102,13 @@
 <div id="primary_nav">
 	<div class="wrap">
 		
-	<?php wp_nav_menu(
-				array(
-					'theme_location' => 'primary_navigation'
-					)
-				); ?>
+	<?php 
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary_navigation'
+			)
+		);
+	?>
 	</div><!-- /.wrap -->
 </div>
 <?php endif; ?>

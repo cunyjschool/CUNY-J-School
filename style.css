@@ -14,11 +14,11 @@ Tags: buddypress
  */
 
 body {
-	background: #EEEEEE; 
+	background-color: #222222; 
 	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
-	color: #333;
+	color: #333333;
 	line-height: 18px;
 	font-size: 12px;
 }
@@ -88,6 +88,15 @@ h4 {
 .wrap {
 	margin: 0 auto;
 	width: 900px;
+}
+
+.main {
+	background-color: #EEEEEE;
+}
+
+.main .wrap {
+	background-color: #FFFFFF;
+	min-height: 300px;
 }
 
 fieldset {
@@ -417,12 +426,8 @@ div.tabber-item.active {
 div.gr_grid_container {
 	float: right !important;
 }
-
-.main {
-	clear: both;
-}
 	
-.main, #buddypress {
+#buddypress {
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -1558,20 +1563,6 @@ li#wire-local {
 
 li#wire-dnj {
 	background: url(images/wire/ico-dnj.jpg) no-repeat 0 13px; }
-
-#footerboard {
-	background: url(images/grad-back-home.jpg) no-repeat top; 
-	border-top: 1px dotted #eee;
-	margin-top: 10px;
-	clear: both; 
-	padding: 40px 20px 20px 20px; }
-	
-#footerboard h3 {
-	margin: 10px 0;
-	font-size: 110%; }
-	
-#footerboard h2 {
-	margin-top: 0; }
 	
 .featured-site {
 	 width: 260px; 
@@ -1667,12 +1658,65 @@ li#wire-dnj {
 	padding: 20px;
 	background: url(images/grad-back2.jpg) bottom repeat-x; }
 	
-#footer {
-	clear: both; 
-	background: #222;
-	color: #999;
-	font-size: 90%;
-} 
+.footer {
+	background-color: #222222;
+	color: #999999;
+	font-size: 11px;
+}
+
+.footer .wrap.primary-footer {
+	background-color: #333333;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.footer .wrap.secondary-footer {
+	margin-bottom: 20px;
+}
+
+.footer ul.footer-navigation {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.footer ul.footer-navigation li.menu-item a {
+	color: #EEEEEE;
+	text-decoration: none;
+}
+
+.footer ul.footer-navigation li.menu-item ul.sub-menu {
+	display: inline;
+}
+
+.footer ul.footer-navigation li.menu-item ul.sub-menu li.menu-item {
+	display: inline;
+	border-left: 1px solid #444444;
+	padding-left: 5px;
+	padding-right: 4px;
+}
+
+.footer ul.footer-navigation li.menu-item ul.sub-menu li.menu-item:first-child {
+	border-left: none;
+}
+
+.footer ul.footer-navigation li.menu-item ul.sub-menu li.menu-item a {
+	color: #777777;
+}
+
+.footer ul.footer-navigation li.menu-item a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.footer ul.footer-navigation li.menu-item ul.sub-menu li.menu-item a:hover {
+	color: ;
+}
+
 
 #footer a, #footer a:visited {
 	color: #eee;
@@ -1691,11 +1735,8 @@ li#wire-dnj {
 
 #footer ul#comments li {
 	padding: 1px 0 1px 19px;
-	background: url(images/comment.png) no-repeat 0 8px; }
-	
-#footerwrap {
-	background: #333;
-	padding: 20px; }
+	background: url(images/comment.png) no-repeat 0 8px;
+}
 	
 
  /* Start Clear Styles */
