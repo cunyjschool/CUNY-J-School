@@ -64,15 +64,6 @@ h2 a, h3 a {
 	color: #333333;
 }
 
-h2 a:hover, h3 a:hover {
-	color: #333333;
-}
-
-h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
-	text-decoration: none;
-	background-color: #F8F8F8;
-}
-
 h3 {
 	font-size: 18px;
 	line-height: 24px;
@@ -1686,13 +1677,18 @@ li#wire-dnj {
 }
 
 .footer h4 {
-	margin:0px;
+	margin: 0px;
 	padding-left: 10px;
 	padding-top: 10px;
 }
 
 .footer h4 a {
-	color: #FF9900;
+	color: #CCCCCC;
+}
+
+.footer h4 a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 
 .footer ul.footer-navigation {
@@ -1703,8 +1699,13 @@ li#wire-dnj {
 }
 
 .footer ul.footer-navigation li.menu-item a {
-	color: #EEEEEE;
+	color: #CCCCCC;
 	text-decoration: none;
+}
+
+.footer ul.footer-navigation li.menu-item a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
 }
 
 .footer ul.footer-navigation li.menu-item ul.sub-menu {
@@ -1727,12 +1728,12 @@ li#wire-dnj {
 }
 
 .footer ul.footer-navigation li.menu-item a:hover {
-	text-decoration: underline;
 	color: #FFFFFF;
 }
 
 .footer ul.footer-navigation li.menu-item ul.sub-menu li.menu-item a:hover {
-	color: ;
+	color: #999999;
+	text-decoration: underline;
 }
 
 
