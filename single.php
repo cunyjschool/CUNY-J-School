@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="wrap">
+<div class="main">
 	
-	<div class="main" id="single-main">
+	<div class="wrap">
 		
 		<?php
 		if ( in_category(161) ) {
@@ -60,9 +60,9 @@
 
 	<div style="clear:both;"></div>
 
-</div>
+</div><!-- END .wrap -->
 
-</div>
+</div><!-- END .main -->
 
 <?php get_footer(); ?>
 

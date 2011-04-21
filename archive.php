@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="wrap">
+<div class="main">
 
-	<div class="main" id="archive-main">
+	<div class="wrap">
 	
 		<?php get_sidebar( 'news' ); ?>	
 
@@ -64,8 +64,8 @@
 
 </div>
 
-</div><!-- END - .main#archive-main -->
-
 </div><!-- END - .wrap -->
+
+</div><!-- END - .main -->
 
 <?php get_footer(); ?>
