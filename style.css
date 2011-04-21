@@ -1671,9 +1671,23 @@ li#wire-dnj {
 	color: #444444;
 }
 
-.footer img#cuny-footer-logo {
-	padding-right: 10px;
-	padding-top: 15px;
+.footer .google-map a {
+	display: block;
+	width: 250px;
+	height: 125px;
+	background-image: url(images/cunyjschoolmap_h250color.jpg);
+	background-repeat: no-repeat;
+	border: 5px solid #444444;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.footer .google-map a:hover {
+	border-color: #555555;
 }
 
 .footer h4 {
@@ -1683,18 +1697,17 @@ li#wire-dnj {
 }
 
 .footer h4 a {
-	color: #CCCCCC;
+	color: #FF9900;
 }
 
 .footer h4 a:hover {
-	color: #FFFFFF;
 	text-decoration: underline;
 }
 
 .footer ul.footer-navigation {
 	padding-left: 10px;
-	padding-top: 5px;
-	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 	line-height: 20px;
 }
 
@@ -1736,27 +1749,11 @@ li#wire-dnj {
 	text-decoration: underline;
 }
 
-
-#footer a, #footer a:visited {
-	color: #eee;
-	text-decoration: none; }
-
-#footer a:hover {
-	color: #fff;
-	text-decoration: underline; }
-
-#footer h2, #footer h2 a, #footer h2 a:visited {
-	color: #fff;
-	background: none; }
-
-#footer h2 a:hover {
-	text-decoration: underline; }
-
-#footer ul#comments li {
-	padding: 1px 0 1px 19px;
-	background: url(images/comment.png) no-repeat 0 8px;
-}
-	
+.footer p.contact {
+	padding-left: 10px;
+	padding-bottom: 10px;
+	color: #777777;
+}	
 
  /* Start Clear Styles */
 ul#other-internships li div {
