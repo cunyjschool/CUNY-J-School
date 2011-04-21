@@ -23,6 +23,8 @@
 
 	<meta name="google-site-verification" content="HclfSOn_fMggPZnL-xG4QRz4QvnPSBO-P7AJaOEhA-8" />
 	
+	<!-- Pingdom check -->
+	
 	<?php
 	/**
 	 * All stylesheets are enqueued in functions.php
