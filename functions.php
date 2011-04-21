@@ -35,6 +35,28 @@ class cunyj
 		// Our theme needs to support post thumbnails
 		add_theme_support( 'post-thumbnails' );
 		
+		register_sidebar(array(
+	        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	        'after_widget' => '</li>',
+	        'before_title' => '<h2 class="widgettitle">',
+	        'after_title' => '</h2>',
+	    ));
+
+		register_sidebar( 'about' );
+		register_sidebar( 'admissions' );
+		register_sidebar( 'alumni' );
+		register_sidebar( 'careerservices_left' );
+		register_sidebar( 'careerservices_internships' );
+		register_sidebar( 'cunyj_event' );
+		register_sidebar( 'default_page' );
+		register_sidebar( 'faculty' );
+		register_sidebar( 'giving' );
+		register_sidebar( 'home' );
+		// Sidebar for the Research Center pages
+		register_sidebar( array( 'id' => 'research_center', 'name' => 'Research Center', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
+		// Sidebar for Entrepreneurial Journalism
+		register_sidebar( array( 'id' => 'entrepreneurial_journalism', 'name' => 'Entrepreneurial Journalism', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
+		
 		add_action( 'init', array( &$this, 'init' ) );
 		add_action( 'init', array( &$this, 'register_taxonomies' ) );		
 		add_action( 'admin_init', array( &$this, 'admin_init' ) );
@@ -558,30 +580,6 @@ function cunyj_get_member_profile_data( $args = '' ) {
 	$data = xprofile_format_profile_field( $members_template->member->profile_data[$field]['field_type'], $members_template->member->profile_data[$field]['field_data'] );
 
 	return apply_filters( 'cunyj_get_member_profile_data', $data );
-}
-
-if ( function_exists('register_sidebar') ) {
-    register_sidebar(array(
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h2 class="widgettitle">',
-        'after_title' => '</h2>',
-    ));
-	
-	register_sidebar( 'about' );
-	register_sidebar( 'admissions' );
-	register_sidebar( 'alumni' );
-	register_sidebar( 'careerservices_left' );
-	register_sidebar( 'careerservices_internships' );
-	register_sidebar( 'cunyj_event' );
-	register_sidebar( 'default_page' );
-	register_sidebar( 'faculty' );
-	register_sidebar( 'giving' );
-	// Sidebar for the Research Center pages
-	register_sidebar( array( 'id' => 'research_center', 'name' => 'Research Center', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
-	// Sidebar for Entrepreneurial Journalism
-	register_sidebar( array( 'id' => 'entrepreneurial_journalism', 'name' => 'Entrepreneurial Journalism', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
-		
 }
 
 ?>
