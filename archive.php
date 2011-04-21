@@ -60,9 +60,9 @@
 	
   </div>
 
-	<div style="clear:right;"></div>
-
 </div>
+
+	<div class="clear-both"></div>
 
 </div><!-- END - .wrap -->
 
