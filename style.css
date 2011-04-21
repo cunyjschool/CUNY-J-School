@@ -67,7 +67,8 @@ h2 a, h3 a {
 h3 {
 	font-size: 18px;
 	line-height: 24px;
-	margin: 10px 0;
+	margin: 0;
+	padding: 10px 0;
 }
 
 h4 {
@@ -424,12 +425,6 @@ div.gr_grid_container {
 	padding-right: 20px;
 	padding-bottom: 40px;
 	background: #FFFFFF;
-}
-
-.main .section {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	clear: both;
 }
 	
 #tile-orange {
