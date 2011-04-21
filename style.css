@@ -20,11 +20,11 @@ html, body {
 
 body {
 	background: #EEEEEE; 
-	font-family: "Trebuchet MS", Arial, Verdana, sans-serif;
+	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
 	color: #333;
-	line-height: 170%;
+	line-height: 18px;
 	font-size: 12px;
 }
 
@@ -1671,7 +1671,8 @@ li#wire-dnj {
 	clear: both; 
 	background: #222;
 	color: #999;
-	font-size: 90%; } 
+	font-size: 90%;
+} 
 
 #footer a, #footer a:visited {
 	color: #eee;
