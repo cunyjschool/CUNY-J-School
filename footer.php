@@ -2,6 +2,10 @@
 	
 	<div class="wrap primary-footer">
 		
+		<a href="http://www.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/logos/cuny-cube_s30.jpg" height="30px" width="30px" class="float-right" id="cuny-footer-logo" alt="CUNY" />
+			
+		<h4><a href="<?php bloginfo( 'url' ); ?>">CUNY Graduate School of Journalism</a></h4>
+		
 		<?php 
 			$args = array(
 				'theme_location' => 'footer_navigation',
@@ -15,7 +19,7 @@
 	</div><!-- END .wrap -->
 	
 	<div class="wrap secondary-footer">
-		
+		<p>&copy;<?php echo date( 'Y' ); ?> CUNY Graduate School of Journalism</p>
 	</div>
 	
 </div><!-- END .footer -->

@@ -1676,12 +1676,30 @@ li#wire-dnj {
 
 .footer .wrap.secondary-footer {
 	margin-bottom: 20px;
+	text-align: center;
+	color: #444444;
+}
+
+.footer img#cuny-footer-logo {
+	padding-right: 10px;
+	padding-top: 15px;
+}
+
+.footer h4 {
+	margin:0px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.footer h4 a {
+	color: #FF9900;
 }
 
 .footer ul.footer-navigation {
 	padding-left: 10px;
-	padding-top: 10px;
+	padding-top: 5px;
 	padding-bottom: 10px;
+	line-height: 20px;
 }
 
 .footer ul.footer-navigation li.menu-item a {
@@ -1696,7 +1714,7 @@ li#wire-dnj {
 .footer ul.footer-navigation li.menu-item ul.sub-menu li.menu-item {
 	display: inline;
 	border-left: 1px solid #444444;
-	padding-left: 5px;
+	padding-left: 6px;
 	padding-right: 4px;
 }
 
