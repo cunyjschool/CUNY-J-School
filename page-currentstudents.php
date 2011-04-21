@@ -6,20 +6,20 @@ Template Name: Page - Current Students
 
 <?php get_header(); ?>
 
-<div class="wrap">
+<div class="main">
 	
-	<div class="main">
+	<div class="wrap">
 		
 		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 
   <div class="sidebar left">
 
-			<?php wp_nav_menu(
-						array(
-							'menu' => 'Current Students',
-							'menu_class' => 'navigation'
-							)
-						); ?>
+	<?php wp_nav_menu(
+				array(
+					'menu' => 'Current Students',
+					'menu_class' => 'navigation'
+					)
+				); ?>
 
 	</div>
           
@@ -48,12 +48,11 @@ Template Name: Page - Current Students
 		<?php endwhile; endif; ?>
   </div>
 
-	<div style="clear:both;"></div>
+	<div class="clear-both"></div>
 	
-</div>
+</div><!-- END .wrap -->
 
-</div>
-
+</div><!-- END .main -->
 
 <?php get_footer(); ?>
 
