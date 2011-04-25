@@ -37,6 +37,15 @@
 					<p>By: <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
     				<p>Pub. Year: <?php echo $capstone_year; ?></p>
 					<p>Concentration: <?php echo $concentrations; ?></p>
+					<?php
+						// Show the image credit if it exists
+						if ( has_post_thumbnail() ) {
+							$image_data = get_post( get_post_thumbnail_id() );
+							if ( $image_data->post_excerpt ) {
+								echo '<p><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+							}
+						} // END if ( has_post_thumbnail() )
+					?>
     				</li>
 					<?php endwhile; ?>
  					</ul>
@@ -69,6 +78,15 @@
                     <p>By: <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
                     <p>Pub. Year: <?php echo $capstone_year; ?></p>
                     <p>Concentration: <?php echo $concentrations; ?></p>
+					<?php
+						// Show the image credit if it exists
+						if ( has_post_thumbnail() ) {
+							$image_data = get_post( get_post_thumbnail_id() );
+							if ( $image_data->post_excerpt ) {
+								echo '<p><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+							}
+						} // END if ( has_post_thumbnail() )
+					?>
                     </li>
                     <?php endwhile; ?>
                     </ul>
@@ -101,6 +119,15 @@
                     <p>By: <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
                     <p>Pub. Year: <?php echo $capstone_year; ?></p>
                     <p>Concentration: <?php echo $concentrations; ?></p>
+					<?php
+						// Show the image credit if it exists
+						if ( has_post_thumbnail() ) {
+							$image_data = get_post( get_post_thumbnail_id() );
+							if ( $image_data->post_excerpt ) {
+								echo '<p><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+							}
+						} // END if ( has_post_thumbnail() )
+					?>
                     </li>
                     <?php endwhile; ?>
                     </ul>
