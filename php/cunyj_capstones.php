@@ -57,7 +57,6 @@ class cunyj_capstones
 					'editor',
 					'excerpt',						
 					'thumbnail',
-					'custom-fields',
 				),
 				'taxonomies' => array(
 					'cunyj_capstone_media_types',

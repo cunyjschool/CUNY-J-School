@@ -27,7 +27,7 @@
 		<div class="sidebar right capstone-right">
         
         <h4>Details</h4>
-			<p><span>By:</span> <?php the_author(); ?></p>
+			<p><span>By:</span> <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
             <p><span>Pub. Year:</span> <?php echo $capstone_year; ?></p>
             <p><span>Capstone Advisor:</span> <?php echo $capstone_advisor; ?></p>
             <p><span>Media Type:</span> <?php echo $media_types; ?></p>
@@ -67,7 +67,7 @@
 		
   </div>
 
-	<div style="clear:both;"></div>
+	<div class="clear-both"></div>
 
 	</div><!-- END #main -->
 

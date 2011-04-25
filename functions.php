@@ -2,7 +2,7 @@
 
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
 define( 'CUNYJ_PREFIX' , 'cunyj_' );
-define( 'CUNYJ_VERSION', '1.3.4' );
+define( 'CUNYJ_VERSION', '1.3.5' );
 
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
@@ -79,6 +79,8 @@ class cunyj
 		}
 		
 		// Remove the "Settings" option from BuddyPress personal profile (also removes notification settings)
+		bp_core_remove_nav_item( 'settings' );
+
 		if ( function_exists( 'bp_core_remove_nav_item' ) ) {
 			bp_core_remove_nav_item( 'settings' );
 		}
@@ -125,6 +127,9 @@ class cunyj
 		if ( is_page( 'urban' ) ) {
 			wp_enqueue_style( 'cunyj_page_urbanreporting_css', get_bloginfo('template_directory') . '/css/page-urbanreporting.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		}
+		if ( is_page( 'stylebook' ) ) {
+			wp_enqueue_style( 'cunyj_page_stylebook_css', get_bloginfo('template_directory') . '/css/page-stylebook.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
+		}
 		if ( is_page( 'cuny-campus-wire' ) ) {
 			wp_enqueue_style( 'cunyj_page_cunycampuswire_css', get_bloginfo('template_directory') . '/css/page-cunycampuswire.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 			wp_enqueue_script( 'cunyj_page_cunycampuswire_js', get_bloginfo('template_directory') . '/js/page-cunycampuswire.js', array( 'jquery' ), CUNYJ_VERSION, true );
@@ -149,11 +154,17 @@ class cunyj
 	function add_admin_bar_items() {
 		global $wp_admin_bar;
 		
-		// Add a link to the theme's options for the users who can edit		
+		// Add theme management links for users who can	
 		if ( current_user_can('edit_theme_options') ) {
 			$args = array(
 				'title' => 'Theme Options',
 				'href' => admin_url( 'themes.php?page=cunyj_options' ),
+				'parent' => 'appearance',
+			);
+			$wp_admin_bar->add_menu( $args );
+			$args = array(
+				'title' => 'Manage Gallery',
+				'href' => admin_url( 'admin.php?page=nggallery-manage-gallery' ),
 				'parent' => 'appearance',
 			);
 			$wp_admin_bar->add_menu( $args );

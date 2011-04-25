@@ -1,0 +1,140 @@
+.page-template-page-stylebook-php .content table {
+	font-size:13px;
+	border-collapse:collapse;
+	margin:15px 0;
+	width:100%;
+}
+
+.page-template-page-stylebook-php .content thead {
+	background-color:#efefef;
+}
+
+.page-template-page-stylebook-php .content td, .page-template-page-stylebook-php .content th {
+	padding:5px 10px;
+	border:1px solid #dfdfdf;
+	text-align:left;
+}
+
+.page-template-page-stylebook-php .content tbody tr.even td {
+	background-color:#fafafa;
+}
+
+.page-template-page-stylebook-php .content caption {
+	caption-side:bottom;
+	padding:10px;
+	border-bottom:1px solid #eeeeee;
+	font-style:italic;
+}
+
+
+.page-template-page-stylebook-php code{
+	padding:5px 10px;
+	background:#efefef;
+	border:1px solid #dfdfdf;
+	margin:10px 0;
+	display:block;
+	line-height:2em;
+}
+
+.page-template-page-stylebook-php p.footnote {
+	border-top: 1px solid #eeeeee;
+	font-size: 0.9em;
+	margin-top: 10px;
+	padding-top: 5px;
+}
+
+.page-template-page-stylebook-php p.caption {
+	border-bottom: 1px solid #eeeeee;
+	margin-left:20px;
+	text-align:center;
+}
+
+.page-template-page-stylebook-php .entry ol {
+	padding-left: 40px;
+	margin: 12px 0;
+}
+
+.page-template-page-stylebook-php .entry ol li {
+	margin:10px 0;
+	padding:0;	 
+}
+
+.page-template-page-stylebook-php .entry ul {
+	margin: 12px 0;	 
+}
+
+.page-template-page-stylebook-php .entry ul li {
+	list-style-image: url("images/icons/arrow_000_small.png");
+	border-bottom: 1px solid #EEEEEE;
+	padding-left:40px;
+}
+
+.page-template-page-stylebook-php .entry ul li:first-child {
+	border-top: 1px solid #EEEEEE;
+}
+
+.page-template-page-stylebook-php .entry img.img-full {
+	width:605px;
+	border:5px solid #EEEEEE;
+	margin-bottom:20px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.page-template-page-stylebook-php .entry img.img-right {
+	width:300px;
+	float:right;
+	margin:0 0 10px 20px;
+	border:5px solid #EEEEEE;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.page-template-page-stylebook-php table.palette td.color {
+	width:14%;
+}
+
+.page-template-page-stylebook-php table.palette td:first-child {
+	width:15%;
+	padding:0;
+}
+
+.page-template-page-stylebook-php table.palette .white {
+	color:#ffffff;
+}
+
+.page-template-page-stylebook-php li h4 {
+	margin-top:10px;
+}
+
+.page-template-page-stylebook-php li:first-child h4 {
+	margin-top:0;
+}
+
+.page-template-page-stylebook-php ul#sidebar-nav li h4 {
+	color:#0066CC;
+	background:#F9F9F9;
+	border-bottom:1px solid #EEEEEE;
+	border-top:1px solid #FFFFFF;
+	display:block;
+	padding:7px;
+}
+
+.page-template-page-stylebook-php .content h4 {
+	font-size:14px;
+}
+
+.page-template-page-stylebook-php ul#sidebar-nav li h4 {
+	color:#0066CC;
+	background:#F9F9F9;
+	border-bottom:1px solid #EEEEEE;
+	border-top:1px solid #FFFFFF;
+	display:block;
+	padding:7px;
+}
+
+.page-template-page-stylebook-php .video {
+	padding:10px 0 20px 20px;
+}
