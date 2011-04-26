@@ -1721,6 +1721,8 @@ li#wire-dnj {
 	margin: 0px;
 	padding-left: 10px;
 	padding-top: 10px;
+	font-weight: 200;
+	letter-spacing: 0.3px;
 }
 
 .footer h4 a {
@@ -1737,6 +1739,8 @@ li#wire-dnj {
 	color: #CCCCCC;
 	padding-top: 15px;
 	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 0.3px;
 }
 
 .footer p.contact a {
