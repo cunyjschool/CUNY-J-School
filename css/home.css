@@ -64,6 +64,18 @@ body.home-page .homepage-headlines {
 	right: 3px;
 }
 
+body.home-page .home-page-item#home-page-item-headlines .homepage-how-to-apply {
+	width: 292px;
+	z-index: 100;
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+} 
+
+body.home-page .home-page-item#home-page-item-headlines .homepage-how-to-apply h3 a {
+	
+}
+
 body.home-page .homepage-headlines h3.latest-headlines-title a {
 	-webkit-border-top-right-radius: 3px;
 	-moz-border-radius-topright: 3px;
@@ -84,14 +96,51 @@ body.home-page .homepage-headlines ul.latest-headlines li a {
 	display: block;
 	padding-left: 12px;
 	padding-right: 12px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	color: #666666;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: #236ACC;
 }
 
 body.home-page .homepage-headlines ul.latest-headlines li a:hover {
 	color: #111111;
 	text-decoration: underline;
+}
+
+body.home-page .homepage-headlines ul.academic-resources {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+body.home-page .homepage-headlines ul.academic-resources a {
+	text-decoration: none;
+	color: #444444;
+}
+
+body.home-page .homepage-headlines ul.academic-resources a:hover {
+	text-decoration: underline;
+}
+
+body.home-page .homepage-headlines ul.academic-resources li a.highlight {
+	background-color: #FFF7A6;
+}
+
+body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation {
+	display: inline;
+}
+
+body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation li {
+	display: inline;
+	padding-right: 5px;
+}
+
+body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation li:first-child {
+	padding-left: 5px;
+}
+
+body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation li a {
+	color: #999999;
 }
 
 body.home-page .homepage-headlines-excerpt {
