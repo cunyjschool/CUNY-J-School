@@ -299,7 +299,7 @@ class cunyj
 			'show_tagcloud' => false,
 			'hierarchical' => true,
 			'rewrite' => array(
-				'slug' => 'concentractions',
+				'slug' => 'concentrations',
 				'hierarchical' => true,
 			)
 		);
