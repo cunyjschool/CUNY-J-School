@@ -243,6 +243,31 @@ class cunyj
 		);
 		register_taxonomy( 'cunyj_organization', $post_types, $args );
 		
+		// Media type taxonomy
+		$args = array(
+			'label' => 'Media Type',
+			'hierarchical' => true,	
+			'rewrite' => array(
+				'slug' => 'media-types',
+				'hierarchical' => true,
+				)
+		);
+		$post_types = array(
+			'cunyj_capstone',
+		);				
+		register_taxonomy( 'cunyj_media_types', $post_types, $args );
+		
+		// Concentration taxonomy
+		$args = array(
+			'label' => 'Concentration',	
+			'show_tagcloud' => false,
+			'hierarchical' => true,
+		);
+		$post_types = array(
+			'cunyj_capstone',
+		);
+		register_taxonomy( 'cunyj_concentrations', 'cunyj_capstone', $args );
+		
 	} // END register_taxonomies()
 	
 	/**
