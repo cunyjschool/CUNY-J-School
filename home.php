@@ -17,7 +17,7 @@
 				?>
 		
 				<div class="homepage-headlines">
-					<h3 class="latest-headlines-title"><a href="#">Latest Headlines</a></h3>
+					<h3 class="latest-headlines-title button"><a href="#">Latest Headlines</a></h3>
 					<ul class="latest-headlines">
 					<?php if ( $homepage_headlines->have_posts() ) : ?>
 					<?php while ( $homepage_headlines->have_posts() ) : $homepage_headlines->the_post(); ?>
@@ -27,7 +27,7 @@
 					<?php endif; ?>
 					</ul>
 				
-					<h3><a href="#">How to Apply</a></h3>
+					<h3 class="button"><a href="#">How to Apply</a></h3>
 				
 				
 				</div>
@@ -48,8 +48,80 @@
 				
 				<div id="home-page-item-events" class="home-page-item">
 					
-				
-				</div>
+					<div class="home-page-featured-event float-left home-page-event">
+					
+					<?php 
+						$args = array( 	
+							'post_type' => 'cunyj_event',
+							'showposts' => 1,
+							'meta_key' => '_cunyj_events_start_date',
+							'order' => 'ASC',
+							'orderby' => 'meta_value',
+							'taxonomy' => 'cunyj_event_category',
+							'term' => 'featured'
+						);
+						$featured_event = new WP_Query( $args );
+					?>
+					
+					<?php if ( $featured_event->have_posts() ) : while ( $featured_event->have_posts() ) : $featured_event->the_post(); ?>				
+					<?php 
+						$start_date = get_post_meta( get_the_ID(),"_cunyj_events_start_date", true );
+						$end_date = get_post_meta( get_the_ID(),"_cunyj_events_end_date", true );
+					?>
+					<div class="event-item">
+						<div class="event-item-date">
+				        	<span class="event-item-month"><?php echo date_i18n('M', $start_date) ; ?></span>
+					        <span class="event-item-day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></span>
+						</div> 
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<div class="entry"><?php the_excerpt(); ?></div>
+					</div>
+					<?php endwhile; else: ?>
+						<div class="message info">There is no lead featured event at this time.</div>
+					<?php endif; ?>
+					
+					</div><!-- END .home-page-featured-event -->
+					
+					<div class="home-page-all-events float-right">
+						
+					<?php 
+						$args = array( 	
+							'post_type' => 'cunyj_event',
+							'showposts' => 4,
+							'offset' => 1,
+							'meta_key' => '_cunyj_events_start_date',
+							'order' => 'ASC',
+							'orderby' => 'meta_value',
+							'taxonomy' => 'cunyj_event_category',
+							'term' => 'featured'
+						);
+						$all_events = new WP_Query( $args );
+					?>
+					
+					<ul>
+					<?php if ( $all_events->have_posts() ) : while ( $all_events->have_posts() ) : $all_events->the_post(); ?>				
+					<?php 
+						$start_date = get_post_meta( get_the_ID(),"_cunyj_events_start_date", true );
+						$end_date = get_post_meta( get_the_ID(),"_cunyj_events_end_date", true );
+					?>
+					<li class="event-item">
+					<div class="event-item-date float-left">
+				        <span class="event-item-month"><?php echo date_i18n('M', $start_date) ; ?></span>
+				        <span class="event-item-day"><?php echo date_i18n('d', $start_date); ?><?php if (date_i18n('d', $start_date) != date_i18n('d', $end_date)) { echo '-' . date_i18n('d', $end_date); } ?></span>
+					</div> 
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<div class="clear-both"></div>
+					</li>
+					<?php endwhile; else: ?>
+						<li><div class="message info">There is no lead featured event at this time.</div></li>
+					<?php endif; ?>
+					</ul>
+					
+					</div><!-- END .home-page-featured-event -->
+					
+					<div class="clear-both"></div>
+					
+				</div><!-- END .home-page-item-events -->
 				
 			</div>
 		

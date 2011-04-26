@@ -16,11 +16,17 @@ body.home-page .home-page-item {
 	position: relative;	
 }
 
-body.home-page h3 {
+body.home-page .content h3, body.home-page .content h4 {
+	padding: 0px;
+	margin: 0px;
+}
+
+body.home-page .content ul, body.home-page .content ul li {
+	margin: 0px;
 	padding: 0px;
 }
 
-body.home-page h3 a {
+body.home-page .content h3.button a {
 	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	display: block;
 	background: -moz-linear-gradient(center top , #F2F2F2, #CCCCCC) repeat scroll 0 0 #F2F2F2;
@@ -35,7 +41,7 @@ body.home-page h3 a {
 	border: 1px solid #D2D2D2;
 }
 
-body.home-page h3 a:hover {
+body.home-page .content h3.button a:hover {
 	background: -moz-linear-gradient(center top , #CCCCCC, #EEEEEE) repeat scroll 0 0 #F2F2F2;
 	border-color: #BBBBBB;
 	color: #111111;
@@ -64,11 +70,6 @@ body.home-page .homepage-headlines h3.latest-headlines-title a {
 	border-top-right-radius: 3px;
 }
 
-body.home-page .homepage-headlines ul.latest-headlines {
-	margin: 0px;
-	padding: 0px;
-}
-
 body.home-page .homepage-headlines ul.latest-headlines li {
 	border-top: #EEEEEE 1px solid;
 	margin: 0px;
@@ -83,6 +84,8 @@ body.home-page .homepage-headlines ul.latest-headlines li a {
 	display: block;
 	padding-left: 12px;
 	padding-right: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	color: #666666;
 }
 
@@ -111,4 +114,52 @@ body.home-page .homepage-headlines-gallery img {
 
 body.home-page .home-page-item#home-page-item-events {
 	width: 600px;
+}
+
+body.home-page .home-page-item#home-page-item-events .home-page-featured-event {
+	width: 250px;
+}
+
+body.home-page .home-page-item#home-page-item-events .home-page-all-events {
+	width: 325px;
+}
+
+body.home-page .home-page-item#home-page-item-events .home-page-all-events ul li {
+	border-top: #EEEEEE 1px solid;	
+}
+
+body.home-page .home-page-item#home-page-item-events .home-page-all-events ul li:first-child {
+	border-top: none;
+}
+
+body.home-page .event-item-date {
+	border: 1px solid #EEEEEE;
+	text-transform: uppercase;
+}
+
+body.home-page .home-page-all-events ul li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+body.home-page .home-page-all-events ul li h4 {
+	padding: 0px;
+}
+
+body.home-page .event-item-date span {
+	display: inline-block;
+}
+
+
+body.home-page .event-item-date span.event-item-month {
+	background: none repeat scroll 0 0 #DE1515;
+	color: #FFFFFF;
+	padding: 2px 6px;
+	text-align: center;
+	width: 25px;
+	background-color: #777777;
+}
+
+body.home-page .home-page-all-events .event-item h4 {
+	margin-left: 85px;
 }
