@@ -42,7 +42,7 @@
 						if ( has_post_thumbnail() ) {
 							$image_data = get_post( get_post_thumbnail_id() );
 							if ( $image_data->post_excerpt ) {
-								echo '<p><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+								echo '<p class="text-color-light-grey"><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
 							}
 						} // END if ( has_post_thumbnail() )
 					?>
@@ -83,7 +83,7 @@
 						if ( has_post_thumbnail() ) {
 							$image_data = get_post( get_post_thumbnail_id() );
 							if ( $image_data->post_excerpt ) {
-								echo '<p><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+								echo '<p class="text-color-light-grey"><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
 							}
 						} // END if ( has_post_thumbnail() )
 					?>
@@ -124,7 +124,7 @@
 						if ( has_post_thumbnail() ) {
 							$image_data = get_post( get_post_thumbnail_id() );
 							if ( $image_data->post_excerpt ) {
-								echo '<p><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+								echo '<p class="text-color-light-grey"><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
 							}
 						} // END if ( has_post_thumbnail() )
 					?>

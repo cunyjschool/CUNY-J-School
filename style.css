@@ -329,6 +329,14 @@ body.single-post .content {
 }
 
 /**
+ * Property: color
+ */
+
+.text-color-light-grey {
+	color: #999999;
+}
+
+/**
  * Property: box-shadow
  */
  
