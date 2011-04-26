@@ -99,7 +99,7 @@
                     <?php
 						$args = array(
 							'post_type' => 'cunyj_capstone',
-							'taxonomy' => 'cunyj_capstone_media_types',
+							'taxonomy' => 'cunyj_media_types',
 							'term' => 'packages',
 							'posts_per_page' => -1);
 						$loop = new WP_Query( $args );
