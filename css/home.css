@@ -4,6 +4,39 @@ body.home-page .content {
 	background-color: #EEEEEE;
 }
 
+body.home-page .content ul.home-page-social-links {
+	font-size: 11px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+}
+
+body.home-page .content ul.home-page-social-links li {
+	display: inline;
+	margin-right: 10px;
+}
+
+body.home-page .content ul.home-page-social-links li a {
+	color: #999999;
+	text-decoration: none;
+	padding-left: 20px;	
+}
+
+body.home-page .content ul.home-page-social-links li a:hover {
+	text-decoration: underline;
+}
+
+body.home-page .content ul.home-page-social-links li a.twitter {
+	background-image: url("../images/sprites/20101104sprite.png");
+    background-position: -10px -45px;
+    background-repeat: no-repeat;
+}
+
+body.home-page .content ul.home-page-social-links li a.facebook {
+	background-image: url("../images/sprites/20101104sprite.png");
+	background-position: -10px -9px;
+	background-repeat: no-repeat;
+}
+
 body.home-page .row {
 	margin-bottom: 10px;
 }
@@ -19,6 +52,11 @@ body.home-page .home-page-item {
 body.home-page .content h3, body.home-page .content h4 {
 	padding: 0px;
 	margin: 0px;
+	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+}
+
+body.home-page a.highlight {
+	background-color: #FFF7A6;
 }
 
 body.home-page .content ul, body.home-page .content ul li {
@@ -45,6 +83,7 @@ body.home-page .content h3.button a:hover {
 	background: -moz-linear-gradient(center top , #CCCCCC, #EEEEEE) repeat scroll 0 0 #F2F2F2;
 	border-color: #BBBBBB;
 	color: #111111;
+	text-decoration: none;
 }
 
 body.home-page .home-page-item#home-page-item-headlines {
@@ -59,21 +98,6 @@ body.home-page .home-page-item#home-page-item-headlines {
 body.home-page .homepage-headlines {
 	width: 292px;
 	z-index: 100;
-	position: absolute;
-	top: 3px;
-	right: 3px;
-}
-
-body.home-page .home-page-item#home-page-item-headlines .homepage-how-to-apply {
-	width: 292px;
-	z-index: 100;
-	position: absolute;
-	bottom: 3px;
-	right: 3px;
-} 
-
-body.home-page .home-page-item#home-page-item-headlines .homepage-how-to-apply h3 a {
-	
 }
 
 body.home-page .homepage-headlines h3.latest-headlines-title a {
@@ -94,11 +118,13 @@ body.home-page .homepage-headlines ul.latest-headlines li:first-child {
 
 body.home-page .homepage-headlines ul.latest-headlines li a {
 	display: block;
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	color: #236ACC;
+	font-weight: 300;
+	letter-spacing: 0.3px;
 }
 
 body.home-page .homepage-headlines ul.latest-headlines li a:hover {
@@ -106,40 +132,44 @@ body.home-page .homepage-headlines ul.latest-headlines li a:hover {
 	text-decoration: underline;
 }
 
-body.home-page .homepage-headlines ul.academic-resources {
+body.home-page #home-page-how-to-apply {
+	width: 292px;
+}
+
+body.home-page #home-page-how-to-apply ul.academic-resources {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 5px;	
 }
 
-body.home-page .homepage-headlines ul.academic-resources a {
+body.home-page #home-page-how-to-apply a {
 	text-decoration: none;
 	color: #444444;
 }
 
-body.home-page .homepage-headlines ul.academic-resources a:hover {
+body.home-page #home-page-how-to-apply a:hover {
 	text-decoration: underline;
 }
 
-body.home-page .homepage-headlines ul.academic-resources li a.highlight {
-	background-color: #FFF7A6;
+body.home-page #home-page-how-to-apply ul.academic-resources li {
+	display:inline;
+	float:left;
+	width: 130px;
 }
 
-body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation {
-	display: inline;
+body.home-page #home-page-how-to-apply ul.academic-resources li ul.sub-navigation li a {
+	color: #999999;
 }
 
-body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation li {
-	display: inline;
-	padding-right: 5px;
+body.home-page #home-page-how-to-apply p.entrepreneurial-journalism {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
 
-body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation li:first-child {
-	padding-left: 5px;
-}
-
-body.home-page .homepage-headlines ul.academic-resources li ul.sub-navigation li a {
+body.home-page #home-page-how-to-apply p.entrepreneurial-journalism a {
 	color: #999999;
 }
 
@@ -162,7 +192,7 @@ body.home-page .homepage-headlines-gallery img {
 }
 
 body.home-page .home-page-item#home-page-item-events {
-	width: 600px;
+	width: 580px;
 }
 
 body.home-page .home-page-item#home-page-item-events .home-page-featured-event {

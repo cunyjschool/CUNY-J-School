@@ -26,11 +26,6 @@
 						<li>There aren't any stories currently.</li>
 					<?php endif; ?>
 					</ul>
-					<ul class="inline-navigation home-page-social-links">
-						<li><a class="twitter" href="http://twitter.com/cunyjschool">Twitter</a></li>						
-						<li><a class="facebook" href="http://facebook.com/cunyjschool">Facebook</a></li>
-						<li><a class="email highlight" href="#">Email Newsletter</a></li>	
-					</ul>
 				</div>
 			
 				<div class="homepage-headlines-gallery">
@@ -49,7 +44,15 @@
 			
 			<div class="row">
 				
-				<div id="home-page-how-to-apply" class="home-page-item float-right">
+				<div id="home-page-second-right" class="float-right">
+					
+					<ul class="inline-navigation home-page-social-links">
+						<li><a class="twitter" href="http://twitter.com/cunyjschool">Twitter</a></li>						
+						<li><a class="facebook" href="http://facebook.com/cunyjschool">Facebook</a></li>
+						<li><a class="email highlight" href="#">Email Newsletter</a></li>	
+					</ul>
+				
+				<div id="home-page-how-to-apply" class="home-page-item">
 					<h3 class="button"><a href="#">How to Apply</a></h3>
 					<ul class="academic-resources">
 						<li class="academic-subjects">
@@ -71,6 +74,8 @@
 					</ul>
 					<div class="clear-both"></div>
 					<p class="entrepreneurial-journalism"><a class="highlight" href="#">Learn more about Entrepreneurial Journalism</a></p>
+				</div>
+				
 				</div>
 				
 				<div id="home-page-item-events" class="home-page-item">
