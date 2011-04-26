@@ -17,7 +17,7 @@
 					<?php
 						$args = array( 
 							'post_type' => 'cunyj_capstone',
-							'taxonomy' => 'cunyj_capstone_media_types',
+							'taxonomy' => 'cunyj_media_types',
 							'term' => 'articles', 
 							'posts_per_page' => -1 );
 						$loop = new WP_Query( $args );
@@ -58,14 +58,14 @@
                     <?php
 						$args = array(
 							'post_type' => 'cunyj_capstone',
-							'taxonomy' => 'cunyj_capstone_media_types',
+							'taxonomy' => 'cunyj_media_types',
 							'term' => 'videos',
 							'posts_per_page' => -1);
 						$loop = new WP_Query( $args );
 						while ( $loop->have_posts() ) : $loop->the_post();
 						$post_id = get_the_id();
 						$cpastone_author = get_post_meta( $post_id, '_cunyj_capstones_capstone_author', true );
-						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_cpastone_year', true );
+						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_capstone_year', true );
 						$concentrations = get_the_term_list( $post_id, 'cunyj_concentrations' );
 					?>
                     <li>
@@ -106,7 +106,7 @@
 						while ( $loop->have_posts() ) : $loop->the_post();
 						$post_id = get_the_id();
 						$cpastone_author = get_post_meta( $post_id, '_cunyj_capstones_capstone_author', true );
-						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_cpastone_year', true );
+						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_capstone_year', true );
 						$concentrations = get_the_term_list( $post_id, 'cunyj_concentrations' );
 					?>
                     <li>
