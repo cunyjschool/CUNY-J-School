@@ -11,12 +11,12 @@
 				<?php
 				$args = array(
 					'category_name' => 'featured-news',
-					'showposts' => 4,
+					'showposts' => 6,
 				);
 				$homepage_headlines = new WP_Query( $args );
 				?>
 		
-				<div class="homepage-headlines">
+				<div class="homepage-headlines float-right">
 					<h3 class="latest-headlines-title button"><a href="#">J-School Headlines</a></h3>
 					<ul class="latest-headlines">
 					<?php if ( $homepage_headlines->have_posts() ) : ?>
@@ -26,32 +26,11 @@
 						<li>There aren't any stories currently.</li>
 					<?php endif; ?>
 					</ul>
-					
-					<h3 class="button"><a href="<?php bloginfo('url'); ?>/admissions/how-to-apply/">How to Apply</a></h3>
-					<ul class="academic-resources">
-						<li class="academic-subjects">
-							<a href="#">Academics</a>
-							<ul class="sub-navigation">
-								<li><a href="#">Subjects</a></li>
-								<li><a href="#">Course Descriptions</a></li>								
-								<li><a href="#">Summer Internship</a></li>
-								<li><a class="highlight" href="#">Entrepreneurial Journalism</a></li>
-							</ul>															
-						</li>
-						<li class="course-descriptions">
-							<a href="#">Admissions</a>
-							<ul class="sub-navigation">
-								<li><a href="#">FAQs</a></li>								
-								<li><a href="#">Info Sessions</a></li>								
-								<li><a href="#">Tuition &amp; Fees</a></li>
-							</ul>															
-						</li>	
+					<ul class="inline-navigation home-page-social-links">
+						<li><a class="twitter" href="http://twitter.com/cunyjschool">Twitter</a></li>						
+						<li><a class="facebook" href="http://facebook.com/cunyjschool">Facebook</a></li>
+						<li><a class="email highlight" href="#">Email Newsletter</a></li>	
 					</ul>
-				
-				</div>
-				
-				<div class="homepage-how-to-apply">
-					<h3 class="button"><a href="#">Sign up for updates</a></h3>
 				</div>
 			
 				<div class="homepage-headlines-gallery">
@@ -63,10 +42,36 @@
 					<img src="http://www.danielbachhuber.com/screenshots/20110424-newsgaminghack_db-1241_-_Version_2-20110426-144649.jpg" height="400px" width="600px" />
 				
 				</div><!-- END .homepage-headlines-gallery -->
+				
+				<div class="clear-both"></div>
 			
 			</div><!-- .home-page-item#homepage-headlines-section -->
 			
 			<div class="row">
+				
+				<div id="home-page-how-to-apply" class="home-page-item float-right">
+					<h3 class="button"><a href="#">How to Apply</a></h3>
+					<ul class="academic-resources">
+						<li class="academic-subjects">
+							<h4><a href="#">Academics</a></h4>
+							<ul class="sub-navigation">
+								<li><a href="#">Subjects</a></li>
+								<li><a href="#">Course Descriptions</a></li>								
+								<li><a href="#">Summer Internship</a></li>
+							</ul>															
+						</li>
+						<li class="course-descriptions">
+							<h4><a href="#">Admissions</a></h4>
+							<ul class="sub-navigation">
+								<li><a href="#">FAQs</a></li>								
+								<li><a href="#">Info Sessions</a></li>								
+								<li><a href="#">Tuition &amp; Fees</a></li>
+							</ul>															
+						</li>	
+					</ul>
+					<div class="clear-both"></div>
+					<p class="entrepreneurial-journalism"><a class="highlight" href="#">Learn more about Entrepreneurial Journalism</a></p>
+				</div>
 				
 				<div id="home-page-item-events" class="home-page-item">
 					
