@@ -17,7 +17,7 @@
 		$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_capstone_year', true );
 		$capstone_advisor = get_post_meta( $post_id, '_cunyj_capstones_capstone_advisor', true );
 		$concentrations = get_the_term_list( $post_id, 'cunyj_concentrations' );
-		$media_types = get_the_term_list( $post_id, 'cunyj_capstone_media_types' );
+		$media_types = get_the_term_list( $post_id, 'cunyj_media_types' );
 		$capstone_url = get_post_meta( $post_id, '_cunyj_capstones_capstone_url', true );
 		$capstone_video = get_post_meta( $post_id, '_cunyj_capstones_capstone_video', true );
 		
