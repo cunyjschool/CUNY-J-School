@@ -13,8 +13,7 @@ class cunyj_capstones
 	function __construct() {
 		
 		// Add Capstone post type
-		add_action( 'init', array(&$this, 'create_post_type') );
-		add_action( 'init', array(&$this, 'create_taxonomies') );		
+		add_action( 'init', array(&$this, 'create_post_type') );		
 			
 		// Set up metabox and related actions
 		add_action('admin_menu', array(&$this, 'add_post_meta_box'));
@@ -29,8 +28,7 @@ class cunyj_capstones
 	 */
 	function create_post_type() {
 		
-		if ( function_exists('register_post_type') ) {
-			register_post_type('cunyj_capstone',
+		register_post_type('cunyj_capstone',
 		    array(
 				'labels' => array(
 					'name' => 'Capstones',
@@ -57,39 +55,15 @@ class cunyj_capstones
 					'editor',
 					'excerpt',						
 					'thumbnail',
-					'custom-fields',
 				),
 				'taxonomies' => array(
-					'cunyj_capstone_media_types',
+					'cunyj_media_types',
 					'cunyj_concentrations',
 				),
 		    )
 		  );
-		}
 		
 	} // END create_post_type()
-	
-	/**
-	 * Register the 'media types' and 'concentration' taxonomy we're associating with our capstones
-	 */
-	function create_taxonomies() {
-		
-		// Media type taxonomy
-		$args = array(	'label' => 'Media Type',	
-						'show_tagcloud' => false,
-						'hierarchical' => true,
-						);
-		register_taxonomy( 'cunyj_capstone_media_types', 'cunyj_capstone', $args );
-		
-		// Concentration taxonomy
-		$args = array(	'label' => 'Concentration',	
-						'show_tagcloud' => false,
-						'hierarchical' => true,
-						);
-		register_taxonomy( 'cunyj_concentrations', 'cunyj_capstone', $args );
-		
-		
-	}
 
 	/**
 	 * add_post_meta_box()
@@ -97,9 +71,7 @@ class cunyj_capstones
 	 */
 	function add_post_meta_box() {
 		
-		if ( function_exists('add_meta_box') ) {
-			add_meta_box( 'cunyj-capstones', __( 'Metadata', 'cunyj-capstones' ), array(&$this, 'post_meta_box'), 'cunyj_capstone', 'side', 'high' );
-		}
+		add_meta_box( 'cunyj-capstones', __( 'Metadata', 'cunyj-capstones' ), array(&$this, 'post_meta_box'), 'cunyj_capstone', 'side', 'high' );
 		
 	} // END add_post_meta_box()
 	

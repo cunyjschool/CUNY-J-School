@@ -17,7 +17,7 @@
 		$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_capstone_year', true );
 		$capstone_advisor = get_post_meta( $post_id, '_cunyj_capstones_capstone_advisor', true );
 		$concentrations = get_the_term_list( $post_id, 'cunyj_concentrations' );
-		$media_types = get_the_term_list( $post_id, 'cunyj_capstone_media_types' );
+		$media_types = get_the_term_list( $post_id, 'cunyj_media_types' );
 		$capstone_url = get_post_meta( $post_id, '_cunyj_capstones_capstone_url', true );
 		$capstone_video = get_post_meta( $post_id, '_cunyj_capstones_capstone_video', true );
 		
@@ -27,7 +27,7 @@
 		<div class="sidebar right capstone-right">
         
         <h4>Details</h4>
-			<p><span>By:</span> <?php the_author(); ?></p>
+			<p><span>By:</span> <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
             <p><span>Pub. Year:</span> <?php echo $capstone_year; ?></p>
             <p><span>Capstone Advisor:</span> <?php echo $capstone_advisor; ?></p>
             <p><span>Media Type:</span> <?php echo $media_types; ?></p>
@@ -67,7 +67,7 @@
 		
   </div>
 
-	<div style="clear:both;"></div>
+	<div class="clear-both"></div>
 
 	</div><!-- END #main -->
 

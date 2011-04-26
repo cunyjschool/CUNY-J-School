@@ -95,7 +95,7 @@
 
 	</div>
 	
-	<div style="clear:right;"></div>
+	<div class="clear-both"></div>
 	
 	</div>
 	

@@ -2,7 +2,7 @@
 
 //define( 'CUNYJ_THEME_URL' , themes_url(themes_basename(dirname(__FILE__)).'/') );
 define( 'CUNYJ_PREFIX' , 'cunyj_' );
-define( 'CUNYJ_VERSION', '1.3.4' );
+define( 'CUNYJ_VERSION', '1.3.5' );
 
 include_once('php/cunyj_events.php');
 include_once('php/cunyj_databases.php');
@@ -265,6 +265,73 @@ class cunyj
 			'cunyj_internship',
 		);
 		register_taxonomy( 'cunyj_organization', $post_types, $args );
+		
+		// Media type taxonomy
+		$args = array(
+			'label' => 'Media Types',
+			'labels' => array(
+				'name' => 'Media Types',
+				'singular_name' => 'Media Type',
+				'search_items' =>  'Search Media Types',
+				'popular_items' => 'Popular Media Types',
+				'all_items' => 'All Media Types',
+				'parent_item' => 'Parent Media Types',
+				'parent_item_colon' => 'Parent Media Types:',
+				'edit_item' => 'Edit Media Type', 
+				'update_item' => 'Update Media Type',
+				'add_new_item' => 'Add New Media Type',
+				'new_item_name' => 'New Media Type',
+				'separate_items_with_commas' => 'Separate media types with commas',
+				'add_or_remove_items' => 'Add or remove media types',
+				'choose_from_most_used' => 'Choose from the most common media types',
+				'menu_name' => 'Media Types',
+			),
+			'show_tagcloud' => false,
+			'hierarchical' => true,	
+			'rewrite' => array(
+				'slug' => 'media-types',
+				'hierarchical' => true,
+			)
+		);
+		$post_types = array(
+			'post',
+			'cunyj_capstone',
+		);				
+		register_taxonomy( 'cunyj_media_types', $post_types, $args );
+		
+		// Concentration taxonomy
+		$args = array(
+			'label' => 'Concentrations',
+			'labels' => array(
+				'name' => 'Concentrations',
+				'singular_name' => 'Concentration',
+				'search_items' =>  'Search Concentrations',
+				'popular_items' => 'Popular Concentrations',
+				'all_items' => 'All Concentrations',
+				'parent_item' => 'Parent Concentrations',
+				'parent_item_colon' => 'Parent Concentrations:',
+				'edit_item' => 'Edit Concentration', 
+				'update_item' => 'Update Concentration',
+				'add_new_item' => 'Add New Concentration',
+				'new_item_name' => 'New Concentration',
+				'separate_items_with_commas' => 'Separate concentrations with commas',
+				'add_or_remove_items' => 'Add or remove concentrations',
+				'choose_from_most_used' => 'Choose from the most common concentrations',
+				'menu_name' => 'Concentrations',
+			),
+			'show_tagcloud' => false,
+			'hierarchical' => true,
+			'rewrite' => array(
+				'slug' => 'concentrations',
+				'hierarchical' => true,
+			)
+		);
+		$post_types = array(
+			'post',
+			'cunyj_internship',
+			'cunyj_capstone',
+		);
+		register_taxonomy( 'cunyj_concentrations', $post_types, $args );
 		
 	} // END register_taxonomies()
 	

@@ -17,7 +17,7 @@
 					<?php
 						$args = array( 
 							'post_type' => 'cunyj_capstone',
-							'taxonomy' => 'cunyj_capstone_media_types',
+							'taxonomy' => 'cunyj_media_types',
 							'term' => 'articles', 
 							'posts_per_page' => -1 );
 						$loop = new WP_Query( $args );
@@ -34,9 +34,18 @@
                         </a>
 					<?php endif; ?>
                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					<p>By: <?php the_author(); ?></p>
+					<p>By: <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
     				<p>Pub. Year: <?php echo $capstone_year; ?></p>
 					<p>Concentration: <?php echo $concentrations; ?></p>
+					<?php
+						// Show the image credit if it exists
+						if ( has_post_thumbnail() ) {
+							$image_data = get_post( get_post_thumbnail_id() );
+							if ( $image_data->post_excerpt ) {
+								echo '<p class="text-color-light-grey"><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+							}
+						} // END if ( has_post_thumbnail() )
+					?>
     				</li>
 					<?php endwhile; ?>
  					</ul>
@@ -49,14 +58,14 @@
                     <?php
 						$args = array(
 							'post_type' => 'cunyj_capstone',
-							'taxonomy' => 'cunyj_capstone_media_types',
+							'taxonomy' => 'cunyj_media_types',
 							'term' => 'videos',
 							'posts_per_page' => -1);
 						$loop = new WP_Query( $args );
 						while ( $loop->have_posts() ) : $loop->the_post();
 						$post_id = get_the_id();
 						$cpastone_author = get_post_meta( $post_id, '_cunyj_capstones_capstone_author', true );
-						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_cpastone_year', true );
+						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_capstone_year', true );
 						$concentrations = get_the_term_list( $post_id, 'cunyj_concentrations' );
 					?>
                     <li>
@@ -66,9 +75,18 @@
                         </a>
 					<?php endif; ?>
                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                    <p>By: <?php the_author(); ?></p>
+                    <p>By: <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
                     <p>Pub. Year: <?php echo $capstone_year; ?></p>
                     <p>Concentration: <?php echo $concentrations; ?></p>
+					<?php
+						// Show the image credit if it exists
+						if ( has_post_thumbnail() ) {
+							$image_data = get_post( get_post_thumbnail_id() );
+							if ( $image_data->post_excerpt ) {
+								echo '<p class="text-color-light-grey"><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+							}
+						} // END if ( has_post_thumbnail() )
+					?>
                     </li>
                     <?php endwhile; ?>
                     </ul>
@@ -81,14 +99,14 @@
                     <?php
 						$args = array(
 							'post_type' => 'cunyj_capstone',
-							'taxonomy' => 'cunyj_capstone_media_types',
+							'taxonomy' => 'cunyj_media_types',
 							'term' => 'packages',
 							'posts_per_page' => -1);
 						$loop = new WP_Query( $args );
 						while ( $loop->have_posts() ) : $loop->the_post();
 						$post_id = get_the_id();
 						$cpastone_author = get_post_meta( $post_id, '_cunyj_capstones_capstone_author', true );
-						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_cpastone_year', true );
+						$capstone_year = get_post_meta( $post_id, '_cunyj_capstones_capstone_year', true );
 						$concentrations = get_the_term_list( $post_id, 'cunyj_concentrations' );
 					?>
                     <li>
@@ -98,9 +116,18 @@
                         </a>
 					<?php endif; ?>
                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                    <p>By: <?php the_author(); ?></p>
+                    <p>By: <?php if ( function_exists( 'coauthors_links' ) ) { coauthors_links(); } else { the_author_link(); } ?></p>
                     <p>Pub. Year: <?php echo $capstone_year; ?></p>
                     <p>Concentration: <?php echo $concentrations; ?></p>
+					<?php
+						// Show the image credit if it exists
+						if ( has_post_thumbnail() ) {
+							$image_data = get_post( get_post_thumbnail_id() );
+							if ( $image_data->post_excerpt ) {
+								echo '<p class="text-color-light-grey"><em>Photo credit: ' . $image_data->post_excerpt . '</em></p>';
+							}
+						} // END if ( has_post_thumbnail() )
+					?>
                     </li>
                     <?php endwhile; ?>
                     </ul>
@@ -110,7 +137,7 @@
             
 		</div><!--END #capstone-content-->
  
-		<div style="clear:both;"></div>
+		<div class="clear-both"></div>
 
      </div><!-- END main-->
      
