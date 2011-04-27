@@ -155,7 +155,59 @@
 					
 				</div><!-- END .home-page-item-events -->
 				
-			</div>
+			</div><!-- END .row -->
+			
+			<div id="home-page-featured-projects" class="row home-page-item">
+				
+				<div class="featured-clips">
+					
+					<ul>
+						<li class="featured-clip float-left">
+							<h4 class="clip-title"><a href="#">This is a sample headline</a></h4>
+							<div class="clip-meta">By Jane Doe, Apr. 20, 2011</div>
+							<div class="clip-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc enim, pharetra in pellentesque auctor, pulvinar et tortor.</div>
+						</li>
+						<li class="featured-clip float-left">
+							<h4 class="clip-title"><a href="#">This is a second headline</a></h4>
+							<div class="clip-meta">By Jane Doe</div>
+							<div class="clip-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc enim, pharetra in pellentesque auctor, pulvinar et tortor.</div>
+							<div class="clip-meta">Published in <em>The New York Times</em></div>
+						</li>
+						<li class="featured-clip float-left">
+							<h4 class="clip-title"><a href="#">This is a third headline</a></h4>
+							<div class="clip-meta">By Jane Doe, The New York Times</div>
+							<div class="clip-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc enim, pharetra in pellentesque auctor, pulvinar et tortor.</div>
+						</li>
+						<li class="featured-clip float-left">
+							<h4 class="clip-title"><a href="#">This is a fourth headline</a></h4>
+							<div class="clip-meta">By Jane Doe, The New York Times</div>
+							<div class="clip-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc enim, pharetra in pellentesque auctor, pulvinar et tortor.</div>
+						</li>
+					</ul>
+					
+					<div class="clear-both"></div>
+					
+				</div><!-- END .featured-clips -->
+				
+				<div class="horizontal-rule"></div>
+				
+				<div class="featured-projects">
+					
+					<ul>
+						<li id="219-magazine-posts" class="featured-project float-left">
+							<img class="project-logo" src="<?php bloginfo('template_directory'); ?>/images/projects/219mag_s60.jpg" height="60px" width="60px" />
+						</li>
+						<li id="mott-haven-herald-posts" class="featured-project float-left">
+							<img class="project-logo float-left" src="<?php bloginfo('template_directory'); ?>/images/projects/motthavenherald_s60.jpg" height="60px" width="60px" />
+						</li>
+						
+					</ul>
+					
+					<div class="clear-both"></div>					
+					
+				</div><!-- END .featured-projects -->
+				
+			</div><!-- END .home-page-item#home-page-featured-projects -->
 		
 		</div><!-- END .content -->
 		
@@ -164,5 +216,11 @@
 	<div class="clear-both"></div>
 	
 </div><!-- END .main -->
+
+<script type="text/javascript">
+
+cunyj_load_blog_posts( 'http://motthavenherald.com/', 3, 'mott-haven-herald-posts' );
+
+</script>
 	
 <?php get_footer(); ?>
