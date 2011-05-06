@@ -38,12 +38,30 @@ Template Name: Page - News & Events
 
 .item-source {
     width:75px;
+}
+
+.item-source .source {
     color:#ff9900;
     font-weight:bold;
 }
 
+.item-source .date {
+    color:#ccc;
+}
+
+.item-content a {
+    color:#444;
+}
+
 .item-content {
     width:200;
+}
+
+.item-content img {
+    float:right;
+    width:60px;
+    margin-left:10px;
+    border:1px solid #ccc;
 }
 
 </style>
@@ -82,7 +100,8 @@ Template Name: Page - News & Events
         				
     				    <div class="item-source left">
     				    
-    				        <span class="source">NYCity News Service</span>
+    				        <span class="source">NYCity News Service</span><br />
+    				        <span class="date"><?php the_date('M j, Y') ?></span>
     				    
     				    </div>
     				    <div class="item-content right">
@@ -90,6 +109,8 @@ Template Name: Page - News & Events
     				        <?php if ( has_post_thumbnail()) { 	   
         					   the_post_thumbnail(  array(60,60), array('class' => 'avatar')); 
         					}?>
+        					
+        					<img src="http://farm6.static.flickr.com/5006/5285876471_06ff1d64fe_s.jpg" />
     				        
     				        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     				    
