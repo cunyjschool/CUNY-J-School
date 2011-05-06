@@ -64,6 +64,23 @@ Template Name: Page - News & Events
     border:1px solid #ccc;
 }
 
+.top-story {
+    border-bottom:1px dashed #eee;
+    padding-bottom:10px;
+}
+
+.featured-stories {
+    margin-left:-20px;
+}
+
+.stories {
+    width:246px;
+    float:left;
+    margin:10px 0 0 20px;
+    padding-bottom:10px;
+    border-bottom:1px dashed #eee;
+}
+
 </style>
 
 <?php get_header(); ?>
@@ -76,24 +93,77 @@ Template Name: Page - News & Events
             
             <div class="featured left">
                 
-                Main content stuff.
-        
+                <h2>Featured News</h2>
+
+                <div class="top-story">
+                
+                    <?php
+            			$args = array(
+            				'category_name' => 'featured-news',
+            				'showposts' => 1
+            			);
+            			$featured_posts = new WP_Query( $args ); ?>
+
+              		<?php if ( $featured_posts->have_posts() ) : ?>
+            		<?php while ( $featured_posts->have_posts() ) : $featured_posts->the_post(); ?>
+
+                        <div>
+                        
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3> 
+                            <?php the_excerpt(); ?>
+                            
+                        </div>
+                    
+                        <?php endwhile; else: ?><p>There are currently no stories.</p>
+                
+                    <?php endif; ?>
+                
+                </div><!-- END .top-story -->
+                
+                <div class="featured-stories">
+                    
+                    <?php
+            			$args = array(
+            				'category_name' => 'featured-news',
+            				'showposts' => 2,
+            				'offset' => 1
+            			);
+            			$featured_posts = new WP_Query( $args ); ?>
+
+              		<?php if ( $featured_posts->have_posts() ) : ?>
+            		<?php while ( $featured_posts->have_posts() ) : $featured_posts->the_post(); ?>
+
+                        <div class="stories">
+                        
+                            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
+                            <?php the_excerpt(); ?>
+                            
+                        </div>
+                    
+                        <?php endwhile; else: ?><p>There are currently no stories.</p>
+                
+                    <?php endif; ?>
+                    
+                    <div class="clear"></div>
+                
+                </div><!-- END .featured-stories -->
+                        
             </div><!-- END .featured -->
                 
         </div><!-- END .content -->
             
         <div class="news-feed right">
 
-            <h3 class="header">The News Feed!</h3>
+            <h3 class="header">CUNY J-School News Feed</h3>
             <ul class="feed">
 
         		<?php
         			$args = array(
-        				'category_name' => 'featured-news',
+        				'category_name' => 'news',
         				'showposts' => -1
         			);
         			$news_posts = new WP_Query( $args ); ?>
-        		<ul>
+
           		<?php if ( $news_posts->have_posts() ) : ?>
         		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
         			<li class="news-item">
