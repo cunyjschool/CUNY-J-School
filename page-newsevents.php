@@ -5,34 +5,45 @@ Template Name: Page - News & Events
 ?>
 <style>
 .featured {
-    width:562px;
-    height:500px;
-    background:#eee !important;
-    margin-bottom:20px;
+    width:512px;
 }
-
 
 .news-feed {
-    width:295px;
-    height:515px;
-    margin-top:-20px;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    border-left:5px solid #eeeeee;
-    border-bottom:5px solid #eeeeee;
+    width:350px;
+    margin:-20px -20px -40px 0;
+    border-left:3px solid #eeeeee;
 }
 
-.news-feed ul li {
+.news-feed ul.feed li {
     border-bottom:1px solid #eee;
     padding:10px 20px;
-    width:100%;
+    width:295px;
     background:#fff;
 }
 
-.news-feed .header {
+.news-feed ul.feed {
+    margin-top:64px;
+    height:1000px;
+    overflow-y:scroll;
+}
+
+.news-feed h3.header {
     padding:20px;
     margin:0;
-    border-bottom:5px solid #eee;
+    width:310px;
+    border-bottom:1px solid #eee;
+    position:absolute;
+    background:#f9f9f9;
+}
+
+.item-source {
+    width:75px;
+    color:#ff9900;
+    font-weight:bold;
+}
+
+.item-content {
+    width:200;
 }
 
 </style>
@@ -50,46 +61,51 @@ Template Name: Page - News & Events
                 Main content stuff.
         
             </div><!-- END .featured -->
-            
-            <div class="sidebar right standard">
-
-                <div class="news-feed">                
-
-                    <h3 class="header">The News Feed!</h3>
-                    <ul>
-                        <li>Item one!</li>
-                        <li>Item two!</li>
-                        <li>Item three blows.</li>
-                        <li>Item one!</li>
-                        <li>Item two!</li>
-                        <li>Item three blows.</li>
-                        <li>Item one!</li>
-                        <li>Item two!</li>
-                        <li>Item three blows.</li>
-                        <li>Item one!</li>
-                        <li>Item two!</li>
-                        <li>Item three blows.</li>
-                        <li>Item one!</li>
-                        <li>Item two!</li>
-                        <li>Item three blows.</li>
-                    </ul>
                 
-                </div><!-- END .news-feed -->
-
-            </div><!-- END .sidebar -->
-        
-            <div class="clear"></div>
-            
-            <div class="stuff-below">
-                
-                This is the stuff below!
-                
-            </div><!-- END .stuff-below -->
-            
-            <div class="clear"></div>       
-        
         </div><!-- END .content -->
+            
+        <div class="news-feed right">
+
+            <h3 class="header">The News Feed!</h3>
+            <ul class="feed">
+
+        		<?php
+        			$args = array(
+        				'category_name' => 'featured-news',
+        				'showposts' => -1
+        			);
+        			$news_posts = new WP_Query( $args ); ?>
+        		<ul>
+          		<?php if ( $news_posts->have_posts() ) : ?>
+        		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+        			<li class="news-item">
+        				
+    				    <div class="item-source left">
+    				    
+    				        <span class="source">NYCity News Service</span>
+    				    
+    				    </div>
+    				    <div class="item-content right">
+    				        
+    				        <?php if ( has_post_thumbnail()) { 	   
+        					   the_post_thumbnail(  array(60,60), array('class' => 'avatar')); 
+        					}?>
+    				        
+    				        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    				    
+    				    </div>
+    				    
+    				    <div class="clear"></div>
+        				
+        			</li>
+            	<?php endwhile; else: ?>
+        			<li>There are currently no stories.</li>
+        		<?php endif; ?>
+
+            </ul>
         
+        </div><!-- END .news-feed -->
+    
         <div class="clear"></div>
         
     </div><!-- END .main -->
