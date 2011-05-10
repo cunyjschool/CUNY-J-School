@@ -12,7 +12,9 @@
 	text-decoration: none;
 }
 
-#sidebar-nav li a, #sidebar-nav li a:visited {
+#sidebar-nav li a,
+.sidebar-nav li a,
+#sidebar-nav li a:visited {
 	display: block;
 	padding: 7px;
 	border-top: 1px solid #fff;
@@ -62,28 +64,41 @@
 	color: #666;
 	padding: 5px 10px 5px 35px;
 }
+
+.sidebar-nav li.with-image img {
+	padding-right: 10px;
+	vertical-align: middle;
+}
 	
-#sidebar-nav li a:hover {
+#sidebar-nav li a:hover,
+.sidebar-nav li a:hover {
 	border-top: 1px solid #ef8f00;
 	background: #ff9900;
-	color: #fff; }
+	color: #fff;
+}
 	
-#sidebar-nav li li a, #sidebar-nav li li a:visited {
+#sidebar-nav li li a,
+.sidebar-nav li li a,
+#sidebar-nav li li a:visited {
 	font-size: 90%;
 	padding: 5px 10px 5px 25px;
-	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
+}
 	
-#sidebar-nav li li a:hover {
+#sidebar-nav li li a:hover,
+.sidebar-nav li li a:hover {
 	color: #0066cc;
 	border-top: 1px solid #fff;
-	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px; }
+	background: #f9f9f9 url(../images/icons/arrow_000_small.png) no-repeat 10px 7px;
+}
 	
-#sidebar-nav li li li a, #sidebar-nav li li li a:visited {
+#sidebar-nav li li li a,
+.sidebar-nav li li li a,
+#sidebar-nav li li li a:visited {
 	font-size: 90%;
 	background: #f9f9f9;
 	color: #666;
 	padding: 5px 10px 5px 35px; }
-
 
 #sidebar-internships {
 	width: 250px;
