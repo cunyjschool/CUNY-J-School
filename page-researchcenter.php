@@ -16,10 +16,12 @@ Template Name: Page - Research Center
 		
 		<?php if ( is_page( 'research-center' ) ) : ?>
 
-		<div id="research-center-blog" class="research-center-info-zone">
-			<h4 class="blog-header"><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
+		<div id="research-center-links" class="research-center-info-zone float-right">
+			<h4>Recommended Links</h4>			
 			<ul>
-				<li>Loading...</li>
+				<li><a href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides</a></li>
+				<li><a href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Database Tutorials</a></li>
+				<li><a href="http://www.delicious.com/cunyjschoolresearch/">Research Links</a></li>
 			</ul>
 		</div>
 
@@ -87,26 +89,26 @@ Template Name: Page - Research Center
 		
 		<?php endif; ?>
 		
-	<div class="sidebar left standard">
+		<div class="sidebar left standard">
 
-		<?php
+			<?php
 
-		$args = array(
-					'theme_location' => 'research_center',
-					'menu_class' => 'navigation default',
-					'menu_id' => 'research-center-navigation',
-					'fallback_cb' => false,
-			);
+			$args = array(
+						'theme_location' => 'research_center',
+						'menu_class' => 'navigation default',
+						'menu_id' => 'research-center-navigation',
+						'fallback_cb' => false,
+				);
 
-		wp_nav_menu( $args );
+			wp_nav_menu( $args );
 
-		echo '<ul class="widgets">';
-		dynamic_sidebar( 'research_center' );
-		echo '</ul>';
+			echo '<ul class="widgets">';
+			dynamic_sidebar( 'research_center' );
+			echo '</ul>';
 
-		?>
+			?>
 
-	</div>	
+		</div><!-- END .sidebar.left -->
           
 	<div class="content left-sidebar">
 	
@@ -116,18 +118,30 @@ Template Name: Page - Research Center
 
 	<div id="research-center-goodreads" class="research-center-info-zone">
 
-	<style type="text/css" media="screen"> .gr_grid_container { /* customize grid container div here. eg: width: 500px; */ } .gr_grid_book_container { /* customize book cover container div here */ float: left; width: 39px; height: 60px; margin: 5px; border: 3px solid #eee; overflow: hidden; } 
-	       #gr_grid_widget_1236291550 h2 {
-		    margin-top: 10px;
-			padding-top: 0;
-		   	font-size: 100%; }
-	        </style>
-
 	<div id="gr_grid_widget_1236291550">
 		
-	</div>
+	</div><!-- END #gr_grid_widget_1236291550 -->
 	
 	<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=11&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
+	
+	<div id="research-center-services" class="research-center-info-zone float-right">
+	<h4>Services and Forms</h4>	
+		<ul>
+			<li><a href="http://cunygsj.docutek.com/eres/">Electronic Reserves</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/research-center/services/interlibrary-loan/">Interlibrary Loan Services</a></li>
+			<li><a href="https://cunyjschool.wufoo.com/forms/reserve-request-form/">Faculty Reserve Request Form</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/research-center/services/research-center-forms/">Research Center Forms</a></li>
+		</ul>
+	</div>
+	
+	<div id="research-center-blog" class="research-center-info-zone float-left">
+		<h4 class="blog-header"><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
+		<ul>
+			<li>Loading...</li>
+		</ul>
+	</div><!-- END #research-center-blog -->
+	
+	</div>
 		
 	<?php endif; ?>
 
@@ -146,16 +160,18 @@ Template Name: Page - Research Center
 	</div>
 
 	<div style="clear:both;"></div>
+	
+	</div>
 
-</div>
+</div><!-- END .main -->
 
-</div>
+</div><!-- END .wrap -->
 
 <script type="text/javascript">
 	
 	jQuery(document).ready(function(){
 		
-		cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 2, 'research-center-blog' );
+		cunyj_load_blog_posts( 'http://researchcenter.journalism.cuny.edu/', 4, 'research-center-blog' );
 		
 		jQuery('ul.tabber-navigation').show();
 		jQuery('ul.tabber-navigation li:eq(0)').addClass('active');

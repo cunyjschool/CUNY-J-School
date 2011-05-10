@@ -2,7 +2,7 @@
 Theme Name: CUNY J-School
 Theme URI: http://www.journalism.cuny.edu/
 Description: WordPress for the CUNY Graduate School of Journalism
-Version: 1.3.6a
+Version: 1.3.6b
 Author: Daniel Bachhuber, Joe Filippazzo, Rosaleen Ortiz
 Author URI: http://tech.journalism.cuny.edu
 Tags: buddypress
@@ -1139,18 +1139,28 @@ img.news-photo {
 	font-size: 14px;	
 }
 
-.main#research-center-main #research-center-blog {
-	width: 260px;
-	float: right;
-	margin-right: 20px;
-	min-height: 140px;
+.main#research-center-main .gr_grid_book_container {
+	/* customize book cover container div here */
+	float: left;
+	width: 39px;
+	height: 60px;
+	margin: 5px;
+	border: 3px solid #eee;
+	overflow: hidden;
+} 
+
+.main#research-center-main #gr_grid_widget_1236291550 h2 {
+	margin-top: 10px;
+	padding-top: 0;
+	font-size: 100%;
 }
 
-.main#research-center-main #research-center-blog ul {
-	margin: 10px 0 20px 0;
+.main#research-center-main .research-center-info-zone ul {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 	
-.main#research-center-main #research-center-blog ul li {
+.main#research-center-main .research-center-info-zone ul li {
 	padding: 5px 10px 5px 30px;
 	border-bottom: 1px solid #eee;
 	background: url(images/icons/arrow_000_small.png) no-repeat 10px 8px;
@@ -1166,13 +1176,31 @@ img.news-photo {
 	margin-right: 5px;
 }
 
-.entry ul li#research-toolbox {
-	padding-left: 30px;
-	background: url(images/icons/hammer.png) no-repeat 10px 7px; }
+.main#research-center-main #research-center-links,
+.main#research-center-main #research-center-services,
+.main#research-center-main #research-center-blog {
+	width: 260px;
+	margin-right: 20px;
+	min-height: 140px;
+}
+
+.main#research-center-main #research-center-services,
+.main#research-center-main #research-center-blog {
+	margin-top: 10px;
+}
+
+.main#research-center-main #research-center-links h4 {
+	background: url(images/icons/information_frame.png) no-repeat 0 2px;
+	padding-left: 20px;
+}
+
+.main#research-center-main #research-center-services {
+	margin-right: 20px;
+}
 	
-.entry ul li#research-about {
-	padding-left: 30px;
-	background: url(images/icons/information_frame.png) no-repeat 10px 7px;
+.main#research-center-main #research-center-services h4 {
+	padding-left: 20px;
+	background: url(images/icons/hammer.png) no-repeat 0 2px;
 }
 
 
@@ -1997,5 +2025,9 @@ ul#give-now li li li a, #give-now li li li a:visited {
  /* Hide from IE Mac \*/
  .clearfix {display:block;}
  /* End hide from IE Mac */
+
+#wpstats {
+	display: none;
+}
  
  
