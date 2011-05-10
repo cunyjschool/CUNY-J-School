@@ -248,7 +248,7 @@ body.home-page .event-item-date span {
 
 
 body.home-page .event-item-date span.event-item-month {
-	background: none repeat scroll 0 0 #DE1515;
+	background: url(../images/backgrounds/orange-back.jpg) repeat scroll 0 0 #FF9900;
 	color: #FFFFFF;
 	padding: 2px 6px;
 	text-align: center;
@@ -298,7 +298,8 @@ body.home-page .home-page-item#home-page-featured-projects .featured-projects ul
 	width: 240px;	
 	padding-left: 6px;
 	padding-right: 6px;
-	font-size: 10px;
+	font-size: 11px;
+	min-height: 50px;
 }
 
 body.home-page .home-page-item#home-page-featured-projects .featured-projects ul li.featured-project a {
@@ -306,5 +307,5 @@ body.home-page .home-page-item#home-page-featured-projects .featured-projects ul
 }
 
 body.home-page .home-page-item#home-page-featured-projects .featured-projects ul li.featured-project ul {
-	margin-left: 65px;
+
 }

@@ -195,12 +195,13 @@
 					
 					<ul>
 						<li id="219-magazine-posts" class="featured-project float-left">
-							<img class="project-logo" src="<?php bloginfo('template_directory'); ?>/images/projects/219mag_s60.jpg" height="60px" width="60px" />
+							<h4>219 Magazine</h4>
+							<div class="project-description"></div>
 						</li>
 						<li id="mott-haven-herald-posts" class="featured-project float-left">
-							<img class="project-logo float-left" src="<?php bloginfo('template_directory'); ?>/images/projects/motthavenherald_s60.jpg" height="60px" width="60px" />
+							<h4>Mott Haven Herald</h4>
+							
 						</li>
-						
 					</ul>
 					
 					<div class="clear-both"></div>					
