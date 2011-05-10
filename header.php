@@ -22,6 +22,7 @@
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
 	<meta name="google-site-verification" content="HclfSOn_fMggPZnL-xG4QRz4QvnPSBO-P7AJaOEhA-8" />
+	<meta name="google-site-verification" content="05m0sGhwEPW0MeSVKRC4cDr_EYYzh3xq_FcYYbXSAFs" />
 	
 	<?php
 	/**
