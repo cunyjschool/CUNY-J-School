@@ -11,7 +11,7 @@ Template Name: Page - News & Events
 .news-feed {
     width:350px;
     margin:-20px -20px -40px 0;
-    border-left:3px solid #eeeeee;
+    border-left:1px solid #eeeeee;
 }
 
 .news-feed ul.feed li {
@@ -23,7 +23,7 @@ Template Name: Page - News & Events
 
 .news-feed ul.feed {
     margin-top:64px;
-    height:1000px;
+    height:100%;
     overflow-y:scroll;
 }
 
@@ -147,6 +147,35 @@ Template Name: Page - News & Events
                     <div class="clear"></div>
                 
                 </div><!-- END .featured-stories -->
+                
+                <div class="video">
+                                    
+                    <div style="margin:20px 0;width:100%;background:#000;height:300px;"></div>
+                    
+                    <?php
+                        $args = array(
+                            'category_name' => 'news',
+                            'category__not_in' => 'featured-news',
+                            'showposts' => 10
+                        );
+                        $news_posts = new WP_Query( $args ); ?>
+
+                    <?php if ( $news_posts->have_posts() ) : ?>
+                    <?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
+
+                        <?php if ( has_post_thumbnail()) {     
+                           the_post_thumbnail(  array(60,60), array('class' => 'avatar')); 
+                        }?>
+
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+                        <div class="clear"></div>
+
+                    <?php endwhile; else: ?>
+                        <p>There are currently no stories.</p>
+                    <?php endif; ?>        
+
+                </div><!-- END .video -->
                         
             </div><!-- END .featured -->
                 
@@ -154,46 +183,32 @@ Template Name: Page - News & Events
             
         <div class="news-feed right">
 
-            <h3 class="header">CUNY J-School News Feed</h3>
-            <ul class="feed">
+            <h3 class="header">CUNY J-School News Wire</h3>
+            <?php
+            if (function_exists('SimplePieWP')) {
+                echo SimplePieWP(
+                    array(
+                    	'http://nycitynewsservice.com/category/top-stories/feed/',
+                    	'http://roadtrip.journalism.cuny.edu/feed/',
+                    	'http://newsinnovation.com/feed/',
+                    	'http://boxscorebeat.com/feed/',
+                    	'http://twitter.com/statuses/user_timeline/14345137.rss',
+                    	'http://isnapny.com/feed/',
+                        'http://219mag.com/feed/',
+                        'http://www.motthavenherald.com/feed/',
+                        'http://fort-greene.thelocal.nytimes.com/feed/',
+                        'http://digitalnewsjournalist.com/feed/'
+                    ), 
+                    array(
+                    	'items' => 50,
+                    	'cache_duration' => 1800,
+                    	'date_format' => 'j M Y',
+                    	'template' => 'wire'
+                    )
+                );
+            }
 
-        		<?php
-        			$args = array(
-        				'category_name' => 'news',
-        				'showposts' => -1
-        			);
-        			$news_posts = new WP_Query( $args ); ?>
-
-          		<?php if ( $news_posts->have_posts() ) : ?>
-        		<?php while ( $news_posts->have_posts() ) : $news_posts->the_post(); ?>
-        			<li class="news-item">
-        				
-    				    <div class="item-source left">
-    				    
-    				        <span class="source">NYCity News Service</span><br />
-    				        <span class="date"><?php the_date('M j, Y') ?></span>
-    				    
-    				    </div>
-    				    <div class="item-content right">
-    				        
-    				        <?php if ( has_post_thumbnail()) { 	   
-        					   the_post_thumbnail(  array(60,60), array('class' => 'avatar')); 
-        					}?>
-        					
-        					<img src="http://farm6.static.flickr.com/5006/5285876471_06ff1d64fe_s.jpg" />
-    				        
-    				        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    				    
-    				    </div>
-    				    
-    				    <div class="clear"></div>
-        				
-        			</li>
-            	<?php endwhile; else: ?>
-        			<li>There are currently no stories.</li>
-        		<?php endif; ?>
-
-            </ul>
+            ?>
         
         </div><!-- END .news-feed -->
     
