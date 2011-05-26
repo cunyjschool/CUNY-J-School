@@ -148,21 +148,10 @@
   
 	<h3 class="section-title">Student Work</h3>
     
-    <div class="jsite" id="clips-of-the-week" style="clear: both;">
-		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/clips-of-the-week/">Clips of the Week</a></h3>
-		<h5>Student work</h5>
-		<ul>
-		<?php
-		$args = array(	'category_name'=>'clips-of-the-week',
-						'showposts'=>3
-				);
-		$student_clips = new WP_Query( $args ); ?>
-		<?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
-		<?php endwhile; else: ?>
-			<li>There are currently no stories.</li>
-		<?php endif; ?>
-		</ul>
+    <div class="jsite" id="nycity-news-service-posts">
+		<h3 id="nycns"><a href="http://nycitynewservice.com/">NYCity News Service</a></h3>
+		<h5>Student-Powered Wire Service</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
     
     <div class="jsite" id="mott-haven-herald-posts">
@@ -248,6 +237,7 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 	} // END cunyj_replace_primary_video()
 
 	// Dynamically load network content on the homepage
+	cunyj_load_blog_posts( 'http://nycitynewsservice.com/', 5, 'nycity-news-service-posts' );	
 	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
 	cunyj_load_blog_posts( 'http://219mag.com/', 4, '219-mag-posts' );
 

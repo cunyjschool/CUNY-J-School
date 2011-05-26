@@ -495,6 +495,10 @@ body.home-page #news h4 {
 	background-repeat: no-repeat;
 	background-position: -10px -260px;
 }
+
+#jnet h3#nycns a {
+	background: url(../images/wire/ico-ns.png) no-repeat 0 2px;
+}
 	
 #row3 {
 	background: #ff9900 url(../images/backgrounds/orange-back.jpg) repeat;
