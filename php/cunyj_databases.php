@@ -20,7 +20,7 @@ class cunyj_databases
 		add_action( 'init', array(&$this, 'create_taxonomies') );
 		
 		// Template redirect back to archive file so search looks fine
-		add_filter( 'template_include', array( &$this, 'template_include' ) );
+        // add_filter( 'template_include', array( &$this, 'template_include' ) );
 		
 		// Set up metabox and related actions
 		add_action('admin_menu', array(&$this, 'add_post_meta_box'));
