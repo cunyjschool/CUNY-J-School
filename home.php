@@ -142,18 +142,6 @@
 	<div style="clear:both;"></div>
 
 </div><!-- /.section -->
-    
-	<div class="clearfix" id="featured-videos">
-		
-		<div class="video-thumbnails">
-			
-		</div>
-		
-		<div class="primary-video">
-		 
-    	</div>
-    
-	</div><!-- END div#soc -->
 
   
 	<div class="clearfix" id="jnet">
@@ -238,49 +226,6 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 </div>
 
 <script type="text/javascript">
-
-	/**
-	 * cunyj_load_featured_videos()
-	 * Generate a featured video player for the homepage
-	 */
-	function cunyj_load_featured_videos( vimeo_channel_url ) {
-		
-		jQuery.ajax({
-			url: vimeo_channel_url,
-			dataType: 'jsonp',
-			success: function( data ) {
-				jQuery.each( data, function( key, video ) {
-					// Add the first video to the primary viewer
-					if ( key == 0 ) {
-						cunyj_replace_primary_video( video.url );
-					}
-					
-					if ( key <= 7 ) {
-						var html = '';
-						html += '<div class="video-thumbnail';
-						if ( key == 0 ) {
-							html += ' active';
-						}
-						html += '" id="' + video.url + '"">';
-						html += '<img src="' + video.thumbnail_small + '" height="75px" width="100px" />';
-						html += '</div>';
-						
-						jQuery('#featured-videos .video-thumbnails').append( html );
-					}
-				});
-				
-				jQuery('#featured-videos .video-thumbnail').click(function() {
-					jQuery('.video-thumbnail').removeClass('active');
-					var url = jQuery(this).attr('id');
-					cunyj_replace_primary_video( url );
-					jQuery(this).addClass('active');
-				});
-				
-				jQuery('#featured-videos').show();
-			}, 
-		});
-		
-	} // END cunyj_load_featured_videos()
 	
 	/**
 	 * cunyj_replace_primary_video()
@@ -301,9 +246,6 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 		});
 		
 	} // END cunyj_replace_primary_video()
-
-	// Dynamically load the featured video viewer
-	cunyj_load_featured_videos( 'http://vimeo.com/api/v2/channel/cunyjschool/videos.json' );
 
 	// Dynamically load network content on the homepage
 	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
