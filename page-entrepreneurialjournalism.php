@@ -126,7 +126,7 @@ Template Name: Page - Entrepreneurial Journalism
 			</div>
 			
 			<div class="entrepreneurial-journalism-participant right">
-				<img src="<?php bloginfo('template_directory'); ?>/images/people/indranidatta_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://indrani.entrepreneurial.2011.journalism.cuny.edu/">Indrani Datta</a></strong> is completing her degree at the CUNY Graduate School of Journalism while building a web startup. She started working in the software industry during the first dot-com era. Since then, she has worked in academia and in industry, for newspapers and for the government — as a researcher, writer, programmer, trainer, and project manager.
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/indranidatta_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://indrani.entrepreneurial.2011.journalism.cuny.edu/">Indrani Datta</a></strong> is completing her degree at the CUNY Graduate School of Journalism while building a <a href="http://linktamer.com/">web startup</a>. She started working in the software industry during the first dot-com era. Since then, she has worked in academia and in industry, for newspapers and for the government — as a researcher, writer, programmer, trainer, and project manager.
 			</div>
 			
 			<div class="hr" style="clear:both;"></div>
