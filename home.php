@@ -156,7 +156,7 @@
 	</div>
     
     <div class="jsite" id="video-storytelling-web-posts">
-		<a href="http://vsw.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/vsw_h230.jpg" height="100px" width="230px" /></a>
+		<a href="http://vsw.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/vsw2_h230.jpg" height="100px" width="230px" /></a>
 		<h3 id="vsw"><a href="http://vsw.journalism.cuny.edu/">Video Storytelling for Web</a></h3>
 		<h5>tk description</h5>
 		<ul>
