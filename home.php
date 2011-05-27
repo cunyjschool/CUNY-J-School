@@ -149,7 +149,7 @@
 	<h3 class="section-title">Student Work</h3>
     
     <div class="jsite" id="nycity-news-service-posts">
-		<a href="http://nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/ns_h230.jpg" height="100px" width="230px" /></a>
+		<a href="http://nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/ns2_h230.jpg" height="100px" width="230px" /></a>
 		<h3 id="nycns"><a href="http://nycitynewsservice.com/">NYCity News Service</a></h3>
 		<h5>Student-Powered Wire Service</h5>
 		<?php /* Content is loaded dynamically with jQuery */ ?>
