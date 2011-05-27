@@ -388,8 +388,9 @@ body.home-page #news h4 {
 	
 #jnet h3 a {
 	color: #333;
-	padding-left: 23px;
+	padding-left: 21px;
 	width: 100%;
+	font-size: 16px;
 }
 
 #jnet h3 a:hover {
@@ -414,7 +415,7 @@ body.home-page #news h4 {
 	
 #jnet .jsite {
 	float: left;
-	min-height: 240px;
+	min-height: 180px;
 	width: 230px;
 	padding: 10px;
 	margin-bottom: 20px;
@@ -483,10 +484,7 @@ body.home-page #news h4 {
 }
 	
 #jnet h3#mag a {
-	/* background: url(../images/wire/ico-219.png) no-repeat 0 4px; */
-	background-image: url('../images/sprites/20101104sprite.png');
-	background-repeat: no-repeat;
-	background-position: -10px -440px;
+	background: url(../images/wire/ico-219mag.png) no-repeat 0 2px;
 }
 	
 #jnet h3#clips a {
@@ -494,6 +492,18 @@ body.home-page #news h4 {
 	background-image: url('../images/sprites/20101104sprite.png');
 	background-repeat: no-repeat;
 	background-position: -10px -260px;
+}
+
+#jnet h3#v a {
+	background: url(../images/wire/ico-219.png) no-repeat 0 2px;
+}
+
+#jnet h3#nycns a {
+	background: url(../images/wire/ico-ns.png) no-repeat 0 2px;
+}
+
+#jnet h3#vsw a {
+	background: url(../images/wire/ico-vsw.png) no-repeat 0 2px;
 }
 	
 #row3 {

@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 
 	<?php
-		$search_query = ( $_GET['s'] ) ? $_GET['s'] : false;
 		$args = array(	'order' => 'ASC',
 						'orderby' => 'title',
 						'nopaging' => true,
 						'posts_per_page' => '-1',
-						's' => $search_query,
+						's' => get_search_query(),
 						'post_type' => 'cunyj_database',
 						);
 		$databases = new WP_Query( $args );
