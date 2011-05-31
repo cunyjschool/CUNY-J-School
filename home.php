@@ -168,7 +168,7 @@
 	</div>
 
 	<div class="jsite third" id="219-tv-magazine-posts">
-		<a href="http://219tvmagazine.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/219tv_h230.jpg" height="100px" width="230px" /></a>
+		<a href="http://219tvmagazine.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/219tv2_h230.jpg" height="100px" width="230px" /></a>
 		<h3 id="mag"><a href="http://219tvmagazine.journalism.cuny.edu/">219 West TV Magazine</a></h3>
 		<h5>Covering Stories Around NYC</h5>
 		<?php /* Content is loaded dynamically with jQuery */ ?>
