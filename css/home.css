@@ -97,6 +97,10 @@ ul.inline-navigation li {
 	box-shadow: 3px 0px 5px #DDDDDD;
 }
 
+.header .wrap {
+	position: relative;
+}
+
 .header .top-stripe {
 	height: 3px;
 	background-color: #FF9900;
@@ -105,6 +109,73 @@ ul.inline-navigation li {
 .header .site-logo {
 	padding-top: 10px;
 	padding-bottom: 5px;
+}
+
+.header ul.primary-navigation {
+	display: table;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.header ul.primary-navigation li {
+	margin: 0;
+	padding: 0;
+	display: table-cell;
+}
+
+.header ul.primary-navigation li a {
+	color: #F2F2F2;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+	letter-spacing: 0.1px;
+	display: block;
+	border-left: #999999 solid 1px;
+	border-right: #999999 solid 1px;
+	margin-left: -1px;
+}
+
+.header ul.primary-navigation li a:hover {
+	color: #FF9900;
+	border-color: #FF9900;
+	z-index: 100;
+}
+
+.header .search-box {
+	padding: 3px;
+}
+
+.header ul.primary-navigation li.navigation-search {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-top: 8px;
+	border-right: #999999 solid 1px;
+}
+
+.header .button {
+	display: inline-block;
+	background-color: #CCCCCC;
+	border: 1px solid #EEEEEE;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 13px;
+	line-height: 19px;
+	font-weight: 300;
+	letter-spacing: 0.1px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #F2F2F2;
+}
+
+.header .button:hover {
+	cursor: pointer;
 }
 
 body.home-page .row {
