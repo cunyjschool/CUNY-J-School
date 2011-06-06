@@ -230,3 +230,65 @@ body.home-page .home-featured-work ul.featured-work li p.meta a {
 	color: #888888;
 	text-decoration: underline;
 }
+
+body.home-page ul.audiences-selection {
+	padding-left: 20px;
+}
+
+body.home-page ul.audiences-selection li {
+	color: #555555;
+}
+
+body.home-page ul.audiences-selection li a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.footer {
+	padding-bottom: 30px;
+}
+
+.footer h3.site-name a {
+	color: #FF9900;
+}
+
+.footer ul.footer-navigation li {
+	list-style-type: none;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	letter-spacing: 0.1px;
+}
+
+.footer ul.footer-navigation li a {
+	color: #F2F2F2;
+	float: left;
+	padding-right: 5px;
+}
+
+.footer ul.footer-navigation li ul {
+	
+}
+
+.footer ul.footer-navigation li ul li {
+	display: inline;
+}
+
+.footer ul.footer-navigation li ul li a {
+	color: #999999;
+	float: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-left: 1px solid #777777;
+}
+
+.footer ul.footer-navigation li ul li:first-child a {
+	border-left: none;
+}
+
+.footer ul.footer-navigation li a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}

@@ -53,12 +53,6 @@
 			<li><a href="#">Academics</a></li>
 			<li><a href="#">How to Apply</a></li>
 			<li><a href="#">Donate</a></li>
-			<li class="navigation-search">
-				<form method="GET" action="<?php bloginfo('url'); ?>/">
-					<input class="search-box" type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-					<input type="submit" class="search-button button" value="Search" />
-				</form>
-			</li>
 		</ul>		
 		
 		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="70px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
