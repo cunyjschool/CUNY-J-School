@@ -48,15 +48,8 @@
 
 	<div class="wrap">
 		
-		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img width="360px" height="75px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
+		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="60px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
 	
-	
-		<ul class="primary-navigation inline-navigation page-item">
-			<li><a href="#">First item</a></li>
-			<li><a href="#">Second item</a></li>
-			<li><a href="#">Third item</a></li>
-		</ul>
-		
 	</div><!-- END .wrap -->
 
 </div><!-- END .header -->
