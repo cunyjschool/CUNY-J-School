@@ -4,7 +4,7 @@ body, html, ul, ol, p {
 }
 
 body {
-	background-color: #333333;
+	background-color: #555555;
 	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	line-height: 18px;
 	font-size: 12px;
@@ -20,7 +20,7 @@ body {
 .main {
 	padding-top: 10px;
 	background-color: #EFEFEF;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 }
 
 .float-left {
@@ -70,6 +70,14 @@ h3 {
 	line-height: 24px;
 }
 
+h4 {
+	padding-top: 12px;
+	padding-bottom: 8px;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
+}
+
 ul.inline-navigation {
 	list-style-type: none;
 }
@@ -95,8 +103,8 @@ ul.inline-navigation li {
 }
 
 .header .site-logo {
-	padding-top: 20px;
-	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
 
 body.home-page .row {
@@ -112,7 +120,42 @@ body.home-page .home-featured-work {
 }
 
 body.home-page .home-featured-work h3 {
-	padding-top: 0;
+	padding-top: 0px;
 	padding-bottom: 3px;
 	border-bottom: 1px solid #CCCCCC;
+	color: #555555;
+}
+
+body.home-page .home-featured-work ul.featured-work {
+	list-style-type: none;
+	display: table;
+}
+
+body.home-page .home-featured-work ul.featured-work li {
+	display: table-cell;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+body.home-page .home-featured-work ul.featured-work li h4 {
+	font-weight: 500;	
+}
+
+body.home-page .home-featured-work ul.featured-work li h4 a {
+	color: #222222;
+}
+
+body.home-page .home-featured-work ul.featured-work li h4 a:hover {
+	text-decoration: underline;
+}
+
+body.home-page .home-featured-work ul.featured-work li p.meta {
+	color: #888888;
+	font-style: italic;
+}
+
+body.home-page .home-featured-work ul.featured-work li p.meta a {
+	color: #888888;
+	text-decoration: underline;
 }

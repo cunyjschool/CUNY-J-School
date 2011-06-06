@@ -21,11 +21,23 @@
 			<ul class="featured-work">
 				<li>
 					<h4><a href="#">Headline number one appeared in The New York Times</a></h4>
-					<p class="byline">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
+					<p class="meta">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
 				</li>
 				<li>
-					<h4><a href="#">Headline number one appeared in The New York Times</a></h4>
-					<p class="byline">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
+					<h4><a href="#">Headline number two appeared in The New York Times</a></h4>
+					<p class="meta">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
+				</li>
+				<li>
+					<h4><a href="#">Headline number three appeared in The New York Times</a></h4>
+					<p class="meta">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
+				</li>
+				<li>
+					<h4><a href="#">Headline number four appeared in The New York Times</a></h4>
+					<p class="meta">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
+				</li>
+				<li>
+					<h4><a href="#">Headline number five appeared in The New York Times</a></h4>
+					<p class="meta">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
 				</li>
 			</ul>
 			

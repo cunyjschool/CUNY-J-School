@@ -48,7 +48,7 @@
 
 	<div class="wrap">
 		
-		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="60px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
+		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="70px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
 	
 	</div><!-- END .wrap -->
 
