@@ -4,7 +4,7 @@ body, html, ul, ol, p {
 }
 
 body {
-	background-color: #555555;
+	background-color: #1B1B1B;
 	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	line-height: 18px;
 	font-size: 12px;
@@ -105,7 +105,6 @@ ul.inline-navigation li {
 }
 
 .header {
-	background-color: #555555;
 	box-shadow: 3px 0px 5px #DDDDDD;
 }
 
@@ -190,13 +189,10 @@ ul.inline-navigation li {
 	cursor: pointer;
 }
 
-body.home-page .row {
-	margin-bottom: 20px;
-}
-
 body.home-page .home-page-section {
 	position: relative;
-	padding-bottom: 25px;
+	padding-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 body.home-page h3.home-page-section-title {
@@ -317,20 +313,10 @@ body.home-page .home-featured-work ul.featured-work li p.meta a {
 	text-decoration: underline;
 }
 
-body.home-page ul.audiences-selection {
-	padding-left: 10px;
-}
-
-body.home-page ul.audiences-selection li {
-	color: #555555;
-}
-
-body.home-page ul.audiences-selection li a {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	display: block;
-	padding-left: 10px;
-	padding-right: 10px;
+body.home-page .home-page-were-you-looking {
+	margin-bottom: 15px;
+	text-align: center;
+	color: #888888;
 }
 
 body.home-page .home-featured-publications {

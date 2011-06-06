@@ -35,16 +35,15 @@
 			
 		</div><!-- END .home-media-gallery -->
 		
-		<div class="home-audiences-selection row">
+		<div class="float-right">
 			
-			<ul class="audiences-selection inline-navigation">
-				<li>What are you looking for?</li>
-				<li><a href="#">Examples of Student Work</a></li>
-				<li><a href="#">Application Information</a></li>
-				<li><a href="#">Resources at the School</a></li>
-				<li><a href="#">Answers to Technology Problems</a></li>				
-				<li><a href="#">Something Else</a></li>
-			</ul>
+			<div class="page-item home-page-section home-page-academics">
+				
+				dfgdf
+				
+				<h3 class="home-page-section-title align-right"><a href="#">How to Apply</a></h3>
+				
+			</div>
 			
 		</div>
 		
@@ -55,6 +54,14 @@
 			<h3 class="home-page-section-title align-left"><a href="#">Upcoming Events</a></h3>
 			
 		</div><!-- END .home-featured-work -->
+		
+		<div class="clear-both"></div>
+
+		<div class="home-page-were-you-looking">
+			
+			<p>Were you looking for: <a href="#">examples of student work</a>, <a href="#">application information</a>, <a href="#">resources at the school</a>, or <a href="#">answers to technology problems</a>?</p>
+			
+		</div>		
 		
 		<div class="page-item home-featured-work row home-page-section">
 			
