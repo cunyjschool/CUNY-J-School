@@ -41,22 +41,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<div class="header">
 	
-	<div class="top-stripe"></div>	
-
-	<div class="wrap">
-		
-		<ul class="primary-navigation inline-navigation float-right">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Academics</a></li>
-			<li><a href="#">How to Apply</a></li>
-			<li><a href="#">Donate</a></li>
-		</ul>		
-		
-		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="70px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
-	
-	</div><!-- END .wrap -->
-
-</div><!-- END .header -->
+<div class="top-stripe"></div>	

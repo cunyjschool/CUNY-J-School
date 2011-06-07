@@ -98,6 +98,11 @@ ul.inline-navigation li {
 	display: inline-block;
 }
 
+.top-stripe {
+	height: 3px;
+	background-color: #FF9900;
+}
+
 .page-item {
 	box-shadow: 3px 3px 5px #DDDDDD;
 	background-color: #FFFFFF;
@@ -110,11 +115,6 @@ ul.inline-navigation li {
 
 .header .wrap {
 	position: relative;
-}
-
-.header .top-stripe {
-	height: 3px;
-	background-color: #FF9900;
 }
 
 .header .site-logo {
@@ -189,6 +189,10 @@ ul.inline-navigation li {
 	cursor: pointer;
 }
 
+body.home-page .home-page-row {
+	position: relative;
+}
+
 body.home-page .home-page-section {
 	position: relative;
 	padding-bottom: 30px;
@@ -211,6 +215,10 @@ body.home-page h3.home-page-section-title a:hover {
 	color: #FF9900;
 }
 
+body.home-page .home-page-section.home-media-gallery {
+	margin-bottom: 0px;
+}
+
 body.home-page .home-media-gallery h3.home-page-section-title a {
 	bottom: 0;
 	right: 4px;
@@ -226,44 +234,47 @@ body.home-page .home-page-section.home-media-gallery {
 	padding: 2px;
 }
 
-body.home-page .home-media-gallery ul.latest-headlines {
-	width: 358px;
-	margin-left: 600px;
+body.home-page .home-latest-headlines.page-item {
+	width: 356px;
+	margin-left: 604px;
+	z-index: 100;
+	position: absolute;
+	border-left: none;
 }
 
-body.home-page .home-media-gallery ul.latest-headlines li {
-	list-style-type: none;
+body.home-page .home-latest-headlines .lead-story {
 	padding-left: 10px;
 	padding-right: 10px;
-	color: #888888;
+	padding-bottom: 5px;
+}
+
+body.home-page .home-latest-headlines .lead-story p {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #CCCCCC;
 }
 
-body.home-page .home-media-gallery ul.latest-headlines li h4 {
-	padding: 0;
-	color: #888888;
-	font-size: 16px;
-	line-height: 22px;
-	letter-spacing: 0.2px;
+body.home-page .home-latest-headlines ul.latest-headlines {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 12px;
 }
 
-body.home-page .home-media-gallery ul.latest-headlines li p {
-	padding-top: 3px;
-	padding-bottom: 3px;
+body.home-page .home-latest-headlines ul.latest-headlines li {
+	list-style-type: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: inline-block;
 }
 
-body.home-page .home-media-gallery ul.latest-headlines li.active h4,
-body.home-page .home-media-gallery ul.latest-headlines li.active p {
-	color: #222222;
+body.home-page .home-latest-headlines ul.latest-headlines li a img {
+	height: 64px;
+	width: 64px;
+	border: 3px solid #EFEFEF;
 }
 
-body.home-page .home-media-gallery ul.latest-headlines li:hover,
-body.home-page .home-media-gallery ul.latest-headlines li:hover h4 {
-	cursor: pointer;
-	color: #FF9900;
-	border-bottom-color: #FF9900;
+body.home-page .home-latest-headlines ul.latest-headlines li a:hover img,
+body.home-page .home-latest-headlines ul.latest-headlines li.active a img {
+	border-color: #FF9900;
 }
 
 body.home-page .home-featured-events {

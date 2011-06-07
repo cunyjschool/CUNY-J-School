@@ -4,36 +4,61 @@
 	
 	<div class="wrap">
 		
-		<div class="page-item home-media-gallery row home-page-section">
+		<div class="home-page-row">
+		
+			<div class="page-item home-media-gallery home-page-section float-left">
 			
-			<div class="highlighted-media float-left">
-				<img src="http://www.danielbachhuber.com/screenshots/carmel_h640-20110606-153512.jpg" width="600px" height="400px" />
-			</div>
+				<div class="highlighted-media">
+					<img src="http://www.danielbachhuber.com/screenshots/carmel_h640-20110606-153512.jpg" width="600px" height="400px" />
+				</div>
 			
-			<ul class="latest-headlines">
-				<li>
-					<h4>CUNY Journalism School Acquires Community and Ethnic News Site and Awards Program</h4>
-				</li>
-				<li>
-					<h4>Noted First Amendment Lawyer Says Journalists Should Support WikiLeaks’ Rights</h4>
-				</li>
-				<li class="active">
-					<h4>Carmel Delshad on the shoot</h4>
+			</div><!-- END .home-media-gallery -->
+			
+			<div class="home-latest-headlines page-item">
+				
+				<div class="lead-story">
+					<h3 class="lead-headline"><a href="#">Carmel Delshad on the shoot for class</a></h3>
 					<p>On assignment for Craft of Broadcast, Carmel Delshad sets up to shoot a classmate's standup after a press conference at the Urban Justice Center in lower Manhattan.</p>
-				</li>
-				<li>
-					<h4>Vincent Trivett Wins Business Journalism Scholarship from NY Financial Writers</h4>
-				</li>
-				<li>
-					<h4>Craft and Interactive Students Collaborate on Multimedia Census 2010 Project</h4>
-				</li>
-			</ul>
+					<p class="read-more"><a href="#">Read more &rarr;</a></p>
+				</div>
+				
+				<ul class="latest-headlines">
+					<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_katiehonanhasajob-20110607-134543.jpg" /></a></li>
+					<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_locksmith3-20110607-134609.jpg" /></a></li>					
+					<li class="active"><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_carmel_one-20110607-134208.jpg" /></a></li>
+					<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_20110412-jimmybreslin_db-807-homepage-20110607-134146.jpg" /></a></li>
+				</ul>
+				
+			</div>
 			
 			<div class="clear-both"></div>
 			
-			<h3 class="home-page-section-title align-right"><a href="#">Latest Headlines</a></h3>			
-			
-		</div><!-- END .home-media-gallery -->
+		</div><!-- END .row -->
+		
+	</div><!-- END .wrap -->
+		
+</div><!-- END .main -->
+
+<div class="header">
+
+	<div class="wrap">
+		
+		<ul class="primary-navigation inline-navigation float-right">
+			<li><a href="#">About</a></li>
+			<li><a href="#">Academics</a></li>
+			<li><a href="#">How to Apply</a></li>
+			<li><a href="#">Donate</a></li>
+		</ul>		
+		
+		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="70px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
+	
+	</div><!-- END .wrap -->
+
+</div><!-- END .header -->
+
+<div class="main">
+	
+	<div class="wrap">
 		
 		<div class="float-right">
 			
