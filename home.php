@@ -80,12 +80,13 @@
 
 	<div class="wrap">
 		
-		<ul class="primary-navigation inline-navigation float-right">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Academics</a></li>
-			<li><a href="#">How to Apply</a></li>
-			<li><a href="#">Donate</a></li>
-		</ul>		
+		<div class="primary-search float-right">
+			<form method="GET" action="<?php bloginfo('url'); ?>/">
+				<input class="search-box" type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
+				<input type="submit" class="search-button button" value="Search" />
+			</form>
+			<p class="are-you-looking">Looking for: <a href="#">a specific site</a>, <a href="#">student work</a>, <a href="#">school resources</a>, or <a href="#">answers to technology problems</a>?</p>
+		</div>	
 		
 		<div class="site-logo"><a href="<?php get_home_url(); ?>"><img height="70px" src="<?php bloginfo( 'template_directory' ); ?>/images/logos/cunyj-logo_h360.png" /></a></div>
 	
@@ -117,13 +118,7 @@
 			
 		</div><!-- END .home-featured-work -->
 		
-		<div class="clear-both"></div>
-
-		<div class="home-page-were-you-looking">
-			
-			<p>Were you looking for: <a href="#">examples of student work</a>, <a href="#">application information</a>, <a href="#">resources at the school</a>, or <a href="#">answers to technology problems</a>?</p>
-			
-		</div>		
+		<div class="clear-both"></div>	
 		
 		<div class="page-item home-featured-work row home-page-section">
 			

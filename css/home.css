@@ -164,24 +164,39 @@ body.home-page .highlight {
 	z-index: 100;
 }
 
-.header .search-box {
-	padding: 3px;
+.header .primary-search {
+	padding-top: 20px;
+	width: 600px;
+	text-align: right;
 }
 
-.header ul.primary-navigation li.navigation-search {
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 3px;
-	padding-top: 8px;
-	border-right: #999999 solid 1px;
+.header .search-box {
+	padding: 5px;
+	width: 450px;
+}
+
+.header .primary-search p.are-you-looking {
+	padding-top: 3px;
+	color: #888888;
+}
+
+.header .primary-search p.are-you-looking a {
+	color: #888888;
+	text-decoration: underline;
+}
+
+.header .primary-search p.are-you-looking a:hover {
+	color: #F2F2F2;
 }
 
 .header .button {
 	display: inline-block;
-	background-color: #CCCCCC;
-	border: 1px solid #EEEEEE;
-	padding-top: 3px;
-	padding-bottom: 3px;
+	background-color: #AAAAAA;
+	border: 1px solid #CCCCCC;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	font-size: 13px;
 	line-height: 19px;
 	font-weight: 300;
