@@ -103,6 +103,10 @@ ul.inline-navigation li {
 	background-color: #FF9900;
 }
 
+body.home-page .highlight {
+	background-color: #FFF7A6;
+}
+
 .page-item {
 	box-shadow: 3px 3px 5px #DDDDDD;
 	background-color: #FFFFFF;
@@ -110,7 +114,10 @@ ul.inline-navigation li {
 }
 
 .header {
-	box-shadow: 3px 0px 5px #DDDDDD;
+	box-shadow: 3px 3px 5px #DDDDDD;
+	background-color: #555555;
+	border-top: 3px solid #FF9900;
+	border-bottom: 3px solid #FF9900;	
 }
 
 .header .wrap {
@@ -189,6 +196,72 @@ ul.inline-navigation li {
 	cursor: pointer;
 }
 
+a.button.large-callout {
+	display: inline-block;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #FFFFFF;
+	background-color: #FF9900;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-size: 16px;
+	font-weight: 300;
+	border: 1px double #FF9900;
+}
+
+body.home-page .home-page-admissions-information {
+	padding-left: 30px;
+	padding-top: 15px;
+}
+
+body.home-page ul.admissions-information-navigation {
+	display: table;
+}
+
+body.home-page ul.admissions-information-navigation li {
+	display: table-cell;	
+	list-style-type: none;
+	padding-left: 0;
+	padding-right: 25px;
+}
+
+body.home-page ul.admissions-information-navigation li a {
+	color: #555555;
+}
+
+body.home-page ul.admissions-information-navigation li a:hover {
+	text-decoration: underline;
+}
+
+body.home-page ul.admissions-information-navigation li ul li {
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+	width: auto;
+	float: none;
+}
+
+body.home-page ul.admissions-information-navigation li ul li a {
+	color: #888888;
+}
+
+body.home-page .home-page-admissions-actions {
+	padding-top: 15px;
+	text-align: center;
+}
+
+body.home-page .home-page-admissions-actions a.how-to-apply {
+	color: #888888;
+	text-decoration: underline;
+}
+
+body.home-page .home-page-admissions-actions a.button.large-callout {
+	margin-left: 15px;
+}
+
 body.home-page .home-page-row {
 	position: relative;
 }
@@ -232,13 +305,18 @@ body.home-page .home-featured-work h3.home-page-section-title a {
 
 body.home-page .home-page-section.home-media-gallery {
 	padding: 2px;
+	width: 600px;
+}
+
+body.home-page .home-page-top-right {
+	width: 356px;
+	position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
 
 body.home-page .home-latest-headlines.page-item {
-	width: 356px;
-	margin-left: 604px;
-	z-index: 100;
-	position: absolute;
 	border-left: none;
 }
 
@@ -275,6 +353,46 @@ body.home-page .home-latest-headlines ul.latest-headlines li a img {
 body.home-page .home-latest-headlines ul.latest-headlines li a:hover img,
 body.home-page .home-latest-headlines ul.latest-headlines li.active a img {
 	border-color: #FF9900;
+}
+
+body.home-page ul.home-social-links {
+	padding-top: 10px;
+	padding-left: 10px;
+	text-align: center;
+}
+
+body.home-page ul.home-social-links li {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+body.home-page ul.home-social-links li a {
+	color: #888888;
+	display: block;
+	padding-left: 22px;
+	padding-right: 7px;
+}
+
+body.home-page ul.home-social-links li a:hover {
+	text-decoration: underline;
+}
+
+body.home-page ul.home-social-links li.email a {
+	background-image: url("../images/icons/email_s16.png");
+	background-repeat: no-repeat;
+	background-position: 2px 0px;
+}
+
+body.home-page ul.home-social-links li.twitter a {
+	background-image: url("../images/sprites/20101104sprite.png");
+	background-position: -10px -45px;
+	background-repeat: no-repeat;
+}
+
+body.home-page ul.home-social-links li.facebook a {
+	background-image: url("../images/sprites/20101104sprite.png");
+	background-position: -10px -9px;
+	background-repeat: no-repeat;
 }
 
 body.home-page .home-featured-events {

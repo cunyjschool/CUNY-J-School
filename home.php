@@ -5,32 +5,69 @@
 	<div class="wrap">
 		
 		<div class="home-page-row">
+			
+			<div class="home-page-top-right float-right">
+			
+				<div class="home-latest-headlines page-item">
+
+					<div class="lead-story">
+						<h3 class="lead-headline"><a href="#">Carmel Delshad on the shoot for class</a></h3>
+						<p>On assignment for Craft of Broadcast, Carmel Delshad sets up to shoot a classmate's standup after a press conference at the Urban Justice Center in lower Manhattan.</p>
+						<p class="read-more"><a href="#">Read more &rarr;</a></p>
+					</div>
+
+					<ul class="latest-headlines">
+						<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_katiehonanhasajob-20110607-134543.jpg" /></a></li>
+						<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_locksmith3-20110607-134609.jpg" /></a></li>					
+						<li class="active"><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_carmel_one-20110607-134208.jpg" /></a></li>
+						<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_20110412-jimmybreslin_db-807-homepage-20110607-134146.jpg" /></a></li>
+					</ul>
+
+				</div>
+
+				<ul class="home-social-links inline-navigation">
+					<li class="email highlight"><a href="#">Email Newsletter</a></li>				
+					<li class="twitter"><a href="http://twitter.com/cunyjschool">Twitter</a></li>
+					<li class="facebook"><a href="http://facebook.com/cunyjschool">Facebook</a></li>
+				</ul>
+				
+				<div class="home-page-admissions-information">
+					
+					<ul class="admissions-information-navigation">
+						<li><a href="#">Academics</a>
+							<ul>
+								<li><a href="#">Subjects</a></li>
+								<li><a href="#">Course Descriptions</a></li>
+								<li><a href="#">Summer Internship</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Admissions</a>
+							<ul>
+								<li><a href="#">Ten Reasons to Choose CUNY</a></li>
+								<li><a href="#">FAQs</a></li>
+								<li><a href="#">Info Sessions</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<div class="clear-left"></div>
+				
+				<div class="home-page-admissions-actions">
+					<a class="how-to-apply" href="#">How To Apply</a> <a class="large-callout button request-information" href="#">Request Info</a>
+				</div>
+
+			</div><!-- END .home-page-top-right -->
 		
-			<div class="page-item home-media-gallery home-page-section float-left">
+			<div class="page-item home-media-gallery home-page-section">
 			
 				<div class="highlighted-media">
 					<img src="http://www.danielbachhuber.com/screenshots/carmel_h640-20110606-153512.jpg" width="600px" height="400px" />
 				</div>
 			
 			</div><!-- END .home-media-gallery -->
-			
-			<div class="home-latest-headlines page-item">
-				
-				<div class="lead-story">
-					<h3 class="lead-headline"><a href="#">Carmel Delshad on the shoot for class</a></h3>
-					<p>On assignment for Craft of Broadcast, Carmel Delshad sets up to shoot a classmate's standup after a press conference at the Urban Justice Center in lower Manhattan.</p>
-					<p class="read-more"><a href="#">Read more &rarr;</a></p>
-				</div>
-				
-				<ul class="latest-headlines">
-					<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_katiehonanhasajob-20110607-134543.jpg" /></a></li>
-					<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_locksmith3-20110607-134609.jpg" /></a></li>					
-					<li class="active"><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_carmel_one-20110607-134208.jpg" /></a></li>
-					<li><a href="#"><img src="http://www.danielbachhuber.com/screenshots/thumbs_20110412-jimmybreslin_db-807-homepage-20110607-134146.jpg" /></a></li>
-				</ul>
-				
-			</div>
-			
+
 			<div class="clear-both"></div>
 			
 		</div><!-- END .row -->
