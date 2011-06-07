@@ -94,31 +94,11 @@
 
 </div><!-- END .header -->
 
-<div class="main">
+<div class="main bottom-main">
 	
 	<div class="wrap">
 		
-		<div class="float-right">
-			
-			<div class="page-item home-page-section home-page-academics">
-				
-				dfgdf
-				
-				<h3 class="home-page-section-title align-right"><a href="#">How to Apply</a></h3>
-				
-			</div>
-			
-		</div>
-		
-		<div class="page-item home-featured-events row home-page-section">
-			
-			<h3>Upcoming Events</h3>
-			
-			<h3 class="home-page-section-title align-left"><a href="#">Upcoming Events</a></h3>
-			
-		</div><!-- END .home-featured-work -->
-		
-		<div class="clear-both"></div>	
+		<h3 class="home-page-section-title"><a href="#">Featured Dispatches</a></h3>
 		
 		<div class="page-item home-featured-work row home-page-section">
 			
@@ -144,8 +124,6 @@
 					<p class="meta">By <a href="#">Daniel Bachhuber</a>, May 3rd, 2011</a></p>
 				</li>
 			</ul>
-			
-			<h3 class="home-page-section-title align-left"><a href="#">Featured Dispatches</a></h3>
 			
 		</div><!-- END .home-featured-work -->
 		

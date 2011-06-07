@@ -4,7 +4,7 @@ body, html, ul, ol, p {
 }
 
 body {
-	background-color: #1B1B1B;
+	background-color: #333333;
 	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	line-height: 18px;
 	font-size: 12px;
@@ -21,6 +21,11 @@ body {
 	padding-top: 10px;
 	background-color: #EFEFEF;
 	padding-bottom: 10px;
+}
+
+.main.bottom-main {
+	padding-top: 15px;
+	padding-bottom: 20px;
 }
 
 .float-left {
@@ -292,9 +297,8 @@ body.home-page h3.home-page-section-title {
 }
 
 body.home-page h3.home-page-section-title a {
-	color: #CCCCCC;
+	color: #888888;
     letter-spacing: 0.5px;
-	position: absolute;
 	padding: 0;
     text-transform: uppercase;
 }
@@ -478,7 +482,7 @@ body.home-page ul.featured-publications li {
 	display: inline-block;
 	width: 200px;
 	float:left;
-	padding-left: 10px;
+	padding-left: 25px;
 	padding-right: 10px;
 	text-align: center;
 }
