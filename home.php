@@ -142,50 +142,35 @@
 	<div style="clear:both;"></div>
 
 </div><!-- /.section -->
-    
-	<div class="clearfix" id="featured-videos">
-		
-		<div class="video-thumbnails">
-			
-		</div>
-		
-		<div class="primary-video">
-		 
-    	</div>
-    
-	</div><!-- END div#soc -->
 
   
 	<div class="clearfix" id="jnet">
   
 	<h3 class="section-title">Student Work</h3>
     
-    <div class="jsite" id="clips-of-the-week" style="clear: both;">
-		<h3 id="clips"><a href="<?php bloginfo('url'); ?>/category/clips-of-the-week/">Clips of the Week</a></h3>
-		<h5>Student work</h5>
-		<ul>
-		<?php
-		$args = array(	'category_name'=>'clips-of-the-week',
-						'showposts'=>3
-				);
-		$student_clips = new WP_Query( $args ); ?>
-		<?php if ( $student_clips->have_posts() ) : while ( $student_clips->have_posts() ) : $student_clips->the_post(); ?>
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
-		<?php endwhile; else: ?>
-			<li>There are currently no stories.</li>
-		<?php endif; ?>
-		</ul>
+    <div class="jsite" id="nycity-news-service-posts">
+		<a href="http://nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/ns2_h230.jpg" height="100px" width="230px" /></a>
+		<h3 id="nycns"><a href="http://nycitynewsservice.com/">NYCity News Service</a></h3>
+		<h5>Student-Powered Wire Service</h5>
+		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
     
-    <div class="jsite" id="mott-haven-herald-posts">
-		<h3 id="mh"><a href="http://motthavenherald.com/">Mott Haven Herald</a></h3>
-		<h5>Local News in the Bronx</h5>
-		<?php /* Content is loaded dynamically with jQuery */ ?>		
+    <div class="jsite" id="video-storytelling-web-posts">
+		<a href="http://vsw.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/vsw2_h230.jpg" height="100px" width="230px" /></a>
+		<h3 id="vsw"><a href="http://vsw.journalism.cuny.edu/">Video Storytelling for Web</a></h3>
+		<h5>Character-Driven Visual Narratives</h5>
+		<ul>
+			<li><a href="http://vsw.journalism.cuny.edu/assignments/amazing-new-york-people/">New York Stories of Amazing People</a></li>
+			<li><a href="http://vsw.journalism.cuny.edu/new-york-stories-of-interesting-places/">New York Stories of Interesting Places</a></li>
+			<li><a href="http://vsw.journalism.cuny.edu/students-speak/">Students Speak About VSW</a></li>
+			<li><a href="http://vsw.journalism.cuny.edu/about/2011-syllabus/">Spring 2011 Syllabus</a></li>
+		</ul>
 	</div>
 
-	<div class="jsite third" id="219-mag-posts">
-		<h3 id="mag"><a href="http://219mag.com/">219 Mag</a></h3>
-		<h5>A Journal of Issues &amp; Ideas</h5>
+	<div class="jsite third" id="219-tv-magazine-posts">
+		<a href="http://219tvmagazine.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/219tv2_h230.jpg" height="100px" width="230px" /></a>
+		<h3 id="mag"><a href="http://219tvmagazine.journalism.cuny.edu/">219 West TV Magazine</a></h3>
+		<h5>Covering Stories Around NYC</h5>
 		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
 	
@@ -238,49 +223,6 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 </div>
 
 <script type="text/javascript">
-
-	/**
-	 * cunyj_load_featured_videos()
-	 * Generate a featured video player for the homepage
-	 */
-	function cunyj_load_featured_videos( vimeo_channel_url ) {
-		
-		jQuery.ajax({
-			url: vimeo_channel_url,
-			dataType: 'jsonp',
-			success: function( data ) {
-				jQuery.each( data, function( key, video ) {
-					// Add the first video to the primary viewer
-					if ( key == 0 ) {
-						cunyj_replace_primary_video( video.url );
-					}
-					
-					if ( key <= 7 ) {
-						var html = '';
-						html += '<div class="video-thumbnail';
-						if ( key == 0 ) {
-							html += ' active';
-						}
-						html += '" id="' + video.url + '"">';
-						html += '<img src="' + video.thumbnail_small + '" height="75px" width="100px" />';
-						html += '</div>';
-						
-						jQuery('#featured-videos .video-thumbnails').append( html );
-					}
-				});
-				
-				jQuery('#featured-videos .video-thumbnail').click(function() {
-					jQuery('.video-thumbnail').removeClass('active');
-					var url = jQuery(this).attr('id');
-					cunyj_replace_primary_video( url );
-					jQuery(this).addClass('active');
-				});
-				
-				jQuery('#featured-videos').show();
-			}, 
-		});
-		
-	} // END cunyj_load_featured_videos()
 	
 	/**
 	 * cunyj_replace_primary_video()
@@ -302,12 +244,9 @@ Stephen B. Shepard is the founding dean of the Graduate School of Journalism at 
 		
 	} // END cunyj_replace_primary_video()
 
-	// Dynamically load the featured video viewer
-	cunyj_load_featured_videos( 'http://vimeo.com/api/v2/channel/cunyjschool/videos.json' );
-
 	// Dynamically load network content on the homepage
-	cunyj_load_blog_posts( 'http://motthavenherald.com/', 4, 'mott-haven-herald-posts' );
-	cunyj_load_blog_posts( 'http://219mag.com/', 4, '219-mag-posts' );
+	cunyj_load_blog_posts( 'http://nycitynewsservice.com/', 4, 'nycity-news-service-posts' );	
+	cunyj_load_blog_posts( 'http://219tvmagazine.journalism.cuny.edu/', 4, '219-tv-magazine-posts' );
 
 </script>
 	

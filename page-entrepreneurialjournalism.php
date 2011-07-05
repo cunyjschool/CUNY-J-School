@@ -99,16 +99,16 @@ Template Name: Page - Entrepreneurial Journalism
 			<h3><a href="http://www.journalism.cuny.edu/2010/12/14/judges-hand-out-40000-in-seed-money-to-launch-journalistic-ventures/">2010 Student Seed Fund Recipients</a></h3>
 				
 			<ul>
-				<li><h4>Clear Health Costs</h4>
+				<li class="clear-both"><h4>Clear Health Costs</h4>
 					<p>Clear Health Costs provides vital information to U.S. consumers by bringing transparency to the health-care marketplace.</p>
 				</li>
-				<li><h4>Meme Push</h4>
+				<li class="clear-both"><h4>Meme Push</h4>
 					<p>MemePush is a platform that enables the collaborative development of educational news games.</p>
 				</li>
-				<li><h4>Nigeria Police Watch</h4>
+				<li class="clear-both"><h4>Nigeria Police Watch</h4>
 					<p>Nigeria Police Watch is an online platform that provides citizens of Nigeria with vital information to help them get the best out of the police in their neighborhoods while also providing the police with the information they need to better protect citizens and their communities.</p>
 				</li>
-				<li><h4>Overflow Publishing</h4>
+				<li class="clear-both"><h4>Overflow Publishing</h4>
 					<p>Overflow Publishing is an advertising cooperative that helps strengthen Brooklyn's print and online publications by aggregating audiences for advertisers in creative new ways.</p>
 				</li>
 			</ul>
@@ -126,7 +126,7 @@ Template Name: Page - Entrepreneurial Journalism
 			</div>
 			
 			<div class="entrepreneurial-journalism-participant right">
-				<img src="<?php bloginfo('template_directory'); ?>/images/people/indranidatta_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://indrani.entrepreneurial.2011.journalism.cuny.edu/">Indrani Datta</a></strong> is completing her degree at the CUNY Graduate School of Journalism while building a web startup. She started working in the software industry during the first dot-com era. Since then, she has worked in academia and in industry, for newspapers and for the government — as a researcher, writer, programmer, trainer, and project manager.
+				<img src="<?php bloginfo('template_directory'); ?>/images/people/indranidatta_s100.jpg" height="100px" width="100px" class="avatar alignleft" /><strong><a href="http://indrani.entrepreneurial.2011.journalism.cuny.edu/">Indrani Datta</a></strong> is completing her degree at the CUNY Graduate School of Journalism while building a <a href="http://linktamer.com/">web startup</a>. She started working in the software industry during the first dot-com era. Since then, she has worked in academia and in industry, for newspapers and for the government — as a researcher, writer, programmer, trainer, and project manager.
 			</div>
 			
 			<div class="hr" style="clear:both;"></div>
