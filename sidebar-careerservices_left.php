@@ -29,7 +29,7 @@
 		646-758-7732<br /></p>
 
 	<p><strong>Lili Grossman</strong><br />
-		Career Services Coordinator<br />
+		Assistant Director of Career Services and Alumni Relations<br />
 		<a href="mailto:lili.grossman@journalism.cuny.edu">lili.grossman@journalism.cuny.edu</a><br />
 		646-758-7727<br /></p>
 
