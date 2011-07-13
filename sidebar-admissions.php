@@ -36,7 +36,7 @@
 </li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">Frequently Asked Questions</a></li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/ten-reasons-to-choose-cuny/">Ten Reasons to Choose CUNY</a></li>
-<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2011/">Class of 2011 Profile</a></li>
+<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2012/">Class of 2012 Profile</a></li>
 <li><a href="<?php bloginfo('url'); ?>/2010/05/17/august-academy-for-class-of-2012-applicants/">August Academy</a></li>
 </ul>
 
@@ -58,7 +58,7 @@ Assoc. Dir. of Admissions/Student Affairs<br />
 (Skype) ycwrite</p>
 
 <p><strong>Colleen Marshall</strong><br />
-Admissions/Outreach Counselor
+Associate Director of Admissions and Enrollment Management
 <a href="mailto:colleen.marshall@journalism.cuny.edu">colleen.marshall@journalism.cuny.edu</a><br />
 (Office) 646-758-7852<br />
 (Fax) 646-758-7709<br />
