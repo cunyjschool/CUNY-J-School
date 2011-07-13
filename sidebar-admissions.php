@@ -36,7 +36,7 @@
 </li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">Frequently Asked Questions</a></li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/ten-reasons-to-choose-cuny/">Ten Reasons to Choose CUNY</a></li>
-<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2011/">Class of 2011 Profile</a></li>
+<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2012/">Class of 2012 Profile</a></li>
 <li><a href="<?php bloginfo('url'); ?>/2010/05/17/august-academy-for-class-of-2012-applicants/">August Academy</a></li>
 </ul>
 
