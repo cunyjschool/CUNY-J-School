@@ -58,7 +58,7 @@ Assoc. Dir. of Admissions/Student Affairs<br />
 (Skype) ycwrite</p>
 
 <p><strong>Colleen Marshall</strong><br />
-Admissions/Outreach Counselor
+Associate Director of Admissions and Enrollment Management
 <a href="mailto:colleen.marshall@journalism.cuny.edu">colleen.marshall@journalism.cuny.edu</a><br />
 (Office) 646-758-7852<br />
 (Fax) 646-758-7709<br />
