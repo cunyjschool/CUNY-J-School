@@ -174,49 +174,9 @@
 		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
 	
-  </div><!-- END - #jnet -->
+	</div><!-- END - #jnet -->
   
-	<div class="clearfix" id="row3">
-	
-    <div id="dc">
-		<h3><a href="<?php bloginfo('url'); ?>/about/deans-corner/">Dean's Corner</a></h3>
-		<p><a href="<?php bloginfo('url'); ?>/about/deans-corner/"><img src="<?php bloginfo('template_directory'); ?>/images/dean-shepard.jpg"></a>
-Stephen B. Shepard is the founding dean of the Graduate School of Journalism at the City University of New York. From 1984 to 2005, he was editor-in-chief of Business Week, the largest business magazine in the world. <a href="<?php bloginfo('url'); ?>/about/deans-corner/">More &raquo;</a></p>
-
-		<ul>
-		<?php $deans_corner = new WP_Query( array('category_name'=>"Dean's Corner",'showposts'=>3) ); ?>
-		<?php if ( $deans_corner->have_posts() ) : while ( $deans_corner->have_posts() ) : $deans_corner->the_post(); ?>
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
-		<?php endwhile; else: ?>
-			<li>There are currently no stories.</li>
-		<?php endif; ?>
-		</ul>
-    </div>
-      
-	<div id="inside-story">
-		<?php $inside_story = new WP_Query( array('category_name'=>'Inside Story','showposts'=>1 ) ); ?>
-		<?php if ( $inside_story->have_posts() ) : while ( $inside_story->have_posts() ) : $inside_story->the_post(); ?>
-			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<?php if ( $inside_story_thumb = get_post_meta( $post->ID, 'inside_story_thumb', true ) ) { ?>
-				<a href="<?php the_permalink(); ?>"><img src="<?php echo $inside_story_thumb; ?>" height="250px" alt="" class="photo"></a>
-			<?php } ?>
-		<?php endwhile; else: ?>
-				<p>There are currently no stories.</p>
-		<?php endif; ?>
-    </div>
-      
-    <div id="admissions-student-affairs" style="float: left; width: 260px;">
-		<h3><a href="<?php bloginfo('url'); ?>/admissions/">Admissions and Student Affairs</a></h3>
-		<p>For more information about the programs offered or how to apply to the Graduate School of Journalism, contact us at:</p>
-		<ul>
-			<li>(646) 758-7700</li>
-			<li><a href="mailto:admissions@journalism.cuny.edu">admissions@journalism.cuny.edu</a></li>
-		</ul>
-    </div>
-	
 	</div>
-
-  </div>
 
 	</div>
 
