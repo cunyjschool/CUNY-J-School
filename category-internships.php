@@ -70,7 +70,7 @@ See all <a href="<?php bloginfo('url'); ?>/category/career-services/internships/
 
 
 <table style="width: 100%; margin-top: 0px; clear:both;">
-<h4 style="margin-top:50px;">All Internships Opportunities:</h4>
+<h4 style="margin-top:50px;">Summer Internships: A Sampling</h4>
 
 <?php
 $args = array(
