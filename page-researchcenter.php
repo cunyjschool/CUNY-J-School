@@ -22,6 +22,7 @@ Template Name: Page - Research Center
 				<li><a href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides</a></li>
 				<li><a href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Database Tutorials</a></li>
 				<li><a href="http://www.delicious.com/cunyjschoolresearch/">Research Links</a></li>
+				<li><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></li>
 			</ul>
 		</div>
 
