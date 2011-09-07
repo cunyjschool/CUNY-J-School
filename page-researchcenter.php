@@ -19,10 +19,9 @@ Template Name: Page - Research Center
 		<div id="research-center-links" class="research-center-info-zone float-right">
 			<h4>Recommended Links</h4>			
 			<ul>
+				<li><a href="http://apps.appl.cuny.edu:83/F">My Account (Renew/Request Books)</a></li>
 				<li><a href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides</a></li>
 				<li><a href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Database Tutorials</a></li>
-				<li><a href="http://www.delicious.com/cunyjschoolresearch/">Research Links</a></li>
-				<li><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></li>
 			</ul>
 		</div>
 
