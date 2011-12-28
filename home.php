@@ -104,7 +104,7 @@
 	</div><!-- /#featured-home -->
 
     <div id="events-home">
-		<h3>Events</h3>
+		<h3>Events <a href="<?php bloginfo('url'); ?>/feed/?post_type=cunyj_event"><img src="<?php bloginfo('template_directory'); ?>/images/icons/feed_s16.png" height="16px" width="16px" alt="News Feed" class="feed" /></a></h3>
 
 		<?php 
 		$args = array( 	'post_type'=>'cunyj_event',
