@@ -10,25 +10,43 @@ Template Name: Page - Research Center
 	
 	<div class="main" id="research-center-main">
 		
-		<h2><span class="social-links right"><a href="http://facebook.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/facebook_32.png" alt="Facebook" height="32px" width="32px" /></a><a href="http://twitter.com/cunygsjresearch"><img src="<?php bloginfo('template_directory'); ?>/images/icons/twitter_32.png" alt="Twitter" height="32px" width="32px" /></a></span><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
-	
-		<img class="ribbon" src="<?php bloginfo('template_directory'); ?>/images/pages/researchcenter_h850.jpg" alt="Research Center entrance" height="100px" width="850px" />
+		<h2><span class="social-links right"><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism" TITLE="My Account (Online Catalog/Renewals)"><img src="<?php bloginfo('template_directory'); ?>/images/icons/RC-admin-Icon.png" height="32px" width="32px" /></a><a href="http://facebook.com/cunygsjresearch" TITLE="LIKE us on Facebook"><img src="<?php bloginfo('template_directory'); ?>/images/icons/facebook_32.png" alt="Facebook" height="32px" width="32px" /></a><a href="http://twitter.com/cunygsjresearch" TITLE="Follow us on Twitter"><img src="<?php bloginfo('template_directory'); ?>/images/icons/twitter_32.png" alt="Twitter" height="32px" width="32px" /></a></span><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 		
-		<?php if ( is_page( 'research-center' ) ) : ?>
+		
+		<div class="sidebar left standard">
 
-		<div id="research-center-links" class="research-center-info-zone float-right">
-			<h4>Recommended Links</h4>			
-			<ul>
-				<li><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism">My Account (Online Catalog/Renewals)</a></li>
-				<li><a href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides</a></li>
-				<li><a href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Database Tutorials</a></li>
-			</ul>
-		</div>
+			<?php
 
+			$args = array(
+						'theme_location' => 'research_center',
+						'menu_class' => 'navigation default',
+						'menu_id' => 'research-center-navigation',
+						'fallback_cb' => false,
+				);
+
+			wp_nav_menu( $args );
+
+			echo '<ul class="widgets">';
+			dynamic_sidebar( 'research_center' );
+			echo '</ul>';
+
+			?>
+
+		</div><!-- END .sidebar.left -->
+		
+          
+	<div class="content left-sidebar">
+	
+	<div class="page">
+		
+	<?php if ( is_page( 'research-center' ) ) : ?>
+		
+		
 		<div class="tabber" id="research-center-tabber">
 			<?php
 				$tabs_fields = array();
 				$tabs_fields['databases'] = get_post_meta( $post->ID, 'rc_databases_tab', true );
+				$tabs_fields['researchlinks'] = get_post_meta( $post->ID, 'rc_links_tab', true );
 				$tabs_fields['subject_guides'] = get_post_meta( $post->ID, 'rc_subject_guides_tab', true );
 				$tabs_fields['journals'] = get_post_meta( $post->ID, 'rc_journals_tab', true );
 				$tabs_fields['articles'] = get_post_meta( $post->ID, 'rc_articles_tab', true );				
@@ -44,7 +62,11 @@ Template Name: Page - Research Center
 							switch( $key ) {
 								case 'databases':
 									$tabs_navigation .= 'Databases';
-									$tabs_content .= '<div class="tabber-item" id="databases-tabber-item">' . $value . '</div>';							
+									$tabs_content .= '<div class="tabber-item" id="databases-tabber-item">' . $value . '</div>';			
+									break;
+								case 'researchlinks':
+										$tabs_navigation .= 'Researchlinks';
+										$tabs_content .= '<div class="tabber-item" id="researchlinks-tabber-item">' . $value . '</div>';				
 									break;
 								case 'subject_guides':
 									$tabs_navigation .= 'Subject Guides';
@@ -84,45 +106,26 @@ Template Name: Page - Research Center
 			?>
 
 		</div>
+		
+		
+		<?php if ( is_page( 'research-center' ) ) : ?>
+			
+			<div id="research-center-goodreads" class="research-center-info-zone">
 
-		<div style="clear:right;"></div>
+			<div id="gr_grid_widget_1236291550">
+
+			</div><!-- END #gr_grid_widget_1236291550 -->
+			
+				<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=11&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
+
 		
 		<?php endif; ?>
-		
-		<div class="sidebar left standard">
-
-			<?php
-
-			$args = array(
-						'theme_location' => 'research_center',
-						'menu_class' => 'navigation default',
-						'menu_id' => 'research-center-navigation',
-						'fallback_cb' => false,
-				);
-
-			wp_nav_menu( $args );
-
-			echo '<ul class="widgets">';
-			dynamic_sidebar( 'research_center' );
-			echo '</ul>';
-
-			?>
-
-		</div><!-- END .sidebar.left -->
-          
-	<div class="content left-sidebar">
-	
-	<div class="page">
-		
-	<?php if ( is_page( 'research-center' ) ) : ?>
 
 	<div id="research-center-goodreads" class="research-center-info-zone">
 
 	<div id="gr_grid_widget_1236291550">
 		
 	</div><!-- END #gr_grid_widget_1236291550 -->
-	
-	<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=11&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
 	
 	<div id="research-center-services" class="research-center-info-zone float-right">
 	<h4>Services and Forms</h4>	
@@ -135,7 +138,7 @@ Template Name: Page - Research Center
 	</div>
 	
 	<div id="research-center-blog" class="research-center-info-zone float-left">
-		<h4 class="blog-header"><a href="http://researchcenter.journalism.cuny.edu/">Research Center Blog</a></h4>
+		<h4 class="blog-header"><a href="http://researchcenter.journalism.cuny.edu/">Research Center News</a></h4>
 		<ul>
 			<li>Loading...</li>
 		</ul>
