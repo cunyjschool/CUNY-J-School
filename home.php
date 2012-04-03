@@ -160,9 +160,9 @@
 		<h3 id="vsw"><a href="http://vsw.journalism.cuny.edu/">Video Storytelling for Web</a></h3>
 		<h5>Character-Driven Visual Narratives</h5>
 		<ul>
+			<li><a href="http://vsw.journalism.cuny.edu/new-york-stories-of-amazing-people-spring-2012/">New York Stories of Amazing People</a></li>
 			<li><a href="http://vsw.journalism.cuny.edu/new-york-stories-of-fascinating-issues-fall-2011/">New York Stories of Fascinating Issues</a></li>
 			<li><a href="http://vsw.journalism.cuny.edu/new-york-stories-of-interesting-places-fall-2011/">New York Stories of Interesting Places</a></li>
-			<li><a href="http://vsw.journalism.cuny.edu/new-york-stories-of-amazing-people-fall-2011/">New York Stories of Amazing People</a></li>
 			<li><a href="http://vsw.journalism.cuny.edu/blog/">What's New?</a></li>
 		</ul>
 	</div>
