@@ -66,7 +66,7 @@
 		<?php
 			$args = array(
 				'category_name' => 'featured-news',
-				'showposts' => 4
+				'showposts' => 5
 			);
 			$news_posts = new WP_Query( $args ); ?>
 		<ul>
@@ -90,9 +90,16 @@
 
 	
 	<div id="featured-home">
+		
 		<a href="http://nycitynewsservice.com/">
 		<div class="fh-inner" id="nycitynewsservice">
         	<p class="description">Student-powered wire service</p>
+    	</div>
+		</a>
+		
+		<a href="http://voicesofny.org/">
+		<div class="fh-inner" id="voicesofny">
+        	<p class="description"></p>
     	</div>
 		</a>
 
@@ -108,7 +115,7 @@
 
 		<?php 
 		$args = array( 	'post_type'=>'cunyj_event',
-						'showposts'=>4,
+						'showposts'=>5,
 						'meta_key'=>'_cunyj_events_start_date',
 						'order'=>'ASC',
 						'orderby'=>'meta_value',

@@ -321,6 +321,12 @@ body.home-page #news h4 {
 	-moz-border-radius: 5px;
 }
 
+.fh-inner#voicesofny {
+	background-image: url(../images/projects/voicesofny_w200.png);
+	background-repeat: no-repeat;
+	background-position: 15px;
+}
+
 .fh-inner#nycitynewsservice {
 	background-image: url(../images/projects/nycitynewsservice_h200.png);
 	background-repeat: no-repeat;
