@@ -87,7 +87,6 @@
 		</div>
 
 	</div><!-- /#news-home -->
-
 	
 	<div id="featured-home">
 		
@@ -96,18 +95,21 @@
         	<p class="description">Student-powered wire service</p>
     	</div>
 		</a>
-		
-		<a href="http://voicesofny.org/">
-		<div class="fh-inner" id="voicesofny">
-        	<p class="description"></p>
-    	</div>
-		</a>
 
 		<a href="http://fort-greene.thelocal.nytimes.com/">
 		<div class="fh-inner" id="nytlocal">
 			<p class="description">CUNY Graduate School of Journalism<br>with <img height="25" src="<?php bloginfo('template_directory'); ?>/images/logos/nytlogo379x64.gif" class="nyt-logo" alt="NYT logo" /></p>
 		</div></a>
 
+		<a href="http://voicesofny.org/">
+		    <div class="fh-inner" id="voicesofny">
+		    </div>
+		</a>
+		<a href="http://towknight.org/">
+		    <div class="fh-inner" id="towknight">
+		    </div>
+		</a>
+		
 	</div><!-- /#featured-home -->
 
     <div id="events-home">

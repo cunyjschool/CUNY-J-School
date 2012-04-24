@@ -322,9 +322,21 @@ body.home-page #news h4 {
 }
 
 .fh-inner#voicesofny {
-	background-image: url(../images/projects/voicesofny_w200.png);
-	background-repeat: no-repeat;
-	background-position: 15px;
+    background-image: url(http://www.journalism.cuny.edu/wp-content/files/2012/04/voicesofny-logo-100x60px.png);
+    background-repeat: no-repeat;
+    float: left;
+    width: 97px;
+    height: 50px;
+    margin-right: 5px;
+    background-position: 13px 10px;
+}
+.fh-inner#towknight {
+    background-image: url(http://www.journalism.cuny.edu/wp-content/files/2012/04/towknight-logo-100x60px.png);
+    background-repeat: no-repeat;
+    float: left;
+    width: 97px;
+    height: 50px;
+    background-position: 13px 10px;
 }
 
 .fh-inner#nycitynewsservice {
