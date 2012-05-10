@@ -107,7 +107,7 @@ class cunyj
 		wp_enqueue_style( 'cunyj_media_css', get_bloginfo('template_directory') . '/css/media.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		wp_enqueue_style( 'cunyj_buddypress_css', get_bloginfo('template_directory') . '/css/buddypress.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		
-		wp_enqueue_style( 'cunyj_home_css', get_bloginfo('template_directory') . '/css/home.css?v4', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
+		wp_enqueue_style( 'cunyj_home_css', get_bloginfo('template_directory') . '/css/home.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		wp_enqueue_style( 'cunyj_nextgen_gallery_css', get_bloginfo('template_directory') . '/css/nextgen_gallery.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
 		
 		wp_enqueue_style( 'cunyj_databases_css', get_bloginfo('template_directory') . '/css/databases.css', array( 'cunyj_primary_css' ), CUNYJ_VERSION );
@@ -645,6 +645,146 @@ if ( function_exists('register_sidebar') ) {
 	// Sidebar for Entrepreneurial Journalism
 	register_sidebar( array( 'id' => 'entrepreneurial_journalism', 'name' => 'Entrepreneurial Journalism', 'before_title' => '<h3>', 'after_title' => '</h3>' ) );
 		
+}
+
+
+/******************************************************************************************************************
+	   ADDING FEATURED IMAGE TO RSS FEED
+	******************************************************************************************************************/
+function insertThumbnailRSS($content) {
+global $post;
+if ( has_post_thumbnail( $post->ID ) ){
+$content = '' . get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => get_the_title(), 'title' => get_the_title(), 'style' => 'float:right;' ) ) . '' . $content;
+}
+return $content;
+}
+add_filter('the_excerpt_rss', 'insertThumbnailRSS');
+add_filter('the_content_feed', 'insertThumbnailRSS');
+
+
+
+
+
+/******************************************************************************************************************
+	   CREATE What's New META BOX
+	******************************************************************************************************************/
+$prefix = 'cunyjrc_';
+ 
+$whatsnew_meta_box = array(
+'id' => 'whatsnew',
+'title' => 'Whats New',
+'page' => 'page',
+'context' => 'side',
+'priority' => 'high',
+'fields' => array(
+array(
+'name' => 'Title: ',
+'id' => $prefix . 'whatsnew-title',
+'type' => 'text',
+),
+array(
+'name' => 'Post URL: ',
+'id' => $prefix . 'whatsnew-url',
+'type' => 'url',
+),
+array(
+'name' => 'Image URL: ',
+'id' => $prefix . 'whatsnew-image',
+'type' => 'url',
+),
+array(
+'name' => 'Video URL: ',
+'id' => $prefix . 'whatsnew-video',
+'type' => 'url',
+),
+array(
+'name' => 'Blurb: ',
+'id' => $prefix . 'whatsnew-blurb',
+'desc' => 'Enter blurb, description or caption no longer than 100 characters.',
+'type' => 'text',
+)
+)
+);
+
+add_action('admin_init', 'whatsnew_add_box');
+ 
+// Add meta box
+
+function whatsnew_add_box() {
+	global $whatsnew_meta_box;
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+  // check for a template type
+  	if ($template_file == 'page-researchcenter.php') {
+    add_meta_box($whatsnew_meta_box['id'], $whatsnew_meta_box['title'], 'whatsnew_show_box', $whatsnew_meta_box['page'], $whatsnew_meta_box['context'], $whatsnew_meta_box['priority']);
+}
+}
+
+// Callback function to show fields in meta box
+function whatsnew_show_box() {
+global $whatsnew_meta_box, $post;
+ 
+// Use nonce for verification
+echo '<input type="hidden" name="whatsnew_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+ 
+echo '<table class="form-table">';
+ 
+foreach ($whatsnew_meta_box['fields'] as $field) {
+// get current post meta data
+$whatsnew_meta = get_post_meta($post->ID, $field['id'], true);
+ 
+echo '<tr>',
+'<th style="width:10%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
+'<td>';
+switch ($field['type']) {
+case 'text':
+echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $whatsnew_meta, '" style="width:100%;" />', '<br />', $field['desc'];
+break;
+case 'url':
+echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $whatsnew_meta, '" style="width:100%;" />', '<br />', $field['desc'];
+}
+echo '<td>',
+'</tr>';
+}
+ 
+echo '</table>';
+}
+
+add_action('save_post', 'whatsnew_save_data');
+ 
+// Save data from meta box
+function whatsnew_save_data($post_id) {
+global $whatsnew_meta_box;
+ 
+// verify nonce
+if (!wp_verify_nonce($_POST['whatsnew_meta_box_nonce'], basename(__FILE__))) {
+return $post_id;
+}
+ 
+// check autosave
+if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+return $post_id;
+}
+ 
+// check permissions
+if ('page' == $_POST['post_type']) {
+if (!current_user_can('edit_page', $post_id)) {
+return $post_id;
+}
+} elseif (!current_user_can('edit_post', $post_id)) {
+return $post_id;
+}
+ 
+foreach ($whatsnew_meta_box['fields'] as $field) {
+$old = get_post_meta($post_id, $field['id'], true);
+$new = $_POST[$field['id']];
+ 
+if ($new && $new != $old) {
+update_post_meta($post_id, $field['id'], $new);
+} elseif ('' == $new && $old) {
+delete_post_meta($post_id, $field['id'], $old);
+}
+}
 }
 
 ?>

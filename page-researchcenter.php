@@ -10,8 +10,9 @@ Template Name: Page - Research Center
 	
 	<div class="main" id="research-center-main">
 		
-		<h2><span class="social-links right"><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism" TITLE="My Account (Online Catalog/Renewals)"><img src="<?php bloginfo('template_directory'); ?>/images/icons/RC-admin-Icon.png" height="32px" width="32px" /></a><a href="http://facebook.com/cunygsjresearch" TITLE="LIKE us on Facebook"><img src="<?php bloginfo('template_directory'); ?>/images/icons/facebook_32.png" alt="Facebook" height="32px" width="32px" /></a><a href="http://twitter.com/cunygsjresearch" TITLE="Follow us on Twitter"><img src="<?php bloginfo('template_directory'); ?>/images/icons/twitter_32.png" alt="Twitter" height="32px" width="32px" /></a></span><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
+		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 		
+		<?php if ( is_page( 'research-center' ) ) : ?>
 		
 		<div class="sidebar left standard">
 
@@ -31,22 +32,23 @@ Template Name: Page - Research Center
 			echo '</ul>';
 
 			?>
-
+<div class="right">
+	<ul class="social-links">
+		<li class="facebook"><a href="http://facebook.com/cunygsjresearch">Like Us on Facebook</a></li>
+		<li class="twitter"><a href="http://twitter.com/cunygsjresearch">Follow Us on Twitter</a></li>
+		<li class="pinterest"><a href="http://pinterest.com/cunygsjresearch/">Follow Us on Pinterest</a></li>
+	</ul>
+</div><!-- end social-links right -->
 		</div><!-- END .sidebar.left -->
-		
           
 	<div class="content left-sidebar">
-	
+	<div class="rc-account-btn"><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism">My Account</a></div>
 	<div class="page">
-		
-	<?php if ( is_page( 'research-center' ) ) : ?>
-		
 		
 		<div class="tabber" id="research-center-tabber">
 			<?php
 				$tabs_fields = array();
 				$tabs_fields['databases'] = get_post_meta( $post->ID, 'rc_databases_tab', true );
-				$tabs_fields['researchlinks'] = get_post_meta( $post->ID, 'rc_links_tab', true );
 				$tabs_fields['subject_guides'] = get_post_meta( $post->ID, 'rc_subject_guides_tab', true );
 				$tabs_fields['journals'] = get_post_meta( $post->ID, 'rc_journals_tab', true );
 				$tabs_fields['articles'] = get_post_meta( $post->ID, 'rc_articles_tab', true );				
@@ -62,11 +64,7 @@ Template Name: Page - Research Center
 							switch( $key ) {
 								case 'databases':
 									$tabs_navigation .= 'Databases';
-									$tabs_content .= '<div class="tabber-item" id="databases-tabber-item">' . $value . '</div>';			
-									break;
-								case 'researchlinks':
-										$tabs_navigation .= 'Researchlinks';
-										$tabs_content .= '<div class="tabber-item" id="researchlinks-tabber-item">' . $value . '</div>';				
+									$tabs_content .= '<div class="tabber-item" id="databases-tabber-item">' . $value . '</div>';							
 									break;
 								case 'subject_guides':
 									$tabs_navigation .= 'Subject Guides';
@@ -105,21 +103,82 @@ Template Name: Page - Research Center
 
 			?>
 
-		</div>
+		</div><!-- end #research-center-tabber .tabber -->
+
+		<div style="clear:right;"></div>
 		
+		<?php endif; ?>		
+
+	<?php if ( is_page( 'research-center' ) ) : ?>
 		
-		<?php if ( is_page( 'research-center' ) ) : ?>
+	<div id="research-center-middle">
+		<div class="rc-top">
+			<div class="rc-top-left">
+				<h3>What's New</h3>
+					
+                        
+                        <?php
+							$values = get_post_custom( $post->ID );
+							$video = isset( $values['cunyjrc_whatsnew-video'] ) ? esc_attr( $values['cunyjrc_whatsnew-video'][0] ) : '';
+							$image = isset( $values['cunyjrc_whatsnew-image'] ) ? esc_attr( $values['cunyjrc_whatsnew-image'][0] ) : '';
+							wp_nonce_field( 'cunyjrc_whatsnew-video_box_nonce', 'meta_box_nonce' );
+							wp_nonce_field( 'cunyjrc_whatsnew-image_box_nonce', 'meta_box_nonce' );
+							if (!empty($video)) {
+							   	global $wp_embed;
+								$post_embed = $wp_embed->run_shortcode('[embed width=300]' . $video . '[/embed]');
+								echo '<div style="padding-bottom: 5px;">' . $post_embed . '</div>';
+                            } elseif (!empty($image)) { ?>
+								<img src="<?php echo $image; ?>" style="padding-bottom: 5px;max-width:310px; background: #eee; padding: 3px; max-height: 190px; float: left;margin-right: 10px"/>
+                            <?php } ?>
+					
+							<h4><a href="<?php echo get_post_meta( get_the_id(), 'cunyjrc_whatsnew-url', true); ?>" target="_blank"><?php echo get_post_meta( get_the_id(), 'cunyjrc_whatsnew-title', true); ?></a></h4>
+					
+							<span class="rc-postcaption"><?php echo get_post_meta( get_the_id(), 'cunyjrc_whatsnew-blurb', true); ?></span>
+			</div><!-- end rc-top-left-->
 			
-			<div id="research-center-goodreads" class="research-center-info-zone">
+			<div class="rc-top-right">
+					<ul class="rc-guides">
+						<li style="border-bottom: 1px solid #eee;">
+							<div class="rc-blurb">
+								Research guides organized by topic with sites, tools, tips & techniques to inform your reporting.
+							</div><!-- end rc-blurb-->
+							<div class="rc-buttons" style="margin-top: 30px;">
+								<span><a class="gray-btn" href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides <span style="float:right;margin-right: 8px;">&rarr;</span></a></span>
+							</div>
+						</li>
+				
 
-			<div id="gr_grid_widget_1236291550">
-
-			</div><!-- END #gr_grid_widget_1236291550 -->
+						<li style="border-bottom: 1px solid #eee;">
+							<div class="rc-blurb">
+								A to Z List of our research databases.
+							</div><!-- end rc-blurb-->
+							<div class="rc-buttons">
+								<span><a class="gray-btn" href="http://www.journalism.cuny.edu/databases/">Databases list <span style="float:right;margin-right: 10px;">&rarr;</span></a></span>
+							</div>
+						</li>
+								
+						<li>
+							<div class="rc-blurb">
+									Tips on searching our research databases. 
+							</div><!-- end rc-blurb-->
+							<div class="rc-buttons">
+								<span><a class="gray-btn" href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Databases tutorials	<span style="float:right;margin-right: 8px;">&rarr;</span></a></span>
+							</div>
+						</li>
+					</ul><!-- end rc-guides -->
+					
+					
 			
-				<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=11&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
-
+			</div><!--end rc-top-right -->
+			
+			
+		</div><!-- end rc left -->
+		<!--
+		<div class="rc-bottom">
+			<h3>What's New</h3>
+		</div>-->
+	</div><!-- end research center middle -->
 		
-		<?php endif; ?>
 
 	<div id="research-center-goodreads" class="research-center-info-zone">
 
@@ -127,23 +186,9 @@ Template Name: Page - Research Center
 		
 	</div><!-- END #gr_grid_widget_1236291550 -->
 	
-	<div id="research-center-services" class="research-center-info-zone float-right">
-	<h4>Services and Forms</h4>	
-		<ul>
-			<li><a href="http://cunygsj.docutek.com/eres/">Electronic Reserves</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/research-center/services/interlibrary-loan/">Interlibrary Loan Services</a></li>
-			<li><a href="https://cunyjschool.wufoo.com/forms/reserve-request-form/">Faculty Reserve Request Form</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/research-center/services/research-center-forms/">Research Center Forms</a></li>
-		</ul>
-	</div>
+	<script src="http://www.goodreads.com/review/grid_widget/2095476.Featured%20Books?num_books=11&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1236291550" type="text/javascript" charset="utf-8"></script>
 	
-	<div id="research-center-blog" class="research-center-info-zone float-left">
-		<h4 class="blog-header"><a href="http://researchcenter.journalism.cuny.edu/">Research Center News</a></h4>
-		<ul>
-			<li>Loading...</li>
-		</ul>
-	</div><!-- END #research-center-blog -->
-	
+
 	</div>
 		
 	<?php endif; ?>

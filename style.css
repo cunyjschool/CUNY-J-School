@@ -1139,22 +1139,6 @@ img.news-photo {
 	font-size: 14px;	
 }
 
-.main#research-center-main .gr_grid_book_container {
-	/* customize book cover container div here */
-	float: left;
-	width: 39px;
-	height: 60px;
-	margin: 5px;
-	border: 3px solid #eee;
-	overflow: hidden;
-} 
-
-.main#research-center-main #gr_grid_widget_1236291550 h2 {
-	margin-top: 10px;
-	padding-top: 0;
-	font-size: 100%;
-}
-
 .main#research-center-main .research-center-info-zone ul {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -2030,4 +2014,225 @@ ul#give-now li li li a, #give-now li li li a:visited {
 	display: none;
 }
  
- 
+/* Research Center's page */
+.rc-account-btn {
+	border-radius: 2px;	
+	padding: 3px;
+	background: url('http://journalism.cuny.edu/files/2012/04/key-16px.png') no-repeat scroll 6px 2px #eee;
+	margin: -20px 13px 10px 0;
+	font-size: 11.5px;
+	border: 1px solid #ddd;
+	line-height: 1.2em;
+	float: right;
+	width: 90px;
+}
+.rc-account-btn a{
+	color: #333;
+	display: block;
+	padding-left: 25px;
+	text-decoration: none;
+	font-size: 11.5px;
+}
+.rc-account-btn:hover {
+	background: url('http://journalism.cuny.edu/files/2012/04/key-16px.png') no-repeat scroll 6px 2px #dedede;
+	padding-left: -3px;
+}
+#research-center-tabber ul {
+	clear: right;
+}
+#research-center-tabber {
+}
+
+#research-center-main div.tabber-item {
+	background-color:#555555;
+	border-radius:0 8px 8px 8px;
+	box-shadow:0 5px 10px #666666;
+	color:#FFFFFF;
+	margin: 0 0 30px 0;
+	width:95%;
+	font-size:13.5px;
+}
+
+ul.tabber-navigation li.active {
+	background-color:#555555;
+	border-right-color:#555555;
+	box-shadow:0 5px 10px #666666;
+	color:#FF9900;
+}
+
+#research-center-middle {
+	height: 230px;
+	width: 100%;
+}
+#research-center-middle .rc-top {
+	width: 100%;
+	height: 310px;
+	display: block;
+	float: left;
+	margin-right: 4px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+}
+
+.rc-top h3 {
+	text-transform: uppercase;
+	font-size: 17px;
+}
+
+.rc-bottom h3 {
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 17px;
+	border-bottom: 1px solid #ddd;
+}
+
+.rc-top .rc-top-left {
+	float:left;
+	width: 49%;
+}
+.rc-top .rc-top-right {
+	float: right;
+	width: 48%;
+	border-left: 1px solid #eee;
+	padding-left: 8px;
+	height: 310px;
+}
+
+#research-center-middle .rc-bottom {
+	height: 150px;
+	background: #f2f1f1;
+	width: 100%;
+	float: right;
+	border: 1px solid #ededed;
+	border-radius: 5px;
+	box-shadow:0 1px 2px #ccc;
+	margin-bottom: 5px;
+}
+
+
+ul.rc-guides li {
+	clear: both;
+	margin: 20px 0 30px;
+	display: block;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+
+
+.rc-top-left h4 {
+	text-transform: capitalize;
+	font-size:15px;
+	text-align: left;
+	display: block;
+}
+
+.rc-top-left h4 a{
+	color: #555;
+	font-weight: bold;
+}
+
+.rc-top .rc-postcaption {
+	color: #888;
+}
+.rc-top .rc-blurb {
+	width: 48%;
+	height: auto;
+	float: left;
+	margin-right: 5px;
+	color: #787975;
+}
+.rc-buttons {
+	height: auto;
+	width: 49%;
+	float: right;
+	margin-top: 5px;
+}
+
+.rc-buttons .gray-btn {
+	background: #555555;
+	box-shadow: 0 1px 2px #666666;
+	font-size: 12px;
+	letter-spacing:0;
+	padding: 2px 0;
+	text-indent: 10px;
+	text-align: left;
+	border-radius: 5px 5px 5px 5px;
+	font-weight: 500;
+	display: block;
+	position:relative;
+	width: 147px;
+	float: right;
+	margin: 0 0 20px 0;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+.gray-btn:hover {
+	color: #ff9900;
+	text-decoration: none;
+}
+
+a.gray-btn {
+	color: white;
+	text-decoration: none;
+}
+
+#research-center-goodreads {
+	height:185px;
+	overflow: hidden;
+	border-bottom: 1px solid #eeeeee;
+	width: 100%;
+	
+}
+.main#research-center-main .gr_grid_book_container {
+	/* customize book cover container div here */
+	float: left;
+	height: 65px;
+	margin: 1px;
+	border: 2px solid #eee;
+	overflow: hidden;
+	width: auto;
+} 
+
+.main#research-center-main #gr_grid_widget_1236291550 h2 {
+	margin-top: 20px;
+}
+.main#research-center-main #gr_grid_widget_1236291550 h2 a{
+	text-transform: uppercase;
+	font-size: 17px;
+}
+#research-center-main ul.social-links {
+	margin-top: 10px;
+}
+
+#research-center-main ul.social-links li a  {
+	text-decoration: none;
+	color: #999999;
+	display: block;
+	float: left;
+	padding-left: 22px;
+}
+
+ul.social-links li.facebook a {
+	background: url("http://www.journalism.cuny.edu/files/2012/05/facebook-18x18.png") no-repeat;
+}
+
+#research-center-main ul.social-links li.twitter a {
+	background: url('http://www.journalism.cuny.edu/files/2012/05/twitter-18x18.png') no-repeat;
+}
+
+#research-center-main ul.social-links li.pinterest a {
+	background: url('http://www.journalism.cuny.edu/files/2012/05/pinterest-18x18.png') no-repeat;
+}
+
+#research-center-main ul.social-links li a:hover {
+	color: #333;
+}
+
+#research-center-main ul.social-links li img {
+}
+
+
+
+
+
