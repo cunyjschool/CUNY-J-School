@@ -11,6 +11,14 @@
 	background-color:white;
 }
 
+#capstone-content h2 {
+ 	border-bottom: 3px solid #EEEEEE;
+	border-right: none;
+    color: #000000;
+    padding-bottom: 5px;
+	margin: 10px 40px 0 40px;
+}
+
 .capstone-column-wrapper {
 	margin: 15px 0px;
 	min-height:300px;
@@ -30,14 +38,13 @@
 .capstone-img img {
 	width:900px;
 	border: 0;
+	display: none;
 	margin: -35px -20px 20px -20px;
 }
 
 div.capstone-box {
 	line-height: 1.7em;
-	width: 245px;
 	float: left;
-	margin: 40px 20px 10px 30px;
 }
 
 div.capstone-box h3 {
@@ -50,21 +57,50 @@ div.capstone-box h3 {
 
 div.capstone-box ul li {
 	list-style:none;
-	padding: 15px 0;
-	border-bottom: 1px solid #eee;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+	border: 1px solid #E0E0E0;
+    height: 260px;
+    position: relative;
+    z-index: 4;
+	padding: 4px;
+	width: 236px;
+	margin: 0 0 40px 40px;
+	float: left;
 }
 
+div.capstone-box ul li p {
+	color: #888;
+	font-size: 11px;
+	line-height: 17px;
+	text-align: center;
+}
+div.capstone-box ul li p.text-color-light-grey {
+    color: #999;
+	font-size: 9.5px;
+}
+	
+
 div.capstone-box ul li h4 {
-	text-transform: uppercase;
-	font-size: 1.2em;
-	padding-top: 10px;
+	font-size: 13px;
+    line-height: 18px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+div.capstone-box ul li h4 a{
+	color: #333;
+}
+
+div.capstone-box ul li h4 a:hover {
+	text-decoration: underline;
+	background: none;
 }
 
 div.capstone-box ul li a img {
-	margin-top: 15px;
-	padding: 4px;
-	background-color: #fefefe;
-	border: 1px solid #d9d9d9;
+	display: block;
+	height: 117px;
+    width: 235px;
+	box-shadow: 0 0 1px 0 #333333;
 }
 
 div.capstone-box ul li a:hover img {
