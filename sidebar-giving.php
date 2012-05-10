@@ -14,6 +14,7 @@
 <li><a href="<?php bloginfo('url'); ?>/donate/alumni-fund/">Alumni Fund</a></li>
 <li><a href="<?php bloginfo('url'); ?>/donate/future-journalists-fund/">Future Journalists Fund</a></li>
 <li><a href="<?php bloginfo('url'); ?>/donate/annual-fund/">Annual Fund</a></li>
+<li><a href="<?php bloginfo('url'); ?>/donate/the-donald-s-rubin-mcgraw-hill-memorial-scholarship-fund/">Donald S. Rubin McGraw-Hill Memorial Scholarship Fund</a></li>
 <li><a href="<?php bloginfo('url'); ?>/donate/named-funds-special-programs-prizes-and-awards/">Named Funds, Special Programs, Prizes, and Awards</a></li>
 <li><h3 style="margin-top: 10px;">Stay Connected</h3></li>
 <li><a href="<?php bloginfo('url'); ?>/donate/special-events/">Special Events</a></li>
