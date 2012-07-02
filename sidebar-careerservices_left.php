@@ -23,9 +23,9 @@
 
 	<h3>Contact Us</h3>
 
-	<p><strong>Deborah Stead</strong><br />
+	<p><strong>Joanna Hernandez</strong><br />
 		Director of Career Services<br />
-		<a href="mailto:deborah.stead@journalism.cuny.edu">deborah.stead@journalism.cuny.edu</a><br />
+		<a href="mailto:joanna.hernandez@journalism.cuny.edu">joanna.hernandez@journalism.cuny.edu</a><br />
 		646-758-7732<br /></p>
 
 	<p><strong>Lili Grossman</strong><br />
