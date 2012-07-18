@@ -28,9 +28,9 @@
 		<a href="mailto:joanna.hernandez@journalism.cuny.edu">joanna.hernandez@journalism.cuny.edu</a><br />
 		646-758-7732<br /></p>
 
-	<p><strong>Lili Grossman</strong><br />
+	<p><strong>Marisa Osorio</strong><br />
 		Assistant Director of Career Services and Alumni Relations<br />
-		<a href="mailto:lili.grossman@journalism.cuny.edu">lili.grossman@journalism.cuny.edu</a><br />
+		<a href="mailto:marisa.osorio@journalism.cuny.edu">marisa.osorio@journalism.cuny.edu</a><br />
 		646-758-7727<br /></p>
 
 	<p><strong>Office Hours</strong><br />
