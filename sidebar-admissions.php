@@ -67,7 +67,7 @@ Associate Director of Admissions and Enrollment Management
 <p><strong>Ray Villalona</strong><br />
 Financial Aid Manager<br />
 <a href="mailto:rvillalona@gc.cuny.edu">rvillalona@gc.cuny.edu</a><br />
-(Office) 212-817-7459<br />
+(Office) 212-817-7460<br />
 (Fax) 212-817-1623<br />
 (Skype) rmac0719</p>
 
