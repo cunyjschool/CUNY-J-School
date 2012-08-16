@@ -34,6 +34,6 @@
 		646-758-7727<br /></p>
 
 	<p><strong>Office Hours</strong><br />
-		9 a.m.-5 p.m., Monday-Friday</p>
+		9 a.m.- 6 p.m., Monday-Friday</p>
 	
 </div>
