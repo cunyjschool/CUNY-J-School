@@ -63,11 +63,12 @@
 				<li class="headlink first-item"><a href="#" class="olink">Quicklinks &darr;</a>
 					<ul>
 						<?php if ( !is_user_logged_in() ) : ?>
-						<li class="login"><a href="<?php bloginfo('url'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_bloginfo('url')); ?>">Login</a></li>
+						<li class="login"><a href="<?php bloginfo('url'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_bloginfo('url')); ?>">Wordpress Login</a></li>
 						<?php endif; ?>
 						<li><a href="http://tech.journalism.cuny.edu">Tech Docs</a></li>
 						<li><a href="http://help.journalism.cuny.edu">Help Desk</a></li>
-						<li><a href="http://webmail.journalism.cuny.edu">E-mail</a></li>
+						<li><a href="http://webmail.journalism.cuny.edu">2013 Email</a></li>
+						<li><a href="http://mail.journalism.cuny.edu">Email</a></li>
 						<li><a href="https://cunyjschool.wufoo.com/forms/equipment-request-form/">Equipment Request</a></li>
 						<li><a href="http://tech.journalism.cuny.edu/room-reservation-request/">Room Reservation</a></li>
 						<li><a href="https://blackboard-doorway.cuny.edu/">Blackboard</a></li>
