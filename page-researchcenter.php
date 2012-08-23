@@ -39,11 +39,11 @@ Template Name: Page - Research Center
 	</div><!-- end social-links right -->
 			</div><!-- END .sidebar.left -->
 			
+		<div class="content left-sidebar">
 		<?php if ( is_page( 'research-center' ) ) : ?>
 		
 	
           
-	<div class="content left-sidebar">
 	<div class="rc-account-btn"><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism">My Account</a></div>
 	<div class="page">
 		
