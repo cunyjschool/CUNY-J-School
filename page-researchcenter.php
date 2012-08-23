@@ -12,16 +12,38 @@ Template Name: Page - Research Center
 		
 		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 		
-		<?php get_sidebar( 'research_center' ); ?>
-		
-		
-	<div class="content left-sidebar">
+			<div class="sidebar left standard">
+
+				<?php
+
+				$args = array(
+							'theme_location' => 'research_center',
+							'menu_class' => 'navigation default',
+							'menu_id' => 'research-center-navigation',
+							'fallback_cb' => false,
+					);
+
+				wp_nav_menu( $args );
+
+				echo '<ul class="widgets">';
+				dynamic_sidebar( 'research_center' );
+				echo '</ul>';
+
+				?>
+	<div class="right">
+		<ul class="social-links">
+			<li class="facebook"><a href="http://facebook.com/cunygsjresearch">Like Us on Facebook</a></li>
+			<li class="twitter"><a href="http://twitter.com/cunygsjresearch">Follow Us on Twitter</a></li>
+			<li class="pinterest"><a href="http://pinterest.com/cunygsjresearch/">Follow Us on Pinterest</a></li>
+		</ul>
+	</div><!-- end social-links right -->
+			</div><!-- END .sidebar.left -->
 			
 		<?php if ( is_page( 'research-center' ) ) : ?>
 		
 	
           
-		
+	<div class="content left-sidebar">
 	<div class="rc-account-btn"><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism">My Account</a></div>
 	<div class="page">
 		
@@ -113,7 +135,7 @@ Template Name: Page - Research Center
 								$post_embed = $wp_embed->run_shortcode('[embed width=300]' . $video . '[/embed]');
 								echo '<div style="padding-bottom: 5px;">' . $post_embed . '</div>';
                             } elseif (!empty($image)) { ?>
-								<img src="<?php echo $image; ?>" style="padding-bottom: 5px;max-width:300px; background: #eee; padding: 3px; max-height: 190px; float: left;margin-right: 10px"/>
+								<img src="<?php echo $image; ?>" style="padding-bottom: 5px;max-width:310px; background: #eee; padding: 3px; max-height: 190px; float: left;margin-right: 10px"/>
                             <?php } ?>
 					
 							<h4><a href="<?php echo get_post_meta( get_the_id(), 'cunyjrc_whatsnew-url', true); ?>" target="_blank"><?php echo get_post_meta( get_the_id(), 'cunyjrc_whatsnew-title', true); ?></a></h4>
@@ -128,7 +150,7 @@ Template Name: Page - Research Center
 								Research guides organized by topic with sites, tools, tips & techniques to inform your reporting.
 							</div><!-- end rc-blurb-->
 							<div class="rc-buttons" style="margin-top: 30px;">
-								<span><a class="gray-btn" href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides <span style="float:right;margin-right: 5px;">&rarr;</span></a></span>
+								<span><a class="gray-btn" href="http://researchcenter.journalism.cuny.edu/research-guides/">Research Guides <span style="float:right;margin-right: 8px;">&rarr;</span></a></span>
 							</div>
 						</li>
 				
@@ -138,7 +160,7 @@ Template Name: Page - Research Center
 								A to Z List of our research databases.
 							</div><!-- end rc-blurb-->
 							<div class="rc-buttons">
-								<span><a class="gray-btn" href="http://www.journalism.cuny.edu/databases/">Databases list <span style="float:right;margin-right: 7px;">&rarr;</span></a></span>
+								<span><a class="gray-btn" href="http://www.journalism.cuny.edu/databases/">Databases list <span style="float:right;margin-right: 10px;">&rarr;</span></a></span>
 							</div>
 						</li>
 								
@@ -147,7 +169,7 @@ Template Name: Page - Research Center
 									Tips on searching our research databases. 
 							</div><!-- end rc-blurb-->
 							<div class="rc-buttons">
-								<span><a class="gray-btn" href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Databases tutorials	<span style="float:right;margin-right: 5px;">&rarr;</span></a></span>
+								<span><a class="gray-btn" href="http://researchcenter.journalism.cuny.edu/database-tutorials/">Databases tutorials	<span style="float:right;margin-right: 8px;">&rarr;</span></a></span>
 							</div>
 						</li>
 					</ul><!-- end rc-guides -->
@@ -202,6 +224,7 @@ Template Name: Page - Research Center
   </div>
 	
 <div style="clear:left;"></div>
+
 
 </div><!-- END .main -->
 
