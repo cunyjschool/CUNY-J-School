@@ -12,38 +12,16 @@ Template Name: Page - Research Center
 		
 		<h2><?php the_title(); ?><?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?></h2>
 		
-			<div class="sidebar left standard">
-
-				<?php
-
-				$args = array(
-							'theme_location' => 'research_center',
-							'menu_class' => 'navigation default',
-							'menu_id' => 'research-center-navigation',
-							'fallback_cb' => false,
-					);
-
-				wp_nav_menu( $args );
-
-				echo '<ul class="widgets">';
-				dynamic_sidebar( 'research_center' );
-				echo '</ul>';
-
-				?>
-	<div class="right">
-		<ul class="social-links">
-			<li class="facebook"><a href="http://facebook.com/cunygsjresearch">Like Us on Facebook</a></li>
-			<li class="twitter"><a href="http://twitter.com/cunygsjresearch">Follow Us on Twitter</a></li>
-			<li class="pinterest"><a href="http://pinterest.com/cunygsjresearch/">Follow Us on Pinterest</a></li>
-		</ul>
-	</div><!-- end social-links right -->
-			</div><!-- END .sidebar.left -->
+		<?php get_sidebar( 'research_center' ); ?>
+		
+		
+	<div class="content left-sidebar">
 			
 		<?php if ( is_page( 'research-center' ) ) : ?>
 		
 	
           
-	<div class="content left-sidebar">
+		
 	<div class="rc-account-btn"><a href="http://apps.appl.cuny.edu:83/F/?func=find-b-0&local_base=journalism">My Account</a></div>
 	<div class="page">
 		
@@ -200,23 +178,30 @@ Template Name: Page - Research Center
 		
 	<?php endif; ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-	<div class="entry content left-sidebar">
+    		<div class="page" id="page-<?php the_ID(); ?>">
     
-		<?php the_content(); ?>
-		
+    		<?php if ( $page_image = get_post_meta( $post->ID, 'page_image', true ) ) : ?>
+				<div id="page-image">
+					<img src="<?php echo $page_image; ?>" />
+				</div>
+	  		<?php endif; ?>
+
+			<?php if ( $page_image_wide = get_post_meta( $post->ID, 'page_image_wide', true ) ) : ?>
+	        	<div id="page-image-wide">
+					<img src="<?php echo $page_image_wide; ?>" />
+	        	</div>
+	  		<?php endif; ?>
+
+      		<div class="entry">
+				<?php the_content(); ?>
+      		</div>
     </div>
-
-	<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-
-	<?php endwhile; endif; ?>
-		
-	</div>
-
-	<div style="clear:both;"></div>
+		<?php endwhile; endif; ?>
+  </div>
 	
-	</div>
+<div style="clear:left;"></div>
 
 </div><!-- END .main -->
 
