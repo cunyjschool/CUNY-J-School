@@ -72,7 +72,6 @@
 						<li><a href="https://cunyjschool.wufoo.com/forms/equipment-request-form/">Equipment Request</a></li>
 						<li><a href="http://tech.journalism.cuny.edu/room-reservation-request/">Room Reservation</a></li>
 						<li><a href="https://blackboard-doorway.cuny.edu/">Blackboard</a></li>
-						<li><a href="http://www.cuny.edu/flu/">H1N1 Info</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/about/campus-facilities/hours-of-operation/">Hours of Operation</a></li>
 					</ul>
 				</li>
