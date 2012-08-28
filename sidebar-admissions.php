@@ -36,8 +36,8 @@
 </li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/frequently-asked-questions/">Frequently Asked Questions</a></li>
 <li><a href="<?php bloginfo('url'); ?>/admissions/ten-reasons-to-choose-cuny/">Ten Reasons to Choose CUNY</a></li>
-<li><a href="<?php bloginfo('url'); ?>/admissions/class-of-2012/">Class of 2012 Profile</a></li>
-<li><a href="<?php bloginfo('url'); ?>/events/august-academy/">August Academy</a></li>
+<li><a href="<?php bloginfo('url'); ?>/admissions/class-profile/">Class of 2013 Profile</a></li>
+<li><a href="<?php bloginfo('url'); ?>/2010/05/17/august-academy-for-class-of-2012-applicants/">August Academy</a></li>
 </ul>
 
 
@@ -67,7 +67,7 @@ Associate Director of Admissions and Enrollment Management
 <p><strong>Ray Villalona</strong><br />
 Financial Aid Manager<br />
 <a href="mailto:rvillalona@gc.cuny.edu">rvillalona@gc.cuny.edu</a><br />
-(Office) 212-817-7460<br />
+(Office) 212-817-7459<br />
 (Fax) 212-817-1623<br />
 (Skype) rmac0719</p>
 
