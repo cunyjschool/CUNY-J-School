@@ -67,8 +67,8 @@
 						<?php endif; ?>
 						<li><a href="http://tech.journalism.cuny.edu">Tech Docs</a></li>
 						<li><a href="http://help.journalism.cuny.edu">Help Desk</a></li>
-						<li><a href="http://webmail.journalism.cuny.edu">2013 Email</a></li>
-						<li><a href="http://mail.journalism.cuny.edu">Email</a></li>
+						<li><a href="http://mail.journalism.cuny.edu">CUNY Email</a></li>
+						<li><a href="http://webmail.journalism.cuny.edu">2013 GMail</a></li>
 						<li><a href="https://cunyjschool.wufoo.com/forms/equipment-request-form/">Equipment Request</a></li>
 						<li><a href="http://tech.journalism.cuny.edu/room-reservation-request/">Room Reservation</a></li>
 						<li><a href="https://blackboard-doorway.cuny.edu/">Blackboard</a></li>
