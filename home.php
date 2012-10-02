@@ -16,7 +16,7 @@
 
 <!-- Start Slideshow and Nav -->
   <div id="home-slideshow">
-		<?php echo do_shortcode('[nggallery id=1 template="galleryview" images=0]'); ?>
+		<?php echo do_shortcode('[SlideDeck2 id=16724]'); ?>
   </div>
   
 <div id="nav-items">
@@ -158,14 +158,14 @@
 	<h3 class="section-title">Student Work</h3>
     
     <div class="jsite" id="nycity-news-service-posts">
-		<a href="http://nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/ns2_h230.jpg" height="100px" width="230px" /></a>
+		<a href="http://nycitynewsservice.com/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/nycns.png" width="230px" /></a>
 		<h3 id="nycns"><a href="http://nycitynewsservice.com/">NYCity News Service</a></h3>
 		<h5>Student-Powered Wire Service</h5>
 		<?php /* Content is loaded dynamically with jQuery */ ?>
 	</div>
     
     <div class="jsite" id="video-storytelling-web-posts">
-		<a href="http://vsw.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/vsw2_h230.jpg" height="100px" width="230px" /></a>
+		<a href="http://vsw.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/vsw.png" width="230px" /></a>
 		<h3 id="vsw"><a href="http://vsw.journalism.cuny.edu/">Video Storytelling for Web</a></h3>
 		<h5>Character-Driven Visual Narratives</h5>
 		<ul>
@@ -177,7 +177,7 @@
 	</div>
 
 	<div class="jsite third" id="219-tv-magazine-posts">
-		<a href="http://219tvmagazine.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/219tv2_h230.jpg" height="100px" width="230px" /></a>
+		<a href="http://219tvmagazine.journalism.cuny.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/pages/home/219tv.png" width="230px" /></a>
 		<h3 id="mag"><a href="http://219tvmagazine.journalism.cuny.edu/">219 West TV Magazine</a></h3>
 		<h5>Covering Stories Around NYC</h5>
 		<?php /* Content is loaded dynamically with jQuery */ ?>
