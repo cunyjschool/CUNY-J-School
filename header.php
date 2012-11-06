@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 <?php if ( is_single() || is_page() ) { ?>
-<meta name="description" content=" <?php the_excerpt_rss( 50, 2 ); ?> " />
+<meta name="description" content=" <?php the_excerpt(); ?> " />
 <?php } else { ?>
 <meta name="description" content="The CUNY Graduate School of Journalism, located one block from Times Square in the heart of New York City, offers a three-semester program with a converged curriculum, paid internships and faculty who are leaders in their fields." />
 <?php } ?>
